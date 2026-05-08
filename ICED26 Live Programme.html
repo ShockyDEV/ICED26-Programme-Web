@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ICED26 — Live Programme</title>
+<meta name="description" content="Live programme for ICED26 — Salamanca, 23–26 June 2026. Sessions, rooms, and live status across all conference buildings.">
+<meta name="theme-color" content="#E89669">
+
+<!-- Favicons -->
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ICED26">
+<meta property="og:title" content="ICED26 — Live Programme">
+<meta property="og:description" content="Salamanca · 23–26 June 2026. Live sessions, rooms, and schedule across all conference buildings.">
+<meta property="og:image" content="og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="ICED26 — Live Programme · Salamanca, 23–26 June 2026">
+<meta property="og:locale" content="en_GB">
+<meta property="og:locale:alternate" content="es_ES">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ICED26 — Live Programme">
+<meta name="twitter:description" content="Salamanca · 23–26 June 2026. Live sessions, rooms, and schedule across all conference buildings.">
+<meta name="twitter:image" content="og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script src="data/programme.js"></script>
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel" src="app.jsx"></script>
+<script type="text/babel" src="admin.jsx"></script>
+
+<script type="text/babel" data-presets="env,react">
+const { useState, useEffect, useMemo } = React;
+const { Header, DayTabs, BuildingTabs, Grid, MobileList, Scrubber, SessionModal, SessionSearch, I18N, madridParts, sessionId, findSessionById } = window.ICED26App;
+const { AdminPanel } = window.ICED26Admin;
+
+const TWEAKS_DEFAULTS = /*EDITMODE-BEGIN*/{
+  "liveStyle": "halo",
+  "showScrubber": true
+}/*EDITMODE-END*/;
+
+function App() {
+  const data = window.ICED26_DATA;
+  // Default scrub: mid-Day-2 (Thursday), 11:30 (during Ruth Graham keynote)
+  const initialNow = new Date(data.meta.days[1] + "T11:30:00+02:00");
+  const [now, setNow] = useState(initialNow);
+  const [isLive, setIsLive] = useState(false); // true = follow real clock
+  const [lang, setLang] = useState("en");
+  const [adminOpen, setAdminOpen] = useState(false);
+  const [tweaks, setTweak] = useTweaks(TWEAKS_DEFAULTS);
+
+  // Auto-pick day matching "now"
+  const initialDay = useMemo(() => {
+    const todayKey = madridParts(now).dayKey;
+    const idx = data.meta.days.indexOf(todayKey);
+    return idx >= 0 ? idx : 0;
+  }, []);
+  const [dayIdx, setDayIdx] = useState(initialDay);
+  const [buildingId, setBuildingId] = useState(() => data.clusters[0]?.id || "auditorio");
+
+  // Secret organizer unlock: type "iced26unlock" anywhere to toggle admin + scrubber visibility.
+  // Persists in localStorage. Type it again to lock back down.
+  const [unlocked, setUnlocked] = useState(() => {
+    try { return localStorage.getItem("iced26-unlocked") === "1"; } catch { return false; }
+  });
+  useEffect(() => {
+    const SECRET = "iced26unlock";
+    let buf = "";
+    const onKey = (e) => {
+      // Ignore when typing in inputs/textareas
+      const tag = (e.target?.tagName || "").toLowerCase();
+      if (tag === "input" || tag === "textarea" || e.target?.isContentEditable) return;
+      if (e.key.length !== 1) return;
+      buf = (buf + e.key.toLowerCase()).slice(-SECRET.length);
+      if (buf === SECRET) {
+        setUnlocked(u => {
+          const next = !u;
+          try { localStorage.setItem("iced26-unlocked", next ? "1" : "0"); } catch {}
+          // tiny visual confirmation
+          const flash = document.createElement("div");
+          flash.textContent = next ? "🔓 Organizer mode" : "🔒 Locked";
+          flash.style.cssText = "position:fixed;top:20px;left:50%;transform:translateX(-50%);background:#1a1a1a;color:#fff;padding:10px 18px;border-radius:8px;font:600 13px system-ui;z-index:9999;box-shadow:0 8px 24px rgba(0,0,0,0.3);transition:opacity 0.4s;";
+          document.body.appendChild(flash);
+          setTimeout(() => { flash.style.opacity = "0"; setTimeout(() => flash.remove(), 400); }, 1200);
+          return next;
+        });
+        buf = "";
+      }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, []);
+
+  // Tick every minute when in live mode, so the now-line and states refresh
+  useEffect(() => {
+    if (!isLive) return;
+    setNow(new Date());
+    const id = setInterval(() => setNow(new Date()), 60000);
+    return () => clearInterval(id);
+  }, [isLive]);
+
+  const handleSetNow = (d) => { setIsLive(false); setNow(d); };
+  const handleGoLive = () => { setIsLive(true); setNow(new Date()); };
+
+  const [activeSession, setActiveSession] = useState(null);
+
+  // Jump to a session: switch day + building, then open its modal.
+  const openSession = (s) => {
+    if (!s) return;
+    const dIdx = data.meta.days.indexOf(s.day);
+    if (dIdx >= 0) setDayIdx(dIdx);
+    if (s.cluster) setBuildingId(s.cluster);
+    setActiveSession(s);
+  };
+
+  // Deep-link: ?session=YYYYMMDD-HHMM-room — open that session on load.
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("session");
+    if (!id) return;
+    const s = findSessionById(data, id);
+    if (s) openSession(s);
+  }, []);
+
+  // Keep URL in sync with the open modal so the user can copy the address bar too.
+  useEffect(() => {
+    const url = new URL(window.location.href);
+    if (activeSession) {
+      url.searchParams.set("session", sessionId(activeSession));
+    } else {
+      url.searchParams.delete("session");
+    }
+    window.history.replaceState(null, "", url.toString());
+  }, [activeSession]);
+
+  const t = I18N[lang];
+
+  return (
+    <>
+      <Header data={data} now={now} lang={lang} setLang={setLang} onAdminOpen={() => setAdminOpen(true)} t={t} />
+      <DayTabs data={data} dayIdx={dayIdx} setDayIdx={setDayIdx} now={now} lang={lang} t={t}>
+        <SessionSearch data={data} t={t} lang={lang} onSelect={openSession} />
+      </DayTabs>
+      <BuildingTabs data={data} buildingId={buildingId} setBuildingId={setBuildingId} dayIdx={dayIdx} now={now} lang={lang} t={t} />
+      <Grid data={data} dayIdx={dayIdx} buildingId={buildingId} now={now} liveStyle={tweaks.liveStyle} lang={lang} t={t} onSessionClick={openSession} />
+      <MobileList data={data} dayIdx={dayIdx} buildingId={buildingId} now={now} lang={lang} t={t} onSessionClick={openSession} />
+      <SessionModal session={activeSession} t={t} lang={lang} now={now} onClose={() => setActiveSession(null)} />
+      {unlocked && tweaks.showScrubber && <Scrubber now={now} setNow={handleSetNow} onGoLive={handleGoLive} isLive={isLive} data={data} t={t} lang={lang} />}
+      {unlocked && <button className="admin-fab" onClick={() => setAdminOpen(true)} aria-label="Admin (organizers only)" title="Admin">
+        <svg viewBox="0 0 20 20" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><circle cx="10" cy="10" r="3"/><path d="M10 1v3M10 16v3M19 10h-3M4 10H1M16.4 3.6l-2.1 2.1M5.7 14.3l-2.1 2.1M16.4 16.4l-2.1-2.1M5.7 5.7L3.6 3.6"/></svg>
+      </button>}
+      <AdminPanel open={adminOpen && unlocked} onClose={() => setAdminOpen(false)} data={data} lang={lang} />
+
+      <TweaksPanel title="Tweaks">
+        <TweakSection title="Live state style">
+          <TweakRadio
+            tweaks={tweaks} setTweak={setTweak} k="liveStyle"
+            options={[
+              { value: "halo",      label: "Pulse halo" },
+              { value: "underline", label: "Underline" },
+              { value: "filled",    label: "Filled" },
+            ]}
+          />
+        </TweakSection>
+        <TweakSection title="Time-travel">
+          <TweakToggle tweaks={tweaks} setTweak={setTweak} k="showScrubber" label="Show scrubber" />
+        </TweakSection>
+      </TweaksPanel>
+    </>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+</script>
+</body>
+</html>
