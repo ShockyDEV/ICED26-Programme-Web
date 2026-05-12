@@ -639,10 +639,13 @@ a { color: inherit; }
   padding: 16px 24px 110px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
 }
+/* Grid + headers take the full container width — aligned with the
+   building-tabs / day-tabs above. Avoid an inner max-width cap that
+   would leave an asymmetric left margin. */
 .grid-wrap > .grid,
-.grid-wrap > .grid-headers { width: 100%; max-width: 1400px; margin-left: auto; margin-right: auto; }
+.grid-wrap > .grid-headers { width: 100%; }
 .grid-headers {
   display: grid;
   grid-template-columns: var(--grid-time-w) repeat(var(--cols), minmax(180px, 1fr));
@@ -679,7 +682,8 @@ a { color: inherit; }
   gap: 8px;
   position: relative;
 }
-/* Allow horizontal scroll when many room columns (I+D+i has ~10) */
+/* Allow horizontal scroll when many room columns (I+D+i has ~4 narrow ones
+   in tight layouts). Other buildings rely on the grid's natural overflow. */
 .grid-wrap[data-building="iddi"] { overflow-x: auto; }
 .grid-wrap[data-building="iddi"] .grid,
 .grid-wrap[data-building="iddi"] .grid-headers { min-width: max-content; }
