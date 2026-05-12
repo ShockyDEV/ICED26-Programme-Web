@@ -682,11 +682,12 @@ a { color: inherit; }
   gap: 8px;
   position: relative;
 }
-/* Allow horizontal scroll when many room columns (I+D+i has ~4 narrow ones
-   in tight layouts). Other buildings rely on the grid's natural overflow. */
-.grid-wrap[data-building="iddi"] { overflow-x: auto; }
-.grid-wrap[data-building="iddi"] .grid,
-.grid-wrap[data-building="iddi"] .grid-headers { min-width: max-content; }
+/* Note: an old iddi-specific `overflow-x: auto` rule used to live here.
+   It broke the sticky positioning of .grid-headers (sticky's containing
+   scroll context becomes the new scroller, so `top: 73px` was measured
+   from inside .grid-wrap instead of the page) — that's why the column
+   headers in Edificio I+D+i appeared shoved down INSIDE the schedule
+   area. Iddi has 4 rooms and fits without scroll, so the rule is gone. */
 .time-col {
   display: grid;
   grid-template-rows: repeat(var(--slots), var(--slot-h));
