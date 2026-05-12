@@ -5,7 +5,7 @@
 // Colegio Fonseca, Edificio I+D+i). Each cell holds one or more parallel
 // sessions running in different rooms within that cluster, side-by-side.
 
-const { useState, useEffect, useMemo, useRef } = React;
+const { useState, useEffect, useMemo, useRef, useCallback } = React;
 
 // ─── Stable session ID for deep-linking ──────────────────────────────────
 // Day + start time + room is unique per schedule. Strip separators for URL friendliness.
@@ -15,6 +15,61 @@ function sessionId(s) {
 function findSessionById(data, id) {
   if (!id) return null;
   return data.sessions.find(s => sessionId(s) === id) || null;
+}
+
+// ─── Favorites (Mi agenda) — localStorage-backed ─────────────────────────
+const FAVORITES_KEY = "iced26-favorites";
+function loadFavorites() {
+  try {
+    const raw = localStorage.getItem(FAVORITES_KEY);
+    if (!raw) return new Set();
+    const arr = JSON.parse(raw);
+    return new Set(Array.isArray(arr) ? arr : []);
+  } catch { return new Set(); }
+}
+function saveFavorites(set) {
+  try { localStorage.setItem(FAVORITES_KEY, JSON.stringify(Array.from(set))); } catch {}
+}
+function useFavorites() {
+  const [favorites, setFavorites] = useState(() => loadFavorites());
+  const toggle = useCallback((sId) => {
+    setFavorites((prev) => {
+      const next = new Set(prev);
+      if (next.has(sId)) next.delete(sId);
+      else next.add(sId);
+      saveFavorites(next);
+      return next;
+    });
+  }, []);
+  // Sync across tabs
+  useEffect(() => {
+    const onStorage = (e) => {
+      if (e.key === FAVORITES_KEY) setFavorites(loadFavorites());
+    };
+    window.addEventListener("storage", onStorage);
+    return () => window.removeEventListener("storage", onStorage);
+  }, []);
+  return [favorites, toggle];
+}
+
+// ─── Star button (filled when favorited) ──────────────────────────────────
+function StarButton({ active, onClick, label, size = 14, className = "" }) {
+  return (
+    <button
+      type="button"
+      className={`star-btn ${active ? "is-active" : ""} ${className}`}
+      onClick={(e) => { e.stopPropagation(); e.preventDefault(); onClick(); }}
+      aria-label={label}
+      aria-pressed={active}
+      title={label}
+    >
+      <svg viewBox="0 0 24 24" width={size} height={size}
+        fill={active ? "currentColor" : "none"}
+        stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+      </svg>
+    </button>
+  );
 }
 
 // ─── i18n ─────────────────────────────────────────────────────────────────
@@ -46,7 +101,18 @@ const I18N = {
     linkCopied: "Link copied",
     pastNote: "Past sessions remain clickable — the Meet link stays open.",
     meetLinks: "Meet links",
-    parallel: "parallel sessions"
+    parallel: "parallel sessions",
+    myAgenda: "My agenda",
+    myAgendaTitle: "My personal agenda",
+    addToAgenda: "Add to my agenda",
+    removeFromAgenda: "Remove from my agenda",
+    agendaEmpty: "Your agenda is empty. Tap the star on any session to add it.",
+    agendaEmptyHint: "Your favorites stay on this device, no login needed.",
+    abstract: "Abstract",
+    keywords: "Keywords",
+    nextUp: "Next up",
+    showAbstract: "Show abstract",
+    hideAbstract: "Hide abstract"
   },
   es: {
     subtitle: "Salamanca · 23–26 junio 2026",
@@ -75,7 +141,18 @@ const I18N = {
     linkCopied: "Enlace copiado",
     pastNote: "Las sesiones pasadas siguen activas — el enlace Meet sigue abierto.",
     meetLinks: "Enlaces Meet",
-    parallel: "sesiones paralelas"
+    parallel: "sesiones paralelas",
+    myAgenda: "Mi agenda",
+    myAgendaTitle: "Mi agenda personal",
+    addToAgenda: "Añadir a mi agenda",
+    removeFromAgenda: "Quitar de mi agenda",
+    agendaEmpty: "Tu agenda está vacía. Pulsa la estrella en cualquier sesión para añadirla.",
+    agendaEmptyHint: "Tus favoritos se guardan en este dispositivo, sin necesidad de cuenta.",
+    abstract: "Resumen",
+    keywords: "Palabras clave",
+    nextUp: "Siguiente",
+    showAbstract: "Mostrar resumen",
+    hideAbstract: "Ocultar resumen"
   }
 };
 
@@ -199,7 +276,7 @@ function ClusterMeetMenu({ cluster, rooms, liveByRoom, t, lang }) {
 }
 
 // ─── Header ───────────────────────────────────────────────────────────────
-function Header({ data, now, lang, setLang, t }) {
+function Header({ data, now, lang, setLang, t, favorites, onOpenAgenda }) {
   const liveByRoom = useMemo(() => {
     const map = {};
     for (const s of data.sessions) {
@@ -245,6 +322,23 @@ function Header({ data, now, lang, setLang, t }) {
 
           )}
         </nav>
+
+        {onOpenAgenda && (
+          <button
+            className={`agenda-btn ${favorites && favorites.size > 0 ? "has-items" : ""}`}
+            onClick={onOpenAgenda}
+            aria-label={t.myAgenda}
+            title={t.myAgenda}
+          >
+            <svg viewBox="0 0 24 24" width="13" height="13" fill={favorites && favorites.size > 0 ? "currentColor" : "none"} stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+            <span className="agenda-btn-label">{t.myAgenda}</span>
+            {favorites && favorites.size > 0 && (
+              <span className="agenda-btn-count">{favorites.size}</span>
+            )}
+          </button>
+        )}
 
         <button className="lang-toggle" onClick={() => setLang(lang === "en" ? "es" : "en")} aria-label="Toggle language">
           <Icon name="globe" width="13" height="13" />
@@ -345,7 +439,7 @@ function BuildingTabs({ data, buildingId, setBuildingId, dayIdx, now, lang, t })
 // Renders the schedule for ONE building (selected via BuildingTabs).
 // Columns = individual rooms within that building. Global breaks span all
 // columns. Auditorio (single-room building) renders as one wide column.
-function Grid({ data, dayIdx, buildingId, now, liveStyle, lang, t, onSessionClick }) {
+function Grid({ data, dayIdx, buildingId, now, liveStyle, lang, t, onSessionClick, favorites, onToggleFavorite }) {
   const dayKey = data.meta.days[dayIdx];
   const cluster = data.clusters.find((c) => c.id === buildingId) || data.clusters[0];
   const buildingRooms = data.rooms.filter((r) => r.cluster === cluster.id);
@@ -484,6 +578,14 @@ function Grid({ data, dayIdx, buildingId, now, liveStyle, lang, t, onSessionClic
                     {state === "live" &&
                     <span className="live-badge"><span className="dot"></span>{t.live}</span>
                     }
+                    {onToggleFavorite && (
+                      <StarButton
+                        active={favorites?.has(sessionId(s))}
+                        onClick={() => onToggleFavorite(sessionId(s))}
+                        label={favorites?.has(sessionId(s)) ? t.removeFromAgenda : t.addToAgenda}
+                        className="cell-star"
+                      />
+                    )}
                     <div className="c-room">
                       <span className="c-time">{s.start}–{s.end}</span>
                     </div>
@@ -535,7 +637,7 @@ function Grid({ data, dayIdx, buildingId, now, liveStyle, lang, t, onSessionClic
 }
 
 // ─── Mobile list ──────────────────────────────────────────────────────────
-function MobileList({ data, dayIdx, buildingId, now, lang, t, onSessionClick }) {
+function MobileList({ data, dayIdx, buildingId, now, lang, t, onSessionClick, favorites, onToggleFavorite }) {
   const dayKey = data.meta.days[dayIdx];
   const cluster = data.clusters.find((c) => c.id === buildingId) || data.clusters[0];
   const sessions = data.sessions.filter((s) =>
@@ -577,6 +679,15 @@ function MobileList({ data, dayIdx, buildingId, now, lang, t, onSessionClick }) 
                     {s.start}–{s.end}
                     {s.talks && s.talks.length > 0 && ` · ${s.talks.length} ${lang === "es" ? "ponencias" : "talks"}`}
                   </div>
+                  {onToggleFavorite && (
+                    <StarButton
+                      active={favorites?.has(sessionId(s))}
+                      onClick={() => onToggleFavorite(sessionId(s))}
+                      label={favorites?.has(sessionId(s)) ? t.removeFromAgenda : t.addToAgenda}
+                      className="mobile-cell-star"
+                      size={16}
+                    />
+                  )}
                 </a>);
 
           })}
@@ -907,8 +1018,9 @@ function SharePopover({ session, t, lang, onClose }) {
 }
 
 // ─── Session detail modal ────────────────────────────────────────────────
-function SessionModal({ session, t, lang, now, onClose }) {
+function SessionModal({ session, t, lang, now, onClose, favorites, onToggleFavorite }) {
   const [shareOpen, setShareOpen] = useState(false);
+  const [expandedTalk, setExpandedTalk] = useState(null);
   // Close on Esc
   useEffect(() => {
     if (!session) return;
@@ -920,8 +1032,8 @@ function SessionModal({ session, t, lang, now, onClose }) {
       document.body.style.overflow = "";
     };
   }, [session, onClose, shareOpen]);
-  // Close share popover when modal session changes
-  useEffect(() => { setShareOpen(false); }, [session]);
+  // Close share popover + collapse abstracts when session changes
+  useEffect(() => { setShareOpen(false); setExpandedTalk(null); }, [session]);
 
   if (!session) return null;
   const dur = hmToMinutes(session.end) - hmToMinutes(session.start);
@@ -944,9 +1056,20 @@ function SessionModal({ session, t, lang, now, onClose }) {
   return (
     <div className="session-modal-overlay" onClick={onClose} role="dialog" aria-modal="true" aria-label={session.title}>
       <div className={`session-modal ${isLive ? "is-live" : ""}`} onClick={(e) => e.stopPropagation()} style={{ "--type-color": typeColor }}>
-        <button className="sm-close" onClick={onClose} aria-label={lang === "es" ? "Cerrar" : "Close"}>
-          <svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M5 5l10 10M15 5L5 15" /></svg>
-        </button>
+        <div className="sm-topbar">
+          {onToggleFavorite && (
+            <StarButton
+              active={favorites?.has(sessionId(session))}
+              onClick={() => onToggleFavorite(sessionId(session))}
+              label={favorites?.has(sessionId(session)) ? t.removeFromAgenda : t.addToAgenda}
+              className="sm-star"
+              size={18}
+            />
+          )}
+          <button className="sm-close" onClick={onClose} aria-label={lang === "es" ? "Cerrar" : "Close"}>
+            <svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M5 5l10 10M15 5L5 15" /></svg>
+          </button>
+        </div>
         <div className="sm-head">
           <div className="sm-type" style={{ color: typeColor }}>{typeLabel}</div>
           <h2 className="sm-title">{session.title}</h2>
@@ -970,27 +1093,80 @@ function SessionModal({ session, t, lang, now, onClose }) {
           <div className="sm-talks">
             <div className="sm-section-label">
               {talks.length} {lang === "es" ? (talks.length === 1 ? "ponencia" : "ponencias") : (talks.length === 1 ? "talk" : "talks")}
+              {talks.some(tk => tk.abstract || tk.keywords) && (
+                <span className="sm-section-hint">
+                  · {lang === "es" ? "Pulsa para ver el resumen" : "Click for the abstract"}
+                </span>
+              )}
             </div>
             <ol className="sm-talks-list">
-              {talks.map((talk, i) => (
-                <li key={i} className="sm-talk">
-                  <div className="sm-talk-time">{talk.time || ""}</div>
-                  <div className="sm-talk-body">
-                    <div className="sm-talk-title">{talk.title}</div>
-                    {talk.authors && (
-                      <div className="sm-talk-authors">
-                        {talk.presenter && (
-                          <span className="sm-talk-presenter">{talk.presenter}</span>
+              {talks.map((talk, i) => {
+                const hasDetail = !!(talk.abstract && talk.abstract.trim()) ||
+                                  !!(talk.keywords && talk.keywords.trim());
+                const isOpen = expandedTalk === i;
+                const keywords = (talk.keywords || "")
+                  .split(/[,;]/).map(k => k.trim()).filter(Boolean);
+                return (
+                  <li key={i} className={`sm-talk ${isOpen ? "is-open" : ""} ${hasDetail ? "has-detail" : ""}`}>
+                    <div
+                      className="sm-talk-row"
+                      role={hasDetail ? "button" : undefined}
+                      tabIndex={hasDetail ? 0 : undefined}
+                      aria-expanded={hasDetail ? isOpen : undefined}
+                      onClick={hasDetail ? () => setExpandedTalk(isOpen ? null : i) : undefined}
+                      onKeyDown={hasDetail ? (e) => {
+                        if (e.key === "Enter" || e.key === " ") {
+                          e.preventDefault();
+                          setExpandedTalk(isOpen ? null : i);
+                        }
+                      } : undefined}
+                    >
+                      <div className="sm-talk-time">{talk.time || ""}</div>
+                      <div className="sm-talk-body">
+                        <div className="sm-talk-title">
+                          {talk.title}
+                          {hasDetail && (
+                            <span className="sm-talk-chev" aria-hidden="true">
+                              {isOpen ? "▾" : "▸"}
+                            </span>
+                          )}
+                        </div>
+                        {talk.authors && (
+                          <div className="sm-talk-authors">
+                            {talk.presenter && (
+                              <span className="sm-talk-presenter">{talk.presenter}</span>
+                            )}
+                            {talk.presenter && talk.authors !== talk.presenter && " · "}
+                            <span className="sm-talk-coauthors">
+                              {talk.presenter ? talk.authors.replace(talk.presenter, "").replace(/^,\s*|,\s*$/g, "").replace(/,\s*,/g, ",") : talk.authors}
+                            </span>
+                          </div>
                         )}
-                        {talk.presenter && talk.authors !== talk.presenter && " · "}
-                        <span className="sm-talk-coauthors">
-                          {talk.presenter ? talk.authors.replace(talk.presenter, "").replace(/^,\s*|,\s*$/g, "").replace(/,\s*,/g, ",") : talk.authors}
-                        </span>
+                      </div>
+                    </div>
+                    {isOpen && hasDetail && (
+                      <div className="sm-talk-detail">
+                        {talk.abstract && (
+                          <div className="sm-talk-abstract">
+                            <div className="sm-detail-label">{t.abstract}</div>
+                            <p>{talk.abstract}</p>
+                          </div>
+                        )}
+                        {keywords.length > 0 && (
+                          <div className="sm-talk-keywords">
+                            <div className="sm-detail-label">{t.keywords}</div>
+                            <ul className="sm-kw-chips">
+                              {keywords.map((kw, j) => (
+                                <li key={j} className="sm-kw-chip">{kw}</li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
                       </div>
                     )}
-                  </div>
-                </li>
-              ))}
+                  </li>
+                );
+              })}
             </ol>
           </div>
         )}
@@ -1019,4 +1195,153 @@ function SessionModal({ session, t, lang, now, onClose }) {
   );
 }
 
-window.ICED26App = { Header, DayTabs, BuildingTabs, Grid, MobileList, Scrubber, SessionModal, SessionSearch, I18N, madridParts, madridDate, sessionState, sessionId, findSessionById };
+// ─── My Agenda modal ─────────────────────────────────────────────────────
+// Shows favorited sessions grouped by day with a "next up" highlight.
+function AgendaModal({ open, onClose, favorites, data, t, lang, now, onSessionClick, onToggleFavorite }) {
+  // ESC closes + lock body scroll while open
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e) => { if (e.key === "Escape") onClose(); };
+    document.addEventListener("keydown", onKey);
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = "";
+    };
+  }, [open, onClose]);
+
+  // Resolve favorite IDs to session objects (skip stale IDs that no longer exist)
+  const items = useMemo(() => {
+    if (!favorites || favorites.size === 0) return [];
+    return data.sessions
+      .filter((s) => favorites.has(sessionId(s)))
+      .map((s) => ({
+        s,
+        id: sessionId(s),
+        state: sessionState(s, now),
+        sm: hmToMinutes(s.start)
+      }))
+      .sort((a, b) => {
+        if (a.s.day !== b.s.day) return a.s.day.localeCompare(b.s.day);
+        return a.sm - b.sm;
+      });
+  }, [favorites, data, now]);
+
+  // Group by day
+  const byDay = useMemo(() => {
+    const g = {};
+    items.forEach((it) => (g[it.s.day] ||= []).push(it));
+    return g;
+  }, [items]);
+
+  // The first live or upcoming item is "next up"
+  const nextItem = items.find((it) => it.state === "live") ||
+                   items.find((it) => it.state === "future");
+
+  if (!open) return null;
+
+  return (
+    <div className="agenda-overlay" onClick={onClose} role="dialog" aria-modal="true" aria-label={t.myAgendaTitle}>
+      <div className="agenda-modal" onClick={(e) => e.stopPropagation()}>
+        <header className="agenda-head">
+          <div className="agenda-head-titles">
+            <h2>{t.myAgendaTitle}</h2>
+            <div className="agenda-head-sub muted">
+              {items.length === 0
+                ? t.agendaEmptyHint
+                : `${items.length} ${lang === "es" ? (items.length === 1 ? "sesión guardada" : "sesiones guardadas") : (items.length === 1 ? "saved session" : "saved sessions")}`}
+            </div>
+          </div>
+          <button className="agenda-close" onClick={onClose} aria-label={lang === "es" ? "Cerrar" : "Close"}>
+            <svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M5 5l10 10M15 5L5 15"/></svg>
+          </button>
+        </header>
+
+        {items.length === 0 ? (
+          <div className="agenda-empty">
+            <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+            <h3>{t.agendaEmpty}</h3>
+            <p className="muted">{t.agendaEmptyHint}</p>
+          </div>
+        ) : (
+          <div className="agenda-body">
+            {Object.entries(byDay).map(([day, dayItems]) => {
+              const dayLabel = data.meta.dayLabels[day]?.[lang] || day;
+              return (
+                <section className="agenda-day" key={day}>
+                  <header className="agenda-day-head">
+                    <h3>{dayLabel}</h3>
+                    <span className="muted">{dayItems.length}</span>
+                  </header>
+                  <ul className="agenda-list">
+                    {dayItems.map((it) => {
+                      const { s, state } = it;
+                      const isNext = nextItem && it.id === nextItem.id;
+                      const typeColor = `var(--t-${s.type})`;
+                      return (
+                        <li
+                          key={it.id}
+                          className={`agenda-item is-${state} ${isNext ? "is-next" : ""}`}
+                          style={{ "--type-color": typeColor }}
+                        >
+                          {isNext && <span className="agenda-next-pill">{t.nextUp}</span>}
+                          <button
+                            type="button"
+                            className="agenda-item-main"
+                            onClick={() => { onSessionClick(s); onClose(); }}
+                          >
+                            <div className="agenda-item-time">
+                              <span className="ai-time">{s.start}–{s.end}</span>
+                              {state === "live" && <span className="ai-live">{t.live}</span>}
+                              {state === "past" && <span className="ai-past">{t.past}</span>}
+                            </div>
+                            <div className="agenda-item-body">
+                              <div className="agenda-item-title">{s.title}</div>
+                              <div className="agenda-item-meta">
+                                <span className="ai-type" style={{ color: typeColor }}>
+                                  {t.types[s.type] || s.type}
+                                </span>
+                                {" · "}
+                                <span>{s.roomName || s.room}</span>
+                                {s.roomCode && <span className="muted"> · {s.roomCode}</span>}
+                              </div>
+                            </div>
+                          </button>
+                          <div className="agenda-item-actions">
+                            {s.meet && (
+                              <a
+                                href={s.meet}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="agenda-meet-btn"
+                                title={t.join}
+                              >
+                                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+                                Meet
+                              </a>
+                            )}
+                            <StarButton
+                              active={true}
+                              onClick={() => onToggleFavorite(it.id)}
+                              label={t.removeFromAgenda}
+                              size={16}
+                              className="agenda-item-star"
+                            />
+                          </div>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </section>
+              );
+            })}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+window.ICED26App = { Header, DayTabs, BuildingTabs, Grid, MobileList, Scrubber, SessionModal, SessionSearch, AgendaModal, I18N, madridParts, madridDate, sessionState, sessionId, findSessionById, useFavorites, StarButton };

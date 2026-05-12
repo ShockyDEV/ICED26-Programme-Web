@@ -58,6 +58,210 @@ const clone = (x) => JSON.parse(JSON.stringify(x));
 const TIME_RE = /^([01]\d|2[0-3]):[0-5]\d$/;
 const URL_RE = /^https?:\/\/.+/i;
 
+// ── Time overlap helpers ───────────────────────────────────────────────
+const toMin = (hm) => {
+  if (!TIME_RE.test(hm || "")) return null;
+  const [h, m] = hm.split(":").map(Number);
+  return h * 60 + m;
+};
+
+// Normalize a person name for comparison (lowercase, strip diacritics, collapse spaces)
+const normName = (n) => (n || "")
+  .toLowerCase()
+  .normalize("NFD").replace(/[̀-ͯ]/g, "")
+  .replace(/[^\w\s'-]/g, " ")
+  .replace(/\s+/g, " ")
+  .trim();
+
+// Split a "Author A, Author B, Author C" string into a list
+const splitAuthors = (s) =>
+  (s || "")
+    .split(/[,;]| and | y /i)
+    .map((x) => x.trim())
+    .filter(Boolean);
+
+// ── Conflict detector ──────────────────────────────────────────────────
+// Returns an array of issues. Each issue has { kind, severity, title, detail,
+// sessionRefs: [{ idx, label }] } so the UI can render them and jump-to-edit.
+function detectIssues(data) {
+  const issues = [];
+
+  // 1) PRESENTER OVERLAPS — same person, same day, time ranges intersect.
+  //    We use SESSION-level start/end (talk-level end isn't recorded).
+  //    Same-session multi-talk by one person is fine; we de-dup that.
+  const presences = []; // { sessionIdx, name, displayName, day, sm, em }
+  data.sessions.forEach((s, sIdx) => {
+    const sm = toMin(s.start);
+    const em = toMin(s.end);
+    if (sm == null || em == null) return;
+    // Collect names from talks (presenters + authors) and from session-level speakers field if any
+    const names = new Set();
+    const displayNames = {};
+    (s.talks || []).forEach((t) => {
+      [t.presenter, ...splitAuthors(t.authors)].filter(Boolean).forEach((raw) => {
+        const k = normName(raw);
+        if (!k) return;
+        names.add(k);
+        if (!displayNames[k]) displayNames[k] = raw.trim();
+      });
+    });
+    names.forEach((name) => {
+      presences.push({
+        sessionIdx: sIdx,
+        name,
+        displayName: displayNames[name],
+        day: s.day,
+        sm,
+        em
+      });
+    });
+  });
+
+  const byName = {};
+  presences.forEach((p) => (byName[p.name] ||= []).push(p));
+
+  Object.values(byName).forEach((arr) => {
+    if (arr.length < 2) return;
+    // Group per day
+    const byDay = {};
+    arr.forEach((p) => (byDay[p.day] ||= []).push(p));
+    Object.values(byDay).forEach((items) => {
+      if (items.length < 2) return;
+      items.sort((a, b) => a.sm - b.sm);
+      const reported = new Set();
+      for (let i = 0; i < items.length; i++) {
+        for (let j = i + 1; j < items.length; j++) {
+          // Same session → not a conflict (multiple talks in one session)
+          if (items[i].sessionIdx === items[j].sessionIdx) continue;
+          const a = items[i],
+            b = items[j];
+          if (b.sm < a.em) {
+            const key = [a.sessionIdx, b.sessionIdx].sort((x, y) => x - y).join("-");
+            if (reported.has(key)) continue;
+            reported.add(key);
+            const sA = data.sessions[a.sessionIdx];
+            const sB = data.sessions[b.sessionIdx];
+            issues.push({
+              kind: "presenter-overlap",
+              severity: "error",
+              title: `Solapamiento: ${a.displayName}`,
+              detail: `Aparece en dos sesiones simultáneas el ${a.day}.`,
+              sessionRefs: [
+                { idx: a.sessionIdx, label: `${sA.start}–${sA.end} · ${sA.roomName || sA.room} · ${sA.title}` },
+                { idx: b.sessionIdx, label: `${sB.start}–${sB.end} · ${sB.roomName || sB.room} · ${sB.title}` }
+              ]
+            });
+          }
+        }
+      }
+    });
+  });
+
+  // 2) ROOM OVERLAPS — two sessions in the same room with overlapping times.
+  const byRoom = {};
+  data.sessions.forEach((s, idx) => {
+    if (s.room === "*" || !s.room) return;
+    const sm = toMin(s.start);
+    const em = toMin(s.end);
+    if (sm == null || em == null) return;
+    const key = `${s.day}|${s.room}`;
+    (byRoom[key] ||= []).push({ idx, sm, em, s });
+  });
+  Object.entries(byRoom).forEach(([key, arr]) => {
+    if (arr.length < 2) return;
+    arr.sort((a, b) => a.sm - b.sm);
+    for (let i = 0; i < arr.length - 1; i++) {
+      const a = arr[i],
+        b = arr[i + 1];
+      if (b.sm < a.em) {
+        issues.push({
+          kind: "room-overlap",
+          severity: "error",
+          title: `Solapamiento de sala: ${a.s.roomName || a.s.room}`,
+          detail: `Dos sesiones simultáneas en la misma sala el ${a.s.day}.`,
+          sessionRefs: [
+            { idx: a.idx, label: `${a.s.start}–${a.s.end} · ${a.s.title}` },
+            { idx: b.idx, label: `${b.s.start}–${b.s.end} · ${b.s.title}` }
+          ]
+        });
+      }
+    }
+  });
+
+  // 3) MALFORMED SESSIONS — bad time, end <= start, missing title, bad room ref
+  const roomIds = new Set(data.rooms.map((r) => r.id));
+  data.sessions.forEach((s, idx) => {
+    if (!TIME_RE.test(s.start || "")) {
+      issues.push({
+        kind: "bad-time",
+        severity: "error",
+        title: "Hora de inicio inválida",
+        detail: `«${s.start}» no es HH:MM en «${s.title || "(sin título)"}».`,
+        sessionRefs: [{ idx, label: s.title || "(sin título)" }]
+      });
+    }
+    if (!TIME_RE.test(s.end || "")) {
+      issues.push({
+        kind: "bad-time",
+        severity: "error",
+        title: "Hora de fin inválida",
+        detail: `«${s.end}» no es HH:MM en «${s.title || "(sin título)"}».`,
+        sessionRefs: [{ idx, label: s.title || "(sin título)" }]
+      });
+    }
+    const sm = toMin(s.start),
+      em = toMin(s.end);
+    if (sm != null && em != null && em <= sm) {
+      issues.push({
+        kind: "bad-time",
+        severity: "error",
+        title: "Hora de fin ≤ inicio",
+        detail: `${s.start}–${s.end} en «${s.title || "(sin título)"}» — el fin debe ser posterior al inicio.`,
+        sessionRefs: [{ idx, label: s.title || "(sin título)" }]
+      });
+    }
+    if (!s.title || !s.title.trim()) {
+      issues.push({
+        kind: "missing-title",
+        severity: "warning",
+        title: "Sesión sin título",
+        detail: `Día ${s.day}, ${s.start}–${s.end}.`,
+        sessionRefs: [{ idx, label: `${s.start}–${s.end} · sin título` }]
+      });
+    }
+    if (s.room && s.room !== "*" && !roomIds.has(s.room)) {
+      issues.push({
+        kind: "unknown-room",
+        severity: "error",
+        title: "Sala desconocida",
+        detail: `«${s.room}» no existe en el catálogo de salas. Sesión «${s.title}».`,
+        sessionRefs: [{ idx, label: s.title || "(sin título)" }]
+      });
+    }
+  });
+
+  // 4) MEET COVERAGE — sessions without a Meet that also can't inherit one (room has no meet)
+  const roomMeet = {};
+  data.rooms.forEach((r) => (roomMeet[r.id] = r.meet || ""));
+  data.sessions.forEach((s, idx) => {
+    if (s.meet) return;
+    if (s.room === "*" || !s.room) return;
+    if (s.type === "break") return; // breaks don't need meet
+    const inherited = roomMeet[s.room];
+    if (!inherited) {
+      issues.push({
+        kind: "missing-meet",
+        severity: "warning",
+        title: "Sin enlace Meet",
+        detail: `Ni la sesión ni la sala «${s.roomName || s.room}» tienen un enlace Meet. Los asistentes no podrán entrar.`,
+        sessionRefs: [{ idx, label: `${s.start}–${s.end} · ${s.title}` }]
+      });
+    }
+  });
+
+  return issues;
+}
+
 // ─────────────────────────────────────────────────────────────────────
 // AdminApp — top-level gate
 // ─────────────────────────────────────────────────────────────────────
@@ -185,6 +389,13 @@ function AdminEditor({ onLogout }) {
   });
 
   const [tab, setTab] = React.useState("sessions");
+  const [editingSessionIdx, setEditingSessionIdx] = React.useState(null);
+
+  // Jump from any tab into the session editor (used by ValidationTab)
+  const goEditSession = React.useCallback((idx) => {
+    setTab("sessions");
+    setEditingSessionIdx(idx);
+  }, []);
 
   // Auto-save draft on every change (debounced via microtask)
   const isDirty = React.useMemo(
@@ -247,6 +458,11 @@ window.ICED26_DATA = ${JSON.stringify(data, null, 2)};
     sessionsWithMeet: data.sessions.filter((s) => s.meet).length
   }), [data]);
 
+  // Validation issues — computed live so the badge updates as you edit
+  const issues = React.useMemo(() => detectIssues(data), [data]);
+  const errorCount = issues.filter((i) => i.severity === "error").length;
+  const warningCount = issues.filter((i) => i.severity === "warning").length;
+
   return (
     <div className="admin-app">
       <header className="admin-topbar">
@@ -263,13 +479,19 @@ window.ICED26_DATA = ${JSON.stringify(data, null, 2)};
             { id: "sessions", label: "Sesiones", count: stats.sessions },
             { id: "rooms", label: "Salas & Meet", count: stats.rooms },
             { id: "buildings", label: "Edificios", count: stats.buildings },
-            { id: "meta", label: "Configuración" }
+            { id: "meta", label: "Configuración" },
+            {
+              id: "validation",
+              label: "Validación",
+              count: errorCount + warningCount || null,
+              tone: errorCount > 0 ? "error" : warningCount > 0 ? "warning" : "ok"
+            }
           ].map((t) => (
             <button
               key={t.id}
               role="tab"
               aria-selected={tab === t.id}
-              className={`atab ${tab === t.id ? "active" : ""}`}
+              className={`atab ${tab === t.id ? "active" : ""} ${t.tone ? `tone-${t.tone}` : ""}`}
               onClick={() => setTab(t.id)}
             >
               {t.label}
@@ -307,10 +529,20 @@ window.ICED26_DATA = ${JSON.stringify(data, null, 2)};
       </header>
 
       <main className="admin-main">
-        {tab === "sessions" && <SessionsTab data={data} setData={setData} />}
+        {tab === "sessions" && (
+          <SessionsTab
+            data={data}
+            setData={setData}
+            editingIdx={editingSessionIdx}
+            setEditingIdx={setEditingSessionIdx}
+          />
+        )}
         {tab === "rooms" && <RoomsTab data={data} setData={setData} stats={stats} />}
         {tab === "buildings" && <BuildingsTab data={data} setData={setData} />}
         {tab === "meta" && <MetaTab data={data} setData={setData} />}
+        {tab === "validation" && (
+          <ValidationTab data={data} issues={issues} onEditSession={goEditSession} />
+        )}
       </main>
 
       {isDirty && (
@@ -327,9 +559,9 @@ window.ICED26_DATA = ${JSON.stringify(data, null, 2)};
 // ─────────────────────────────────────────────────────────────────────
 // SessionsTab
 // ─────────────────────────────────────────────────────────────────────
-function SessionsTab({ data, setData }) {
+function SessionsTab({ data, setData, editingIdx, setEditingIdx }) {
   const [filter, setFilter] = React.useState({ day: "", building: "", type: "", q: "" });
-  const [editingIdx, setEditingIdx] = React.useState(null); // number | "new" | null
+  // editingIdx is lifted up so the Validation tab can jump-to-edit
 
   const filtered = React.useMemo(() => {
     const q = filter.q.trim().toLowerCase();
@@ -572,12 +804,16 @@ function SessionEditor({ session, isNew, rooms, clusters, days, onSave, onCancel
       title: s.title.trim(),
       fullName: (s.fullName || "").trim(),
       meet: (s.meet || "").trim(),
-      talks: (s.talks || []).filter((t) => t.title || t.authors || t.presenter).map((t) => ({
-        time: (t.time || "").trim(),
-        title: (t.title || "").trim(),
-        authors: (t.authors || "").trim(),
-        presenter: (t.presenter || "").trim()
-      }))
+      talks: (s.talks || [])
+        .filter((t) => t.title || t.authors || t.presenter || t.abstract)
+        .map((t) => ({
+          time: (t.time || "").trim(),
+          title: (t.title || "").trim(),
+          authors: (t.authors || "").trim(),
+          presenter: (t.presenter || "").trim(),
+          abstract: (t.abstract || "").trim(),
+          keywords: (t.keywords || "").trim()
+        }))
     };
     onSave(cleaned);
   };
@@ -672,7 +908,11 @@ function SessionEditor({ session, isNew, rooms, clusters, days, onSave, onCancel
 // ─────────────────────────────────────────────────────────────────────
 function TalksEditor({ talks, onChange }) {
   const update = (i, patch) => onChange(talks.map((t, idx) => (idx === i ? { ...t, ...patch } : t)));
-  const add = () => onChange([...talks, { time: "", title: "", authors: "", presenter: "" }]);
+  const add = () =>
+    onChange([
+      ...talks,
+      { time: "", title: "", authors: "", presenter: "", abstract: "", keywords: "" }
+    ]);
   const remove = (i) => onChange(talks.filter((_, idx) => idx !== i));
   const move = (i, dir) => {
     const j = i + dir;
@@ -681,6 +921,15 @@ function TalksEditor({ talks, onChange }) {
     [arr[i], arr[j]] = [arr[j], arr[i]];
     onChange(arr);
   };
+
+  const [expanded, setExpanded] = React.useState(new Set());
+  const toggle = (i) =>
+    setExpanded((prev) => {
+      const next = new Set(prev);
+      if (next.has(i)) next.delete(i);
+      else next.add(i);
+      return next;
+    });
 
   return (
     <div className="talks-editor">
@@ -695,25 +944,78 @@ function TalksEditor({ talks, onChange }) {
         </p>
       )}
 
-      {talks.map((t, i) => (
-        <div className="talk-row" key={i}>
-          <div className="talk-controls">
-            <button type="button" onClick={() => move(i, -1)} disabled={i === 0} title="Subir">↑</button>
-            <button type="button" onClick={() => move(i, 1)} disabled={i === talks.length - 1} title="Bajar">↓</button>
-            <button type="button" onClick={() => remove(i)} className="danger" title="Eliminar">✕</button>
+      {talks.map((t, i) => {
+        const isOpen = expanded.has(i);
+        const hasDetail = (t.abstract || "").trim().length > 0 || (t.keywords || "").trim().length > 0;
+        return (
+          <div className={`talk-row ${isOpen ? "is-open" : ""}`} key={i}>
+            <div className="talk-controls">
+              <button type="button" onClick={() => move(i, -1)} disabled={i === 0} title="Subir">↑</button>
+              <button type="button" onClick={() => move(i, 1)} disabled={i === talks.length - 1} title="Bajar">↓</button>
+              <button type="button" onClick={() => remove(i)} className="danger" title="Eliminar">✕</button>
+            </div>
+            <div className="talk-fields">
+              <input
+                type="text"
+                placeholder="HH:MM"
+                value={t.time || ""}
+                onChange={(e) => update(i, { time: e.target.value })}
+                className="talk-time"
+              />
+              <input
+                type="text"
+                placeholder="Título de la ponencia"
+                value={t.title || ""}
+                onChange={(e) => update(i, { title: e.target.value })}
+                className="talk-title"
+              />
+              <input
+                type="text"
+                placeholder="Autor/a/es (coma)"
+                value={t.authors || ""}
+                onChange={(e) => update(i, { authors: e.target.value })}
+                className="talk-authors"
+              />
+              <input
+                type="text"
+                placeholder="Presenter"
+                value={t.presenter || ""}
+                onChange={(e) => update(i, { presenter: e.target.value })}
+                className="talk-presenter"
+              />
+
+              <button
+                type="button"
+                className={`talk-detail-toggle ${hasDetail ? "has-detail" : ""}`}
+                onClick={() => toggle(i)}
+                aria-expanded={isOpen}
+              >
+                {isOpen ? "▾ Ocultar abstract & keywords" : "▸ Abstract & keywords"}
+                {hasDetail && !isOpen && <span className="td-pill">●</span>}
+              </button>
+
+              {isOpen && (
+                <>
+                  <textarea
+                    placeholder="Abstract — resumen de la ponencia"
+                    value={t.abstract || ""}
+                    onChange={(e) => update(i, { abstract: e.target.value })}
+                    className="talk-abstract"
+                    rows={5}
+                  />
+                  <input
+                    type="text"
+                    placeholder="Keywords (separadas por comas: agency, faculty development, …)"
+                    value={t.keywords || ""}
+                    onChange={(e) => update(i, { keywords: e.target.value })}
+                    className="talk-keywords"
+                  />
+                </>
+              )}
+            </div>
           </div>
-          <div className="talk-fields">
-            <input type="text" placeholder="HH:MM" value={t.time || ""}
-              onChange={(e) => update(i, { time: e.target.value })} className="talk-time" />
-            <input type="text" placeholder="Título de la ponencia" value={t.title || ""}
-              onChange={(e) => update(i, { title: e.target.value })} className="talk-title" />
-            <input type="text" placeholder="Autor/a/es (coma)" value={t.authors || ""}
-              onChange={(e) => update(i, { authors: e.target.value })} className="talk-authors" />
-            <input type="text" placeholder="Presenter" value={t.presenter || ""}
-              onChange={(e) => update(i, { presenter: e.target.value })} className="talk-presenter" />
-          </div>
-        </div>
-      ))}
+        );
+      })}
     </div>
   );
 }
@@ -1024,6 +1326,105 @@ function MetaTab({ data, setData }) {
           <div><strong>{data.meta.days.length}</strong> días</div>
         </div>
       </section>
+    </div>
+  );
+}
+
+// ─────────────────────────────────────────────────────────────────────
+// ValidationTab — quality checks (overlaps, missing data, etc.)
+// ─────────────────────────────────────────────────────────────────────
+function ValidationTab({ data, issues, onEditSession }) {
+  const errors = issues.filter((i) => i.severity === "error");
+  const warnings = issues.filter((i) => i.severity === "warning");
+
+  // Group issues by kind for cleaner display
+  const grouped = React.useMemo(() => {
+    const g = {};
+    issues.forEach((i) => (g[i.kind] ||= []).push(i));
+    return g;
+  }, [issues]);
+
+  const groupOrder = [
+    ["presenter-overlap", "Solapamientos de ponente", "Una misma persona aparece en dos sesiones simultáneas."],
+    ["room-overlap", "Solapamientos de sala", "Dos sesiones programadas a la vez en la misma sala."],
+    ["bad-time", "Horas inválidas", "Formato HH:MM incorrecto o fin ≤ inicio."],
+    ["unknown-room", "Salas desconocidas", "La sesión referencia una sala que no existe en el catálogo."],
+    ["missing-title", "Sesiones sin título", "Toda sesión debería tener un título."],
+    ["missing-meet", "Sin enlace Meet", "La sesión no tiene Meet propio y la sala tampoco."]
+  ];
+
+  return (
+    <div className="validation-tab">
+      <div className="rooms-head">
+        <h2>Validación del programa</h2>
+        <p className="muted">
+          Detección automática de problemas: solapamientos de ponentes, conflictos de salas, datos incompletos.
+          Pulsa <em>Editar</em> en cualquier conflicto para arreglarlo. La lista se recalcula en vivo.
+        </p>
+      </div>
+
+      <div className="validation-summary">
+        <div className={`vsum-card ${errors.length > 0 ? "tone-error" : "tone-ok"}`}>
+          <div className="vsum-number">{errors.length}</div>
+          <div className="vsum-label">Errores</div>
+        </div>
+        <div className={`vsum-card ${warnings.length > 0 ? "tone-warning" : "tone-ok"}`}>
+          <div className="vsum-number">{warnings.length}</div>
+          <div className="vsum-label">Avisos</div>
+        </div>
+        <div className="vsum-card tone-ok">
+          <div className="vsum-number">{data.sessions.length}</div>
+          <div className="vsum-label">Sesiones revisadas</div>
+        </div>
+      </div>
+
+      {issues.length === 0 && (
+        <div className="validation-empty">
+          <div className="ve-icon">✓</div>
+          <h3>Todo limpio</h3>
+          <p className="muted">No hay solapamientos ni problemas detectados. Listo para publicar.</p>
+        </div>
+      )}
+
+      {groupOrder.map(([kind, title, desc]) => {
+        const list = grouped[kind];
+        if (!list || list.length === 0) return null;
+        const tone = list[0].severity;
+        return (
+          <section className="validation-group" key={kind}>
+            <header className={`vg-head tone-${tone}`}>
+              <h3>
+                <span className="vg-icon">{tone === "error" ? "⚠" : "ⓘ"}</span>
+                {title}
+                <span className="vg-count">{list.length}</span>
+              </h3>
+              <p className="muted">{desc}</p>
+            </header>
+            <div className="vg-list">
+              {list.map((issue, i) => (
+                <div className={`vissue tone-${issue.severity}`} key={i}>
+                  <div className="vi-main">
+                    <div className="vi-title">{issue.title}</div>
+                    <div className="vi-detail">{issue.detail}</div>
+                  </div>
+                  <div className="vi-refs">
+                    {issue.sessionRefs.map((ref, j) => (
+                      <button
+                        key={j}
+                        className="btn-mini"
+                        onClick={() => onEditSession(ref.idx)}
+                        title="Editar esta sesión"
+                      >
+                        ✎ {ref.label}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+        );
+      })}
     </div>
   );
 }

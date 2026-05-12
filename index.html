@@ -51,8 +51,7 @@
 
 <script type="text/babel" data-presets="env,react">
 const { useState, useEffect, useMemo } = React;
-const { Header, DayTabs, BuildingTabs, Grid, MobileList, Scrubber, SessionModal, SessionSearch, I18N, madridParts, sessionId, findSessionById } = window.ICED26App;
-const { AdminPanel } = window.ICED26Admin;
+const { Header, DayTabs, BuildingTabs, Grid, MobileList, Scrubber, SessionModal, SessionSearch, AgendaModal, I18N, madridParts, sessionId, findSessionById, useFavorites } = window.ICED26App;
 
 const TWEAKS_DEFAULTS = /*EDITMODE-BEGIN*/{
   "liveStyle": "halo",
@@ -66,7 +65,8 @@ function App() {
   const [now, setNow] = useState(initialNow);
   const [isLive, setIsLive] = useState(false); // true = follow real clock
   const [lang, setLang] = useState("en");
-  const [adminOpen, setAdminOpen] = useState(false);
+  const [agendaOpen, setAgendaOpen] = useState(false);
+  const [favorites, toggleFavorite] = useFavorites();
   const [tweaks, setTweak] = useTweaks(TWEAKS_DEFAULTS);
 
   // Auto-pick day matching "now"
@@ -157,14 +157,15 @@ function App() {
 
   return (
     <>
-      <Header data={data} now={now} lang={lang} setLang={setLang} onAdminOpen={() => setAdminOpen(true)} t={t} />
+      <Header data={data} now={now} lang={lang} setLang={setLang} t={t} favorites={favorites} onOpenAgenda={() => setAgendaOpen(true)} />
       <DayTabs data={data} dayIdx={dayIdx} setDayIdx={setDayIdx} now={now} lang={lang} t={t}>
         <SessionSearch data={data} t={t} lang={lang} onSelect={openSession} />
       </DayTabs>
       <BuildingTabs data={data} buildingId={buildingId} setBuildingId={setBuildingId} dayIdx={dayIdx} now={now} lang={lang} t={t} />
-      <Grid data={data} dayIdx={dayIdx} buildingId={buildingId} now={now} liveStyle={tweaks.liveStyle} lang={lang} t={t} onSessionClick={openSession} />
-      <MobileList data={data} dayIdx={dayIdx} buildingId={buildingId} now={now} lang={lang} t={t} onSessionClick={openSession} />
-      <SessionModal session={activeSession} t={t} lang={lang} now={now} onClose={() => setActiveSession(null)} />
+      <Grid data={data} dayIdx={dayIdx} buildingId={buildingId} now={now} liveStyle={tweaks.liveStyle} lang={lang} t={t} onSessionClick={openSession} favorites={favorites} onToggleFavorite={toggleFavorite} />
+      <MobileList data={data} dayIdx={dayIdx} buildingId={buildingId} now={now} lang={lang} t={t} onSessionClick={openSession} favorites={favorites} onToggleFavorite={toggleFavorite} />
+      <SessionModal session={activeSession} t={t} lang={lang} now={now} onClose={() => setActiveSession(null)} favorites={favorites} onToggleFavorite={toggleFavorite} />
+      <AgendaModal open={agendaOpen} onClose={() => setAgendaOpen(false)} favorites={favorites} data={data} t={t} lang={lang} now={now} onSessionClick={openSession} onToggleFavorite={toggleFavorite} />
       {unlocked && tweaks.showScrubber && <Scrubber now={now} setNow={handleSetNow} onGoLive={handleGoLive} isLive={isLive} data={data} t={t} lang={lang} />}
       {unlocked && <a className="admin-fab" href="/admin.html" target="_blank" rel="noopener noreferrer" aria-label="Open admin (organizers only)" title="Open admin panel">
         <svg viewBox="0 0 20 20" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><circle cx="10" cy="10" r="3"/><path d="M10 1v3M10 16v3M19 10h-3M4 10H1M16.4 3.6l-2.1 2.1M5.7 14.3l-2.1 2.1M16.4 16.4l-2.1-2.1M5.7 5.7L3.6 3.6"/></svg>
