@@ -1160,13 +1160,34 @@ a { color: inherit; }
 .mobile-cell.is-past { opacity: 0.6; background: var(--cream-deep); }
 .mobile-cell.is-live { border-color: var(--coral); box-shadow: 0 0 0 2px rgba(232,150,105,0.25); }
 
+/* Mobile-only search row. The aside inside .day-tabs is hidden on small
+   widths (see .day-tabs-aside rule in the mobile breakpoint below); this
+   container takes over and shows the search full-width under the day
+   tabs. Hidden on desktop where the in-day-tabs search handles it. */
+.search-row-mobile { display: none; }
+
 /* Mobile breakpoint */
 @media (max-width: 1080px) {
   .header-inner { flex-wrap: wrap; gap: 12px; padding: 12px 16px; }
   .rooms-bar { display: none; } /* BuildingTabs replace this on mobile */
-  .day-tabs { padding: 16px 16px 0; overflow-x: auto; }
+  .day-tabs {
+    padding: 16px 16px 0;
+    overflow-x: auto;
+    justify-content: flex-start; /* avoid center+overflow clipping the first/last tab */
+    scroll-padding-inline: 16px;
+  }
   .day-tabs-label { display: none; }
   .day-tabs-aside { display: none; }
+  .search-row-mobile {
+    display: block;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 12px 16px 0;
+  }
+  .search-row-mobile .session-search { width: 100%; max-width: none; }
+  .search-row-mobile .ss-input-wrap { width: 100%; }
+  .search-row-mobile .ss-input { width: 100%; min-width: 0; }
+  .search-row-mobile .ss-shortcut { display: none; } /* no keyboard on mobile */
   .grid-wrap { display: none !important; }
   .grid-headers { display: none; }
   .mobile-list { display: flex; flex-direction: column; }
@@ -1184,6 +1205,8 @@ a { color: inherit; }
     gap: 6px;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: thin;
+    justify-content: flex-start; /* keep first tab fully visible */
+    scroll-padding-inline: 16px;
   }
   .building-tab {
     flex: 0 0 auto;

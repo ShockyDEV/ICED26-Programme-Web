@@ -161,6 +161,13 @@ function App() {
       <DayTabs data={data} dayIdx={dayIdx} setDayIdx={setDayIdx} now={now} lang={lang} t={t}>
         <SessionSearch data={data} t={t} lang={lang} onSelect={openSession} />
       </DayTabs>
+      {/* Mobile-only search row — on desktop the search lives inside DayTabs (top-right);
+          on mobile that aside is hidden, so we render a second SessionSearch here that's
+          only shown by CSS at small widths. They share no state since the input clears
+          after each pick. */}
+      <div className="search-row-mobile">
+        <SessionSearch data={data} t={t} lang={lang} onSelect={openSession} />
+      </div>
       <BuildingTabs data={data} buildingId={buildingId} setBuildingId={setBuildingId} dayIdx={dayIdx} now={now} lang={lang} t={t} />
       <Grid data={data} dayIdx={dayIdx} buildingId={buildingId} now={now} liveStyle={tweaks.liveStyle} lang={lang} t={t} onSessionClick={openSession} favorites={favorites} onToggleFavorite={toggleFavorite} />
       <MobileList data={data} dayIdx={dayIdx} buildingId={buildingId} now={now} lang={lang} t={t} onSessionClick={openSession} favorites={favorites} onToggleFavorite={toggleFavorite} />
