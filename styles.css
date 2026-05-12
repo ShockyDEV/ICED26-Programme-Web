@@ -1460,9 +1460,13 @@ a { color: inherit; }
   display: flex; flex-direction: column; gap: 14px;
 }
 .sm-talk {
+  display: block;
+}
+.sm-talk-row {
   display: grid;
   grid-template-columns: 52px 1fr;
   gap: 12px;
+  align-items: start;
 }
 .sm-talk-time {
   font-variant-numeric: tabular-nums;
@@ -1509,7 +1513,7 @@ a { color: inherit; }
   .sm-head { padding: 24px 50px 14px 20px; }
   .sm-title { font-size: 19px; }
   .sm-meta, .sm-talks, .sm-actions { padding-left: 20px; padding-right: 20px; }
-  .sm-talk { grid-template-columns: 44px 1fr; gap: 10px; }
+  .sm-talk-row { grid-template-columns: 44px 1fr; gap: 10px; }
   .session-modal-overlay { padding: 12px; }
 }
 
@@ -1646,7 +1650,6 @@ a { color: inherit; }
   letter-spacing: 0;
   text-transform: none;
 }
-.sm-talk { padding: 0; }
 .sm-talk.has-detail .sm-talk-row {
   cursor: pointer;
   border-radius: 8px;
