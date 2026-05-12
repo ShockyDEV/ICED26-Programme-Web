@@ -26,8 +26,8 @@
 - 📱 **Two layouts in one** — desktop renders a column-per-room timetable; mobile collapses to a single chronological feed of cards.
 - 🌐 **Bilingual (EN / ES)** — single toggle in the header switches the entire UI, persisted in `localStorage`.
 - 🔍 **Full-text session search** — by title, speaker, room, or building.
-- 🛠️ **Built-in admin panel** — toggleable from the header to edit sessions, rooms and clusters in-browser.
-- 🪄 **Tweaks panel** — runtime knobs (live-style preset, density, etc.) without touching code.
+- 🛠️ **Built-in admin panel** at `/admin` — password-gated editor for sessions, rooms, abstracts and Meet links.
+- ⭐ **Personal agenda** — attendees star sessions to build a personal list; persists in `localStorage`, no account needed.
 - 📲 **Share-ready** — Open Graph image and favicon ship in the box, themed to the brand.
 
 ---
@@ -54,7 +54,10 @@
 ├── ICED26 Live Programme.html   ← entry point — open this in a browser
 ├── app.jsx                      ← public attendee view (header, grid, search, modal…)
 ├── admin.jsx                    ← in-browser editor for sessions/rooms/clusters
-├── tweaks-panel.jsx             ← runtime knobs (live style, density…)
+├── admin.html                   ← password-gated editor entry point
+├── admin-app.jsx                ← admin editor (sessions, rooms, validation)
+├── admin-styles.css             ← admin-specific styles
+├── scripts/sync-programme.js    ← refresh data/programme.js from EasyChair
 ├── styles.css                   ← all the styling, sampled from the ICED26 logo
 ├── data/
 │   └── programme.js             ← THE source of truth: days, clusters, rooms, sessions
@@ -185,7 +188,7 @@ It's a plain JS object: `meta.days`, `clusters`, `rooms`, `sessions`. Push the c
 | `styles.css` `:root { … }` | Brand palette tokens (teal / coral / cream / ink). Change once, propagates everywhere. |
 | `app.jsx` → `I18N` | All EN/ES copy. Add a third language by extending the object. |
 | `og-image.png` & `favicon-*.png` | Replace if you tweak branding. |
-| Tweaks panel (in-app) | Live-style preset, density, layout — toggleable in the header. |
+| `app.jsx` `liveStyle` prop on `<Grid>` | Visual style of the "live now" marker (`halo`, `underline`, `filled`). |
 
 ---
 
