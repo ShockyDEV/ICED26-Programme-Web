@@ -965,6 +965,29 @@ a { color: inherit; }
 }
 
 /* Live badge */
+/* Top-right corner toolbar of a grid cell — holds the live-badge (when
+   the session is live) and the favorite star side-by-side. Children
+   below position themselves with the legacy `position: absolute` rules
+   when used outside this wrapper (mobile cells, etc.), but inside .cell-topbar
+   they flow as flex items. */
+.cell-topbar {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  z-index: 5;
+  pointer-events: none; /* keep cell click-through; children re-enable */
+}
+.cell-topbar > * { pointer-events: auto; }
+.cell-topbar .live-badge,
+.cell-topbar .cell-star.star-btn {
+  position: static;
+  top: auto;
+  right: auto;
+}
+
 .live-badge {
   position: absolute;
   top: 4px; right: 4px;

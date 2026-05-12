@@ -575,17 +575,19 @@ function Grid({ data, dayIdx, buildingId, now, liveStyle, lang, t, onSessionClic
                     }}
                     aria-label={`${t.types[s.type] || s.type}: ${s.title}, ${s.roomName}, ${s.start} to ${s.end}, ${state === "live" ? t.live : state === "past" ? t.past : t.upcoming}`}>
                     
-                    {state === "live" &&
-                    <span className="live-badge"><span className="dot"></span>{t.live}</span>
-                    }
-                    {onToggleFavorite && (
-                      <StarButton
-                        active={favorites?.has(sessionId(s))}
-                        onClick={() => onToggleFavorite(sessionId(s))}
-                        label={favorites?.has(sessionId(s)) ? t.removeFromAgenda : t.addToAgenda}
-                        className="cell-star"
-                      />
-                    )}
+                    <div className="cell-topbar">
+                      {state === "live" &&
+                      <span className="live-badge"><span className="dot"></span>{t.live}</span>
+                      }
+                      {onToggleFavorite && (
+                        <StarButton
+                          active={favorites?.has(sessionId(s))}
+                          onClick={() => onToggleFavorite(sessionId(s))}
+                          label={favorites?.has(sessionId(s)) ? t.removeFromAgenda : t.addToAgenda}
+                          className="cell-star"
+                        />
+                      )}
+                    </div>
                     <div className="c-room">
                       <span className="c-time">{s.start}–{s.end}</span>
                     </div>
