@@ -1429,12 +1429,15 @@ a { color: inherit; }
 }
 @keyframes sm-in { from { opacity: 0; transform: translateY(8px) scale(0.98); } to { opacity: 1; transform: none; } }
 .sm-close {
-  position: absolute; top: 14px; right: 14px;
-  width: 32px; height: 32px; border-radius: 50%;
+  /* Positioning is handled by the parent .sm-topbar flex container so the
+     close button and the star sit cleanly side-by-side. */
+  width: 36px; height: 36px; border-radius: 50%;
   border: 1px solid var(--line); background: var(--paper);
   display: inline-flex; align-items: center; justify-content: center;
   color: var(--ink-soft); cursor: pointer;
   transition: all 0.15s ease;
+  padding: 0;
+  flex-shrink: 0;
 }
 .sm-close:hover { background: var(--cream); color: var(--ink); }
 .sm-head {
@@ -1645,16 +1648,17 @@ a { color: inherit; }
   top: 12px;
   right: 12px;
   display: flex;
-  gap: 4px;
+  gap: 8px;
   align-items: center;
   z-index: 5;
 }
 .session-modal .sm-star.star-btn {
   width: 36px;
   height: 36px;
-  border-radius: 8px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
   color: var(--ink-mute);
-  background: transparent;
+  background: var(--paper);
 }
 .session-modal .sm-star.star-btn:hover {
   background: var(--cream);
