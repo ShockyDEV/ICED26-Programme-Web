@@ -342,6 +342,56 @@
   margin-right: 6px;
 }
 
+/* "Solo online" filter toggle in the sessions table header */
+.filter-online {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--ink-soft);
+  background: var(--paper);
+  border: 1.5px solid var(--line);
+  border-radius: 8px;
+  cursor: pointer;
+  user-select: none;
+}
+.filter-online:hover { background: var(--cream); }
+.filter-online input { margin: 0; cursor: pointer; }
+.filter-online:has(input:checked) {
+  background: var(--teal-soft);
+  border-color: var(--teal);
+  color: var(--teal-deep);
+}
+
+/* Online tag in the sessions table title cell */
+.online-tag {
+  display: inline-block;
+  margin-right: 4px;
+  font-size: 13px;
+  vertical-align: -1px;
+}
+
+/* Reusable checkbox row for boolean form fields */
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 6px 0;
+  cursor: pointer;
+  user-select: none;
+  font-size: 13.5px;
+}
+.checkbox-row input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  accent-color: var(--teal);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
 .sessions-table-wrap {
   background: var(--paper);
   border: 1px solid var(--line);

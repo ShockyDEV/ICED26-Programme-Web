@@ -102,6 +102,9 @@ const I18N = {
     pastNote: "Past sessions remain clickable — the Meet link stays open.",
     meetLinks: "Meet links",
     parallel: "parallel sessions",
+    online: "ONLINE",
+    onlinePresenterTitle: "Online presenter",
+    onlinePresenterDesc: "One or more speakers will join this session remotely via Meet.",
     myAgenda: "My agenda",
     myAgendaTitle: "My personal agenda",
     addToAgenda: "Add to my agenda",
@@ -142,6 +145,9 @@ const I18N = {
     pastNote: "Las sesiones pasadas siguen activas — el enlace Meet sigue abierto.",
     meetLinks: "Enlaces Meet",
     parallel: "sesiones paralelas",
+    online: "ONLINE",
+    onlinePresenterTitle: "Ponente online",
+    onlinePresenterDesc: "Uno o más ponentes se unirán a esta sesión de forma remota por Meet.",
     myAgenda: "Mi agenda",
     myAgendaTitle: "Mi agenda personal",
     addToAgenda: "Añadir a mi agenda",
@@ -560,7 +566,7 @@ function Grid({ data, dayIdx, buildingId, now, liveStyle, lang, t, onSessionClic
                     key={item.idx}
                     role="button"
                     tabIndex="0"
-                    className={`cell is-${state} ${dur <= 60 ? "is-short" : ""} ${item.span > 1 ? `sub-of-${item.span}` : "sub-of-1"}`}
+                    className={`cell is-${state} ${dur <= 60 ? "is-short" : ""} ${item.span > 1 ? `sub-of-${item.span}` : "sub-of-1"} ${s.onlinePresenter ? "is-online-presenter" : ""}`}
                     data-live-style={liveStyle}
                     onClick={() => { if (onSessionClick) onSessionClick(s); }}
                     onKeyDown={(e) => { if ((e.key === "Enter" || e.key === " ") && onSessionClick) { e.preventDefault(); onSessionClick(s); } }}
@@ -579,6 +585,15 @@ function Grid({ data, dayIdx, buildingId, now, liveStyle, lang, t, onSessionClic
                       {state === "live" &&
                       <span className="live-badge"><span className="dot"></span>{t.live}</span>
                       }
+                      {s.onlinePresenter && (
+                        <span className="online-badge" title={t.onlinePresenterTitle}>
+                          <svg viewBox="0 0 16 16" width="9" height="9" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                            <circle cx="8" cy="8" r="6.5"/>
+                            <path d="M1.5 8h13M8 1.5c2.2 2 2.2 11 0 13M8 1.5c-2.2 2-2.2 11 0 13"/>
+                          </svg>
+                          {t.online}
+                        </span>
+                      )}
                       {onToggleFavorite && (
                         <StarButton
                           active={favorites?.has(sessionId(s))}
@@ -666,15 +681,18 @@ function MobileList({ data, dayIdx, buildingId, now, lang, t, onSessionClick, fa
                 href={s.meet || "#"}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`mobile-cell is-${state}`}
+                className={`mobile-cell is-${state} ${s.onlinePresenter ? "is-online-presenter" : ""}`}
                 style={{ "--type-color": `var(--t-${s.type})` }}
                 onClick={(e) => { e.preventDefault(); if (onSessionClick) onSessionClick(s); }}
-                aria-label={`${t.types[s.type] || s.type}: ${s.title}, ${s.room === "*" ? t.everyRoom : s.roomName}, ${s.start}–${s.end}`}>
-                
+                aria-label={`${t.types[s.type] || s.type}: ${s.title}, ${s.room === "*" ? t.everyRoom : s.roomName}, ${s.start}–${s.end}${s.onlinePresenter ? ", " + t.onlinePresenterTitle : ""}`}>
+
                   <div className="m-room">
                     {s.room === "*" ? t.everyRoom : s.roomName}
                     {state === "live" && <span className="live-badge" style={{ position: "static", marginLeft: 8 }}><span className="dot"></span>{t.live}</span>}
                     {state === "past" && <span style={{ marginLeft: 8, color: "var(--ink-mute)" }}>✓ {t.past}</span>}
+                    {s.onlinePresenter && (
+                      <span className="online-chip-inline" title={t.onlinePresenterTitle}>🌐 {t.online}</span>
+                    )}
                   </div>
                   <div className="m-title">{s.title}</div>
                   <div className="m-meta">
@@ -1080,6 +1098,19 @@ function SessionModal({ session, t, lang, now, onClose, favorites, onToggleFavor
           )}
         </div>
 
+        {session.onlinePresenter && (
+          <div className="sm-online-banner" role="note">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M2 12h20M12 2c3 3 3 17 0 20M12 2c-3 3-3 17 0 20"/>
+            </svg>
+            <div>
+              <strong>{t.onlinePresenterTitle}</strong>
+              <span>{t.onlinePresenterDesc}</span>
+            </div>
+          </div>
+        )}
+
         <div className="sm-meta">
           <div className="sm-meta-row">
             <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"><circle cx="10" cy="10" r="7" /><path d="M10 6v4l2.5 2.5" /></svg>
@@ -1300,7 +1331,12 @@ function AgendaModal({ open, onClose, favorites, data, t, lang, now, onSessionCl
                               {state === "past" && <span className="ai-past">{t.past}</span>}
                             </div>
                             <div className="agenda-item-body">
-                              <div className="agenda-item-title">{s.title}</div>
+                              <div className="agenda-item-title">
+                                {s.onlinePresenter && (
+                                  <span className="ai-online" title={t.onlinePresenterTitle} aria-hidden="true">🌐</span>
+                                )}
+                                {s.title}
+                              </div>
                               <div className="agenda-item-meta">
                                 <span className="ai-type" style={{ color: typeColor }}>
                                   {t.types[s.type] || s.type}
@@ -1308,6 +1344,12 @@ function AgendaModal({ open, onClose, favorites, data, t, lang, now, onSessionCl
                                 {" · "}
                                 <span>{s.roomName || s.room}</span>
                                 {s.roomCode && <span className="muted"> · {s.roomCode}</span>}
+                                {s.onlinePresenter && (
+                                  <>
+                                    {" · "}
+                                    <span className="ai-online-text">{t.onlinePresenterTitle}</span>
+                                  </>
+                                )}
                               </div>
                             </div>
                           </button>

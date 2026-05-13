@@ -983,10 +983,37 @@ a { color: inherit; }
 }
 .cell-topbar > * { pointer-events: auto; }
 .cell-topbar .live-badge,
-.cell-topbar .cell-star.star-btn {
+.cell-topbar .cell-star.star-btn,
+.cell-topbar .online-badge {
   position: static;
   top: auto;
   right: auto;
+}
+
+/* "Online presenter" badge — teal counterpart to the coral .live-badge.
+   Used on grid cells, in the mobile list, in the session modal banner. */
+.online-badge {
+  background: var(--teal);
+  color: var(--paper);
+  font-size: 8.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 2px 5px;
+  border-radius: 3px;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  white-space: nowrap;
+}
+.online-badge svg { flex-shrink: 0; }
+
+/* Cells with an online presenter get a dashed top border on the
+   type-color stripe — keeps the type signal but adds an extra cue. */
+.cell.is-online-presenter {
+  border-top-style: dashed;
+}
+.cell.is-online-presenter:hover {
+  box-shadow: var(--shadow-md), 0 0 0 2px rgba(91, 169, 163, 0.18);
 }
 
 .live-badge {
@@ -1183,6 +1210,23 @@ a { color: inherit; }
 .mobile-cell .m-meta { font-size: 12px; color: var(--ink-soft); }
 .mobile-cell.is-past { opacity: 0.6; background: var(--cream-deep); }
 .mobile-cell.is-live { border-color: var(--coral); box-shadow: 0 0 0 2px rgba(232,150,105,0.25); }
+.mobile-cell.is-online-presenter { border-left-style: dashed; }
+
+/* Inline online chip used in the mobile cell's room line, next to LIVE/Past */
+.online-chip-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--teal-deep);
+  background: var(--teal-soft);
+  padding: 2px 8px;
+  border-radius: 999px;
+  margin-left: 8px;
+  text-transform: none;
+}
 
 /* Mobile-only search row. The aside inside .day-tabs is hidden on small
    widths (see .day-tabs-aside rule in the mobile breakpoint below); this
@@ -1664,6 +1708,51 @@ a { color: inherit; }
   min-width: 18px;
   text-align: center;
   line-height: 1.4;
+}
+
+/* Online presenter callout inside SessionModal */
+.sm-online-banner {
+  margin: 0 28px 4px;
+  padding: 12px 14px;
+  background: linear-gradient(135deg, var(--teal-soft) 0%, rgba(199, 224, 221, 0.35) 100%);
+  border-left: 3px solid var(--teal-deep);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+}
+.sm-online-banner svg {
+  flex-shrink: 0;
+  color: var(--teal-deep);
+}
+.sm-online-banner strong {
+  display: block;
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--teal-deep);
+  margin-bottom: 1px;
+}
+.sm-online-banner span {
+  color: var(--ink-soft);
+  font-size: 12.5px;
+  line-height: 1.4;
+}
+@media (max-width: 600px) {
+  .sm-online-banner { margin: 0 20px 4px; padding: 10px 12px; gap: 10px; }
+}
+
+/* Agenda item — globe icon + label for online sessions */
+.ai-online {
+  display: inline-block;
+  margin-right: 6px;
+  color: var(--teal-deep);
+  font-size: 0.95em;
+  vertical-align: -1px;
+}
+.ai-online-text {
+  color: var(--teal-deep);
+  font-weight: 600;
 }
 
 /* SessionModal — topbar with star + close */

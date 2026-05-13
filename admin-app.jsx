@@ -560,7 +560,7 @@ window.ICED26_DATA = ${JSON.stringify(data, null, 2)};
 // SessionsTab
 // ─────────────────────────────────────────────────────────────────────
 function SessionsTab({ data, setData, editingIdx, setEditingIdx }) {
-  const [filter, setFilter] = React.useState({ day: "", building: "", type: "", q: "" });
+  const [filter, setFilter] = React.useState({ day: "", building: "", type: "", q: "", online: false });
   // editingIdx is lifted up so the Validation tab can jump-to-edit
 
   const filtered = React.useMemo(() => {
@@ -571,6 +571,7 @@ function SessionsTab({ data, setData, editingIdx, setEditingIdx }) {
         if (filter.day && s.day !== filter.day) return false;
         if (filter.building && s.cluster !== filter.building) return false;
         if (filter.type && s.type !== filter.type) return false;
+        if (filter.online && !s.onlinePresenter) return false;
         if (q) {
           const hay = [s.title, s.fullName, s.roomName, s.roomCode].filter(Boolean).join(" ").toLowerCase();
           if (!hay.includes(q)) return false;
@@ -625,6 +626,7 @@ function SessionsTab({ data, setData, editingIdx, setEditingIdx }) {
           fullName: "",
           type: "other",
           meet: "",
+          onlinePresenter: false,
           talks: []
         }
       : editingIdx != null
@@ -662,6 +664,14 @@ function SessionsTab({ data, setData, editingIdx, setEditingIdx }) {
             <option key={t.id} value={t.id}>{t.label}</option>
           ))}
         </select>
+        <label className="filter-online">
+          <input
+            type="checkbox"
+            checked={filter.online}
+            onChange={(e) => setFilter((f) => ({ ...f, online: e.target.checked }))}
+          />
+          <span>🌐 Solo online</span>
+        </label>
         <span className="filter-count">{filtered.length} de {data.sessions.length}</span>
         <button className="btn-primary" onClick={startNew}>+ Nueva sesión</button>
       </div>
@@ -695,7 +705,10 @@ function SessionsTab({ data, setData, editingIdx, setEditingIdx }) {
                   </span>
                 </td>
                 <td className="td-title">
-                  <div className="t-title">{s.title || <em className="muted">(sin título)</em>}</div>
+                  <div className="t-title">
+                    {s.onlinePresenter && <span className="online-tag" title="Ponente online">🌐</span>}
+                    {s.title || <em className="muted">(sin título)</em>}
+                  </div>
                   {s.fullName && s.fullName !== s.title && (
                     <div className="t-fullname muted">{s.fullName}</div>
                   )}
@@ -804,6 +817,7 @@ function SessionEditor({ session, isNew, rooms, clusters, days, onSave, onCancel
       title: s.title.trim(),
       fullName: (s.fullName || "").trim(),
       meet: (s.meet || "").trim(),
+      onlinePresenter: !!s.onlinePresenter,
       talks: (s.talks || [])
         .filter((t) => t.title || t.authors || t.presenter || t.abstract)
         .map((t) => ({
@@ -877,6 +891,18 @@ function SessionEditor({ session, isNew, rooms, clusters, days, onSave, onCancel
             hint="Si está vacío, la sesión hereda el Meet de su sala (ver pestaña «Salas & Meet»).">
             <input type="url" value={s.meet || ""} onChange={(e) => setField("meet", e.target.value)}
               placeholder="https://meet.google.com/abc-defg-hij" />
+          </Field>
+
+          <Field label="Ponente online"
+            hint="Marca si en esta sesión hay uno o más ponentes uniéndose por Meet. Aparecerá con un badge teal en la web y avisará al asistente de que la sesión tiene componente remota.">
+            <label className="checkbox-row">
+              <input
+                type="checkbox"
+                checked={!!s.onlinePresenter}
+                onChange={(e) => setField("onlinePresenter", e.target.checked)}
+              />
+              <span>Esta sesión tiene un ponente online</span>
+            </label>
           </Field>
 
           <TalksEditor

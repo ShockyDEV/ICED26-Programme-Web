@@ -387,6 +387,8 @@ async function main() {
       easychair_session_id: ec.easychair_session_id
     };
     if (ec.description) next.description = ec.description;
+    // Preserve admin-set flags that EasyChair doesn't know about
+    if (existing?.onlinePresenter) next.onlinePresenter = true;
 
     if (existing && existing.meet) meetPreserved++;
 
