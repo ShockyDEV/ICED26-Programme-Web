@@ -1140,7 +1140,6 @@ function SessionModal({ session, t, lang, now, onClose, favorites, onToggleFavor
             <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M3 9l7-6 7 6v8a1 1 0 0 1-1 1h-3v-5H7v5H4a1 1 0 0 1-1-1z" /></svg>
             <span>
               {session.roomName || (session.room === "*" ? t.everyRoom : session.room)}
-              {session.roomCode ? ` · ${session.roomCode}` : ""}
               {buildingName && <span className="sm-building"> · {buildingName}</span>}
             </span>
           </div>
@@ -1367,7 +1366,6 @@ function AgendaModal({ open, onClose, favorites, data, t, lang, now, onSessionCl
                                 </span>
                                 {" · "}
                                 <span>{s.roomName || s.room}</span>
-                                {s.roomCode && <span className="muted"> · {s.roomCode}</span>}
                                 {(() => {
                                   if (!s.cluster || s.room === "*") return null;
                                   const c = data.clusters.find((x) => x.id === s.cluster);
