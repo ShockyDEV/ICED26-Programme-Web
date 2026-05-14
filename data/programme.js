@@ -1,4 +1,4 @@
-// ICED26 programme — synced from EasyChair on 2026-05-12T09:26
+// ICED26 programme — onlinePresenter flags applied from ORIGINAL Excel on 2026-05-14T07:23
 // Times are Europe/Madrid local. Re-run scripts/sync-programme.js to refresh.
 
 window.ICED26_DATA = {
@@ -232,7 +232,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "106018"
+      "easychair_session_id": "106018",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-23",
@@ -257,7 +258,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "106019"
+      "easychair_session_id": "106019",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-23",
@@ -347,7 +349,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "106022"
+      "easychair_session_id": "106022",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-23",
@@ -372,7 +375,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "106023"
+      "easychair_session_id": "106023",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-23",
@@ -447,7 +451,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "106026"
+      "easychair_session_id": "106026",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-23",
@@ -472,7 +477,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "106027"
+      "easychair_session_id": "106027",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-23",
@@ -851,7 +857,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104809",
-      "description": "Decolonial, Intercultural and Inclusive Approaches to Student Agency"
+      "description": "Decolonial, Intercultural and Inclusive Approaches to Student Agency",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-24",
@@ -913,7 +920,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104807",
-      "description": "International Partnerships, Global Competence and COIL"
+      "description": "International Partnerships, Global Competence and COIL",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-24",
@@ -975,7 +983,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104810",
-      "description": "Developing Trust, Care and Collegiality"
+      "description": "Developing Trust, Care and Collegiality",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-24",
@@ -1037,7 +1046,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104806",
-      "description": "Teaching with AI, Digital Simulation Skills and Responsible Innovation"
+      "description": "Teaching with AI, Digital Simulation Skills and Responsible Innovation",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-24",
@@ -1099,7 +1109,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104808",
-      "description": "Designing Educational Development; Empowering Faculty Agency"
+      "description": "Designing Educational Development; Empowering Faculty Agency",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-24",
@@ -1214,7 +1225,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "106947",
-      "description": "Collaborative and Research-Based Approaches to Higher Education Teaching"
+      "description": "Collaborative and Research-Based Approaches to Higher Education Teaching",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-24",
@@ -1363,7 +1375,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104812",
-      "description": "Alliances, Networking and Policy Development"
+      "description": "Alliances, Networking and Policy Development",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-24",
@@ -1488,7 +1501,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105581"
+      "easychair_session_id": "105581",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-24",
@@ -1513,7 +1527,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105570"
+      "easychair_session_id": "105570",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-24",
@@ -1538,7 +1553,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105575"
+      "easychair_session_id": "105575",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-24",
@@ -1563,7 +1579,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105576"
+      "easychair_session_id": "105576",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-24",
@@ -1588,7 +1605,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105577"
+      "easychair_session_id": "105577",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-24",
@@ -1638,7 +1656,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105579"
+      "easychair_session_id": "105579",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-24",
@@ -1741,7 +1760,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105571"
+      "easychair_session_id": "105571",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-24",
@@ -1995,7 +2015,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105597"
+      "easychair_session_id": "105597",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-24",
@@ -2020,7 +2041,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105585"
+      "easychair_session_id": "105585",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-24",
@@ -2045,7 +2067,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105591"
+      "easychair_session_id": "105591",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-24",
@@ -2070,7 +2093,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105592"
+      "easychair_session_id": "105592",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-24",
@@ -2095,7 +2119,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105593"
+      "easychair_session_id": "105593",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-24",
@@ -2145,7 +2170,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105595"
+      "easychair_session_id": "105595",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-24",
@@ -2248,7 +2274,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105586"
+      "easychair_session_id": "105586",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-24",
@@ -2348,7 +2375,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105583"
+      "easychair_session_id": "105583",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-24",
@@ -2373,7 +2401,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "107269"
+      "easychair_session_id": "107269",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-24",
@@ -2398,7 +2427,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105600"
+      "easychair_session_id": "105600",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-24",
@@ -2423,7 +2453,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105610"
+      "easychair_session_id": "105610",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-24",
@@ -2448,7 +2479,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105626"
+      "easychair_session_id": "105626",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-24",
@@ -2498,7 +2530,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105659"
+      "easychair_session_id": "105659",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-24",
@@ -2548,7 +2581,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "106949"
+      "easychair_session_id": "106949",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-24",
@@ -2921,7 +2955,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104861",
-      "description": "Portfolios, Diaries, Reflective Writing and Teacher Identity"
+      "description": "Portfolios, Diaries, Reflective Writing and Teacher Identity",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-25",
@@ -2983,7 +3018,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104860",
-      "description": "Epistemic Agency, Research Engagement and Scholarly Teaching"
+      "description": "Epistemic Agency, Research Engagement and Scholarly Teaching",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-25",
@@ -3045,7 +3081,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104856",
-      "description": "Student-Staff Partnerships, Justice-Oriented Learning and Transformative Curriculum"
+      "description": "Student-Staff Partnerships, Justice-Oriented Learning and Transformative Curriculum",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-25",
@@ -3107,7 +3144,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104857",
-      "description": "Wellbeing, Belonging and Mindfulness in Academic Development"
+      "description": "Wellbeing, Belonging and Mindfulness in Academic Development",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-25",
@@ -3169,7 +3207,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104859",
-      "description": "Novice Teachers, Academic Induction and Conceptual Change"
+      "description": "Novice Teachers, Academic Induction and Conceptual Change",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-25",
@@ -3387,7 +3426,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104863",
-      "description": "Educational Leadership, Strategic Change and Faculty Development"
+      "description": "Educational Leadership, Strategic Change and Faculty Development",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-25",
@@ -3716,7 +3756,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104878",
-      "description": "Student Feedback, Peer Feedback and inclusive AD"
+      "description": "Student Feedback, Peer Feedback and inclusive AD",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-25",
@@ -3778,7 +3819,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104873",
-      "description": "Storytelling, Narratives, Writing and Reflective AD"
+      "description": "Storytelling, Narratives, Writing and Reflective AD",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-25",
@@ -3840,7 +3882,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104870",
-      "description": "Strategy, Sustainability and Organizational Transformation"
+      "description": "Strategy, Sustainability and Organizational Transformation",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-25",
@@ -3902,7 +3945,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104872",
-      "description": "Mapping Student Agency, Critical Pedagogy and Trust-building"
+      "description": "Mapping Student Agency, Critical Pedagogy and Trust-building",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-25",
@@ -3964,7 +4008,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104879",
-      "description": "Understanding University Teachers, enhancing Teachers Agency"
+      "description": "Understanding University Teachers, enhancing Teachers Agency",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-25",
@@ -4026,7 +4071,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104874",
-      "description": "Research on Teaching Methods; High-Impact-Practices (HIP); Researcher Agency"
+      "description": "Research on Teaching Methods; High-Impact-Practices (HIP); Researcher Agency",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-25",
@@ -4150,7 +4196,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104876",
-      "description": "Inclusive Higher Education, Student Agency and Social Justice"
+      "description": "Inclusive Higher Education, Student Agency and Social Justice",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-25",
@@ -4277,7 +4324,8 @@ window.ICED26_DATA = {
       "type": "paper",
       "meet": "",
       "talks": [],
-      "easychair_session_id": "107036"
+      "easychair_session_id": "107036",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-25",
@@ -4495,7 +4543,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105623"
+      "easychair_session_id": "105623",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-25",
@@ -4520,7 +4569,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105611"
+      "easychair_session_id": "105611",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-25",
@@ -4545,7 +4595,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105617"
+      "easychair_session_id": "105617",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-25",
@@ -4570,7 +4621,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105618"
+      "easychair_session_id": "105618",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-25",
@@ -4595,7 +4647,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105619"
+      "easychair_session_id": "105619",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-25",
@@ -4645,7 +4698,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105621"
+      "easychair_session_id": "105621",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-25",
@@ -4739,7 +4793,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105612"
+      "easychair_session_id": "105612",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-25",
@@ -4914,7 +4969,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105639"
+      "easychair_session_id": "105639",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-25",
@@ -4939,7 +4995,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105627"
+      "easychair_session_id": "105627",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-25",
@@ -4964,7 +5021,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105633"
+      "easychair_session_id": "105633",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-25",
@@ -4989,7 +5047,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105634"
+      "easychair_session_id": "105634",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-25",
@@ -5014,7 +5073,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105638"
+      "easychair_session_id": "105638",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-25",
@@ -5064,7 +5124,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105637"
+      "easychair_session_id": "105637",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-25",
@@ -5158,7 +5219,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105628"
+      "easychair_session_id": "105628",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-25",
@@ -5298,7 +5360,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105655"
+      "easychair_session_id": "105655",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-26",
@@ -5313,7 +5376,8 @@ window.ICED26_DATA = {
       "type": "collaborative",
       "meet": "https://meet.google.com/nyw-osfc-ajz",
       "talks": [],
-      "easychair_session_id": "105644"
+      "easychair_session_id": "105644",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-26",
@@ -5338,7 +5402,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105649"
+      "easychair_session_id": "105649",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-26",
@@ -5363,7 +5428,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105650"
+      "easychair_session_id": "105650",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-26",
@@ -5388,7 +5454,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105651"
+      "easychair_session_id": "105651",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-26",
@@ -5438,7 +5505,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105653"
+      "easychair_session_id": "105653",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-26",
@@ -5488,7 +5556,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105645"
+      "easychair_session_id": "105645",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-26",
@@ -5629,7 +5698,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105672"
+      "easychair_session_id": "105672",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-26",
@@ -5654,7 +5724,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105660"
+      "easychair_session_id": "105660",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-26",
@@ -5679,7 +5750,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105666"
+      "easychair_session_id": "105666",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-26",
@@ -5704,7 +5776,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105667"
+      "easychair_session_id": "105667",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-26",
@@ -5729,7 +5802,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105668"
+      "easychair_session_id": "105668",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-26",
@@ -6127,7 +6201,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "105682",
-      "description": "Teaching in the AI Era: Faculty and Educational Developers Perspectives"
+      "description": "Teaching in the AI Era: Faculty and Educational Developers Perspectives",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-26",
@@ -6189,7 +6264,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "105677",
-      "description": "Teacher Education; Epistemic and Reflective Agency; enhancing English-Language course design"
+      "description": "Teacher Education; Epistemic and Reflective Agency; enhancing English-Language course design",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-26",
@@ -6242,7 +6318,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "105681",
-      "description": "Students as Partners in Academic Development: Agency, Co-Research and Activism"
+      "description": "Students as Partners in Academic Development: Agency, Co-Research and Activism",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-26",
@@ -6304,7 +6381,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "105678",
-      "description": "Mentoring, Peer Learning and Teaching Consultation"
+      "description": "Mentoring, Peer Learning and Teaching Consultation",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-26",
@@ -6401,7 +6479,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "105680",
-      "description": "Researching Teaching Methods: Active Learning; Research-based teaching and Improvisational Methods"
+      "description": "Researching Teaching Methods: Active Learning; Research-based teaching and Improvisational Methods",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-26",
@@ -6529,7 +6608,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105687"
+      "easychair_session_id": "105687",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-26",
