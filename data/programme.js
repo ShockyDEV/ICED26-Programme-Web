@@ -1,4 +1,4 @@
-// ICED26 programme — onlinePresenter flags applied from ORIGINAL Excel on 2026-05-14T07:23
+// ICED26 programme — onlinePresenter restricted to 24-26 June on 2026-05-14T11:02
 // Times are Europe/Madrid local. Re-run scripts/sync-programme.js to refresh.
 
 window.ICED26_DATA = {
@@ -232,8 +232,7 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "106018",
-      "onlinePresenter": true
+      "easychair_session_id": "106018"
     },
     {
       "day": "2026-06-23",
@@ -258,8 +257,7 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "106019",
-      "onlinePresenter": true
+      "easychair_session_id": "106019"
     },
     {
       "day": "2026-06-23",
@@ -349,8 +347,7 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "106022",
-      "onlinePresenter": true
+      "easychair_session_id": "106022"
     },
     {
       "day": "2026-06-23",
@@ -375,8 +372,7 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "106023",
-      "onlinePresenter": true
+      "easychair_session_id": "106023"
     },
     {
       "day": "2026-06-23",
@@ -451,8 +447,7 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "106026",
-      "onlinePresenter": true
+      "easychair_session_id": "106026"
     },
     {
       "day": "2026-06-23",
@@ -477,8 +472,7 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "106027",
-      "onlinePresenter": true
+      "easychair_session_id": "106027"
     },
     {
       "day": "2026-06-23",
