@@ -1,209 +1,112 @@
-<div align="center">
+# ICED26 - Live programme
 
-<img src=".github/banner.svg" alt="ICED26 — Live Programme" width="100%" />
+Live programme web app for the [ICED26 conference](https://iced26.es/), Salamanca, 23-26 June 2026.
 
-<br/>
+Static React 18 app served from GitHub Pages. JSX is compiled in the browser by Babel Standalone, so there is no build step and no Node toolchain to maintain.
 
-<p>
-  <a href="#"><img alt="Status" src="https://img.shields.io/badge/status-live-E89669?style=for-the-badge&labelColor=2B2724" /></a>
-  <a href="#"><img alt="Stack" src="https://img.shields.io/badge/stack-HTML%20%2B%20React%2018-5BA9A3?style=for-the-badge&labelColor=2B2724" /></a>
-  <a href="#"><img alt="Build" src="https://img.shields.io/badge/build-zero%20build-8A827C?style=for-the-badge&labelColor=2B2724" /></a>
-  <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/license-MIT-FDFBF7?style=for-the-badge&labelColor=2B2724" /></a>
-</p>
+## Run locally
 
-<h3>The official live programme web app for the ICED26 conference.</h3>
-<p><i>Salamanca · 23 – 26 June 2026 · <a href="https://iced26.es/">iced26.es</a></i></p>
+```bash
+# Python
+python3 -m http.server 8080
 
-</div>
+# Node
+npx serve -l 8080 .
+```
 
----
+Open <http://localhost:8080/>. Do not open `index.html` via `file://` — Babel needs a real HTTP origin to fetch the `.jsx` files.
 
-## ✨ Highlights
-
-- 🟠 **Live awareness** — sessions running *right now* are highlighted with an animated coral marker; the same coral comet traces the perimeter of the building tab that currently has live action.
-- 🏛️ **Building-first navigation** — Auditorio, Hospedería Fonseca, and the rest are top-level tabs; rooms appear as columns of a time-grid for the selected building.
-- 🕒 **Madrid clock everywhere** — every time displayed (and every "live" check) is computed in `Europe/Madrid`, regardless of the visitor's device timezone.
-- 📱 **Two layouts in one** — desktop renders a column-per-room timetable; mobile collapses to a single chronological feed of cards.
-- 🌐 **Bilingual (EN / ES)** — single toggle in the header switches the entire UI, persisted in `localStorage`.
-- 🔍 **Full-text session search** — by title, speaker, room, or building.
-- 🛠️ **Built-in admin panel** at `/admin` — password-gated editor for sessions, rooms, abstracts and Meet links.
-- ⭐ **Personal agenda** — attendees star sessions to build a personal list; persists in `localStorage`, no account needed.
-- 📲 **Share-ready** — Open Graph image and favicon ship in the box, themed to the brand.
-
----
-
-## 🧱 Tech stack
-
-| Layer | Choice | Why |
-|---|---|---|
-| Markup | Plain HTML5 | One entry file: `ICED26 Live Programme.html` |
-| UI runtime | React 18 (UMD) + Babel Standalone | **Zero build step** — JSX is compiled in the browser |
-| Styling | Hand-written CSS (`styles.css`) + brand tokens | Sampled from the official ICED26 logo palette |
-| Type | Fraunces (serif) + Inter (UI) via Google Fonts | — |
-| Data | A single `data/programme.js` (sessions / rooms / clusters / days) | Editable by hand or via the built-in admin panel |
-| Deployment | Static file hosting | No server, no DB, no API |
-
-> **No `npm install`. No bundler. No CI.** It's just files on a static host.
-
----
-
-## 📂 Project structure
+## Project structure
 
 ```
 .
-├── ICED26 Live Programme.html   ← entry point — open this in a browser
-├── app.jsx                      ← public attendee view (header, grid, search, modal…)
-├── admin.jsx                    ← in-browser editor for sessions/rooms/clusters
-├── admin.html                   ← password-gated editor entry point
-├── admin-app.jsx                ← admin editor (sessions, rooms, validation)
-├── admin-styles.css             ← admin-specific styles
-├── scripts/sync-programme.js    ← refresh data/programme.js from EasyChair
-├── styles.css                   ← all the styling, sampled from the ICED26 logo
+├── index.html                  Public entry point
+├── app.jsx                     Public attendee view
+├── admin.html                  Admin entry, password-gated
+├── admin-app.jsx               Admin editor (sessions, rooms, validation)
+├── admin-styles.css            Admin-specific styles
+├── styles.css                  Public styles
 ├── data/
-│   └── programme.js             ← THE source of truth: days, clusters, rooms, sessions
-├── favicon-32.png               ← browser tab icon (small)
-├── favicon-192.png              ← browser tab icon (large / Android)
-├── apple-touch-icon.png         ← iOS home-screen icon
-├── og-image.png                 ← 1200×630 social preview (Twitter / WhatsApp / Slack)
-└── .github/
-    └── banner.svg               ← README banner
+│   └── programme.js            Schedule data: meta, clusters, rooms, sessions, talks
+├── scripts/
+│   ├── sync-programme.js       Pull the latest schedule from EasyChair
+│   └── import-abstracts.js     Older variant that only refreshes abstracts
+├── favicon-32.png              Browser tab icon
+├── favicon-192.png             Browser tab icon (large)
+├── apple-touch-icon.png        iOS home-screen icon
+├── og-image.png                Social preview (1200x630)
+└── .github/banner.svg          Banner asset
 ```
 
----
+## Updating the programme
 
-## 🚀 Run locally
+Three workflows, depending on what changed.
 
-The app is **static**, so any local web server works. Pick one:
+**Refresh from EasyChair** — when the schedule is edited upstream:
 
 ```bash
-# Python — built in, no install
-python3 -m http.server 8080
-
-# Node — quick one-liner
-npx serve -l 8080 .
-
-# PHP
-php -S localhost:8080
+node scripts/sync-programme.js             # dry-run, prints the diff
+node scripts/sync-programme.js --apply     # write data/programme.js
 ```
 
-Then open <http://localhost:8080/ICED26%20Live%20Programme.html>.
+The script matches sessions by `easychair_session_id` first, then by `(day, start, room)`, then by normalized title. Meet URLs and `onlinePresenter` flags on existing sessions are preserved across syncs.
 
-> ⚠️ Do **not** open the `.html` file with `file://` directly — Babel needs a real HTTP origin to fetch the `.jsx` files.
+**Edit in the admin panel** — open `/admin`, log in, edit. The panel auto-saves a draft to `localStorage` while you work. When done, click _Export programme.js_; the file downloads ready to replace `data/programme.js`. Commit and push.
 
----
+**Edit `data/programme.js` directly** — it is a plain JavaScript object with `meta`, `clusters`, `rooms`, `sessions`. Commit the change.
 
-## ☁️ Deploy
+## Deploy
 
-Because everything is static, deployment is trivial. Pick whichever flavour you like.
+Currently deployed on GitHub Pages. Any push to `main` republishes the site within ~30 seconds.
 
-### Option 1 — GitHub Pages (free, easiest)
+To set up from scratch on a fork:
 
-1. Push this repo to GitHub (see *Push from this folder* below).
-2. **Settings → Pages → Build and deployment → Source:** `Deploy from a branch`.
-3. Pick `main` / `(root)` and **Save**.
-4. Wait ~30 s. Your site is live at `https://<user>.github.io/<repo>/ICED26%20Live%20Programme.html`.
+1. Push the repo to GitHub.
+2. Settings → Pages → Source: _Deploy from a branch_, Branch: `main` / `(root)`. Save.
+3. Wait ~30 seconds. The site is live at `https://<user>.github.io/<repo>/`.
 
-> 💡 If you'd rather skip the long path, **rename the entry file to `index.html`** before deploying.
+For a custom domain (e.g. `programme.iced26.es`):
 
-### Option 2 — Netlify (drag & drop, custom domain in 1 click)
+1. Add a `CNAME` record at the DNS provider pointing the subdomain to `<user>.github.io`.
+2. Settings → Pages → Custom domain, enter the domain.
+3. GitHub provisions a Let's Encrypt certificate automatically.
 
-1. Open <https://app.netlify.com/drop>
-2. Drag the **whole project folder** onto the page.
-3. Site is live in ~10 s with a `*.netlify.app` URL.
-4. *Domain settings → Add custom domain* → point `programme.iced26.es` here.
+The site is fully static and will run on any other plain HTTP host (Netlify, Vercel, Cloudflare Pages, S3, nginx) without changes.
 
-Or via CLI:
+## Tech stack
 
-```bash
-npm i -g netlify-cli
-netlify deploy --prod --dir=.
-```
+| Layer | Choice |
+|---|---|
+| Markup | HTML5 |
+| UI runtime | React 18 UMD + Babel Standalone, compiled in browser |
+| Styling | Hand-written CSS, palette sampled from the ICED26 logo |
+| Fonts | Fraunces (display) + Inter (UI), Google Fonts |
+| Data | Single `data/programme.js` loaded as a `<script>` |
+| Hosting | GitHub Pages, or any static HTTP host |
 
-### Option 3 — Vercel
+No `npm install`, no bundler, no CI.
 
-```bash
-npm i -g vercel
-vercel --prod
-```
-
-Vercel auto-detects a static site. No config required.
-
-### Option 4 — Cloudflare Pages
-
-1. <https://dash.cloudflare.com/> → **Pages → Create → Connect to Git** → select this repo.
-2. Build command: *(leave empty)* · Output directory: `/` → **Save & Deploy**.
-
-### Option 5 — Plain old web hosting (cPanel, FTP, S3, nginx…)
-
-Just upload the contents of the repo into the public web root. That's it.
-
-> ✅ After deploying, update `og:image`, `og:url` and the favicon `href` attributes in the `<head>` of `ICED26 Live Programme.html` to **absolute URLs** (e.g. `https://programme.iced26.es/og-image.png`) so social previews render correctly on Twitter/WhatsApp/Slack.
-
----
-
-## 🧰 Push from this folder to a new GitHub repo
-
-From the project folder:
-
-```bash
-# 1. Initialise git and commit
-git init
-git add .
-git commit -m "Initial commit — ICED26 Live Programme"
-git branch -M main
-
-# 2. Create a private repo and push (needs the GitHub CLI: brew install gh)
-gh repo create iced26-live-programme --private --source=. --push
-```
-
-Don't have `gh`? Create the repo on github.com first, then:
-
-```bash
-git remote add origin git@github.com:<you>/iced26-live-programme.git
-git push -u origin main
-```
-
----
-
-## ✏️ Editing the programme
-
-There are **two** ways to update the schedule:
-
-### A. Edit `data/programme.js` directly
-
-It's a plain JS object: `meta.days`, `clusters`, `rooms`, `sessions`. Push the change and the deploy picks it up automatically.
-
-### B. Use the in-browser admin panel
-
-1. Open the deployed site and click the **Admin** button in the header.
-2. Add / edit / remove sessions, rooms, clusters.
-3. **Export** — the panel hands you back a fresh `programme.js` to commit.
-
----
-
-## 🎨 Customisation
+## Customisation
 
 | Where | What |
 |---|---|
-| `styles.css` `:root { … }` | Brand palette tokens (teal / coral / cream / ink). Change once, propagates everywhere. |
-| `app.jsx` → `I18N` | All EN/ES copy. Add a third language by extending the object. |
-| `og-image.png` & `favicon-*.png` | Replace if you tweak branding. |
-| `app.jsx` `liveStyle` prop on `<Grid>` | Visual style of the "live now" marker (`halo`, `underline`, `filled`). |
+| `styles.css` `:root { … }` | Brand palette tokens (teal, coral, cream, ink, plus type-color tokens). |
+| `app.jsx` `I18N` constant | EN / ES strings for the public site. Extend the object to add languages. |
+| `og-image.png`, `favicon-*.png` | Replace to change the visual identity. |
+| `liveStyle` prop on `<Grid>` in `index.html` | Style of the "live now" marker: `halo`, `underline`, `filled`. |
 
----
+## Security model
 
-## 🔒 Privacy
+The admin login is a SHA-256 password check performed in the browser. The hash is in the source code, so this is a barrier against casual access, not real authentication. The site is fully static — anyone bypassing the gate can only modify their local browser state. Publishing requires a `git push`, which is gated by GitHub's authentication.
 
-The app runs entirely in the browser. **No backend, no analytics, no cookies.** The only persisted state is the user's language choice, in their own `localStorage`.
+A `Content-Security-Policy` meta tag restricts script and style origins to self, unpkg, and Google Fonts. Meet URLs are run through a `safeURL()` helper before rendering so only `http(s)://` schemes can reach `href` attributes.
 
----
+## Privacy
 
-## 📜 License
+No backend, no analytics, no cookies. The app stores three things in the visitor's `localStorage`: language preference, personal agenda favorites, and admin draft/auth state. None of it leaves the browser.
 
-[MIT](LICENSE) — do whatever you want; attribution appreciated.
+External requests on page load are limited to `unpkg.com` (React, ReactDOM, Babel — loaded with SRI hashes) and `fonts.googleapis.com` / `fonts.gstatic.com` (Inter and Fraunces). Those providers see the visitor's IP, as with any site that uses the same CDNs.
 
----
+## License
 
-<div align="center">
-  <sub>Made with ☕ in Salamanca for <b>ICED26</b>.</sub>
-</div>
+[MIT](LICENSE).
