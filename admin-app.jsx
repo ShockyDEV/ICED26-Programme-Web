@@ -58,6 +58,13 @@ const clone = (x) => JSON.parse(JSON.stringify(x));
 const TIME_RE = /^([01]\d|2[0-3]):[0-5]\d$/;
 const URL_RE = /^https?:\/\/.+/i;
 
+// ── safeURL — only allow http(s) URLs into href, block javascript:/data: ──
+function safeURL(url) {
+  if (!url) return "#";
+  const s = String(url).trim();
+  return /^https?:\/\//i.test(s) ? s : "#";
+}
+
 // ── Time overlap helpers ───────────────────────────────────────────────
 const toMin = (hm) => {
   if (!TIME_RE.test(hm || "")) return null;
@@ -716,7 +723,7 @@ function SessionsTab({ data, setData, editingIdx, setEditingIdx }) {
                 <td className="td-talks">{(s.talks || []).length || ""}</td>
                 <td className="td-meet">
                   {s.meet ? (
-                    <a href={s.meet} target="_blank" rel="noopener noreferrer" title={s.meet}>✓</a>
+                    <a href={safeURL(s.meet)} target="_blank" rel="noopener noreferrer" title={s.meet}>✓</a>
                   ) : (
                     <span className="muted">—</span>
                   )}

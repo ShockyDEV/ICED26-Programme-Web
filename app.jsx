@@ -7,6 +7,17 @@
 
 const { useState, useEffect, useMemo, useRef, useCallback } = React;
 
+// ─── URL sanitization ────────────────────────────────────────────────────
+// Defense in depth: when rendering <a href={…}> with values that came from
+// data we don't fully control (Meet URLs, future imports, hand-edited JSON),
+// pass them through safeURL so only http(s) URLs ever make it into href.
+// Blocks javascript:, data:, vbscript:, etc.
+function safeURL(url) {
+  if (!url) return "#";
+  const s = String(url).trim();
+  return /^https?:\/\//i.test(s) ? s : "#";
+}
+
 // ─── Stable session ID for deep-linking ──────────────────────────────────
 // Day + start time + room is unique per schedule. Strip separators for URL friendliness.
 function sessionId(s) {
@@ -259,7 +270,7 @@ function ClusterMeetMenu({ cluster, rooms, liveByRoom, t, lang }) {
           return (
             <a
               key={r.id}
-              href={live ? live.meet : "#"}
+              href={live ? safeURL(live.meet) : "#"}
               target="_blank"
               rel="noopener noreferrer"
               className={`cluster-room ${live ? "is-live" : "is-idle"}`}
@@ -678,7 +689,7 @@ function MobileList({ data, dayIdx, buildingId, now, lang, t, onSessionClick, fa
             return (
               <a
                 key={i}
-                href={s.meet || "#"}
+                href={safeURL(s.meet)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`mobile-cell is-${state} ${s.onlinePresenter ? "is-online-presenter" : ""}`}
@@ -1206,7 +1217,7 @@ function SessionModal({ session, t, lang, now, onClose, favorites, onToggleFavor
 
         <div className="sm-actions">
           {session.meet ? (
-            <a href={session.meet} target="_blank" rel="noopener noreferrer" className="sm-meet-btn">
+            <a href={safeURL(session.meet)} target="_blank" rel="noopener noreferrer" className="sm-meet-btn">
               <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="23 7 16 12 23 17 23 7" /><rect x="1" y="5" width="15" height="14" rx="2" ry="2" /></svg>
               <span>{lang === "es" ? "Enlace a Meet" : "Join Meet"}</span>
               <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"><path d="M7 13l6-6M9 7h4v4" /></svg>
@@ -1356,7 +1367,7 @@ function AgendaModal({ open, onClose, favorites, data, t, lang, now, onSessionCl
                           <div className="agenda-item-actions">
                             {s.meet && (
                               <a
-                                href={s.meet}
+                                href={safeURL(s.meet)}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="agenda-meet-btn"
