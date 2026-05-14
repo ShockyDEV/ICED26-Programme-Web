@@ -1540,6 +1540,7 @@ a { color: inherit; }
   font-size: 13px; color: var(--ink-soft);
 }
 .sm-meta-row svg { color: var(--ink-mute); flex-shrink: 0; }
+.sm-building { color: var(--ink-mute); font-weight: 500; }
 .sm-talks {
   padding: 18px 28px 8px;
 }

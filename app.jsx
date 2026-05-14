@@ -1049,7 +1049,7 @@ function SharePopover({ session, t, lang, onClose }) {
 }
 
 // ─── Session detail modal ────────────────────────────────────────────────
-function SessionModal({ session, t, lang, now, onClose, favorites, onToggleFavorite }) {
+function SessionModal({ session, t, lang, now, onClose, favorites, onToggleFavorite, data }) {
   const [shareOpen, setShareOpen] = useState(false);
   const [expandedTalk, setExpandedTalk] = useState(null);
   // Close on Esc
@@ -1083,6 +1083,15 @@ function SessionModal({ session, t, lang, now, onClose, favorites, onToggleFavor
   })();
 
   const talks = session.talks || [];
+
+  // Resolve the building name from the clusters catalog so the modal can
+  // show "ROOM 2.1 · 2.1 · Edificio I+D+i". Skip for global (room "*")
+  // sessions since they don't belong to a specific building.
+  const buildingName = (() => {
+    if (!data || !session.cluster || session.room === "*") return "";
+    const c = data.clusters.find((x) => x.id === session.cluster);
+    return c ? c.name : "";
+  })();
 
   return (
     <div className="session-modal-overlay" onClick={onClose} role="dialog" aria-modal="true" aria-label={session.title}>
@@ -1129,7 +1138,11 @@ function SessionModal({ session, t, lang, now, onClose, favorites, onToggleFavor
           </div>
           <div className="sm-meta-row">
             <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M3 9l7-6 7 6v8a1 1 0 0 1-1 1h-3v-5H7v5H4a1 1 0 0 1-1-1z" /></svg>
-            <span>{session.roomName || (session.room === "*" ? t.everyRoom : session.room)}{session.roomCode ? ` · ${session.roomCode}` : ""}</span>
+            <span>
+              {session.roomName || (session.room === "*" ? t.everyRoom : session.room)}
+              {session.roomCode ? ` · ${session.roomCode}` : ""}
+              {buildingName && <span className="sm-building"> · {buildingName}</span>}
+            </span>
           </div>
         </div>
 
@@ -1355,6 +1368,11 @@ function AgendaModal({ open, onClose, favorites, data, t, lang, now, onSessionCl
                                 {" · "}
                                 <span>{s.roomName || s.room}</span>
                                 {s.roomCode && <span className="muted"> · {s.roomCode}</span>}
+                                {(() => {
+                                  if (!s.cluster || s.room === "*") return null;
+                                  const c = data.clusters.find((x) => x.id === s.cluster);
+                                  return c ? <span className="muted"> · {c.name}</span> : null;
+                                })()}
                                 {s.onlinePresenter && (
                                   <>
                                     {" · "}

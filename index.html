@@ -136,7 +136,7 @@ function App() {
       <BuildingTabs data={data} buildingId={buildingId} setBuildingId={setBuildingId} dayIdx={dayIdx} now={now} lang={lang} t={t} />
       <Grid data={data} dayIdx={dayIdx} buildingId={buildingId} now={now} liveStyle="halo" lang={lang} t={t} onSessionClick={openSession} favorites={favorites} onToggleFavorite={toggleFavorite} />
       <MobileList data={data} dayIdx={dayIdx} buildingId={buildingId} now={now} lang={lang} t={t} onSessionClick={openSession} favorites={favorites} onToggleFavorite={toggleFavorite} />
-      <SessionModal session={activeSession} t={t} lang={lang} now={now} onClose={() => setActiveSession(null)} favorites={favorites} onToggleFavorite={toggleFavorite} />
+      <SessionModal session={activeSession} t={t} lang={lang} now={now} onClose={() => setActiveSession(null)} favorites={favorites} onToggleFavorite={toggleFavorite} data={data} />
       <AgendaModal open={agendaOpen} onClose={() => setAgendaOpen(false)} favorites={favorites} data={data} t={t} lang={lang} now={now} onSessionClick={openSession} onToggleFavorite={toggleFavorite} />
     </>
   );
