@@ -12,27 +12,120 @@
 // For real auth we'd need a backend (Cloudflare Worker, etc.).
 // =====================================================================
 
-// ── Credentials (CHANGE THESE) ─────────────────────────────────────────
+// ── Credentials ────────────────────────────────────────────────────────
+// We use PBKDF2 (SHA-256, 600 000 iterations, 16-byte random salt) instead
+// of bare SHA-256. Bare SHA-256 is fast — a GPU can hash ~10⁹ candidates per
+// second offline against a leaked hash. PBKDF2 slows each attempt down by
+// ~600 000× (industry-standard for password storage; same as 1Password,
+// Bitwarden, etc.) so brute-forcing a 24-char random password is centuries
+// of compute. The salt + hash + iteration count being public is fine — that
+// is by design, the security comes from the cost factor + password entropy.
+//
+// To set a new password, run this in Node:
+//   const c = require('crypto');
+//   const password = 'your-new-password';
+//   const saltBytes = c.randomBytes(16);
+//   const salt = saltBytes.toString('hex');
+//   const iterations = 600000;
+//   const hash = c.pbkdf2Sync(password, saltBytes, iterations, 32, 'sha256').toString('hex');
+//   console.log({ salt, hash });
 const ADMIN_EMAIL = "enrique@usal.es";
-// SHA-256 of the password. Default password is "iced26-change-me-2026".
-// To set a new password, run this in any browser console:
-//   (async (p) => {
-//     const b = new TextEncoder().encode(p);
-//     const h = await crypto.subtle.digest("SHA-256", b);
-//     return Array.from(new Uint8Array(h)).map(x => x.toString(16).padStart(2, "0")).join("");
-//   })("your-new-password").then(console.log)
-// …and paste the resulting 64-char hex below.
-const ADMIN_PASSWORD_SHA256 = "bc6cda6df7b7c822162f96e6552ef0b6c7f1ec033295de95b030cd48f458a6e3";
+const ADMIN_PBKDF2_SALT = "1b6859c82ef416002482cfa9d88211bc";
+const ADMIN_PBKDF2_HASH = "63c57029a6d0a779fda19559461823b3554ae940d31b6117b59fe247241a4da2";
+const ADMIN_PBKDF2_ITERATIONS = 600000;
 
 // ── Storage keys ────────────────────────────────────────────────────────
 const SESSION_KEY = "iced26-admin-session";
 const DRAFT_KEY = "iced26-admin-draft";
+const RATELIMIT_KEY = "iced26-admin-ratelimit";
 
-// ── Crypto helper ──────────────────────────────────────────────────────
-async function sha256(text) {
-  const buf = new TextEncoder().encode(text);
-  const hash = await crypto.subtle.digest("SHA-256", buf);
-  return Array.from(new Uint8Array(hash)).map((b) => b.toString(16).padStart(2, "0")).join("");
+// ── PBKDF2 via the native Web Crypto API ───────────────────────────────
+async function pbkdf2(password, saltHex, iterations) {
+  const key = await crypto.subtle.importKey(
+    "raw",
+    new TextEncoder().encode(password),
+    { name: "PBKDF2" },
+    false,
+    ["deriveBits"]
+  );
+  const saltBytes = new Uint8Array(saltHex.match(/.{2}/g).map((h) => parseInt(h, 16)));
+  const bits = await crypto.subtle.deriveBits(
+    { name: "PBKDF2", salt: saltBytes, iterations, hash: "SHA-256" },
+    key,
+    256
+  );
+  return Array.from(new Uint8Array(bits)).map((b) => b.toString(16).padStart(2, "0")).join("");
+}
+
+// Constant-time string compare so we don't leak info via timing.
+function constantTimeEq(a, b) {
+  if (a.length !== b.length) return false;
+  let diff = 0;
+  for (let i = 0; i < a.length; i++) diff |= a.charCodeAt(i) ^ b.charCodeAt(i);
+  return diff === 0;
+}
+
+// ── Rate limiting (localStorage, per-browser) ──────────────────────────
+// Won't stop a determined attacker (they would brute-force the hash offline
+// and not via this form), but does kick out:
+//   - automated scanners hitting /admin with default-creds dictionaries
+//   - casual "let me try a few passwords" curiosity
+//
+// Rules:
+//   - 5 failed attempts in a 30-min window → 30-min cooldown
+//   - 20+ failed attempts in the same window → 1-week ban
+//   - any successful login clears the counter
+//
+// The counter is per-browser, so an attacker can defeat it by clearing
+// localStorage or opening incognito. That's a known limitation of any
+// client-side rate limit on a static site.
+const RL_WINDOW_MS = 30 * 60 * 1000;        // 30 min
+const RL_BAN_MS = 7 * 24 * 60 * 60 * 1000;   // 1 week
+const RL_COOLDOWN_THRESHOLD = 5;
+const RL_BAN_THRESHOLD = 20;
+
+function loadRateLimit() {
+  try {
+    const raw = localStorage.getItem(RATELIMIT_KEY);
+    if (!raw) return { failures: [], banUntil: 0 };
+    const s = JSON.parse(raw);
+    return { failures: Array.isArray(s.failures) ? s.failures : [], banUntil: s.banUntil || 0 };
+  } catch { return { failures: [], banUntil: 0 }; }
+}
+function saveRateLimit(state) {
+  try { localStorage.setItem(RATELIMIT_KEY, JSON.stringify(state)); } catch {}
+}
+function clearRateLimit() {
+  try { localStorage.removeItem(RATELIMIT_KEY); } catch {}
+}
+
+// Returns current status: either { ok: true, attemptsRemaining } or
+// { ok: false, kind: 'cooldown'|'ban', until }.
+function rateLimitStatus() {
+  const state = loadRateLimit();
+  const now = Date.now();
+  state.failures = state.failures.filter((t) => now - t < RL_WINDOW_MS);
+  if (state.banUntil > now) {
+    return { ok: false, kind: "ban", until: state.banUntil };
+  }
+  if (state.failures.length >= RL_COOLDOWN_THRESHOLD) {
+    const oldest = state.failures[0];
+    return { ok: false, kind: "cooldown", until: oldest + RL_WINDOW_MS };
+  }
+  return { ok: true, attemptsRemaining: RL_COOLDOWN_THRESHOLD - state.failures.length };
+}
+
+// Record one failed attempt. If the window count crosses the ban threshold,
+// escalate to a 1-week ban.
+function recordRateLimitFailure() {
+  const state = loadRateLimit();
+  const now = Date.now();
+  state.failures = state.failures.filter((t) => now - t < RL_WINDOW_MS);
+  state.failures.push(now);
+  if (state.failures.length >= RL_BAN_THRESHOLD && state.banUntil < now + RL_BAN_MS) {
+    state.banUntil = now + RL_BAN_MS;
+  }
+  saveRateLimit(state);
 }
 
 // ── Session types (must match styles.css --t-* tokens) ────────────────
@@ -290,36 +383,84 @@ function AdminApp() {
 // ─────────────────────────────────────────────────────────────────────
 // LoginGate
 // ─────────────────────────────────────────────────────────────────────
+function formatCountdown(until) {
+  const sec = Math.max(0, Math.ceil((until - Date.now()) / 1000));
+  if (sec >= 24 * 3600) {
+    const d = Math.floor(sec / (24 * 3600));
+    const h = Math.floor((sec % (24 * 3600)) / 3600);
+    return `${d}d ${h}h`;
+  }
+  if (sec >= 3600) {
+    const h = Math.floor(sec / 3600);
+    const m = Math.floor((sec % 3600) / 60);
+    return `${h}h ${String(m).padStart(2, "0")}m`;
+  }
+  if (sec >= 60) {
+    const m = Math.floor(sec / 60);
+    const s = sec % 60;
+    return `${m}:${String(s).padStart(2, "0")}`;
+  }
+  return `${sec}s`;
+}
+
 function LoginGate({ onSuccess }) {
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
   const [error, setError] = React.useState(null);
   const [busy, setBusy] = React.useState(false);
+  const [rl, setRl] = React.useState(() => rateLimitStatus());
+
+  // Live countdown while locked out
+  React.useEffect(() => {
+    if (rl.ok) return undefined;
+    const id = setInterval(() => setRl(rateLimitStatus()), 1000);
+    return () => clearInterval(id);
+  }, [rl.ok]);
 
   const submit = async (e) => {
     e.preventDefault();
-    setBusy(true);
     setError(null);
+
+    // If already locked out: count the attempt (so persistent bots escalate
+    // to the 1-week ban) but don't actually check anything.
+    const before = rateLimitStatus();
+    if (!before.ok) {
+      recordRateLimitFailure();
+      setRl(rateLimitStatus());
+      return;
+    }
+
+    setBusy(true);
     try {
-      // Constant-ish delay to slow brute-force attempts
-      const [hash] = await Promise.all([
-        sha256(password),
-        new Promise((r) => setTimeout(r, 400))
-      ]);
-      if (
-        email.trim().toLowerCase() === ADMIN_EMAIL.toLowerCase() &&
-        hash === ADMIN_PASSWORD_SHA256
-      ) {
+      // PBKDF2 is intentionally slow (~250-400 ms on a normal CPU). That
+      // already throttles online attempts; the rate limit is on top.
+      const hash = await pbkdf2(password, ADMIN_PBKDF2_SALT, ADMIN_PBKDF2_ITERATIONS);
+      const emailOK = email.trim().toLowerCase() === ADMIN_EMAIL.toLowerCase();
+      const hashOK = constantTimeEq(hash, ADMIN_PBKDF2_HASH);
+      if (emailOK && hashOK) {
+        clearRateLimit();
         sessionStorage.setItem(SESSION_KEY, "1");
         onSuccess();
         return;
       }
-      setError("Email o contraseña incorrectos.");
+      recordRateLimitFailure();
+      const after = rateLimitStatus();
+      setRl(after);
+      if (after.ok) {
+        setError(`Email o contraseña incorrectos. ${after.attemptsRemaining} intento(s) antes del bloqueo.`);
+      }
     } catch (err) {
       setError("Error: " + (err.message || err));
     }
     setBusy(false);
   };
+
+  const locked = !rl.ok;
+  const lockMsg = !rl.ok
+    ? rl.kind === "ban"
+      ? `Bloqueado por demasiados intentos fallidos. Inténtalo de nuevo en ${formatCountdown(rl.until)}.`
+      : `Demasiados intentos. Espera ${formatCountdown(rl.until)} antes de volver a probar.`
+    : null;
 
   return (
     <div className="login-shell">
@@ -343,6 +484,7 @@ function LoginGate({ onSuccess }) {
             autoFocus
             autoComplete="username"
             placeholder="tu@usal.es"
+            disabled={locked}
           />
         </label>
         <label className="login-field">
@@ -354,12 +496,20 @@ function LoginGate({ onSuccess }) {
             required
             autoComplete="current-password"
             placeholder="••••••••••"
+            disabled={locked}
           />
         </label>
 
         {error && <div className="login-error" role="alert">{error}</div>}
 
-        <button type="submit" className="login-submit" disabled={busy}>
+        {locked && (
+          <div className={`login-cooldown tone-${rl.kind}`} role="alert">
+            <strong>{rl.kind === "ban" ? "Acceso bloqueado" : "Demasiados intentos"}</strong>
+            <span>{lockMsg}</span>
+          </div>
+        )}
+
+        <button type="submit" className="login-submit" disabled={busy || locked}>
           {busy ? "Comprobando…" : "Entrar"}
         </button>
 
