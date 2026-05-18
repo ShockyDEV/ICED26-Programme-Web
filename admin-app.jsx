@@ -473,8 +473,8 @@ function LoginGate({ onSuccess }) {
           <span className="c1">ED</span>
           <span className="c3">26</span>
         </div>
-        <h1>Panel de administración</h1>
-        <p className="login-sub">Acceso solo organizadores</p>
+        <h1>Acceso</h1>
+        <p className="login-sub">Identifícate para continuar</p>
 
         <label className="login-field">
           <span>Email</span>
@@ -515,12 +515,10 @@ function LoginGate({ onSuccess }) {
           {busy ? "Comprobando…" : "Entrar"}
         </button>
 
-        <a href="/" className="login-back">← Volver al programa público</a>
+        <a href="/" className="login-back">← Volver al programa</a>
 
         <p className="login-disclaimer">
           La sesión se cierra al cerrar la pestaña.
-          <br />
-          Esta web es estática — la autenticación es una barrera ligera, no seguridad fuerte.
         </p>
       </form>
     </div>
