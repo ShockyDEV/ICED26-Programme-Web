@@ -68,7 +68,9 @@ function constantTimeEq(a, b) {
 // ── Rate limiting (localStorage, per-browser) ──────────────────────────
 // Won't stop a determined attacker (they would brute-force the hash offline
 // and not via this form), but does kick out:
-//   - automated scanners hitting /admin with default-creds dictionaries
+//   - automated scanners hitting /admin, /wp-admin, /panel, etc. with
+//     default-creds dictionaries (the entry path is /backstage, which is
+//     not on common scanner wordlists, but they still hit /admin anyway)
 //   - casual "let me try a few passwords" curiosity
 //
 // Rules:

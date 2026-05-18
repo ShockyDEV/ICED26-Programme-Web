@@ -60,7 +60,7 @@ const { useState, useEffect, useMemo } = React;
 const { Header, DayTabs, BuildingTabs, Grid, MobileList, SessionModal, SessionSearch, AgendaModal, I18N, madridParts, sessionId, findSessionById, useFavorites } = window.ICED26App;
 
 // One-time cleanup of the old "organizer mode" unlock flag — that flow has
-// been retired in favour of the dedicated /admin login page.
+// been retired in favour of the dedicated /backstage login page.
 try { localStorage.removeItem("iced26-unlocked"); } catch {}
 
 function App() {

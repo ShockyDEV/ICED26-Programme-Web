@@ -26,7 +26,7 @@
 - **Two layouts in one** — desktop renders a column-per-room timetable; mobile collapses to a single chronological feed of cards.
 - **Bilingual (EN / ES)** — single toggle in the header switches the entire UI, persisted in `localStorage`.
 - **Full-text session search** — by title, speaker, room, or building.
-- **Built-in admin panel** at `/admin` — password-gated editor for sessions, rooms, abstracts and Meet links, with a validation tab that flags presenter overlaps and other data-quality issues.
+- **Built-in admin panel** at `/backstage` — password-gated editor for sessions, rooms, abstracts and Meet links, with a validation tab that flags presenter overlaps and other data-quality issues.
 - **Personal agenda** — attendees star sessions to build a personal list; persists in `localStorage`, no account needed.
 - **Online presenter awareness** — sessions where a speaker joins remotely are flagged in the grid, modal, and agenda so attendees know up front.
 - **Share-ready** — Open Graph image and favicon ship in the box, themed to the brand.
@@ -54,7 +54,7 @@
 .
 ├── index.html                  Public entry point — open this in a browser
 ├── app.jsx                     Public attendee view (header, grid, mobile list, modals)
-├── admin.html                  Password-gated editor entry point
+├── backstage.html              Password-gated editor entry point (kept off /admin to dodge bot scanners)
 ├── admin-app.jsx               Admin editor (sessions, rooms, validation)
 ├── admin-styles.css            Admin-specific styles
 ├── styles.css                  All the public styling, sampled from the ICED26 logo
@@ -162,7 +162,7 @@ The script matches sessions by `easychair_session_id` first, then by `(day, star
 
 ### B. Edit in the admin panel
 
-1. Open `/admin` and log in.
+1. Open `/backstage` and log in.
 2. Add / edit / remove sessions, rooms, abstracts, Meet links. Changes auto-save as a draft in `localStorage`.
 3. Click **Export programme.js** — the file downloads, ready to replace `data/programme.js`. Commit and push.
 
