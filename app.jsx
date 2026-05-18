@@ -1145,6 +1145,29 @@ function SessionModal({ session, t, lang, now, onClose, favorites, onToggleFavor
           </div>
         </div>
 
+        {/* Actions are placed BEFORE the talks list so the Join Meet button is
+            visible without scrolling — last-minute attendees won't always scroll
+            past a 5-talk list to find it. */}
+        <div className="sm-actions">
+          {session.meet ? (
+            <a href={safeURL(session.meet)} target="_blank" rel="noopener noreferrer" className="sm-meet-btn">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="23 7 16 12 23 17 23 7" /><rect x="1" y="5" width="15" height="14" rx="2" ry="2" /></svg>
+              <span>{lang === "es" ? "Enlace a Meet" : "Join Meet"}</span>
+              <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"><path d="M7 13l6-6M9 7h4v4" /></svg>
+            </a>
+          ) : (
+            <span className="sm-no-meet muted">{lang === "es" ? "Sin enlace Meet" : "No Meet link"}</span>
+          )}
+          <div className="sm-share-wrap">
+            <button className="sm-share-btn" onClick={() => setShareOpen(o => !o)} aria-label={t.share} aria-expanded={shareOpen} aria-haspopup="menu">
+              <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><circle cx="5" cy="10" r="2.2" /><circle cx="15" cy="5" r="2.2" /><circle cx="15" cy="15" r="2.2" /><path d="M7 9l6-3M7 11l6 3" /></svg>
+              <span>{t.share}</span>
+              <svg viewBox="0 0 20 20" width="11" height="11" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" style={{ opacity: 0.6 }}><path d="M5 8l5 5 5-5" /></svg>
+            </button>
+            {shareOpen && <SharePopover session={session} t={t} lang={lang} onClose={() => setShareOpen(false)} />}
+          </div>
+        </div>
+
         {talks.length > 0 && (
           <div className="sm-talks">
             <div className="sm-section-label">
@@ -1227,25 +1250,6 @@ function SessionModal({ session, t, lang, now, onClose, favorites, onToggleFavor
           </div>
         )}
 
-        <div className="sm-actions">
-          {session.meet ? (
-            <a href={safeURL(session.meet)} target="_blank" rel="noopener noreferrer" className="sm-meet-btn">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="23 7 16 12 23 17 23 7" /><rect x="1" y="5" width="15" height="14" rx="2" ry="2" /></svg>
-              <span>{lang === "es" ? "Enlace a Meet" : "Join Meet"}</span>
-              <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"><path d="M7 13l6-6M9 7h4v4" /></svg>
-            </a>
-          ) : (
-            <span className="sm-no-meet muted">{lang === "es" ? "Sin enlace Meet" : "No Meet link"}</span>
-          )}
-          <div className="sm-share-wrap">
-            <button className="sm-share-btn" onClick={() => setShareOpen(o => !o)} aria-label={t.share} aria-expanded={shareOpen} aria-haspopup="menu">
-              <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><circle cx="5" cy="10" r="2.2" /><circle cx="15" cy="5" r="2.2" /><circle cx="15" cy="15" r="2.2" /><path d="M7 9l6-3M7 11l6 3" /></svg>
-              <span>{t.share}</span>
-              <svg viewBox="0 0 20 20" width="11" height="11" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" style={{ opacity: 0.6 }}><path d="M5 8l5 5 5-5" /></svg>
-            </button>
-            {shareOpen && <SharePopover session={session} t={t} lang={lang} onClose={() => setShareOpen(false)} />}
-          </div>
-        </div>
       </div>
     </div>
   );

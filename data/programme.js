@@ -1,4 +1,4 @@
-// ICED26 programme — onlinePresenter restricted to 24-26 June on 2026-05-14T11:02
+// ICED26 programme — onlinePresenter restricted to paper/symposium/keynote/talk on 2026-05-18T08:50
 // Times are Europe/Madrid local. Re-run scripts/sync-programme.js to refresh.
 
 window.ICED26_DATA = {
@@ -1495,8 +1495,7 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105581",
-      "onlinePresenter": true
+      "easychair_session_id": "105581"
     },
     {
       "day": "2026-06-24",
@@ -1521,8 +1520,7 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105570",
-      "onlinePresenter": true
+      "easychair_session_id": "105570"
     },
     {
       "day": "2026-06-24",
@@ -1547,8 +1545,7 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105575",
-      "onlinePresenter": true
+      "easychair_session_id": "105575"
     },
     {
       "day": "2026-06-24",
@@ -1573,8 +1570,7 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105576",
-      "onlinePresenter": true
+      "easychair_session_id": "105576"
     },
     {
       "day": "2026-06-24",
@@ -1599,8 +1595,7 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105577",
-      "onlinePresenter": true
+      "easychair_session_id": "105577"
     },
     {
       "day": "2026-06-24",
@@ -1650,8 +1645,7 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105579",
-      "onlinePresenter": true
+      "easychair_session_id": "105579"
     },
     {
       "day": "2026-06-24",
@@ -1754,8 +1748,7 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105571",
-      "onlinePresenter": true
+      "easychair_session_id": "105571"
     },
     {
       "day": "2026-06-24",
@@ -2009,8 +2002,7 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105597",
-      "onlinePresenter": true
+      "easychair_session_id": "105597"
     },
     {
       "day": "2026-06-24",
@@ -2035,8 +2027,7 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105585",
-      "onlinePresenter": true
+      "easychair_session_id": "105585"
     },
     {
       "day": "2026-06-24",
@@ -2061,8 +2052,7 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105591",
-      "onlinePresenter": true
+      "easychair_session_id": "105591"
     },
     {
       "day": "2026-06-24",
@@ -2087,8 +2077,7 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105592",
-      "onlinePresenter": true
+      "easychair_session_id": "105592"
     },
     {
       "day": "2026-06-24",
@@ -2113,8 +2102,7 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105593",
-      "onlinePresenter": true
+      "easychair_session_id": "105593"
     },
     {
       "day": "2026-06-24",
@@ -2164,8 +2152,7 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105595",
-      "onlinePresenter": true
+      "easychair_session_id": "105595"
     },
     {
       "day": "2026-06-24",
@@ -2268,8 +2255,7 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105586",
-      "onlinePresenter": true
+      "easychair_session_id": "105586"
     },
     {
       "day": "2026-06-24",
@@ -2369,8 +2355,7 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105583",
-      "onlinePresenter": true
+      "easychair_session_id": "105583"
     },
     {
       "day": "2026-06-24",
@@ -2395,8 +2380,7 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "107269",
-      "onlinePresenter": true
+      "easychair_session_id": "107269"
     },
     {
       "day": "2026-06-24",
@@ -2421,8 +2405,7 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105600",
-      "onlinePresenter": true
+      "easychair_session_id": "105600"
     },
     {
       "day": "2026-06-24",
@@ -2447,8 +2430,7 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105610",
-      "onlinePresenter": true
+      "easychair_session_id": "105610"
     },
     {
       "day": "2026-06-24",
@@ -2473,8 +2455,7 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105626",
-      "onlinePresenter": true
+      "easychair_session_id": "105626"
     },
     {
       "day": "2026-06-24",
@@ -2524,8 +2505,7 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105659",
-      "onlinePresenter": true
+      "easychair_session_id": "105659"
     },
     {
       "day": "2026-06-24",
@@ -2575,8 +2555,7 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "106949",
-      "onlinePresenter": true
+      "easychair_session_id": "106949"
     },
     {
       "day": "2026-06-24",
@@ -4537,8 +4516,7 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105623",
-      "onlinePresenter": true
+      "easychair_session_id": "105623"
     },
     {
       "day": "2026-06-25",
@@ -4563,8 +4541,7 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105611",
-      "onlinePresenter": true
+      "easychair_session_id": "105611"
     },
     {
       "day": "2026-06-25",
@@ -4589,8 +4566,7 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105617",
-      "onlinePresenter": true
+      "easychair_session_id": "105617"
     },
     {
       "day": "2026-06-25",
@@ -4615,8 +4591,7 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105618",
-      "onlinePresenter": true
+      "easychair_session_id": "105618"
     },
     {
       "day": "2026-06-25",
@@ -4641,8 +4616,7 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105619",
-      "onlinePresenter": true
+      "easychair_session_id": "105619"
     },
     {
       "day": "2026-06-25",
@@ -4692,8 +4666,7 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105621",
-      "onlinePresenter": true
+      "easychair_session_id": "105621"
     },
     {
       "day": "2026-06-25",
@@ -4787,8 +4760,7 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105612",
-      "onlinePresenter": true
+      "easychair_session_id": "105612"
     },
     {
       "day": "2026-06-25",
@@ -4963,8 +4935,7 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105639",
-      "onlinePresenter": true
+      "easychair_session_id": "105639"
     },
     {
       "day": "2026-06-25",
@@ -4989,8 +4960,7 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105627",
-      "onlinePresenter": true
+      "easychair_session_id": "105627"
     },
     {
       "day": "2026-06-25",
@@ -5015,8 +4985,7 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105633",
-      "onlinePresenter": true
+      "easychair_session_id": "105633"
     },
     {
       "day": "2026-06-25",
@@ -5041,8 +5010,7 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105634",
-      "onlinePresenter": true
+      "easychair_session_id": "105634"
     },
     {
       "day": "2026-06-25",
@@ -5067,8 +5035,7 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105638",
-      "onlinePresenter": true
+      "easychair_session_id": "105638"
     },
     {
       "day": "2026-06-25",
@@ -5118,8 +5085,7 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105637",
-      "onlinePresenter": true
+      "easychair_session_id": "105637"
     },
     {
       "day": "2026-06-25",
@@ -5213,8 +5179,7 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105628",
-      "onlinePresenter": true
+      "easychair_session_id": "105628"
     },
     {
       "day": "2026-06-25",
@@ -5354,8 +5319,7 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105655",
-      "onlinePresenter": true
+      "easychair_session_id": "105655"
     },
     {
       "day": "2026-06-26",
@@ -5370,8 +5334,7 @@ window.ICED26_DATA = {
       "type": "collaborative",
       "meet": "https://meet.google.com/nyw-osfc-ajz",
       "talks": [],
-      "easychair_session_id": "105644",
-      "onlinePresenter": true
+      "easychair_session_id": "105644"
     },
     {
       "day": "2026-06-26",
@@ -5396,8 +5359,7 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105649",
-      "onlinePresenter": true
+      "easychair_session_id": "105649"
     },
     {
       "day": "2026-06-26",
@@ -5422,8 +5384,7 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105650",
-      "onlinePresenter": true
+      "easychair_session_id": "105650"
     },
     {
       "day": "2026-06-26",
@@ -5448,8 +5409,7 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105651",
-      "onlinePresenter": true
+      "easychair_session_id": "105651"
     },
     {
       "day": "2026-06-26",
@@ -5499,8 +5459,7 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105653",
-      "onlinePresenter": true
+      "easychair_session_id": "105653"
     },
     {
       "day": "2026-06-26",
@@ -5550,8 +5509,7 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105645",
-      "onlinePresenter": true
+      "easychair_session_id": "105645"
     },
     {
       "day": "2026-06-26",
@@ -5692,8 +5650,7 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105672",
-      "onlinePresenter": true
+      "easychair_session_id": "105672"
     },
     {
       "day": "2026-06-26",
@@ -5718,8 +5675,7 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105660",
-      "onlinePresenter": true
+      "easychair_session_id": "105660"
     },
     {
       "day": "2026-06-26",
@@ -5744,8 +5700,7 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105666",
-      "onlinePresenter": true
+      "easychair_session_id": "105666"
     },
     {
       "day": "2026-06-26",
@@ -5770,8 +5725,7 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105667",
-      "onlinePresenter": true
+      "easychair_session_id": "105667"
     },
     {
       "day": "2026-06-26",
@@ -5796,8 +5750,7 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105668",
-      "onlinePresenter": true
+      "easychair_session_id": "105668"
     },
     {
       "day": "2026-06-26",
