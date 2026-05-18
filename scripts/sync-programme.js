@@ -389,6 +389,20 @@ async function main() {
     if (ec.description) next.description = ec.description;
     // Preserve admin-set flags that EasyChair doesn't know about
     if (existing?.onlinePresenter) next.onlinePresenter = true;
+    // Per-talk online presenter flags — match scraped talks to existing
+    // ones by normalized title and carry the `online` flag forward.
+    if (existing && Array.isArray(existing.talks) && existing.talks.length > 0) {
+      const normT = (s) => (s || "").toLowerCase().replace(/[^\w\s]/g, " ").replace(/\s+/g, " ").trim();
+      const onlineByTitle = new Map();
+      existing.talks.forEach((t) => {
+        if (t && t.online) onlineByTitle.set(normT(t.title), true);
+      });
+      if (onlineByTitle.size > 0) {
+        next.talks = next.talks.map((t) =>
+          onlineByTitle.has(normT(t.title)) ? { ...t, online: true } : t
+        );
+      }
+    }
 
     if (existing && existing.meet) meetPreserved++;
 

@@ -7,6 +7,18 @@
 
 const { useState, useEffect, useMemo, useRef, useCallback } = React;
 
+// ─── Online presenter detection ──────────────────────────────────────────
+// A session is "online" if either:
+//   - The whole session is flagged (session.onlinePresenter === true), or
+//   - Any individual talk inside it is flagged (talk.online === true).
+// Used to drive the teal ONLINE badge on cells, the modal banner, the
+// Mi-Agenda indicator, and the admin filters/table.
+function isSessionOnline(s) {
+  if (!s) return false;
+  if (s.onlinePresenter) return true;
+  return Array.isArray(s.talks) && s.talks.some((t) => t && t.online);
+}
+
 // ─── URL sanitization ────────────────────────────────────────────────────
 // Defense in depth: when rendering <a href={…}> with values that came from
 // data we don't fully control (Meet URLs, future imports, hand-edited JSON),
@@ -115,7 +127,7 @@ const I18N = {
     parallel: "parallel sessions",
     online: "ONLINE",
     onlinePresenterTitle: "Online presenter",
-    onlinePresenterDesc: "One or more speakers will join this session remotely via Meet.",
+    onlinePresenterDesc: "One or more presenters will join this session remotely via Meet.",
     myAgenda: "My agenda",
     myAgendaTitle: "My personal agenda",
     addToAgenda: "Add to my agenda",
@@ -577,7 +589,7 @@ function Grid({ data, dayIdx, buildingId, now, liveStyle, lang, t, onSessionClic
                     key={item.idx}
                     role="button"
                     tabIndex="0"
-                    className={`cell is-${state} ${dur <= 60 ? "is-short" : ""} ${item.span > 1 ? `sub-of-${item.span}` : "sub-of-1"} ${s.onlinePresenter ? "is-online-presenter" : ""}`}
+                    className={`cell is-${state} ${dur <= 60 ? "is-short" : ""} ${item.span > 1 ? `sub-of-${item.span}` : "sub-of-1"} ${isSessionOnline(s) ? "is-online-presenter" : ""}`}
                     data-live-style={liveStyle}
                     onClick={() => { if (onSessionClick) onSessionClick(s); }}
                     onKeyDown={(e) => { if ((e.key === "Enter" || e.key === " ") && onSessionClick) { e.preventDefault(); onSessionClick(s); } }}
@@ -596,7 +608,7 @@ function Grid({ data, dayIdx, buildingId, now, liveStyle, lang, t, onSessionClic
                       {state === "live" &&
                       <span className="live-badge"><span className="dot"></span>{t.live}</span>
                       }
-                      {s.onlinePresenter && (
+                      {isSessionOnline(s) && (
                         <span className="online-badge" title={t.onlinePresenterTitle}>
                           <svg viewBox="0 0 16 16" width="9" height="9" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                             <circle cx="8" cy="8" r="6.5"/>
@@ -692,16 +704,16 @@ function MobileList({ data, dayIdx, buildingId, now, lang, t, onSessionClick, fa
                 href={safeURL(s.meet)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`mobile-cell is-${state} ${s.onlinePresenter ? "is-online-presenter" : ""}`}
+                className={`mobile-cell is-${state} ${isSessionOnline(s) ? "is-online-presenter" : ""}`}
                 style={{ "--type-color": `var(--t-${s.type})` }}
                 onClick={(e) => { e.preventDefault(); if (onSessionClick) onSessionClick(s); }}
-                aria-label={`${t.types[s.type] || s.type}: ${s.title}, ${s.room === "*" ? t.everyRoom : s.roomName}, ${s.start}–${s.end}${s.onlinePresenter ? ", " + t.onlinePresenterTitle : ""}`}>
+                aria-label={`${t.types[s.type] || s.type}: ${s.title}, ${s.room === "*" ? t.everyRoom : s.roomName}, ${s.start}–${s.end}${isSessionOnline(s) ? ", " + t.onlinePresenterTitle : ""}`}>
 
                   <div className="m-room">
                     {s.room === "*" ? t.everyRoom : s.roomName}
                     {state === "live" && <span className="live-badge" style={{ position: "static", marginLeft: 8 }}><span className="dot"></span>{t.live}</span>}
                     {state === "past" && <span style={{ marginLeft: 8, color: "var(--ink-mute)" }}>✓ {t.past}</span>}
-                    {s.onlinePresenter && (
+                    {isSessionOnline(s) && (
                       <span className="online-chip-inline" title={t.onlinePresenterTitle}>🌐 {t.online}</span>
                     )}
                   </div>
@@ -1118,7 +1130,7 @@ function SessionModal({ session, t, lang, now, onClose, favorites, onToggleFavor
           )}
         </div>
 
-        {session.onlinePresenter && (
+        {isSessionOnline(session) && (
           <div className="sm-online-banner" role="note">
             <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
               <circle cx="12" cy="12" r="10"/>
@@ -1204,6 +1216,15 @@ function SessionModal({ session, t, lang, now, onClose, favorites, onToggleFavor
                       <div className="sm-talk-body">
                         <div className="sm-talk-title">
                           {talk.title}
+                          {talk.online && (
+                            <span className="sm-talk-online" title={t.onlinePresenterTitle}>
+                              <svg viewBox="0 0 16 16" width="9" height="9" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                                <circle cx="8" cy="8" r="6.5"/>
+                                <path d="M1.5 8h13M8 1.5c2.2 2 2.2 11 0 13M8 1.5c-2.2 2-2.2 11 0 13"/>
+                              </svg>
+                              {t.online}
+                            </span>
+                          )}
                           {hasDetail && (
                             <span className="sm-talk-chev" aria-hidden="true">
                               {isOpen ? "▾" : "▸"}
@@ -1359,7 +1380,7 @@ function AgendaModal({ open, onClose, favorites, data, t, lang, now, onSessionCl
                             </div>
                             <div className="agenda-item-body">
                               <div className="agenda-item-title">
-                                {s.onlinePresenter && (
+                                {isSessionOnline(s) && (
                                   <span className="ai-online" title={t.onlinePresenterTitle} aria-hidden="true">🌐</span>
                                 )}
                                 {s.title}
@@ -1375,7 +1396,7 @@ function AgendaModal({ open, onClose, favorites, data, t, lang, now, onSessionCl
                                   const c = data.clusters.find((x) => x.id === s.cluster);
                                   return c ? <span className="muted"> · {c.name}</span> : null;
                                 })()}
-                                {s.onlinePresenter && (
+                                {isSessionOnline(s) && (
                                   <>
                                     {" · "}
                                     <span className="ai-online-text">{t.onlinePresenterTitle}</span>
@@ -1419,4 +1440,4 @@ function AgendaModal({ open, onClose, favorites, data, t, lang, now, onSessionCl
   );
 }
 
-window.ICED26App = { Header, DayTabs, BuildingTabs, Grid, MobileList, Scrubber, SessionModal, SessionSearch, AgendaModal, I18N, madridParts, madridDate, sessionState, sessionId, findSessionById, useFavorites, StarButton };
+window.ICED26App = { Header, DayTabs, BuildingTabs, Grid, MobileList, Scrubber, SessionModal, SessionSearch, AgendaModal, I18N, madridParts, madridDate, sessionState, sessionId, findSessionById, useFavorites, StarButton, isSessionOnline };

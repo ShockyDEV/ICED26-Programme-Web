@@ -639,6 +639,51 @@
 .talk-controls button.danger { color: #a02a16; }
 .talk-controls button.danger:hover { background: #fff0ee; border-color: #f5b7b1; }
 .talk-controls button:disabled { opacity: 0.3; cursor: not-allowed; }
+
+/* Per-talk "online presenter" toggle — globe icon button. Matches the
+   size of the up/down/delete buttons next to it. Teal when active. */
+.talk-online-toggle {
+  position: relative;
+  width: 22px;
+  height: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 11px;
+  color: var(--ink-mute);
+  user-select: none;
+  transition: all 0.12s ease;
+}
+.talk-online-toggle input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  margin: 0;
+  cursor: pointer;
+}
+.talk-online-toggle span {
+  filter: grayscale(1);
+  opacity: 0.55;
+}
+.talk-online-toggle:hover { background: var(--cream-deep); }
+.talk-online-toggle.is-on {
+  background: var(--teal-soft);
+  border-color: var(--teal);
+}
+.talk-online-toggle.is-on span {
+  filter: none;
+  opacity: 1;
+}
+
+/* Slight visual hint on talks that have an online presenter — a teal
+   left accent. Helps visually scan a long talks list for which are remote. */
+.talk-row.is-online {
+  background: linear-gradient(90deg, var(--teal-soft) 0%, transparent 6%);
+}
 .talk-fields {
   flex: 1;
   display: grid;

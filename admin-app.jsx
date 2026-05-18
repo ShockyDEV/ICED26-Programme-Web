@@ -160,6 +160,13 @@ function safeURL(url) {
   return /^https?:\/\//i.test(s) ? s : "#";
 }
 
+// ── Online presenter detection — mirror of app.jsx isSessionOnline ───────
+function isSessionOnline(s) {
+  if (!s) return false;
+  if (s.onlinePresenter) return true;
+  return Array.isArray(s.talks) && s.talks.some((t) => t && t.online);
+}
+
 // ── Time overlap helpers ───────────────────────────────────────────────
 const toMin = (hm) => {
   if (!TIME_RE.test(hm || "")) return null;
@@ -728,7 +735,7 @@ function SessionsTab({ data, setData, editingIdx, setEditingIdx }) {
         if (filter.day && s.day !== filter.day) return false;
         if (filter.building && s.cluster !== filter.building) return false;
         if (filter.type && s.type !== filter.type) return false;
-        if (filter.online && !s.onlinePresenter) return false;
+        if (filter.online && !isSessionOnline(s)) return false;
         if (q) {
           const hay = [s.title, s.fullName, s.roomName, s.roomCode].filter(Boolean).join(" ").toLowerCase();
           if (!hay.includes(q)) return false;
@@ -863,7 +870,7 @@ function SessionsTab({ data, setData, editingIdx, setEditingIdx }) {
                 </td>
                 <td className="td-title">
                   <div className="t-title">
-                    {s.onlinePresenter && <span className="online-tag" title="Ponente online">🌐</span>}
+                    {isSessionOnline(s) && <span className="online-tag" title="Sesión con ponente online">🌐</span>}
                     {s.title || <em className="muted">(sin título)</em>}
                   </div>
                   {s.fullName && s.fullName !== s.title && (
@@ -977,14 +984,19 @@ function SessionEditor({ session, isNew, rooms, clusters, days, onSave, onCancel
       onlinePresenter: !!s.onlinePresenter,
       talks: (s.talks || [])
         .filter((t) => t.title || t.authors || t.presenter || t.abstract)
-        .map((t) => ({
-          time: (t.time || "").trim(),
-          title: (t.title || "").trim(),
-          authors: (t.authors || "").trim(),
-          presenter: (t.presenter || "").trim(),
-          abstract: (t.abstract || "").trim(),
-          keywords: (t.keywords || "").trim()
-        }))
+        .map((t) => {
+          const out = {
+            time: (t.time || "").trim(),
+            title: (t.title || "").trim(),
+            authors: (t.authors || "").trim(),
+            presenter: (t.presenter || "").trim(),
+            abstract: (t.abstract || "").trim(),
+            keywords: (t.keywords || "").trim()
+          };
+          // Only include the online flag when truthy, to keep the JSON tidy.
+          if (t.online) out.online = true;
+          return out;
+        })
     };
     onSave(cleaned);
   };
@@ -1050,15 +1062,15 @@ function SessionEditor({ session, isNew, rooms, clusters, days, onSave, onCancel
               placeholder="https://meet.google.com/abc-defg-hij" />
           </Field>
 
-          <Field label="Ponente online"
-            hint="Marca si en esta sesión hay uno o más ponentes uniéndose por Meet. Aparecerá con un badge teal en la web y avisará al asistente de que la sesión tiene componente remota.">
+          <Field label="Ponente online (toda la sesión)"
+            hint="Marca SI toda la sesión tiene componente online sin especificar ponencias concretas. Si solo algunas ponencias dentro tienen presenter online, déjalo desmarcado aquí y marca las ponencias individualmente abajo en «Ponencias». La web tratará la sesión como online si está marcada aquí o si alguna ponencia lo está.">
             <label className="checkbox-row">
               <input
                 type="checkbox"
                 checked={!!s.onlinePresenter}
                 onChange={(e) => setField("onlinePresenter", e.target.checked)}
               />
-              <span>Esta sesión tiene un ponente online</span>
+              <span>Toda la sesión es online</span>
             </label>
           </Field>
 
@@ -1094,7 +1106,7 @@ function TalksEditor({ talks, onChange }) {
   const add = () =>
     onChange([
       ...talks,
-      { time: "", title: "", authors: "", presenter: "", abstract: "", keywords: "" }
+      { time: "", title: "", authors: "", presenter: "", abstract: "", keywords: "", online: false }
     ]);
   const remove = (i) => onChange(talks.filter((_, idx) => idx !== i));
   const move = (i, dir) => {
@@ -1131,11 +1143,22 @@ function TalksEditor({ talks, onChange }) {
         const isOpen = expanded.has(i);
         const hasDetail = (t.abstract || "").trim().length > 0 || (t.keywords || "").trim().length > 0;
         return (
-          <div className={`talk-row ${isOpen ? "is-open" : ""}`} key={i}>
+          <div className={`talk-row ${isOpen ? "is-open" : ""} ${t.online ? "is-online" : ""}`} key={i}>
             <div className="talk-controls">
               <button type="button" onClick={() => move(i, -1)} disabled={i === 0} title="Subir">↑</button>
               <button type="button" onClick={() => move(i, 1)} disabled={i === talks.length - 1} title="Bajar">↓</button>
               <button type="button" onClick={() => remove(i)} className="danger" title="Eliminar">✕</button>
+              <label
+                className={`talk-online-toggle ${t.online ? "is-on" : ""}`}
+                title={t.online ? "Presenter online — pulsa para quitar" : "Marcar como presenter online"}
+              >
+                <input
+                  type="checkbox"
+                  checked={!!t.online}
+                  onChange={(e) => update(i, { online: e.target.checked })}
+                />
+                <span aria-hidden="true">🌐</span>
+              </label>
             </div>
             <div className="talk-fields">
               <input
