@@ -1,5 +1,5 @@
-// ICED26 programme — onlinePresenter restricted to paper/symposium/keynote/talk on 2026-05-18T08:50
-// Times are Europe/Madrid local. Re-run scripts/sync-programme.js to refresh.
+// ICED26 programme — generated from admin panel 2026-05-25T11-34
+// Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
   "meta": {
@@ -56,7 +56,8 @@ window.ICED26_DATA = {
       "id": "auditorio",
       "name": "Auditorio Hospedería",
       "cluster": "hospederia",
-      "code": "AUD"
+      "code": "AUD",
+      "youtube": "https://www.youtube.com/watch?v=JYDwTQC5TlE&list=RDJYDwTQC5TlE&start_radio=1"
     },
     {
       "id": "sala-menor",
@@ -182,7 +183,8 @@ window.ICED26_DATA = {
       "type": "keynote",
       "meet": "https://meet.google.com/bbu-ctoh-sxy",
       "talks": [],
-      "easychair_session_id": "104851"
+      "easychair_session_id": "104851",
+      "youtube": "https://www.youtube.com/watch?v=JYDwTQC5TlE&list=RDJYDwTQC5TlE&start_radio=1"
     },
     {
       "day": "2026-06-23",
@@ -512,7 +514,8 @@ window.ICED26_DATA = {
       "type": "keynote",
       "meet": "https://meet.google.com/igz-jnbs-zto",
       "talks": [],
-      "easychair_session_id": "104800"
+      "easychair_session_id": "104800",
+      "youtube": "https://www.youtube.com/watch?v=JYDwTQC5TlE&list=RDJYDwTQC5TlE&start_radio=1"
     },
     {
       "day": "2026-06-24",
@@ -527,7 +530,8 @@ window.ICED26_DATA = {
       "type": "keynote",
       "meet": "https://meet.google.com/rrs-uxfd-jdg",
       "talks": [],
-      "easychair_session_id": "104801"
+      "easychair_session_id": "104801",
+      "youtube": "https://www.youtube.com/watch?v=JYDwTQC5TlE&list=RDJYDwTQC5TlE&start_radio=1"
     },
     {
       "day": "2026-06-24",
@@ -567,7 +571,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "104814"
+      "easychair_session_id": "104814",
+      "youtube": "https://www.youtube.com/watch?v=JYDwTQC5TlE&list=RDJYDwTQC5TlE&start_radio=1"
     },
     {
       "day": "2026-06-24",
@@ -1778,7 +1783,8 @@ window.ICED26_DATA = {
       "type": "keynote",
       "meet": "https://meet.google.com/zcv-cudm-pif",
       "talks": [],
-      "easychair_session_id": "104802"
+      "easychair_session_id": "104802",
+      "youtube": "https://www.youtube.com/watch?v=JYDwTQC5TlE&list=RDJYDwTQC5TlE&start_radio=1"
     },
     {
       "day": "2026-06-24",
@@ -2610,7 +2616,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105603"
+      "easychair_session_id": "105603",
+      "youtube": "https://www.youtube.com/watch?v=JYDwTQC5TlE&list=RDJYDwTQC5TlE&start_radio=1"
     },
     {
       "day": "2026-06-25",
@@ -3430,7 +3437,8 @@ window.ICED26_DATA = {
       "type": "keynote",
       "meet": "https://meet.google.com/ryk-ubuw-okj",
       "talks": [],
-      "easychair_session_id": "104869"
+      "easychair_session_id": "104869",
+      "youtube": "https://www.youtube.com/watch?v=JYDwTQC5TlE&list=RDJYDwTQC5TlE&start_radio=1"
     },
     {
       "day": "2026-06-25",
@@ -3455,7 +3463,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "104882"
+      "easychair_session_id": "104882",
+      "youtube": "https://www.youtube.com/watch?v=JYDwTQC5TlE&list=RDJYDwTQC5TlE&start_radio=1"
     },
     {
       "day": "2026-06-25",
@@ -4328,7 +4337,8 @@ window.ICED26_DATA = {
       "type": "keynote",
       "meet": "https://meet.google.com/zgs-wsex-myp",
       "talks": [],
-      "easychair_session_id": "104885"
+      "easychair_session_id": "104885",
+      "youtube": "https://www.youtube.com/watch?v=JYDwTQC5TlE&list=RDJYDwTQC5TlE&start_radio=1"
     },
     {
       "day": "2026-06-25",
@@ -6571,7 +6581,8 @@ window.ICED26_DATA = {
       "type": "other",
       "meet": "https://meet.google.com/ctu-fzjw-som",
       "talks": [],
-      "easychair_session_id": "105689"
+      "easychair_session_id": "105689",
+      "youtube": "https://www.youtube.com/watch?v=JYDwTQC5TlE&list=RDJYDwTQC5TlE&start_radio=1"
     },
     {
       "day": "2026-06-26",
@@ -6586,7 +6597,8 @@ window.ICED26_DATA = {
       "type": "other",
       "meet": "https://meet.google.com/oim-rigs-daa",
       "talks": [],
-      "easychair_session_id": "105690"
+      "easychair_session_id": "105690",
+      "youtube": "https://www.youtube.com/watch?v=JYDwTQC5TlE&list=RDJYDwTQC5TlE&start_radio=1"
     }
   ]
 };
