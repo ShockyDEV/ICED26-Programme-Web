@@ -376,6 +376,22 @@ function detectIssues(data) {
     }
   });
 
+  // 5) KEYNOTES WITHOUT YOUTUBE STREAM — keynotes are the typical streamed
+  //    sessions; flag any keynote that still lacks a `session.youtube` so
+  //    Mónica doesn't forget one. Warning, not error — some keynotes may
+  //    intentionally not be streamed (e.g. pre-conference instructions).
+  data.sessions.forEach((s, idx) => {
+    if (s.type !== "keynote") return;
+    if (s.youtube && String(s.youtube).trim()) return;
+    issues.push({
+      kind: "keynote-no-youtube",
+      severity: "warning",
+      title: "Keynote sin retransmisión",
+      detail: `«${s.title}» (${s.day} ${s.start}–${s.end}, ${s.roomName || s.room}) es una keynote pero no tiene URL de YouTube. Pega el enlace del livestream desde el editor de sesión si va a retransmitirse.`,
+      sessionRefs: [{ idx, label: `${s.start}–${s.end} · ${s.title}` }]
+    });
+  });
+
   return issues;
 }
 
@@ -650,7 +666,7 @@ window.ICED26_DATA = ${JSON.stringify(data, null, 2)};
         <nav className="admin-tabs" role="tablist">
           {[
             { id: "sessions", label: "Sesiones", count: stats.sessions },
-            { id: "rooms", label: "Salas & enlaces", count: stats.rooms },
+            { id: "rooms", label: "Salas & Meet", count: stats.rooms },
             { id: "buildings", label: "Edificios", count: stats.buildings },
             { id: "meta", label: "Configuración" },
             {
@@ -1077,7 +1093,7 @@ function SessionEditor({ session, isNew, rooms, clusters, days, onSave, onCancel
           </Field>
 
           <Field label="Enlace YouTube (opcional)" error={errors.youtube}
-            hint="Retransmisión en directo SOLO visualización (sin interacción). Para Auditorio Hospedería y Sala Menor. Puede coexistir con el Meet.">
+            hint="Retransmisión en directo solo de visualización (sin interacción). Típicamente keynotes; cada stream programado en YouTube tiene su URL único, así que se pega aquí sesión a sesión. Puede coexistir con el Meet.">
             <input type="url" value={s.youtube || ""} onChange={(e) => setField("youtube", e.target.value)}
               placeholder="https://www.youtube.com/live/XXXXXXXXXXX" />
           </Field>
@@ -1282,8 +1298,7 @@ function RoomsTab({ data, setData, stats }) {
       name: "Nueva sala",
       cluster: clusterId,
       code: "?",
-      meet: "",
-      youtube: ""
+      meet: ""
     };
     setData((d) => ({ ...d, rooms: [...d.rooms, stub] }));
     setEditingId(stub.id);
@@ -1305,54 +1320,46 @@ function RoomsTab({ data, setData, stats }) {
     return map;
   }, [data.rooms]);
 
-  // Bulk-propagate this room's meet+youtube to all its sessions, OVERWRITING
-  // their per-session values. Confirmation prompt protects per-session
-  // overrides; admins who want to keep overrides can still edit per-session.
-  const propagateToSessions = (room) => {
+  // Bulk-propagate this room's Meet to all its sessions, OVERWRITING their
+  // per-session meet. Useful because a Calendar Meet recurring on the same
+  // room shares one URL across the 4 days. YouTube does NOT go here — each
+  // YouTube livestream has a unique URL per session, edited from SessionEditor.
+  const propagateMeetToSessions = (room) => {
     const sessionsForRoom = data.sessions.filter((s) => s.room === room.id);
     if (sessionsForRoom.length === 0) {
       alert("Esta sala no tiene sesiones asignadas todavía.");
       return;
     }
     const meetVal = (room.meet || "").trim();
-    const ytVal = (room.youtube || "").trim();
-    if (!meetVal && !ytVal) {
-      alert("Esta sala no tiene Meet ni YouTube. Rellena al menos uno antes de propagar.");
+    if (!meetVal) {
+      alert("Esta sala no tiene Meet. Pega la URL antes de propagar.");
       return;
     }
-    const parts = [];
-    if (meetVal) parts.push(`Meet → ${meetVal}`);
-    if (ytVal) parts.push(`YouTube → ${ytVal}`);
     const ok = confirm(
-      `Se asignarán los siguientes enlaces a las ${sessionsForRoom.length} sesiones de «${room.name}»:\n\n` +
-      parts.join("\n") +
-      `\n\nEsto SOBRESCRIBE cualquier valor previo en esas sesiones. ¿Continuar?`
+      `Se asignará el Meet a las ${sessionsForRoom.length} sesiones de «${room.name}»:\n\n${meetVal}\n\nEsto sobrescribe cualquier Meet previo en esas sesiones. ¿Continuar?`
     );
     if (!ok) return;
     setData((d) => ({
       ...d,
-      sessions: d.sessions.map((s) => {
-        if (s.room !== room.id) return s;
-        const next = { ...s };
-        if (meetVal) next.meet = meetVal;
-        if (ytVal) next.youtube = ytVal;
-        return next;
-      })
+      sessions: d.sessions.map((s) =>
+        s.room === room.id ? { ...s, meet: meetVal } : s
+      )
     }));
   };
 
   return (
     <div className="rooms-tab">
       <div className="rooms-head">
-        <h2>Salas y enlaces</h2>
+        <h2>Salas y Meet</h2>
         <p className="muted">
-          Asigna aquí el <strong>Meet</strong> (interactivo) y/o <strong>YouTube</strong> (streaming) de cada sala.
-          Pulsa <em>Aplicar</em> para volcar los enlaces a las sesiones de esa sala.
-          Si una sesión concreta necesita otros enlaces, edítala desde la pestaña <em>Sesiones</em>.
+          Aquí se pega el Meet (interactivo) de cada sala — un mismo URL recurrente
+          que se reutiliza durante los cuatro días. Pulsa <em>Aplicar</em> para volcarlo
+          a las sesiones de la sala. Las URLs de YouTube se gestionan por sesión
+          individual desde la pestaña <em>Sesiones</em> (cada stream tiene su URL único).
           <br />
           <strong>{stats.meetCovered} de {stats.rooms}</strong> salas con Meet ·
           <strong> {stats.sessionsWithMeet} de {stats.sessions}</strong> sesiones con Meet propio
-          {typeof stats.sessionsWithYoutube === "number" && (
+          {typeof stats.sessionsWithYoutube === "number" && stats.sessionsWithYoutube > 0 && (
             <> · <strong>{stats.sessionsWithYoutube}</strong> sesiones con YouTube</>
           )}.
         </p>
@@ -1368,7 +1375,7 @@ function RoomsTab({ data, setData, stats }) {
 
           <div className="rooms-list">
             {(byCluster[c.id] || []).map((r) => (
-              <div className="room-row room-row-v2" key={r.id}>
+              <div className="room-row" key={r.id}>
                 <div className="rr-info">
                   {editingId === r.id ? (
                     <>
@@ -1395,41 +1402,24 @@ function RoomsTab({ data, setData, stats }) {
                   )}
                 </div>
 
-                <div className="rr-links">
-                  <label className="rr-link-row">
-                    <span className="rr-link-label">Meet</span>
-                    <input
-                      type="url"
-                      className="rr-meet"
-                      placeholder="https://meet.google.com/abc-defg-hij"
-                      value={r.meet || ""}
-                      onChange={(e) => updateRoom(r.id, { meet: e.target.value })}
-                    />
-                    <span className={`rr-status ${r.meet ? "ok" : "empty"}`} aria-hidden="true">
-                      {r.meet ? "✓" : "—"}
-                    </span>
-                  </label>
-                  <label className="rr-link-row">
-                    <span className="rr-link-label rr-link-label-yt">YouTube</span>
-                    <input
-                      type="url"
-                      className="rr-youtube"
-                      placeholder="https://www.youtube.com/live/XXXXXXXXXXX"
-                      value={r.youtube || ""}
-                      onChange={(e) => updateRoom(r.id, { youtube: e.target.value })}
-                    />
-                    <span className={`rr-status ${r.youtube ? "ok yt" : "empty"}`} aria-hidden="true">
-                      {r.youtube ? "✓" : "—"}
-                    </span>
-                  </label>
-                </div>
+                <input
+                  type="url"
+                  className="rr-meet"
+                  placeholder="https://meet.google.com/abc-defg-hij"
+                  value={r.meet || ""}
+                  onChange={(e) => updateRoom(r.id, { meet: e.target.value })}
+                />
+
+                <span className={`rr-status ${r.meet ? "ok" : "empty"}`}>
+                  {r.meet ? "✓" : "—"}
+                </span>
 
                 <div className="rr-actions">
                   <button
                     type="button"
                     className="btn-mini btn-apply"
-                    onClick={() => propagateToSessions(r)}
-                    title="Aplicar Meet+YouTube de la sala a todas sus sesiones (sobrescribe per-sesión)"
+                    onClick={() => propagateMeetToSessions(r)}
+                    title="Aplicar el Meet de la sala a todas sus sesiones (sobrescribe)"
                   >
                     Aplicar
                   </button>
@@ -1642,7 +1632,8 @@ function ValidationTab({ data, issues, onEditSession }) {
     ["bad-time", "Horas inválidas", "Formato HH:MM incorrecto o fin ≤ inicio."],
     ["unknown-room", "Salas desconocidas", "La sesión referencia una sala que no existe en el catálogo."],
     ["missing-title", "Sesiones sin título", "Toda sesión debería tener un título."],
-    ["missing-meet", "Sin enlace Meet", "La sesión no tiene Meet propio y la sala tampoco."]
+    ["missing-meet", "Sin enlace Meet", "La sesión no tiene Meet propio y la sala tampoco."],
+    ["keynote-no-youtube", "Keynote sin YouTube", "Una keynote no tiene URL de retransmisión asignada."]
   ];
 
   return (
