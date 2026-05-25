@@ -334,6 +334,109 @@
   font-size: 12px;
 }
 
+/* Publish-to-GitHub primary CTA — teal, distinct from the dark Exportar
+   so the "publish directly" affordance reads as the recommended path. */
+.btn-publish {
+  background: var(--teal-deep);
+  border-color: var(--teal-deep);
+}
+.btn-publish:hover:not(:disabled) {
+  background: var(--teal);
+  border-color: var(--teal);
+}
+.btn-token-cfg {
+  padding: 6px 9px;
+  font-size: 14px;
+  line-height: 1;
+}
+
+/* Publish status toast — slim banner under the topbar with auto-dismiss. */
+.publish-status {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 18px;
+  font-size: 13px;
+  border-bottom: 1px solid var(--line);
+}
+.publish-ok {
+  background: color-mix(in oklab, var(--teal-soft) 80%, var(--paper));
+  color: var(--teal-deep);
+}
+.publish-error {
+  background: #fbe3e1;
+  color: #962119;
+}
+.publish-status > span:first-child { flex: 1; }
+.publish-dismiss {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  font-size: 14px;
+  color: inherit;
+  opacity: 0.6;
+}
+.publish-dismiss:hover { opacity: 1; }
+
+/* Modal to paste / manage the GitHub token. */
+.modal-publish { max-width: 560px; }
+.modal-publish .modal-body { padding: 20px 24px; }
+.modal-publish p { margin: 0 0 12px; line-height: 1.5; font-size: 13.5px; }
+.token-howto {
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin: 4px 0 14px;
+}
+.token-howto summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+.token-howto ol {
+  margin: 10px 0 4px;
+  padding-left: 22px;
+  font-size: 13px;
+  line-height: 1.55;
+}
+.token-howto li { margin-bottom: 4px; }
+.token-howto code {
+  background: var(--paper);
+  padding: 1px 5px;
+  border-radius: 3px;
+  font-size: 12px;
+  border: 1px solid var(--line);
+}
+.token-label {
+  display: grid;
+  grid-template-columns: max-content 1fr auto;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0 8px;
+}
+.token-label > span { font-weight: 600; font-size: 13px; }
+.token-input {
+  padding: 9px 12px;
+  font-size: 13px;
+  font-family: var(--font-mono, ui-monospace, monospace);
+  border: 1.5px solid var(--line);
+  border-radius: 7px;
+  background: var(--paper);
+  outline: none;
+}
+.token-input:focus { border-color: var(--teal); }
+.btn-reveal { white-space: nowrap; }
+.token-warn { font-size: 12px; line-height: 1.4; }
+.modal-publish .modal-foot {
+  display: flex;
+  gap: 10px;
+  padding: 14px 24px;
+  border-top: 1px solid var(--line);
+  background: var(--cream);
+}
+
 /* ───── SESSIONS TAB ───── */
 .filter-bar {
   display: flex;

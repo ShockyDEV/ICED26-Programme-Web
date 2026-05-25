@@ -37,6 +37,90 @@ const ADMIN_PBKDF2_ITERATIONS = 600000;
 // ── Storage keys ────────────────────────────────────────────────────────
 const SESSION_KEY = "iced26-admin-session";
 const DRAFT_KEY = "iced26-admin-draft";
+
+// ── GitHub direct-publish config ──────────────────────────────────────────
+// The admin can push changes straight to data/programme.js via the GitHub
+// Contents API instead of the export+commit+push dance. The token is a
+// Personal Access Token (fine-grained) with Contents:read-write on this
+// repo only, stored in localStorage on the admin's browser.
+const GITHUB_REPO = "ShockyDEV/ICED26-Programme-Web";
+const GITHUB_PATH = "data/programme.js";
+const GITHUB_BRANCH = "main";
+const GITHUB_TOKEN_KEY = "iced26-github-token";
+
+// Build the exact programme.js content (used by both the download-Exportar
+// path and the GitHub direct-publish path so they stay byte-identical).
+function buildProgrammeJS(data) {
+  const stamp = new Date().toISOString().replace(/[:.]/g, "-").slice(0, 16);
+  return (
+    "// ICED26 programme — generated from admin panel " + stamp + "\n" +
+    "// Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.\n" +
+    "\n" +
+    "window.ICED26_DATA = " + JSON.stringify(data, null, 2) + ";\n"
+  );
+}
+
+// UTF-8-safe base64 encoder (btoa alone breaks on non-ASCII chars like
+// acentos / non-Latin scripts that appear in titles).
+function utf8ToBase64(str) {
+  const bytes = new TextEncoder().encode(str);
+  let bin = "";
+  for (let i = 0; i < bytes.length; i++) bin += String.fromCharCode(bytes[i]);
+  return btoa(bin);
+}
+
+// Commit + push a new programme.js to GitHub. Returns the new commit SHA.
+// Throws a human-readable Error on any failure (caller shows it in the UI).
+async function githubPublish(jsContent, commitMessage, token) {
+  const apiUrl = "https://api.github.com/repos/" + GITHUB_REPO + "/contents/" + GITHUB_PATH;
+  // 1) Fetch the current file to get its SHA (required by the PUT API).
+  const getRes = await fetch(apiUrl + "?ref=" + GITHUB_BRANCH + "&_=" + Date.now(), {
+    headers: {
+      Authorization: "Bearer " + token,
+      Accept: "application/vnd.github+json"
+    },
+    cache: "no-store"
+  });
+  if (!getRes.ok) {
+    const err = await getRes.json().catch(() => ({}));
+    if (getRes.status === 401) {
+      throw new Error("Token rechazado por GitHub. Comprueba que es válido y no ha caducado.");
+    }
+    if (getRes.status === 404) {
+      throw new Error("No se encontró el archivo en el repo. ¿Permisos del token sobre " + GITHUB_REPO + "?");
+    }
+    throw new Error("GET falló (HTTP " + getRes.status + "): " + (err.message || ""));
+  }
+  const current = await getRes.json();
+  const sha = current.sha;
+  // 2) PUT the new content with the existing SHA so GitHub detects conflicts.
+  const putRes = await fetch(apiUrl, {
+    method: "PUT",
+    headers: {
+      Authorization: "Bearer " + token,
+      Accept: "application/vnd.github+json",
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      message: commitMessage,
+      content: utf8ToBase64(jsContent),
+      sha,
+      branch: GITHUB_BRANCH
+    })
+  });
+  if (!putRes.ok) {
+    const err = await putRes.json().catch(() => ({}));
+    if (putRes.status === 409) {
+      throw new Error("Conflicto: otro cambio se aplicó primero. Recarga el admin (Ctrl+Shift+R) y reintenta.");
+    }
+    if (putRes.status === 403) {
+      throw new Error("Permiso denegado. El token necesita Contents:read-write sobre " + GITHUB_REPO + ".");
+    }
+    throw new Error("PUT falló (HTTP " + putRes.status + "): " + (err.message || ""));
+  }
+  const result = await putRes.json();
+  return (result.commit && result.commit.sha) || "";
+}
 const RATELIMIT_KEY = "iced26-admin-ratelimit";
 
 // ── PBKDF2 via the native Web Crypto API ───────────────────────────────
@@ -623,13 +707,7 @@ function AdminEditor({ onLogout }) {
   };
 
   const exportData = () => {
-    const stamp = new Date().toISOString().replace(/[:.]/g, "-").slice(0, 16);
-    const js =
-`// ICED26 programme — generated from admin panel ${stamp}
-// Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
-
-window.ICED26_DATA = ${JSON.stringify(data, null, 2)};
-`;
+    const js = buildProgrammeJS(data);
     const blob = new Blob([js], { type: "application/javascript;charset=utf-8" });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
@@ -639,6 +717,53 @@ window.ICED26_DATA = ${JSON.stringify(data, null, 2)};
     a.click();
     document.body.removeChild(a);
     setTimeout(() => URL.revokeObjectURL(url), 1000);
+  };
+
+  // ── Direct publish to GitHub (no export-commit-push dance) ────────────
+  const [publishing, setPublishing] = React.useState(false);
+  const [publishStatus, setPublishStatus] = React.useState(null);
+  const [showTokenModal, setShowTokenModal] = React.useState(false);
+
+  // Auto-dismiss success toast after 8s; errors stay until next attempt.
+  React.useEffect(() => {
+    if (!publishStatus || publishStatus.kind !== "ok") return;
+    const id = setTimeout(() => setPublishStatus(null), 8000);
+    return () => clearTimeout(id);
+  }, [publishStatus]);
+
+  const publishToGitHub = async () => {
+    const token = (() => {
+      try { return localStorage.getItem(GITHUB_TOKEN_KEY) || ""; }
+      catch (_) { return ""; }
+    })();
+    if (!token) {
+      setShowTokenModal(true);
+      return;
+    }
+    const defaultMsg = "Update programme via admin panel";
+    const commitMessage = window.prompt(
+      "Mensaje de commit (corto, descriptivo). Cancela para no publicar.",
+      defaultMsg
+    );
+    if (commitMessage == null) return; // user cancelled
+    const msg = commitMessage.trim() || defaultMsg;
+    setPublishing(true);
+    setPublishStatus(null);
+    try {
+      const sha = await githubPublish(buildProgrammeJS(data), msg, token);
+      // Treat the published state as the new baseline — admin no longer dirty.
+      original.current = clone(data);
+      try { localStorage.removeItem(DRAFT_KEY); } catch (_) {}
+      setIsDirty(false);
+      setPublishStatus({
+        kind: "ok",
+        message: "Publicado en GitHub (commit " + (sha ? sha.slice(0, 7) : "?") + "). GH Pages republica en ~30 s. Recarga la pública con Ctrl+Shift+R para verlo."
+      });
+    } catch (err) {
+      setPublishStatus({ kind: "error", message: err.message || String(err) });
+    } finally {
+      setPublishing(false);
+    }
   };
 
   // Stats for the topbar
@@ -696,8 +821,8 @@ window.ICED26_DATA = ${JSON.stringify(data, null, 2)};
 
         <div className="admin-actions">
           {isDirty && (
-            <span className="dirty-pill" title="Hay cambios no exportados">
-              <span className="dot" /> Cambios sin exportar
+            <span className="dirty-pill" title="Hay cambios sin publicar">
+              <span className="dot" /> Cambios sin publicar
             </span>
           )}
           {isDirty && (
@@ -706,12 +831,28 @@ window.ICED26_DATA = ${JSON.stringify(data, null, 2)};
             </button>
           )}
           <button
-            className="btn-primary"
+            className="btn-primary btn-publish"
+            onClick={publishToGitHub}
+            disabled={!isDirty || publishing}
+            title="Hacer commit + push directo al repo (GH Pages republica en ~30s)"
+          >
+            {publishing ? "Publicando…" : "↑ Publicar"}
+          </button>
+          <button
+            className="btn-ghost btn-mini btn-token-cfg"
+            onClick={() => setShowTokenModal(true)}
+            title="Configurar token de GitHub"
+            aria-label="Configurar token de GitHub"
+          >
+            ⚙
+          </button>
+          <button
+            className="btn-ghost"
             onClick={exportData}
-            title="Descargar programme.js para commitear al repositorio"
+            title="Descargar programme.js (modo fallback, sin tocar GitHub)"
             disabled={!isDirty}
           >
-            ↓ Exportar programme.js
+            ↓ Exportar
           </button>
           <a className="btn-ghost" href="/" target="_blank" rel="noopener noreferrer" title="Abrir web pública">
             Ver web ↗
@@ -721,6 +862,17 @@ window.ICED26_DATA = ${JSON.stringify(data, null, 2)};
           </button>
         </div>
       </header>
+
+      {publishStatus && (
+        <div className={"publish-status publish-" + publishStatus.kind} role="status">
+          <span>{publishStatus.message}</span>
+          <button className="publish-dismiss" onClick={() => setPublishStatus(null)} aria-label="Cerrar">✕</button>
+        </div>
+      )}
+
+      {showTokenModal && (
+        <PublishConfigModal onClose={() => setShowTokenModal(false)} />
+      )}
 
       <main className="admin-main">
         {tab === "sessions" && (
@@ -741,11 +893,104 @@ window.ICED26_DATA = ${JSON.stringify(data, null, 2)};
 
       {isDirty && (
         <div className="export-banner">
-          <strong>Para publicar:</strong> pulsa <em>Exportar programme.js</em>,
-          reemplaza el archivo <code>data/programme.js</code> en el repositorio y haz commit + push.
-          GitHub Pages publica el cambio en ~30 segundos.
+          <strong>Para publicar:</strong> pulsa <em>↑ Publicar</em> (commit directo a GitHub).
+          La primera vez te pedirá un token (botón <em>⚙</em>). Como alternativa offline,
+          <em> ↓ Exportar</em> descarga el <code>programme.js</code> para commitearlo a mano.
         </div>
       )}
+    </div>
+  );
+}
+
+// ─────────────────────────────────────────────────────────────────────
+// PublishConfigModal — paste-the-token modal for first-time setup
+// ─────────────────────────────────────────────────────────────────────
+function PublishConfigModal({ onClose }) {
+  const [token, setToken] = React.useState(() => {
+    try { return localStorage.getItem(GITHUB_TOKEN_KEY) || ""; }
+    catch (_) { return ""; }
+  });
+  const [reveal, setReveal] = React.useState(false);
+  const save = () => {
+    const v = token.trim();
+    try {
+      if (v) localStorage.setItem(GITHUB_TOKEN_KEY, v);
+      else localStorage.removeItem(GITHUB_TOKEN_KEY);
+    } catch (_) {}
+    onClose();
+  };
+  const remove = () => {
+    setToken("");
+    try { localStorage.removeItem(GITHUB_TOKEN_KEY); } catch (_) {}
+  };
+  return (
+    <div className="modal-overlay" onClick={onClose} role="dialog" aria-modal="true">
+      <div className="modal modal-publish" onClick={(e) => e.stopPropagation()}>
+        <header className="modal-head">
+          <h2>Configuración de publicación</h2>
+          <button className="modal-close" onClick={onClose} aria-label="Cerrar">✕</button>
+        </header>
+        <div className="modal-body">
+          <p>
+            Para publicar cambios directamente desde el admin necesitas un{" "}
+            <strong>Personal Access Token de GitHub</strong> con permiso de
+            escritura sobre <code>{GITHUB_REPO}</code>.
+          </p>
+          <details className="token-howto">
+            <summary>Cómo generarlo (paso a paso)</summary>
+            <ol>
+              <li>
+                Abre <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener noreferrer">
+                  github.com/settings/personal-access-tokens/new
+                </a>{" "}(fine-grained, recomendado).
+              </li>
+              <li>Token name: <code>ICED26 admin publish</code>.</li>
+              <li>Expiration: lo que prefieras (1 julio 2026 cubre todo el congreso).</li>
+              <li>Repository access → <em>Only select repositories</em> → <code>{GITHUB_REPO}</code>.</li>
+              <li>
+                Repository permissions → <strong>Contents: Read and write</strong>{" "}
+                (eso es lo único que necesita; deja todo lo demás como está).
+              </li>
+              <li>Generate token → cópialo (empieza por <code>github_pat_</code>) y pégalo aquí abajo.</li>
+            </ol>
+          </details>
+          <label className="token-label">
+            <span>Token</span>
+            <input
+              type={reveal ? "text" : "password"}
+              value={token}
+              onChange={(e) => setToken(e.target.value)}
+              placeholder="github_pat_… o ghp_…"
+              className="token-input"
+              autoFocus
+              spellCheck={false}
+              autoComplete="off"
+            />
+            <button
+              type="button"
+              className="btn-mini btn-reveal"
+              onClick={() => setReveal((r) => !r)}
+              title={reveal ? "Ocultar" : "Mostrar"}
+            >
+              {reveal ? "Ocultar" : "Ver"}
+            </button>
+          </label>
+          <p className="muted token-warn">
+            El token se guarda <strong>solo en tu navegador</strong> (<code>localStorage</code>). No se envía a ningún
+            servidor que no sea <code>api.github.com</code>. Si compartes este equipo, usa <em>Borrar</em> antes de irte.
+          </p>
+        </div>
+        <div className="modal-foot">
+          <button className="btn-ghost" onClick={remove} title="Quitar el token guardado">
+            Borrar
+          </button>
+          <div style={{ flex: 1 }} />
+          <button className="btn-ghost" onClick={onClose}>Cancelar</button>
+          <button className="btn-primary" onClick={save} disabled={!token.trim()}>
+            Guardar
+          </button>
+        </div>
+      </div>
     </div>
   );
 }
