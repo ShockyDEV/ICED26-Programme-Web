@@ -196,23 +196,31 @@ function detectIssues(data) {
   const issues = [];
 
   // 1) PRESENTER OVERLAPS — same person, same day, time ranges intersect.
-  //    We use SESSION-level start/end (talk-level end isn't recorded).
+  //    Counts ONLY the explicit `talk.presenter` (NOT coauthors). A coauthor who
+  //    isn't presenting can legitimately appear in other sessions at the same
+  //    time, so including them produces a flood of false positives.
+  //    Talks without an explicit presenter are SKIPPED (conservative fallback:
+  //    prefer a missed conflict over a fake one — Mónica's call, 2026-05-21).
+  //    Online presenters are excluded too: overlap is a physical-room concern,
+  //    and a remote presenter doesn't tie up a room or compete for the same
+  //    person's physical presence between aulas.
   //    Same-session multi-talk by one person is fine; we de-dup that.
   const presences = []; // { sessionIdx, name, displayName, day, sm, em }
   data.sessions.forEach((s, sIdx) => {
     const sm = toMin(s.start);
     const em = toMin(s.end);
     if (sm == null || em == null) return;
-    // Collect names from talks (presenters + authors) and from session-level speakers field if any
+    const sessionFullyOnline = !!s.onlinePresenter;
     const names = new Set();
     const displayNames = {};
     (s.talks || []).forEach((t) => {
-      [t.presenter, ...splitAuthors(t.authors)].filter(Boolean).forEach((raw) => {
-        const k = normName(raw);
-        if (!k) return;
-        names.add(k);
-        if (!displayNames[k]) displayNames[k] = raw.trim();
-      });
+      const raw = (t.presenter || "").trim();
+      if (!raw) return; // no explicit presenter → skip (conservative)
+      if (sessionFullyOnline || t.online) return; // online → not a physical conflict
+      const k = normName(raw);
+      if (!k) return;
+      names.add(k);
+      if (!displayNames[k]) displayNames[k] = raw;
     });
     names.forEach((name) => {
       presences.push({
