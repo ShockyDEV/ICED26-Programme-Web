@@ -778,8 +778,66 @@
   text-align: center;
 }
 .rr-status.ok { color: var(--teal-deep); }
+.rr-status.ok.yt { color: #962119; }
 .rr-status.empty { color: var(--ink-mute); }
-.rr-actions { display: flex; gap: 4px; }
+.rr-actions { display: flex; gap: 4px; align-items: center; flex-wrap: wrap; }
+.btn-apply {
+  background: var(--teal-soft);
+  color: var(--teal-deep);
+  border-color: var(--teal);
+  font-weight: 600;
+}
+.btn-apply:hover { background: var(--teal); color: var(--paper); }
+
+/* room-row-v2 — stacked Meet + YouTube inputs per room. Replaces the
+   single-row layout when YouTube is present in the model. */
+.room-row-v2 {
+  grid-template-columns: 220px 1fr auto;
+}
+.rr-links {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+.rr-link-row {
+  display: grid;
+  grid-template-columns: 70px 1fr 22px;
+  align-items: center;
+  gap: 8px;
+}
+.rr-link-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--teal-deep);
+}
+.rr-link-label-yt { color: #962119; }
+.rr-youtube {
+  padding: 7px 10px;
+  font-size: 12.5px;
+  border: 1.5px solid var(--line);
+  border-radius: 7px;
+  background: var(--paper);
+  font-family: inherit;
+  outline: none;
+}
+.rr-youtube:focus { border-color: #C4302B; }
+
+/* Admin sessions table — YouTube tag next to the meet ✓ */
+.yt-tag {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 0 5px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #962119;
+  background: #FBE3E1;
+  border-radius: 4px;
+  text-decoration: none;
+}
+.yt-tag:hover { background: #C4302B; color: #fff; }
 
 /* ───── BUILDINGS TAB ───── */
 .building-card {

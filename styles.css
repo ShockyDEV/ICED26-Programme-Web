@@ -8,6 +8,11 @@
   --coral-soft:  #F8D9C7;
   --taupe:       #9B7A6B;
   --taupe-soft:  #D9CABF;
+  /* YouTube stream brand (used for ▶ STREAM badge + Watch on YouTube CTA;
+     a touch darker than #FF0000 so it doesn't clash with the warm palette) */
+  --youtube:      #C4302B;
+  --youtube-deep: #9B2620;
+  --youtube-soft: #FBE3E1;
   --cream:       #F7F2EA;
   --cream-deep:  #EFE6D6;
   --paper:       #FDFBF7;
@@ -1046,6 +1051,24 @@ a { color: inherit; }
 }
 .online-badge svg { flex-shrink: 0; }
 
+/* "Stream" badge — YouTube counterpart to the teal .online-badge. Marks
+   sessions retransmitted on YouTube (Auditorio Hospedería, Sala Menor).
+   Visually distinct from ONLINE so the two channels read at a glance. */
+.stream-badge {
+  background: var(--youtube);
+  color: var(--paper);
+  font-size: 8.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 2px 5px;
+  border-radius: 3px;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  white-space: nowrap;
+}
+.stream-badge svg { flex-shrink: 0; }
+
 /* Cells with an online presenter get a dashed top border on the
    type-color stripe — keeps the type signal but adds an extra cue. */
 .cell.is-online-presenter {
@@ -1261,6 +1284,21 @@ a { color: inherit; }
   letter-spacing: 0.06em;
   color: var(--teal-deep);
   background: var(--teal-soft);
+  padding: 2px 8px;
+  border-radius: 999px;
+  margin-left: 8px;
+  text-transform: none;
+}
+/* YouTube-stream counterpart of .online-chip-inline (mobile list). */
+.stream-chip-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--youtube-deep);
+  background: var(--youtube-soft);
   padding: 2px 8px;
   border-radius: 999px;
   margin-left: 8px;
@@ -1676,6 +1714,24 @@ a { color: inherit; }
   box-shadow: var(--shadow-md);
   transform: translateY(-1px);
 }
+/* YouTube-stream CTA — sits next to .sm-meet-btn when a session has both
+   channels. Distinct red so attendees pick the right channel at a glance. */
+.sm-youtube-btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 12px 22px;
+  background: var(--youtube);
+  color: var(--paper);
+  font-size: 14px; font-weight: 600;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.15s ease;
+}
+.sm-youtube-btn:hover {
+  background: var(--youtube-deep);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
 .sm-no-meet { font-size: 13px; }
 
 @media (max-width: 600px) {
@@ -1815,6 +1871,39 @@ a { color: inherit; }
 }
 @media (max-width: 600px) {
   .sm-online-banner { margin: 0 20px 4px; padding: 10px 12px; gap: 10px; }
+}
+
+/* YouTube-stream callout (mirror of .sm-online-banner). Marks sessions
+   that are watch-only on YouTube — no Meet, no interaction. */
+.sm-stream-banner {
+  margin: 0 28px 4px;
+  padding: 12px 14px;
+  background: linear-gradient(135deg, var(--youtube-soft) 0%, rgba(251, 227, 225, 0.35) 100%);
+  border-left: 3px solid var(--youtube);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+}
+.sm-stream-banner svg {
+  flex-shrink: 0;
+  color: var(--youtube);
+}
+.sm-stream-banner strong {
+  display: block;
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--youtube-deep);
+  margin-bottom: 1px;
+}
+.sm-stream-banner span {
+  color: var(--ink-soft);
+  font-size: 12.5px;
+  line-height: 1.4;
+}
+@media (max-width: 600px) {
+  .sm-stream-banner { margin: 0 20px 4px; padding: 10px 12px; gap: 10px; }
 }
 
 /* Agenda item — globe icon + label for online sessions */
