@@ -138,7 +138,16 @@ const I18N = {
     keywords: "Keywords",
     nextUp: "Next up",
     showAbstract: "Show abstract",
-    hideAbstract: "Hide abstract"
+    hideAbstract: "Hide abstract",
+    yourTimezone: "Your timezone",
+    salamancaTime: "Salamanca time",
+    yourLocalTime: "Your local time",
+    tzVsSalamanca: "vs Salamanca",
+    tzSameAsSalamanca: "Same clock as Salamanca",
+    startsIn: "Starts in",
+    endsIn: "Ends in",
+    inProgress: "In progress",
+    ended: "Ended"
   },
   es: {
     subtitle: "Salamanca · 23–26 junio 2026",
@@ -181,7 +190,16 @@ const I18N = {
     keywords: "Palabras clave",
     nextUp: "Siguiente",
     showAbstract: "Mostrar resumen",
-    hideAbstract: "Ocultar resumen"
+    hideAbstract: "Ocultar resumen",
+    yourTimezone: "Tu zona horaria",
+    salamancaTime: "Hora de Salamanca",
+    yourLocalTime: "Tu hora local",
+    tzVsSalamanca: "vs Salamanca",
+    tzSameAsSalamanca: "Misma hora que Salamanca",
+    startsIn: "Empieza en",
+    endsIn: "Termina en",
+    inProgress: "En curso",
+    ended: "Terminada"
   }
 };
 
@@ -214,6 +232,87 @@ function minutesToLabel(min) {
 
 function madridDate(dayKey, hhmm) {
   return new Date(`${dayKey}T${hhmm}:00+02:00`);
+}
+
+// ─── User-timezone helpers ────────────────────────────────────────────────
+// All session times in data/programme.js are Europe/Madrid local "HH:MM"
+// strings (the congress is in late June 2026 → always CEST, UTC+2). These
+// helpers convert a Madrid-local moment to the attendee's own clock and
+// expose the offset, so online presenters in other timezones can see when
+// their slot really hits without doing mental arithmetic.
+
+function userTimezone() {
+  try { return Intl.DateTimeFormat().resolvedOptions().timeZone || ""; }
+  catch { return ""; }
+}
+
+// "11:00" Madrid on 2026-06-24 → e.g. "05:00" for America/New_York.
+// Uses Intl with explicit timeZone so it's deterministic, not tied to the
+// JS runtime's local clock (matters in Node tests / SSR; in the browser
+// `userTimezone()` is the local clock anyway).
+function formatInUserTZ(dayKey, hhmm) {
+  const d = madridDate(dayKey, hhmm);
+  const tz = userTimezone();
+  return new Intl.DateTimeFormat("en-GB", {
+    timeZone: tz || undefined,
+    hour: "2-digit", minute: "2-digit", hour12: false
+  }).format(d);
+}
+
+// Offset between the user's local clock and Madrid for a specific moment.
+// Positive ⇒ user is AHEAD (e.g. Tokyo = +7h vs CEST).
+// Negative ⇒ user is BEHIND (e.g. New York = −6h vs CEST).
+// Computed per-moment via Intl rather than `Date.getTimezoneOffset()` so
+// DST in either side is honoured and the result doesn't depend on the
+// JS runtime's local clock.
+function userOffsetMinutesVsMadrid(dayKey, hhmm) {
+  const d = madridDate(dayKey, hhmm);
+  const tz = userTimezone();
+  if (!tz || tz === "Europe/Madrid") return 0;
+  const partsIn = (zone) => Object.fromEntries(
+    new Intl.DateTimeFormat("en-GB", {
+      timeZone: zone,
+      year: "numeric", month: "2-digit", day: "2-digit",
+      hour: "2-digit", minute: "2-digit", hour12: false
+    }).formatToParts(d).map((p) => [p.type, p.value])
+  );
+  const u = partsIn(tz);
+  const m = partsIn("Europe/Madrid");
+  const userMin = parseInt(u.hour, 10) * 60 + parseInt(u.minute, 10);
+  const madridMin = parseInt(m.hour, 10) * 60 + parseInt(m.minute, 10);
+  // Handle calendar-day wrap (e.g. user in Tokyo at 02:00 sees +1 day vs Madrid).
+  let dayDelta = parseInt(u.day, 10) - parseInt(m.day, 10);
+  if (dayDelta > 15) dayDelta -= 30;
+  else if (dayDelta < -15) dayDelta += 30;
+  return (userMin - madridMin) + dayDelta * 24 * 60;
+}
+
+// "+5h30" / "−6h" / "±0"
+function formatOffsetLabel(minutes) {
+  if (!minutes) return "±0";
+  const sign = minutes > 0 ? "+" : "−";
+  const abs = Math.abs(minutes);
+  const h = Math.floor(abs / 60);
+  const m = abs % 60;
+  return m === 0 ? `${sign}${h}h` : `${sign}${h}h${String(m).padStart(2, "0")}`;
+}
+
+// True if the attendee is NOT in Madrid's clock right now (any DST quirks
+// included). Used as the "show TZ chip & extra modal row" gate.
+function userIsInDifferentTZ(dayKey, hhmm) {
+  return userOffsetMinutesVsMadrid(dayKey, hhmm) !== 0;
+}
+
+// "2 h 14 min" / "35 min" for countdown chips. Direction (starts / ends /
+// ended) is added by the caller from the i18n bundle.
+function formatDurationApprox(deltaMs, lang) {
+  const total = Math.max(0, Math.round(deltaMs / 60000));
+  if (total < 1) return lang === "es" ? "menos de 1 min" : "less than 1 min";
+  const h = Math.floor(total / 60);
+  const m = total % 60;
+  if (h === 0) return `${m} min`;
+  if (m === 0) return `${h} h`;
+  return `${h} h ${m} min`;
 }
 
 function sessionState(s, now) {
@@ -368,6 +467,30 @@ function Header({ data, now, lang, setLang, t, favorites, onOpenAgenda }) {
             )}
           </button>
         )}
+
+        {(() => {
+          // TZ chip: shown only if the attendee's clock differs from Madrid.
+          // We anchor to the first conference day at midday to compute the
+          // offset; all four days are CEST so any one works.
+          const anchorDay = data.meta.days[0] || "2026-06-23";
+          const tzMin = userOffsetMinutesVsMadrid(anchorDay, "12:00");
+          const tz = userTimezone();
+          if (!tz || tzMin === 0) return null;
+          const offsetLabel = formatOffsetLabel(tzMin);
+          // City part of "Region/City" reads more naturally than the full
+          // IANA name (Europe/London → London).
+          const tzShort = tz.includes("/") ? tz.split("/").pop().replace(/_/g, " ") : tz;
+          return (
+            <div className="tz-chip" title={`${t.yourTimezone}: ${tz} (${offsetLabel} ${t.tzVsSalamanca})`}>
+              <svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <circle cx="10" cy="10" r="7.5" />
+                <path d="M2.5 10h15M10 2.5c2.6 2.6 2.6 12.4 0 15M10 2.5c-2.6 2.6-2.6 12.4 0 15" />
+              </svg>
+              <span className="tz-chip-tz">{tzShort}</span>
+              <span className="tz-chip-offset">{offsetLabel}</span>
+            </div>
+          );
+        })()}
 
         <button className="lang-toggle" onClick={() => setLang(lang === "en" ? "es" : "en")} aria-label="Toggle language">
           <Icon name="globe" width="13" height="13" />
@@ -1148,6 +1271,27 @@ function SessionModal({ session, t, lang, now, onClose, favorites, onToggleFavor
             <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"><circle cx="10" cy="10" r="7" /><path d="M10 6v4l2.5 2.5" /></svg>
             <span><strong>{session.start}–{session.end}</strong> · {dayLabel} · {Math.round(dur)} min</span>
           </div>
+          {(() => {
+            // Show the attendee's local-clock equivalent of this session,
+            // but only if their TZ actually differs from Madrid. Otherwise
+            // this row is redundant noise.
+            const tz = userTimezone();
+            const offMin = userOffsetMinutesVsMadrid(session.day, session.start);
+            if (!tz || offMin === 0) return null;
+            const tzShort = tz.includes("/") ? tz.split("/").pop().replace(/_/g, " ") : tz;
+            return (
+              <div className="sm-meta-row sm-meta-tz">
+                <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <circle cx="10" cy="10" r="7.5" />
+                  <path d="M2.5 10h15M10 2.5c2.6 2.6 2.6 12.4 0 15M10 2.5c-2.6 2.6-2.6 12.4 0 15" />
+                </svg>
+                <span>
+                  <strong>{formatInUserTZ(session.day, session.start)}–{formatInUserTZ(session.day, session.end)}</strong>
+                  <span className="muted"> · {t.yourLocalTime} · {tzShort} ({formatOffsetLabel(offMin)} {t.tzVsSalamanca})</span>
+                </span>
+              </div>
+            );
+          })()}
           <div className="sm-meta-row">
             <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M3 9l7-6 7 6v8a1 1 0 0 1-1 1h-3v-5H7v5H4a1 1 0 0 1-1-1z" /></svg>
             <span>
@@ -1156,6 +1300,33 @@ function SessionModal({ session, t, lang, now, onClose, favorites, onToggleFavor
             </span>
           </div>
         </div>
+
+        {(() => {
+          // Countdown pill — handy especially for online presenters checking
+          // "when does my slot hit my clock". Hidden once the session ends.
+          if (!now) return null;
+          const startMs = madridDate(session.day, session.start).getTime();
+          const endMs = madridDate(session.day, session.end).getTime();
+          const nowMs = now.getTime();
+          if (nowMs >= endMs) return null; // ended → don't clutter
+          if (nowMs < startMs) {
+            return (
+              <div className="sm-countdown sm-countdown-future">
+                <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <circle cx="10" cy="10" r="7.5" />
+                  <path d="M10 5v5l3 2" />
+                </svg>
+                <span><strong>{t.startsIn}</strong> {formatDurationApprox(startMs - nowMs, lang)}</span>
+              </div>
+            );
+          }
+          return (
+            <div className="sm-countdown sm-countdown-live">
+              <span className="sm-countdown-dot" aria-hidden="true" />
+              <span><strong>{t.inProgress}</strong> · {t.endsIn} {formatDurationApprox(endMs - nowMs, lang)}</span>
+            </div>
+          );
+        })()}
 
         {/* Actions are placed BEFORE the talks list so the Join Meet button is
             visible without scrolling — last-minute attendees won't always scroll
