@@ -751,10 +751,13 @@ function AdminEditor({ onLogout }) {
     setPublishStatus(null);
     try {
       const sha = await githubPublish(buildProgrammeJS(data), msg, token);
-      // Treat the published state as the new baseline — admin no longer dirty.
+      // Treat the published state as the new baseline. isDirty is a useMemo
+      // derived from data vs. original.current — to flip it back to false we
+      // both reset the baseline AND replace `data` with a fresh clone, which
+      // makes React re-run the useMemo (JSON-equal so isDirty becomes false).
       original.current = clone(data);
       try { localStorage.removeItem(DRAFT_KEY); } catch (_) {}
-      setIsDirty(false);
+      setData((d) => clone(d));
       setPublishStatus({
         kind: "ok",
         message: "Publicado en GitHub (commit " + (sha ? sha.slice(0, 7) : "?") + "). GH Pages republica en ~30 s. Recarga la pública con Ctrl+Shift+R para verlo."
