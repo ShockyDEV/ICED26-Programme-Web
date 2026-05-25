@@ -259,7 +259,24 @@ function madridDate(dayKey, hhmm) {
 // expose the offset, so online presenters in other timezones can see when
 // their slot really hits without doing mental arithmetic.
 
+// Demo override key. Lets anyone preview the site in a different TZ from
+// the browser console without touching DevTools or the system clock:
+//   localStorage.setItem("iced26-tz-override", "Asia/Tokyo"); location.reload();
+//   localStorage.removeItem("iced26-tz-override");           location.reload();
+// Or use the friendlier helpers exposed on window.iced26 below.
+const TZ_OVERRIDE_KEY = "iced26-tz-override";
+
 function userTimezone() {
+  try {
+    const override = localStorage.getItem(TZ_OVERRIDE_KEY);
+    if (override) {
+      // Validate it's a real IANA zone — Intl will throw on garbage.
+      try {
+        new Intl.DateTimeFormat("en-GB", { timeZone: override });
+        return override;
+      } catch {}
+    }
+  } catch {}
   try { return Intl.DateTimeFormat().resolvedOptions().timeZone || ""; }
   catch { return ""; }
 }
@@ -1663,3 +1680,30 @@ function AgendaModal({ open, onClose, favorites, data, t, lang, now, onSessionCl
 }
 
 window.ICED26App = { Header, DayTabs, BuildingTabs, Grid, MobileList, Scrubber, SessionModal, SessionSearch, AgendaModal, I18N, madridParts, madridDate, sessionState, sessionId, findSessionById, useFavorites, StarButton, isSessionOnline };
+
+// ─── Demo helpers: timezone preview from the console ──────────────────────
+// Lets anyone (incl. Mónica) preview the site in any timezone without
+// opening DevTools Sensors. Open the browser console (F12 → Console) and:
+//   iced26.setTZ("Asia/Tokyo")  // pin override + reminds you to reload
+//   iced26.clearTZ()             // remove override
+//   iced26.tz                    // currently effective TZ (getter)
+window.iced26 = window.iced26 || {};
+window.iced26.setTZ = function (tz) {
+  try {
+    new Intl.DateTimeFormat("en-GB", { timeZone: tz });
+  } catch (_) {
+    console.error("[iced26] Invalid IANA timezone:", tz, "— try e.g. 'Asia/Tokyo', 'America/New_York', 'Europe/London'.");
+    return false;
+  }
+  try { localStorage.setItem(TZ_OVERRIDE_KEY, tz); } catch (_) {}
+  console.log("%c[iced26] Timezone override set → " + tz + ". Reload (F5) to apply.", "color:#5BA9A3;font-weight:bold");
+  return true;
+};
+window.iced26.clearTZ = function () {
+  try { localStorage.removeItem(TZ_OVERRIDE_KEY); } catch (_) {}
+  console.log("%c[iced26] Timezone override cleared. Reload (F5) to revert to your real timezone.", "color:#5BA9A3;font-weight:bold");
+};
+Object.defineProperty(window.iced26, "tz", {
+  configurable: true,
+  get: function () { return userTimezone(); }
+});
