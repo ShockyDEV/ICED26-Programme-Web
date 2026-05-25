@@ -357,20 +357,25 @@ function detectIssues(data) {
     }
   });
 
-  // 4) MEET COVERAGE — sessions without a Meet that also can't inherit one (room has no meet)
+  // 4) REMOTE-ACCESS COVERAGE — sesiones sin Meet ni YouTube. Una sesión
+  //    necesita AL MENOS UNO de los dos canales remotos. Keynotes se
+  //    excluyen aquí porque el check específico de abajo (5) ya cubre
+  //    su caso particular (solo YouTube, nunca Meet).
   const roomMeet = {};
   data.rooms.forEach((r) => (roomMeet[r.id] = r.meet || ""));
   data.sessions.forEach((s, idx) => {
+    if (s.type === "keynote") return; // cubierto por keynote-no-youtube
     if (s.meet) return;
+    if (s.youtube && String(s.youtube).trim()) return;
     if (s.room === "*" || !s.room) return;
-    if (s.type === "break") return; // breaks don't need meet
+    if (s.type === "break") return; // breaks don't need a remote channel
     const inherited = roomMeet[s.room];
     if (!inherited) {
       issues.push({
         kind: "missing-meet",
         severity: "warning",
-        title: "Sin enlace Meet",
-        detail: `Ni la sesión ni la sala «${s.roomName || s.room}» tienen un enlace Meet. Los asistentes no podrán entrar.`,
+        title: "Sin canal remoto",
+        detail: `«${s.title}» (${s.day} ${s.start}–${s.end}, ${s.roomName || s.room}) no tiene Meet ni YouTube. Los asistentes online no podrán acceder.`,
         sessionRefs: [{ idx, label: `${s.start}–${s.end} · ${s.title}` }]
       });
     }
@@ -1632,7 +1637,7 @@ function ValidationTab({ data, issues, onEditSession }) {
     ["bad-time", "Horas inválidas", "Formato HH:MM incorrecto o fin ≤ inicio."],
     ["unknown-room", "Salas desconocidas", "La sesión referencia una sala que no existe en el catálogo."],
     ["missing-title", "Sesiones sin título", "Toda sesión debería tener un título."],
-    ["missing-meet", "Sin enlace Meet", "La sesión no tiene Meet propio y la sala tampoco."],
+    ["missing-meet", "Sin canal remoto", "La sesión no tiene Meet ni YouTube — los asistentes online no podrán entrar."],
     ["keynote-no-youtube", "Keynote sin YouTube", "Una keynote no tiene URL de retransmisión asignada."]
   ];
 
