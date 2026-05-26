@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-05-25T11-34
+// ICED26 programme — generated from admin panel 2026-05-26T08-13
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -181,10 +181,11 @@ window.ICED26_DATA = {
       "title": "Welcome and Instructions for Pre-Conference",
       "fullName": "Session 1: Welcome and Instructions for Pre-Conference",
       "type": "keynote",
-      "meet": "https://meet.google.com/bbu-ctoh-sxy",
+      "meet": "",
       "talks": [],
       "easychair_session_id": "104851",
-      "youtube": "https://www.youtube.com/watch?v=JYDwTQC5TlE&list=RDJYDwTQC5TlE&start_radio=1"
+      "youtube": "",
+      "onlinePresenter": false
     },
     {
       "day": "2026-06-23",
