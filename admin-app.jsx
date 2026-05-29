@@ -488,15 +488,15 @@ function detectIssues(data) {
   //    Mónica doesn't forget one. Warning, not error — some keynotes may
   //    intentionally not be streamed (e.g. pre-conference instructions).
   data.sessions.forEach((s, idx) => {
-    if (s.type !== "keynote" && s.type !== "talk") return;
+    if (s.type !== "keynote") return; // ICED talks don't require a livestream
     if (s.day === "2026-06-23") return; // pre-conf welcome/instructions: in-person
     if (s.youtube && String(s.youtube).trim()) return;
     if (roomYT[s.room]) return; // inherits the room's YouTube livestream
     issues.push({
       kind: "keynote-no-youtube",
       severity: "warning",
-      title: "Keynote / ICED Talk sin retransmisión",
-      detail: `«${s.title}» (${s.day} ${s.start}–${s.end}, ${s.roomName || s.room}) no tiene URL de YouTube (ni propia ni heredada de la sala). Pega el livestream en la sala (Auditorio / Sala Menor) o en la sesión.`,
+      title: "Keynote sin retransmisión",
+      detail: `«${s.title}» (${s.day} ${s.start}–${s.end}, ${s.roomName || s.room}) es una keynote sin URL de YouTube (ni propia ni heredada de la sala). Pega el livestream en la sala (Auditorio) o en la sesión si va a retransmitirse.`,
       sessionRefs: [{ idx, label: `${s.start}–${s.end} · ${s.title}` }]
     });
   });
