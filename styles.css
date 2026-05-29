@@ -690,6 +690,18 @@ a { color: inherit; }
    would leave an asymmetric left margin. */
 .grid-wrap > .grid,
 .grid-wrap > .grid-headers { width: 100%; }
+/* On viewports wider than the 1600px cap the centered layout left a blank
+   gutter on the LEFT, while the timetable grid (min-width ~1944px for a
+   10-room day, i.e. wider than the cap) overflowed the container to the
+   RIGHT and covered the right gutter. Lift the cap above 1600px so the whole
+   layout fills the viewport and stays left-aligned. Screens <=1600px (laptops,
+   tablets, phones) keep the original centered 1600px layout untouched. */
+@media (min-width: 1601px) {
+  .header-inner,
+  .day-tabs,
+  .building-tabs,
+  .grid-wrap { max-width: none; }
+}
 .grid-headers {
   display: grid;
   grid-template-columns: var(--grid-time-w) repeat(var(--cols), minmax(180px, 1fr));
