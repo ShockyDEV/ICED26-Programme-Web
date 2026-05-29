@@ -861,7 +861,8 @@ a { color: inherit; }
   display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
   overflow: hidden; text-wrap: pretty;
 }
-.cell.is-short .c-official,
+/* Short (<=60min) 1-talk cells (workshops, collab spaces) DO show the official
+   title — there is room. Only hide it on heavily side-by-side overlapped slots. */
 .cell.sub-of-6 .c-official, .cell.sub-of-7 .c-official, .cell.sub-of-8 .c-official,
 .cell.sub-of-9 .c-official, .cell.sub-of-10 .c-official, .cell.sub-of-11 .c-official,
 .cell.sub-of-12 .c-official, .cell.sub-of-13 .c-official, .cell.sub-of-14 .c-official { display: none; }
