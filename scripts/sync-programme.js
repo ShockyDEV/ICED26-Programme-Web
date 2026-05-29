@@ -153,7 +153,13 @@ function parseDay(html, day) {
     const start = dash[0];
     const end = dash[1] || dash[0];
     const fullName = collapseWs(decode(titleMatch[1]));
-    const description = descMatch ? collapseWs(decode(stripTags(descMatch[1]))) : "";
+    // Strip the "Some Online Presentations" / "Some Presentations Online" note
+    // EasyChair appends to some Paper themes — online is shown via the per-talk
+    // icon, not as text in the theme/title.
+    const description = descMatch
+      ? collapseWs(decode(stripTags(descMatch[1])))
+          .replace(/\s*Some\s+(?:Online\s+Presentations?|Presentations?\s+Online)\s*$/i, "").trim()
+      : "";
     const roomName = roomMatch ? collapseWs(decode(roomMatch[1])) : null;
 
     const talks = [];
