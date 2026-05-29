@@ -1,6 +1,5 @@
-// ICED26 programme — synced from EasyChair, web rules applied 2026-05-29T16:25
-// Rules: no Meet for keynotes/ICED talks/pre-conference; per-room link toggle (rooms[].active); online is per-talk.
-// Times are Europe/Madrid local. Re-run scripts/sync-programme.js to refresh.
+// ICED26 programme — generated from admin panel 2026-05-29T16-58
+// Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
   "meta": {
@@ -58,7 +57,7 @@ window.ICED26_DATA = {
       "name": "Auditorio Hospedería",
       "cluster": "hospederia",
       "code": "AUD",
-      "youtube": "https://www.youtube.com/watch?v=JYDwTQC5TlE&list=RDJYDwTQC5TlE&start_radio=1",
+      "youtube": "",
       "meet": "",
       "active": false
     },
@@ -980,7 +979,7 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104810",
-      "description": "Developing Trust, Care and Collegiality"
+      "description": "Developing Trust, Care and Collegiality Some Online Presentations"
     },
     {
       "day": "2026-06-24",
@@ -1042,7 +1041,7 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104806",
-      "description": "Teaching with AI, Digital Simulation Skills and Responsible Innovation"
+      "description": "Teaching with AI, Digital Simulation Skills and Responsible InnovationSome Presentations Online"
     },
     {
       "day": "2026-06-24",
@@ -1157,7 +1156,7 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104805",
-      "description": "Educational Developers' Roles, TLC's Roles and AD Leadership"
+      "description": "Educational Developers' Roles, TLC's Roles and AD LeadershipSome Online Presentations"
     },
     {
       "day": "2026-06-24",
@@ -2935,7 +2934,7 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104859",
-      "description": "Novice Teachers, Academic Induction and Conceptual Change"
+      "description": "Novice Teachers, Academic Induction and Conceptual ChangeSome Online Presentations"
     },
     {
       "day": "2026-06-25",
@@ -2997,7 +2996,7 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104860",
-      "description": "Epistemic Agency, Research Engagement and Scholarly Teaching"
+      "description": "Epistemic Agency, Research Engagement and Scholarly TeachingSome Online Presentations"
     },
     {
       "day": "2026-06-25",
@@ -3059,7 +3058,7 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104858",
-      "description": "PhD Student Agency, Doctoral Supervision, writing SoTL"
+      "description": "PhD Student Agency, Doctoral Supervision, writing SoTLSome Online Presentations"
     },
     {
       "day": "2026-06-25",
@@ -3121,7 +3120,7 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104857",
-      "description": "Wellbeing, Belonging and Mindfulness in Academic Development"
+      "description": "Wellbeing, Belonging and Mindfulness in Academic DevelopmentSome Online Presentations"
     },
     {
       "day": "2026-06-25",
@@ -3183,7 +3182,7 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104862",
-      "description": "Impact, Evaluation and Transfer of Academic Development"
+      "description": "Impact, Evaluation and Transfer of Academic DevelopmentSome Online Presentations"
     },
     {
       "day": "2026-06-25",
@@ -3419,7 +3418,7 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104863",
-      "description": "Educational Leadership, Strategic Change and Faculty Development"
+      "description": "Educational Leadership, Strategic Change and Faculty DevelopmentSome Online Presentations"
     },
     {
       "day": "2026-06-25",
@@ -3748,7 +3747,7 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104878",
-      "description": "Student Feedback, Peer Feedback and inclusive AD"
+      "description": "Student Feedback, Peer Feedback and inclusive ADSome Online Presentations"
     },
     {
       "day": "2026-06-25",
@@ -3810,7 +3809,7 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104876",
-      "description": "Inclusive Higher Education, Student Agency and Social Justice"
+      "description": "Inclusive Higher Education, Student Agency and Social JusticeSome Presentations Online"
     },
     {
       "day": "2026-06-25",
@@ -3872,7 +3871,7 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104870",
-      "description": "Strategy, Sustainability and Organizational Transformation"
+      "description": "Strategy, Sustainability and Organizational TransformationSome Presentations Online"
     },
     {
       "day": "2026-06-25",
@@ -3934,7 +3933,7 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104879",
-      "description": "Understanding University Teachers, enhancing Teachers Agency"
+      "description": "Understanding University Teachers, enhancing Teachers AgencySome Online Presentations"
     },
     {
       "day": "2026-06-25",
@@ -3996,7 +3995,7 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104874",
-      "description": "Research on Teaching Methods; High-Impact-Practices (HIP); Researcher Agency"
+      "description": "Research on Teaching Methods; High-Impact-Practices (HIP); Researcher AgencySome Presentations Online"
     },
     {
       "day": "2026-06-25",
@@ -4058,7 +4057,7 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104875",
-      "description": "Fostering Professional Growth and Resilience; Change Labs"
+      "description": "Fostering Professional Growth and Resilience; Change LabsSome Online Presentations"
     },
     {
       "day": "2026-06-25",
@@ -4120,7 +4119,7 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104873",
-      "description": "Storytelling, Narratives, Writing and Reflective AD"
+      "description": "Storytelling, Narratives, Writing and Reflective ADSome Online Presentations"
     },
     {
       "day": "2026-06-25",
@@ -4294,7 +4293,7 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104872",
-      "description": "Mapping Student Agency, Critical Pedagogy and Trust-building"
+      "description": "Mapping Student Agency, Critical Pedagogy and Trust-buildingSome Online Presentations"
     },
     {
       "day": "2026-06-25",
@@ -6139,7 +6138,7 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "105680",
-      "description": "Researching Teaching Methods: Active Learning; Research-based teaching and Improvisational Methods"
+      "description": "Researching Teaching Methods: Active Learning; Research-based teaching and Improvisational MethodsSome Online Presentations"
     },
     {
       "day": "2026-06-26",
@@ -6192,7 +6191,7 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "105677",
-      "description": "Teacher Education; Epistemic and Reflective Agency; enhancing English-Language course design"
+      "description": "Teacher Education; Epistemic and Reflective Agency; enhancing English-Language course designSome Online Presentations"
     },
     {
       "day": "2026-06-26",
@@ -6254,7 +6253,7 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "105681",
-      "description": "Strategic and Innovative Practices in Education and Academic Development"
+      "description": "Strategic and Innovative Practices in Education and Academic DevelopmentSome Online Presentations"
     },
     {
       "day": "2026-06-26",
@@ -6316,7 +6315,7 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "105678",
-      "description": "Mentoring, Peer Learning and Teaching Consultation"
+      "description": "Mentoring, Peer Learning and Teaching ConsultationSome Online Presentations"
     },
     {
       "day": "2026-06-26",
@@ -6378,7 +6377,7 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "105676",
-      "description": "Graduate Student Partnership; Department-level Capacity Building and Transformative AD"
+      "description": "Graduate Student Partnership; Department-level Capacity Building and Transformative ADSome Online Presentations"
     },
     {
       "day": "2026-06-26",
