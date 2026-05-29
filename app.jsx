@@ -68,9 +68,14 @@ function OfficialTitle({ session, className, t }) {
 // YouTube is a per-room livestream: a session inherits its room's stream URL
 // unless it carries its own session.youtube override.
 function effectiveYouTube(s, data) {
-  if (s && s.youtube && String(s.youtube).trim()) return String(s.youtube).trim();
+  if (!s) return "";
+  // YouTube livestream is ONLY for keynotes and ICED talks. Everything else
+  // (symposia, papers, workshops…) uses Meet — even in the Auditorio, where a
+  // symposium does NOT inherit the room's keynote livestream.
+  if (s.type !== "keynote" && s.type !== "talk") return "";
+  if (s.youtube && String(s.youtube).trim()) return String(s.youtube).trim();
   const rooms = data && data.rooms;
-  if (Array.isArray(rooms) && s) {
+  if (Array.isArray(rooms)) {
     const r = rooms.find((x) => x.id === s.room);
     if (r && r.youtube && String(r.youtube).trim()) return String(r.youtube).trim();
   }
@@ -475,7 +480,7 @@ function ClusterMeetMenu({ cluster, rooms, liveByRoom, t, lang }) {
           const live = liveByRoom[r.id];
           // Effective link: prefer the live session's Meet, else the room's
           // YouTube stream. Greyed + non-clickable unless the room is Active.
-          const url = live ? (live.meet || r.youtube || "") : "";
+          const url = live ? (live.meet || ((live.type === "keynote" || live.type === "talk") ? (r.youtube || "") : "")) : "";
           const clickable = !!(live && r.active && url);
           return (
             <a

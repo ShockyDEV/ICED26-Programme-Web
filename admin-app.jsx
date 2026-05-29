@@ -1269,7 +1269,8 @@ function SessionEditor({ session, isNew, rooms, clusters, days, onSave, onCancel
       cardTitle: (s.cardTitle || "").trim(),
       // Keynotes & ICED talks are YouTube-only — never persist a Meet for them.
       meet: (s.type === "keynote" || s.type === "talk") ? "" : (s.meet || "").trim(),
-      youtube: (s.youtube || "").trim(),
+      // Symposia/papers/workshops use Meet, not YouTube — keep youtube only for keynote/talk.
+      youtube: (s.type === "keynote" || s.type === "talk") ? (s.youtube || "").trim() : "",
       talks: (s.talks || [])
         .filter((t) => t.title || t.authors || t.presenter || t.abstract)
         .map((t) => {
@@ -1351,23 +1352,24 @@ function SessionEditor({ session, isNew, rooms, clusters, days, onSave, onCancel
           </Field>
 
           {s.type === "keynote" || s.type === "talk" ? (
-            <div className="form-note">
-              Las <strong>keynotes</strong> e <strong>ICED Talks</strong> son solo YouTube (sin Meet).
-              El livestream se hereda de la sala (Auditorio / Sala Menor); puedes sobreescribirlo a nivel de sesión abajo.
-            </div>
+            <>
+              <div className="form-note">
+                Las <strong>keynotes</strong> e <strong>ICED Talks</strong> son solo YouTube (sin Meet).
+                El livestream se hereda de la sala (Auditorio / Sala Menor); puedes sobreescribirlo a nivel de sesión aquí.
+              </div>
+              <Field label="Enlace YouTube (opcional)" error={errors.youtube}
+                hint="Retransmisión en directo (solo visualización). Normalmente se hereda de la sala (Auditorio / Sala Menor); este campo lo sobreescribe a nivel de sesión.">
+                <input type="url" value={s.youtube || ""} onChange={(e) => setField("youtube", e.target.value)}
+                  placeholder="https://www.youtube.com/live/XXXXXXXXXXX" />
+              </Field>
+            </>
           ) : (
-          <Field label="Enlace Meet (opcional)" error={errors.meet}
-            hint="Sesión interactiva en Google Meet. Vacío = sin Meet (sesión solo presencial o solo streaming).">
-            <input type="url" value={s.meet || ""} onChange={(e) => setField("meet", e.target.value)}
-              placeholder="https://meet.google.com/abc-defg-hij" />
-          </Field>
+            <Field label="Enlace Meet (opcional)" error={errors.meet}
+              hint="Sesión interactiva en Google Meet. Vacío = sin Meet (solo presencial). Los simposios, papers, talleres… usan Meet, no YouTube.">
+              <input type="url" value={s.meet || ""} onChange={(e) => setField("meet", e.target.value)}
+                placeholder="https://meet.google.com/abc-defg-hij" />
+            </Field>
           )}
-
-          <Field label="Enlace YouTube (opcional)" error={errors.youtube}
-            hint="Retransmisión en directo (solo visualización). Keynotes e ICED Talks normalmente lo heredan de la sala (Auditorio / Sala Menor); este campo lo sobreescribe a nivel de sesión.">
-            <input type="url" value={s.youtube || ""} onChange={(e) => setField("youtube", e.target.value)}
-              placeholder="https://www.youtube.com/live/XXXXXXXXXXX" />
-          </Field>
 
           <TalksEditor
             talks={s.talks || []}
