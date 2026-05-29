@@ -1,5 +1,5 @@
-// ICED26 programme — synced from EasyChair on 2026-05-29T13:47
-// Times are Europe/Madrid local. Re-run scripts/sync-programme.js to refresh.
+// ICED26 programme — generated from admin panel 2026-05-29T14-32
+// Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
   "meta": {
@@ -57,7 +57,8 @@ window.ICED26_DATA = {
       "name": "Auditorio Hospedería",
       "cluster": "hospederia",
       "code": "AUD",
-      "youtube": "https://www.youtube.com/watch?v=JYDwTQC5TlE&list=RDJYDwTQC5TlE&start_radio=1"
+      "youtube": "https://www.youtube.com/watch?v=JYDwTQC5TlE&list=RDJYDwTQC5TlE&start_radio=1",
+      "meet": ""
     },
     {
       "id": "sala-menor",
@@ -682,16 +683,14 @@ window.ICED26_DATA = {
       "meet": "https://meet.google.com/mjz-nbum-wym",
       "talks": [
         {
-          "easychair_id": "314178",
           "time": "11:00",
           "title": "Human Literacy: Reclaiming Agency in the Age of AI Readiness for Faculty and Staff",
           "authors": "Carl Moore",
-          "presenter": "",
+          "presenter": "Carl Moore",
           "abstract": "Higher education institutions worldwide are investing heavily in AI literacy and digital adoption strategies for faculty and staff. Yet emerging evidence suggests that these initiatives frequently stall, not because of technological barriers, but because of unaddressed human capacities: self-awareness, emotional regulation, reflective decision-making, and relational intelligence. This paper introduces Human Literacy as a foundational capacity framework that positions these human dimensions as the necessary precondition for authentic agency in AI-mediated educational environments. Drawing on Bandura’s agentic theory, polyvagal theory (Porges), cognitive load theory, self-determination theory (Deci & Ryan), and Kahneman’s dual-process model, the paper argues that current AI readiness efforts operate primarily at the outer, behavioral layer of competence while neglecting the inner architecture of perception, regulation, and meaning-making that determines whether educators can exercise genuine agency in their professional practice. The proposed framework organizes human capacities across three interdependent domains: Inner Capacity (self-awareness, emotional regulation, interoception), Outer Capacity (relational intelligence, communication, collaborative action), and Unlimited Capacity (purpose alignment, integrative meaning-making, adaptive resilience). A complementary four-step reflective method, organized around the sequence Recognize, Examine, Align, and Decide, provides educational developers with a practical protocol for cultivating these capacities in faculty development programming. The paper positions Human Literacy as the foundational center of a concentric model, with AI Literacy, Digital Literacy, and Digital Adoption as successive outer layers that depend on the inner core for sustainable integration. Implications for educational development strategy, institutional policy, and the scholarship of academic development are discussed.",
           "keywords": ""
         },
         {
-          "easychair_id": "311804",
           "time": "11:15",
           "title": "Future Skills Literacy as a Driver of Academic Agency and Curricular Innovation? A Programmatic Approach to Transforming Undergraduate Education",
           "authors": "Henrik Dindas",
@@ -700,7 +699,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311894",
           "time": "11:30",
           "title": "Character Education in Higher Education: A Global Cross-Case Synthesis of Approaches",
           "authors": "Thomas Colclough, Duncan Pritchard",
@@ -709,7 +707,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311932",
           "time": "11:45",
           "title": "Student-Centred Learning as a Quality Framework in Higher Education: Empowering Learners and Transforming Curriculum",
           "authors": "María-José Rodríguez-Conde, Susana Olmos-Migueláñez, Juan-Pablo Hernández-Ramos, Alberto Ortiz-López, Marina García-Herrero, Sandra Marcos-Ortega",
@@ -718,7 +715,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311816",
           "time": "12:00",
           "title": "When Competencies Multiply: Reorienting competency-based Education Toward Meaning",
           "authors": "Hussein Zeidan",
@@ -728,7 +724,9 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104804",
-      "description": "Human Literacy, Future Skills and Competency-based Education"
+      "description": "Human Literacy, Future Skills and Competency-based Education",
+      "youtube": "",
+      "onlinePresenter": false
     },
     {
       "day": "2026-06-24",
@@ -744,7 +742,6 @@ window.ICED26_DATA = {
       "meet": "https://meet.google.com/kfm-omqg-xio",
       "talks": [
         {
-          "easychair_id": "311872",
           "time": "11:00",
           "title": "Beyond Status and Compensation: Motivational Landscapes in Teaching Reward Systems",
           "authors": "Klara Bolander Laksov, Maria Larsson, Katarina Mårtensson",
@@ -753,7 +750,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311994",
           "time": "11:15",
           "title": "(Re)Thinking Pedagogical Merit: Excellent Teachers’ Experiences of Teaching Excellence Frameworks in Swedish Higher Education",
           "authors": "Jeanette Sjöberg",
@@ -762,7 +758,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311848",
           "time": "11:30",
           "title": "Building Sustainable Career Pathways Through Data-Driven Continuous Professional Learning for Academic Staff",
           "authors": "Esmarie Strydom, Marieta Jansen van Vuuren",
@@ -771,7 +766,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311959",
           "time": "11:45",
           "title": "Teaching in Higher Education: A historical view of a Career Path for Teachers in Norwegian Higher Education",
           "authors": "Yngve Nordkvelle",
@@ -780,7 +774,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311864",
           "time": "12:00",
           "title": "Deciphering Practice: Repositioning Fellowship Processes in UK Higher Education",
           "authors": "Sabrina Poma, Kristyna Campbell",
@@ -790,7 +783,9 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104803",
-      "description": "Teaching Reward Systems; Teaching Excellence Frameworks; Career Paths for University Teachers"
+      "description": "Teaching Reward Systems; Teaching Excellence Frameworks; Career Paths for University Teachers",
+      "youtube": "",
+      "onlinePresenter": false
     },
     {
       "day": "2026-06-24",
@@ -2591,10 +2586,9 @@ window.ICED26_DATA = {
       "fullName": "Session 13N: E - Symposium 4",
       "type": "symposium",
       "meet": "https://meet.google.com/tuk-wcdx-irx",
-      "youtube": "https://www.youtube.com/watch?v=JYDwTQC5TlE&list=RDJYDwTQC5TlE&start_radio=1",
+      "youtube": "",
       "talks": [
         {
-          "easychair_id": "311653",
           "time": "09:00",
           "title": "Problems, Provocations, and Possibilities in Educational Development",
           "authors": "Mary Wilson, Celia Popovic, Donna Ellis, Åse Nygren, Anna Santucci, Jeanette Sjöberg",
@@ -2603,7 +2597,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105603"
+      "easychair_session_id": "105603",
+      "onlinePresenter": false
     },
     {
       "day": "2026-06-25",
@@ -4306,22 +4301,6 @@ window.ICED26_DATA = {
     },
     {
       "day": "2026-06-25",
-      "start": "12:15",
-      "end": "13:45",
-      "room": "sala-presentaciones",
-      "roomName": "Sala Presentaciones",
-      "roomCode": "SP",
-      "cluster": "iddi",
-      "title": "F - Papers 30a",
-      "fullName": "Session 15Q: F - Papers 30a",
-      "type": "paper",
-      "meet": "",
-      "talks": [],
-      "easychair_session_id": "107036",
-      "onlinePresenter": true
-    },
-    {
-      "day": "2026-06-25",
       "start": "13:45",
       "end": "15:00",
       "room": "*",
@@ -4845,9 +4824,9 @@ window.ICED26_DATA = {
       "day": "2026-06-25",
       "start": "17:30",
       "end": "18:30",
-      "room": "capilla",
-      "roomName": "Capilla",
-      "roomCode": "CAP",
+      "room": "sala-pinturas",
+      "roomName": "Sala de Pinturas",
+      "roomCode": "PIN",
       "cluster": "colegio",
       "title": "H - Collaborative Space 29",
       "fullName": "Session 18E: H - Collaborative Space 29",
@@ -4855,7 +4834,6 @@ window.ICED26_DATA = {
       "meet": "https://meet.google.com/atx-boih-ozr",
       "talks": [
         {
-          "easychair_id": "311755",
           "time": "17:30",
           "title": "Collective Approaches in Faculty Development: Emerging Strategies to Foster Teacher Cultures",
           "authors": "Iris Maria Pedersen, Simone Brendstrup, Anne Line Wittek, Mette Krogh Christensen",
@@ -4864,7 +4842,9 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105629"
+      "easychair_session_id": "105629",
+      "youtube": "",
+      "onlinePresenter": false
     },
     {
       "day": "2026-06-25",
