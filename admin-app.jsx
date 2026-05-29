@@ -247,7 +247,6 @@ function safeURL(url) {
 // ── Online presenter detection — mirror of app.jsx isSessionOnline ───────
 function isSessionOnline(s) {
   if (!s) return false;
-  if (s.onlinePresenter) return true;
   return Array.isArray(s.talks) && s.talks.some((t) => t && t.online);
 }
 
@@ -294,13 +293,12 @@ function detectIssues(data) {
     const sm = toMin(s.start);
     const em = toMin(s.end);
     if (sm == null || em == null) return;
-    const sessionFullyOnline = !!s.onlinePresenter;
     const names = new Set();
     const displayNames = {};
     (s.talks || []).forEach((t) => {
       const raw = (t.presenter || "").trim();
       if (!raw) return; // no explicit presenter → skip (conservative)
-      if (sessionFullyOnline || t.online) return; // online → not a physical conflict
+      if (t.online) return; // online presenter → not a physical-room conflict
       const k = normName(raw);
       if (!k) return;
       names.add(k);
@@ -446,13 +444,18 @@ function detectIssues(data) {
   //    excluyen aquí porque el check específico de abajo (5) ya cubre
   //    su caso particular (solo YouTube, nunca Meet).
   const roomMeet = {};
-  data.rooms.forEach((r) => (roomMeet[r.id] = r.meet || ""));
+  const roomYT = {};
+  data.rooms.forEach((r) => { roomMeet[r.id] = r.meet || ""; roomYT[r.id] = (r.youtube || "").trim(); });
   data.sessions.forEach((s, idx) => {
-    if (s.type === "keynote") return; // cubierto por keynote-no-youtube
+    // Keynotes & ICED talks are YouTube-only (covered by check 5); the
+    // pre-conference (2026-06-23) is in-person by design; breaks need nothing.
+    if (s.type === "keynote" || s.type === "talk") return;
+    if (s.day === "2026-06-23") return;
+    if (s.type === "break") return;
     if (s.meet) return;
     if (s.youtube && String(s.youtube).trim()) return;
     if (s.room === "*" || !s.room) return;
-    if (s.type === "break") return; // breaks don't need a remote channel
+    if (roomYT[s.room]) return; // inherits the room's YouTube livestream
     const inherited = roomMeet[s.room];
     if (!inherited) {
       issues.push({
@@ -470,13 +473,15 @@ function detectIssues(data) {
   //    Mónica doesn't forget one. Warning, not error — some keynotes may
   //    intentionally not be streamed (e.g. pre-conference instructions).
   data.sessions.forEach((s, idx) => {
-    if (s.type !== "keynote") return;
+    if (s.type !== "keynote" && s.type !== "talk") return;
+    if (s.day === "2026-06-23") return; // pre-conf welcome/instructions: in-person
     if (s.youtube && String(s.youtube).trim()) return;
+    if (roomYT[s.room]) return; // inherits the room's YouTube livestream
     issues.push({
       kind: "keynote-no-youtube",
       severity: "warning",
-      title: "Keynote sin retransmisión",
-      detail: `«${s.title}» (${s.day} ${s.start}–${s.end}, ${s.roomName || s.room}) es una keynote pero no tiene URL de YouTube. Pega el enlace del livestream desde el editor de sesión si va a retransmitirse.`,
+      title: "Keynote / ICED Talk sin retransmisión",
+      detail: `«${s.title}» (${s.day} ${s.start}–${s.end}, ${s.roomName || s.room}) no tiene URL de YouTube (ni propia ni heredada de la sala). Pega el livestream en la sala (Auditorio / Sala Menor) o en la sesión.`,
       sessionRefs: [{ idx, label: `${s.start}–${s.end} · ${s.title}` }]
     });
   });
@@ -1068,7 +1073,6 @@ function SessionsTab({ data, setData, editingIdx, setEditingIdx }) {
           fullName: "",
           type: "other",
           meet: "",
-          onlinePresenter: false,
           talks: []
         }
       : editingIdx != null
@@ -1262,9 +1266,10 @@ function SessionEditor({ session, isNew, rooms, clusters, days, onSave, onCancel
       ...s,
       title: s.title.trim(),
       fullName: (s.fullName || "").trim(),
-      meet: (s.meet || "").trim(),
+      cardTitle: (s.cardTitle || "").trim(),
+      // Keynotes & ICED talks are YouTube-only — never persist a Meet for them.
+      meet: (s.type === "keynote" || s.type === "talk") ? "" : (s.meet || "").trim(),
       youtube: (s.youtube || "").trim(),
-      onlinePresenter: !!s.onlinePresenter,
       talks: (s.talks || [])
         .filter((t) => t.title || t.authors || t.presenter || t.abstract)
         .map((t) => {
@@ -1335,32 +1340,33 @@ function SessionEditor({ session, isNew, rooms, clusters, days, onSave, onCancel
               placeholder="P. ej. Keynote: Ruth Graham" />
           </Field>
 
+          <Field label="Título card (opcional)"
+            hint="Sobreescribe lo que se ve en la card pública. Vacío = automático: 1 charla → título de la charla; Papers/Pósters → su «theme» (description); el resto → el Título de arriba.">
+            <input type="text" value={s.cardTitle || ""} onChange={(e) => setField("cardTitle", e.target.value)}
+              placeholder="Vacío = automático" />
+          </Field>
+
           <Field label="Nombre completo (opcional)" hint="P. ej. «Session 4: Keynote with Ruth Graham». Solo se usa en búsqueda.">
             <input type="text" value={s.fullName || ""} onChange={(e) => setField("fullName", e.target.value)} />
           </Field>
 
+          {s.type === "keynote" || s.type === "talk" ? (
+            <div className="form-note">
+              Las <strong>keynotes</strong> e <strong>ICED Talks</strong> son solo YouTube (sin Meet).
+              El livestream se hereda de la sala (Auditorio / Sala Menor); puedes sobreescribirlo a nivel de sesión abajo.
+            </div>
+          ) : (
           <Field label="Enlace Meet (opcional)" error={errors.meet}
             hint="Sesión interactiva en Google Meet. Vacío = sin Meet (sesión solo presencial o solo streaming).">
             <input type="url" value={s.meet || ""} onChange={(e) => setField("meet", e.target.value)}
               placeholder="https://meet.google.com/abc-defg-hij" />
           </Field>
+          )}
 
           <Field label="Enlace YouTube (opcional)" error={errors.youtube}
-            hint="Retransmisión en directo solo de visualización (sin interacción). Típicamente keynotes; cada stream programado en YouTube tiene su URL único, así que se pega aquí sesión a sesión. Puede coexistir con el Meet.">
+            hint="Retransmisión en directo (solo visualización). Keynotes e ICED Talks normalmente lo heredan de la sala (Auditorio / Sala Menor); este campo lo sobreescribe a nivel de sesión.">
             <input type="url" value={s.youtube || ""} onChange={(e) => setField("youtube", e.target.value)}
               placeholder="https://www.youtube.com/live/XXXXXXXXXXX" />
-          </Field>
-
-          <Field label="Ponente online (toda la sesión)"
-            hint="Marca SI toda la sesión tiene componente online sin especificar ponencias concretas. Si solo algunas ponencias dentro tienen presenter online, déjalo desmarcado aquí y marca las ponencias individualmente abajo en «Ponencias». La web tratará la sesión como online si está marcada aquí o si alguna ponencia lo está.">
-            <label className="checkbox-row">
-              <input
-                type="checkbox"
-                checked={!!s.onlinePresenter}
-                onChange={(e) => setField("onlinePresenter", e.target.checked)}
-              />
-              <span>Toda la sesión es online</span>
-            </label>
           </Field>
 
           <TalksEditor
@@ -1605,16 +1611,16 @@ function RoomsTab({ data, setData, stats }) {
       <div className="rooms-head">
         <h2>Salas y Meet</h2>
         <p className="muted">
-          Aquí se pega el Meet (interactivo) de cada sala — un mismo URL recurrente
-          que se reutiliza durante los cuatro días. Pulsa <em>Aplicar</em> para volcarlo
-          a las sesiones de la sala. Las URLs de YouTube se gestionan por sesión
-          individual desde la pestaña <em>Sesiones</em> (cada stream tiene su URL único).
+          El <strong>Meet</strong> (interactivo) y el <strong>YouTube</strong> (livestream) son por sala.
+          Las keynotes e ICED Talks heredan el YouTube de su sala. Pulsa <em>Aplicar</em> para volcar el
+          Meet a las sesiones de la sala.
           <br />
-          <strong>{stats.meetCovered} de {stats.rooms}</strong> salas con Meet ·
-          <strong> {stats.sessionsWithMeet} de {stats.sessions}</strong> sesiones con Meet propio
-          {typeof stats.sessionsWithYoutube === "number" && stats.sessionsWithYoutube > 0 && (
-            <> · <strong>{stats.sessionsWithYoutube}</strong> sesiones con YouTube</>
-          )}.
+          El interruptor <strong>Activo / Cerrado</strong> decide si los botones Meet/YouTube se ven en la
+          web: en <em>Cerrado</em> salen en gris (deshabilitados) hasta el día del congreso.
+          <br />
+          <strong>{data.rooms.filter((r) => r.active).length} de {stats.rooms}</strong> salas activas ·
+          <strong> {stats.meetCovered} de {stats.rooms}</strong> con Meet ·
+          <strong> {data.rooms.filter((r) => (r.youtube || "").trim()).length}</strong> con YouTube
         </p>
       </div>
 
@@ -1655,16 +1661,37 @@ function RoomsTab({ data, setData, stats }) {
                   )}
                 </div>
 
-                <input
-                  type="url"
-                  className="rr-meet"
-                  placeholder="https://meet.google.com/abc-defg-hij"
-                  value={r.meet || ""}
-                  onChange={(e) => updateRoom(r.id, { meet: e.target.value })}
-                />
+                <div className="rr-links">
+                  <input
+                    type="url"
+                    className="rr-meet"
+                    placeholder="Meet de la sala — https://meet.google.com/abc-defg-hij"
+                    value={r.meet || ""}
+                    onChange={(e) => updateRoom(r.id, { meet: e.target.value })}
+                  />
+                  <input
+                    type="url"
+                    className="rr-yt"
+                    placeholder="YouTube livestream de la sala (opcional)"
+                    value={r.youtube || ""}
+                    onChange={(e) => updateRoom(r.id, { youtube: e.target.value })}
+                  />
+                </div>
 
-                <span className={`rr-status ${r.meet ? "ok" : "empty"}`}>
-                  {r.meet ? "✓" : "—"}
+                <button
+                  type="button"
+                  className={`rr-toggle ${r.active ? "is-active" : "is-inactive"}`}
+                  onClick={() => updateRoom(r.id, { active: !r.active })}
+                  aria-pressed={r.active}
+                  title={r.active
+                    ? "Enlaces ACTIVOS: los botones Meet/YouTube de esta sala se ven en la web."
+                    : "Enlaces CERRADOS: los botones Meet/YouTube de esta sala salen en gris hasta que la actives."}>
+                  <span className="rr-toggle-dot" aria-hidden="true"></span>
+                  {r.active ? "Activo" : "Cerrado"}
+                </button>
+
+                <span className={`rr-status ${r.meet || r.youtube ? "ok" : "empty"}`}>
+                  {r.meet || r.youtube ? "✓" : "—"}
                 </span>
 
                 <div className="rr-actions">

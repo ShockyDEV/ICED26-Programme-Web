@@ -1,5 +1,6 @@
-// ICED26 programme — generated from admin panel 2026-05-29T14-56
-// Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
+// ICED26 programme — synced from EasyChair, web rules applied 2026-05-29T15:54
+// Rules: no Meet for keynotes/ICED talks/pre-conference; per-room link toggle (rooms[].active); online is per-talk.
+// Times are Europe/Madrid local. Re-run scripts/sync-programme.js to refresh.
 
 window.ICED26_DATA = {
   "meta": {
@@ -58,116 +59,135 @@ window.ICED26_DATA = {
       "cluster": "hospederia",
       "code": "AUD",
       "youtube": "https://www.youtube.com/watch?v=JYDwTQC5TlE&list=RDJYDwTQC5TlE&start_radio=1",
-      "meet": ""
+      "meet": "",
+      "active": false
     },
     {
       "id": "sala-menor",
       "name": "Sala Menor",
       "cluster": "hospederia",
-      "code": "SM"
+      "code": "SM",
+      "active": false
     },
     {
       "id": "sala-presentaciones",
       "name": "Sala Presentaciones",
       "cluster": "iddi",
-      "code": "SP"
+      "code": "SP",
+      "active": false
     },
     {
       "id": "sala-pinturas",
       "name": "Sala de Pinturas",
       "cluster": "colegio",
-      "code": "PIN"
+      "code": "PIN",
+      "active": false
     },
     {
       "id": "biblioteca",
       "name": "Biblioteca",
       "cluster": "colegio",
-      "code": "BIB"
+      "code": "BIB",
+      "active": false
     },
     {
       "id": "capilla",
       "name": "Capilla",
       "cluster": "colegio",
-      "code": "CAP"
+      "code": "CAP",
+      "active": false
     },
     {
       "id": "claustro",
       "name": "Claustro",
       "cluster": "colegio",
-      "code": "CLA"
+      "code": "CLA",
+      "active": false
     },
     {
       "id": "room-1-1",
       "name": "ROOM 1.1",
       "cluster": "hospederia",
-      "code": "1.1"
+      "code": "1.1",
+      "active": false
     },
     {
       "id": "room-1-2",
       "name": "ROOM 1.2",
       "cluster": "hospederia",
-      "code": "1.2"
+      "code": "1.2",
+      "active": false
     },
     {
       "id": "room-2-1",
       "name": "ROOM 2.1",
       "cluster": "hospederia",
-      "code": "2.1"
+      "code": "2.1",
+      "active": false
     },
     {
       "id": "room-2-2",
       "name": "ROOM 2.2",
       "cluster": "hospederia",
-      "code": "2.2"
+      "code": "2.2",
+      "active": false
     },
     {
       "id": "room-2-4",
       "name": "ROOM 2.4",
       "cluster": "hospederia",
-      "code": "2.4"
+      "code": "2.4",
+      "active": false
     },
     {
       "id": "room-2-5",
       "name": "ROOM 2.5",
       "cluster": "hospederia",
-      "code": "2.5"
+      "code": "2.5",
+      "active": false
     },
     {
       "id": "room-2-6",
       "name": "ROOM 2.6",
       "cluster": "hospederia",
-      "code": "2.6"
+      "code": "2.6",
+      "active": false
     },
     {
       "id": "room-2-7",
       "name": "ROOM 2.7",
       "cluster": "hospederia",
-      "code": "2.7"
+      "code": "2.7",
+      "active": false
     },
     {
       "id": "room-11-2",
       "name": "ROOM 11.2",
       "cluster": "iddi",
-      "code": "11.2"
+      "code": "11.2",
+      "active": false
     },
     {
       "id": "room-11-3",
       "name": "ROOM 11.3",
       "cluster": "iddi",
-      "code": "11.3"
+      "code": "11.3",
+      "active": false
     },
     {
       "id": "seminario-12-1",
       "name": "Seminario 12.1",
       "cluster": "iddi",
-      "code": "12.1"
+      "code": "12.1",
+      "active": false
     },
     {
       "id": "salon-del-arzobispo",
       "name": "Salón del Arzobispo",
       "cluster": "colegio",
       "code": "SALÓN ",
-      "meet": ""
+      "meet": "",
+      "active": false
     }
   ],
   "sessions": [
@@ -197,7 +217,7 @@ window.ICED26_DATA = {
       "title": "PRE Parallel Workshops A - Workshop 1",
       "fullName": "Session 2A: PRE Parallel Workshops A - Workshop 1",
       "type": "workshop",
-      "meet": "https://meet.google.com/iuf-majr-ysd",
+      "meet": "",
       "talks": [
         {
           "easychair_id": "311642",
@@ -222,7 +242,7 @@ window.ICED26_DATA = {
       "title": "PRE Parallel Workshops A - Workshop 2",
       "fullName": "Session 2B: PRE Parallel Workshops A - Workshop 2",
       "type": "workshop",
-      "meet": "https://meet.google.com/rrd-uxhh-jdg",
+      "meet": "",
       "talks": [
         {
           "easychair_id": "311644",
@@ -247,7 +267,7 @@ window.ICED26_DATA = {
       "title": "PRE Parallel Workshops A - Workshop 3",
       "fullName": "Session 2C: PRE Parallel Workshops A - Workshop 3",
       "type": "workshop",
-      "meet": "https://meet.google.com/fvu-iqdc-snv",
+      "meet": "",
       "talks": [
         {
           "easychair_id": "311648",
@@ -272,7 +292,7 @@ window.ICED26_DATA = {
       "title": "PRE Parallel Workshops A - Workshop 4",
       "fullName": "Session 2D: PRE Parallel Workshops A - Workshop 4",
       "type": "workshop",
-      "meet": "https://meet.google.com/oqq-pyio-drq",
+      "meet": "",
       "talks": [
         {
           "easychair_id": "311650",
@@ -312,7 +332,7 @@ window.ICED26_DATA = {
       "title": "PRE Parallel Workshops B - Workshop 5",
       "fullName": "Session 3A: PRE Parallel Workshops B - Workshop 5",
       "type": "workshop",
-      "meet": "https://meet.google.com/ijy-mehz-vdc",
+      "meet": "",
       "talks": [
         {
           "easychair_id": "311646",
@@ -337,7 +357,7 @@ window.ICED26_DATA = {
       "title": "PRE Parallel Workshops B - Workshop 6",
       "fullName": "Session 3B: PRE Parallel Workshops B - Workshop 6",
       "type": "workshop",
-      "meet": "https://meet.google.com/rgi-snyr-hze",
+      "meet": "",
       "talks": [
         {
           "easychair_id": "311647",
@@ -362,7 +382,7 @@ window.ICED26_DATA = {
       "title": "PRE Parallel Workshops B - Workshop 7",
       "fullName": "Session 3C: PRE Parallel Workshops B - Workshop 7",
       "type": "workshop",
-      "meet": "https://meet.google.com/rda-krxh-evp",
+      "meet": "",
       "talks": [
         {
           "easychair_id": "311645",
@@ -387,7 +407,7 @@ window.ICED26_DATA = {
       "title": "PRE Parallel Workshops B - Workshop 8",
       "fullName": "Session 3D: PRE Parallel Workshops B - Workshop 8",
       "type": "workshop",
-      "meet": "https://meet.google.com/mfg-porw-ykr",
+      "meet": "",
       "talks": [
         {
           "easychair_id": "311643",
@@ -412,7 +432,7 @@ window.ICED26_DATA = {
       "title": "PRE Parallel Workshops C - Workshop 9",
       "fullName": "Session 4A: PRE Parallel Workshops C - Workshop 9",
       "type": "workshop",
-      "meet": "https://meet.google.com/iou-jfrr-tex",
+      "meet": "",
       "talks": [
         {
           "easychair_id": "311641",
@@ -437,7 +457,7 @@ window.ICED26_DATA = {
       "title": "PRE Parallel Workshops C - Workshop 10",
       "fullName": "Session 4B: PRE Parallel Workshops C - Workshop 10",
       "type": "workshop",
-      "meet": "https://meet.google.com/oiu-ppwj-aav",
+      "meet": "",
       "talks": [
         {
           "easychair_id": "311639",
@@ -462,7 +482,7 @@ window.ICED26_DATA = {
       "title": "PRE Parallel Workshops C - Workshop 11",
       "fullName": "Session 4C: PRE Parallel Workshops C - Workshop 11",
       "type": "workshop",
-      "meet": "https://meet.google.com/sps-tvwi-fgg",
+      "meet": "",
       "talks": [
         {
           "easychair_id": "311649",
@@ -487,7 +507,7 @@ window.ICED26_DATA = {
       "title": "PRE Parallel Workshops C - Workshop 12",
       "fullName": "Session 4D: PRE Parallel Workshops C - Workshop 12",
       "type": "workshop",
-      "meet": "https://meet.google.com/tpx-uiia-jne",
+      "meet": "",
       "talks": [
         {
           "easychair_id": "314176",
@@ -512,7 +532,7 @@ window.ICED26_DATA = {
       "title": "Opening ceremony",
       "fullName": "Session 5: Opening ceremony",
       "type": "keynote",
-      "meet": "https://meet.google.com/igz-jnbs-zto",
+      "meet": "",
       "talks": [],
       "easychair_session_id": "104800"
     },
@@ -527,7 +547,7 @@ window.ICED26_DATA = {
       "title": "Keynote 1: Agency, responsibility, and values-driven educational development - David A. Green",
       "fullName": "Session 6: Keynote 1: Agency, responsibility, and values-driven educational development - David A. Green",
       "type": "keynote",
-      "meet": "https://meet.google.com/rrs-uxfd-jdg",
+      "meet": "",
       "talks": [],
       "easychair_session_id": "104801"
     },
@@ -725,8 +745,7 @@ window.ICED26_DATA = {
       ],
       "easychair_session_id": "104804",
       "description": "Human Literacy, Future Skills and Competency-based Education",
-      "youtube": "",
-      "onlinePresenter": false
+      "youtube": ""
     },
     {
       "day": "2026-06-24",
@@ -784,8 +803,7 @@ window.ICED26_DATA = {
       ],
       "easychair_session_id": "104803",
       "description": "Teaching Reward Systems; Teaching Excellence Frameworks; Career Paths for University Teachers",
-      "youtube": "",
-      "onlinePresenter": false
+      "youtube": ""
     },
     {
       "day": "2026-06-24",
@@ -838,8 +856,7 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104809",
-      "description": "Decolonial, Intercultural and Inclusive Approaches to Student Agency",
-      "onlinePresenter": true
+      "description": "Decolonial, Intercultural and Inclusive Approaches to Student Agency"
     },
     {
       "day": "2026-06-24",
@@ -901,8 +918,7 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104807",
-      "description": "International Partnerships, Global Competence and COIL",
-      "onlinePresenter": true
+      "description": "International Partnerships, Global Competence and COIL"
     },
     {
       "day": "2026-06-24",
@@ -964,8 +980,7 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104810",
-      "description": "Developing Trust, Care and Collegiality Some Online Presentations",
-      "onlinePresenter": true
+      "description": "Developing Trust, Care and Collegiality Some Online Presentations"
     },
     {
       "day": "2026-06-24",
@@ -1027,8 +1042,7 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104806",
-      "description": "Teaching with AI, Digital Simulation Skills and Responsible InnovationSome Presentations Online",
-      "onlinePresenter": true
+      "description": "Teaching with AI, Digital Simulation Skills and Responsible InnovationSome Presentations Online"
     },
     {
       "day": "2026-06-24",
@@ -1081,8 +1095,7 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "106947",
-      "description": "Enhancing Teaching through Collaborative and Research-Based Approaches",
-      "onlinePresenter": true
+      "description": "Enhancing Teaching through Collaborative and Research-Based Approaches"
     },
     {
       "day": "2026-06-24",
@@ -1206,8 +1219,7 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104808",
-      "description": "Designing Educational Development; Empowering Faculty Agency",
-      "onlinePresenter": true
+      "description": "Designing Educational Development; Empowering Faculty Agency"
     },
     {
       "day": "2026-06-24",
@@ -1356,8 +1368,7 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104812",
-      "description": "Alliances, Networking and Policy Development",
-      "onlinePresenter": true
+      "description": "Alliances, Networking and Policy Development"
     },
     {
       "day": "2026-06-24",
@@ -1670,7 +1681,7 @@ window.ICED26_DATA = {
       "title": "B - Iced Talks 1",
       "fullName": "Session 8N: B - Iced Talks 1",
       "type": "talk",
-      "meet": "https://meet.google.com/ijo-mqds-vnv",
+      "meet": "",
       "talks": [
         {
           "easychair_id": "311771",
@@ -1763,7 +1774,7 @@ window.ICED26_DATA = {
       "title": "International panel: Global South Perspectives in Dialogue",
       "fullName": "Session 9: International panel: Global South Perspectives in Dialogue",
       "type": "keynote",
-      "meet": "https://meet.google.com/zcv-cudm-pif",
+      "meet": "",
       "talks": [],
       "easychair_session_id": "104802"
     },
@@ -2177,7 +2188,7 @@ window.ICED26_DATA = {
       "title": "C - Iced Talks 2",
       "fullName": "Session 10E: C - Iced Talks 2",
       "type": "talk",
-      "meet": "https://meet.google.com/obv-rjmp-dvw",
+      "meet": "",
       "talks": [
         {
           "easychair_id": "311765",
@@ -2597,8 +2608,7 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105603",
-      "onlinePresenter": false
+      "easychair_session_id": "105603"
     },
     {
       "day": "2026-06-25",
@@ -2925,8 +2935,7 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104859",
-      "description": "Novice Teachers, Academic Induction and Conceptual ChangeSome Online Presentations",
-      "onlinePresenter": true
+      "description": "Novice Teachers, Academic Induction and Conceptual ChangeSome Online Presentations"
     },
     {
       "day": "2026-06-25",
@@ -2988,8 +2997,7 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104860",
-      "description": "Epistemic Agency, Research Engagement and Scholarly TeachingSome Online Presentations",
-      "onlinePresenter": true
+      "description": "Epistemic Agency, Research Engagement and Scholarly TeachingSome Online Presentations"
     },
     {
       "day": "2026-06-25",
@@ -3113,8 +3121,7 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104857",
-      "description": "Wellbeing, Belonging and Mindfulness in Academic DevelopmentSome Online Presentations",
-      "onlinePresenter": true
+      "description": "Wellbeing, Belonging and Mindfulness in Academic DevelopmentSome Online Presentations"
     },
     {
       "day": "2026-06-25",
@@ -3238,8 +3245,7 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104861",
-      "description": "Portfolios, Diaries, Reflective Writing and Teacher Identity",
-      "onlinePresenter": true
+      "description": "Portfolios, Diaries, Reflective Writing and Teacher Identity"
     },
     {
       "day": "2026-06-25",
@@ -3301,8 +3307,7 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104856",
-      "description": "Student-Staff Partnerships, Justice-Oriented Learning and Transformative Curriculum",
-      "onlinePresenter": true
+      "description": "Student-Staff Partnerships, Justice-Oriented Learning and Transformative Curriculum"
     },
     {
       "day": "2026-06-25",
@@ -3414,8 +3419,7 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104863",
-      "description": "Educational Leadership, Strategic Change and Faculty DevelopmentSome Online Presentations",
-      "onlinePresenter": true
+      "description": "Educational Leadership, Strategic Change and Faculty DevelopmentSome Online Presentations"
     },
     {
       "day": "2026-06-25",
@@ -3443,7 +3447,7 @@ window.ICED26_DATA = {
       "title": "Keynote 2: Rewarding university teaching in academic careers - Ruth Graham",
       "fullName": "Session 14: Keynote 2: Rewarding university teaching in academic careers - Ruth Graham",
       "type": "keynote",
-      "meet": "https://meet.google.com/ryk-ubuw-okj",
+      "meet": "",
       "talks": [],
       "easychair_session_id": "104869"
     },
@@ -3744,8 +3748,7 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104878",
-      "description": "Student Feedback, Peer Feedback and inclusive ADSome Online Presentations",
-      "onlinePresenter": true
+      "description": "Student Feedback, Peer Feedback and inclusive ADSome Online Presentations"
     },
     {
       "day": "2026-06-25",
@@ -3807,8 +3810,7 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104876",
-      "description": "Inclusive Higher Education, Student Agency and Social JusticeSome Presentations Online",
-      "onlinePresenter": true
+      "description": "Inclusive Higher Education, Student Agency and Social JusticeSome Presentations Online"
     },
     {
       "day": "2026-06-25",
@@ -3870,8 +3872,7 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104870",
-      "description": "Strategy, Sustainability and Organizational TransformationSome Presentations Online",
-      "onlinePresenter": true
+      "description": "Strategy, Sustainability and Organizational TransformationSome Presentations Online"
     },
     {
       "day": "2026-06-25",
@@ -3933,8 +3934,7 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104879",
-      "description": "Understanding University Teachers, enhancing Teachers AgencySome Online Presentations",
-      "onlinePresenter": true
+      "description": "Understanding University Teachers, enhancing Teachers AgencySome Online Presentations"
     },
     {
       "day": "2026-06-25",
@@ -3996,8 +3996,7 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104874",
-      "description": "Research on Teaching Methods; High-Impact-Practices (HIP); Researcher AgencySome Presentations Online",
-      "onlinePresenter": true
+      "description": "Research on Teaching Methods; High-Impact-Practices (HIP); Researcher AgencySome Presentations Online"
     },
     {
       "day": "2026-06-25",
@@ -4121,8 +4120,7 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104873",
-      "description": "Storytelling, Narratives, Writing and Reflective ADSome Online Presentations",
-      "onlinePresenter": true
+      "description": "Storytelling, Narratives, Writing and Reflective ADSome Online Presentations"
     },
     {
       "day": "2026-06-25",
@@ -4296,8 +4294,7 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104872",
-      "description": "Mapping Student Agency, Critical Pedagogy and Trust-buildingSome Online Presentations",
-      "onlinePresenter": true
+      "description": "Mapping Student Agency, Critical Pedagogy and Trust-buildingSome Online Presentations"
     },
     {
       "day": "2026-06-25",
@@ -4325,7 +4322,7 @@ window.ICED26_DATA = {
       "title": "Keynote 3: Resourceful perspectives: Academic development for student and teacher agency – Franziska Zellweger",
       "fullName": "Session 16: Keynote 3: Resourceful perspectives: Academic development for student and teacher agency – Franziska Zellweger",
       "type": "keynote",
-      "meet": "https://meet.google.com/zgs-wsex-myp",
+      "meet": "",
       "talks": [],
       "easychair_session_id": "104885"
     },
@@ -4712,7 +4709,7 @@ window.ICED26_DATA = {
       "title": "G - Iced Talks 3",
       "fullName": "Session 17A: G - Iced Talks 3",
       "type": "talk",
-      "meet": "https://meet.google.com/tki-wost-icv",
+      "meet": "",
       "talks": [
         {
           "easychair_id": "311769",
@@ -4843,8 +4840,7 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "105629",
-      "youtube": "",
-      "onlinePresenter": false
+      "youtube": ""
     },
     {
       "day": "2026-06-25",
@@ -5107,7 +5103,7 @@ window.ICED26_DATA = {
       "title": "H - ICED Talk 4",
       "fullName": "Session 18P: H - ICED Talk 4",
       "type": "talk",
-      "meet": "https://meet.google.com/cjf-fvqm-sjq",
+      "meet": "",
       "talks": [
         {
           "easychair_id": "311768",
@@ -5782,7 +5778,7 @@ window.ICED26_DATA = {
       "title": "G - Iced Talks 5",
       "fullName": "Session 20B: G - Iced Talks 5",
       "type": "talk",
-      "meet": "https://meet.google.com/pvq-qbuy-bnt",
+      "meet": "",
       "talks": [
         {
           "easychair_id": "312010",
@@ -6143,8 +6139,7 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "105680",
-      "description": "Researching Teaching Methods: Active Learning; Research-based teaching and Improvisational MethodsSome Online Presentations",
-      "onlinePresenter": true
+      "description": "Researching Teaching Methods: Active Learning; Research-based teaching and Improvisational MethodsSome Online Presentations"
     },
     {
       "day": "2026-06-26",
@@ -6197,8 +6192,7 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "105677",
-      "description": "Teacher Education; Epistemic and Reflective Agency; enhancing English-Language course designSome Online Presentations",
-      "onlinePresenter": true
+      "description": "Teacher Education; Epistemic and Reflective Agency; enhancing English-Language course designSome Online Presentations"
     },
     {
       "day": "2026-06-26",
@@ -6260,8 +6254,7 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "105681",
-      "description": "Strategic and Innovative Practices in Education and Academic DevelopmentSome Online Presentations",
-      "onlinePresenter": true
+      "description": "Strategic and Innovative Practices in Education and Academic DevelopmentSome Online Presentations"
     },
     {
       "day": "2026-06-26",
@@ -6323,8 +6316,7 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "105678",
-      "description": "Mentoring, Peer Learning and Teaching ConsultationSome Online Presentations",
-      "onlinePresenter": true
+      "description": "Mentoring, Peer Learning and Teaching ConsultationSome Online Presentations"
     },
     {
       "day": "2026-06-26",
@@ -6448,8 +6440,7 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "105682",
-      "description": "Teaching in the AI Era: Faculty and Educational Developers Perspectives",
-      "onlinePresenter": true
+      "description": "Teaching in the AI Era: Faculty and Educational Developers Perspectives"
     },
     {
       "day": "2026-06-26",
@@ -6583,11 +6574,11 @@ window.ICED26_DATA = {
           "authors": "Wei Shun Chang, Sung-Hui Tseng, Chi-Jung Huang, Ju-Ying Chang, Tsung-Ren Huang, Ling-Chieh Kung",
           "presenter": "Sung-Hui Tseng",
           "abstract": "This symposium explores how technology can meaningfully enhance student agency across diverse learning contexts in higher education. Three universities—National Taiwan University (NTU), Taipei Medical University (TMU), and National Cheng Kung University (NCKU)—will present special initiatives that integrate technology to empower learners as active, reflective, and creative agents in their educational journeys. NTU will share innovations within its Learning Management System NTU COOL, which enhances student agency and learning effectiveness through purposeful feature design. TMU will highlight its AI Literacy Lab, designed to build essential AI competencies through lectures, workshops, competitions, and self-directed learning activities. NCKU will demonstrate its Student Learning E-Portfolio System, an AI-driven, personalized navigation system that leverages competency diagnostics and data analytics to help students build individualized learning pathways and career identities. Together, these contributions demonstrate how universities can design technology-enabled ecosystems that promote student autonomy, competence development, and collaborative innovation. The symposium will share our vision and invite participants to reflect on how technological innovation and learning experiences can nurture motivation and empower learners.",
-          "keywords": ""
+          "keywords": "",
+          "online": true
         }
       ],
-      "easychair_session_id": "105687",
-      "onlinePresenter": true
+      "easychair_session_id": "105687"
     },
     {
       "day": "2026-06-26",

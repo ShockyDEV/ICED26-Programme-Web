@@ -8,14 +8,12 @@
 const { useState, useEffect, useMemo, useRef, useCallback } = React;
 
 // ─── Online presenter detection ──────────────────────────────────────────
-// A session is "online" if either:
-//   - The whole session is flagged (session.onlinePresenter === true), or
-//   - Any individual talk inside it is flagged (talk.online === true).
-// Used to drive the teal ONLINE badge on cells, the modal banner, the
-// Mi-Agenda indicator, and the admin filters/table.
+// A session counts as "online" when any individual talk inside it is flagged
+// (talk.online === true). There is no whole-session online flag — online is
+// always marked per talk. Drives the teal ONLINE badge on cells, the modal
+// banner, the Mi-Agenda indicator, and the admin filters/table.
 function isSessionOnline(s) {
   if (!s) return false;
-  if (s.onlinePresenter) return true;
   return Array.isArray(s.talks) && s.talks.some((t) => t && t.online);
 }
 
@@ -27,6 +25,46 @@ function isSessionOnline(s) {
 // Both can coexist on the same session (a hybrid session can be retransmitted).
 function hasYouTube(s) {
   return !!(s && s.youtube && String(s.youtube).trim());
+}
+
+// ─── Official / secondary title resolution ────────────────────────────────
+// The generic section name (s.title, e.g. "A - Papers 2") stays the MAIN title
+// everywhere — it matches the printed programme + room signage, so it's what
+// people use to find their session. officialTitle() returns the extra
+// descriptive line shown alongside it (in a distinct style), in priority order:
+//   1) cardTitle — admin override set in the backstage
+//   2) the single talk's own title (1-talk workshops, symposia, collab spaces)
+//   3) description — the EasyChair session "theme" (Papers, Posters, ICED Talks)
+// Returns "" when there's nothing more specific than the generic name.
+function officialTitle(s) {
+  if (!s) return "";
+  if (s.cardTitle && String(s.cardTitle).trim()) return String(s.cardTitle).trim();
+  if (Array.isArray(s.talks) && s.talks.length === 1 && s.talks[0] && s.talks[0].title) {
+    return s.talks[0].title;
+  }
+  if (s.description && String(s.description).trim()) return String(s.description).trim();
+  return "";
+}
+
+// ─── Per-room livestream + link gating ────────────────────────────────────
+// YouTube is a per-room livestream: a session inherits its room's stream URL
+// unless it carries its own session.youtube override.
+function effectiveYouTube(s, data) {
+  if (s && s.youtube && String(s.youtube).trim()) return String(s.youtube).trim();
+  const rooms = data && data.rooms;
+  if (Array.isArray(rooms) && s) {
+    const r = rooms.find((x) => x.id === s.room);
+    if (r && r.youtube && String(r.youtube).trim()) return String(r.youtube).trim();
+  }
+  return "";
+}
+// Meet/YouTube buttons stay locked (greyed, not clickable) until the session's
+// room is switched Active in the backstage. Closed by default before the congress.
+function roomLinksActive(s, data) {
+  const rooms = data && data.rooms;
+  if (!Array.isArray(rooms) || !s) return false;
+  const r = rooms.find((x) => x.id === s.room);
+  return !!(r && r.active);
 }
 
 // ─── URL sanitization ────────────────────────────────────────────────────
@@ -115,6 +153,7 @@ const I18N = {
     past: "Ended",
     upcoming: "Upcoming",
     join: "Join Meet",
+    linksClosed: "Opens on the conference day",
     today: "TODAY",
     types: {
       keynote: "Keynote", symposium: "Symposium", paper: "Paper",
@@ -171,6 +210,7 @@ const I18N = {
     past: "Pasada",
     upcoming: "Próxima",
     join: "Entrar a Meet",
+    linksClosed: "Disponible el día del congreso",
     today: "HOY",
     types: {
       keynote: "Conferencia", symposium: "Simposio", paper: "Comunicación",
@@ -413,21 +453,26 @@ function ClusterMeetMenu({ cluster, rooms, liveByRoom, t, lang }) {
           </div>
           {rooms.map((r) => {
           const live = liveByRoom[r.id];
+          // Effective link: prefer the live session's Meet, else the room's
+          // YouTube stream. Greyed + non-clickable unless the room is Active.
+          const url = live ? (live.meet || r.youtube || "") : "";
+          const clickable = !!(live && r.active && url);
           return (
             <a
               key={r.id}
-              href={live ? safeURL(live.meet) : "#"}
+              href={clickable ? safeURL(url) : "#"}
               target="_blank"
               rel="noopener noreferrer"
-              className={`cluster-room ${live ? "is-live" : "is-idle"}`}
-              onClick={(e) => {if (!live) e.preventDefault();}}
+              className={`cluster-room ${live ? "is-live" : "is-idle"} ${live && !r.active ? "is-locked" : ""}`}
+              onClick={(e) => {if (!clickable) e.preventDefault();}}
               role="menuitem">
-              
-                <span className="cr-name">{r.name}</span>
-                {live ?
-              <span className="cr-live"><span className="live-dot" aria-hidden="true"></span>{live.title}</span> :
 
-              <span className="cr-idle">{lang === "es" ? "sin sesión activa" : "no live session"}</span>
+                <span className="cr-name">{r.name}</span>
+                {live
+                ? (r.active
+                  ? <span className="cr-live"><span className="live-dot" aria-hidden="true"></span>{live.title}</span>
+                  : <span className="cr-idle">{lang === "es" ? "cerrado" : "closed"}</span>)
+                : <span className="cr-idle">{lang === "es" ? "sin sesión activa" : "no live session"}</span>
               }
               </a>);
 
@@ -775,7 +820,7 @@ function Grid({ data, dayIdx, buildingId, now, liveStyle, lang, t, onSessionClic
                           {t.online}
                         </span>
                       )}
-                      {hasYouTube(s) && (
+                      {!!effectiveYouTube(s, data) && (
                         <span className="stream-badge" title={t.streamingTitle}>
                           <svg viewBox="0 0 16 16" width="9" height="9" fill="currentColor" aria-hidden="true">
                             <path d="M3 3.2c0-.66.54-1.2 1.2-1.2h7.6c.66 0 1.2.54 1.2 1.2v9.6c0 .66-.54 1.2-1.2 1.2H4.2A1.2 1.2 0 0 1 3 12.8V3.2zM6.6 5v6l4.4-3-4.4-3z"/>
@@ -796,10 +841,13 @@ function Grid({ data, dayIdx, buildingId, now, liveStyle, lang, t, onSessionClic
                       <span className="c-time">{s.start}–{s.end}</span>
                     </div>
                     <div className="c-title">{s.title}</div>
-                    {dur > 60 && s.talks && s.talks.length > 0 &&
-                    <div className="c-talks-count">{s.talks.length} {lang === "es" ? "ponencias" : "talks"}</div>
-                    }
-                    <div className="c-type" style={{ color: typeColor }}>{t.types[s.type] || s.type}</div>
+                    {officialTitle(s) && <div className="c-official">{officialTitle(s)}</div>}
+                    <div className="c-foot">
+                      {dur > 60 && s.talks && s.talks.length > 0 &&
+                      <div className="c-talks-count">{s.talks.length} {lang === "es" ? "ponencias" : "talks"}</div>
+                      }
+                      <div className="c-type" style={{ color: typeColor }}>{t.types[s.type] || s.type}</div>
+                    </div>
                   </div>);
 
               })}
@@ -882,11 +930,12 @@ function MobileList({ data, dayIdx, buildingId, now, lang, t, onSessionClick, fa
                     {isSessionOnline(s) && (
                       <span className="online-chip-inline" title={t.onlinePresenterTitle}>🌐 {t.online}</span>
                     )}
-                    {hasYouTube(s) && (
+                    {!!effectiveYouTube(s, data) && (
                       <span className="stream-chip-inline" title={t.streamingTitle}>▶ {t.streaming}</span>
                     )}
                   </div>
                   <div className="m-title">{s.title}</div>
+                  {officialTitle(s) && <div className="m-official">{officialTitle(s)}</div>}
                   <div className="m-meta">
                     {s.start}–{s.end}
                     {s.talks && s.talks.length > 0 && ` · ${s.talks.length} ${lang === "es" ? "ponencias" : "talks"}`}
@@ -962,9 +1011,9 @@ function SessionSearch({ data, t, lang, onSelect }) {
         kind: "session",
         sId,
         session: s,
-        primary: s.title || (s.fullName || ""),
-        secondary: s.fullName && s.fullName !== s.title ? s.fullName : "",
-        haystack: [s.title, s.fullName, s.roomName, s.roomCode].filter(Boolean).join(" \u00b7 ").toLowerCase()
+        primary: s.title,
+        secondary: officialTitle(s) || (s.fullName && s.fullName !== s.title ? s.fullName : ""),
+        haystack: [s.title, officialTitle(s), s.fullName, s.roomName, s.roomCode].filter(Boolean).join(" \u00b7 ").toLowerCase()
       });
       // Talk-level entries
       for (const talk of (s.talks || [])) {
@@ -1294,6 +1343,7 @@ function SessionModal({ session, t, lang, now, onClose, favorites, onToggleFavor
         <div className="sm-head">
           <div className="sm-type" style={{ color: typeColor }}>{typeLabel}</div>
           <h2 className="sm-title">{session.title}</h2>
+          {officialTitle(session) && <div className="sm-official">{officialTitle(session)}</div>}
           {session.fullName && session.fullName !== session.title && (
             <div className="sm-fullname">{session.fullName}</div>
           )}
@@ -1312,7 +1362,7 @@ function SessionModal({ session, t, lang, now, onClose, favorites, onToggleFavor
           </div>
         )}
 
-        {hasYouTube(session) && (
+        {!!effectiveYouTube(session, data) && (
           <div className="sm-stream-banner" role="note">
             <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
               <path d="M4 5.5C4 4.67 4.67 4 5.5 4h13c.83 0 1.5.67 1.5 1.5v13c0 .83-.67 1.5-1.5 1.5h-13C4.67 20 4 19.33 4 18.5v-13zM10 8v8l6-4-6-4z"/>
@@ -1390,25 +1440,35 @@ function SessionModal({ session, t, lang, now, onClose, favorites, onToggleFavor
             visible without scrolling — last-minute attendees won't always scroll
             past a 5-talk list to find it. */}
         <div className="sm-actions">
-          {session.meet && (
-            <a href={safeURL(session.meet)} target="_blank" rel="noopener noreferrer" className="sm-meet-btn">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="23 7 16 12 23 17 23 7" /><rect x="1" y="5" width="15" height="14" rx="2" ry="2" /></svg>
-              <span>{lang === "es" ? "Enlace a Meet" : "Join Meet"}</span>
-              <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"><path d="M7 13l6-6M9 7h4v4" /></svg>
-            </a>
-          )}
-          {hasYouTube(session) && (
-            <a href={safeURL(session.youtube)} target="_blank" rel="noopener noreferrer" className="sm-youtube-btn">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
-                <path d="M21.6 6.6c-.2-.9-.9-1.6-1.8-1.8C18.2 4.4 12 4.4 12 4.4s-6.2 0-7.8.4c-.9.2-1.6.9-1.8 1.8C2 8.2 2 12 2 12s0 3.8.4 5.4c.2.9.9 1.6 1.8 1.8 1.6.4 7.8.4 7.8.4s6.2 0 7.8-.4c.9-.2 1.6-.9 1.8-1.8.4-1.6.4-5.4.4-5.4s0-3.8-.4-5.4zM10 15.5v-7l6 3.5-6 3.5z"/>
-              </svg>
-              <span>{t.watchOnYouTube}</span>
-              <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"><path d="M7 13l6-6M9 7h4v4" /></svg>
-            </a>
-          )}
-          {!session.meet && !hasYouTube(session) && (
-            <span className="sm-no-meet muted">{lang === "es" ? "Sin enlace de conexión" : "No remote access"}</span>
-          )}
+          {(() => {
+            // Meet/YouTube buttons. They render greyed + locked (not clickable)
+            // until the session's room is switched Active in the backstage.
+            const linksActive = roomLinksActive(session, data);
+            const yt = effectiveYouTube(session, data);
+            const meetIcon = <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="23 7 16 12 23 17 23 7" /><rect x="1" y="5" width="15" height="14" rx="2" ry="2" /></svg>;
+            const ytIcon = <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M21.6 6.6c-.2-.9-.9-1.6-1.8-1.8C18.2 4.4 12 4.4 12 4.4s-6.2 0-7.8.4c-.9.2-1.6.9-1.8 1.8C2 8.2 2 12 2 12s0 3.8.4 5.4c.2.9.9 1.6 1.8 1.8 1.6.4 7.8.4 7.8.4s6.2 0 7.8-.4c.9-.2 1.6-.9 1.8-1.8.4-1.6.4-5.4.4-5.4s0-3.8-.4-5.4zM10 15.5v-7l6 3.5-6 3.5z"/></svg>;
+            const arrow = <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"><path d="M7 13l6-6M9 7h4v4" /></svg>;
+            const lock = <svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="4" y="9" width="12" height="8.5" rx="1.5" /><path d="M6.5 9V6.5a3.5 3.5 0 0 1 7 0V9" /></svg>;
+            const meetLabel = lang === "es" ? "Enlace a Meet" : "Join Meet";
+            return (
+              <>
+                {session.meet && (linksActive
+                  ? <a href={safeURL(session.meet)} target="_blank" rel="noopener noreferrer" className="sm-meet-btn">{meetIcon}<span>{meetLabel}</span>{arrow}</a>
+                  : <span className="sm-meet-btn is-locked" title={t.linksClosed} aria-disabled="true">{meetIcon}<span>{meetLabel}</span>{lock}</span>
+                )}
+                {yt && (linksActive
+                  ? <a href={safeURL(yt)} target="_blank" rel="noopener noreferrer" className="sm-youtube-btn">{ytIcon}<span>{t.watchOnYouTube}</span>{arrow}</a>
+                  : <span className="sm-youtube-btn is-locked" title={t.linksClosed} aria-disabled="true">{ytIcon}<span>{t.watchOnYouTube}</span>{lock}</span>
+                )}
+                {!linksActive && (session.meet || yt) && (
+                  <span className="sm-locked-note muted">{t.linksClosed}</span>
+                )}
+                {!session.meet && !yt && (
+                  <span className="sm-no-meet muted">{lang === "es" ? "Sin enlace de conexión" : "No remote access"}</span>
+                )}
+              </>
+            );
+          })()}
           <div className="sm-share-wrap">
             <button className="sm-share-btn" onClick={() => setShareOpen(o => !o)} aria-label={t.share} aria-expanded={shareOpen} aria-haspopup="menu">
               <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><circle cx="5" cy="10" r="2.2" /><circle cx="15" cy="5" r="2.2" /><circle cx="15" cy="15" r="2.2" /><path d="M7 9l6-3M7 11l6 3" /></svg>
@@ -1624,6 +1684,7 @@ function AgendaModal({ open, onClose, favorites, data, t, lang, now, onSessionCl
                                 )}
                                 {s.title}
                               </div>
+                              {officialTitle(s) && <div className="agenda-item-official">{officialTitle(s)}</div>}
                               <div className="agenda-item-meta">
                                 <span className="ai-type" style={{ color: typeColor }}>
                                   {t.types[s.type] || s.type}

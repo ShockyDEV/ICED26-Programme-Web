@@ -845,7 +845,7 @@
 .rooms-list { display: flex; flex-direction: column; }
 .room-row {
   display: grid;
-  grid-template-columns: 220px 1fr auto auto;
+  grid-template-columns: 200px minmax(200px, 1fr) auto auto auto;
   gap: 12px;
   align-items: center;
   padding: 10px 16px;
@@ -883,6 +883,45 @@
 .rr-status.ok { color: var(--teal-deep); }
 .rr-status.empty { color: var(--ink-mute); }
 .rr-actions { display: flex; gap: 4px; align-items: center; flex-wrap: wrap; }
+
+/* Per-room links column: Meet + YouTube stacked, plus the Active/Cerrado toggle. */
+.rr-links { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.rr-yt {
+  padding: 7px 10px;
+  font-size: 12.5px;
+  border: 1.5px solid var(--line);
+  border-radius: 7px;
+  background: var(--paper);
+  font-family: inherit;
+  outline: none;
+}
+.rr-links .rr-meet, .rr-links .rr-yt { width: 100%; }
+.rr-yt:focus { border-color: var(--youtube, #c4302b); }
+.rr-toggle {
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 7px 13px;
+  border-radius: 999px;
+  border: 1.5px solid var(--line);
+  background: var(--paper);
+  font-family: inherit; font-size: 12px; font-weight: 600;
+  color: var(--ink-mute); cursor: pointer; white-space: nowrap;
+  transition: border-color 0.12s ease, background 0.12s ease, color 0.12s ease;
+}
+.rr-toggle:hover { border-color: var(--teal); }
+.rr-toggle-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--ink-mute); flex-shrink: 0; }
+.rr-toggle.is-active { border-color: var(--teal); background: var(--teal-soft); color: var(--teal-deep); }
+.rr-toggle.is-active .rr-toggle-dot { background: var(--teal-deep); box-shadow: 0 0 0 3px rgba(91, 169, 163, 0.25); }
+
+/* Info note shown in the session editor for YouTube-only types (keynotes/ICED talks). */
+.form-note {
+  font-size: 12.5px; line-height: 1.45; color: var(--ink-mute);
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin: 4px 0 12px;
+}
+.form-note strong { color: var(--ink); }
 .btn-apply {
   background: var(--teal-soft);
   color: var(--teal-deep);

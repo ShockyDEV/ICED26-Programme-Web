@@ -295,7 +295,7 @@ async function main() {
       let cluster = "hospederia"; // default
       if (/sal[óo]n|capilla|claustro|pinturas|biblioteca|colegio/i.test(name)) cluster = "colegio";
       else if (/^room\s+1[12]\.|^room\s+12\.|seminario|presentaciones|i\+d\+i/i.test(name)) cluster = "iddi";
-      data.rooms.push({ id, name, cluster, code, meet: "" });
+      data.rooms.push({ id, name, cluster, code, meet: "", youtube: "", active: false });
       console.log(`  + ${name}  →  id="${id}", cluster=${cluster}, code="${code}"  (verify in admin)`);
     }
     console.log("");
@@ -370,6 +370,14 @@ async function main() {
       if (meetURL) meetInheritedFromRoom++;
     }
 
+    // Web rule: keynotes, ICED talks and pre-conference (2026-06-23) sessions
+    // never use Meet. Keynotes/ICED talks are YouTube-only (their room's
+    // livestream); the pre-conference is in-person. Enforced here so the rule
+    // survives every re-sync, not just the one-time data edit.
+    if (ec.type === "keynote" || ec.type === "talk" || ec.day === "2026-06-23") {
+      meetURL = "";
+    }
+
     // Build the new session object in our schema
     const next = {
       day: ec.day,
@@ -387,8 +395,9 @@ async function main() {
       easychair_session_id: ec.easychair_session_id
     };
     if (ec.description) next.description = ec.description;
-    // Preserve admin-set flags that EasyChair doesn't know about
-    if (existing?.onlinePresenter) next.onlinePresenter = true;
+    // Preserve the admin-set card-title override across syncs (the per-session
+    // title shown on the public card, set in the backstage session editor).
+    if (existing?.cardTitle) next.cardTitle = existing.cardTitle;
     // Per-talk online presenter flags — match scraped talks to existing
     // ones by normalized title and carry the `online` flag forward.
     if (existing && Array.isArray(existing.talks) && existing.talks.length > 0) {
