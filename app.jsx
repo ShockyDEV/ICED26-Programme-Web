@@ -36,14 +36,32 @@ function hasYouTube(s) {
 //   2) the single talk's own title (1-talk workshops, symposia, collab spaces)
 //   3) description — the EasyChair session "theme" (Papers, Posters, ICED Talks)
 // Returns "" when there's nothing more specific than the generic name.
-function officialTitle(s) {
-  if (!s) return "";
-  if (s.cardTitle && String(s.cardTitle).trim()) return String(s.cardTitle).trim();
+function officialTitleInfo(s) {
+  if (!s) return null;
+  if (s.cardTitle && String(s.cardTitle).trim()) return { text: String(s.cardTitle).trim(), isTheme: false };
   if (Array.isArray(s.talks) && s.talks.length === 1 && s.talks[0] && s.talks[0].title) {
-    return s.talks[0].title;
+    return { text: s.talks[0].title, isTheme: false };
   }
-  if (s.description && String(s.description).trim()) return String(s.description).trim();
-  return "";
+  if (s.description && String(s.description).trim()) return { text: String(s.description).trim(), isTheme: true };
+  return null;
+}
+function officialTitle(s) {
+  const o = officialTitleInfo(s);
+  return o ? o.text : "";
+}
+// Renders the secondary "official" line. When the text is the EasyChair session
+// theme (the `description`, used by Papers/Posters), it is prefixed with a
+// localized "Theme:" label so it reads as the card's theme, not a talk title.
+// Single-talk titles and manual cardTitle overrides get no prefix.
+function OfficialTitle({ session, className, t }) {
+  const o = officialTitleInfo(session);
+  if (!o) return null;
+  return (
+    <div className={className}>
+      {o.isTheme && <span className="official-theme-label">{(t && t.themeLabel) || "Theme:"} </span>}
+      {o.text}
+    </div>
+  );
 }
 
 // ─── Per-room livestream + link gating ────────────────────────────────────
@@ -200,7 +218,8 @@ const I18N = {
     streaming: "STREAM",
     streamingTitle: "Streamed on YouTube",
     streamingDesc: "This session is broadcast live on YouTube. Watch-only — no two-way interaction.",
-    watchOnYouTube: "Watch on YouTube"
+    watchOnYouTube: "Watch on YouTube",
+    themeLabel: "Theme:"
   },
   es: {
     subtitle: "Salamanca · 23–26 junio 2026",
@@ -257,7 +276,8 @@ const I18N = {
     streaming: "DIRECTO",
     streamingTitle: "Retransmisión en YouTube",
     streamingDesc: "Esta sesión se retransmite en directo por YouTube. Solo visualización — sin interacción.",
-    watchOnYouTube: "Ver en YouTube"
+    watchOnYouTube: "Ver en YouTube",
+    themeLabel: "Tema:"
   }
 };
 
@@ -841,7 +861,7 @@ function Grid({ data, dayIdx, buildingId, now, liveStyle, lang, t, onSessionClic
                       <span className="c-time">{s.start}–{s.end}</span>
                     </div>
                     <div className="c-title">{s.title}</div>
-                    {officialTitle(s) && <div className="c-official">{officialTitle(s)}</div>}
+                    <OfficialTitle session={s} className="c-official" t={t} />
                     <div className="c-foot">
                       {dur > 60 && s.talks && s.talks.length > 0 &&
                       <div className="c-talks-count">{s.talks.length} {lang === "es" ? "ponencias" : "talks"}</div>
@@ -935,7 +955,7 @@ function MobileList({ data, dayIdx, buildingId, now, lang, t, onSessionClick, fa
                     )}
                   </div>
                   <div className="m-title">{s.title}</div>
-                  {officialTitle(s) && <div className="m-official">{officialTitle(s)}</div>}
+                  <OfficialTitle session={s} className="m-official" t={t} />
                   <div className="m-meta">
                     {s.start}–{s.end}
                     {s.talks && s.talks.length > 0 && ` · ${s.talks.length} ${lang === "es" ? "ponencias" : "talks"}`}
@@ -1343,7 +1363,7 @@ function SessionModal({ session, t, lang, now, onClose, favorites, onToggleFavor
         <div className="sm-head">
           <div className="sm-type" style={{ color: typeColor }}>{typeLabel}</div>
           <h2 className="sm-title">{session.title}</h2>
-          {officialTitle(session) && <div className="sm-official">{officialTitle(session)}</div>}
+          <OfficialTitle session={session} className="sm-official" t={t} />
           {session.fullName && session.fullName !== session.title && (
             <div className="sm-fullname">{session.fullName}</div>
           )}
@@ -1684,7 +1704,7 @@ function AgendaModal({ open, onClose, favorites, data, t, lang, now, onSessionCl
                                 )}
                                 {s.title}
                               </div>
-                              {officialTitle(s) && <div className="agenda-item-official">{officialTitle(s)}</div>}
+                              <OfficialTitle session={s} className="agenda-item-official" t={t} />
                               <div className="agenda-item-meta">
                                 <span className="ai-type" style={{ color: typeColor }}>
                                   {t.types[s.type] || s.type}

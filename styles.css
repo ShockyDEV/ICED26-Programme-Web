@@ -866,6 +866,8 @@ a { color: inherit; }
 .cell.sub-of-6 .c-official, .cell.sub-of-7 .c-official, .cell.sub-of-8 .c-official,
 .cell.sub-of-9 .c-official, .cell.sub-of-10 .c-official, .cell.sub-of-11 .c-official,
 .cell.sub-of-12 .c-official, .cell.sub-of-13 .c-official, .cell.sub-of-14 .c-official { display: none; }
+/* "Theme:" prefix label on cards whose official line is the session theme. */
+.official-theme-label { font-weight: 700; }
 .cell .c-talks-count {
   font-size: 10px;
   color: var(--ink-mute);
