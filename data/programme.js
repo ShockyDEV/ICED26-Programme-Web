@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-05-29T14-32
+// ICED26 programme — generated from admin panel 2026-05-29T14-56
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -5304,21 +5304,6 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "105655"
-    },
-    {
-      "day": "2026-06-26",
-      "start": "08:15",
-      "end": "09:15",
-      "room": "room-11-3",
-      "roomName": "ROOM 11.3",
-      "roomCode": "11.3",
-      "cluster": "iddi",
-      "title": "I - Collaborative Space 32",
-      "fullName": "Session 19C: I - Collaborative Space 32",
-      "type": "collaborative",
-      "meet": "https://meet.google.com/nyw-osfc-ajz",
-      "talks": [],
-      "easychair_session_id": "105644"
     },
     {
       "day": "2026-06-26",
