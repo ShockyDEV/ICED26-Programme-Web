@@ -660,19 +660,32 @@ function BuildingTabs({ data, buildingId, setBuildingId, dayIdx, now, lang, t })
     return m;
   }, [data, dayKey, now]);
 
+  // If the selected building has no sessions on this day, jump to the first one
+  // that does — so you never land on an empty (greyed-out) building.
+  useEffect(() => {
+    if (stats[buildingId] && stats[buildingId].total === 0) {
+      const firstWithSessions = data.clusters.find((c) => stats[c.id] && stats[c.id].total > 0);
+      if (firstWithSessions && firstWithSessions.id !== buildingId) setBuildingId(firstWithSessions.id);
+    }
+  }, [buildingId, dayKey]);
+
   return (
     <div className="building-tabs" role="tablist" aria-label={lang === "es" ? "Edificios" : "Buildings"}>
       {data.clusters.map((c) => {
         const st = stats[c.id] || { total: 0, live: 0, rooms: 0 };
         const active = c.id === buildingId;
+        const empty = st.total === 0;
         return (
           <button
             key={c.id}
             role="tab"
             aria-selected={active}
-            className={`building-tab ${active ? "active" : ""} ${st.live > 0 ? "has-live" : ""}`}
-            onClick={() => setBuildingId(c.id)}>
-            
+            aria-disabled={empty || undefined}
+            disabled={empty}
+            title={empty ? (lang === "es" ? "Sin sesiones este día" : "No sessions this day") : undefined}
+            className={`building-tab ${active ? "active" : ""} ${st.live > 0 ? "has-live" : ""} ${empty ? "is-empty" : ""}`}
+            onClick={() => { if (!empty) setBuildingId(c.id); }}>
+
             {active && st.live > 0 && (
               <svg className="bt-comet" preserveAspectRatio="none" aria-hidden="true">
                 <rect x="1.5" y="1.5" rx="11" ry="11" pathLength="100" />
@@ -681,8 +694,10 @@ function BuildingTabs({ data, buildingId, setBuildingId, dayIdx, now, lang, t })
             <span className="bt-name">{c.name}</span>
             <span className="bt-meta">
               <span className="bt-rooms">{st.rooms} {st.rooms === 1 ? lang === "es" ? "sala" : "room" : lang === "es" ? "salas" : "rooms"}</span>
-              {st.total > 0 && <span className="bt-sep">·</span>}
-              {st.total > 0 && <span className="bt-sessions">{st.total} {lang === "es" ? "sesiones" : "sessions"}</span>}
+              <span className="bt-sep">·</span>
+              {empty
+                ? <span className="bt-empty">{lang === "es" ? "sin sesiones" : "no sessions"}</span>
+                : <span className="bt-sessions">{st.total} {lang === "es" ? "sesiones" : "sessions"}</span>}
               {st.live > 0 && <span className="bt-live"><span className="dot"></span>{st.live} {t.live}</span>}
             </span>
           </button>);

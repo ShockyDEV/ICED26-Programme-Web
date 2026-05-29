@@ -611,6 +611,19 @@ a { color: inherit; }
   background: color-mix(in oklab, var(--teal) 8%, var(--paper));
   box-shadow: 0 0 0 1px var(--teal) inset;
 }
+/* Empty building (no sessions this day): greyed out + not clickable. */
+.building-tab.is-empty {
+  opacity: 0.45;
+  cursor: not-allowed;
+  background: var(--paper);
+  border-color: var(--line);
+  box-shadow: none;
+}
+.building-tab.is-empty:hover {
+  border-color: var(--line);
+  background: var(--paper);
+}
+.building-tab .bt-empty { font-style: italic; }
 .building-tab .bt-name {
   font-family: 'Fraunces', Georgia, serif;
   font-size: 15px;
@@ -1399,6 +1412,7 @@ a { color: inherit; }
   .building-tab .bt-meta { font-size: 10px; gap: 4px; }
   .building-tab .bt-rooms,
   .building-tab .bt-sep,
+  .building-tab .bt-empty,
   .building-tab .bt-sessions { display: none; } /* keep only the LIVE indicator on mobile */
   .building-tab .bt-live { margin-left: 0; }
 
