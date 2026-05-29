@@ -494,6 +494,8 @@ a { color: inherit; }
   color: inherit;
 }
 .share-item:hover { background: color-mix(in oklab, var(--teal) 9%, transparent); }
+.share-item.is-disabled { opacity: 0.5; cursor: not-allowed; }
+.share-item.is-disabled:hover { background: transparent; }
 .share-item-icon {
   flex: 0 0 auto;
   width: 28px; height: 28px;

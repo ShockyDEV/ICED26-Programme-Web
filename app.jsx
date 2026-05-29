@@ -1249,7 +1249,7 @@ function copyToClipboard(text) {
 // ─── Share popover ───────────────────────────────────────────────────────
 // Lets the user choose between sharing the Meet link, the programme deep-link,
 // or downloading an .ics calendar entry.
-function SharePopover({ session, t, lang, onClose }) {
+function SharePopover({ session, t, lang, onClose, data }) {
   const wrapRef = useRef(null);
   useEffect(() => {
     const onDoc = (e) => {
@@ -1271,6 +1271,9 @@ function SharePopover({ session, t, lang, onClose }) {
     return url.toString();
   })();
 
+  // Meet sharing is gated the same way as the Join Meet button: while the
+  // session's room is closed, the link isn't shareable yet (shown greyed).
+  const linksActive = roomLinksActive(session, data);
   const items = [
     {
       key: "programme",
@@ -1282,8 +1285,9 @@ function SharePopover({ session, t, lang, onClose }) {
     session.meet && {
       key: "meet",
       label: lang === "es" ? "Enlace de Meet" : "Meet link",
-      sub: lang === "es" ? "Para entrar directo a la sala" : "Direct join URL",
+      sub: linksActive ? (lang === "es" ? "Para entrar directo a la sala" : "Direct join URL") : t.linksClosed,
       icon: <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><polygon points="23 7 16 12 23 17 23 7" /><rect x="1" y="5" width="15" height="14" rx="2" ry="2" /></svg>,
+      disabled: !linksActive,
       action: () => { copyToClipboard(session.meet); showToast(lang === "es" ? "Meet copiado" : "Meet copied"); onClose(); }
     }
   ].filter(Boolean);
@@ -1291,7 +1295,10 @@ function SharePopover({ session, t, lang, onClose }) {
   return (
     <div className="share-popover" ref={wrapRef} role="menu">
       {items.map(item => (
-        <button key={item.key} className="share-item" role="menuitem" onClick={item.action}>
+        <button key={item.key} className={`share-item ${item.disabled ? "is-disabled" : ""}`} role="menuitem"
+          onClick={item.disabled ? undefined : item.action}
+          aria-disabled={item.disabled || undefined}
+          title={item.disabled ? t.linksClosed : undefined}>
           <span className="share-item-icon">{item.icon}</span>
           <span className="share-item-body">
             <span className="share-item-label">{item.label}</span>
@@ -1500,7 +1507,7 @@ function SessionModal({ session, t, lang, now, onClose, favorites, onToggleFavor
               <span>{t.share}</span>
               <svg viewBox="0 0 20 20" width="11" height="11" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" style={{ opacity: 0.6 }}><path d="M5 8l5 5 5-5" /></svg>
             </button>
-            {shareOpen && <SharePopover session={session} t={t} lang={lang} onClose={() => setShareOpen(false)} />}
+            {shareOpen && <SharePopover session={session} t={t} lang={lang} onClose={() => setShareOpen(false)} data={data} />}
           </div>
         </div>
 
