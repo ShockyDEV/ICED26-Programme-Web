@@ -50,13 +50,28 @@ const GITHUB_TOKEN_KEY = "iced26-github-token";
 
 // Build the exact programme.js content (used by both the download-Exportar
 // path and the GitHub direct-publish path so they stay byte-identical).
+// Strip the "Some Online Presentations" / "Some Presentations Online" note
+// that EasyChair appends to some Paper themes — online is shown via the
+// per-talk icon, never as text in the theme. Kept out of the published JSON.
+const THEME_ONLINE_NOTE = /\s*Some\s+(?:Online\s+Presentations?|Presentations?\s+Online)\s*$/i;
+
 function buildProgrammeJS(data) {
   const stamp = new Date().toISOString().replace(/[:.]/g, "-").slice(0, 16);
+  // Clone (don't mutate live state) and clean session themes on the way out so
+  // every publish/export is consistent, even if a draft still carries the note.
+  const clean = {
+    ...data,
+    sessions: data.sessions.map((s) =>
+      s.description && THEME_ONLINE_NOTE.test(s.description)
+        ? { ...s, description: s.description.replace(THEME_ONLINE_NOTE, "").trim() }
+        : s
+    )
+  };
   return (
     "// ICED26 programme — generated from admin panel " + stamp + "\n" +
     "// Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.\n" +
     "\n" +
-    "window.ICED26_DATA = " + JSON.stringify(data, null, 2) + ";\n"
+    "window.ICED26_DATA = " + JSON.stringify(clean, null, 2) + ";\n"
   );
 }
 
