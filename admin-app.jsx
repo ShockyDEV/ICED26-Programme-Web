@@ -30,8 +30,8 @@
 //   const hash = c.pbkdf2Sync(password, saltBytes, iterations, 32, 'sha256').toString('hex');
 //   console.log({ salt, hash });
 const ADMIN_EMAIL = "enrique@usal.es";
-const ADMIN_PBKDF2_SALT = "1b6859c82ef416002482cfa9d88211bc";
-const ADMIN_PBKDF2_HASH = "63c57029a6d0a779fda19559461823b3554ae940d31b6117b59fe247241a4da2";
+const ADMIN_PBKDF2_SALT = "ddfc5bb3f3078d599dc2d82a6abb603c";
+const ADMIN_PBKDF2_HASH = "a9b5d562a1744e03662c0b0f1fdf872c71aeb9af0d3bbee3a43d8d695c330d91";
 const ADMIN_PBKDF2_ITERATIONS = 600000;
 
 // ── Storage keys ────────────────────────────────────────────────────────
