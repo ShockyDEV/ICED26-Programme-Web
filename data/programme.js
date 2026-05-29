@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-05-26T08-13
+// ICED26 programme — generated from admin panel 2026-05-29T10-15
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -516,7 +516,8 @@ window.ICED26_DATA = {
       "meet": "https://meet.google.com/igz-jnbs-zto",
       "talks": [],
       "easychair_session_id": "104800",
-      "youtube": "https://www.youtube.com/watch?v=JYDwTQC5TlE&list=RDJYDwTQC5TlE&start_radio=1"
+      "youtube": "",
+      "onlinePresenter": false
     },
     {
       "day": "2026-06-24",
@@ -532,7 +533,8 @@ window.ICED26_DATA = {
       "meet": "https://meet.google.com/rrs-uxfd-jdg",
       "talks": [],
       "easychair_session_id": "104801",
-      "youtube": "https://www.youtube.com/watch?v=JYDwTQC5TlE&list=RDJYDwTQC5TlE&start_radio=1"
+      "youtube": "",
+      "onlinePresenter": false
     },
     {
       "day": "2026-06-24",
@@ -563,7 +565,6 @@ window.ICED26_DATA = {
       "meet": "https://meet.google.com/cio-frez-imn",
       "talks": [
         {
-          "easychair_id": "311652",
           "time": "11:00",
           "title": "Agency and strategy to build trustful spaces",
           "authors": "Rachel Forsyth, Claire Hamshire, Peter Felten, Jessica Riddell, Anna Santucci, Alison Cook-Sather, Kathryn Sutherland",
@@ -573,7 +574,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104814",
-      "youtube": "https://www.youtube.com/watch?v=JYDwTQC5TlE&list=RDJYDwTQC5TlE&start_radio=1"
+      "youtube": "",
+      "onlinePresenter": false
     },
     {
       "day": "2026-06-24",
@@ -1785,7 +1787,8 @@ window.ICED26_DATA = {
       "meet": "https://meet.google.com/zcv-cudm-pif",
       "talks": [],
       "easychair_session_id": "104802",
-      "youtube": "https://www.youtube.com/watch?v=JYDwTQC5TlE&list=RDJYDwTQC5TlE&start_radio=1"
+      "youtube": "",
+      "onlinePresenter": false
     },
     {
       "day": "2026-06-24",
@@ -3439,7 +3442,8 @@ window.ICED26_DATA = {
       "meet": "https://meet.google.com/ryk-ubuw-okj",
       "talks": [],
       "easychair_session_id": "104869",
-      "youtube": "https://www.youtube.com/watch?v=JYDwTQC5TlE&list=RDJYDwTQC5TlE&start_radio=1"
+      "youtube": "",
+      "onlinePresenter": false
     },
     {
       "day": "2026-06-25",
@@ -3455,7 +3459,6 @@ window.ICED26_DATA = {
       "meet": "https://meet.google.com/vih-wpje-kcn",
       "talks": [
         {
-          "easychair_id": "311661",
           "time": "12:15",
           "title": "Educational leadership of, for, with and through academic development",
           "authors": "Klara Bolander Laksov, Cormac McGrath, Anna Serbati",
@@ -3465,7 +3468,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104882",
-      "youtube": "https://www.youtube.com/watch?v=JYDwTQC5TlE&list=RDJYDwTQC5TlE&start_radio=1"
+      "youtube": "",
+      "onlinePresenter": false
     },
     {
       "day": "2026-06-25",
@@ -4339,7 +4343,8 @@ window.ICED26_DATA = {
       "meet": "https://meet.google.com/zgs-wsex-myp",
       "talks": [],
       "easychair_session_id": "104885",
-      "youtube": "https://www.youtube.com/watch?v=JYDwTQC5TlE&list=RDJYDwTQC5TlE&start_radio=1"
+      "youtube": "",
+      "onlinePresenter": false
     },
     {
       "day": "2026-06-25",
@@ -6583,7 +6588,8 @@ window.ICED26_DATA = {
       "meet": "https://meet.google.com/ctu-fzjw-som",
       "talks": [],
       "easychair_session_id": "105689",
-      "youtube": "https://www.youtube.com/watch?v=JYDwTQC5TlE&list=RDJYDwTQC5TlE&start_radio=1"
+      "youtube": "",
+      "onlinePresenter": false
     },
     {
       "day": "2026-06-26",
@@ -6599,7 +6605,8 @@ window.ICED26_DATA = {
       "meet": "https://meet.google.com/oim-rigs-daa",
       "talks": [],
       "easychair_session_id": "105690",
-      "youtube": "https://www.youtube.com/watch?v=JYDwTQC5TlE&list=RDJYDwTQC5TlE&start_radio=1"
+      "youtube": "",
+      "onlinePresenter": false
     }
   ]
 };
