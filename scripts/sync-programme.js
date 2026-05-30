@@ -82,6 +82,13 @@ function shortTitle(fullTitle) {
   return fullTitle.replace(/^Session\s+\d+[A-Z]?\s*:\s*/i, "").trim();
 }
 
+// Small cosmetic title fixups EasyChair doesn't apply (e.g. casing). Applied to
+// both fullName and title so the public card matches the conference's styling.
+function fixTitle(s) {
+  if (!s) return s;
+  return s.replace(/\bWelcome reception\b/g, "Welcome Reception");
+}
+
 // ── Talk parsing (per <tr class="talk">) ──────────────────────────────────
 function parseTalk(block) {
   const idMatch = block.match(/<a name="talk:(\d+)"/);
@@ -152,7 +159,7 @@ function parseDay(html, day) {
     const dash = interval.split(/[-–]/).map((s) => s.trim());
     const start = dash[0];
     const end = dash[1] || dash[0];
-    const fullName = collapseWs(decode(titleMatch[1]));
+    const fullName = fixTitle(collapseWs(decode(titleMatch[1])));
     // Strip the "Some Online Presentations" / "Some Presentations Online" note
     // EasyChair appends to some Paper themes — online is shown via the per-talk
     // icon, not as text in the theme/title.
@@ -411,13 +418,23 @@ async function main() {
     if (existing && Array.isArray(existing.talks) && existing.talks.length > 0) {
       const normT = (s) => (s || "").toLowerCase().replace(/[^\w\s]/g, " ").replace(/\s+/g, " ").trim();
       const onlineByTitle = new Map();
+      const videoByTitle = new Map();
       existing.talks.forEach((t) => {
         if (t && t.online) onlineByTitle.set(normT(t.title), true);
+        // Carry forward the pre-recorded-video flag + link across syncs.
+        if (t && t.video) videoByTitle.set(normT(t.title), { video: true, videoUrl: t.videoUrl || "" });
       });
-      if (onlineByTitle.size > 0) {
-        next.talks = next.talks.map((t) =>
-          onlineByTitle.has(normT(t.title)) ? { ...t, online: true } : t
-        );
+      if (onlineByTitle.size > 0 || videoByTitle.size > 0) {
+        next.talks = next.talks.map((t) => {
+          let nt = t;
+          if (onlineByTitle.has(normT(t.title))) nt = { ...nt, online: true };
+          if (videoByTitle.has(normT(t.title))) {
+            const v = videoByTitle.get(normT(t.title));
+            nt = { ...nt, video: true };
+            if (v.videoUrl) nt.videoUrl = v.videoUrl;
+          }
+          return nt;
+        });
       }
     }
 

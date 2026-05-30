@@ -19,6 +19,25 @@ function isSessionOnline(s) {
   return Array.isArray(s.talks) && s.talks.some((t) => t && t.online);
 }
 
+// ─── Pre-recorded video detection ─────────────────────────────────────────
+// A talk can be a pre-recorded video (played in its slot instead of a live
+// presentation). Marked per talk via talk.video === true, with an optional
+// talk.videoUrl (YouTube link). Session counts as "has video" if any talk is.
+function isSessionVideo(s) {
+  if (!s) return false;
+  return Array.isArray(s.talks) && s.talks.some((t) => t && t.video);
+}
+
+// ─── Global / spanning rows ───────────────────────────────────────────────
+// Breaks (coffee/lunch) and any session pinned to room "*" render as a single
+// full-width bar that spans every building view — the "ALL" visual. Mónica
+// moved the breaks into a real room (Claustro) for logistics, but they should
+// still SHOW as spanning bars (just labelled with that room), and must not
+// count toward a building's session total (keeps empty buildings greyed out).
+function isGlobalRow(s) {
+  return !!s && (s.room === "*" || s.type === "break");
+}
+
 // ─── YouTube stream detection ────────────────────────────────────────────
 // Two different "remote" channels coexist on this programme:
 //   - Google Meet → interactive room. Marked by isSessionOnline + session.meet.
@@ -183,14 +202,14 @@ const I18N = {
     types: {
       keynote: "Keynote", symposium: "Symposium", paper: "Paper",
       workshop: "Workshop", poster: "Posters", collaborative: "Collab. Space",
-      talk: "ICED Talks", doctoral: "Doctoral", social: "Social",
+      talk: "ICED Talks", doctoral: "Doctoral Colloquium", social: "Social",
       meeting: "Meeting", break: "Break", other: "Session"
     },
     timeTravel: "Time travel",
     realNow: "Real now",
     admin: "Admin",
     everyRoom: "All rooms",
-    searchPlaceholder: "Search talks, authors, sessions…",
+    searchPlaceholder: "Search contributions, authors, sessions (e.g. 15K)…",
     searchNoResults: "No matches",
     searchShortcut: "⌘K",
     share: "Share",
@@ -201,7 +220,7 @@ const I18N = {
     parallel: "parallel sessions",
     online: "ONLINE",
     onlinePresenterTitle: "Online presenter",
-    onlinePresenterDesc: "One or more presentations in this session will be given online.",
+    onlinePresenterDesc: "One or more presentations in this session will be online.",
     myAgenda: "My agenda",
     myAgendaTitle: "My personal agenda",
     addToAgenda: "Add to my agenda",
@@ -226,7 +245,12 @@ const I18N = {
     streamingTitle: "Streamed on YouTube",
     streamingDesc: "This session is broadcast live on YouTube. Watch-only — no two-way interaction.",
     watchOnYouTube: "Watch on YouTube",
-    themeLabel: "Theme:"
+    themeLabel: "Theme:",
+    video: "VIDEO",
+    videoTitle: "Pre-recorded video",
+    videoDesc: "One or more presentations in this session are pre-recorded videos, played during their time slot.",
+    videoTalk: "Pre-recorded video",
+    watchVideo: "Watch video"
   },
   es: {
     subtitle: "Salamanca · 23–26 junio 2026",
@@ -241,14 +265,14 @@ const I18N = {
     types: {
       keynote: "Conferencia", symposium: "Simposio", paper: "Comunicación",
       workshop: "Taller", poster: "Pósters", collaborative: "Espacio colab.",
-      talk: "ICED Talks", doctoral: "Doctoral", social: "Social",
+      talk: "ICED Talks", doctoral: "Coloquio Doctoral", social: "Social",
       meeting: "Reunión", break: "Pausa", other: "Sesión"
     },
     timeTravel: "Viaje en el tiempo",
     realNow: "Ahora real",
     admin: "Admin",
     everyRoom: "Todas las salas",
-    searchPlaceholder: "Buscar ponencias, autores, sesiones…",
+    searchPlaceholder: "Buscar contribuciones, autores, sesiones (p. ej. 15K)…",
     searchNoResults: "Sin resultados",
     searchShortcut: "⌘K",
     share: "Compartir",
@@ -284,7 +308,12 @@ const I18N = {
     streamingTitle: "Retransmisión en YouTube",
     streamingDesc: "Esta sesión se retransmite en directo por YouTube. Solo visualización — sin interacción.",
     watchOnYouTube: "Ver en YouTube",
-    themeLabel: "Tema:"
+    themeLabel: "Tema:",
+    video: "VÍDEO",
+    videoTitle: "Vídeo pregrabado",
+    videoDesc: "Una o más ponencias de esta sesión son vídeos pregrabados, reproducidos en su franja horaria.",
+    videoTalk: "Vídeo pregrabado",
+    watchVideo: "Ver vídeo"
   }
 };
 
@@ -515,7 +544,7 @@ function Header({ data, now, lang, setLang, t, favorites, onOpenAgenda }) {
   const liveByRoom = useMemo(() => {
     const map = {};
     for (const s of data.sessions) {
-      if (s.room === "*") continue;
+      if (isGlobalRow(s)) continue;
       if (sessionState(s, now) === "live") map[s.room] = s;
     }
     return map;
@@ -654,7 +683,7 @@ function BuildingTabs({ data, buildingId, setBuildingId, dayIdx, now, lang, t })
     }
     for (const s of data.sessions) {
       if (s.day !== dayKey) continue;
-      if (s.room === "*") continue;
+      if (isGlobalRow(s)) continue;
       if (!m[s.cluster]) continue;
       m[s.cluster].total += 1;
       if (sessionState(s, now) === "live") m[s.cluster].live += 1;
@@ -720,7 +749,7 @@ function Grid({ data, dayIdx, buildingId, now, liveStyle, lang, t, onSessionClic
   const roomIds = new Set(buildingRooms.map((r) => r.id));
 
   const daySessions = data.sessions.filter((s) =>
-  s.day === dayKey && (s.room === "*" || roomIds.has(s.room))
+  s.day === dayKey && (isGlobalRow(s) || roomIds.has(s.room))
   );
   if (daySessions.length === 0) {
     return <div className="muted desktop-only" style={{ padding: 24 }}>{lang === "es" ? "No hay sesiones en este edificio hoy." : "No sessions in this building today."}</div>;
@@ -739,7 +768,7 @@ function Grid({ data, dayIdx, buildingId, now, liveStyle, lang, t, onSessionClic
   const byRoom = {};
   const globalRows = [];
   for (const s of daySessions) {
-    if (s.room === "*") globalRows.push(s);else
+    if (isGlobalRow(s)) globalRows.push(s);else
     (byRoom[s.room] ||= []).push(s);
   }
 
@@ -870,6 +899,14 @@ function Grid({ data, dayIdx, buildingId, now, liveStyle, lang, t, onSessionClic
                           {t.streaming}
                         </span>
                       )}
+                      {isSessionVideo(s) && (
+                        <span className="video-badge" title={t.videoTitle}>
+                          <svg viewBox="0 0 16 16" width="9" height="9" fill="currentColor" aria-hidden="true">
+                            <path d="M2 4.5C2 3.67 2.67 3 3.5 3h6c.83 0 1.5.67 1.5 1.5v1.2l2.6-1.7c.4-.26.9.03.9.5v6.9c0 .47-.5.76-.9.5L11 10.3v1.2c0 .83-.67 1.5-1.5 1.5h-6A1.5 1.5 0 0 1 2 11.5v-7z"/>
+                          </svg>
+                          {t.video}
+                        </span>
+                      )}
                       {onToggleFavorite && (
                         <StarButton
                           active={favorites?.has(sessionId(s))}
@@ -886,7 +923,7 @@ function Grid({ data, dayIdx, buildingId, now, liveStyle, lang, t, onSessionClic
                     <OfficialTitle session={s} className="c-official" t={t} />
                     <div className="c-foot">
                       {dur > 60 && s.talks && s.talks.length > 0 &&
-                      <div className="c-talks-count">{s.talks.length} {lang === "es" ? "ponencias" : "talks"}</div>
+                      <div className="c-talks-count">{s.talks.length} {lang === "es" ? "contribuciones" : "contributions"}</div>
                       }
                       <div className="c-type" style={{ color: typeColor }}>{t.types[s.type] || s.type}</div>
                     </div>
@@ -911,11 +948,11 @@ function Grid({ data, dayIdx, buildingId, now, liveStyle, lang, t, onSessionClic
                 height: `${Math.max(height, 32)}px`
               }}
               role="cell"
-              aria-label={`${s.title || t.types[s.type]}, ${s.start} to ${s.end}, ${t.everyRoom}`}>
-              
+              aria-label={`${s.title || t.types[s.type]}, ${s.start} to ${s.end}, ${s.room === "*" ? t.everyRoom : s.roomName}`}>
+
               <span className="b-time">{s.start}–{s.end}</span>
               <span className="b-title">{s.title || t.types[s.type]}</span>
-              <span className="b-tag">{t.everyRoom}</span>
+              <span className="b-tag">{s.room === "*" ? t.everyRoom : s.roomName}</span>
             </div>);
 
         })}
@@ -937,7 +974,7 @@ function MobileList({ data, dayIdx, buildingId, now, lang, t, onSessionClick, fa
   const dayKey = data.meta.days[dayIdx];
   const cluster = data.clusters.find((c) => c.id === buildingId) || data.clusters[0];
   const sessions = data.sessions.filter((s) =>
-  s.day === dayKey && (s.cluster === cluster.id || s.room === "*")
+  s.day === dayKey && (s.cluster === cluster.id || isGlobalRow(s))
   );
   const byHour = {};
   for (const s of sessions) {
@@ -975,12 +1012,15 @@ function MobileList({ data, dayIdx, buildingId, now, lang, t, onSessionClick, fa
                     {!!effectiveYouTube(s, data) && (
                       <span className="stream-chip-inline" title={t.streamingTitle}>▶ {t.streaming}</span>
                     )}
+                    {isSessionVideo(s) && (
+                      <span className="video-chip-inline" title={t.videoTitle}>🎬 {t.video}</span>
+                    )}
                   </div>
                   <div className="m-title">{s.title}</div>
                   <OfficialTitle session={s} className="m-official" t={t} />
                   <div className="m-meta">
                     {s.start}–{s.end}
-                    {s.talks && s.talks.length > 0 && ` · ${s.talks.length} ${lang === "es" ? "ponencias" : "talks"}`}
+                    {s.talks && s.talks.length > 0 && ` · ${s.talks.length} ${lang === "es" ? "contribuciones" : "contributions"}`}
                   </div>
                   {onToggleFavorite && (
                     <StarButton
@@ -1048,25 +1088,32 @@ function SessionSearch({ data, t, lang, onSelect }) {
     const out = [];
     for (const s of data.sessions) {
       const sId = sessionId(s);
+      // EasyChair session code, e.g. "Session 15K: \u2026" \u2192 "15k". Printed on the
+      // card; people search by it ("15k", "21m"), so index it as a token.
+      const codeMatch = (s.fullName || "").match(/session\s+([0-9]+[a-z]?)/i);
+      const code = codeMatch ? codeMatch[1].toLowerCase() : "";
       // Session-level entry (always)
       out.push({
         kind: "session",
         sId,
         session: s,
+        code,
         primary: s.title,
         secondary: officialTitle(s) || (s.fullName && s.fullName !== s.title ? s.fullName : ""),
         haystack: [s.title, officialTitle(s), s.fullName, s.roomName, s.roomCode].filter(Boolean).join(" \u00b7 ").toLowerCase()
       });
-      // Talk-level entries
+      // Talk-level entries \u2014 also carry the session code/fullName so a code
+      // search surfaces the contributions inside that session too.
       for (const talk of (s.talks || [])) {
         out.push({
           kind: "talk",
           sId,
           session: s,
           talk,
+          code,
           primary: talk.title || "",
           secondary: talk.authors || "",
-          haystack: [talk.title, talk.authors, talk.presenter, s.title].filter(Boolean).join(" \u00b7 ").toLowerCase()
+          haystack: [talk.title, talk.authors, talk.presenter, s.title, s.fullName].filter(Boolean).join(" \u00b7 ").toLowerCase()
         });
       }
     }
@@ -1077,6 +1124,7 @@ function SessionSearch({ data, t, lang, onSelect }) {
     const query = q.trim().toLowerCase();
     if (!query) return [];
     const tokens = query.split(/\s+/).filter(Boolean);
+    const codeQuery = query.replace(/[\s-]+/g, ""); // "15 k" / "15-k" → "15k"
     const matches = [];
     for (const item of index) {
       let score = 0;
@@ -1088,10 +1136,20 @@ function SessionSearch({ data, t, lang, onSelect }) {
         score += 100 - Math.min(idx, 99);
         if (item.primary.toLowerCase().includes(tok)) score += 50;
       }
+      // Direct EasyChair-code hit ("15k", "21m") — strong boost so the matching
+      // session (and then its contributions) jumps to the top, even if the raw
+      // token scan was weak.
+      if (item.code && codeQuery && item.code === codeQuery) {
+        allMatch = true;
+        score += item.kind === "session" ? 1000 : 600;
+      } else if (item.code && codeQuery && codeQuery.length >= 2 && item.code.startsWith(codeQuery)) {
+        allMatch = true;
+        score += item.kind === "session" ? 400 : 250;
+      }
       if (allMatch) matches.push({ ...item, score });
     }
     matches.sort((a, b) => b.score - a.score);
-    return matches.slice(0, 8);
+    return matches.slice(0, 10);
   }, [q, index]);
 
   // Reset active when results change
@@ -1185,6 +1243,11 @@ function SessionSearch({ data, t, lang, onSelect }) {
           onFocus={() => setOpen(true)}
           onKeyDown={onKeyDown}
           aria-label={t.searchPlaceholder}
+          role="combobox"
+          aria-expanded={open && !!q.trim() && results.length > 0}
+          aria-controls="ss-listbox"
+          aria-autocomplete="list"
+          aria-activedescendant={open && results[activeIdx] ? `ss-opt-${activeIdx}` : undefined}
           autoComplete="off" />
         {q && (
           <button className="ss-clear" onClick={() => { setQ(""); inputRef.current?.focus(); }} aria-label="Clear">
@@ -1194,7 +1257,7 @@ function SessionSearch({ data, t, lang, onSelect }) {
         {!q && <span className="ss-shortcut" aria-hidden="true">{isMac ? "\u2318K" : "Ctrl K"}</span>}
       </div>
       {open && q.trim() && (
-        <div className="ss-dropdown" role="listbox">
+        <div className="ss-dropdown" role="listbox" id="ss-listbox">
           {results.length === 0 && <div className="ss-empty">{t.searchNoResults}</div>}
           {results.map((r, i) => {
             const typeColor = `var(--t-${r.session.type})`;
@@ -1202,6 +1265,7 @@ function SessionSearch({ data, t, lang, onSelect }) {
             return (
               <button
                 key={r.kind + "-" + i}
+                id={`ss-opt-${i}`}
                 role="option"
                 aria-selected={i === activeIdx}
                 className={`ss-result ${i === activeIdx ? "active" : ""}`}
@@ -1423,6 +1487,18 @@ function SessionModal({ session, t, lang, now, onClose, favorites, onToggleFavor
           </div>
         )}
 
+        {isSessionVideo(session) && (
+          <div className="sm-video-banner" role="note">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+              <path d="M3 6.5C3 5.67 3.67 5 4.5 5h10c.83 0 1.5.67 1.5 1.5v2l4-2.6c.5-.32 1.1.04 1.1.64v10.9c0 .6-.6.96-1.1.64L16 15.5v2c0 .83-.67 1.5-1.5 1.5h-10A1.5 1.5 0 0 1 3 17.5v-11z"/>
+            </svg>
+            <div>
+              <strong>{t.videoTitle}</strong>
+              <span>{t.videoDesc}</span>
+            </div>
+          </div>
+        )}
+
         <div className="sm-meta">
           <div className="sm-meta-row">
             <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"><circle cx="10" cy="10" r="7" /><path d="M10 6v4l2.5 2.5" /></svg>
@@ -1548,7 +1624,7 @@ function SessionModal({ session, t, lang, now, onClose, favorites, onToggleFavor
         {talks.length > 0 && (
           <div className="sm-talks">
             <div className="sm-section-label">
-              {talks.length} {lang === "es" ? (talks.length === 1 ? "ponencia" : "ponencias") : (talks.length === 1 ? "talk" : "talks")}
+              {talks.length} {lang === "es" ? (talks.length === 1 ? "contribución" : "contribuciones") : (talks.length === 1 ? "contribution" : "contributions")}
               {talks.some(tk => tk.abstract || tk.keywords) && (
                 <span className="sm-section-hint">
                   · {lang === "es" ? "Pulsa para ver el resumen" : "Click for the abstract"}
@@ -1558,7 +1634,8 @@ function SessionModal({ session, t, lang, now, onClose, favorites, onToggleFavor
             <ol className="sm-talks-list">
               {talks.map((talk, i) => {
                 const hasDetail = !!(talk.abstract && talk.abstract.trim()) ||
-                                  !!(talk.keywords && talk.keywords.trim());
+                                  !!(talk.keywords && talk.keywords.trim()) ||
+                                  !!(talk.video && talk.videoUrl);
                 const isOpen = expandedTalk === i;
                 const keywords = (talk.keywords || "")
                   .split(/[,;]/).map(k => k.trim()).filter(Boolean);
@@ -1590,6 +1667,14 @@ function SessionModal({ session, t, lang, now, onClose, favorites, onToggleFavor
                               {t.online}
                             </span>
                           )}
+                          {talk.video && (
+                            <span className="sm-talk-video" title={t.videoTitle}>
+                              <svg viewBox="0 0 16 16" width="9" height="9" fill="currentColor" aria-hidden="true">
+                                <path d="M2 4.5C2 3.67 2.67 3 3.5 3h6c.83 0 1.5.67 1.5 1.5v1.2l2.6-1.7c.4-.26.9.03.9.5v6.9c0 .47-.5.76-.9.5L11 10.3v1.2c0 .83-.67 1.5-1.5 1.5h-6A1.5 1.5 0 0 1 2 11.5v-7z"/>
+                              </svg>
+                              {t.videoTalk}
+                            </span>
+                          )}
                           {hasDetail && (
                             <span className="sm-talk-chev" aria-hidden="true">
                               {isOpen ? "▾" : "▸"}
@@ -1611,6 +1696,14 @@ function SessionModal({ session, t, lang, now, onClose, favorites, onToggleFavor
                     </div>
                     {isOpen && hasDetail && (
                       <div className="sm-talk-detail">
+                        {talk.video && talk.videoUrl && (
+                          <a className="sm-talk-video-link" href={safeURL(talk.videoUrl)} target="_blank" rel="noopener noreferrer">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+                              <path d="M3 6.5C3 5.67 3.67 5 4.5 5h10c.83 0 1.5.67 1.5 1.5v2l4-2.6c.5-.32 1.1.04 1.1.64v10.9c0 .6-.6.96-1.1.64L16 15.5v2c0 .83-.67 1.5-1.5 1.5h-10A1.5 1.5 0 0 1 3 17.5v-11z"/>
+                            </svg>
+                            <span>{t.watchVideo}</span>
+                          </a>
+                        )}
                         {talk.abstract && (
                           <div className="sm-talk-abstract">
                             <div className="sm-detail-label">{t.abstract}</div>

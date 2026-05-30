@@ -1302,6 +1302,12 @@ function SessionEditor({ session, isNew, rooms, clusters, days, onSave, onCancel
           };
           // Only include the online flag when truthy, to keep the JSON tidy.
           if (t.online) out.online = true;
+          // Pre-recorded video flag + optional link (kept tidy: only when set).
+          if (t.video) {
+            out.video = true;
+            const vu = (t.videoUrl || "").trim();
+            if (vu) out.videoUrl = vu;
+          }
           return out;
         })
     };
@@ -1433,7 +1439,7 @@ function TalksEditor({ talks, onChange }) {
   const add = () =>
     onChange([
       ...talks,
-      { time: "", title: "", authors: "", presenter: "", abstract: "", keywords: "", online: false }
+      { time: "", title: "", authors: "", presenter: "", abstract: "", keywords: "", online: false, video: false, videoUrl: "" }
     ]);
   const remove = (i) => onChange(talks.filter((_, idx) => idx !== i));
   const move = (i, dir) => {
@@ -1470,7 +1476,7 @@ function TalksEditor({ talks, onChange }) {
         const isOpen = expanded.has(i);
         const hasDetail = (t.abstract || "").trim().length > 0 || (t.keywords || "").trim().length > 0;
         return (
-          <div className={`talk-row ${isOpen ? "is-open" : ""} ${t.online ? "is-online" : ""}`} key={i}>
+          <div className={`talk-row ${isOpen ? "is-open" : ""} ${t.online ? "is-online" : ""} ${t.video ? "is-video" : ""}`} key={i}>
             <div className="talk-controls">
               <button type="button" onClick={() => move(i, -1)} disabled={i === 0} title="Subir">↑</button>
               <button type="button" onClick={() => move(i, 1)} disabled={i === talks.length - 1} title="Bajar">↓</button>
@@ -1485,6 +1491,17 @@ function TalksEditor({ talks, onChange }) {
                   onChange={(e) => update(i, { online: e.target.checked })}
                 />
                 <span aria-hidden="true">🌐</span>
+              </label>
+              <label
+                className={`talk-video-toggle ${t.video ? "is-on" : ""}`}
+                title={t.video ? "Vídeo pregrabado — pulsa para quitar" : "Marcar como vídeo pregrabado"}
+              >
+                <input
+                  type="checkbox"
+                  checked={!!t.video}
+                  onChange={(e) => update(i, { video: e.target.checked })}
+                />
+                <span aria-hidden="true">🎬</span>
               </label>
             </div>
             <div className="talk-fields">
@@ -1516,6 +1533,15 @@ function TalksEditor({ talks, onChange }) {
                 onChange={(e) => update(i, { presenter: e.target.value })}
                 className="talk-presenter"
               />
+              {t.video && (
+                <input
+                  type="url"
+                  placeholder="Enlace al vídeo (YouTube) — se reproduce en su franja"
+                  value={t.videoUrl || ""}
+                  onChange={(e) => update(i, { videoUrl: e.target.value })}
+                  className="talk-videourl"
+                />
+              )}
 
               <button
                 type="button"

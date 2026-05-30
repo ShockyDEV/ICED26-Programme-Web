@@ -13,6 +13,11 @@
   --youtube:      #C4302B;
   --youtube-deep: #9B2620;
   --youtube-soft: #FBE3E1;
+  /* Pre-recorded video channel (purple — distinct from teal ONLINE +
+     red STREAM so the three remote modes read apart at a glance). */
+  --video:        #7C5CBF;
+  --video-deep:   #5E43A0;
+  --video-soft:   #EBE3FA;
   --cream:       #F7F2EA;
   --cream-deep:  #EFE6D6;
   --paper:       #FDFBF7;
@@ -29,7 +34,7 @@
   --t-poster:        #B58FAE;  /* dusty purple */
   --t-collaborative: #7CA982;  /* sage */
   --t-talk:          #C66B5A;  /* warm red */
-  --t-doctoral:      #5C7E9C;  /* slate */
+  --t-doctoral:      #3E8E5A;  /* green (distinct from sage collaborative) */
   --t-social:        #C188A5;  /* mauve */
   --t-meeting:       #8A827C;  /* grey */
   --t-break:         #B0A89E;  /* warm grey */
@@ -47,7 +52,7 @@
 }
 
 * { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; }
+html, body { margin: 0; padding: 0; background: var(--cream); }
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   background: var(--cream);
@@ -55,6 +60,12 @@ body {
   font-size: 15px;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  /* Render the whole UI 25% larger by default — i.e. what used to need browser
+     zoom 125% is now the baseline. `zoom` (unlike transform:scale) keeps normal
+     flow + sticky/fixed behaviour, and because it shrinks the body's CSS-px
+     width by the same factor, the centered max-width containers still fit the
+     viewport (no reintroduced gutter). Tunable via --ui-zoom. */
+  zoom: var(--ui-zoom, 1.25);
 }
 h1,h2,h3,h4 { font-family: 'Fraunces', Georgia, serif; font-weight: 600; letter-spacing: -0.01em; margin: 0; }
 
@@ -869,7 +880,7 @@ a { color: inherit; }
 .cell .c-foot { margin-top: auto; }
 /* Official/theme title — secondary line under the generic section name. */
 .cell .c-official {
-  font-size: 10.5px; font-weight: 500;
+  font-size: 11.5px; font-weight: 500;
   line-height: 1.2;
   color: var(--teal-deep);
   margin: 0 0 2px;
@@ -1117,6 +1128,24 @@ a { color: inherit; }
 }
 .stream-badge svg { flex-shrink: 0; }
 
+/* "Video" badge — purple counterpart. Marks sessions with one or more
+   pre-recorded video presentations. */
+.video-badge {
+  background: var(--video);
+  color: var(--paper);
+  font-size: 8.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 2px 5px;
+  border-radius: 3px;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+.video-badge svg { flex-shrink: 0; }
+
 /* Cells with an online presenter get a dashed top border on the
    type-color stripe — keeps the type signal but adds an extra cue. */
 .cell.is-online-presenter {
@@ -1317,7 +1346,7 @@ a { color: inherit; }
   font-weight: 600;
 }
 .mobile-cell .m-title { font-size: 14px; font-weight: 600; margin: 4px 0 2px; }
-.mobile-cell .m-official { font-size: 12.5px; font-weight: 500; color: var(--teal-deep); line-height: 1.25; margin: 0 0 3px; }
+.mobile-cell .m-official { font-size: 13.5px; font-weight: 500; color: var(--teal-deep); line-height: 1.25; margin: 0 0 3px; }
 .mobile-cell .m-meta { font-size: 12px; color: var(--ink-soft); }
 .mobile-cell.is-past { opacity: 0.6; background: var(--cream-deep); }
 .mobile-cell.is-live { border-color: var(--coral); box-shadow: 0 0 0 2px rgba(232,150,105,0.25); }
@@ -1654,7 +1683,7 @@ a { color: inherit; }
 .sm-official {
   margin-top: 7px;
   font-family: 'Fraunces', Georgia, serif;
-  font-size: 16px; font-weight: 500;
+  font-size: 17px; font-weight: 500;
   line-height: 1.3;
   color: var(--teal-deep);
   text-wrap: pretty;
@@ -2071,6 +2100,39 @@ a { color: inherit; }
   vertical-align: 2px;
   white-space: nowrap;
 }
+/* Per-talk pre-recorded video pill — purple counterpart of .sm-talk-online. */
+.sm-talk-video {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  margin-left: 8px;
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--paper);
+  background: var(--video);
+  padding: 2px 6px;
+  border-radius: 3px;
+  vertical-align: 2px;
+  white-space: nowrap;
+}
+/* "Watch video" CTA inside an expanded talk's detail panel. */
+.sm-talk-video-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 10px;
+  padding: 7px 12px;
+  background: var(--video);
+  color: var(--paper);
+  font-size: 12.5px;
+  font-weight: 600;
+  border-radius: 7px;
+  text-decoration: none;
+}
+.sm-talk-video-link:hover { background: var(--video-deep); }
+.sm-talk-video-link svg { flex-shrink: 0; }
+
 .sm-talk.is-open .sm-talk-chev {
   transform: rotate(0deg);
 }
@@ -2317,7 +2379,7 @@ a { color: inherit; }
   color: var(--ink-mute);
 }
 .agenda-item-body { flex: 1; min-width: 0; }
-.agenda-item-official { font-size: 12.5px; font-weight: 500; color: var(--teal-deep); line-height: 1.3; margin: 1px 0 3px; }
+.agenda-item-official { font-size: 13.5px; font-weight: 500; color: var(--teal-deep); line-height: 1.3; margin: 1px 0 3px; }
 .agenda-item-title {
   font-size: 14px;
   font-weight: 600;
