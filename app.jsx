@@ -134,6 +134,13 @@ function effectiveYouTube(s, data) {
   }
   return "";
 }
+// True for session types streamed on YouTube (keynotes + ICED talks). Used to
+// show the STREAM badge/banner even before the livestream URL is published — so
+// attendees know these sessions WILL be broadcast. The actual link stays gated
+// (greyed "Watch on YouTube" button until the room is opened).
+function isStreamed(s) {
+  return !!s && (s.type === "keynote" || s.type === "talk");
+}
 // Meet/YouTube buttons stay locked (greyed, not clickable) until the session's
 // room is switched Active in the backstage. Closed by default before the congress.
 function roomLinksActive(s, data) {
@@ -925,7 +932,7 @@ function Grid({ data, dayIdx, buildingId, now, liveStyle, lang, t, onSessionClic
                           {t.online}
                         </span>
                       )}
-                      {!!effectiveYouTube(s, data) && (
+                      {isStreamed(s) && (
                         <span className="stream-badge" title={t.streamingTitle}>
                           <svg viewBox="0 0 16 16" width="9" height="9" fill="currentColor" aria-hidden="true">
                             <path d="M3 3.2c0-.66.54-1.2 1.2-1.2h7.6c.66 0 1.2.54 1.2 1.2v9.6c0 .66-.54 1.2-1.2 1.2H4.2A1.2 1.2 0 0 1 3 12.8V3.2zM6.6 5v6l4.4-3-4.4-3z"/>
@@ -1058,7 +1065,7 @@ function MobileList({ data, dayIdx, buildingId, now, lang, t, onSessionClick, fa
                     {isSessionOnline(s) && (
                       <span className="online-chip-inline" title={t.onlinePresenterTitle}>🌐 {t.online}</span>
                     )}
-                    {!!effectiveYouTube(s, data) && (
+                    {isStreamed(s) && (
                       <span className="stream-chip-inline" title={t.streamingTitle}>▶ {t.streaming}</span>
                     )}
                     {isSessionVideo(s) && (
@@ -1525,7 +1532,7 @@ function SessionModal({ session, t, lang, now, onClose, favorites, onToggleFavor
           </div>
         )}
 
-        {!!effectiveYouTube(session, data) && (
+        {isStreamed(session) && (
           <div className="sm-stream-banner" role="note">
             <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
               <path d="M4 5.5C4 4.67 4.67 4 5.5 4h13c.83 0 1.5.67 1.5 1.5v13c0 .83-.67 1.5-1.5 1.5h-13C4.67 20 4 19.33 4 18.5v-13zM10 8v8l6-4-6-4z"/>
