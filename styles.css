@@ -794,6 +794,13 @@ a { color: inherit; }
   position: relative;
   top: -7px;
 }
+/* The first tick has no gridline above it to straddle, and lifting it -7px
+   pushes it under the sticky header background where it gets clipped. Pin it
+   to the row top so the whole 09:00 (etc.) is always fully visible. */
+.time-tick:first-child {
+  top: 0;
+  border-top-color: transparent;
+}
 .time-tick.half { color: transparent; border-top-style: dotted; }
 .time-tick.half::before {
   content: attr(data-time);
