@@ -172,21 +172,6 @@ window.ICED26_DATA = {
       "cluster": "iddi",
       "code": "11.3",
       "active": false
-    },
-    {
-      "id": "seminario-12-1",
-      "name": "Seminario 12.1",
-      "cluster": "iddi",
-      "code": "12.1",
-      "active": false
-    },
-    {
-      "id": "salon-del-arzobispo",
-      "name": "Salón del Arzobispo",
-      "cluster": "colegio",
-      "code": "SALÓN ",
-      "meet": "",
-      "active": false
     }
   ],
   "sessions": [
@@ -6618,7 +6603,7 @@ window.ICED26_DATA = {
       "cluster": "hospederia",
       "title": "REDU and ICED Presidents' Talk",
       "fullName": "Session 22: REDU and ICED Presidents' Talk",
-      "type": "other",
+      "type": "keynote",
       "meet": "",
       "talks": [],
       "easychair_session_id": "105689"
@@ -6633,7 +6618,7 @@ window.ICED26_DATA = {
       "cluster": "hospederia",
       "title": "Closing Remarks",
       "fullName": "Session 23: Closing Remarks",
-      "type": "other",
+      "type": "keynote",
       "meet": "",
       "talks": [],
       "easychair_session_id": "105690"

@@ -64,7 +64,7 @@ function detectType(title) {
   const t = title.toLowerCase();
   if (/coffee break|lunch break|\bbreak\b/.test(t)) return "break";
   if (/welcome reception|reception|gala|conference dinner/.test(t)) return "social";
-  if (/closing ceremony|opening ceremony|keynote|panel|plenary/.test(t)) return "keynote";
+  if (/closing ceremony|closing remarks|opening ceremony|keynote|panel|plenary|presidents?.? talk/.test(t)) return "keynote";
   if (/welcome and instructions/.test(t)) return "keynote";
   if (/posters?\b/.test(t)) return "poster";
   if (/workshop/.test(t)) return "workshop";

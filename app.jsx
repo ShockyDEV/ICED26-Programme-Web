@@ -1499,21 +1499,38 @@ function SessionModal({ session, t, lang, now, onClose, favorites, onToggleFavor
             const arrow = <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"><path d="M7 13l6-6M9 7h4v4" /></svg>;
             const lock = <svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="4" y="9" width="12" height="8.5" rx="1.5" /><path d="M6.5 9V6.5a3.5 3.5 0 0 1 7 0V9" /></svg>;
             const meetLabel = lang === "es" ? "Enlace a Meet" : "Join Meet";
+            // Remote-access channel depends on the session type:
+            //  • keynote / talk      → YouTube live (recorded + streamed)
+            //  • workshop            → no remote access at all (in-person)
+            //  • break/social/other  → not a content session, no remote row
+            //  • everything else (paper, symposium, collaborative, poster,
+            //    doctoral)           → Google Meet
+            const isStreamType = session.type === "keynote" || session.type === "talk";
+            const noRemoteType = session.type === "workshop";
+            const noRowType = session.type === "break" || session.type === "social" || session.type === "other";
+            const showMeet = !isStreamType && !noRemoteType && !noRowType;
+            const meetLive = session.meet && linksActive;
+            const ytLive = yt && linksActive;
             return (
               <>
-                {session.meet && (linksActive
+                {/* Meet — a real link only when the room is Active AND a link is
+                    set; otherwise a greyed placeholder ("opens on the day"). */}
+                {showMeet && (meetLive
                   ? <a href={safeURL(session.meet)} target="_blank" rel="noopener noreferrer" className="sm-meet-btn">{meetIcon}<span>{meetLabel}</span>{arrow}</a>
                   : <span className="sm-meet-btn is-locked" title={t.linksClosed} aria-disabled="true">{meetIcon}<span>{meetLabel}</span>{lock}</span>
                 )}
-                {yt && (linksActive
+                {/* YouTube live — keynotes + ICED talks. Greyed until published. */}
+                {isStreamType && (ytLive
                   ? <a href={safeURL(yt)} target="_blank" rel="noopener noreferrer" className="sm-youtube-btn">{ytIcon}<span>{t.watchOnYouTube}</span>{arrow}</a>
                   : <span className="sm-youtube-btn is-locked" title={t.linksClosed} aria-disabled="true">{ytIcon}<span>{t.watchOnYouTube}</span>{lock}</span>
                 )}
-                {!linksActive && (session.meet || yt) && (
-                  <span className="sm-locked-note muted">{t.linksClosed}</span>
+                {/* Workshops are the only sessions with no remote access. */}
+                {noRemoteType && (
+                  <span className="sm-no-meet muted">{lang === "es" ? "Sin acceso remoto" : "No remote access"}</span>
                 )}
-                {!session.meet && !yt && (
-                  <span className="sm-no-meet muted">{lang === "es" ? "Sin enlace de conexión" : "No remote access"}</span>
+                {/* Note shown when a real link exists but the room is still closed. */}
+                {!linksActive && ((showMeet && session.meet) || (isStreamType && yt)) && (
+                  <span className="sm-locked-note muted">{t.linksClosed}</span>
                 )}
               </>
             );
