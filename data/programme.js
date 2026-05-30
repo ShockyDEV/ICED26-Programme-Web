@@ -964,7 +964,6 @@ window.ICED26_DATA = {
       ],
       "easychair_session_id": "104810",
       "description": "Developing Trust, Care and Collegiality",
-      "onlinePresenter": true,
       "chair": "Elena Quevedo Torrientes"
     },
     {
@@ -996,7 +995,8 @@ window.ICED26_DATA = {
           "authors": "Wei Yan, Ajay Dhruv, Vijal Jain",
           "presenter": "Wei Yan",
           "abstract": "This paper presents a curriculum redesign project that reimagines an undergraduate Artificial Intelligence (AI) course at a Canadian university through the combined lenses of Critical Digital Pedagogy (CDP) and Students-as-Partners (SaP). As generative AI (GenAI) tools such as GPT variants, DeepSeek, and Grok 3 increasingly shape how students learn and produce knowledge, higher education faces an urgent need to develop ethically grounded, participatory approaches to AI education. Traditional AI courses remain technocentric, emphasizing algorithms and coding while overlooking the sociotechnical and political dimensions of AI systems. At the same time, AI literacy research highlights the importance of reflective, ethical, and critical competencies, yet these are rarely implemented in undergraduate curricula. Grounded in CDP, the redesigned course treats AI tools not as neutral technologies but as political and value-laden systems requiring critical interrogation. Students investigate model behaviour, bias, and data assumptions through hands-on experimentation, treating GenAI as both a tool and an object of inquiry. Using SaP as a methodological framework, students act as co-designers of ethical guidelines, learning activities, and case studies. This approach foregrounds agency, reciprocity, and shared responsibility in shaping the curriculum. Preliminary findings indicate that students develop heightened ethical awareness, deeper engagement, and an expanded understanding of AI as a sociotechnical system. The project demonstrates how combining CDP and SaP can meaningfully transform AI curriculum, empower learners as critical agents, and contribute to institutional conversations about responsible AI integration in higher education.",
-          "keywords": ""
+          "keywords": "",
+          "online": true
         },
         {
           "easychair_id": "311825",
@@ -1027,8 +1027,7 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104806",
-      "description": "Teaching with AI, Digital Simulation Skills and Responsible Innovation",
-      "onlinePresenter": true,
+      "description": "Teaching with AI, Digital Simulation Skills and Responsible Integration",
       "chair": "Bernhard Lange"
     },
     {
@@ -1083,7 +1082,6 @@ window.ICED26_DATA = {
       ],
       "easychair_session_id": "106947",
       "description": "Enhancing Teaching through Collaborative and Research-Based Approaches",
-      "onlinePresenter": true,
       "chair": "Robert Pardo"
     },
     {
@@ -1147,7 +1145,6 @@ window.ICED26_DATA = {
       ],
       "easychair_session_id": "104805",
       "description": "Educational Developers' Roles, TLC's Roles and AD Leadership",
-      "onlinePresenter": true,
       "chair": "Björn Kjellgren"
     },
     {
@@ -1925,7 +1922,7 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "106466",
-      "description": "Agency, Identity and Professional Learning",
+      "description": "Developing Agency in Teaching and Learning Communities",
       "chair": "Helga Dorner"
     },
     {
@@ -2761,7 +2758,7 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104864",
-      "description": "Student Agency, Belonging and Support",
+      "description": "Fostering Student Engagement, Belonging and Success",
       "chair": "Sabrina Gallner"
     },
     {
@@ -2922,17 +2919,8 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "314318",
-          "time": "09:30",
-          "title": "Department-Driven Educational Development: Insights from Campus Listening Tours",
-          "authors": "Matthew Mahavongtrakul",
-          "presenter": "",
-          "abstract": "Universities increasingly recognize that effective educational development requires moving beyond one-size-fits-all approaches to address the diverse pedagogical needs of academic disciplines. We present a case study from the XXXX’s [CTL], which conducted a series of departmental listening tours across nearly twenty academic units to better understand localized teaching challenges and support needs. We provided a semi-structured mechanism through which departments engaged directly with educational developers to articulate various priorities such as artificial intelligence, large class instruction, instructional technology, peer evaluation of teaching, and accessibility.\n\nThe resulting insights shaped a strategic shift toward department-centered faculty development, including the launch of new discipline-specific programming, expanded resource hubs, cross-campus collaborations, and low-to-high-touch initiatives such as the Peer Alliance for Classroom Excellence (PACE) which focuses on faculty community building and peer observation. We share the methods used in the listening tours, key thematic findings, and implications for academic developers seeking to deepen relationships with departments, highlighting our case as a collaborative model for change agency. Attendees will gain a practical framework for employing listening-driven approaches that foster departmental agency, align development initiatives with curricular design, and strengthen partnerships across campus.",
-          "keywords": ""
-        },
-        {
           "easychair_id": "311957",
-          "time": "09:45",
+          "time": "09:30",
           "title": "“I used to think…, now I think…”: Capturing conceptual change in novice university teachers’ beliefs",
           "authors": "Sara Petchey",
           "presenter": "",
@@ -2941,17 +2929,26 @@ window.ICED26_DATA = {
         },
         {
           "easychair_id": "311889",
-          "time": "10:00",
+          "time": "09:45",
           "title": "Rethinking support for novice academics: Evidence-informed principles for lasting change",
           "authors": "Aitor Mendia-Urrutia, Nekane Beloki, Cristina Arriaga, Karmele Arteaga",
           "presenter": "Aitor Mendia-Urrutia",
           "abstract": "Supporting novice academics has become an institutional priority amid generational transitions and growing expectations for research-informed university teaching. This paper examines how higher education institutions can design effective academic development. Drawing on findings from a qualitative case study at a large European university, the contribution synthesises perspectives from early-career academics and members of the institutional development unit to identify what makes support meaningful, transferable, and legitimate. Results highlight the importance of aligning formal training with disciplinary realities, fostering informal and collegial networks, and developing coherent, long-term pathways instead of isolated training activities. Crucially, the study shows that institutional culture and local leadership shape whether novice academics perceive development as valuable. Based on these insights, the paper proposes ten evidence‑informed principles to strengthen institutional support strategies, emphasising contextualisation, cultural change, credible guidance, and opportunities for collaborative learning. These principles offer universities a research‑informed foundation for enhancing academic development practices and responding to emerging policy requirements for novice academic training.",
           "keywords": ""
+        },
+        {
+          "easychair_id": "314318",
+          "time": "10:00",
+          "title": "Department-Driven Educational Development: Insights from Campus Listening Tours",
+          "authors": "Matthew Mahavongtrakul",
+          "presenter": "",
+          "abstract": "Universities increasingly recognize that effective educational development requires moving beyond one-size-fits-all approaches to address the diverse pedagogical needs of academic disciplines. We present a case study from the XXXX’s [CTL], which conducted a series of departmental listening tours across nearly twenty academic units to better understand localized teaching challenges and support needs. We provided a semi-structured mechanism through which departments engaged directly with educational developers to articulate various priorities such as artificial intelligence, large class instruction, instructional technology, peer evaluation of teaching, and accessibility.\n\nThe resulting insights shaped a strategic shift toward department-centered faculty development, including the launch of new discipline-specific programming, expanded resource hubs, cross-campus collaborations, and low-to-high-touch initiatives such as the Peer Alliance for Classroom Excellence (PACE) which focuses on faculty community building and peer observation. We share the methods used in the listening tours, key thematic findings, and implications for academic developers seeking to deepen relationships with departments, highlighting our case as a collaborative model for change agency. Attendees will gain a practical framework for employing listening-driven approaches that foster departmental agency, align development initiatives with curricular design, and strengthen partnerships across campus.",
+          "keywords": "",
+          "online": true
         }
       ],
       "easychair_session_id": "104859",
       "description": "Novice Teachers, Academic Induction and Conceptual Change",
-      "onlinePresenter": true,
       "chair": "Iwona Maciejowska"
     },
     {
@@ -2974,7 +2971,8 @@ window.ICED26_DATA = {
           "authors": "Ángela Marcela Ríos Delgado",
           "presenter": "",
           "abstract": "Higher education has undergone transformations that require new skills from teachers, including evidence-based pedagogical decision-making and the development of epistemic agency that allows them to act with professional judgment. This paper, based on a documentary review, analyzes conceptual and empirical frameworks that allow us to understand the relationship between evidence-informed educational practice (EIP), teacher epistemic agency, research skills, and knowledge mobilization (KMb). The review shows that, although these approaches have been widely developed in European contexts, there are still few studies that address their articulation in Latin America. Furthermore, even in systems where EIP has made more progress, gaps between theory and its application in teaching persist. The findings indicate that EIP is an interpretive and situated process, whose appropriation depends both on the capacities of teachers and on the organizational conditions that allow for the critical use of evidence. These elements justify moving towards training models that integrate professional reflection, the use of evidence, and research skills to strengthen university teaching practice.",
-          "keywords": ""
+          "keywords": "",
+          "online": true
         },
         {
           "easychair_id": "311835",
@@ -2992,7 +2990,8 @@ window.ICED26_DATA = {
           "authors": "Rana Challah, Aurélie Leborgne, Antoine Vacavant",
           "presenter": "Rana Challah",
           "abstract": "Aim: This presentation appraises the development of student agency through the prism of two articulated theoretical and methodological approaches: Design-Based Research (DBR) and Experience-Based Learning (EBL). Whilst receiving individual attention in the research literature, few studies have investigated the combined benefits, or otherwise, of these approaches. More precisely, this study has two specific objectives: (1) to investigate the expectation of IT learners prior to taking internship and compare it with their perception after taking the internship and (2) to explore the evolution of learners’ experience using both collective intelligence and AI to assess their competence acquisition. Theoretical Framework: Guided by the agentic engagement theory and Matusov et al. (2016) four conceptual frameworks of approaching student agency in educational studies, we propose the following research question: How do higher education learners manifest agency using both collective intelligence and AI-assisted learning environments? Methodology: This study combines qualitative and quantitative research methods to further our understanding of the evolution of agency. Findings: The findings suggest that the combination of DBR and EBL, enhanced by AI, complement each other to help embrace both student and teacher agency. Implications: This study highlights the importance for institutions to implement training programmes to help both teachers and staff to foster better use of AI in course design. Universities should issue AI policies to help faculty make informed decisions about how AI is introduced and used in teaching and assessment to foster student engagement and agency.",
-          "keywords": ""
+          "keywords": "",
+          "online": true
         },
         {
           "easychair_id": "314320",
@@ -3014,8 +3013,7 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104860",
-      "description": "Epistemic Agency, Research Engagement and Scholarly Teaching",
-      "onlinePresenter": true,
+      "description": "Epistemic Agency, Engaging in Research and Scholarly Teaching",
       "chair": "Robert Eaton"
     },
     {
@@ -3056,7 +3054,8 @@ window.ICED26_DATA = {
           "authors": "Ghada Challah",
           "presenter": "",
           "abstract": "This paper focuses on the results of our dissertation on PhD supervision in Education and Training Sciences in France. Many research tackled the quality of PhD supervisor-supervisee relationship, challenges and factors affecting PhD student success. While other studies focus on the doctoral process as a ritual and consider it as a component of PhD student socialization, few ones focus on how PhD students, coming from different professional paths are active learners, engaged to construct their success. This study focuses on how different supervision practices foster PhD student agency and success. Fifteen interviews were carried out with supervisors specialized in Education and Training Sciences in 3 doctoral schools to answer the following questions: 1) How do supervisors conceive supervision ?; 2) What are the practices that foster PhD student agency?; 3) What are the main contextual and/or professional factors that enable PhD student agency ? A survey questionnaire was also conducted to PhD students (N=128) in 4 doctoral schools, in France, to detect what makes student embark on a PhD. Findings reveal five supervision conceptions, three PhD students’ profile and different practices to foster doctoral students agency. Supervisors and PhD students consider that doctoral schools are invited to go beyond actual practices to foster PhD students’ agency in terms of training. Last but not least, integrating PhD students in research with supervisors within their doctoral school or in partnership with other doctoral schools could be an important practice to foster PhD students’ agency.",
-          "keywords": ""
+          "keywords": "",
+          "online": true
         },
         {
           "easychair_id": "311971",
@@ -3074,12 +3073,12 @@ window.ICED26_DATA = {
           "authors": "Giovanna Valentino, Carolina Aguirre, Isidora López, Javier Oyarzún, Daniela Avello, Alejandra Parada",
           "presenter": "Giovanna Valentino",
           "abstract": "Aim: To describe the perceptions of Nutrition students and instructors regarding skills related to scientific writing and the use of Artificial Intelligence (AI) and evaluate the accuracy of detection tools. Methods: A mixed-methods study was conducted. First, two focus groups (9 students and 9 instructors), selected through convenience sampling and moderated by an external researcher, were conducted. Second, 50 original abstracts (published in a Chilean scientific journal during 2019) and a similar 50 AI-generated abstracts were analyzed using GPTZero Premium and by nutrition instructors. Transcriptions of focus groups were analyzed through thematic analysis, using NVivo, and ROC curves were built to determine the accuracy of AI-use detection of instructors and GPTZero in different scenarios. Findings: Qualitative findings highlighted the need for clear guidance on AI use, particularly regarding transparency, ethics, and academic integrity. Students mainly described AI as a practical aid for writing tasks, whereas instructors were more cautious and questioned its contribution to critical and reflective thinking. In the quantitative analysis, GPTZero detected with 100% accuracy AI-generated texts (sensitivity=1.00), whereas 4% of original texts were classified as AI-generated (“False Positives”, specificity=0.96) with an AUC of 0.98 (95% CI: 0.95-1.00). Instructors had lower accuracy in detecting AI-generated texts (AUC=0.54; 0.44-0.64, p<0.001) than GPTZero. Significance: The central theme regarding AI use in scientific writing centers on guidelines related to academic integrity, whereas instructors cannot accurately detect AI-misuse. AI-detection tools might be only useful when policies completely restrict AI use, highlighting the need to develop clear policies and frameworks for its use.",
-          "keywords": ""
+          "keywords": "",
+          "online": true
         }
       ],
       "easychair_session_id": "104858",
       "description": "PhD Student Agency, Doctoral Supervision, writing SoTL",
-      "onlinePresenter": true,
       "chair": "Kunihiko Takamatsu"
     },
     {
@@ -3111,7 +3110,8 @@ window.ICED26_DATA = {
           "authors": "Conor West",
           "presenter": "",
           "abstract": "This proposed collaborative space aims to demonstrate how reflection and innovation drive advancements in teaching, learning, and institutional practices by exploring arts-based professional development to enhance wellbeing and resilience in tertiary education. It will explore the use of art therapy to support and develop educators in response to the poor psychological outcomes and high attrition rates experienced by this group. Attendees will be invited to create their own reflective response artwork during the workshop using materials provided, offering a unique and immersive conference experience. First, literature demonstrating the individual and contextual stress factors that contribute to burnout and attrition in tertiary education, establishing the need for therapeutic support and development of educators. A brief examination of neuro principles from emerging research will establish the case for arts-based interventions to supplement existing wellbeing initiatives, before explorations of current and future directions are outlined and experienced. Attendees will participate in active reflection using their artworks to discuss specific applications in attendees’ educational settings, gather feedback around arts-based application in tertiary education and explore potential partnerships. Attendees will take away practical arts-based activities suitable to tertiary settings that may be applied to academic development and practice to enhance wellbeing and resilience amongst academic developers, teaching staff and their students as a non-traditional form of co-created learning.",
-          "keywords": ""
+          "keywords": "",
+          "online": true
         },
         {
           "easychair_id": "311943",
@@ -3142,8 +3142,7 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104857",
-      "description": "Wellbeing, Belonging and Mindfulness in Academic Development",
-      "onlinePresenter": true,
+      "description": "Wellbeing, Care, Belonging and Commitment in Academic Development",
       "chair": "Iris Capdevila"
     },
     {
@@ -3175,7 +3174,8 @@ window.ICED26_DATA = {
           "authors": "Rosanne Quinnell, Melinda J Lewis, Elizabeth Seeley-Wait",
           "presenter": "Rosanne Quinnell",
           "abstract": "Recent workplace trends in Australian Higher Education have seen shifts that are impacting the nature and status of academic work. Most recently there has been the emergence of disciplinary ‘education-focused’ positions, which can attract up to 80% time allocation to teaching and associated activities. The argument supporting the implementation of ‘education-focused’ positions lies in universities intending to champion the value of “education” to the same degree as “research”. In addition to carrying elevated face-to-face contact, those in education-focused roles are expected to be leaders of scholarly initiatives and research in the Scholarship of Learning and Teaching. Considering these positions are mostly offered at junior levels, we wonder at the level of agency of those in these positions. Juxtaposed with our assessment of the recent “education-focused” position implementation, and catalysed by the call to understand the long-term impacts of academic development programs (Chalmers & Gardiner, 2015; Wright et al., 2025), we undertook a reflective dialogic approach to the surface ways formal tertiary education qualifications, including those offered by central academic development units, have proved valuable to our individual career trajectories and to enhancing student learning within our respective disciplines.",
-          "keywords": ""
+          "keywords": "",
+          "video": true
         },
         {
           "easychair_id": "311910",
@@ -3184,7 +3184,8 @@ window.ICED26_DATA = {
           "authors": "Giorgia Pasquali, Giovanna Del Gobbo, Kiruthika Ragupathi",
           "presenter": "Giorgia Pasquali",
           "abstract": "Evaluating the impact of Academic Development actions is now a crucial but methodologically fragmented area within Teaching and Learning Centres (TLCs). We present the results and interpretations of a systematic review of the literature aimed at mapping models, methodologies and tools used in Academic Development, highlighting their critical issues and potential. Our review is based on a solid theoretical framework that integrates classical approaches to evaluation with contemporary perspectives on continuous improvement and organisational learning. The methodology we adopted follows the PRISMA criteria and explores studies published between 2020 and 2025 in international databases (EBSCO, ERIC, Scopus, Google Scholar) and in specialist journals in the field. Our findings highlight a growing shift from accountability approaches to a systemic and reflective view of evaluation, where evaluation in itself becomes a process of reflection for continuous improvement. Current evaluation practices remain largely focused on outputs and perceptions, with limited attention to policy and governance, organisational structure and capacities of TLCs, programme design, training course and activities and institutional culture. This contribution offers a multi-level model that links policy, structures, planning and training activities, and outlines operational implications and future research directions for developing integrated, adaptive and longitudinal evaluation models.",
-          "keywords": ""
+          "keywords": "",
+          "online": true
         },
         {
           "easychair_id": "311965",
@@ -3202,12 +3203,12 @@ window.ICED26_DATA = {
           "authors": "Monica Vesely, Hannah Celinski",
           "presenter": "Monica Vesely",
           "abstract": "Our session will share emerging themes from our qualitative study on the impact of the Facilitator Development Workshop (FDW) on instructor development through the lens of the signature pedagogical approaches embedded in the FDW; namely the high impact nature of: (a) peer-based development, (b) learner-focused instruction, (c) experiential learning, and (d) reflective practice (Vesely, 2022). The FDW curriculum encourages participants to experiment with ideas, to connect with one another, and to expand conceptions of teaching and learning. Many FDW participants find facilitating to be the most challenging and rewarding work they have done in a teaching-related workshop context. Our research study aims to begin uncovering what changes in teaching practices are associated with participation in the FDW, how the experience of the FDW shapes participants' conceptions of teaching and learning, and in what ways, if any, the FDW experience might have permeated into other contexts. In our session, we will share the perceived impact of various aspects of the workshop and our thematic analysis of the shared accounts. We will also consider the broader applicability of reflection on professional practice to the global community in times of change.",
-          "keywords": ""
+          "keywords": "",
+          "online": true
         }
       ],
       "easychair_session_id": "104862",
       "description": "Impact, Evaluation and Transfer of Academic Development",
-      "onlinePresenter": true,
       "chair": "Ted Murcray"
     },
     {
@@ -3435,7 +3436,8 @@ window.ICED26_DATA = {
           "authors": "Roberta Silva, Alessia Bevilacqua",
           "presenter": "Roberta Silva",
           "abstract": "This proposal presents a holistic model of Faculty Development (FD) designed to address the increasing complexity and evolving demands of contemporary higher education. Moving beyond sectoral or fragmented approaches, the proposed framework envisions academic development as a multifocal and integrated process that connects the personal, professional, and institutional dimensions of university life. Drawing on Bronfenbrenner’s ecological theory, the model articulates FD across three interrelated organizational levels—micro (individual faculty), meso (collegial and departmental structures), and macro (institutional governance). Represented through the metaphor of a three-dimensional cone, the model emphasizes the dynamic and recursive nature of development processes, with heuristic evaluation positioned at its core as a transformative mechanism for continuous improvement. The proposal illustrates the operational translation of this framework through an organizational architecture capable of integrating multiple FD initiatives and incorporating systematic evaluation practices. Implementation of the model requires significant political, organizational, and operational investment, achievable only when Faculty Development Centers (FDCs) act in alignment with university governance and under a clear institutional mandate. Nevertheless, the model remains adaptable to resource-limited contexts, where faculty developers can assume multiple roles to ensure program sustainability, able to foster a systemic vision of academic growth that harmonizes individual and institutional development, strengthens academic culture, and enhances the university’s capacity for innovation and change.",
-          "keywords": ""
+          "keywords": "",
+          "online": true
         },
         {
           "easychair_id": "311783",
@@ -3449,7 +3451,6 @@ window.ICED26_DATA = {
       ],
       "easychair_session_id": "104863",
       "description": "Educational Leadership, Strategic Change and Faculty Development",
-      "onlinePresenter": true,
       "chair": "Angelika Thielsch"
     },
     {
@@ -3506,7 +3507,8 @@ window.ICED26_DATA = {
           "authors": "Klara Bolander Laksov, Cormac McGrath, Anna Serbati",
           "presenter": "Cormac McGrath",
           "abstract": "This symposium explores the concept of educational leadership of, for, with, and through academic development, engaging authors from an ongoing special issue of IJAD in a collective conversation on how institutions can enable and support educational leadership. The session brings together diverse perspectives on leadership in higher education, addressing challenges that arise during organizational change, the negotiation of leadership across formal and informal roles, and the role of professional development programs in fostering educational leadership. Contributions also examine what motivates faculty to engage in informal pedagogical leadership and how academic development units can act as catalysts for leadership practices. Drawing on insights from an ongoing review study that conceptualizes discourses of educational leadership in academic development literature, the symposium aims to provide participants with both theoretical and practical lenses for understanding leadership as a distributed and relational practice. By emphasizing complementarity among the presentations, the session seeks to inspire academic developers and institutional leaders to imagine new strategies for advancing educational leadership in their contexts.",
-          "keywords": ""
+          "keywords": "",
+          "online": true
         }
       ],
       "easychair_session_id": "104882",
@@ -3652,7 +3654,7 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104880",
-      "description": "Quality, Assessment, Equity and Institutional Change",
+      "description": "Current Debates in Academic Development and Higher Education: Something for Everyone",
       "cardTitle": "",
       "onlinePresenter": false,
       "youtube": "",
@@ -3750,7 +3752,8 @@ window.ICED26_DATA = {
           "authors": "Moeniera Moosa",
           "presenter": "",
           "abstract": "Feedback within initial teacher education plays a pivotal role in shaping the professional identity and pedagogical agency of preservice teachers. Yet, feedback provided during work integrated learning often functions as a procedural task rather than a reflective and empowering developmental process. This study investigates the degree of alignment between the feedback offered by university tutors and mentor teachers, and how such alignment influences the development of agency among preservice teachers. Grounded in Sadler’s philosophical perspectives on feedback and Shulman’s model of pedagogical reasoning and action, the study employed qualitative document analysis of written feedback collected over three years from forty-two preservice teachers. The thematic analysis revealed areas of shared understanding, including learner engagement, classroom management, time management, lesson planning, assessment practices, voice projection and the integration of teaching strategies and learning resources. However, significant misalignments emerged in lesson presentation, subject knowledge and the ability to communicate concepts clearly and coherently. These inconsistencies constrain preservice teachers’ ability to act with confidence and agency in the classroom. The study is significant as it highlights how fragmented feedback practices can undermine the coherence of teacher preparation and weaken the transformative potential of academic development. By promoting intentional alignment of feedback processes between universities and schools, this research demonstrates how collaborative partnerships can strengthen professional learning communities, enhance reflective practice and advance organisational learning to improve teaching quality within higher education.",
-          "keywords": ""
+          "keywords": "",
+          "online": true
         },
         {
           "easychair_id": "311986",
@@ -3759,7 +3762,8 @@ window.ICED26_DATA = {
           "authors": "Oskar Gedda, Marcus Schmitt-Egenolf",
           "presenter": "Marcus Schmitt-Egenolf",
           "abstract": "University teaching is often conducted in relative isolation, while it is simultaneously characterised by rapid change, including the impact of artificial intelligence and shifting student background and expectations. This paper presents and analyses the VIN concept—Voluntary, Interdisciplinary & Non-hierarchic—as a model for collegial pedagogical development through structured peer observation and dialogic engagement. VIN, initiated in 2022, was evaluated and refined and within the Pedagogically Rewarded Teachers (PRT) network at Umeå university over a three-year period. The model is based on interdisciplinary triads. Following an initial planning meeting, two colleagues observe a teaching session presented by the third colleague, after which the triad engages in a joint reflective dialogue. After three completed cycles, the process concludes with a summative reflective meeting. Empirical material was generated through participant observation, reflective dialogues, and semi-structured focus group interviews, informing successive adaptations of the model. Barriers to collegial auscultation described in the literature include time constraints, concerns about receiving feedback, top-down initiated activities, and the lack of participant stratification based on teaching experience. To overcome these challenges, we designed VIN as an emergent, horizontally organised practice of collegial inquiry rather than a delegated form of distributed leadership. Over time, the focus shifted from feedback on individual teaching performances towards the co-creation of shared teaching experiences. This shift reduced evaluative anxiety and supported the emergence of a shared pedagogical language oriented towards pedagogical challenges and possible courses of action. Participants consistently reported VIN as a highly valued approach for developing their own teaching practice.",
-          "keywords": ""
+          "keywords": "",
+          "online": true
         },
         {
           "easychair_id": "311995",
@@ -3781,8 +3785,7 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104878",
-      "description": "Student Feedback, Peer Feedback and inclusive AD",
-      "onlinePresenter": true,
+      "description": "Wellbeing, Belonging and Commitment in Academic Development",
       "chair": "Elisabeth Moyano"
     },
     {
@@ -3805,7 +3808,8 @@ window.ICED26_DATA = {
           "authors": "Fahimeh Darchinian",
           "presenter": "",
           "abstract": "This paper examines how epistemic violence shapes the agency of Muslim female students of immigrant backgrounds in Canadian universities, challenging dominant narratives of higher education as an inclusive and equitable space. Drawing on qualitative research based on 54 semi-structured interviews, the study identifies two key configurations through which agency becomes constrained: constrained conformity and self-delegitimation. These patterns reveal how pressures of self-surveillance and internalized hegemonic norms operate beneath official discourses of diversity and inclusion. Academic success, often portrayed as a pathway to equality and belonging, emerges in participants’ narratives as a burden of social survival rather than empowerment. By unpacking these subtle dynamics of epistemic violence, the paper highlights asymmetries in agency that shape students’ possibilities for belonging and voice. The study contributes to the field of academic development by advancing a critical understanding of inclusion that goes beyond access and representation, urging universities to engage more deeply with the epistemic and affective dimensions of equity in higher education.",
-          "keywords": ""
+          "keywords": "",
+          "online": true
         },
         {
           "easychair_id": "311888",
@@ -3841,12 +3845,12 @@ window.ICED26_DATA = {
           "authors": "Monica Vesely",
           "presenter": "",
           "abstract": "Reflective practice is an essential, durable skill required by students in higher education to anchor learning and tailor outcomes to their goals. Reflection is the aspect of any experience (whether in an academic course, work setting or personal pursuit) that has the most potential to contribute to an individual’s growth and life-long learning. This session shares the results of field-testing the newly developed CLEAR WIL (Work-Integrated Learning) Reflection Process. Work-integrated learning (WIL) is a form of curricular experiential education that formally integrates a student’s academic studies with quality experiences within a workplace or practice setting. Reflection is widely recognized as an important component of work-integrated learning fostering deeper understanding and enhancing personal and professional growth. Reflection serves an essential role in facilitating knowledge transformation in WIL. The CLEAR approach aims to mobilize reflection for the learner and support the development of a life-long reflective practice by moving purposefully through sequential stages, each building upon the last with a view to maximizing learning.",
-          "keywords": ""
+          "keywords": "",
+          "online": true
         }
       ],
       "easychair_session_id": "104876",
       "description": "Inclusive Higher Education, Student Agency and Social Justice",
-      "onlinePresenter": true,
       "chair": "Reya Saliba"
     },
     {
@@ -3869,7 +3873,8 @@ window.ICED26_DATA = {
           "authors": "Kellen Kiambati",
           "presenter": "",
           "abstract": "The outbreak of the Corona Virus Disease in the late 2019 (COVID 19) and the subsequent declaration of the virus as a global pandemic by the World Health Organization (WHO) in March 2020, affected all the sectors of human life. This is especially so because of the implementation of a combination of measures touted as international best practice: lockdowns, quarantines, curfews, and social distancing (de Figueiredo et al. 2020; UNDP, 2020) “combined with public health advice to frequently wash hands with soap or alcohol-based sanitizers, to wear face masks, and to avoid touching one’s face” (Nderitu et al, 2000). Like all other sectors, the Higher Education (HE) Sector was heavily disrupted. Traditional face to face teaching and learning in Higher Education Institutions (HEIs) was no longer feasible. The aim is to examine the contribution of emergency response capabilities on organization sustainability among universities in Kenya. A mixed methods design was employed. Findings indicate that universities exhibit moderate preparedness, with systemic vulnerabilities in funding models, human capacity, and digital and physical infrastructure. The study provides evidence on preparedness gaps within the higher education sector in a developing country context. Conceptually, it advances the integration of pandemic preparedness into academic development discourse by linking emergency response capabilities to teaching continuity, institutional learning, and resilience-building. In conclusion, strengthening emergency response capabilities is central to enhancing organization sustainability among universitie. Keywords: Pandemic preparedness, emergency response capabilities, university sustainability.",
-          "keywords": ""
+          "keywords": "",
+          "online": true
         },
         {
           "easychair_id": "311964",
@@ -3896,7 +3901,8 @@ window.ICED26_DATA = {
           "authors": "Nizar Bitar, Nitza Davidovich",
           "presenter": "Nizar Bitar",
           "abstract": "Centers for Teaching and Learning (CTLs) function as pivotal change agents in higher education, yet their transformative capabilities often remain underutilized. This paper examines how CTLs exercise agency as drivers of institutional transformation, introducing the empirically-validated CTL Change Implementation Framework (CCLIF). Based on qualitative data from 45 participants across diverse Israeli higher education institutions, the study reveals how CTLs orchestrate change through sophisticated 'middle-out' processes that bridge institutional leadership and faculty. Analysis demonstrates how these centers successfully navigate resistance, build multi-level stakeholder engagement, and create sustainable faculty learning communities despite lacking formal authority. The findings highlight variations across institutional types, with research universities emphasizing evidence-based approaches while teaching-focused institutions prioritize direct pedagogical impact. This research is particularly relevant to academic developers seeking to enhance their strategic positioning and institutional influence. The introduced framework provides practical guidance for CTL directors and academic developers to analyze their institutional contexts, develop sophisticated resistance management strategies, and design sustainable implementation approaches. By reconceptualizing CTLs as strategic change architects rather than merely service providers, this study empowers academic developers to more effectively exercise agency in transforming teaching and learning practices across higher education institutions. The findings directly address the conference theme by demonstrating how academic development units can function as powerful agents of change through sophisticated network-building, strategic positioning, and contextually-adaptive implementation approaches.",
-          "keywords": ""
+          "keywords": "",
+          "video": true
         },
         {
           "easychair_id": "311850",
@@ -3910,7 +3916,6 @@ window.ICED26_DATA = {
       ],
       "easychair_session_id": "104870",
       "description": "Strategy, Sustainability and Organizational Transformation",
-      "onlinePresenter": true,
       "chair": "Anja Pawelleck"
     },
     {
@@ -3942,7 +3947,8 @@ window.ICED26_DATA = {
           "authors": "Kunihiko Takamatsu, Yasuo Nakata, Kenya Bannaka, Kenichiro Mitsunari",
           "presenter": "Kunihiko Takamatsu",
           "abstract": "This paper proposes a sustainable Faculty Development (FD) model that fosters \"Student Agency\" by integrating data visualization with collaborative human networks. As higher education shifts focus from passive knowledge acquisition to the cultivation of non-cognitive abilities (e.g., GRIT, resilience), visualizing these invisible traits remains a significant challenge for instructors. We addressed this issue within a mandatory first-year experience course at Kobe Tokiwa University by utilizing an Eduinformatics approach. First, we analyzed Learning Management System (LMS) logs and found that the timing of assignment submissions significantly correlates with students' non-cognitive scores and academic grades. This establishes simple behavioral logs as an objective proxy for visualizing student agency. Second, to support these findings with effective instruction, we implemented a large-scale team-teaching system. Social network analysis revealed that this system functions as a sustainable On-the-Job Training (OJT) platform, creating a dense, cross-disciplinary faculty network. We conclude that this \"Data-Informed FD\" model—where objective data triggers early detection of student needs and a robust human network executes the necessary interventions—effectively enhances agency for both students and teachers, offering a scalable strategy for educational quality assurance.",
-          "keywords": ""
+          "keywords": "",
+          "online": true
         },
         {
           "easychair_id": "311981",
@@ -3973,8 +3979,7 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104879",
-      "description": "Understanding University Teachers, enhancing Teachers Agency",
-      "onlinePresenter": true,
+      "description": "Policy, Leadership and Professional Identity of University Teachers",
       "chair": "Hussein Zeidan"
     },
     {
@@ -3997,7 +4002,8 @@ window.ICED26_DATA = {
           "authors": "Héctor Tronchoni, Conrad Izquierdo",
           "presenter": "Héctor Tronchoni",
           "abstract": "Articles published in scientific journals on university face-to-face lectures reflect the tension between their educational value and the need to understand methodological complementarity in line with the academic policies of the EHEA. Two research questions debate the continuity of the lecture: Does interest in renovating the lecture remain among the international research community? And what improvements to the lecture do the reviewed articles suggest? A systematic review is conducted following the PRISMA protocol, with a focus on theoretical and methodological rigor, prioritizing documents published in journals with an impact factor. The search strategy was applied consistently across three databases: ERIC, PsycInfo, and Web of Science. The results provide data on: a) the indicators framing the scientific visibility and institutional backing of articles selected, and b) the multidimensional classification of structural components: perspectives, guiding aim, type of study, and the formative, technical, and critical aspects of the articles. The discussion and conclusion will provide answers to both research questions based on the evidence found in the research, and the results will be evaluated in line with the authors’ concerns about the complexity of oral communication through which teachers and students connect and collaborate in the construction of knowledge. The educational implications are discussed in terms of their alignment with a socio-constructivist perspective and four key areas for analyzing educational innovation: lecture design and structure; interaction and participation; methodology and technology; and evaluation of the innovation.",
-          "keywords": ""
+          "keywords": "",
+          "online": true
         },
         {
           "easychair_id": "311865",
@@ -4033,12 +4039,12 @@ window.ICED26_DATA = {
           "authors": "Rana Challah",
           "presenter": "",
           "abstract": "This presentation highlights the importance of combining Action-Research (AR) and Work-Based Learning (WBL). While WBL has not been often combined with AR it is, nevertheless, recognized as a methodology which helps foster researcher and university teacher agency. How does the practical inquiry and collaborative process of AR trigger paradigmatic shifts on how researchers approach research methodology? Based on a qualitative approach, we illustrate how the combination of both AR and WBL enhances the inquiry process of and makes researchers reflect upon their research methods and readjust their AR roadmap, a process which fosters researchers’ practical knowledge and agency. The findings suggest that the combination of AR and WBL helped transform researchers’views and made them more aware of the systemic challenges faced by university teachers. Instead of focusing only on teaching practice, researchers adopted a more systematic approach, considering the institutional context that shapes teaching and learning within the university. For education and training policy, these perspectives advocate for more participatory, contextualized approaches that are co-constructed with actors in the field. AR, collaborative and contextualised methodologies capable of capturing both the dynamics of agency should be promoted to address the challenges faced by higher education professionals, stakeholders, and practitioners.",
-          "keywords": ""
+          "keywords": "",
+          "online": true
         }
       ],
       "easychair_session_id": "104874",
       "description": "Research on Teaching Methods; High-Impact-Practices (HIP); Researcher Agency",
-      "onlinePresenter": true,
       "chair": "Quincy Elvira"
     },
     {
@@ -4079,7 +4085,8 @@ window.ICED26_DATA = {
           "authors": "Hardeep Basra, Dionne Barton",
           "presenter": "Hardeep Basra",
           "abstract": "This paper examines the strategic role of postgraduate certificates in academic practice as catalysts for higher education transformation, focusing on the development and delivery of Postgraduate Certificate in Empowering Education (PGCEE) at De Montfort University (DMU), UK. Designed in response to sector-wide and institutional demands, including the long‑tail impact of the Covid‑19 pandemic, persistent inequities in student outcomes, and DMU’s 'Empowering University' strategy, the PGCEE seeks to enact a more radical, justice‑centred approach to lecturer training. Comprising four modules grounded in active learning pedagogy, the programme places equity, accessibility, and critical reflexivity at its core.\n\nThis paper foregrounds a module called, Reimagining Higher Education: Addressing Inequality & Justice in Educational Practice, which interrogates power, inequality and justice through multiple critical lenses. Participants are encouraged to examine their positionality, challenge normative assumptions about teaching and learning, and design interventions that address inequitable practices within their own institutional contexts. Drawing on evaluative data from the programme’s completed cohorts, including participant feedback and examples of designed interventions, we explore how the PGCEE builds educator agency and institutional capacity for meaningful change. We argue that postgraduate certificates, when intentionally redesigned through an equity‑driven framework, can operate as powerful strategic levers for organisational transformation, advancing more inclusive and socially just higher education environments.",
-          "keywords": ""
+          "keywords": "",
+          "online": true
         },
         {
           "easychair_id": "311962",
@@ -4097,12 +4104,12 @@ window.ICED26_DATA = {
           "authors": "Hannah Celinski",
           "presenter": "",
           "abstract": "Universities can be recognized as life-long points of connection and growth, despite the current lack of certainty facing the sector. As a result, I argue that mindfulness practices act as tangible and accessible connection points for students to engage with their education in ways that support student success by navigating cognitive overload to ensure critical growth, exploring personal and technological integrity alongside artificial intelligence, and engaging directly with insecurities relating to global instability.\n\nThis paper details previous research regarding the potential of mindfulness practices in the classroom to promote student engagement, provide sufficient space and time consider personal contributions to class engagement and future submissions, and model practices that continue into a lifetime of grounded, contemplative, and engaged citizenship.",
-          "keywords": ""
+          "keywords": "",
+          "online": true
         }
       ],
       "easychair_session_id": "104875",
       "description": "Fostering Professional Growth and Resilience; Change Labs",
-      "onlinePresenter": true,
       "chair": "Mary Wilson"
     },
     {
@@ -4311,7 +4318,8 @@ window.ICED26_DATA = {
           "authors": "Joana Jaureguizar, Weiwei Li, Igone Arostegui, Eneritz Jimenez, Alaitz Aizpurua, Nagore Guerra, Iratxe Redondo",
           "presenter": "Joana Jaureguizar",
           "abstract": "Addressing contemporary societal challenges, including sustainability and the creation of inclusive communities, requires interdisciplinary learning environments that nurture autonomy, collaboration, and active engagement. Learning agency—defined as the motivation, confidence, and capability to direct and sustain one’s learning—is a critical higher-order competency in such settings. Despite its importance, higher education has few validated instruments for assessing agency and limited curriculum models that intentionally support its development in interdisciplinary programmes. This paper reports on the validation of a Learning Agency Scale and its application in an interdisciplinary, inclusion-focused programme at a Spanish university. Drawing on responses from 238 students, exploratory factor analysis confirmed a clear three-factor structure—seeking scaffolding, problem solving, and meaning making. Pre–post comparisons showed a statistically significant improvement in students’ problem-solving agency, suggesting that the programme’s curriculum design, which integrates authentic societal cases, reflective activities, and collaborative inquiry, effectively strengthens agentic learning behaviours. The study contributes a validated measurement tool for interdisciplinary higher education and demonstrates how intentional curriculum design can enhance student agency, offering actionable insights for academic developers seeking to empower learners and transform curricula toward inclusive, socially responsive education.",
-          "keywords": ""
+          "keywords": "",
+          "online": true
         },
         {
           "easychair_id": "311961",
@@ -4320,7 +4328,8 @@ window.ICED26_DATA = {
           "authors": "Sharon Ultsch, Stefanie Baier, Adriana Signorini",
           "presenter": "Sharon Ultsch",
           "abstract": "Education is not neutral; it is a political act in an ecosystem that does not transparently acknowledge this truth (Giroux, 2017). In this paper, we maintain that a critical reflective stance questioning should be a central agentic move of educational developers. We argue that by adopting a critical stance educational developers are positioned to be change agents who inspire the interrogation of taken-for-granted assumptions and unchallenged epistemologies. We further maintain that educational developers can advance the broader goal of equity and social justice in higher education when they adopt the tenets of critical pedagogy in their practices with academic staff. Thus, this paper introduces a Critical Educational Development (CED) conceptual framework undergirded by the principles of critical pedagogy. In accord with the principles of critical pedagogy, the CED framework identifies EDs as political actors who respond to the need for societal and systemic change within and beyond higher education. Our CED conceptual framework is a tool for EDs to empower faculty to interrogate their pedagogical and curriculum choices using a critical lens that examines power and hierarchical relationships. We further argue that by fostering a reflexive approach to their educational development endeavors, critical education developers adopt a strong professional identity as agents for advancing social justice in higher education. CED encourages academic staff to adopt actionable and concrete ways to disrupt the status quo by exploring and applying the principles of critical pedagogy.",
-          "keywords": ""
+          "keywords": "",
+          "online": true
         },
         {
           "easychair_id": "311882",
@@ -4343,7 +4352,6 @@ window.ICED26_DATA = {
       ],
       "easychair_session_id": "104872",
       "description": "Mapping Student Agency, Critical Pedagogy and Trust-building",
-      "onlinePresenter": true,
       "chair": "Rick Huizinga"
     },
     {
@@ -4573,11 +4581,11 @@ window.ICED26_DATA = {
           "authors": "Dagmar Engfer, Sidsel Winther",
           "presenter": "Dagmar Engfer",
           "abstract": "This workshop builds on findings from the international project CiVR – Collegial InterVision Research, conducted across three universities in three countries. The project explored how structured peer-dialogue formats—such as intervision, peer observation, and practice demonstrations—support critical reflection and mutual learning in higher education development programmes. Interviews with participants highlight the value of structured dialogue for analysing teaching cases, generating fresh perspectives, and fostering interdisciplinary exchange. They also underscore the importance of communicative clarity and conceptual translation when collaborating across national and institutional contexts. The workshop invites conference participants to actively explore and practice collegial intervision and to share experiences with dialogic formats in higher education. Collegial intervision is a structured peer-based dialogue based on counselling where faculty developers, lecturers or supervisors collaboratively reflect on challenging teaching situations and enhance collective learning. To create an open environment for diverse viewpoints and establish common ground, a Deep Democracy–inspired dialogue serves as an entry point for shared reflection, giving all participants a voice and eliciting their experiences with peer-based dialogue. Participants will engage in a facilitated dialogue and collaboratively develop ideas for future applications, including how structured formats like intervision and adapted coaching approaches can enhance reflective practice in higher education. The workshop offers a practical, co-creative experience and generates concrete impulses for strengthening peer-based critical reflection. It supports the collaborative development of approaches that can enrich faculty development and higher education programmes. It addresses faculty developers, programme leaders, lecturers, supervisors and all persons interested in peer-based dialogues.",
-          "keywords": ""
+          "keywords": "",
+          "online": true
         }
       ],
-      "easychair_session_id": "105623",
-      "onlinePresenter": true
+      "easychair_session_id": "105623"
     },
     {
       "day": "2026-06-25",
@@ -4624,11 +4632,11 @@ window.ICED26_DATA = {
           "authors": "Cormac McGrath, Elisa Bone",
           "presenter": "Cormac McGrath",
           "abstract": "As universities undergo significant change, upheaval and disruption, the role of academic development in guiding teaching and learning becomes a critical, and potentially stabilising, force. However, the work of academic developers themselves is increasingly threatened, including through funding cuts and the adoption of technological tools such as genAI that may purport to replace academic development activities. Within this turbulent environment, assessing and responding to risk can be challenging. In this workshop we invite participants to engage with the methodology of speculative social science fictions to explore possibilities for the future of academic development. During the workshop, participants will examine existing fictions and consider issues within their recent practice and that of their peers to draft their own fictional scenarios within small groups. The workshop will provide a safe space to creatively explore challenges, impacts and possibilities for academic development practices, processes and supports within the future university, and empower participants to utilise similar methods within their own practice.",
-          "keywords": ""
+          "keywords": "",
+          "online": true
         }
       ],
-      "easychair_session_id": "105615",
-      "onlinePresenter": true
+      "easychair_session_id": "105615"
     },
     {
       "day": "2026-06-25",
@@ -6044,7 +6052,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "105673",
-      "chair": "Greig Krull"
+      "chair": "Greig Krull",
+      "description": "Rethinking Learning, Teaching and Academic Development"
     },
     {
       "day": "2026-06-26",
@@ -6210,12 +6219,12 @@ window.ICED26_DATA = {
           "authors": "Juan-Manuel Alvarez-Espada, María-Teresa Aguilar-Planet, Estela Peralta",
           "presenter": "Juan-Manuel Alvarez-Espada",
           "abstract": "The development of complex technical work in engineering (such as requirements analysis, planning tasks, preliminary designs or full technical projects) requires students to demonstrate autonomy, organisational skills and the ability to manage uncertainty. However, many students lack structured mechanisms to regulate their own work process, which often results in late requests for support, poorly formulated questions, cognitive overload and an excessive dependence on the instructor. This contribution analyses the effects of using digital Kanban boards, implemented through Trello, on student agency, cognitive security and accountability in professionally oriented engineering courses. Based on teaching experience, it has been observed that the systematic use of individual Kanban boards fosters greater student initiative in planning and monitoring their work, improves the quality of feedback and enables the early identification of blocked tasks. When technical work is carried out in small groups, Trello introduces an additional improvement by making the actual distribution of tasks visible. This transparency reduces passive behaviours and imbalances in participation, promoting a fairer allocation of responsibilities without the need for constant instructor intervention. The introduction of an explicit protocol for managing cognitively blocked tasks and a structured channel for requesting meetings transforms teaching and learning processes, shifting the instructor’s role towards technical supervision. Overall, the approach contributes to greater student autonomy and a more professional management of technical work in higher engineering education.",
-          "keywords": ""
+          "keywords": "",
+          "online": true
         }
       ],
       "easychair_session_id": "105680",
       "description": "Researching Teaching Methods: Active Learning; Research-based teaching and Improvisational Methods",
-      "onlinePresenter": true,
       "chair": "Macarena Trujillo Guillén"
     },
     {
@@ -6238,7 +6247,8 @@ window.ICED26_DATA = {
           "authors": "Paolo Arru, Veronica Simona Benhamza",
           "presenter": "Paolo Arru",
           "abstract": "This paper explores how affectivity and reflexivity can nurture agency and professional identity in teacher education. Within the framework of circular pedagogy, learning is conceived as a relational and transformative process where knowledge emerges from dialogue, emotion, and shared reflection. The study is grounded in the integration of reflective practice (Schön, 1983), transformative learning (Mezirow, 1991), and psychoanalytic theories of intersubjectivity and play (Winnicott, 1971; Ogden, 2004). Through narrative and experiential methods implemented in teacher training programmes, future teachers are encouraged to reinterpret complex classroom situations, recognise emotional responses, and translate them into professional insight. Qualitative data from written reflections and group discussions suggest that this approach strengthens self-awareness, empathy, and intentional action, key components of emotional and epistemic agency. The contribution argues that academic development should embrace the affective and symbolic dimensions of teaching, as these constitute essential conditions for sustainable learning environments. By valuing emotion as a form of knowledge and reflection as a collective practice, teacher education can promote both individual and institutional transformation.",
-          "keywords": ""
+          "keywords": "",
+          "online": true
         },
         {
           "easychair_id": "311920",
@@ -6247,7 +6257,8 @@ window.ICED26_DATA = {
           "authors": "Lisa Tafuro, Rocío García Carrión",
           "presenter": "Lisa Tafuro",
           "abstract": "Dialogue is one of the most important drivers of learning, reasoning, and participation in childhood classrooms, yet university teacher education programs often fall short of providing students with the linguistic foundation and cultural knowledge needed to enact dialogic pedagogy in quality, equitable ways. This conceptual paper argues that preparing teachers for equitable dialogue requires fostering their professional agency through a deep understanding of language (i.e., its forms and functions) and the language ecology of classrooms. Without cultural and linguistic foundational knowledge, teacher candidates lack the agency to interpret their own and children's diverse repertoires of lived experiences, recognize the hidden curriculum of discourse, or engage with students in ways that support shared thinking and belonging.\n\nIntegrating research on dialogic pedagogy, learning communities, and adapting the DOLE framework (Dialogue, Opportunity, and Language Ecology), we propose sharing evidence-informed analyses and a critical reflection on why university-level teacher education programs should center linguistic, cultural, and dialogic agency as essential teacher competencies. In this work, we identify four mediating capacities–metalinguistic insight, metacognitive awareness, metacultural understanding, and an agentive stance toward teachers' and children's voices– as foundational outcomes of teacher preparation.\n\nAligned with Agency and Academic Development, this paper positions teacher educators as academic developers who must bridge the gap between scholarship (across various disciplines ranging from linguistic anthropology to cognitive science) and practice to cultivate teacher agency, empowering young learners to become active participants in their academic and professional learning and preparation. Implications for course development, practicum supervision, and program-level transformation will be discussed.",
-          "keywords": ""
+          "keywords": "",
+          "online": true
         },
         {
           "easychair_id": "311905",
@@ -6265,12 +6276,12 @@ window.ICED26_DATA = {
           "authors": "Karina Celi, Adriana Cango",
           "presenter": "Karina Celi",
           "abstract": "This study examines the potential of mobile-assisted language learning (MALL) to enhance English-speaking skills in higher education through the integration of ELSA Speak, Duolingo, and BBC Learning English at a public university in southern Ecuador. Methodologically, it employs a qualitatively driven mixed-methods action research design, combining learners’ experiences with pre- and post-speaking assessments. Consequently, the findings show improvements in pronunciation, fluency, anxiety reduction, motivation, autonomy, and engagement, highlighting MALL’s value in extending practice beyond the classroom. Finally, the study provides implications for teacher training, faculty support, and institutional innovation, offering a context-sensitive and replicable model for integrating mobile technologies in language education.",
-          "keywords": ""
+          "keywords": "",
+          "online": true
         }
       ],
       "easychair_session_id": "105677",
       "description": "Teacher Education; Epistemic and Reflective Agency; enhancing English-Language course design",
-      "onlinePresenter": true,
       "chair": "Fernando Marhuenda Fluixá"
     },
     {
@@ -6293,7 +6304,8 @@ window.ICED26_DATA = {
           "authors": "Kseniia Tsitsikashvili",
           "presenter": "",
           "abstract": "Career-change teachers—professionals entering teaching after prior careers – have become an important focus of policy responses to teacher shortages. Pedagogical master’s programs increasingly serve as higher-education pathways for this group, offering accelerated routes into the profession. However, widening access does not necessarily ensure equitable participation or retention. This paper examines pedagogical master’s programs as institutional pathways shaping career transitions into teaching and explores their implications for academic development in higher education. Drawing on research on teacher professional identity, professional transition, and resilience, the study analyzes how institutional environments shape experiences of recognition, belonging, and professional commitment. The paper is based on qualitative doctoral research using semi-structured interviews with career-change teachers enrolled in pedagogical master’s programs and recent graduates, complemented by interviews with program staff and analysis of institutional documents. Data are analyzed thematically with attention to identity negotiation, recognition of prior professional experience, and institutional support. Preliminary findings suggest that these programs provide opportunities for professional reorientation but also create challenges related to compressed timelines, competing study–work demands, and limited recognition of prior expertise. The findings highlight the importance of mentoring, institutional flexibility, and peer communities in supporting successful transitions into teaching roles.",
-          "keywords": ""
+          "keywords": "",
+          "online": true
         },
         {
           "easychair_id": "311868",
@@ -6302,7 +6314,8 @@ window.ICED26_DATA = {
           "authors": "Helena Prins",
           "presenter": "",
           "abstract": "This study sheds light on the experiences of sessional instructors engaging in professional development and how these experiences prepare them for a shifting post-secondary environment. Utilizing a participatory narrative inquiry approach, informed by Knowles’ principles of adult learning, Tough’s self-directed learning framework, and the Developmental Framework for Teaching Expertise in Postsecondary Education, the researcher collected and analysed stories of sessional instructors through semi-structured interviews, a group story session, and reflective journal entries. Reflexive thematic analysis was utilized. Findings provide insights into effective support strategies for enhancing teaching expertise, contributing to sustainable improvements in teaching and learning cultures across the post-secondary landscape. Based on these findings, the researcher suggests an adapted multi-level framework which places the educator at the center. The researcher's proposed framework recognizes that institutions cannot rely solely on the self-directedness and intrinsic motivation of sessional instructors. It is neither fair nor sustainable. Instead, it must be a shared responsibility. Institutions should actively engage in co-creating structured, transparent, and sustainable pathways for teaching expertise. Making this process visible and structured, while explicitly outlining the institutional support available, ensures shared accountability and fosters greater equity in professional development.",
-          "keywords": ""
+          "keywords": "",
+          "online": true
         },
         {
           "easychair_id": "312006",
@@ -6320,7 +6333,8 @@ window.ICED26_DATA = {
           "authors": "Sharon Bratt",
           "presenter": "",
           "abstract": "Educational developers are confronting a profound pedagogical and epistemic shift—one in which students’ ways of thinking and creating knowledge are being reshaped by generative artificial intelligence (AI). The Dialogic Catalyst Triangle, positions AI not as a content generator but as a dialogic partner in inquiry. Drawing on dialogic pedagogy and Mercer and Littleton’s concept of interthinking, the framework integrates interthinking, archetypal team roles, and AI as an epistemic agent within a third-space ecosystem of learning. By enacting archetypal functions such as skeptic, clarifier, and integrator, AI can catalyze exploratory dialogue and deepen collective reasoning while preserving human agency. For educational developers, the framework offers a scholarly lens to guide faculty engagement with AI and advance critical, evidence-informed approaches to pedagogy and epistemic practice in higher education.",
-          "keywords": ""
+          "keywords": "",
+          "online": true
         },
         {
           "easychair_id": "311954",
@@ -6329,12 +6343,12 @@ window.ICED26_DATA = {
           "authors": "Laura Milne, Jackie Potter, Claire Stocks",
           "presenter": "Laura Milne",
           "abstract": "In response to sector-wide pressures, our Academic Development team has led two major strategic projects impacting and influencing the university, namely a whole-institution curriculum redesign (reworking over 100 courses) and a rebuild of the Virtual Learning Environment (VLE) to enable improved learning design at scale. This work has required negotiation of our identities, and development of nuanced approaches to leadership. The current neoliberal climate impacting Higher Education globally creates and extends potential tensions between business efficiencies and learning. Against this backdrop, academic developers are deployed to lead change projects to ensure strategic imperatives are supportive of institutional needs and ambitions. This paper explores academic developers’ leadership roles in institutional transformation, drawing on established leadership frameworks and academic development literature, and proposes a conceptual framework for leading change at scale. Grounded in leadership theories and case-based reflection, we introduce a typology of leadership modalities experienced by academic developers: done by (through facilitation), done to (navigating tension around change), done through (operational project management and stakeholder liaison), and done with (collaborative grassroots leadership across silos). We offer attendees practical strategies and evidence-based insights for leading large-scale strategic transformation, balancing institutional imperatives with pedagogical values, while negotiating personal and professional identities as academic developers.",
-          "keywords": ""
+          "keywords": "",
+          "online": true
         }
       ],
       "easychair_session_id": "105681",
       "description": "Strategic and Innovative Practices in Education and Academic Development",
-      "onlinePresenter": true,
       "chair": "Claire Hamshire"
     },
     {
@@ -6366,7 +6380,8 @@ window.ICED26_DATA = {
           "authors": "Shanya Reuben, Shaida Bobat, Vukani Luvuyo Makhaba",
           "presenter": "Shanya Reuben",
           "abstract": "Despite policy directives prioritizing academic development in South Africa’s higher education context, mentorship, as a key mechanism for situated learning, has yet to be embedded as a consistent, institutionalized practice. While frameworks including the Staffing South Africa’s Universities Framework (2015) emphasize academic capacity building, the relational, performative and embodied nature of mentorship is seldom in the foreground. In this reflective account I reflect on the role of informal mentorship which emerged organically through relational exchanges. In this autoethnographic reflexive account, using Wegner’s Community of Practice framework as a lens, I reposition mentorship from the academic periphery and recast it as integral to my professional development. My reflections draw on informal mentorship relationships with two mentors, an Indian Female and an African Male whose contrasting but complementary approaches allowed me to reclaim my critical voice. Two central themes are emphasized: Learning in Practice and Becoming through Practice, which jointly demonstrate the centrality of relational, informal mentorship in shaping competence and identity in a community of practice.",
-          "keywords": ""
+          "keywords": "",
+          "online": true
         },
         {
           "easychair_id": "311974",
@@ -6384,7 +6399,8 @@ window.ICED26_DATA = {
           "authors": "Karoline Ballieu Kjærgaard",
           "presenter": "",
           "abstract": "Abstract. Many early career academics (ECAs) enter academia facing competing demands, insecure employment and performance pressures that privilege research over teaching. Within this context, Educational Development (ED) programs play a crucial role in supporting ECAs’ professional growth as educators. However, the design of such programs shapes what kind of learning they foster. While linear, transmission-oriented programs often focus on skill acquisition, dialogue-based approaches provide space for reflection, collaboration and identity negotiation. This paper explores how ECAs construct and negotiate their teacher identities through peer interaction at a research-intensive Danish university. Drawing on Positioning Theory (Davies & Harré, 1990) and perspectives regarding Communicative Constitution of Organization (Cooren, 2004), the study conceptualizes teacher identity as discursively accomplished in interaction. Using a longitudinal ethnomethodological design, the study analyzes approximately 30 hours of audio-recorded peer discussions. The analysis shows how ECAs take up, resist and reassign available positions within moral orders of academic life, revealing how identity work is simultaneously individual and institutional. Through these conversational negotiations, the boundary between self and organization becomes blurred. ECAs are not only discussing teaching but constituting what “teaching” means within their university. The paper thus argues, that ED should not only be perceived as a arena for the transmission of pedagogical techniques, but of equal importance as a communicative infrastructure through which legitimate teacher identities can be taken on, assigned, resisted and at times re-worked in interaction with peers and educational developers.",
-          "keywords": ""
+          "keywords": "",
+          "online": true
         },
         {
           "easychair_id": "311859",
@@ -6398,7 +6414,6 @@ window.ICED26_DATA = {
       ],
       "easychair_session_id": "105678",
       "description": "Mentoring, Peer Learning and Teaching Consultation",
-      "onlinePresenter": true,
       "chair": "Claudia Bade"
     },
     {
@@ -6439,7 +6454,8 @@ window.ICED26_DATA = {
           "authors": "Oskar Gedda",
           "presenter": "",
           "abstract": "This paper analyses the role of educational developers as capacity builders in research-intensive environments, using an ongoing development initiative in a Master of Science in Engineering programme at a Swedish university as an illustrative case. The programme operates under significant organisational constraints: low completion rates, a strong \"my course\" culture, unclear mandates in educational leadership, and fragmented course structures. These conditions are treated not as exceptional failures but as structural features shaping the conditions under which programme-level development work must operate. Drawing on an extensive logbook, interviews with key actors, and a synthesising development report, Kezar's multi-lens framework for organisational change is employed to interpret the developer's work in collaboration with programme directors, teachers, and departmental leadership. The work is conceptualised through five interwoven roles: designer of structures, navigator of external conditions, co-constructor of meaning, cultural worker, and political actor, connecting structural, cultural, cognitive, evolutionary, and political dimensions of change. What emerges is a picture of educational development as inherently ongoing work, shaped by structural conditions that persist beyond any single initiative. The paper discusses implications for how the developer's role might be understood less as discrete problem-solving or visionary, and more as sustained capacity support within change processes that are structurally complex and without a clear endpoint.",
-          "keywords": ""
+          "keywords": "",
+          "online": true
         },
         {
           "easychair_id": "311809",
@@ -6457,12 +6473,12 @@ window.ICED26_DATA = {
           "authors": "Aranee Manoharan",
           "presenter": "",
           "abstract": "Academic teams across higher education face growing pressure to integrate multiple institutional priorities, such as inclusion, sustainability, employability, wellbeing, and digital capability, into their curricula. While each priority matters, they are often developed in silos, leaving educators to combine them with limited guidance and no coherent framework. This ICED Talk argues that the challenge is structural rather than individual, and that academic developers have a crucial role in making complexity workable.\n\nDrawing on my experience as a third-space professional working at the intersection of academic practice and professional services, the talk introduces an ecosystem approach that helps programme teams see connections across competing agendas. Through co-designed tools and facilitation methods, this approach reframes curriculum as an interconnected system shaped by multiple “ecological pressures.”\n\nThe talk shares key insights from working with academics, cross-functional teams, and students to transform strategy overload into strategic coherence. It highlights how clearer visualisation, shared language, and collaborative design strengthen staff agency, reduce cognitive burden, and support more meaningful institutional learning. The aim is to inspire new ways of thinking about curriculum enhancement and the distributed nature of academic development.",
-          "keywords": ""
+          "keywords": "",
+          "online": true
         }
       ],
       "easychair_session_id": "105676",
       "description": "Graduate Student Partnership; Department-level Capacity Building and Transformative AD",
-      "onlinePresenter": true,
       "chair": "Alba Madinabeitia Ezkurra"
     },
     {
@@ -6663,8 +6679,7 @@ window.ICED26_DATA = {
           "authors": "Wei Shun Chang, Sung-Hui Tseng, Chi-Jung Huang, Ju-Ying Chang, Tsung-Ren Huang, Ling-Chieh Kung",
           "presenter": "Sung-Hui Tseng",
           "abstract": "This symposium explores how technology can meaningfully enhance student agency across diverse learning contexts in higher education. Three universities—National Taiwan University (NTU), Taipei Medical University (TMU), and National Cheng Kung University (NCKU)—will present special initiatives that integrate technology to empower learners as active, reflective, and creative agents in their educational journeys. NTU will share innovations within its Learning Management System NTU COOL, which enhances student agency and learning effectiveness through purposeful feature design. TMU will highlight its AI Literacy Lab, designed to build essential AI competencies through lectures, workshops, competitions, and self-directed learning activities. NCKU will demonstrate its Student Learning E-Portfolio System, an AI-driven, personalized navigation system that leverages competency diagnostics and data analytics to help students build individualized learning pathways and career identities. Together, these contributions demonstrate how universities can design technology-enabled ecosystems that promote student autonomy, competence development, and collaborative innovation. The symposium will share our vision and invite participants to reflect on how technological innovation and learning experiences can nurture motivation and empower learners.",
-          "keywords": "",
-          "online": true
+          "keywords": ""
         }
       ],
       "easychair_session_id": "105687",
