@@ -253,7 +253,7 @@ const clone = (x) => JSON.parse(JSON.stringify(x));
 function cleanMedia(media) {
   if (!media || typeof media !== "object") return undefined;
   const out = {};
-  ["type", "heading", "text", "textEs", "video", "image", "lyrics", "lyricsEs"].forEach((k) => {
+  ["type", "heading", "text", "textEs", "video", "image", "lyrics", "lyricsEs", "map", "website"].forEach((k) => {
     const v = (media[k] || "").toString().trim();
     if (v) out[k] = v;
   });
@@ -1464,6 +1464,14 @@ function SessionEditor({ session, isNew, rooms, clusters, days, onSave, onCancel
                 <Field label="Imagen (ruta en el repo)" hint="P. ej. «assets/gaudeamus-igitur.jpg». Súbela al repo en /assets.">
                   <input type="text" value={media.image || ""} onChange={(e) => setMedia({ image: e.target.value })}
                     placeholder="assets/archivo.jpg" />
+                </Field>
+                <Field label="Mapa (lugar o dirección)" hint="Se incrusta un mapa de Google. Escribe el nombre/dirección (p. ej. «Casino de Salamanca, Calle Zamora 15, Salamanca») o pega una URL de Google Maps embed.">
+                  <input type="text" value={media.map || ""} onChange={(e) => setMedia({ map: e.target.value })}
+                    placeholder="Casino de Salamanca, Calle Zamora 15, Salamanca" />
+                </Field>
+                <Field label="Sitio web (enlace)" hint="Enlace externo mostrado como botón «Visitar web».">
+                  <input type="url" value={media.website || ""} onChange={(e) => setMedia({ website: e.target.value })}
+                    placeholder="https://www.casinodesalamanca.es" />
                 </Field>
               </details>
             );
