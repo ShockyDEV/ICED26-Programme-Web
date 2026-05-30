@@ -9,7 +9,7 @@
      entry script is inline. Everything else is locked down: only same-origin
      and unpkg.com for the React/Babel bundles; fonts from Google; no frames;
      no plugins; restricted base + form targets. -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://i.ytimg.com; connect-src 'self'; frame-src https://www.youtube-nocookie.com https://www.youtube.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'">
 <title>ICED26 - Live programme</title>
 <meta name="description" content="Live programme for ICED26 — Salamanca, 23–26 June 2026. Sessions, rooms, and live status across all conference buildings.">
 <meta name="theme-color" content="#E89669">

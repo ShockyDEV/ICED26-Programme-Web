@@ -430,6 +430,9 @@ async function main() {
     // Preserve the admin-set card-title override across syncs (the per-session
     // title shown on the public card, set in the backstage session editor).
     if (existing?.cardTitle) next.cardTitle = existing.cardTitle;
+    // Preserve the special media block (anthem video/lyrics/image etc.) — it's
+    // hand-curated, never present in the EasyChair scrape.
+    if (existing?.media) next.media = existing.media;
     // Preserve the session-level "one or more presentations online" flag.
     if (existing?.onlinePresenter) next.onlinePresenter = true;
     // Per-talk online presenter flags — match scraped talks to existing

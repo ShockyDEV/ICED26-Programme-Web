@@ -248,6 +248,18 @@ const SESSION_TYPES = [
 // ── Deep clone helper ──────────────────────────────────────────────────
 const clone = (x) => JSON.parse(JSON.stringify(x));
 
+// Normalize a session.media object on save: trim strings, drop empty fields,
+// and return undefined when nothing is set (keeps the JSON tidy).
+function cleanMedia(media) {
+  if (!media || typeof media !== "object") return undefined;
+  const out = {};
+  ["type", "heading", "text", "textEs", "video", "image", "lyrics", "lyricsEs"].forEach((k) => {
+    const v = (media[k] || "").toString().trim();
+    if (v) out[k] = v;
+  });
+  return Object.keys(out).length ? out : undefined;
+}
+
 // ── HH:MM validation ───────────────────────────────────────────────────
 const TIME_RE = /^([01]\d|2[0-3]):[0-5]\d$/;
 const URL_RE = /^https?:\/\/.+/i;
@@ -1285,6 +1297,7 @@ function SessionEditor({ session, isNew, rooms, clusters, days, onSave, onCancel
       fullName: (s.fullName || "").trim(),
       cardTitle: (s.cardTitle || "").trim(),
       chair: (s.chair || "").trim(),
+      media: cleanMedia(s.media),
       onlinePresenter: !!s.onlinePresenter,
       // Keynotes & ICED talks are YouTube-only — never persist a Meet for them.
       meet: (s.type === "keynote" || s.type === "talk") ? "" : (s.meet || "").trim(),

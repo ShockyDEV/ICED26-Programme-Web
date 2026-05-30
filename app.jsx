@@ -19,6 +19,21 @@ function isSessionOnline(s) {
   return Array.isArray(s.talks) && s.talks.some((t) => t && t.online);
 }
 
+// ─── YouTube embed helper ─────────────────────────────────────────────────
+// Accepts a bare 11-char video id, a watch URL, a youtu.be link, a /live/ or
+// /embed/ URL, and returns a privacy-friendly nocookie embed URL ("" if none).
+function youtubeEmbed(v) {
+  if (!v) return "";
+  const s = String(v).trim();
+  let id = "";
+  if (/^[\w-]{11}$/.test(s)) id = s;
+  else {
+    const m = s.match(/(?:youtu\.be\/|[?&]v=|\/embed\/|\/live\/)([\w-]{11})/);
+    if (m) id = m[1];
+  }
+  return id ? `https://www.youtube-nocookie.com/embed/${id}` : "";
+}
+
 // ─── Pre-recorded video detection ─────────────────────────────────────────
 // A talk can be a pre-recorded video (played in its slot instead of a live
 // presentation). Marked per talk via talk.video === true, with an optional
@@ -1632,6 +1647,46 @@ function SessionModal({ session, t, lang, now, onClose, favorites, onToggleFavor
             {shareOpen && <SharePopover session={session} t={t} lang={lang} onClose={() => setShareOpen(false)} data={data} />}
           </div>
         </div>
+
+        {session.media && (() => {
+          const m = session.media;
+          const embed = youtubeEmbed(m.video);
+          const intro = (lang === "es" ? m.textEs : m.text) || m.text || "";
+          const lyricsEs = (lang === "es" && m.lyricsEs) ? m.lyricsEs : "";
+          return (
+            <div className="sm-media">
+              {m.heading && <h3 className="sm-media-heading">{m.heading}</h3>}
+              {intro && <p className="sm-media-text">{intro}</p>}
+              {embed && (
+                <div className="sm-media-video">
+                  <iframe
+                    src={embed}
+                    title={m.heading || "Video"}
+                    loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                  />
+                </div>
+              )}
+              {(m.lyrics || lyricsEs) && (
+                <div className="sm-media-lyrics">
+                  <div className="sm-detail-label">{t.lyricsLabel}</div>
+                  <div className="sm-lyrics-cols">
+                    {m.lyrics && <pre className="sm-lyrics-text">{m.lyrics}</pre>}
+                    {lyricsEs && <pre className="sm-lyrics-text sm-lyrics-trans">{lyricsEs}</pre>}
+                  </div>
+                </div>
+              )}
+              {m.image && (
+                <a className="sm-media-image-link" href={safeURL(m.image)} target="_blank" rel="noopener noreferrer">
+                  <img src={m.image} alt={m.heading ? `${m.heading} — ${t.lyricsLabel}` : t.lyricsLabel} className="sm-media-image" loading="lazy" />
+                  <span className="sm-media-image-cap">{t.openImage}</span>
+                </a>
+              )}
+            </div>
+          );
+        })()}
 
         {talks.length > 0 && (
           <div className="sm-talks">

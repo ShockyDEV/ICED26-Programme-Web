@@ -1,7 +1,12 @@
-/* ICED26 Live Programme — palette sampled from official logo */
+/* ICED26 Live Programme — palette sampled from official logo.
+   Colours used as TEXT (type labels, the teal theme subtitle) are tuned to
+   meet WCAG 2.0 AA contrast (>=4.5:1 on the white/cream card backgrounds),
+   following D. Green's accessibility review + the conference's validated
+   accessible palette (brown #6B4E3A 7:1 AAA, orange->#A03D08, no underlined
+   headings — only hyperlinks are underlined). */
 :root {
   --teal:        #5BA9A3;
-  --teal-deep:   #3F8580;
+  --teal-deep:   #2F6E67;  /* darkened for AA text contrast (theme subtitle) */
   --teal-soft:   #C7E0DD;
   --coral:       #E89669;
   --coral-deep:  #D17A4D;
@@ -26,19 +31,21 @@
   --ink-mute:    #8A827C;
   --line:        #E5DDD0;
 
-  /* session-type hues */
-  --t-keynote:       #5BA9A3;  /* teal */
-  --t-symposium:     #6E8FB8;  /* dusty blue */
-  --t-paper:         #9B7A6B;  /* taupe */
-  --t-workshop:      #D9A441;  /* mustard */
-  --t-poster:        #B58FAE;  /* dusty purple */
-  --t-collaborative: #7CA982;  /* sage */
-  --t-talk:          #C66B5A;  /* warm red */
-  --t-doctoral:      #3E8E5A;  /* green (distinct from sage collaborative) */
-  --t-social:        #C188A5;  /* mauve */
-  --t-meeting:       #8A827C;  /* grey */
-  --t-break:         #B0A89E;  /* warm grey */
-  --t-other:         #C188A5;  /* dusty mauve */
+  /* Session-type hues. Darkened from the original logo pastels so they pass
+     WCAG AA (>=4.5:1 on white) when used as the type-label TEXT + stay rich as
+     the card's left stripe/wash. Contrast on #FFF noted per colour. */
+  --t-keynote:       #2C7A73;  /* teal        5.1:1 */
+  --t-symposium:     #3D6193;  /* dusty blue  6.3:1 */
+  --t-paper:         #6B4E3A;  /* brown       7.6:1 (D. Green validated AAA) */
+  --t-workshop:      #8A6410;  /* ochre       5.4:1 (was mustard) */
+  --t-poster:        #79566F;  /* plum        6.2:1 */
+  --t-collaborative: #5F6B2E;  /* olive       5.8:1 (distinct from doctoral) */
+  --t-talk:          #A8443A;  /* warm red    6.0:1 */
+  --t-doctoral:      #2E7D46;  /* green       5.1:1 */
+  --t-social:        #8A4F70;  /* mauve       6.1:1 */
+  --t-meeting:       #66605B;  /* grey        6.2:1 */
+  --t-break:         #756E68;  /* warm grey   5.0:1 */
+  --t-other:         #8A4F70;  /* mauve       6.1:1 */
 
   --shadow-sm: 0 1px 2px rgba(43,39,36,.05), 0 1px 3px rgba(43,39,36,.06);
   --shadow-md: 0 4px 12px rgba(43,39,36,.08), 0 2px 4px rgba(43,39,36,.06);
@@ -2116,6 +2123,64 @@ a { color: inherit; }
   vertical-align: 2px;
   white-space: nowrap;
 }
+/* Special media block (e.g. the Closing Remarks anthem): intro + embedded
+   video + lyrics + score/lyrics image. */
+.sm-media {
+  margin: 4px 28px 0;
+  padding: 16px;
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+.sm-media-heading {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 17px; font-weight: 600;
+  margin: 0 0 6px;
+  color: var(--ink);
+}
+.sm-media-text { margin: 0 0 12px; font-size: 13.5px; line-height: 1.5; color: var(--ink-soft); }
+.sm-media-video {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #000;
+  margin-bottom: 12px;
+}
+.sm-media-video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.sm-media-lyrics { margin-bottom: 12px; }
+.sm-lyrics-cols { display: flex; gap: 18px; flex-wrap: wrap; }
+.sm-lyrics-text {
+  margin: 0;
+  flex: 1 1 220px;
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--ink);
+  white-space: pre-wrap;
+  font-style: italic;
+}
+.sm-lyrics-trans { color: var(--ink-soft); font-style: normal; }
+.sm-media-image-link { display: inline-block; text-decoration: none; }
+.sm-media-image {
+  max-width: 100%;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  display: block;
+}
+.sm-media-image-cap {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 12px;
+  color: var(--teal-deep);
+  text-decoration: underline;
+}
+@media (max-width: 600px) {
+  .sm-media { margin: 4px 20px 0; padding: 12px; }
+  .sm-lyrics-cols { gap: 0; }
+}
+
 /* Per-talk pre-recorded video pill — purple counterpart of .sm-talk-online. */
 .sm-talk-video {
   display: inline-flex;
