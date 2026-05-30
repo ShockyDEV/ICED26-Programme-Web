@@ -1,6 +1,5 @@
-// ICED26 programme — synced from EasyChair, web rules applied 2026-05-30T08:33
-// Rules: no Meet for keynotes/ICED talks/pre-conference; per-room link toggle (rooms[].active); online = per-talk flag and/or session-level flag.
-// Times are Europe/Madrid local. Re-run scripts/sync-programme.js to refresh.
+// ICED26 programme — generated from admin panel 2026-05-30T09-09
+// Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
   "meta": {
@@ -3553,7 +3552,6 @@ window.ICED26_DATA = {
       "meet": "",
       "talks": [
         {
-          "easychair_id": "312008",
           "time": "",
           "title": "No need to reinvent the wheel. How to “transfer” good practices in Higher Education",
           "authors": "Ivo van den Berk, Hovy Katrin",
@@ -3562,7 +3560,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311662",
           "time": "",
           "title": "Rating What Instructors Do: How Framing Impacts Bias in Student Feedback on Teaching",
           "authors": "Claudia Cornejo Happel, Lauren Barbeau, Chad Rohrbacher",
@@ -3571,7 +3568,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311870",
           "time": "",
           "title": "From compliance to organisational learning: How KU Leuven built a living quality culture",
           "authors": "Niki Verschueren",
@@ -3580,7 +3576,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311781",
           "time": "",
           "title": "Underlying Approaches to Assessment in AI Policies in Higher Education. From Control to Agency",
           "authors": "Mònica Feixas, Liana Pirovino, Georgeta Ion",
@@ -3589,7 +3584,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "312019",
           "time": "",
           "title": "From Strategy to Agency. Reimagining assessment and feedback for students learning",
           "authors": "Georgeta Ion, Marilisa Birello",
@@ -3598,7 +3592,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311896",
           "time": "",
           "title": "Confronting the Long Shadow of Ableism: A Comparative Education and Higher Education Policy Analysis of Norway and Spain",
           "authors": "Gagan Chhabra",
@@ -3607,7 +3600,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "312012",
           "time": "",
           "title": "Faculty Members and Conspiracy Theories: Responsibilities, Risks, and Strategies in Higher Education",
           "authors": "Stefan T. Siegel, Eliane Troxler, Martin H. Daumiller",
@@ -3616,26 +3608,19 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311787",
           "time": "",
           "title": "Universitas: achieving a sustainable curricular transformation through collaborative reflection.",
           "authors": "María Iserte, Lourdes Orejana, Guadalupe Pérez",
           "presenter": "María Iserte",
           "abstract": "Engaging students, professors and academic leaders in transforming the curriculum requires models of institutional collaboration that go beyond the impositions prescribed at institutional (macro) level. The project Universitas: profesionales que suman, developed in the last five years, is defined as a process of improvement and in-depth revision of the training offered by our institution to its undergraduate students.\n\nIn this participatory process, the promoters of the project are the Teaching Planning and Improvement Service (SPYMD), attached to the Vice-President’s Office for Teaching, and the Core Curriculum Institute (ICC), which forms part of the Vice-President’s Office for Students. They promote macro-level communication with the centres through their teaching committees (intermediate level), which include the advisory body to the centre’s board of management for issues that affect teaching.\n\nThrough these committees, spaces for reflection and dialogue have been created to define what it means to be good professionals in their specific field (professional identity). In addition, degree curricula have been mapped out to identify any inconsistencies between the expected professional identity and the curricula offered. Through this work, the learning outcomes of each degree have been redefined, as well as their learning model, based on deep reflection on how professors teach and how students learn in each discipline.\n\nIn conclusion, Universitas values the involvement of actors at different institutional levels as an effective driving force to achieve a sustainable curricular transformation in which the University learns and transforms itself through reflection.",
           "keywords": ""
-        },
-        {
-          "easychair_id": "312023",
-          "time": "",
-          "title": "Student Representation as Democratic Learning: Voice, Partnership and Quality in Higher Education",
-          "authors": "Giorgia Pasquali, Giovanna Del Gobbo",
-          "presenter": "Giorgia Pasquali",
-          "abstract": "Student participation has become a central element of European higher education policy, particularly following the emphasis placed by the European Standards and Guidelines for Quality Assurance (ESG, 2015) on the inclusion of students as key actors in decision-making and quality processes. However, in many universities, the transition from formal recognition to effective participation remains partial. Within this context, the University of Florence launched Rappresentiamoci, a participatory action research project designed to strengthen student representation and build a shared culture of informed, democratic engagement. At the University of Florence, approximately three hundred student representatives are elected across all levels of governance, including Study Programmes, Schools, Departments, central bodies such as the Academic Senate and the Board of Directors, and quality assurance structures. Their institutional role is both deliberative and relational: mediate between students, staff, and governance, contribute to quality processes, and support student voices and needs. The project brought students, faculties and administrative staff together as co-researchers, gathering lived experiences, needs and expectations and transforming them into a structured training programme. Findings highlight the need for institutional literacy, communicative competence and shared spaces for deliberation. At the same time, they confirm the educational potential of representation as a site of civic learning, democratic practice and community building, echoing international scholarship on Student Voice and Students Faculty Partnership (Cook-Sather, 2006; Bovill et al., 2011; Fielding, 2004).",
-          "keywords": ""
         }
       ],
       "easychair_session_id": "104880",
-      "description": "Quality, Assessment, Equity and Institutional Change"
+      "description": "Quality, Assessment, Equity and Institutional Change",
+      "cardTitle": "",
+      "onlinePresenter": false,
+      "youtube": ""
     },
     {
       "day": "2026-06-25",
