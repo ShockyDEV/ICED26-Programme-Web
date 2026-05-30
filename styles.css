@@ -1230,6 +1230,10 @@ a { color: inherit; }
 .break-row .b-title { font-weight: 500; }
 .break-row .b-tag { margin-left: auto; font-size: 10px; color: var(--ink-mute); letter-spacing: 0.06em; text-transform: uppercase; flex-shrink: 0; }
 .break-row.is-past { opacity: 0.5; }
+/* Spanning rows that open a modal (e.g. Gala Dinner, Welcome Reception). */
+.break-row.is-clickable { cursor: pointer; transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease; }
+.break-row.is-clickable:hover { border-color: var(--coral); box-shadow: var(--shadow-sm); transform: translateY(-1px); }
+.break-row.is-clickable:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; }
 .break-row.is-live {
   border-style: solid;
   border-color: var(--coral);

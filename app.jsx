@@ -976,15 +976,27 @@ function Grid({ data, dayIdx, buildingId, now, liveStyle, lang, t, onSessionClic
           const state = sessionState(s, now);
           const top = minToY(hmToMinutes(s.start));
           const height = minToY(hmToMinutes(s.end)) - top - 4;
+          // A spanning bar opens its modal when it carries detail (media block,
+          // talks, a Meet/stream link, or it's a social/other event). Plain
+          // coffee/lunch breaks have nothing to show, so they stay static.
+          const clickable = !!onSessionClick && (
+            !!s.media ||
+            (Array.isArray(s.talks) && s.talks.length > 0) ||
+            !!s.meet || !!effectiveYouTube(s, data) ||
+            s.type === "social" || s.type === "other"
+          );
           return (
             <div
               key={`brk-${i}`}
-              className={`break-row is-${state} type-${s.type}`}
+              className={`break-row is-${state} type-${s.type} ${clickable ? "is-clickable" : ""}`}
               style={{
                 top: `${top}px`,
                 height: `${Math.max(height, 32)}px`
               }}
-              role="cell"
+              role={clickable ? "button" : "cell"}
+              tabIndex={clickable ? 0 : undefined}
+              onClick={clickable ? () => onSessionClick(s) : undefined}
+              onKeyDown={clickable ? (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onSessionClick(s); } } : undefined}
               aria-label={`${s.title || t.types[s.type]}, ${s.start} to ${s.end}, ${s.room === "*" ? t.everyRoom : s.roomName}`}>
 
               <span className="b-time">{s.start}–{s.end}</span>
