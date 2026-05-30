@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-05-30T09-09
+// ICED26 programme — generated from admin panel 2026-05-30T09-24
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -604,7 +604,6 @@ window.ICED26_DATA = {
       "meet": "",
       "talks": [
         {
-          "easychair_id": "311665",
           "time": "",
           "title": "Mapping the Scholarship of Academic Development in Germany: A National Snapshot",
           "authors": "Angela Weißköppel, Anita Sekyra, Claudia Bade",
@@ -613,16 +612,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311669",
-          "time": "",
-          "title": "Building SoTL Agency in Norway Through a New National Journal: The Launch of NorSoTL and Its Format-Diverse Model",
-          "authors": "Mirey Alfarah, Anja Møgelvang Jacobsen, Camilla Bjelland, Robert Kordts, Kristine Ludvigsen",
-          "presenter": "Mirey Alfarah",
-          "abstract": "The Norwegian Journal for the Scholarship of Teaching and Learning (NorSoTL) was established in 2025 as a national publication platform designed to strengthen SoTL capacity, visibility, and scholarly agency among university teachers and students in Norwegian and Scandinavian higher education. The journal serves as an academic development initiative by offering an accessible, peer-reviewed arena for disseminating systematic inquiry into teaching and learning practices, thereby contributing to evidence-informed pedagogical development and community knowledge exchange. A distinctive feature of NorSoTL is its format diversity, consisting of Inquiry Articles, Interactive Posters, Thinking Pieces, and Original Ideas, enabling participation from early-stage reflection to more mature research projects. Equally important is the journal’s multilingual publishing policy, allowing authors to submit in Norwegian, Swedish, Danish, or English. This approach lowers the threshold for scholarly publishing by enabling colleagues to write in familiar and comfortable settings using their native language, supports the development of national and regional SoTL dialog, and contributes to the expansion of Scandinavian-language pedagogical research. This poster presents the rationale behind NorSoTL, its format-diverse publishing model, and accessible entry routes work as strategic mechanisms to broaden participation and strengthen SoTL across Norway.",
-          "keywords": ""
-        },
-        {
-          "easychair_id": "311668",
           "time": "",
           "title": "lehrblick.de - a blog to support the professional development of academic developers",
           "authors": "Regine Bachmaier, Birgit Hawelka",
@@ -631,7 +620,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "312020",
           "time": "",
           "title": "Professionalising University Teaching in the European Higher Education Area: A Mixed-Methods European Research",
           "authors": "María-José Rodríguez-Conde, Serena Rivetta, Susana Olmos-Migueláñez",
@@ -640,7 +628,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311791",
           "time": "",
           "title": "Enacting the Hub Function of a Teaching and Learning Center: An Insider Action Research on Faculty Learning Communities",
           "authors": "Kimikazu Sugimori, Mami Kawachi",
@@ -649,7 +636,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311792",
           "time": "",
           "title": "Impact of research in university teaching: Evidence from the REDICE call",
           "authors": "Lissette Fernandez-Nuñez, Ernest Pons-Fanals",
@@ -658,7 +644,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311796",
           "time": "",
           "title": "Data-Driven Agency in Educational Development: Ten Years of CTL at H University",
           "authors": "Kenichi Yamamoto, Rei Kataoka, Yu Tachibana",
@@ -667,7 +652,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311798",
           "time": "",
           "title": "Beyond Faculty Development: The Expanding Roles and Responsibilities of Faculty Development Units in Japanese Universities",
           "authors": "Yoshikazu Takenaka",
@@ -676,7 +660,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "312027",
           "time": "",
           "title": "An Extended Model of Educational Development, Teaching, and Learning that Includes Sessionals",
           "authors": "Brandon Sabourin",
@@ -686,7 +669,10 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104813",
-      "description": "Scholarship, Roles and Professionalisation in Academic Development"
+      "description": "Scholarship, Roles and Professionalisation in Academic Development",
+      "cardTitle": "",
+      "onlinePresenter": false,
+      "youtube": ""
     },
     {
       "day": "2026-06-24",
@@ -3613,6 +3599,14 @@ window.ICED26_DATA = {
           "authors": "María Iserte, Lourdes Orejana, Guadalupe Pérez",
           "presenter": "María Iserte",
           "abstract": "Engaging students, professors and academic leaders in transforming the curriculum requires models of institutional collaboration that go beyond the impositions prescribed at institutional (macro) level. The project Universitas: profesionales que suman, developed in the last five years, is defined as a process of improvement and in-depth revision of the training offered by our institution to its undergraduate students.\n\nIn this participatory process, the promoters of the project are the Teaching Planning and Improvement Service (SPYMD), attached to the Vice-President’s Office for Teaching, and the Core Curriculum Institute (ICC), which forms part of the Vice-President’s Office for Students. They promote macro-level communication with the centres through their teaching committees (intermediate level), which include the advisory body to the centre’s board of management for issues that affect teaching.\n\nThrough these committees, spaces for reflection and dialogue have been created to define what it means to be good professionals in their specific field (professional identity). In addition, degree curricula have been mapped out to identify any inconsistencies between the expected professional identity and the curricula offered. Through this work, the learning outcomes of each degree have been redefined, as well as their learning model, based on deep reflection on how professors teach and how students learn in each discipline.\n\nIn conclusion, Universitas values the involvement of actors at different institutional levels as an effective driving force to achieve a sustainable curricular transformation in which the University learns and transforms itself through reflection.",
+          "keywords": ""
+        },
+        {
+          "time": "",
+          "title": "Building SoTL Agency in Norway Through a New National Journal: The Launch of NorSoTL and Its Format-Diverse Model",
+          "authors": "Mirey Alfarah, Anja Møgelvang Jacobsen, Camilla Bjelland, Robert Kordts, Kristine Ludvigsen",
+          "presenter": "Mirey Alfarah",
+          "abstract": "The Norwegian Journal for the Scholarship of Teaching and Learning (NorSoTL) was established in 2025 as a national publication platform designed to strengthen SoTL capacity, visibility, and scholarly agency among university teachers and students in Norwegian and Scandinavian higher education. The journal serves as an academic development initiative by offering an accessible, peer-reviewed arena for disseminating systematic inquiry into teaching and learning practices, thereby contributing to evidence-informed pedagogical development and community knowledge exchange. A distinctive feature of NorSoTL is its format diversity, consisting of Inquiry Articles, Interactive Posters, Thinking Pieces, and Original Ideas, enabling participation from early-stage reflection to more mature research projects. Equally important is the journal’s multilingual publishing policy, allowing authors to submit in Norwegian, Swedish, Danish, or English. This approach lowers the threshold for scholarly publishing by enabling colleagues to write in familiar and comfortable settings using their native language, supports the development of national and regional SoTL dialog, and contributes to the expansion of Scandinavian-language pedagogical research. This poster presents the rationale behind NorSoTL, its format-diverse publishing model, and accessible entry routes work as strategic mechanisms to broaden participation and strengthen SoTL across Norway.",
           "keywords": ""
         }
       ],
