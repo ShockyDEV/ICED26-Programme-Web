@@ -922,6 +922,31 @@
   margin: 4px 0 12px;
 }
 .form-note strong { color: var(--ink); }
+
+/* "Media especial" collapsible editor (anthem video/lyrics/image). */
+.media-editor {
+  margin: 14px 0 6px;
+  border: 1px solid var(--line, #E5DDD0);
+  border-radius: 8px;
+  padding: 10px 12px;
+  background: var(--cream, #F7F2EA);
+}
+.media-editor > summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13.5px;
+  list-style-position: inside;
+}
+.media-editor[open] > summary { margin-bottom: 8px; }
+.media-editor textarea {
+  width: 100%;
+  font-family: inherit;
+  font-size: 12.5px;
+  padding: 6px 8px;
+  border: 1px solid var(--line, #E5DDD0);
+  border-radius: 6px;
+  resize: vertical;
+}
 .btn-apply {
   background: var(--teal-soft);
   color: var(--teal-deep);

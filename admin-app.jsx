@@ -1427,6 +1427,48 @@ function SessionEditor({ session, isNew, rooms, clusters, days, onSave, onCancel
             </label>
           </Field>
 
+          {(() => {
+            const media = s.media || {};
+            const setMedia = (patch) => {
+              const next = { ...media, ...patch };
+              const hasAny = Object.values(next).some((v) => (v || "").toString().trim());
+              setField("media", hasAny ? next : undefined);
+            };
+            return (
+              <details className="media-editor" open={!!(media.video || media.heading || media.lyrics || media.image)}>
+                <summary>Media especial (vídeo / imagen / letra)</summary>
+                <p className="form-note">
+                  Bloque destacado dentro de la sesión (p. ej. el vídeo + letra del himno en la Clausura).
+                  Deja todo vacío si no aplica.
+                </p>
+                <Field label="Título del bloque" hint="P. ej. «Gaudeamus Igitur».">
+                  <input type="text" value={media.heading || ""} onChange={(e) => setMedia({ heading: e.target.value })}
+                    placeholder="Vacío = sin bloque" />
+                </Field>
+                <Field label="Enlace del vídeo (YouTube)" hint="Se incrusta el reproductor. Acepta enlace de YouTube, youtu.be o el ID.">
+                  <input type="url" value={media.video || ""} onChange={(e) => setMedia({ video: e.target.value })}
+                    placeholder="https://www.youtube.com/watch?v=XXXXXXXXXXX" />
+                </Field>
+                <Field label="Texto introductorio (EN)">
+                  <textarea rows={2} value={media.text || ""} onChange={(e) => setMedia({ text: e.target.value })} />
+                </Field>
+                <Field label="Texto introductorio (ES)">
+                  <textarea rows={2} value={media.textEs || ""} onChange={(e) => setMedia({ textEs: e.target.value })} />
+                </Field>
+                <Field label="Letra (original)" hint="Se muestra respetando los saltos de línea.">
+                  <textarea rows={6} value={media.lyrics || ""} onChange={(e) => setMedia({ lyrics: e.target.value })} />
+                </Field>
+                <Field label="Letra (traducción ES)" hint="Opcional: se muestra junto a la original cuando el idioma es español.">
+                  <textarea rows={6} value={media.lyricsEs || ""} onChange={(e) => setMedia({ lyricsEs: e.target.value })} />
+                </Field>
+                <Field label="Imagen (ruta en el repo)" hint="P. ej. «assets/gaudeamus-igitur.jpg». Súbela al repo en /assets.">
+                  <input type="text" value={media.image || ""} onChange={(e) => setMedia({ image: e.target.value })}
+                    placeholder="assets/archivo.jpg" />
+                </Field>
+              </details>
+            );
+          })()}
+
           <TalksEditor
             talks={s.talks || []}
             onChange={(talks) => setField("talks", talks)}
