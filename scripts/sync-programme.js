@@ -169,6 +169,17 @@ function parseDay(html, day) {
       : "";
     const roomName = roomMatch ? collapseWs(decode(roomMatch[1])) : null;
 
+    // Session chair (moderator). EasyChair markup:
+    //   <div class="session_chair"><div class="chair_word">Chair: </div>
+    //     <div class="chair_names"><a class="person">Name</a>, …</div></div>
+    let chair = "";
+    const chairBlock = block.match(/<div class="chair_names">([\s\S]*?)<\/div>/);
+    if (chairBlock) {
+      const names = [...chairBlock[1].matchAll(/<a[^>]*>([^<]+)<\/a>/g)]
+        .map((mm) => collapseWs(decode(mm[1]))).filter(Boolean);
+      chair = names.length ? names.join(", ") : collapseWs(decode(stripTags(chairBlock[1])));
+    }
+
     const talks = [];
     const talkRe = /<tr class="talk">([\s\S]*?)<\/tr>/g;
     let tm;
@@ -186,6 +197,7 @@ function parseDay(html, day) {
       title: shortTitle(fullName),
       description,
       roomName,
+      chair,
       type: detectType(fullName),
       talks
     });
@@ -407,6 +419,13 @@ async function main() {
       talks: ec.talks,
       easychair_session_id: ec.easychair_session_id
     };
+    // Chair (moderator). Workshops + collaborative spaces never show one, even
+    // if EasyChair lists it. Otherwise prefer the freshly-scraped chair, then
+    // fall back to any manually-entered chair from the existing data.
+    if (ec.type !== "workshop" && ec.type !== "collaborative") {
+      const chairVal = (ec.chair || (existing && existing.chair) || "").trim();
+      if (chairVal) next.chair = chairVal;
+    }
     if (ec.description) next.description = ec.description;
     // Preserve the admin-set card-title override across syncs (the per-session
     // title shown on the public card, set in the backstage session editor).

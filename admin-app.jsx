@@ -1284,6 +1284,7 @@ function SessionEditor({ session, isNew, rooms, clusters, days, onSave, onCancel
       title: s.title.trim(),
       fullName: (s.fullName || "").trim(),
       cardTitle: (s.cardTitle || "").trim(),
+      chair: (s.chair || "").trim(),
       onlinePresenter: !!s.onlinePresenter,
       // Keynotes & ICED talks are YouTube-only — never persist a Meet for them.
       meet: (s.type === "keynote" || s.type === "talk") ? "" : (s.meet || "").trim(),
@@ -1373,6 +1374,12 @@ function SessionEditor({ session, isNew, rooms, clusters, days, onSave, onCancel
 
           <Field label="Nombre completo (opcional)" hint="P. ej. «Session 4: Keynote with Ruth Graham». Solo se usa en búsqueda.">
             <input type="text" value={s.fullName || ""} onChange={(e) => setField("fullName", e.target.value)} />
+          </Field>
+
+          <Field label="Chair / Moderador/a (opcional)"
+            hint="Modera la sesión. Se muestra en la card y en el detalle. Talleres y espacios colaborativos no llevan chair.">
+            <input type="text" value={s.chair || ""} onChange={(e) => setField("chair", e.target.value)}
+              placeholder="P. ej. Ariane Dumont" />
           </Field>
 
           {s.type === "keynote" || s.type === "talk" ? (

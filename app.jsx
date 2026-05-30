@@ -250,7 +250,8 @@ const I18N = {
     videoTitle: "Pre-recorded video",
     videoDesc: "One or more presentations in this session are pre-recorded videos, played during their time slot.",
     videoTalk: "Pre-recorded video",
-    watchVideo: "Watch video"
+    watchVideo: "Watch video",
+    chairLabel: "Chair:"
   },
   es: {
     subtitle: "Salamanca · 23–26 junio 2026",
@@ -313,7 +314,8 @@ const I18N = {
     videoTitle: "Vídeo pregrabado",
     videoDesc: "Una o más ponencias de esta sesión son vídeos pregrabados, reproducidos en su franja horaria.",
     videoTalk: "Vídeo pregrabado",
-    watchVideo: "Ver vídeo"
+    watchVideo: "Ver vídeo",
+    chairLabel: "Modera:"
   }
 };
 
@@ -922,6 +924,9 @@ function Grid({ data, dayIdx, buildingId, now, liveStyle, lang, t, onSessionClic
                     <div className="c-title">{s.title}</div>
                     <OfficialTitle session={s} className="c-official" t={t} />
                     <div className="c-foot">
+                      {s.chair && (
+                        <div className="c-chair"><span className="c-chair-label">{t.chairLabel}</span> {s.chair}</div>
+                      )}
                       {dur > 60 && s.talks && s.talks.length > 0 &&
                       <div className="c-talks-count">{s.talks.length} {lang === "es" ? "contribuciones" : "contributions"}</div>
                       }
@@ -1018,6 +1023,7 @@ function MobileList({ data, dayIdx, buildingId, now, lang, t, onSessionClick, fa
                   </div>
                   <div className="m-title">{s.title}</div>
                   <OfficialTitle session={s} className="m-official" t={t} />
+                  {s.chair && <div className="m-chair"><span className="c-chair-label">{t.chairLabel}</span> {s.chair}</div>}
                   <div className="m-meta">
                     {s.start}–{s.end}
                     {s.talks && s.talks.length > 0 && ` · ${s.talks.length} ${lang === "es" ? "contribuciones" : "contributions"}`}
@@ -1532,6 +1538,12 @@ function SessionModal({ session, t, lang, now, onClose, favorites, onToggleFavor
               {buildingName && <span className="sm-building"> · {buildingName}</span>}
             </span>
           </div>
+          {session.chair && (
+            <div className="sm-meta-row">
+              <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><circle cx="10" cy="6.5" r="3" /><path d="M4 16c0-3 2.7-5 6-5s6 2 6 5" /></svg>
+              <span><span className="muted">{t.chairLabel}</span> <strong>{session.chair}</strong></span>
+            </div>
+          )}
         </div>
 
         {(() => {

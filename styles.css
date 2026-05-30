@@ -899,6 +899,21 @@ a { color: inherit; }
   color: var(--ink-mute);
   font-style: italic;
 }
+/* Session chair (moderator) — small line in the card foot. */
+.cell .c-chair {
+  font-size: 10px;
+  color: var(--ink-soft);
+  line-height: 1.25;
+  margin-bottom: 1px;
+  overflow: hidden;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;
+}
+.c-chair-label { color: var(--ink-mute); font-weight: 600; }
+/* Hide the chair on heavily side-by-side overlapped slots to save room. */
+.cell.sub-of-4 .c-chair, .cell.sub-of-5 .c-chair,
+.cell.sub-of-6 .c-chair, .cell.sub-of-7 .c-chair, .cell.sub-of-8 .c-chair,
+.cell.sub-of-9 .c-chair, .cell.sub-of-10 .c-chair, .cell.sub-of-11 .c-chair,
+.cell.sub-of-12 .c-chair, .cell.sub-of-13 .c-chair, .cell.sub-of-14 .c-chair { display: none; }
 .cell .c-type {
   font-size: 9px;
   letter-spacing: 0.06em;
@@ -1347,6 +1362,7 @@ a { color: inherit; }
 }
 .mobile-cell .m-title { font-size: 14px; font-weight: 600; margin: 4px 0 2px; }
 .mobile-cell .m-official { font-size: 13.5px; font-weight: 500; color: var(--teal-deep); line-height: 1.25; margin: 0 0 3px; }
+.mobile-cell .m-chair { font-size: 12px; color: var(--ink-soft); margin: 0 0 2px; }
 .mobile-cell .m-meta { font-size: 12px; color: var(--ink-soft); }
 .mobile-cell.is-past { opacity: 0.6; background: var(--cream-deep); }
 .mobile-cell.is-live { border-color: var(--coral); box-shadow: 0 0 0 2px rgba(232,150,105,0.25); }

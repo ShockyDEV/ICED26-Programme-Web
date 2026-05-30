@@ -536,7 +536,8 @@ window.ICED26_DATA = {
       "type": "keynote",
       "meet": "",
       "talks": [],
-      "easychair_session_id": "104801"
+      "easychair_session_id": "104801",
+      "chair": "Ariane Dumont"
     },
     {
       "day": "2026-06-24",
@@ -579,7 +580,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "104814"
+      "easychair_session_id": "104814",
+      "chair": "Catherine Bovill"
     },
     {
       "day": "2026-06-24",
@@ -663,7 +665,8 @@ window.ICED26_DATA = {
       "description": "Scholarship, Roles and Professionalisation in Academic Development",
       "cardTitle": "",
       "onlinePresenter": false,
-      "youtube": ""
+      "youtube": "",
+      "chair": "Adriana Gamazo"
     },
     {
       "day": "2026-06-24",
@@ -721,7 +724,8 @@ window.ICED26_DATA = {
       ],
       "easychair_session_id": "104804",
       "description": "Human Literacy, Future Skills and Competency-based Education",
-      "youtube": ""
+      "youtube": "",
+      "chair": "Markus Weil"
     },
     {
       "day": "2026-06-24",
@@ -779,7 +783,8 @@ window.ICED26_DATA = {
       ],
       "easychair_session_id": "104803",
       "description": "Teaching Reward Systems; Teaching Excellence Frameworks; Career Paths for University Teachers",
-      "youtube": ""
+      "youtube": "",
+      "chair": "Manuel João Costa"
     },
     {
       "day": "2026-06-24",
@@ -832,7 +837,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104809",
-      "description": "Decolonial, Intercultural and Inclusive Approaches to Student Agency"
+      "description": "Decolonial, Intercultural and Inclusive Approaches to Student Agency",
+      "chair": "Joelyn de Lima"
     },
     {
       "day": "2026-06-24",
@@ -894,7 +900,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104807",
-      "description": "International Partnerships, Global Competence and COIL"
+      "description": "International Partnerships, Global Competence and COIL",
+      "chair": "Georgeta Ion"
     },
     {
       "day": "2026-06-24",
@@ -957,7 +964,8 @@ window.ICED26_DATA = {
       ],
       "easychair_session_id": "104810",
       "description": "Developing Trust, Care and Collegiality",
-      "onlinePresenter": true
+      "onlinePresenter": true,
+      "chair": "Elena Quevedo Torrientes"
     },
     {
       "day": "2026-06-24",
@@ -1020,7 +1028,8 @@ window.ICED26_DATA = {
       ],
       "easychair_session_id": "104806",
       "description": "Teaching with AI, Digital Simulation Skills and Responsible Innovation",
-      "onlinePresenter": true
+      "onlinePresenter": true,
+      "chair": "Bernhard Lange"
     },
     {
       "day": "2026-06-24",
@@ -1074,7 +1083,8 @@ window.ICED26_DATA = {
       ],
       "easychair_session_id": "106947",
       "description": "Enhancing Teaching through Collaborative and Research-Based Approaches",
-      "onlinePresenter": true
+      "onlinePresenter": true,
+      "chair": "Robert Pardo"
     },
     {
       "day": "2026-06-24",
@@ -1137,7 +1147,8 @@ window.ICED26_DATA = {
       ],
       "easychair_session_id": "104805",
       "description": "Educational Developers' Roles, TLC's Roles and AD Leadership",
-      "onlinePresenter": true
+      "onlinePresenter": true,
+      "chair": "Björn Kjellgren"
     },
     {
       "day": "2026-06-24",
@@ -1199,7 +1210,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104808",
-      "description": "Designing Educational Development; Empowering Faculty Agency"
+      "description": "Designing Educational Development; Empowering Faculty Agency",
+      "chair": "Belinda Ommering"
     },
     {
       "day": "2026-06-24",
@@ -1261,7 +1273,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104811",
-      "description": "AI, Ethics and the Future of Academic Development"
+      "description": "AI, Ethics and the Future of Academic Development",
+      "chair": "Laura de Groot"
     },
     {
       "day": "2026-06-24",
@@ -1286,7 +1299,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "104815"
+      "easychair_session_id": "104815",
+      "chair": "María Asunción Pérez Pascual"
     },
     {
       "day": "2026-06-24",
@@ -1348,7 +1362,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104812",
-      "description": "Alliances, Networking and Policy Development"
+      "description": "Alliances, Networking and Policy Development",
+      "chair": "Kata Dosa"
     },
     {
       "day": "2026-06-24",
@@ -1701,7 +1716,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "105630",
-      "description": "Collaborative Academic Development and Teaching Communities"
+      "description": "Collaborative Academic Development and Teaching Communities",
+      "chair": "Anna Santucci"
     },
     {
       "day": "2026-06-24",
@@ -1760,7 +1776,8 @@ window.ICED26_DATA = {
       "meet": "",
       "talks": [],
       "easychair_session_id": "104802",
-      "onlinePresenter": true
+      "onlinePresenter": true,
+      "chair": "Kasturi Behari-Leak"
     },
     {
       "day": "2026-06-24",
@@ -1908,7 +1925,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "106466",
-      "description": "Agency, Identity and Professional Learning"
+      "description": "Agency, Identity and Professional Learning",
+      "chair": "Helga Dorner"
     },
     {
       "day": "2026-06-24",
@@ -2212,7 +2230,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "105588",
-      "description": "Student agency, Partnership and shared Power"
+      "description": "Student agency, Partnership and shared Power",
+      "chair": "Claudia Cornejo Happel"
     },
     {
       "day": "2026-06-24",
@@ -2573,7 +2592,8 @@ window.ICED26_DATA = {
       "easychair_session_id": "106482",
       "cardTitle": "",
       "onlinePresenter": false,
-      "youtube": ""
+      "youtube": "",
+      "chair": "Amparo Fernández March, Elena Quevedo Torrientes"
     },
     {
       "day": "2026-06-25",
@@ -2598,7 +2618,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105603"
+      "easychair_session_id": "105603",
+      "chair": "Gabriela Pleschova"
     },
     {
       "day": "2026-06-25",
@@ -2641,7 +2662,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "104868"
+      "easychair_session_id": "104868",
+      "chair": "Ariane Dumont"
     },
     {
       "day": "2026-06-25",
@@ -2739,7 +2761,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104864",
-      "description": "Student Agency, Belonging and Support"
+      "description": "Student Agency, Belonging and Support",
+      "chair": "Sabrina Gallner"
     },
     {
       "day": "2026-06-25",
@@ -2801,7 +2824,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104854",
-      "description": "Assessment, Feedback and Agency in Higher Education"
+      "description": "Assessment, Feedback and Agency in Higher Education",
+      "chair": "Marina Harvey"
     },
     {
       "day": "2026-06-25",
@@ -2863,7 +2887,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104855",
-      "description": "Self-Regulation, Critical Thinking and Reflection in HE, STEM"
+      "description": "Self-Regulation, Critical Thinking and Reflection in HE, STEM",
+      "chair": "Claudia Bade"
     },
     {
       "day": "2026-06-25",
@@ -2926,7 +2951,8 @@ window.ICED26_DATA = {
       ],
       "easychair_session_id": "104859",
       "description": "Novice Teachers, Academic Induction and Conceptual Change",
-      "onlinePresenter": true
+      "onlinePresenter": true,
+      "chair": "Iwona Maciejowska"
     },
     {
       "day": "2026-06-25",
@@ -2989,7 +3015,8 @@ window.ICED26_DATA = {
       ],
       "easychair_session_id": "104860",
       "description": "Epistemic Agency, Research Engagement and Scholarly Teaching",
-      "onlinePresenter": true
+      "onlinePresenter": true,
+      "chair": "Robert Eaton"
     },
     {
       "day": "2026-06-25",
@@ -3052,7 +3079,8 @@ window.ICED26_DATA = {
       ],
       "easychair_session_id": "104858",
       "description": "PhD Student Agency, Doctoral Supervision, writing SoTL",
-      "onlinePresenter": true
+      "onlinePresenter": true,
+      "chair": "Kunihiko Takamatsu"
     },
     {
       "day": "2026-06-25",
@@ -3115,7 +3143,8 @@ window.ICED26_DATA = {
       ],
       "easychair_session_id": "104857",
       "description": "Wellbeing, Belonging and Mindfulness in Academic Development",
-      "onlinePresenter": true
+      "onlinePresenter": true,
+      "chair": "Iris Capdevila"
     },
     {
       "day": "2026-06-25",
@@ -3178,7 +3207,8 @@ window.ICED26_DATA = {
       ],
       "easychair_session_id": "104862",
       "description": "Impact, Evaluation and Transfer of Academic Development",
-      "onlinePresenter": true
+      "onlinePresenter": true,
+      "chair": "Ted Murcray"
     },
     {
       "day": "2026-06-25",
@@ -3240,7 +3270,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104861",
-      "description": "Portfolios, Diaries, Reflective Writing and Teacher Identity"
+      "description": "Portfolios, Diaries, Reflective Writing and Teacher Identity",
+      "chair": "Lori Goff"
     },
     {
       "day": "2026-06-25",
@@ -3302,7 +3333,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104856",
-      "description": "Student-Staff Partnerships, Justice-Oriented Learning and Transformative Curriculum"
+      "description": "Student-Staff Partnerships, Justice-Oriented Learning and Transformative Curriculum",
+      "chair": "Roland Tormey"
     },
     {
       "day": "2026-06-25",
@@ -3327,7 +3359,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105602"
+      "easychair_session_id": "105602",
+      "chair": "Carl S. Moore"
     },
     {
       "day": "2026-06-25",
@@ -3352,7 +3385,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105604"
+      "easychair_session_id": "105604",
+      "chair": "Elisa Bone"
     },
     {
       "day": "2026-06-25",
@@ -3415,7 +3449,8 @@ window.ICED26_DATA = {
       ],
       "easychair_session_id": "104863",
       "description": "Educational Leadership, Strategic Change and Faculty Development",
-      "onlinePresenter": true
+      "onlinePresenter": true,
+      "chair": "Angelika Thielsch"
     },
     {
       "day": "2026-06-25",
@@ -3448,7 +3483,8 @@ window.ICED26_DATA = {
       "type": "keynote",
       "meet": "",
       "talks": [],
-      "easychair_session_id": "104869"
+      "easychair_session_id": "104869",
+      "chair": "Robert Pardo"
     },
     {
       "day": "2026-06-25",
@@ -3473,7 +3509,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "104882"
+      "easychair_session_id": "104882",
+      "chair": "Helen King"
     },
     {
       "day": "2026-06-25",
@@ -3525,7 +3562,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "104884"
+      "easychair_session_id": "104884",
+      "chair": "Mary Wright"
     },
     {
       "day": "2026-06-25",
@@ -3617,7 +3655,8 @@ window.ICED26_DATA = {
       "description": "Quality, Assessment, Equity and Institutional Change",
       "cardTitle": "",
       "onlinePresenter": false,
-      "youtube": ""
+      "youtube": "",
+      "chair": "Pia Scherrer"
     },
     {
       "day": "2026-06-25",
@@ -3679,7 +3718,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104871",
-      "description": "Students as Partners in Academic Development: Agency, Co-Research and Activism"
+      "description": "Students as Partners in Academic Development: Agency, Co-Research and Activism",
+      "chair": "Ashli Tomisich"
     },
     {
       "day": "2026-06-25",
@@ -3742,7 +3782,8 @@ window.ICED26_DATA = {
       ],
       "easychair_session_id": "104878",
       "description": "Student Feedback, Peer Feedback and inclusive AD",
-      "onlinePresenter": true
+      "onlinePresenter": true,
+      "chair": "Elisabeth Moyano"
     },
     {
       "day": "2026-06-25",
@@ -3805,7 +3846,8 @@ window.ICED26_DATA = {
       ],
       "easychair_session_id": "104876",
       "description": "Inclusive Higher Education, Student Agency and Social Justice",
-      "onlinePresenter": true
+      "onlinePresenter": true,
+      "chair": "Reya Saliba"
     },
     {
       "day": "2026-06-25",
@@ -3868,7 +3910,8 @@ window.ICED26_DATA = {
       ],
       "easychair_session_id": "104870",
       "description": "Strategy, Sustainability and Organizational Transformation",
-      "onlinePresenter": true
+      "onlinePresenter": true,
+      "chair": "Anja Pawelleck"
     },
     {
       "day": "2026-06-25",
@@ -3931,7 +3974,8 @@ window.ICED26_DATA = {
       ],
       "easychair_session_id": "104879",
       "description": "Understanding University Teachers, enhancing Teachers Agency",
-      "onlinePresenter": true
+      "onlinePresenter": true,
+      "chair": "Hussein Zeidan"
     },
     {
       "day": "2026-06-25",
@@ -3994,7 +4038,8 @@ window.ICED26_DATA = {
       ],
       "easychair_session_id": "104874",
       "description": "Research on Teaching Methods; High-Impact-Practices (HIP); Researcher Agency",
-      "onlinePresenter": true
+      "onlinePresenter": true,
+      "chair": "Quincy Elvira"
     },
     {
       "day": "2026-06-25",
@@ -4057,7 +4102,8 @@ window.ICED26_DATA = {
       ],
       "easychair_session_id": "104875",
       "description": "Fostering Professional Growth and Resilience; Change Labs",
-      "onlinePresenter": true
+      "onlinePresenter": true,
+      "chair": "Mary Wilson"
     },
     {
       "day": "2026-06-25",
@@ -4119,7 +4165,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104873",
-      "description": "Storytelling, Narratives, Writing and Reflective AD"
+      "description": "Storytelling, Narratives, Writing and Reflective AD",
+      "chair": "Karin Brown"
     },
     {
       "day": "2026-06-25",
@@ -4181,7 +4228,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104877",
-      "description": "Knowledge Practices, Research Methods in AD and Data-Driven Capacity Development"
+      "description": "Knowledge Practices, Research Methods in AD and Data-Driven Capacity Development",
+      "chair": "Stefan T. Siegel"
     },
     {
       "day": "2026-06-25",
@@ -4206,7 +4254,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "104881"
+      "easychair_session_id": "104881",
+      "chair": "Milagros Castillo-Montoya"
     },
     {
       "day": "2026-06-25",
@@ -4294,7 +4343,8 @@ window.ICED26_DATA = {
       ],
       "easychair_session_id": "104872",
       "description": "Mapping Student Agency, Critical Pedagogy and Trust-building",
-      "onlinePresenter": true
+      "onlinePresenter": true,
+      "chair": "Rick Huizinga"
     },
     {
       "day": "2026-06-25",
@@ -4327,7 +4377,8 @@ window.ICED26_DATA = {
       "type": "keynote",
       "meet": "",
       "talks": [],
-      "easychair_session_id": "104885"
+      "easychair_session_id": "104885",
+      "chair": "Mònica Feixas"
     },
     {
       "day": "2026-06-25",
@@ -4448,7 +4499,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "106467",
-      "description": "Networks, Partnerships and Collaborative Academic Development"
+      "description": "Networks, Partnerships and Collaborative Academic Development",
+      "chair": "Laura Cruz"
     },
     {
       "day": "2026-06-25",
@@ -4745,7 +4797,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "105598",
-      "description": "Academic selves, Emotions and Reflective Professional Identity"
+      "description": "Academic selves, Emotions and Reflective Professional Identity",
+      "chair": "Carl S. Moore"
     },
     {
       "day": "2026-06-25",
@@ -5139,7 +5192,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "106074",
-      "description": "AI, Academic Integrity and Reflective Learning Design"
+      "description": "AI, Academic Integrity and Reflective Learning Design",
+      "chair": "Maria Larsson"
     },
     {
       "day": "2026-06-25",
@@ -5814,7 +5868,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "105614",
-      "description": "Strategic Change, Curriculum Enhancement and Faculty Development"
+      "description": "Strategic Change, Curriculum Enhancement and Faculty Development",
+      "chair": "Svenja Kaduk"
     },
     {
       "day": "2026-06-26",
@@ -5882,7 +5937,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "107384"
+      "easychair_session_id": "107384",
+      "chair": "Björn Kiehne"
     },
     {
       "day": "2026-06-26",
@@ -5979,7 +6035,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105673"
+      "easychair_session_id": "105673",
+      "chair": "Greig Krull"
     },
     {
       "day": "2026-06-26",
@@ -6032,7 +6089,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "105674",
-      "description": "Networks, Teaching Quality and Professional Standards Frameworks"
+      "description": "Networks, Teaching Quality and Professional Standards Frameworks",
+      "chair": "Maria José Canet Subiela"
     },
     {
       "day": "2026-06-26",
@@ -6085,7 +6143,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "105675",
-      "description": "Faculty Growth, Career Trajectories and Professional Development"
+      "description": "Faculty Growth, Career Trajectories and Professional Development",
+      "chair": "Velibor Mladenovici"
     },
     {
       "day": "2026-06-26",
@@ -6148,7 +6207,8 @@ window.ICED26_DATA = {
       ],
       "easychair_session_id": "105680",
       "description": "Researching Teaching Methods: Active Learning; Research-based teaching and Improvisational Methods",
-      "onlinePresenter": true
+      "onlinePresenter": true,
+      "chair": "Macarena Trujillo Guillén"
     },
     {
       "day": "2026-06-26",
@@ -6202,7 +6262,8 @@ window.ICED26_DATA = {
       ],
       "easychair_session_id": "105677",
       "description": "Teacher Education; Epistemic and Reflective Agency; enhancing English-Language course design",
-      "onlinePresenter": true
+      "onlinePresenter": true,
+      "chair": "Fernando Marhuenda Fluixá"
     },
     {
       "day": "2026-06-26",
@@ -6265,7 +6326,8 @@ window.ICED26_DATA = {
       ],
       "easychair_session_id": "105681",
       "description": "Strategic and Innovative Practices in Education and Academic Development",
-      "onlinePresenter": true
+      "onlinePresenter": true,
+      "chair": "Claire Hamshire"
     },
     {
       "day": "2026-06-26",
@@ -6328,7 +6390,8 @@ window.ICED26_DATA = {
       ],
       "easychair_session_id": "105678",
       "description": "Mentoring, Peer Learning and Teaching Consultation",
-      "onlinePresenter": true
+      "onlinePresenter": true,
+      "chair": "Claudia Bade"
     },
     {
       "day": "2026-06-26",
@@ -6391,7 +6454,8 @@ window.ICED26_DATA = {
       ],
       "easychair_session_id": "105676",
       "description": "Graduate Student Partnership; Department-level Capacity Building and Transformative AD",
-      "onlinePresenter": true
+      "onlinePresenter": true,
+      "chair": "Alba Madinabeitia Ezkurra"
     },
     {
       "day": "2026-06-26",
@@ -6453,7 +6517,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "105682",
-      "description": "Teaching in the AI Era: Faculty and Educational Developers Perspectives"
+      "description": "Teaching in the AI Era: Faculty and Educational Developers Perspectives",
+      "chair": "Amrita Narang"
     },
     {
       "day": "2026-06-26",
@@ -6515,7 +6580,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "105679",
-      "description": "Strategic Leadership, Policy and Organizational Capacity Building"
+      "description": "Strategic Leadership, Policy and Organizational Capacity Building",
+      "chair": "Deandra Little"
     },
     {
       "day": "2026-06-26",
@@ -6540,7 +6606,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105686"
+      "easychair_session_id": "105686",
+      "chair": "David Lohner"
     },
     {
       "day": "2026-06-26",
@@ -6565,7 +6632,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105685"
+      "easychair_session_id": "105685",
+      "chair": "Miriam Hansen"
     },
     {
       "day": "2026-06-26",
@@ -6591,7 +6659,8 @@ window.ICED26_DATA = {
           "online": true
         }
       ],
-      "easychair_session_id": "105687"
+      "easychair_session_id": "105687",
+      "chair": "Klara Bolander Laksov"
     },
     {
       "day": "2026-06-26",
@@ -6606,7 +6675,8 @@ window.ICED26_DATA = {
       "type": "keynote",
       "meet": "",
       "talks": [],
-      "easychair_session_id": "105689"
+      "easychair_session_id": "105689",
+      "chair": "Idoia Fernandez, Ariane Dumont"
     },
     {
       "day": "2026-06-26",
