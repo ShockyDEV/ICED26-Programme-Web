@@ -5233,7 +5233,15 @@ window.ICED26_DATA = {
       "type": "social",
       "meet": "",
       "talks": [],
-      "easychair_session_id": "105640"
+      "easychair_session_id": "105640",
+      "media": {
+        "type": "venue",
+        "heading": "Casino de Salamanca",
+        "text": "The conference Gala Dinner takes place at the Casino de Salamanca, housed in the Renaissance Palacio de Figueroa in the heart of the old town. Join us for an evening of dinner, music and good company to celebrate together. Address: Calle Zamora 15, 37002 Salamanca.",
+        "textEs": "La Cena de Gala del congreso se celebra en el Casino de Salamanca, en el renacentista Palacio de Figueroa, en pleno casco histórico. Os esperamos para una velada de cena, música y buena compañía para celebrar juntos. Dirección: Calle Zamora 15, 37002 Salamanca.",
+        "map": "Casino de Salamanca, Palacio de Figueroa, Calle Zamora 15, 37002 Salamanca",
+        "website": "https://www.casinodesalamanca.es"
+      }
     },
     {
       "day": "2026-06-26",

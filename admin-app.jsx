@@ -1435,7 +1435,7 @@ function SessionEditor({ session, isNew, rooms, clusters, days, onSave, onCancel
               setField("media", hasAny ? next : undefined);
             };
             return (
-              <details className="media-editor" open={!!(media.video || media.heading || media.lyrics || media.image)}>
+              <details className="media-editor" open={!!(media.video || media.heading || media.lyrics || media.image || media.map || media.website)}>
                 <summary>Media especial (vídeo / imagen / letra)</summary>
                 <p className="form-note">
                   Bloque destacado dentro de la sesión (p. ej. el vídeo + letra del himno en la Clausura).

@@ -34,6 +34,23 @@ function youtubeEmbed(v) {
   return id ? `https://www.youtube-nocookie.com/embed/${id}` : "";
 }
 
+// ─── Google Maps embed helper ─────────────────────────────────────────────
+// Accepts a full Google-Maps embed/output=embed URL (used as-is) or a plain
+// place/address query, and returns a keyless embeddable Maps URL ("" if none).
+function mapEmbed(v) {
+  if (!v) return "";
+  const s = String(v).trim();
+  if (/^https?:\/\/.*output=embed/i.test(s) || /\/maps\/embed/i.test(s)) return s;
+  return "https://maps.google.com/maps?q=" + encodeURIComponent(s) + "&z=16&output=embed";
+}
+// Plain (non-embed) Maps link for the "open in Google Maps" button.
+function mapLink(v) {
+  if (!v) return "";
+  const s = String(v).trim();
+  if (/^https?:\/\//i.test(s)) return s;
+  return "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(s);
+}
+
 // ─── Pre-recorded video detection ─────────────────────────────────────────
 // A talk can be a pre-recorded video (played in its slot instead of a live
 // presentation). Marked per talk via talk.video === true, with an optional
@@ -1683,6 +1700,33 @@ function SessionModal({ session, t, lang, now, onClose, favorites, onToggleFavor
                   <img src={m.image} alt={m.heading ? `${m.heading} — ${t.lyricsLabel}` : t.lyricsLabel} className="sm-media-image" loading="lazy" />
                   <span className="sm-media-image-cap">{t.openImage}</span>
                 </a>
+              )}
+              {m.map && (
+                <div className="sm-media-map">
+                  <iframe
+                    src={mapEmbed(m.map)}
+                    title={m.heading || "Map"}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    allowFullScreen
+                  />
+                </div>
+              )}
+              {(m.website || m.map) && (
+                <div className="sm-media-links">
+                  {m.website && (
+                    <a className="sm-media-link" href={safeURL(m.website)} target="_blank" rel="noopener noreferrer">
+                      <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><circle cx="10" cy="10" r="7.5"/><path d="M2.5 10h15M10 2.5c2.5 2.6 2.5 12.4 0 15M10 2.5c-2.5 2.6-2.5 12.4 0 15"/></svg>
+                      <span>{t.visitWebsite}</span>
+                    </a>
+                  )}
+                  {m.map && (
+                    <a className="sm-media-link" href={mapLink(m.map)} target="_blank" rel="noopener noreferrer">
+                      <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M10 18s6-5.3 6-10A6 6 0 0 0 4 8c0 4.7 6 10 6 10z"/><circle cx="10" cy="8" r="2.2"/></svg>
+                      <span>{t.getDirections}</span>
+                    </a>
+                  )}
+                </div>
               )}
             </div>
           );
