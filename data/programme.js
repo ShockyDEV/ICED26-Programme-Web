@@ -1,5 +1,5 @@
-// ICED26 programme — synced from EasyChair, web rules applied 2026-05-29T17:10
-// Rules: no Meet for keynotes/ICED talks/pre-conference; per-room link toggle (rooms[].active); online is per-talk.
+// ICED26 programme — synced from EasyChair, web rules applied 2026-05-30T08:33
+// Rules: no Meet for keynotes/ICED talks/pre-conference; per-room link toggle (rooms[].active); online = per-talk flag and/or session-level flag.
 // Times are Europe/Madrid local. Re-run scripts/sync-programme.js to refresh.
 
 window.ICED26_DATA = {
@@ -980,7 +980,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104810",
-      "description": "Developing Trust, Care and Collegiality"
+      "description": "Developing Trust, Care and Collegiality",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-24",
@@ -1042,7 +1043,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104806",
-      "description": "Teaching with AI, Digital Simulation Skills and Responsible Innovation"
+      "description": "Teaching with AI, Digital Simulation Skills and Responsible Innovation",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-24",
@@ -1095,7 +1097,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "106947",
-      "description": "Enhancing Teaching through Collaborative and Research-Based Approaches"
+      "description": "Enhancing Teaching through Collaborative and Research-Based Approaches",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-24",
@@ -1157,7 +1160,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104805",
-      "description": "Educational Developers' Roles, TLC's Roles and AD Leadership"
+      "description": "Educational Developers' Roles, TLC's Roles and AD Leadership",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-24",
@@ -1776,7 +1780,8 @@ window.ICED26_DATA = {
       "type": "keynote",
       "meet": "",
       "talks": [],
-      "easychair_session_id": "104802"
+      "easychair_session_id": "104802",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-24",
@@ -2935,7 +2940,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104859",
-      "description": "Novice Teachers, Academic Induction and Conceptual Change"
+      "description": "Novice Teachers, Academic Induction and Conceptual Change",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-25",
@@ -2997,7 +3003,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104860",
-      "description": "Epistemic Agency, Research Engagement and Scholarly Teaching"
+      "description": "Epistemic Agency, Research Engagement and Scholarly Teaching",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-25",
@@ -3059,7 +3066,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104858",
-      "description": "PhD Student Agency, Doctoral Supervision, writing SoTL"
+      "description": "PhD Student Agency, Doctoral Supervision, writing SoTL",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-25",
@@ -3121,7 +3129,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104857",
-      "description": "Wellbeing, Belonging and Mindfulness in Academic Development"
+      "description": "Wellbeing, Belonging and Mindfulness in Academic Development",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-25",
@@ -3183,7 +3192,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104862",
-      "description": "Impact, Evaluation and Transfer of Academic Development"
+      "description": "Impact, Evaluation and Transfer of Academic Development",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-25",
@@ -3419,7 +3429,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104863",
-      "description": "Educational Leadership, Strategic Change and Faculty Development"
+      "description": "Educational Leadership, Strategic Change and Faculty Development",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-25",
@@ -3748,7 +3759,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104878",
-      "description": "Student Feedback, Peer Feedback and inclusive AD"
+      "description": "Student Feedback, Peer Feedback and inclusive AD",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-25",
@@ -3810,7 +3822,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104876",
-      "description": "Inclusive Higher Education, Student Agency and Social Justice"
+      "description": "Inclusive Higher Education, Student Agency and Social Justice",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-25",
@@ -3872,7 +3885,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104870",
-      "description": "Strategy, Sustainability and Organizational Transformation"
+      "description": "Strategy, Sustainability and Organizational Transformation",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-25",
@@ -3934,7 +3948,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104879",
-      "description": "Understanding University Teachers, enhancing Teachers Agency"
+      "description": "Understanding University Teachers, enhancing Teachers Agency",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-25",
@@ -3996,7 +4011,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104874",
-      "description": "Research on Teaching Methods; High-Impact-Practices (HIP); Researcher Agency"
+      "description": "Research on Teaching Methods; High-Impact-Practices (HIP); Researcher Agency",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-25",
@@ -4058,7 +4074,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104875",
-      "description": "Fostering Professional Growth and Resilience; Change Labs"
+      "description": "Fostering Professional Growth and Resilience; Change Labs",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-25",
@@ -4294,7 +4311,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104872",
-      "description": "Mapping Student Agency, Critical Pedagogy and Trust-building"
+      "description": "Mapping Student Agency, Critical Pedagogy and Trust-building",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-25",
@@ -4521,7 +4539,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105623"
+      "easychair_session_id": "105623",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-25",
@@ -4571,7 +4590,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105615"
+      "easychair_session_id": "105615",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-25",
@@ -6139,7 +6159,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "105680",
-      "description": "Researching Teaching Methods: Active Learning; Research-based teaching and Improvisational Methods"
+      "description": "Researching Teaching Methods: Active Learning; Research-based teaching and Improvisational Methods",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-26",
@@ -6192,7 +6213,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "105677",
-      "description": "Teacher Education; Epistemic and Reflective Agency; enhancing English-Language course design"
+      "description": "Teacher Education; Epistemic and Reflective Agency; enhancing English-Language course design",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-26",
@@ -6254,7 +6276,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "105681",
-      "description": "Strategic and Innovative Practices in Education and Academic Development"
+      "description": "Strategic and Innovative Practices in Education and Academic Development",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-26",
@@ -6316,7 +6339,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "105678",
-      "description": "Mentoring, Peer Learning and Teaching Consultation"
+      "description": "Mentoring, Peer Learning and Teaching Consultation",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-26",
@@ -6378,7 +6402,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "105676",
-      "description": "Graduate Student Partnership; Department-level Capacity Building and Transformative AD"
+      "description": "Graduate Student Partnership; Department-level Capacity Building and Transformative AD",
+      "onlinePresenter": true
     },
     {
       "day": "2026-06-26",

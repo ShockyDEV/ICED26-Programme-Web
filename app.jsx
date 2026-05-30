@@ -14,6 +14,8 @@ const { useState, useEffect, useMemo, useRef, useCallback } = React;
 // banner, the Mi-Agenda indicator, and the admin filters/table.
 function isSessionOnline(s) {
   if (!s) return false;
+  // Session-level flag ("one or more presentations online") OR any per-talk flag.
+  if (s.onlinePresenter) return true;
   return Array.isArray(s.talks) && s.talks.some((t) => t && t.online);
 }
 
@@ -199,7 +201,7 @@ const I18N = {
     parallel: "parallel sessions",
     online: "ONLINE",
     onlinePresenterTitle: "Online presenter",
-    onlinePresenterDesc: "One or more presenters will join this session remotely via Meet.",
+    onlinePresenterDesc: "One or more presentations in this session will be given online.",
     myAgenda: "My agenda",
     myAgendaTitle: "My personal agenda",
     addToAgenda: "Add to my agenda",
@@ -257,7 +259,7 @@ const I18N = {
     parallel: "sesiones paralelas",
     online: "ONLINE",
     onlinePresenterTitle: "Ponente online",
-    onlinePresenterDesc: "Uno o más ponentes se unirán a esta sesión de forma remota por Meet.",
+    onlinePresenterDesc: "Una o más ponencias de esta sesión se presentarán de forma online.",
     myAgenda: "Mi agenda",
     myAgendaTitle: "Mi agenda personal",
     addToAgenda: "Añadir a mi agenda",

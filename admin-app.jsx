@@ -262,6 +262,8 @@ function safeURL(url) {
 // ── Online presenter detection — mirror of app.jsx isSessionOnline ───────
 function isSessionOnline(s) {
   if (!s) return false;
+  // Session-level flag ("one or more presentations online") OR any per-talk flag.
+  if (s.onlinePresenter) return true;
   return Array.isArray(s.talks) && s.talks.some((t) => t && t.online);
 }
 
@@ -313,7 +315,7 @@ function detectIssues(data) {
     (s.talks || []).forEach((t) => {
       const raw = (t.presenter || "").trim();
       if (!raw) return; // no explicit presenter → skip (conservative)
-      if (t.online) return; // online presenter → not a physical-room conflict
+      if (s.onlinePresenter || t.online) return; // online presenter → not a physical-room conflict
       const k = normName(raw);
       if (!k) return;
       names.add(k);
@@ -1282,6 +1284,7 @@ function SessionEditor({ session, isNew, rooms, clusters, days, onSave, onCancel
       title: s.title.trim(),
       fullName: (s.fullName || "").trim(),
       cardTitle: (s.cardTitle || "").trim(),
+      onlinePresenter: !!s.onlinePresenter,
       // Keynotes & ICED talks are YouTube-only — never persist a Meet for them.
       meet: (s.type === "keynote" || s.type === "talk") ? "" : (s.meet || "").trim(),
       // Symposia/papers/workshops use Meet, not YouTube — keep youtube only for keynote/talk.
@@ -1385,6 +1388,18 @@ function SessionEditor({ session, isNew, rooms, clusters, days, onSave, onCancel
                 placeholder="https://meet.google.com/abc-defg-hij" />
             </Field>
           )}
+
+          <Field label="Ponencias online (general)"
+            hint="Marca esto si la sesión tendrá una o más ponencias online, sin señalar cuál — muestra el indicador «online» en la sesión. Si conoces la ponencia concreta, márcala individualmente abajo (entonces no hace falta esto).">
+            <label className="checkbox-row">
+              <input
+                type="checkbox"
+                checked={!!s.onlinePresenter}
+                onChange={(e) => setField("onlinePresenter", e.target.checked)}
+              />
+              <span>Una o más ponencias serán online</span>
+            </label>
+          </Field>
 
           <TalksEditor
             talks={s.talks || []}

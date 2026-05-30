@@ -404,6 +404,8 @@ async function main() {
     // Preserve the admin-set card-title override across syncs (the per-session
     // title shown on the public card, set in the backstage session editor).
     if (existing?.cardTitle) next.cardTitle = existing.cardTitle;
+    // Preserve the session-level "one or more presentations online" flag.
+    if (existing?.onlinePresenter) next.onlinePresenter = true;
     // Per-talk online presenter flags — match scraped talks to existing
     // ones by normalized title and carry the `online` flag forward.
     if (existing && Array.isArray(existing.talks) && existing.talks.length > 0) {
