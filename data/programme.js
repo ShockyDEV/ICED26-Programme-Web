@@ -5070,6 +5070,7 @@ window.ICED26_DATA = {
       "fullName": "Session 18M: H - Workshop 32",
       "type": "workshop",
       "meet": "",
+      "onlinePresenter": true,
       "talks": [
         {
           "easychair_id": "311693",
