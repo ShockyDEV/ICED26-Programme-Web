@@ -158,7 +158,10 @@ function roomLinksActive(s, data) {
 function safeURL(url) {
   if (!url) return "#";
   const s = String(url).trim();
-  return /^https?:\/\//i.test(s) ? s : "#";
+  if (/^https?:\/\//i.test(s)) return s;
+  // Same-origin relative static assets (PDF guide, anthem image, etc.).
+  if (/^(\.\/)?assets\/[\w./-]+$/i.test(s)) return s;
+  return "#";
 }
 
 // ─── Stable session ID for deep-linking ──────────────────────────────────
