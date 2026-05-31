@@ -48,7 +48,7 @@ window.ICED26_DATA = {
       "id": "iddi",
       "name": "Edificio I+D+i",
       "short": "I+D+i",
-      "subtitle": "11.2 · 11.3 · Sem. 12.1 · Sala Presentaciones"
+      "subtitle": "11.2 · 11.3 · Sala Presentaciones"
     }
   ],
   "rooms": [
