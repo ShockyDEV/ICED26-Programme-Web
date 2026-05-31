@@ -1978,6 +1978,32 @@ a { color: inherit; }
   line-height: 1.4;
 }
 
+/* "How to navigate" PDF guide button — sits next to the brand, top-left */
+.guide-btn {
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 12px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ink);
+  background: var(--paper);
+  border: 1.5px solid var(--line);
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.guide-btn:hover {
+  background: var(--cream);
+  border-color: var(--teal-deep);
+  color: var(--teal-deep);
+}
+
 /* Online presenter callout inside SessionModal */
 .sm-online-banner {
   margin: 0 28px 4px;
@@ -2545,6 +2571,8 @@ a { color: inherit; }
 @media (max-width: 600px) {
   .agenda-btn-label { display: none; }
   .agenda-btn { padding: 7px 9px; }
+  .guide-btn-label { display: none; }
+  .guide-btn { padding: 7px 9px; }
   .agenda-overlay { padding: 16px 8px; }
   .agenda-modal { max-height: calc(100vh - 32px); }
   .agenda-head { padding: 16px 16px 12px; }
