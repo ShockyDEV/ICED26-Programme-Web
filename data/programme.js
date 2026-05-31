@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-05-30T09-51
+// ICED26 programme — generated from admin panel 2026-05-31T18-00
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -6299,7 +6299,6 @@ window.ICED26_DATA = {
       "meet": "",
       "talks": [
         {
-          "easychair_id": "311991",
           "time": "11:00",
           "title": "Pedagogical Master’s Programs as Pathways for Career Change Teachers",
           "authors": "Kseniia Tsitsikashvili",
@@ -6309,17 +6308,6 @@ window.ICED26_DATA = {
           "online": true
         },
         {
-          "easychair_id": "311868",
-          "time": "11:15",
-          "title": "Professional Development for a Shifting Post-Secondary",
-          "authors": "Helena Prins",
-          "presenter": "",
-          "abstract": "This study sheds light on the experiences of sessional instructors engaging in professional development and how these experiences prepare them for a shifting post-secondary environment. Utilizing a participatory narrative inquiry approach, informed by Knowles’ principles of adult learning, Tough’s self-directed learning framework, and the Developmental Framework for Teaching Expertise in Postsecondary Education, the researcher collected and analysed stories of sessional instructors through semi-structured interviews, a group story session, and reflective journal entries. Reflexive thematic analysis was utilized. Findings provide insights into effective support strategies for enhancing teaching expertise, contributing to sustainable improvements in teaching and learning cultures across the post-secondary landscape. Based on these findings, the researcher suggests an adapted multi-level framework which places the educator at the center. The researcher's proposed framework recognizes that institutions cannot rely solely on the self-directedness and intrinsic motivation of sessional instructors. It is neither fair nor sustainable. Instead, it must be a shared responsibility. Institutions should actively engage in co-creating structured, transparent, and sustainable pathways for teaching expertise. Making this process visible and structured, while explicitly outlining the institutional support available, ensures shared accountability and fosters greater equity in professional development.",
-          "keywords": "",
-          "online": true
-        },
-        {
-          "easychair_id": "312006",
           "time": "11:30",
           "title": "From Credential-Chasing to Capacity-Building: Six Ways Sessionals Approach Educational Development",
           "authors": "Brandon Sabourin",
@@ -6328,7 +6316,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311814",
           "time": "11:45",
           "title": "AI as Dialogic Catalyst: Archetypal Roles and Epistemic Agency in Interthinking",
           "authors": "Sharon Bratt",
@@ -6338,7 +6325,6 @@ window.ICED26_DATA = {
           "online": true
         },
         {
-          "easychair_id": "311954",
           "time": "12:00",
           "title": "Done by, done to, done through and done with: Academic Developers delivering strategic projects",
           "authors": "Laura Milne, Jackie Potter, Claire Stocks",
@@ -6350,7 +6336,10 @@ window.ICED26_DATA = {
       ],
       "easychair_session_id": "105681",
       "description": "Strategic and Innovative Practices in Education and Academic Development",
-      "chair": "Claire Hamshire"
+      "chair": "Claire Hamshire",
+      "cardTitle": "",
+      "onlinePresenter": false,
+      "youtube": ""
     },
     {
       "day": "2026-06-26",
