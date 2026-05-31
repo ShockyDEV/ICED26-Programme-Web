@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-05-31T18-00
+// ICED26 programme — generated from admin panel 2026-05-31T18-17
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -6332,6 +6332,14 @@ window.ICED26_DATA = {
           "abstract": "In response to sector-wide pressures, our Academic Development team has led two major strategic projects impacting and influencing the university, namely a whole-institution curriculum redesign (reworking over 100 courses) and a rebuild of the Virtual Learning Environment (VLE) to enable improved learning design at scale. This work has required negotiation of our identities, and development of nuanced approaches to leadership. The current neoliberal climate impacting Higher Education globally creates and extends potential tensions between business efficiencies and learning. Against this backdrop, academic developers are deployed to lead change projects to ensure strategic imperatives are supportive of institutional needs and ambitions. This paper explores academic developers’ leadership roles in institutional transformation, drawing on established leadership frameworks and academic development literature, and proposes a conceptual framework for leading change at scale. Grounded in leadership theories and case-based reflection, we introduce a typology of leadership modalities experienced by academic developers: done by (through facilitation), done to (navigating tension around change), done through (operational project management and stakeholder liaison), and done with (collaborative grassroots leadership across silos). We offer attendees practical strategies and evidence-based insights for leading large-scale strategic transformation, balancing institutional imperatives with pedagogical values, while negotiating personal and professional identities as academic developers.",
           "keywords": "",
           "online": true
+        },
+        {
+          "time": "11:15",
+          "title": "What educational experiences do social workers perceived as impactful and why?",
+          "authors": "Stephen Ellenbogen",
+          "presenter": "Stephen Ellenbogen",
+          "abstract": "I present the results of a thematic analysis examining the perceptions\nof early- to mid-career social workers on what aspects of their Bachelor of Social \nWork Education they found most impactful. Respondents were encouraged to \nelaborate on why these aspects were helpful and reflect on how it translated to \npractice. Sixteen respondents were interviewed. A variety of assignments and \nactivities were identified; some of the repeated responses include service \nlearning, community event participation, guest lecture, research, and genograms. \nThe findings are consistent with theoretical models in social work education, \nnotably threshold concepts and experiential learning. The presentation will \ninclude interview quotes and discussion of how these relate to educational theory \nand academic development in professional training.",
+          "keywords": ""
         }
       ],
       "easychair_session_id": "105681",
