@@ -748,6 +748,38 @@ a { color: inherit; }
   .building-tabs,
   .grid-wrap { max-width: none; }
 }
+/* Room pager — segmented control to page through rooms when a building has
+   more than fit on screen at a readable size (Hospedería, 10 rooms). Sits
+   left-aligned above the grid; desktop only (lives inside .grid-wrap). */
+.room-pager {
+  display: inline-flex;
+  align-self: flex-start;
+  gap: 3px;
+  margin: 2px 0 10px;
+  padding: 3px;
+  background: var(--cream-deep);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+.room-pager-tab {
+  border: none;
+  background: transparent;
+  padding: 6px 14px;
+  border-radius: 7px;
+  font: 600 12px/1 'Inter', sans-serif;
+  letter-spacing: 0.02em;
+  color: var(--ink-soft);
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
+}
+.room-pager-tab:hover { color: var(--ink); }
+.room-pager-tab.active {
+  background: var(--paper);
+  color: var(--teal-deep);
+  box-shadow: var(--shadow-sm);
+}
+.room-pager-tab:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; }
 .grid-headers {
   display: grid;
   grid-template-columns: var(--grid-time-w) repeat(var(--cols), minmax(180px, 1fr));

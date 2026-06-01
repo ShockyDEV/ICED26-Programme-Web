@@ -811,6 +811,21 @@ function Grid({ data, dayIdx, buildingId, now, liveStyle, lang, t, onSessionClic
   const buildingRooms = data.rooms.filter((r) => r.cluster === cluster.id);
   const roomIds = new Set(buildingRooms.map((r) => r.id));
 
+  // Room pagination — buildings with more rooms than comfortably fit on screen
+  // at a readable size (today only Hospedería, 10 rooms) split into pages of 7,
+  // so we avoid horizontal scroll / shrinking the whole UI. The time column and
+  // the spanning rows (breaks/keynotes) render on every page, and the time range
+  // stays the same across pages (computed from ALL the building's sessions).
+  const ROOMS_PER_PAGE = 7;
+  const paginated = buildingRooms.length > ROOMS_PER_PAGE;
+  const pageCount = paginated ? Math.ceil(buildingRooms.length / ROOMS_PER_PAGE) : 1;
+  const [roomPage, setRoomPage] = useState(0);
+  useEffect(() => { setRoomPage(0); }, [cluster.id, dayKey]);
+  const safePage = Math.min(roomPage, pageCount - 1);
+  const visibleRooms = paginated ?
+  buildingRooms.slice(safePage * ROOMS_PER_PAGE, safePage * ROOMS_PER_PAGE + ROOMS_PER_PAGE) :
+  buildingRooms;
+
   const daySessions = data.sessions.filter((s) =>
   s.day === dayKey && (isGlobalRow(s) || roomIds.has(s.room))
   );
@@ -840,16 +855,34 @@ function Grid({ data, dayIdx, buildingId, now, liveStyle, lang, t, onSessionClic
   const nowY = showNow ? minToY(nowParts.minutes) : null;
 
   const gridStyle = {
-    "--cols": buildingRooms.length,
+    "--cols": visibleRooms.length,
     "--slots": slots,
     "--slot-h": SLOT_PX + "px"
   };
 
   return (
     <div className="grid-wrap desktop-only" data-building={cluster.id}>
+      {paginated &&
+      <div className="room-pager" role="tablist" aria-label={lang === "es" ? "Páginas de salas" : "Room pages"}>
+        {Array.from({ length: pageCount }).map((_, p) => {
+          const pr = buildingRooms.slice(p * ROOMS_PER_PAGE, p * ROOMS_PER_PAGE + ROOMS_PER_PAGE);
+          const label = pr.length ? `${pr[0].code}–${pr[pr.length - 1].code}` : `${p + 1}`;
+          return (
+            <button
+              key={p}
+              role="tab"
+              aria-selected={safePage === p}
+              className={`room-pager-tab ${safePage === p ? "active" : ""}`}
+              onClick={() => setRoomPage(p)}>
+              {label}
+            </button>);
+
+        })}
+      </div>
+      }
       <div className="grid-headers" style={gridStyle}>
         <div className="col-time-header"></div>
-        {buildingRooms.map((r) =>
+        {visibleRooms.map((r) =>
         <div className="col-cluster-header" key={r.id}>
             <span className="cluster-h-name">{r.name}</span>
             <span className="cluster-h-sub">{r.code}</span>
@@ -872,7 +905,7 @@ function Grid({ data, dayIdx, buildingId, now, liveStyle, lang, t, onSessionClic
         </div>
 
         {/* Room columns */}
-        {buildingRooms.map((room) => {
+        {visibleRooms.map((room) => {
           const sessions = byRoom[room.id] || [];
           // Lay out overlapping sessions side-by-side within the column.
           // Algorithm: greedy column-packing — each session goes in the leftmost
