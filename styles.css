@@ -726,9 +726,16 @@ a { color: inherit; }
 }
 /* Grid + headers take the full container width — aligned with the
    building-tabs / day-tabs above. Avoid an inner max-width cap that
-   would leave an asymmetric left margin. */
+   would leave an asymmetric left margin.
+   min-width: max-content makes the box grow to fit ALL room columns when
+   they overflow the viewport (many-room buildings). Without it the box
+   stays at viewport width, so absolutely-positioned spanning children
+   (the CLAUSTRO break-row's `right:0`, the now-line) were clipped at the
+   screen edge instead of spanning every column. Cells are absolute, so
+   each column's max-content is just its 180px floor → headers stay
+   aligned with the body, and few-room days still expand to fill width. */
 .grid-wrap > .grid,
-.grid-wrap > .grid-headers { width: 100%; }
+.grid-wrap > .grid-headers { width: 100%; min-width: max-content; }
 /* On viewports wider than the 1600px cap the centered layout left a blank
    gutter on the LEFT, while the timetable grid (min-width ~1944px for a
    10-room day, i.e. wider than the cap) overflowed the container to the
@@ -1420,6 +1427,21 @@ a { color: inherit; }
   margin-left: 8px;
   text-transform: none;
 }
+/* Pre-recorded video counterpart of .online-chip-inline (mobile list). */
+.video-chip-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--video-deep);
+  background: var(--video-soft);
+  padding: 2px 8px;
+  border-radius: 999px;
+  margin-left: 8px;
+  text-transform: none;
+}
 
 /* Mobile-only search row. The aside inside .day-tabs is hidden on small
    widths (see .day-tabs-aside rule in the mobile breakpoint below); this
@@ -2071,6 +2093,39 @@ a { color: inherit; }
 }
 @media (max-width: 600px) {
   .sm-stream-banner { margin: 0 20px 4px; padding: 10px 12px; gap: 10px; }
+}
+
+/* Pre-recorded video callout (mirror of .sm-online-banner, purple --video).
+   Marks sessions with one or more pre-recorded videos played in their slot. */
+.sm-video-banner {
+  margin: 0 28px 4px;
+  padding: 12px 14px;
+  background: linear-gradient(135deg, var(--video-soft) 0%, rgba(235, 227, 250, 0.35) 100%);
+  border-left: 3px solid var(--video);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+}
+.sm-video-banner svg {
+  flex-shrink: 0;
+  color: var(--video);
+}
+.sm-video-banner strong {
+  display: block;
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--video-deep);
+  margin-bottom: 1px;
+}
+.sm-video-banner span {
+  color: var(--ink-soft);
+  font-size: 12.5px;
+  line-height: 1.4;
+}
+@media (max-width: 600px) {
+  .sm-video-banner { margin: 0 20px 4px; padding: 10px 12px; gap: 10px; }
 }
 
 /* Agenda item — globe icon + label for online sessions */
