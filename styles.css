@@ -56,6 +56,10 @@
 
   --slot-h:    60px;
   --grid-time-w: 64px;
+
+  /* Global UI scale (applied via `zoom` on body). Baseline was 1.25 (125%);
+     reduced ~20% → 1.0 (no zoom) per Enrique. Nudge here to fine-tune. */
+  --ui-zoom: 1;
 }
 
 * { box-sizing: border-box; }
@@ -332,7 +336,7 @@ a { color: inherit; }
 /* ───── SESSION SEARCH ───── */
 .session-search {
   position: relative;
-  width: 280px;
+  width: 340px;
   max-width: 32vw;
 }
 .ss-input-wrap {

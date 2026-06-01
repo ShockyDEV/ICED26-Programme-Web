@@ -251,7 +251,7 @@ const I18N = {
     realNow: "Real now",
     admin: "Admin",
     everyRoom: "All rooms",
-    searchPlaceholder: "Search contributions, authors, sessions (e.g. 15K)…",
+    searchPlaceholder: "Search contributions, authors, chairs, sessions (e.g. 15K)…",
     searchNoResults: "No matches",
     searchShortcut: "⌘K",
     share: "Share",
@@ -317,7 +317,7 @@ const I18N = {
     realNow: "Ahora real",
     admin: "Admin",
     everyRoom: "Todas las salas",
-    searchPlaceholder: "Buscar contribuciones, autores, sesiones (p. ej. 15K)…",
+    searchPlaceholder: "Buscar contribuciones, autores, moderadores, sesiones (p. ej. 15K)…",
     searchNoResults: "Sin resultados",
     searchShortcut: "⌘K",
     share: "Compartir",
@@ -1179,7 +1179,7 @@ function SessionSearch({ data, t, lang, onSelect }) {
         code,
         primary: s.title,
         secondary: officialTitle(s) || (s.fullName && s.fullName !== s.title ? s.fullName : ""),
-        haystack: [s.title, officialTitle(s), s.fullName, s.roomName, s.roomCode].filter(Boolean).join(" \u00b7 ").toLowerCase()
+        haystack: [s.title, officialTitle(s), s.fullName, s.roomName, s.roomCode, s.chair].filter(Boolean).join(" \u00b7 ").toLowerCase()
       });
       // Talk-level entries \u2014 also carry the session code/fullName so a code
       // search surfaces the contributions inside that session too.
