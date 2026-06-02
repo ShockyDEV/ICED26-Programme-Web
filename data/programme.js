@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-05-31T18-18
+// ICED26 programme — generated from admin panel 2026-06-02T07-51
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -2965,7 +2965,6 @@ window.ICED26_DATA = {
       "meet": "",
       "talks": [
         {
-          "easychair_id": "311937",
           "time": "09:00",
           "title": "Evidence-informed pedagogical decision-making and epistemic agency in higher education.",
           "authors": "Ángela Marcela Ríos Delgado",
@@ -2975,7 +2974,6 @@ window.ICED26_DATA = {
           "online": true
         },
         {
-          "easychair_id": "311835",
           "time": "09:15",
           "title": "Integrating to transform: University professors perceptions of teaching and research",
           "authors": "Alejandro Almonacid-Fierro, Mirko Aguilar-Valdés",
@@ -2984,7 +2982,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311973",
           "time": "09:30",
           "title": "Where Design-Based Research fosters Experience-Based Learning: rethinking learner agency in the AI era",
           "authors": "Rana Challah, Aurélie Leborgne, Antoine Vacavant",
@@ -2994,7 +2991,6 @@ window.ICED26_DATA = {
           "online": true
         },
         {
-          "easychair_id": "314320",
           "time": "09:45",
           "title": "University Teachers' Perceptions of Scholarly Teaching: Challenges and Enablers",
           "authors": "René Glastra van Loon, Quincy Elvira, Daphne van Weijen",
@@ -3003,18 +2999,21 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311985",
           "time": "10:00",
           "title": "Current developments in university teaching research in Chile: achievements and challenges",
           "authors": "José Sepúlveda, Chantal Jouannet, Ana Borrero, Rocío Vélez, Robert Pardo, Gonzalo Zapata, Violeta Fernández, Pablo Álvarez, Macarena Alegría, Georgina Durán, Diana Muñoz, Thery-Ann Maxwell Cid",
           "presenter": "Chantal Jouannet",
           "abstract": "This article characterizes the level of development of Research in Teaching in Higher Education (IDES) in Chilean universities, with the aim of identifying strengths, challenges, and opportunities for improvement. A quantitative, descriptive, cross-sectional approach is adopted, based on a survey conducted between October 2024 and April 2025 among managers and professionals from teaching development and educational innovation centers at 31 universities belonging to the Network of Teaching Support Centers (REDCAD), achieving 96.9% coverage. The results show significant progress in the institutionalization of IDES. Seventy-one percent of institutions have centralized units. Many have been in operation for more than five years. Approaches such as the Scholarship of Teaching and Learning (SoTL) and action research predominate. The main support actions include competitive funds, training opportunities, and academic assessment mechanisms. However, challenges remain associated with lack of time, resources, research skills, and institutional recognition. It is concluded that while favorable institutional conditions exist, it is key to strengthen the participation of academic and student actors, consolidate communities of practice, and position IDES as a strategic axis for improving learning and academic development.",
-          "keywords": ""
+          "keywords": "",
+          "online": true
         }
       ],
       "easychair_session_id": "104860",
       "description": "Epistemic Agency, Engaging in Research and Scholarly Teaching",
-      "chair": "Robert Eaton"
+      "chair": "Robert Eaton",
+      "cardTitle": "",
+      "onlinePresenter": false,
+      "youtube": ""
     },
     {
       "day": "2026-06-25",
