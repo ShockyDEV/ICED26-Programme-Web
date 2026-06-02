@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-02T07-58
+// ICED26 programme — generated from admin panel 2026-06-02T08-00
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -185,10 +185,14 @@ window.ICED26_DATA = {
       "cluster": "hospederia",
       "title": "Welcome and Instructions for Pre-Conference",
       "fullName": "Session 1: Welcome and Instructions for Pre-Conference",
-      "type": "keynote",
+      "type": "other",
       "meet": "",
       "talks": [],
-      "easychair_session_id": "104851"
+      "easychair_session_id": "104851",
+      "cardTitle": "",
+      "chair": "",
+      "onlinePresenter": false,
+      "youtube": ""
     },
     {
       "day": "2026-06-23",
