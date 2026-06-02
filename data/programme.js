@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-02T07-54
+// ICED26 programme — generated from admin panel 2026-06-02T07-58
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -5071,16 +5071,19 @@ window.ICED26_DATA = {
       "onlinePresenter": true,
       "talks": [
         {
-          "easychair_id": "311693",
           "time": "17:30",
           "title": "Re-imagining Roles: Students as Teaching and Learning Partners",
           "authors": "Lydia Watson, Bettina Boyle",
           "presenter": "Lydia Watson",
           "abstract": "This interactive session will share insights into how a Centre for Teaching Excellence (CTE) in a small teaching-focused undergraduate university developed a Students as Teaching and Learning Partners (SaTLP) initiative that gave students opportunities to participate in two Faculty Learning Communities (FLCs), one being focused on the topic of reimagining grading, the other, on open educational practices. By encouraging student voice and co-designing a space where educational developers, faculty, and students were able to challenge assumptions about traditional roles and power dynamics, we were rewarded with unexpected learning opportunities and meaningful conversations. Through interactive activities, participants in this workshop will identify, question, imagine, and reflect on opportunities to partner with students and be inspired by insights gained from participants and presenters through these initiatives.",
-          "keywords": ""
+          "keywords": "",
+          "online": true
         }
       ],
-      "easychair_session_id": "105638"
+      "easychair_session_id": "105638",
+      "cardTitle": "",
+      "chair": "",
+      "youtube": ""
     },
     {
       "day": "2026-06-25",
