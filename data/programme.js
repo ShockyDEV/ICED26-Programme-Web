@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-03T08-42
+// ICED26 programme — generated from admin panel 2026-06-03T08-47
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -3655,6 +3655,14 @@ window.ICED26_DATA = {
           "presenter": "Mirey Alfarah",
           "abstract": "The Norwegian Journal for the Scholarship of Teaching and Learning (NorSoTL) was established in 2025 as a national publication platform designed to strengthen SoTL capacity, visibility, and scholarly agency among university teachers and students in Norwegian and Scandinavian higher education. The journal serves as an academic development initiative by offering an accessible, peer-reviewed arena for disseminating systematic inquiry into teaching and learning practices, thereby contributing to evidence-informed pedagogical development and community knowledge exchange. A distinctive feature of NorSoTL is its format diversity, consisting of Inquiry Articles, Interactive Posters, Thinking Pieces, and Original Ideas, enabling participation from early-stage reflection to more mature research projects. Equally important is the journal’s multilingual publishing policy, allowing authors to submit in Norwegian, Swedish, Danish, or English. This approach lowers the threshold for scholarly publishing by enabling colleagues to write in familiar and comfortable settings using their native language, supports the development of national and regional SoTL dialog, and contributes to the expansion of Scandinavian-language pedagogical research. This poster presents the rationale behind NorSoTL, its format-diverse publishing model, and accessible entry routes work as strategic mechanisms to broaden participation and strengthen SoTL across Norway.",
           "keywords": ""
+        },
+        {
+          "time": "",
+          "title": "Strategies for Integrating Mediation Instruction into Czech Law Faculties",
+          "authors": "Lenka Holá, Kateřina Macigová",
+          "presenter": "Kateřina Macigová",
+          "abstract": "This paper examines the integration of mediation education into legal curricula at Czech law faculties as a tool for academic development and institutional transformation. Based on an exploratory case study of the Mediation Clinic at the Faculty of Law, Palacký University Olomouc, it analyses how experiential and practice-oriented teaching methods complement traditional lecture-based legal education. The paper identifies three interrelated pillars of implementation: (1) the Mediation Clinic as a core course grounded in experiential learning and service-learning principles; (2) international cooperation, particularly with New York University School of Law; and (3) institutional support through a Mediation Centre ensuring the sustainability of the model. Drawing on empirical data, the study demonstrates a growing student demand for clinical forms of education, which consistently exceeds course capacity. The findings indicate that this approach enhances student autonomy, professional competencies, and engagement, while also contributing to pedagogical innovation and organizational transformation at the faculty level. The paper argues that clinical mediation education should be understood not merely as a curricular innovation, but as a structural instrument of institutional change linking teaching, research, practice and community engagement.",
+          "keywords": ""
         }
       ],
       "easychair_session_id": "104880",
@@ -5985,7 +5993,6 @@ window.ICED26_DATA = {
       "meet": "",
       "talks": [
         {
-          "easychair_id": "311670",
           "time": "",
           "title": "From threshold concepts to expert reasoning in Cultural Heritage Conservation Education",
           "authors": "María-Ángeles Carabal-Montagud, Amparo Fernández March, Javier Paricio Royo",
@@ -5994,7 +6001,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311663",
           "time": "",
           "title": "Enhancing Instructor Knowledge of Generative AI in Higher Education through Educational Development: A Scholarship of Academic Development Project",
           "authors": "Robert Kordts, Belinda Muñoz Solheim",
@@ -6003,7 +6009,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "312017",
           "time": "",
           "title": "Academic development approaches for Blended Learning at University of Trento",
           "authors": "Helga Ballardini, Daniele Agostini, Giorgia Dossi, Ligia Tomazin Fernandes Mendonca, Anna Serbati, Chiara Eberle, Maria Valeria Ceraolo, Sara Sighel, Paola Venuti",
@@ -6012,7 +6017,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311667",
           "time": "",
           "title": "IDEO as a Catalyst for Teaching Innovation and Internationalization at UAH",
           "authors": "Isabel Cano Ruiz, Héctor del Castillo Fernández, Sara Cortés Gómez, Juan Jesús García Domínguez, Irene Heredero Bermejo, Alberto Lastra Sedano, Susana Núñez Nagy, Germán Ros Magán, Marta Rubio López",
@@ -6021,7 +6025,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311799",
           "time": "",
           "title": "Transformative Learning in Maltese Further and Higher Education: A grounded Theory Study",
           "authors": "David Kenely",
@@ -6030,7 +6033,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "312021",
           "time": "",
           "title": "Podcasts as a strategy for sharing scientific knowledge in the university community",
           "authors": "Sofía Karina Vázquez Gómez, María Helena Mirque Mendez",
@@ -6039,16 +6041,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "312022",
-          "time": "",
-          "title": "Strategies for Integrating Mediation Instruction into Czech Law Faculties",
-          "authors": "Lenka Holá, Kateřina Macigová",
-          "presenter": "Kateřina Macigová",
-          "abstract": "This paper examines the integration of mediation education into legal curricula at Czech law faculties as a tool for academic development and institutional transformation. Based on an exploratory case study of the Mediation Clinic at the Faculty of Law, Palacký University Olomouc, it analyses how experiential and practice-oriented teaching methods complement traditional lecture-based legal education. The paper identifies three interrelated pillars of implementation: (1) the Mediation Clinic as a core course grounded in experiential learning and service-learning principles; (2) international cooperation, particularly with New York University School of Law; and (3) institutional support through a Mediation Centre ensuring the sustainability of the model. Drawing on empirical data, the study demonstrates a growing student demand for clinical forms of education, which consistently exceeds course capacity. The findings indicate that this approach enhances student autonomy, professional competencies, and engagement, while also contributing to pedagogical innovation and organizational transformation at the faculty level. The paper argues that clinical mediation education should be understood not merely as a curricular innovation, but as a structural instrument of institutional change linking teaching, research, practice and community engagement.",
-          "keywords": ""
-        },
-        {
-          "easychair_id": "312009",
           "time": "",
           "title": "Designing Aspirational Oaths: an Ethics of Care Framework",
           "authors": "Valentina Rossi, Ab Hausel",
@@ -6057,18 +6049,28 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311782",
           "time": "",
           "title": "From Liminality to Belonging: Rethinking the Role of the Academic Developer",
           "authors": "Katja Hakel",
           "presenter": "",
           "abstract": "Academic developers (ADs) often occupy a liminal space within higher education, positioned between institutional leadership, faculty roles, and various support units. Rather than viewing this location as solely precarious or fragmented, this conceptual talk proposes that such positioning can function as a strength—enabling mobility across communities and contexts. Building on a synthesis of research literature and insights developed over more than a decade as a professional academic developer, this talk focuses on three central perspectives: the AD as ‘The One Who Does Not Belong’, the AD as a strategic ‘Player in the System’, and ‘The Personal Dimension’ of AD work. Through an emphasis on relational trust, authenticity, and building community, the talk suggests that liminality need not constrain identity but may instead support a shift toward roles marked by integrity and connection—toward becoming ‘The One Who Belongs in Many Places’.",
           "keywords": ""
+        },
+        {
+          "time": "",
+          "title": "Underlying Approaches to Assessment in AI Policies in Higher Education. From Control to Agency",
+          "authors": "Mònica Feixas, Liana Pirovino, Georgeta Ion",
+          "presenter": "Mònica Feixas",
+          "abstract": "The rapid emergence of generative artificial intelligence (GenAI) has led universities to develop policies aimed at guiding its use in teaching, learning, and assessment. Assessment has become a focal point, as GenAI challenges established assumptions about authorship, originality, validity, and evidence of learning. While institutional policies seek to safeguard academic standards, they increasingly acknowledge GenAI’s pedagogical potential. But how these documents conceptualise assessment in AI-mediated contexts and how they frame student and teacher agency? This study presents a comparative analysis of GenAI-related policies from 14 universities in Switzerland and Spain. Drawing on Chan’s AI Ecological Education Policy Framework (2023) and Bacchi’s problematisation approach (2012), it explores how assessment is constructed across governance, operational, and pedagogical levels, and how policies balance risks and opportunities associated with GenAI. Findings show that policies articulate a dual narrative. On the one hand, they recognise GenAI’s potential to enhance alternative assessment practices, including formative, authentic, and competency-based approaches; enhance feedback and support self-regulated learning. On the other, they foreground concerns about academic integrity, plagiarism, transparency, bias, and data protection, while consistently emphasising human oversight. This duality complicates decision-making for teachers and students and points to the need for academic development to support informed judgement around the use of GenAI in assessment and feedback. This includes creating spaces, frameworks, and guidance that help educators and students critically evaluate when GenAI adds pedagogical value, when its use should be limited, and how such choices can support the development of students as epistemic agents.",
+          "keywords": ""
         }
       ],
       "easychair_session_id": "105673",
       "chair": "Greig Krull",
-      "description": "Rethinking Learning, Teaching and Academic Development"
+      "description": "Rethinking Learning, Teaching and Academic Development",
+      "cardTitle": "",
+      "onlinePresenter": false,
+      "youtube": ""
     },
     {
       "day": "2026-06-26",
