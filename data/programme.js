@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-03T08-03
+// ICED26 programme — generated from admin panel 2026-06-03T08-05
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -924,7 +924,7 @@ window.ICED26_DATA = {
           "time": "11:00",
           "title": "Factors for Development of Trust: Building Collegial Relationships within Teaching and Learning Programs",
           "authors": "Abdulgni Muthannaha, Fredrik Olsson, Håkon Naasen Tandberg",
-          "presenter": "Abdulgni Muthannaha, Fredrik Olsson",
+          "presenter": "Abdulgni Muthannaha Fredrik Olsson",
           "abstract": "At the Research on Higher Education Conference in Gothenburg, Sweden, in 2025, we shared our self-reflections and analysis of relevant studies on the establishment of ‘trust’ among educational developers and university teachers from different disciplines participating in the program of Teaching and Learning in Higher Education (TLHE). In this conference, we aim to discuss how trust can be fostered and developed among the participants, as well as between educational developers and participants, and the possible factors for the lack of trust or distrust. Given this, our participation, founded on data collected through a questionnaire, provides insightful responses to these research inquiries: 1) What are the factors for the development of trust among participants and between participants and facilitators? 2) What are the possible factors for the lack of trust, or even distrust, among participants and between participants and facilitators?",
           "keywords": ""
         },
