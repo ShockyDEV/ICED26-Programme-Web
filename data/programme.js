@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-03T09-01
+// ICED26 programme — generated from admin panel 2026-06-03T09-16
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -6566,16 +6566,6 @@ window.ICED26_DATA = {
       "meet": "",
       "talks": [
         {
-          "easychair_id": "311819",
-          "time": "11:00",
-          "title": "Prioritising with Purpose: An Agile Framework for Strategic Resource Decisions in Teaching and Learning Centres",
-          "authors": "Kata Dosa, Réka Futász",
-          "presenter": "Kata Dosa",
-          "abstract": "Leaders of Centres for Teaching and Learning (CTLs) often face an unrelenting challenge: too many essential initiatives, programs, and stakeholder demands—but never enough time, staff, or funding to meet them all. This workshop offers a structured, collaborative method for strategic prioritisation that helps CTL leaders decide what to do next—and what to stop—in alignment with institutional goals and available capacity. Using an agile-inspired Business Value / Effort–Impact framework, participants will co-create decision criteria (e.g., strategic alignment, innovation, client value, reputational or societal impact) and apply them first through a hands-on case study and then to their own institutional context. Because the method can be revisited periodically, it supports institutional resilience—allowing CTLs to realign priorities as strategies evolve or external disruptions arise. The session balances analytical structure with participatory reflection, enabling leaders to act as proactive change agents who steer their portfolios strategically rather than reactively. Participants will leave with a ready-to-use prioritisation template and facilitation guide to support transparent, evidence-informed decision-making in their own contexts.",
-          "keywords": ""
-        },
-        {
-          "easychair_id": "311838",
           "time": "11:15",
           "title": "Building Capacity Through Shared Leadership: Establishing a Resilient Professional Learning Community for Sustainable Organizational Learning",
           "authors": "Megan McCrary, Marysol Thayre",
@@ -6584,7 +6574,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311900",
           "time": "11:30",
           "title": "Institutional Collaboration for Improving the Educational Model at ETSII",
           "authors": "María Sancho, Enrique Cabrera Rochera, Ángel Ortiz Bas",
@@ -6593,7 +6582,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "315230",
           "time": "11:45",
           "title": "Implicit policy, explicit uncertainty: Teacher agency and the double-didactic mandate in the era of AI",
           "authors": "Peter Vinnervik",
@@ -6602,7 +6590,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "316677",
           "time": "12:00",
           "title": "From Training to Teaching Practice: Implementing Action Methods in Classroom",
           "authors": "Mari Karm, Airi Niilo",
@@ -6613,7 +6600,10 @@ window.ICED26_DATA = {
       ],
       "easychair_session_id": "105679",
       "description": "Strategic Leadership, Policy and Organizational Capacity Building",
-      "chair": "Deandra Little"
+      "chair": "Deandra Little",
+      "cardTitle": "",
+      "onlinePresenter": false,
+      "youtube": ""
     },
     {
       "day": "2026-06-26",
@@ -6733,6 +6723,33 @@ window.ICED26_DATA = {
         "lyrics": "Gaudeamus igitur,\niuvenes dum sumus. (bis)\nPost iucundam iuventutem,\npost molestam senectutem,\nnos habebit humus.\n\nUbi sunt qui ante nos\nin mundo fuere?\nVadite ad superos,\ntransite ad inferos,\nubi iam fuere.\n\nVivat Academia,\nvivant professores.\nVivat membrum quodlibet,\nvivant membra quaelibet,\nsemper sint in flore.\n\nVita nostra brevis est, breve finietur.\nVenit mors velociter,\nrapit nos atrociter,\nnemini parcetur.\n\nVivat nostra societas!\nVivant studiosi!\nCrescat una veritas,\nfloreat fraternitas,\npatriae prosperitas.\n\nVivat et Republica,\net qui illam regit.\nVivat nostra civitas,\nMaecenatum caritas,\nquae nos hic protegit.\n\nPereat tristitia,\npereant osores.\nPereat diabolus,\nquivis antiburschius,\natque irrisores.\n\nAlma Mater floreat\nquae nos educavit,\ncaros et conmilitones\ndissitas in regiones\nsparsos congregavit.",
         "lyricsEs": "Alegrémonos pues,\nmientras seamos jóvenes.\nTras la divertida juventud,\ntras la incómoda vejez,\nnos recibirá la tierra.\n\n¿Dónde están los que antes que nosotros\npasaron por el mundo?\nSubid al mundo de los cielos,\ndescended a los infiernos,\ndonde ellos ya estuvieron.\n\nViva la Universidad,\nvivan los profesores.\nVivan todos y cada uno\nde sus miembros,\nresplandezcan siempre.\n\nNuestra vida es corta,\nen breve se acaba.\nViene la muerte velozmente,\nnos arrastra cruelmente,\nno respeta a nadie.\n\n¡Viva nuestra sociedad!\n¡Vivan los que estudian!\nQue crezca la única verdad,\nque florezca la fraternidad\ny la prosperidad de la patria.\n\nViva también el Estado,\ny quien lo dirige.\nViva nuestra ciudad,\ny la generosidad de los mecenas\nque aquí nos acoge.\n\nMuera la tristeza,\nmueran los que odian.\nMuera el diablo,\ncualquier otro monstruo,\ny quienes se burlan.\n\nFlorezca la Alma Mater\nque nos ha educado,\ny ha reunido a los queridos compañeros\nque por regiones alejadas\nestaban dispersos."
       }
+    },
+    {
+      "day": "2026-06-26",
+      "start": "09:30",
+      "end": "10:30",
+      "room": "room-2-6",
+      "roomName": "ROOM 2.6",
+      "roomCode": "2.6",
+      "cluster": "hospederia",
+      "title": "J - Workshop 54",
+      "fullName": "Session 20P: J - Workshop 54",
+      "type": "workshop",
+      "meet": "",
+      "talks": [
+        {
+          "time": "09:30",
+          "title": "Prioritising with Purpose: An Agile Framework for Strategic Resource Decisions in Teaching and Learning Centres",
+          "authors": "Kata Dosa, Réka Futász",
+          "presenter": "Kata Dosa",
+          "abstract": "Leaders of Centres for Teaching and Learning (CTLs) often face an unrelenting challenge: too many essential initiatives, programs, and stakeholder demands—but never enough time, staff, or funding to meet them all. This workshop offers a structured, collaborative method for strategic prioritisation that helps CTL leaders decide what to do next—and what to stop—in alignment with institutional goals and available capacity. Using an agile-inspired Business Value / Effort–Impact framework, participants will co-create decision criteria (e.g., strategic alignment, innovation, client value, reputational or societal impact) and apply them first through a hands-on case study and then to their own institutional context. Because the method can be revisited periodically, it supports institutional resilience—allowing CTLs to realign priorities as strategies evolve or external disruptions arise. The session balances analytical structure with participatory reflection, enabling leaders to act as proactive change agents who steer their portfolios strategically rather than reactively. Participants will leave with a ready-to-use prioritisation template and facilitation guide to support transparent, evidence-informed decision-making in their own contexts.",
+          "keywords": ""
+        }
+      ],
+      "cardTitle": "",
+      "chair": "",
+      "onlinePresenter": false,
+      "youtube": ""
     }
   ]
 };
