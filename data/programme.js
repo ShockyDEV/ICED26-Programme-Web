@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-02T08-00
+// ICED26 programme — generated from admin panel 2026-06-03T08-01
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -1968,17 +1968,23 @@ window.ICED26_DATA = {
       "meet": "",
       "talks": [
         {
-          "easychair_id": "311674",
           "time": "16:15",
           "title": "Developing agency in academic development through intentional strategic approaches",
           "authors": "Catherine Bovill, Katarina Maartensson",
-          "presenter": "Katarina Maartensson",
+          "presenter": "Catherine Bovill, Katarina Maartensson",
           "abstract": "This workshop focuses on critical reflections and collegial conversations regarding strategic approaches to academic development. The underpinning assumption, based on recent literature in the field, is that academic development centres (ADCs) have expanded and broadened their scope, to be more holistic (Sutherland, 2018) and to support the enhancement of teaching focusing both on individuals as well as on the higher education institutions in which the enhancement takes place (Gibbs, 2013; Wright, 2023). In order to be agentic, rather than reactive, this workshop spotlights the need for intentionality in terms of strategic approaches and explicit, thought-through, context-sensitive theories of change (Kezar, 2018) in academic development. Participants will discuss a set of questions related to strategic approaches in academic development, questions that have also formed the basis of a small-scale survey, sent to ADCs in the UK and Sweden in 2025. Results from this survey will be presented by the workshop facilitators as part of the workshop discussions, and then implications for academic development, and the need for future research will be collaboratively discussed. Participants will leave the workshop having reflected critically on their own strategic approach to academic development, having heard several other examples of approaches, and with a future plan of what they can do to be more agentic in their own academic development initiatives.",
           "keywords": ""
         }
       ],
       "easychair_session_id": "105590",
-      "description": "'Please note this workshop is 90 minutes in duration'"
+      "description": "'Please note this workshop is 90 minutes in duration'",
+      "cardTitle": "",
+      "chair": "",
+      "onlinePresenter": false,
+      "youtube": "",
+      "media": {
+        "heading": "Please note this workshop is 90 minutes in duration"
+      }
     },
     {
       "day": "2026-06-24",
