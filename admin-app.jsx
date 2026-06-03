@@ -1447,10 +1447,10 @@ function SessionEditor({ session, isNew, rooms, clusters, days, onSave, onCancel
                     placeholder="https://www.youtube.com/watch?v=XXXXXXXXXXX" />
                 </Field>
                 <Field label="Texto introductorio (EN)">
-                  <textarea rows={2} value={media.text || ""} onChange={(e) => setMedia({ text: e.target.value })} />
+                  <textarea rows={6} value={media.text || ""} onChange={(e) => setMedia({ text: e.target.value })} />
                 </Field>
                 <Field label="Texto introductorio (ES)">
-                  <textarea rows={2} value={media.textEs || ""} onChange={(e) => setMedia({ textEs: e.target.value })} />
+                  <textarea rows={6} value={media.textEs || ""} onChange={(e) => setMedia({ textEs: e.target.value })} />
                 </Field>
                 <Field label="Letra (original)" hint="Se muestra respetando los saltos de línea.">
                   <textarea rows={6} value={media.lyrics || ""} onChange={(e) => setMedia({ lyrics: e.target.value })} />
