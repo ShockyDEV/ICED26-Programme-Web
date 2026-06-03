@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-03T08-01
+// ICED26 programme — generated from admin panel 2026-06-03T08-03
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -921,16 +921,14 @@ window.ICED26_DATA = {
       "meet": "",
       "talks": [
         {
-          "easychair_id": "311862",
           "time": "11:00",
           "title": "Factors for Development of Trust: Building Collegial Relationships within Teaching and Learning Programs",
-          "authors": "Abdulghani Muthanna, Fredrik Olsson, Håkon Naasen Tandberg",
-          "presenter": "Fredrik Olsson",
+          "authors": "Abdulgni Muthannaha, Fredrik Olsson, Håkon Naasen Tandberg",
+          "presenter": "Abdulgni Muthannaha, Fredrik Olsson",
           "abstract": "At the Research on Higher Education Conference in Gothenburg, Sweden, in 2025, we shared our self-reflections and analysis of relevant studies on the establishment of ‘trust’ among educational developers and university teachers from different disciplines participating in the program of Teaching and Learning in Higher Education (TLHE). In this conference, we aim to discuss how trust can be fostered and developed among the participants, as well as between educational developers and participants, and the possible factors for the lack of trust or distrust. Given this, our participation, founded on data collected through a questionnaire, provides insightful responses to these research inquiries: 1) What are the factors for the development of trust among participants and between participants and facilitators? 2) What are the possible factors for the lack of trust, or even distrust, among participants and between participants and facilitators?",
           "keywords": ""
         },
         {
-          "easychair_id": "311919",
           "time": "11:15",
           "title": "Reclaiming the Ethos of Academic Development: Building Trust through Care, Collegiality, and Community",
           "authors": "Adrian Lee, Kiruthika Ragupathi",
@@ -939,7 +937,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311762",
           "time": "11:30",
           "title": "What can the Third Space learn from a Collaborative Autoethnographic Study on educational change in Higher Education?",
           "authors": "Daniela Castro de Jong, Rita Prestigiacomo, Benjamin Phipps, Sharon Aris",
@@ -948,7 +945,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311922",
           "time": "11:45",
           "title": "From Burnout to Breakthrough: Reclaiming Agency for University-Wide Well-Being in Teaching-Focused Institutions",
           "authors": "Liza Choi",
@@ -957,7 +953,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311880",
           "time": "12:00",
           "title": "Zooming into Active-Learning: A Matrix to Analyse Student-Centred Curriculum Design",
           "authors": "Francisca Miranda, Diana Mesquita, Maitê Gil",
@@ -968,7 +963,10 @@ window.ICED26_DATA = {
       ],
       "easychair_session_id": "104810",
       "description": "Developing Trust, Care and Collegiality",
-      "chair": "Elena Quevedo Torrientes"
+      "chair": "Elena Quevedo Torrientes",
+      "cardTitle": "",
+      "onlinePresenter": false,
+      "youtube": ""
     },
     {
       "day": "2026-06-24",
