@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-03T08-50
+// ICED26 programme — generated from admin panel 2026-06-03T09-01
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -6327,14 +6327,6 @@ window.ICED26_DATA = {
         },
         {
           "time": "11:15",
-          "title": "What educational experiences do social workers perceived as impactful and why?",
-          "authors": "Stephen Ellenbogen",
-          "presenter": "Stephen Ellenbogen",
-          "abstract": "I present the results of a thematic analysis examining the perceptions\nof early- to mid-career social workers on what aspects of their Bachelor of Social \nWork Education they found most impactful. Respondents were encouraged to \nelaborate on why these aspects were helpful and reflect on how it translated to \npractice. Sixteen respondents were interviewed. A variety of assignments and \nactivities were identified; some of the repeated responses include service \nlearning, community event participation, guest lecture, research, and genograms. \nThe findings are consistent with theoretical models in social work education, \nnotably threshold concepts and experiential learning. The presentation will \ninclude interview quotes and discussion of how these relate to educational theory \nand academic development in professional training.",
-          "keywords": ""
-        },
-        {
-          "time": "11:30",
           "title": "From Credential-Chasing to Capacity-Building: Six Ways Sessionals Approach Educational Development",
           "authors": "Brandon Sabourin",
           "presenter": "",
@@ -6342,7 +6334,7 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "time": "11:45",
+          "time": "11:30",
           "title": "AI as Dialogic Catalyst: Archetypal Roles and Epistemic Agency in Interthinking",
           "authors": "Sharon Bratt",
           "presenter": "",
@@ -6351,7 +6343,7 @@ window.ICED26_DATA = {
           "online": true
         },
         {
-          "time": "12:00",
+          "time": "11.45",
           "title": "Done by, done to, done through and done with: Academic Developers delivering strategic projects",
           "authors": "Laura Milne, Jackie Potter, Claire Stocks",
           "presenter": "Laura Milne",
