@@ -164,6 +164,41 @@ function safeURL(url) {
   return "#";
 }
 
+// Turn bare http(s) URLs inside a plain-text block into safe, clickable links.
+// Returns an array of strings and <a> nodes; surrounding text (incl. line
+// breaks) is preserved verbatim, so it still renders correctly under the
+// `white-space: pre-wrap` on .sm-media-text.
+function linkifyText(text) {
+  if (!text) return text;
+  const out = [];
+  const re = /https?:\/\/[^\s]+/g;
+  let last = 0, m, i = 0;
+  while ((m = re.exec(text)) !== null) {
+    let url = m[0];
+    // Peel trailing sentence punctuation (and an unbalanced closing paren) off
+    // the match so "…u3bgr_v1." links to the URL, not the URL-plus-period.
+    let tail = "";
+    while (url) {
+      const c = url[url.length - 1];
+      if (".,;:!?".indexOf(c) !== -1 || (c === ")" && url.indexOf("(") === -1)) {
+        tail = c + tail;
+        url = url.slice(0, -1);
+      } else break;
+    }
+    if (m.index > last) out.push(text.slice(last, m.index));
+    const href = safeURL(url);
+    if (href && href !== "#") {
+      out.push(<a key={"u" + (i++)} href={href} target="_blank" rel="noopener noreferrer">{url}</a>);
+    } else {
+      out.push(url);
+    }
+    if (tail) out.push(tail);
+    last = m.index + m[0].length;
+  }
+  if (last < text.length) out.push(text.slice(last));
+  return out;
+}
+
 // ─── Stable session ID for deep-linking ──────────────────────────────────
 // Day + start time + room is unique per schedule. Strip separators for URL friendliness.
 function sessionId(s) {
@@ -1753,7 +1788,7 @@ function SessionModal({ session, t, lang, now, onClose, favorites, onToggleFavor
           return (
             <div className="sm-media">
               {m.heading && <h3 className="sm-media-heading">{m.heading}</h3>}
-              {intro && <p className="sm-media-text">{intro}</p>}
+              {intro && <p className="sm-media-text">{linkifyText(intro)}</p>}
               {embed && (
                 <div className="sm-media-video">
                   <iframe
