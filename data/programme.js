@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-03T08-05
+// ICED26 programme — generated from admin panel 2026-06-03T08-08
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -4632,7 +4632,6 @@ window.ICED26_DATA = {
       "meet": "",
       "talks": [
         {
-          "easychair_id": "311699",
           "time": "16:15",
           "title": "The future of Academic Development: A speculative fiction workshop",
           "authors": "Cormac McGrath, Elisa Bone",
@@ -4642,7 +4641,15 @@ window.ICED26_DATA = {
           "online": true
         }
       ],
-      "easychair_session_id": "105615"
+      "easychair_session_id": "105615",
+      "media": {
+        "heading": "Additional indications",
+        "text": "Dear participants:\nPlease find a pre-print of the work (The Academic Futures we want: A speculative fiction approach) that led to this workshop here https://doi.org/10.35542/osf.io/u3bgr_v1.\n\nAlso, if you have time, we would love to hear your thoughts on what future challenges academic development practice and research is facing, then share those thoughts (anonymously) here: https://forms.gle/9P4bmMduw6FjB1K67.\n\nWe will try and process some of these ideas during the workshop."
+      },
+      "cardTitle": "",
+      "chair": "",
+      "onlinePresenter": false,
+      "youtube": ""
     },
     {
       "day": "2026-06-25",
