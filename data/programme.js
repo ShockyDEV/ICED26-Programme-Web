@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-03T08-28
+// ICED26 programme — generated from admin panel 2026-06-03T08-42
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -924,7 +924,7 @@ window.ICED26_DATA = {
           "time": "11:00",
           "title": "Factors for Development of Trust: Building Collegial Relationships within Teaching and Learning Programs",
           "authors": "Abdulgni Muthannaha, Fredrik Olsson, Håkon Naasen Tandberg",
-          "presenter": "Abdulgni Muthannaha Fredrik Olsson",
+          "presenter": "Abdulgni Muthannaha, Fredrik Olsson",
           "abstract": "At the Research on Higher Education Conference in Gothenburg, Sweden, in 2025, we shared our self-reflections and analysis of relevant studies on the establishment of ‘trust’ among educational developers and university teachers from different disciplines participating in the program of Teaching and Learning in Higher Education (TLHE). In this conference, we aim to discuss how trust can be fostered and developed among the participants, as well as between educational developers and participants, and the possible factors for the lack of trust or distrust. Given this, our participation, founded on data collected through a questionnaire, provides insightful responses to these research inquiries: 1) What are the factors for the development of trust among participants and between participants and facilitators? 2) What are the possible factors for the lack of trust, or even distrust, among participants and between participants and facilitators?",
           "keywords": ""
         },
@@ -1010,7 +1010,7 @@ window.ICED26_DATA = {
           "time": "11:45",
           "title": "Collaborative and Proactive Solutions (CPS) – simulation-based training of student teachers",
           "authors": "Victoria Stenbäck, Gunvor Torstensdotter, Henrik Lindqvist",
-          "presenter": "Victoria Stenbäck Gunvor Torstensdotter",
+          "presenter": "Victoria Stenbäck, Gunvor Torstensdotter",
           "abstract": "Student teachers in Sweden often feel they lack tools in teacher education to address pupils’ challenging behaviours. To break negative behaviour cycles, specific and evaluable models are needed. Collaborative and Proactive Solutions (CPS), grounded in systems theory and democratic values, offers a structure for teachers and children to identify and express underlying reasons for problems and work collaboratively toward solutions. This project uses simulations as a pedagogical method to support student teachers’ professional development. Simulations provide a safe, structured environment to practise complex interpersonal and problem solving skills, make mistakes without real consequences, and receive targeted feedback. Furthermore, using simulations in higher education can expand university teachers’ repertoire of teaching and learning activities, bridging theory and classroom practice in higher education settings. This iterative practice deepens understanding of CPS while strengthening professional confidence, reflection, and adaptive communication, promoting agency in university teachers and student teachers alike. Student teachers engaged in two real time simulations with student avatars: one before learning CPS and one after a workshop with certified CPS experts, who also offer live supervision. Both simulations were video recorded and analysed for CPS fidelity. Semi structured interviews then explored experiences and perceived usability of CPS. The project presents results from the simulations and the interviews and discusses the role of a Simulation Teaching Lab in teacher education.",
           "keywords": ""
         },
