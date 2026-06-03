@@ -2266,7 +2266,7 @@ a { color: inherit; }
   margin: 0 0 6px;
   color: var(--ink);
 }
-.sm-media-text { margin: 0 0 12px; font-size: 13.5px; line-height: 1.5; color: var(--ink-soft); }
+.sm-media-text { margin: 0 0 12px; font-size: 13.5px; line-height: 1.5; color: var(--ink-soft); white-space: pre-wrap; }
 .sm-media-video {
   position: relative;
   width: 100%;
