@@ -1240,16 +1240,13 @@ function SessionEditor({ session, isNew, rooms, clusters, days, onSave, onCancel
   const [s, setS] = React.useState(() => clone(session));
   const [errors, setErrors] = React.useState({});
 
-  // ESC closes
+  // Lock background scroll while the editor is open. The editor intentionally
+  // does NOT close on Esc or on a backdrop click — only the ✕ / Cancelar /
+  // Guardar buttons close it, so in-progress edits can't be lost by accident.
   React.useEffect(() => {
-    const onKey = (e) => { if (e.key === "Escape") onCancel(); };
-    document.addEventListener("keydown", onKey);
     document.body.style.overflow = "hidden";
-    return () => {
-      document.removeEventListener("keydown", onKey);
-      document.body.style.overflow = "";
-    };
-  }, [onCancel]);
+    return () => { document.body.style.overflow = ""; };
+  }, []);
 
   const setField = (k, v) => setS((prev) => ({ ...prev, [k]: v }));
 
@@ -1329,8 +1326,8 @@ function SessionEditor({ session, isNew, rooms, clusters, days, onSave, onCancel
   };
 
   return (
-    <div className="modal-overlay" onClick={onCancel} role="dialog" aria-modal="true">
-      <form className="modal session-modal-edit" onClick={(e) => e.stopPropagation()} onSubmit={submit}>
+    <div className="modal-overlay" role="dialog" aria-modal="true">
+      <form className="modal session-modal-edit" onSubmit={submit}>
         <header className="modal-head">
           <h2>{isNew ? "Nueva sesión" : "Editar sesión"}</h2>
           <button type="button" className="modal-close" onClick={onCancel} aria-label="Cerrar">✕</button>
