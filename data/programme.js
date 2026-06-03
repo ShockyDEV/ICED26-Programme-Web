@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-03T08-08
+// ICED26 programme — generated from admin panel 2026-06-03T08-28
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -982,7 +982,6 @@ window.ICED26_DATA = {
       "meet": "",
       "talks": [
         {
-          "easychair_id": "311980",
           "time": "11:00",
           "title": "Responsible AI Integration in Higher Education: Policy and Curriculum Interventions",
           "authors": "Thomas Lodewyckx, Jan Verbakel",
@@ -991,7 +990,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311885",
           "time": "11:15",
           "title": "Teaching AI with AI: Leveraging Critical Digital Pedagogy and Student Partnerships to Transform AI Curriculum",
           "authors": "Wei Yan, Ajay Dhruv, Vijal Jain",
@@ -1001,7 +999,6 @@ window.ICED26_DATA = {
           "online": true
         },
         {
-          "easychair_id": "311825",
           "time": "11:30",
           "title": "From the Algorithmic to the Intuitive: ChatGPT and the Transformation of Mathematical Thinking in Higher Education",
           "authors": "Lina Maria Peña Páez",
@@ -1010,16 +1007,14 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "314317",
           "time": "11:45",
           "title": "Collaborative and Proactive Solutions (CPS) – simulation-based training of student teachers",
           "authors": "Victoria Stenbäck, Gunvor Torstensdotter, Henrik Lindqvist",
-          "presenter": "Henrik Lindqvist",
+          "presenter": "Victoria Stenbäck Gunvor Torstensdotter",
           "abstract": "Student teachers in Sweden often feel they lack tools in teacher education to address pupils’ challenging behaviours. To break negative behaviour cycles, specific and evaluable models are needed. Collaborative and Proactive Solutions (CPS), grounded in systems theory and democratic values, offers a structure for teachers and children to identify and express underlying reasons for problems and work collaboratively toward solutions. This project uses simulations as a pedagogical method to support student teachers’ professional development. Simulations provide a safe, structured environment to practise complex interpersonal and problem solving skills, make mistakes without real consequences, and receive targeted feedback. Furthermore, using simulations in higher education can expand university teachers’ repertoire of teaching and learning activities, bridging theory and classroom practice in higher education settings. This iterative practice deepens understanding of CPS while strengthening professional confidence, reflection, and adaptive communication, promoting agency in university teachers and student teachers alike. Student teachers engaged in two real time simulations with student avatars: one before learning CPS and one after a workshop with certified CPS experts, who also offer live supervision. Both simulations were video recorded and analysed for CPS fidelity. Semi structured interviews then explored experiences and perceived usability of CPS. The project presents results from the simulations and the interviews and discusses the role of a Simulation Teaching Lab in teacher education.",
           "keywords": ""
         },
         {
-          "easychair_id": "312028",
           "time": "12:00",
           "title": "Equipping Engineering Curricula with Digital Simulation Skills: Embedding ANSYS in Curricula",
           "authors": "Masum Billah, Ma Moghimi, S Islam, D Roberts, Md Asaduzzaman, S Marimuthu, M Fahad, S Shiryghidary, A Cash, S Vatannia",
@@ -1030,7 +1025,10 @@ window.ICED26_DATA = {
       ],
       "easychair_session_id": "104806",
       "description": "Teaching with AI, Digital Simulation Skills and Responsible Integration",
-      "chair": "Bernhard Lange"
+      "chair": "Bernhard Lange",
+      "cardTitle": "",
+      "onlinePresenter": false,
+      "youtube": ""
     },
     {
       "day": "2026-06-24",
