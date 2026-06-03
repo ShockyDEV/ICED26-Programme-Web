@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-03T08-47
+// ICED26 programme — generated from admin panel 2026-06-03T08-50
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -729,7 +729,9 @@ window.ICED26_DATA = {
       "easychair_session_id": "104804",
       "description": "Human Literacy, Future Skills and Competency-based Education",
       "youtube": "",
-      "chair": "Markus Weil"
+      "chair": "Robert Kordts",
+      "cardTitle": "",
+      "onlinePresenter": false
     },
     {
       "day": "2026-06-24",
