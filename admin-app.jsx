@@ -1296,6 +1296,7 @@ function SessionEditor({ session, isNew, rooms, clusters, days, onSave, onCancel
       chair: (s.chair || "").trim(),
       media: cleanMedia(s.media),
       onlinePresenter: !!s.onlinePresenter,
+      cancelled: !!s.cancelled,
       // Keynotes & ICED talks are YouTube-only — never persist a Meet for them.
       meet: (s.type === "keynote" || s.type === "talk") ? "" : (s.meet || "").trim(),
       // Symposia/papers/workshops use Meet, not YouTube — keep youtube only for keynote/talk.
@@ -1421,6 +1422,18 @@ function SessionEditor({ session, isNew, rooms, clusters, days, onSave, onCancel
                 onChange={(e) => setField("onlinePresenter", e.target.checked)}
               />
               <span>Una o más ponencias serán online</span>
+            </label>
+          </Field>
+
+          <Field label="Estado de la sesión"
+            hint="Marca «Cancelada» si la sesión se ha anulado. Sigue visible en el programa con la etiqueta CANCELADO, el título tachado y sin acceso remoto, para que los asistentes lo sepan. Recomendado frente a borrar o renumerar.">
+            <label className="checkbox-row checkbox-row-cancel">
+              <input
+                type="checkbox"
+                checked={!!s.cancelled}
+                onChange={(e) => setField("cancelled", e.target.checked)}
+              />
+              <span>Sesión cancelada</span>
             </label>
           </Field>
 

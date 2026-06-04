@@ -2269,6 +2269,28 @@ a { color: inherit; }
 .sm-media-text { margin: 0 0 12px; font-size: 13.5px; line-height: 1.5; color: var(--ink-soft); white-space: pre-wrap; }
 .sm-media-text a { color: var(--teal-deep); text-decoration: underline; text-underline-offset: 2px; overflow-wrap: anywhere; }
 .sm-media-text a:hover { color: var(--coral-deep); }
+
+/* ───── Cancelled sessions ───── */
+.c-title.is-cancelled, .m-title.is-cancelled, .sm-title.is-cancelled, .agenda-item-title.is-cancelled {
+  text-decoration: line-through;
+  text-decoration-thickness: 1.5px;
+}
+.cell.is-cancelled, .mobile-cell.is-cancelled { opacity: 0.62; filter: grayscale(0.25); }
+.cancel-badge, .cancel-chip-inline, .ai-cancel {
+  display: inline-flex; align-items: center;
+  font-size: 9.5px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase;
+  color: #fff; background: var(--coral-deep);
+  padding: 1px 6px; border-radius: 999px; white-space: nowrap;
+}
+.cancel-chip-inline { font-size: 11px; margin-left: 8px; }
+.ai-cancel { font-size: 10px; margin-left: 6px; }
+.sm-cancel-banner {
+  display: flex; flex-direction: column; gap: 2px;
+  background: var(--coral-soft); border: 1px solid var(--coral);
+  border-radius: 10px; padding: 10px 14px; margin-bottom: 14px;
+}
+.sm-cancel-banner strong { color: var(--coral-deep); font-size: 14px; }
+.sm-cancel-banner span { color: var(--ink-soft); font-size: 13px; }
 .sm-media-video {
   position: relative;
   width: 100%;

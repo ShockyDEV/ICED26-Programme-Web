@@ -298,6 +298,9 @@ const I18N = {
     online: "ONLINE",
     onlinePresenterTitle: "Online presenter",
     onlinePresenterDesc: "One or more presentations in this session will be online.",
+    cancelled: "CANCELLED",
+    cancelledTitle: "Session cancelled",
+    cancelledDesc: "This session has been cancelled.",
     myAgenda: "My agenda",
     myAgendaTitle: "My personal agenda",
     addToAgenda: "Add to my agenda",
@@ -364,6 +367,9 @@ const I18N = {
     online: "ONLINE",
     onlinePresenterTitle: "Ponente online",
     onlinePresenterDesc: "Una o más ponencias de esta sesión se presentarán de forma online.",
+    cancelled: "CANCELADO",
+    cancelledTitle: "Sesión cancelada",
+    cancelledDesc: "Esta sesión ha sido cancelada.",
     myAgenda: "Mi agenda",
     myAgendaTitle: "Mi agenda personal",
     addToAgenda: "Añadir a mi agenda",
@@ -994,7 +1000,7 @@ function Grid({ data, dayIdx, buildingId, now, liveStyle, lang, t, onSessionClic
                     key={item.idx}
                     role="button"
                     tabIndex="0"
-                    className={`cell is-${state} ${dur <= 60 ? "is-short" : ""} ${item.span > 1 ? `sub-of-${item.span}` : "sub-of-1"} ${isSessionOnline(s) ? "is-online-presenter" : ""}`}
+                    className={`cell is-${state} ${dur <= 60 ? "is-short" : ""} ${item.span > 1 ? `sub-of-${item.span}` : "sub-of-1"} ${isSessionOnline(s) ? "is-online-presenter" : ""} ${s.cancelled ? "is-cancelled" : ""}`}
                     data-live-style={liveStyle}
                     onClick={() => { if (onSessionClick) onSessionClick(s); }}
                     onKeyDown={(e) => { if ((e.key === "Enter" || e.key === " ") && onSessionClick) { e.preventDefault(); onSessionClick(s); } }}
@@ -1010,7 +1016,10 @@ function Grid({ data, dayIdx, buildingId, now, liveStyle, lang, t, onSessionClic
                     aria-label={`${t.types[s.type] || s.type}: ${s.title}, ${s.roomName}, ${s.start} to ${s.end}, ${state === "live" ? t.live : state === "past" ? t.past : t.upcoming}`}>
                     
                     <div className="cell-topbar">
-                      {state === "live" &&
+                      {s.cancelled && (
+                        <span className="cancel-badge">{t.cancelled}</span>
+                      )}
+                      {state === "live" && !s.cancelled &&
                       <span className="live-badge"><span className="dot"></span>{t.live}</span>
                       }
                       {isSessionOnline(s) && (
@@ -1050,7 +1059,7 @@ function Grid({ data, dayIdx, buildingId, now, liveStyle, lang, t, onSessionClic
                     <div className="c-room">
                       <span className="c-time">{s.start}–{s.end}</span>
                     </div>
-                    <div className="c-title">{s.title}</div>
+                    <div className={`c-title ${s.cancelled ? "is-cancelled" : ""}`}>{s.title}</div>
                     <OfficialTitle session={s} className="c-official" t={t} />
                     <div className="c-foot">
                       {s.chair && (
@@ -1143,14 +1152,15 @@ function MobileList({ data, dayIdx, buildingId, now, lang, t, onSessionClick, fa
                 href={safeURL(s.meet)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`mobile-cell is-${state} ${isSessionOnline(s) ? "is-online-presenter" : ""}`}
+                className={`mobile-cell is-${state} ${isSessionOnline(s) ? "is-online-presenter" : ""} ${s.cancelled ? "is-cancelled" : ""}`}
                 style={{ "--type-color": `var(--t-${s.type})` }}
                 onClick={(e) => { e.preventDefault(); if (onSessionClick) onSessionClick(s); }}
                 aria-label={`${t.types[s.type] || s.type}: ${s.title}, ${s.room === "*" ? t.everyRoom : s.roomName}, ${s.start}–${s.end}${isSessionOnline(s) ? ", " + t.onlinePresenterTitle : ""}`}>
 
                   <div className="m-room">
                     {s.room === "*" ? t.everyRoom : s.roomName}
-                    {state === "live" && <span className="live-badge" style={{ position: "static", marginLeft: 8 }}><span className="dot"></span>{t.live}</span>}
+                    {s.cancelled && <span className="cancel-chip-inline">{t.cancelled}</span>}
+                    {state === "live" && !s.cancelled && <span className="live-badge" style={{ position: "static", marginLeft: 8 }}><span className="dot"></span>{t.live}</span>}
                     {state === "past" && <span style={{ marginLeft: 8, color: "var(--ink-mute)" }}>✓ {t.past}</span>}
                     {isSessionOnline(s) && (
                       <span className="online-chip-inline" title={t.onlinePresenterTitle}>🌐 {t.online}</span>
@@ -1162,7 +1172,7 @@ function MobileList({ data, dayIdx, buildingId, now, lang, t, onSessionClick, fa
                       <span className="video-chip-inline" title={t.videoTitle}>🎬 {t.video}</span>
                     )}
                   </div>
-                  <div className="m-title">{s.title}</div>
+                  <div className={`m-title ${s.cancelled ? "is-cancelled" : ""}`}>{s.title}</div>
                   <OfficialTitle session={s} className="m-official" t={t} />
                   {s.chair && <div className="m-chair"><span className="c-chair-label">{t.chairLabel}</span> {s.chair}</div>}
                   <div className="m-meta">
@@ -1602,12 +1612,19 @@ function SessionModal({ session, t, lang, now, onClose, favorites, onToggleFavor
         </div>
         <div className="sm-head">
           <div className="sm-type" style={{ color: typeColor }}>{typeLabel}</div>
-          <h2 className="sm-title">{session.title}</h2>
+          <h2 className={`sm-title ${session.cancelled ? "is-cancelled" : ""}`}>{session.title}</h2>
           <OfficialTitle session={session} className="sm-official" t={t} />
           {session.fullName && session.fullName !== session.title && (
             <div className="sm-fullname">{session.fullName}</div>
           )}
         </div>
+
+        {session.cancelled && (
+          <div className="sm-cancel-banner" role="note">
+            <strong>{t.cancelledTitle}</strong>
+            <span>{t.cancelledDesc}</span>
+          </div>
+        )}
 
         {isSessionOnline(session) && (
           <div className="sm-online-banner" role="note">
@@ -1719,6 +1736,10 @@ function SessionModal({ session, t, lang, now, onClose, favorites, onToggleFavor
             past a 5-talk list to find it. */}
         <div className="sm-actions">
           {(() => {
+            // Cancelled sessions never offer remote access — no Meet / YouTube.
+            if (session.cancelled) {
+              return <span className="sm-no-meet muted">{t.cancelledTitle}</span>;
+            }
             // Meet/YouTube buttons. They render greyed + locked (not clickable)
             // until the session's room is switched Active in the backstage.
             const linksActive = roomLinksActive(session, data);
@@ -2059,11 +2080,12 @@ function AgendaModal({ open, onClose, favorites, data, t, lang, now, onSessionCl
                           >
                             <div className="agenda-item-time">
                               <span className="ai-time">{s.start}–{s.end}</span>
-                              {state === "live" && <span className="ai-live">{t.live}</span>}
+                              {state === "live" && !s.cancelled && <span className="ai-live">{t.live}</span>}
                               {state === "past" && <span className="ai-past">{t.past}</span>}
+                              {s.cancelled && <span className="ai-cancel">{t.cancelled}</span>}
                             </div>
                             <div className="agenda-item-body">
-                              <div className="agenda-item-title">
+                              <div className={`agenda-item-title ${s.cancelled ? "is-cancelled" : ""}`}>
                                 {isSessionOnline(s) && (
                                   <span className="ai-online" title={t.onlinePresenterTitle} aria-hidden="true">🌐</span>
                                 )}
@@ -2091,7 +2113,7 @@ function AgendaModal({ open, onClose, favorites, data, t, lang, now, onSessionCl
                             </div>
                           </button>
                           <div className="agenda-item-actions">
-                            {s.meet && (
+                            {s.meet && !s.cancelled && (
                               <a
                                 href={safeURL(s.meet)}
                                 target="_blank"

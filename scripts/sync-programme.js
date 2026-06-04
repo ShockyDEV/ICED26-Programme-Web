@@ -435,6 +435,9 @@ async function main() {
     if (existing?.media) next.media = existing.media;
     // Preserve the session-level "one or more presentations online" flag.
     if (existing?.onlinePresenter) next.onlinePresenter = true;
+    // Preserve the admin-set "cancelled" flag (set in the backstage when a
+    // session is called off; EasyChair often still lists it). Kept by id match.
+    if (existing?.cancelled) next.cancelled = true;
     // Per-talk online presenter flags — match scraped talks to existing
     // ones by normalized title and carry the `online` flag forward.
     if (existing && Array.isArray(existing.talks) && existing.talks.length > 0) {
