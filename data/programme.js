@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-04T11-16
+// ICED26 programme — generated from admin panel 2026-06-04T11-18
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -1163,7 +1163,6 @@ window.ICED26_DATA = {
       "meet": "",
       "talks": [
         {
-          "easychair_id": "311893",
           "time": "11:00",
           "title": "Program Innovation as Holistic Educational Development: A Case Study",
           "authors": "Jaclyn Carter, Kimberley Grant, Patti Dyjur",
@@ -1172,7 +1171,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311944",
           "time": "11:15",
           "title": "FPD-Include: Designing Faculty Development for Inclusive Teaching in Pharmacy Education",
           "authors": "Mirey Alfarah, Marie van der Kloet",
@@ -1181,7 +1179,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311998",
           "time": "11:30",
           "title": "Educational Development through Course Design, Community of Practice and Mentoring: The EDUflow Program",
           "authors": "Krisztina Lénárt, Helga Dorner",
@@ -1190,7 +1187,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311987",
           "time": "11:45",
           "title": "Beyond Academic Silos: A Podcast-Based “Gentle FD” Initiative in a Research-Intensive University",
           "authors": "Wonhwa Park, Hiro Sato",
@@ -1199,7 +1195,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "314314",
           "time": "12:00",
           "title": "Empowering faculty agency through microcredentials",
           "authors": "Consuelo García Tamarit",
@@ -1210,7 +1205,10 @@ window.ICED26_DATA = {
       ],
       "easychair_session_id": "104808",
       "description": "Designing Educational Development; Empowering Faculty Agency",
-      "chair": "Belinda Ommering"
+      "chair": "Carl S. Moore",
+      "cardTitle": "",
+      "onlinePresenter": false,
+      "youtube": ""
     },
     {
       "day": "2026-06-24",
@@ -3357,7 +3355,6 @@ window.ICED26_DATA = {
       "meet": "",
       "talks": [
         {
-          "easychair_id": "311654",
           "time": "09:00",
           "title": "Building Knowledge Together: fueling Student and Teacher Agency development with Epistemic Agency",
           "authors": "Renée Hendriks, Belinda Ommering, Janine Haenen, Max Kusters, Jacob Nouta",
@@ -3367,7 +3364,10 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "105602",
-      "chair": "Carl S. Moore"
+      "chair": "Belinda Ommering",
+      "cardTitle": "",
+      "onlinePresenter": false,
+      "youtube": ""
     },
     {
       "day": "2026-06-25",
