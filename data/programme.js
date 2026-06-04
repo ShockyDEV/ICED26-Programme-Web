@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-04T11-22
+// ICED26 programme — generated from admin panel 2026-06-04T11-52
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -5959,7 +5959,6 @@ window.ICED26_DATA = {
       "meet": "",
       "talks": [
         {
-          "easychair_id": "312015",
           "time": "11:00",
           "title": "Nothing about us without us: Mapping neurodivergent student perspectives on good teaching onto the Universal Design for Learning",
           "authors": "Mayuko Nakamura, Lori Henehan",
@@ -5969,7 +5968,11 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "107384",
-      "chair": "Björn Kiehne"
+      "chair": "Björn Kiehne",
+      "cancelled": true,
+      "cardTitle": "",
+      "onlinePresenter": false,
+      "youtube": ""
     },
     {
       "day": "2026-06-26",
