@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-03T09-16
+// ICED26 programme — generated from admin panel 2026-06-04T11-16
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -6350,6 +6350,14 @@ window.ICED26_DATA = {
           "abstract": "In response to sector-wide pressures, our Academic Development team has led two major strategic projects impacting and influencing the university, namely a whole-institution curriculum redesign (reworking over 100 courses) and a rebuild of the Virtual Learning Environment (VLE) to enable improved learning design at scale. This work has required negotiation of our identities, and development of nuanced approaches to leadership. The current neoliberal climate impacting Higher Education globally creates and extends potential tensions between business efficiencies and learning. Against this backdrop, academic developers are deployed to lead change projects to ensure strategic imperatives are supportive of institutional needs and ambitions. This paper explores academic developers’ leadership roles in institutional transformation, drawing on established leadership frameworks and academic development literature, and proposes a conceptual framework for leading change at scale. Grounded in leadership theories and case-based reflection, we introduce a typology of leadership modalities experienced by academic developers: done by (through facilitation), done to (navigating tension around change), done through (operational project management and stakeholder liaison), and done with (collaborative grassroots leadership across silos). We offer attendees practical strategies and evidence-based insights for leading large-scale strategic transformation, balancing institutional imperatives with pedagogical values, while negotiating personal and professional identities as academic developers.",
           "keywords": "",
           "online": true
+        },
+        {
+          "time": "12.00",
+          "title": "Nothing about us without us: Mapping neurodivergent actives on good teaching onto the Universal Design for Learning",
+          "authors": "Mayuko Nakamura, Lori Henehan",
+          "presenter": "Mayuko Nakamura, Lori Henehan",
+          "abstract": "With the growing number of neurodivergent students in higher education, it is essential to equip educators with strategies that foster inclusive learning environments. Despite institutional efforts to make teaching more accessible, many neurodivergent students continue to report concerns about classroom environments and instructional practices that hinder their success (Accardo et al., 2024). Furthermore, much of the existing literature overlooks the perspectives of the very students these practices aim to support (Kingsbury et al., 2020). To address this gap, we conducted focus groups in Spring 2024 with self-identified neurodivergent undergraduate students at a large public university to explore their views on effective teaching strategies. Findings reveal persistent challenges related to rigid course structures and limited flexibility, alongside recommendations for practices that promote engagement and equity. We mapped these student-identified strategies onto the Universal Design for Learning (UDL) framework (CAST, 2025) to create a practical guide for intentional course design. This framework offers actionable recommendations for instructors and provides a foundation for future research on the experiences of neurodivergent students in college classrooms. By centering student voices, this work advances evidence-informed approaches to academic development and promotes equitable learning opportunities for all.",
+          "keywords": ""
         }
       ],
       "easychair_session_id": "105681",
