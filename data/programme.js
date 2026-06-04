@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-04T11-18
+// ICED26 programme — generated from admin panel 2026-06-04T11-22
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -6573,6 +6573,14 @@ window.ICED26_DATA = {
       "type": "paper",
       "meet": "",
       "talks": [
+        {
+          "time": "11.00",
+          "title": "Direction and Co-construction: time, social space and agency in large scale educational reform",
+          "authors": "Roland Tormey, Iris Capdevila",
+          "presenter": "Roland Tormey",
+          "abstract": "This paper explores the complexities of shared agency and managerial direction within large scale educational change processes. While there is a recognition that teachers sense of ownership and agency are central to change processes, this is enacted within organizational frameworks which legitimize and give impulsion to such change. How people experience their own sense of agency in such environments is also shaped by their sense of phenomenological time within the change process. By applying concepts of shared agency and phenomenological time, the authors examine facilitatory methods for involving students and educators in large-scale reform, identifying opportunities and limitations within collaborative processes.",
+          "keywords": ""
+        },
         {
           "time": "11:15",
           "title": "Building Capacity Through Shared Leadership: Establishing a Resilient Professional Learning Community for Sustainable Organizational Learning",
