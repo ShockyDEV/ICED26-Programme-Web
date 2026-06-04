@@ -1313,7 +1313,6 @@ window.ICED26_DATA = {
       "meet": "",
       "talks": [
         {
-          "easychair_id": "311824",
           "time": "11:00",
           "title": "Building trust and accountability through policy and process review: A Collaborative Model from the University of Salford",
           "authors": "Neil Barrett, Claire Hamshire, Rosie Bryce",
@@ -1322,7 +1321,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311914",
           "time": "11:15",
           "title": "Academic development agency awareness – why and how to be responsive to the host organization",
           "authors": "Roy Andersson, Torgny Roxå, Kristofer Modig",
@@ -1331,7 +1329,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "314316",
           "time": "11:30",
           "title": "Building resilient academic development alliances",
           "authors": "Claudia Bade",
@@ -1340,17 +1337,7 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311969",
           "time": "11:45",
-          "title": "Direction and Co-construction: time, social space and agency in large scale educational reform",
-          "authors": "Roland Tormey, Iris Capdevila",
-          "presenter": "Roland Tormey",
-          "abstract": "This paper explores the complexities of shared agency and managerial direction within large scale educational change processes. While there is a recognition that teachers sense of ownership and agency are central to change processes, this is enacted within organizational frameworks which legitimize and give impulsion to such change. How people experience their own sense of agency in such environments is also shaped by their sense of phenomenological time within the change process. By applying concepts of shared agency and phenomenological time, the authors examine facilitatory methods for involving students and educators in large-scale reform, identifying opportunities and limitations within collaborative processes.",
-          "keywords": ""
-        },
-        {
-          "easychair_id": "314315",
-          "time": "12:00",
           "title": "Enhancing academic development agency through understanding staff perceptions of teaching and learning units",
           "authors": "Bopelo Boitshwarelo",
           "presenter": "",
@@ -1360,7 +1347,10 @@ window.ICED26_DATA = {
       ],
       "easychair_session_id": "104812",
       "description": "Alliances, Networking and Policy Development",
-      "chair": "Kata Dosa"
+      "chair": "Kata Dosa",
+      "cardTitle": "",
+      "onlinePresenter": false,
+      "youtube": ""
     },
     {
       "day": "2026-06-24",
