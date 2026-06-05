@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-05T08-37
+// ICED26 programme — generated from admin panel 2026-06-05T08-38
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -2975,7 +2975,8 @@ window.ICED26_DATA = {
           "authors": "Alejandro Almonacid-Fierro, Mirko Aguilar-Valdés",
           "presenter": "Alejandro Almonacid-Fierro",
           "abstract": "This study analyzes how university teachers understand the integration between teaching and research, with an emphasis on the Scholarship of Teaching and Learning (SoTL) approach, in the context of Chilean higher education. A qualitative methodology based on an interpretive phenomenological paradigm was used, through semi-structured interviews with twelve academics with experience in university teaching and participation in educational research. Content analysis and reflective thematic analysis identified two central dimensions: pedagogical practices and approaches, and teaching research and development. The findings reveal tensions between traditional models focused on knowledge transmission and innovative practices that promote critical reflection, active participation, and situated learning. Participants also recognize that researching their own teaching promotes the improvement of pedagogical practices, allows for the identification of emerging issues, and contributes to academic professional development. However, they note limited institutionalization of teaching research, low circulation of results, and little impact on curricular decision-making. The study concludes that integrating teaching and research strengthens the quality of teaching and contributes to the consolidation of more reflective academic communities. It highlights the need for institutional policies that recognize SoTL as a legitimate component of the academic career and promote conditions that allow for the systematic and sustainable linking of educational research with university training processes.",
-          "keywords": ""
+          "keywords": "",
+          "online": true
         },
         {
           "time": "09:30",
@@ -3008,7 +3009,8 @@ window.ICED26_DATA = {
       "chair": "Robert Eaton",
       "cardTitle": "",
       "onlinePresenter": false,
-      "youtube": ""
+      "youtube": "",
+      "cancelled": false
     },
     {
       "day": "2026-06-25",
