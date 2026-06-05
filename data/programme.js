@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-04T11-52
+// ICED26 programme — generated from admin panel 2026-06-05T08-37
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -3153,7 +3153,6 @@ window.ICED26_DATA = {
       "meet": "",
       "talks": [
         {
-          "easychair_id": "311968",
           "time": "09:00",
           "title": "Evaluating effectiveness and impacts of Faculty Development for junior faculties: a case study",
           "authors": "Arianna Marci",
@@ -3162,7 +3161,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311984",
           "time": "09:15",
           "title": "Long-term impacts of Academic Development in Australian Higher Education: a narrative approach",
           "authors": "Rosanne Quinnell, Melinda J Lewis, Elizabeth Seeley-Wait",
@@ -3172,7 +3170,6 @@ window.ICED26_DATA = {
           "video": true
         },
         {
-          "easychair_id": "311910",
           "time": "09:30",
           "title": "Towards a multi-level model for impact evaluation in Teaching and Learning Centres",
           "authors": "Giorgia Pasquali, Giovanna Del Gobbo, Kiruthika Ragupathi",
@@ -3182,7 +3179,6 @@ window.ICED26_DATA = {
           "online": true
         },
         {
-          "easychair_id": "311965",
           "time": "09:45",
           "title": "Bridging the Transfer Gap: How Faculty Developers Foster Agency and Application in Diverse Teaching Communities",
           "authors": "Karin Brown, Sara Petchey",
@@ -3191,19 +3187,22 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "312004",
           "time": "10:00",
           "title": "Shifting Conceptions and Stretching Practice: The Impact of the Facilitator Development Workshop (FDW)",
           "authors": "Monica Vesely, Hannah Celinski",
           "presenter": "Monica Vesely",
           "abstract": "Our session will share emerging themes from our qualitative study on the impact of the Facilitator Development Workshop (FDW) on instructor development through the lens of the signature pedagogical approaches embedded in the FDW; namely the high impact nature of: (a) peer-based development, (b) learner-focused instruction, (c) experiential learning, and (d) reflective practice (Vesely, 2022). The FDW curriculum encourages participants to experiment with ideas, to connect with one another, and to expand conceptions of teaching and learning. Many FDW participants find facilitating to be the most challenging and rewarding work they have done in a teaching-related workshop context. Our research study aims to begin uncovering what changes in teaching practices are associated with participation in the FDW, how the experience of the FDW shapes participants' conceptions of teaching and learning, and in what ways, if any, the FDW experience might have permeated into other contexts. In our session, we will share the perceived impact of various aspects of the workshop and our thematic analysis of the shared accounts. We will also consider the broader applicability of reflection on professional practice to the global community in times of change.",
           "keywords": "",
-          "online": true
+          "video": true
         }
       ],
       "easychair_session_id": "104862",
       "description": "Impact, Evaluation and Transfer of Academic Development",
-      "chair": "Ted Murcray"
+      "chair": "Ted Murcray",
+      "cardTitle": "",
+      "onlinePresenter": false,
+      "cancelled": false,
+      "youtube": ""
     },
     {
       "day": "2026-06-25",
