@@ -1298,6 +1298,7 @@ function SessionEditor({ session, isNew, rooms, clusters, days, onSave, onCancel
       chair: (s.chair || "").trim(),
       media: cleanMedia(s.media),
       onlinePresenter: !!s.onlinePresenter,
+      hybrid: !!s.hybrid,
       cancelled: !!s.cancelled,
       // Keynotes & ICED talks are YouTube-only — never persist a Meet for them.
       meet: (s.type === "keynote" || s.type === "talk") ? "" : (s.meet || "").trim(),
@@ -1431,6 +1432,20 @@ function SessionEditor({ session, isNew, rooms, clusters, days, onSave, onCancel
               <span>Una o más ponencias serán online</span>
             </label>
           </Field>
+
+          {s.type === "workshop" && (
+            <Field label="Taller híbrido (co-facilitador/a en remoto)"
+              hint="Solo para talleres donde un/a co-facilitador/a se conecta por Meet. Muestra el botón «Join Meet» (para esa persona) pero NO la etiqueta verde de «online»: el taller es presencial para los asistentes. Recuerda pegar el enlace Meet arriba.">
+              <label className="checkbox-row">
+                <input
+                  type="checkbox"
+                  checked={!!s.hybrid}
+                  onChange={(e) => setField("hybrid", e.target.checked)}
+                />
+                <span>Taller híbrido — co-facilitador/a se conecta por Meet (sin etiqueta online)</span>
+              </label>
+            </Field>
+          )}
 
           <Field label="Estado de la sesión"
             hint="Marca «Cancelada» si la sesión se ha anulado. Sigue visible en el programa con la etiqueta CANCELADO, el título tachado y sin acceso remoto, para que los asistentes lo sepan. Recomendado frente a borrar o renumerar.">

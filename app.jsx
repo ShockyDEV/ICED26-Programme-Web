@@ -1752,7 +1752,11 @@ function SessionModal({ session, t, lang, now, onClose, favorites, onToggleFavor
             // Remote-access channel depends on the session type:
             //  • keynote / talk      → YouTube live (recorded + streamed)
             //  • workshop            → no remote access (in-person) UNLESS it is
-            //    hybrid (a presenter joins online) → then it gets Meet like the rest
+            //    hybrid: a remote co-facilitator joins via Meet (session.hybrid)
+            //    or a presenter is flagged online → then it gets the Meet button.
+            //    NOTE: hybrid keeps the Meet button but NOT the green "online
+            //    presenter" label — the workshop is in-person for participants;
+            //    Meet exists only so the co-facilitator can connect.
             //  • poster              → full offline (physical posters): no remote
             //    access at all, even if flagged online
             //  • collaborative       → in-person only: no Meet, no remote access
@@ -1760,7 +1764,7 @@ function SessionModal({ session, t, lang, now, onClose, favorites, onToggleFavor
             //  • everything else (paper, symposium, doctoral) → Google Meet
             const isStreamType = session.type === "keynote" || session.type === "talk";
             const noRemoteType =
-              (session.type === "workshop" && !isSessionOnline(session)) ||
+              (session.type === "workshop" && !isSessionOnline(session) && !session.hybrid) ||
               session.type === "poster" ||
               session.type === "collaborative";
             const noRowType = session.type === "break" || session.type === "social" || session.type === "other";

@@ -5082,7 +5082,6 @@ window.ICED26_DATA = {
       "fullName": "Session 18M: H - Workshop 32",
       "type": "workshop",
       "meet": "",
-      "onlinePresenter": true,
       "talks": [
         {
           "time": "17:30",
@@ -5090,14 +5089,14 @@ window.ICED26_DATA = {
           "authors": "Lydia Watson, Bettina Boyle",
           "presenter": "Lydia Watson",
           "abstract": "This interactive session will share insights into how a Centre for Teaching Excellence (CTE) in a small teaching-focused undergraduate university developed a Students as Teaching and Learning Partners (SaTLP) initiative that gave students opportunities to participate in two Faculty Learning Communities (FLCs), one being focused on the topic of reimagining grading, the other, on open educational practices. By encouraging student voice and co-designing a space where educational developers, faculty, and students were able to challenge assumptions about traditional roles and power dynamics, we were rewarded with unexpected learning opportunities and meaningful conversations. Through interactive activities, participants in this workshop will identify, question, imagine, and reflect on opportunities to partner with students and be inspired by insights gained from participants and presenters through these initiatives.",
-          "keywords": "",
-          "online": true
+          "keywords": ""
         }
       ],
       "easychair_session_id": "105638",
       "cardTitle": "",
       "chair": "",
-      "youtube": ""
+      "youtube": "",
+      "hybrid": true
     },
     {
       "day": "2026-06-25",

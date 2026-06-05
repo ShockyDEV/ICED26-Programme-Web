@@ -435,6 +435,9 @@ async function main() {
     if (existing?.media) next.media = existing.media;
     // Preserve the session-level "one or more presentations online" flag.
     if (existing?.onlinePresenter) next.onlinePresenter = true;
+    // Preserve the "hybrid workshop" flag (remote co-facilitator joins via Meet,
+    // but the workshop is in-person for participants — Meet button, no online label).
+    if (existing?.hybrid) next.hybrid = true;
     // Preserve the admin-set "cancelled" flag (set in the backstage when a
     // session is called off; EasyChair often still lists it). Kept by id match.
     if (existing?.cancelled) next.cancelled = true;
