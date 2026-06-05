@@ -37,3 +37,10 @@ logs/
 .env
 .env.local
 .env.*.local
+
+# Secrets / tokens — NEVER commit
+TOKENGITHUB.txt
+*token*.txt
+*secret*
+*.pem
+*.key
