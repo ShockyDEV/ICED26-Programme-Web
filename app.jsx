@@ -1755,13 +1755,14 @@ function SessionModal({ session, t, lang, now, onClose, favorites, onToggleFavor
             //    hybrid (a presenter joins online) → then it gets Meet like the rest
             //  • poster              → full offline (physical posters): no remote
             //    access at all, even if flagged online
+            //  • collaborative       → in-person only: no Meet, no remote access
             //  • break/social/other  → not a content session, no remote row
-            //  • everything else (paper, symposium, collaborative,
-            //    doctoral)           → Google Meet
+            //  • everything else (paper, symposium, doctoral) → Google Meet
             const isStreamType = session.type === "keynote" || session.type === "talk";
             const noRemoteType =
               (session.type === "workshop" && !isSessionOnline(session)) ||
-              session.type === "poster";
+              session.type === "poster" ||
+              session.type === "collaborative";
             const noRowType = session.type === "break" || session.type === "social" || session.type === "other";
             const showMeet = !isStreamType && !noRemoteType && !noRowType;
             const meetLive = session.meet && linksActive;
@@ -1779,8 +1780,8 @@ function SessionModal({ session, t, lang, now, onClose, favorites, onToggleFavor
                   ? <a href={safeURL(yt)} target="_blank" rel="noopener noreferrer" className="sm-youtube-btn">{ytIcon}<span>{t.watchOnYouTube}</span>{arrow}</a>
                   : <span className="sm-youtube-btn is-locked" title={t.linksClosed} aria-disabled="true">{ytIcon}<span>{t.watchOnYouTube}</span>{lock}</span>
                 )}
-                {/* In-person workshops (no online presenter) and posters (full
-                    offline) are the sessions with no remote access. */}
+                {/* In-person workshops (no online presenter), posters (full
+                    offline) and collaborative spaces have no remote access. */}
                 {noRemoteType && (
                   <span className="sm-no-meet muted">{lang === "es" ? "Sin acceso remoto" : "No remote access"}</span>
                 )}

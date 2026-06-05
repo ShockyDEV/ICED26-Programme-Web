@@ -481,6 +481,8 @@ function detectIssues(data) {
     if (s.type === "keynote" || s.type === "talk") return;
     if (s.day === "2026-06-23") return;
     if (s.type === "break") return;
+    // Posters and collaborative spaces are in-person only — no remote channel expected.
+    if (s.type === "poster" || s.type === "collaborative") return;
     if (s.meet) return;
     if (s.youtube && String(s.youtube).trim()) return;
     if (s.room === "*" || !s.room) return;
@@ -1405,6 +1407,11 @@ function SessionEditor({ session, isNew, rooms, clusters, days, onSave, onCancel
                   placeholder="https://www.youtube.com/live/XXXXXXXXXXX" />
               </Field>
             </>
+          ) : (s.type === "poster" || s.type === "collaborative") ? (
+            <div className="form-note">
+              Los <strong>{s.type === "poster" ? "pósters" : "espacios colaborativos"}</strong> son
+              presenciales: no tienen acceso remoto (sin Meet ni YouTube).
+            </div>
           ) : (
             <Field label="Enlace Meet (opcional)" error={errors.meet}
               hint="Sesión interactiva en Google Meet. Vacío = sin Meet (solo presencial). Los simposios, papers, talleres… usan Meet, no YouTube.">
