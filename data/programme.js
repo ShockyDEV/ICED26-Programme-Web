@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-05T08-38
+// ICED26 programme — generated from admin panel 2026-06-09T07-47
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -1466,16 +1466,21 @@ window.ICED26_DATA = {
       "meet": "",
       "talks": [
         {
-          "easychair_id": "311716",
           "time": "12:45",
           "title": "(Re)Orienting Academic Development through Agency and Alignment",
-          "authors": "Nancy Chick",
+          "authors": "Nancy Chick, Peter Felten, Katarina Mårtensson",
           "presenter": "",
           "abstract": "As academic developers, we often define our work by the needs of others and act as agents of change for those others, rather than working from our own commitments or effecting change for ourselves. This orientation serves the needs of colleagues and institutions, but it doesn’t necessarily contribute to developer well-being or agency. How can we support others while also honoring our own identities and commitments?\n\nThis workshop will guide participants in responding to this question by drawing from my new co-authored open-access book on reorienting SoTL. In the book, my co-authors and I guide faculty in developing SoTL inquiries that emerge from their authentic identities, their deepest commitments, and their “why”—moves we too rarely turn upon ourselves. Yet if SoTL is a signature pedagogy of academic development (Felten & Chick 2018), shouldn’t we also act on our authentic identities, our deepest commitment, and our “why”?\n\nThis workshop will invite participants to briefly pause their outward-facing work and engage in the same “inner work” my new book on SoTL offers to faculty. Participants will explore how their identities and values shape—and are shaped by—their work. Using the book’s SoTL frameworks, participants will uncover meaningful entry points for their own practice and scholarship, moving from being facilitators of others’ inquiries to being authentic and agentic scholars of their own practice. Through this process, participants will not only (re)claim their own agency and connect meaningfully with other developers, but also leave with tools and insights to facilitate meaningful SoTL workshops.",
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105581"
+      "easychair_session_id": "105581",
+      "cardTitle": "",
+      "chair": "",
+      "onlinePresenter": false,
+      "hybrid": false,
+      "cancelled": false,
+      "youtube": ""
     },
     {
       "day": "2026-06-24",
