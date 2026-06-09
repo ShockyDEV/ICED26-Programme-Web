@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-09T07-47
+// ICED26 programme — generated from admin panel 2026-06-09T07-57
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -4794,7 +4794,6 @@ window.ICED26_DATA = {
       "meet": "",
       "talks": [
         {
-          "easychair_id": "311769",
           "time": "16:15",
           "title": "Communities of Practice as a Balancing Act",
           "authors": "Jillian Ives",
@@ -4803,7 +4802,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311777",
           "time": "16:30",
           "title": "The Emotional Academic Developer",
           "authors": "Roland Tormey",
@@ -4812,18 +4810,30 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311774",
           "time": "16:45",
           "title": "Academic selves in dialogue: Enhancing Teaching, Learning and Organizational Transformation",
           "authors": "Markus Weil, Fernando Marhuenda Fluixá",
           "presenter": "Markus Weil",
           "abstract": "This talk explores dialoguing as a mode of reflecting on the academic self through a conversation between two scholars of education—one Swiss and mid-career, the other Spanish and nearing retirement. Both have navigated roles as researchers, lecturers, and academic leaders, and both deal with the accelerating transformations in higher education. Their dialogue becomes a space for examining how they interpret these changes, envision the future of their institutions, and negotiate their own professional relevance. Grounded in a biographical approach to professional learning, dialogue is conceived as a medium through which individual experiences are explicated, negotiated, and framed as an agency in institutional contexts. In higher education, which is often highly formalized yet unevenly supportive of reflective practice, the capacity to articulate one’s professional narrative fosters multilayered reflexivity as part of professionalization. Professional learning thus emerges not only from policy structures but also from personal sense-making and bottom-up processes shaped by context and relational engagement. Drawing on the concept of meta-reflexivity (Cramer et al., 2023), the talk also includes a reflection on the method of dialoguing through the cultivation of multi-perspectivity. Meta-reflexivity is understood as a second-order reflection on how perspectives are constructed. Resonance theory (Rosa, 2000) further illuminates the emotional and relational dimensions of developing professionally, emphasizing the human need for responsive, meaningful connection. Attendants will be invited to join this conversation and engage in self-reflection about their agency of institutional and societal contexts.",
           "keywords": ""
+        },
+        {
+          "time": "17:00",
+          "title": "From Liminality to Belonging: Rethinking the Role of the Academic Developer",
+          "authors": "Katja Hakel",
+          "presenter": "",
+          "abstract": "Academic developers (ADs) often occupy a liminal space within higher education, positioned between institutional leadership, faculty roles, and various support units. Rather than viewing this location as solely precarious or fragmented, this conceptual talk proposes that such positioning can function as a strength—enabling mobility across communities and contexts. Building on a synthesis of research literature and insights developed over more than a decade as a professional academic developer, this talk focuses on three central perspectives: the AD as ‘The One Who Does Not Belong’, the AD as a strategic ‘Player in the System’, and ‘The Personal Dimension’ of AD work. Through an emphasis on relational trust, authenticity, and building community, the talk suggests that liminality need not constrain identity but may instead support a shift toward roles marked by integrity and connection—toward becoming ‘The One Who Belongs in Many Places’.",
+          "keywords": ""
         }
       ],
       "easychair_session_id": "105598",
       "description": "Academic selves, Emotions and Reflective Professional Identity",
-      "chair": "Carl S. Moore"
+      "chair": "Carl S. Moore",
+      "cardTitle": "",
+      "onlinePresenter": false,
+      "hybrid": false,
+      "cancelled": false,
+      "youtube": ""
     },
     {
       "day": "2026-06-25",
