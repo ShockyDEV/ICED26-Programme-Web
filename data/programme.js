@@ -6060,14 +6060,6 @@ window.ICED26_DATA = {
         },
         {
           "time": "",
-          "title": "From Liminality to Belonging: Rethinking the Role of the Academic Developer",
-          "authors": "Katja Hakel",
-          "presenter": "",
-          "abstract": "Academic developers (ADs) often occupy a liminal space within higher education, positioned between institutional leadership, faculty roles, and various support units. Rather than viewing this location as solely precarious or fragmented, this conceptual talk proposes that such positioning can function as a strength—enabling mobility across communities and contexts. Building on a synthesis of research literature and insights developed over more than a decade as a professional academic developer, this talk focuses on three central perspectives: the AD as ‘The One Who Does Not Belong’, the AD as a strategic ‘Player in the System’, and ‘The Personal Dimension’ of AD work. Through an emphasis on relational trust, authenticity, and building community, the talk suggests that liminality need not constrain identity but may instead support a shift toward roles marked by integrity and connection—toward becoming ‘The One Who Belongs in Many Places’.",
-          "keywords": ""
-        },
-        {
-          "time": "",
           "title": "Underlying Approaches to Assessment in AI Policies in Higher Education. From Control to Agency",
           "authors": "Mònica Feixas, Liana Pirovino, Georgeta Ion",
           "presenter": "Mònica Feixas",
@@ -6080,7 +6072,9 @@ window.ICED26_DATA = {
       "description": "Rethinking Learning, Teaching and Academic Development",
       "cardTitle": "",
       "onlinePresenter": false,
-      "youtube": ""
+      "youtube": "",
+      "hybrid": false,
+      "cancelled": false
     },
     {
       "day": "2026-06-26",
