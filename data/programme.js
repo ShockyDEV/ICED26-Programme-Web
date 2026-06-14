@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-14T18-20
+// ICED26 programme — generated from admin panel 2026-06-14T18-22
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -3609,14 +3609,6 @@ window.ICED26_DATA = {
         },
         {
           "time": "",
-          "title": "Underlying Approaches to Assessment in AI Policies in Higher Education. From Control to Agency",
-          "authors": "Mònica Feixas, Liana Pirovino, Georgeta Ion",
-          "presenter": "Mònica Feixas",
-          "abstract": "The rapid emergence of generative artificial intelligence (GenAI) has led universities to develop policies aimed at guiding its use in teaching, learning, and assessment. Assessment has become a focal point, as GenAI challenges established assumptions about authorship, originality, validity, and evidence of learning. While institutional policies seek to safeguard academic standards, they increasingly acknowledge GenAI’s pedagogical potential. But how these documents conceptualise assessment in AI-mediated contexts and how they frame student and teacher agency? This study presents a comparative analysis of GenAI-related policies from 14 universities in Switzerland and Spain. Drawing on Chan’s AI Ecological Education Policy Framework (2023) and Bacchi’s problematisation approach (2012), it explores how assessment is constructed across governance, operational, and pedagogical levels, and how policies balance risks and opportunities associated with GenAI. Findings show that policies articulate a dual narrative. On the one hand, they recognise GenAI’s potential to enhance alternative assessment practices, including formative, authentic, and competency-based approaches; enhance feedback and support self-regulated learning. On the other, they foreground concerns about academic integrity, plagiarism, transparency, bias, and data protection, while consistently emphasising human oversight. This duality complicates decision-making for teachers and students and points to the need for academic development to support informed judgement around the use of GenAI in assessment and feedback. This includes creating spaces, frameworks, and guidance that help educators and students critically evaluate when GenAI adds pedagogical value, when its use should be limited, and how such choices can support the development of students as epistemic agents.",
-          "keywords": ""
-        },
-        {
-          "time": "",
           "title": "From Strategy to Agency. Reimagining assessment and feedback for students learning",
           "authors": "Georgeta Ion, Marilisa Birello",
           "presenter": "Marilisa Birello",
@@ -3669,7 +3661,9 @@ window.ICED26_DATA = {
       "cardTitle": "",
       "onlinePresenter": false,
       "youtube": "",
-      "chair": "Pia Scherrer"
+      "chair": "Pia Scherrer",
+      "hybrid": false,
+      "cancelled": false
     },
     {
       "day": "2026-06-25",
