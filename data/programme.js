@@ -5645,7 +5645,7 @@ window.ICED26_DATA = {
       "meet": "",
       "talks": [],
       "easychair_session_id": "105656",
-      "description": "Editors, Co-Editors or delegated colleagues representing the Editorial Boards of the following journals linked to ICED National Networks present a journal information poster designed to help conference participants understand publication opportunities in higher education teaching and learning:the journal “To Improve the Academy” from the US network PODthe journal “die hochschullehre” from the German network dghdthe journal “Dansk Universitetspædagogisk Tidsskrift” (DUT) from Danish network DUNthe “All Ireland Journal of Teaching and Learning in Higher Education” (AISHE-J) from the Irish network AISHEthe “Revista de Docencia Universitaria” (REDU) from the Spanish network REDU the journal “Higher Education Research and Development” (HERD) from the Australian network HERDSA"
+      "description": "Editors, Co-Editors or delegated colleagues representing the Editorial Boards of the following journals linked to ICED National Networks present a journal information poster designed to help conference participants understand publication opportunities in higher education teaching and learning:\n- “To Improve the Academy”, from the US network POD\n- “die hochschullehre”, from the German network dghd\n- “Dansk Universitetspædagogisk Tidsskrift” (DUT), from the Danish network DUN\n- “All Ireland Journal of Teaching and Learning in Higher Education” (AISHE-J), from the Irish network AISHE\n- “Revista de Docencia Universitaria” (REDU), from the Spanish network REDU\n- “Higher Education Research and Development” (HERD), from the Australian network HERDSA"
     },
     {
       "day": "2026-06-26",
