@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-09T07-57
+// ICED26 programme — generated from admin panel 2026-06-14T18-20
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -3171,10 +3171,10 @@ window.ICED26_DATA = {
           "time": "09:15",
           "title": "Long-term impacts of Academic Development in Australian Higher Education: a narrative approach",
           "authors": "Rosanne Quinnell, Melinda J Lewis, Elizabeth Seeley-Wait",
-          "presenter": "Rosanne Quinnell",
+          "presenter": "Melinda J Lewis, Elizabeth Seeley-Wait",
           "abstract": "Recent workplace trends in Australian Higher Education have seen shifts that are impacting the nature and status of academic work. Most recently there has been the emergence of disciplinary ‘education-focused’ positions, which can attract up to 80% time allocation to teaching and associated activities. The argument supporting the implementation of ‘education-focused’ positions lies in universities intending to champion the value of “education” to the same degree as “research”. In addition to carrying elevated face-to-face contact, those in education-focused roles are expected to be leaders of scholarly initiatives and research in the Scholarship of Learning and Teaching. Considering these positions are mostly offered at junior levels, we wonder at the level of agency of those in these positions. Juxtaposed with our assessment of the recent “education-focused” position implementation, and catalysed by the call to understand the long-term impacts of academic development programs (Chalmers & Gardiner, 2015; Wright et al., 2025), we undertook a reflective dialogic approach to the surface ways formal tertiary education qualifications, including those offered by central academic development units, have proved valuable to our individual career trajectories and to enhancing student learning within our respective disciplines.",
           "keywords": "",
-          "video": true
+          "online": true
         },
         {
           "time": "09:30",
@@ -3209,7 +3209,8 @@ window.ICED26_DATA = {
       "cardTitle": "",
       "onlinePresenter": false,
       "cancelled": false,
-      "youtube": ""
+      "youtube": "",
+      "hybrid": false
     },
     {
       "day": "2026-06-25",
