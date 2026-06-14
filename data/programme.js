@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-14T18-24
+// ICED26 programme — generated from admin panel 2026-06-14T18-27
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -3037,7 +3037,6 @@ window.ICED26_DATA = {
       "meet": "",
       "talks": [
         {
-          "easychair_id": "311810",
           "time": "09:00",
           "title": "Supervising the journey to doctorateness: A conceptual framework",
           "authors": "Flip Schutte, Emetia De Beer",
@@ -3046,7 +3045,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311966",
           "time": "09:15",
           "title": "STEM PhD students doing and writing SoTL: what matters for academic development?",
           "authors": "Jennifer Lofgreen, Lene Nordrum",
@@ -3055,7 +3053,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311997",
           "time": "09:30",
           "title": "Practices to foster PhD student agency during their milestone",
           "authors": "Ghada Challah",
@@ -3065,7 +3062,6 @@ window.ICED26_DATA = {
           "online": true
         },
         {
-          "easychair_id": "311971",
           "time": "09:45",
           "title": "Agency in compilation theses – the kappa as a vessel for independent, critical thinking",
           "authors": "Lene Nordrum, Michael Cimbritz, Öivind Andersson",
@@ -3074,19 +3070,22 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311878",
           "time": "10:00",
           "title": "Artificial Intelligence and Scientific Writing in a Health Sciences Program: A Mixed-Methods Study",
           "authors": "Giovanna Valentino, Carolina Aguirre, Isidora López, Javier Oyarzún, Daniela Avello, Alejandra Parada",
           "presenter": "Giovanna Valentino",
           "abstract": "Aim: To describe the perceptions of Nutrition students and instructors regarding skills related to scientific writing and the use of Artificial Intelligence (AI) and evaluate the accuracy of detection tools. Methods: A mixed-methods study was conducted. First, two focus groups (9 students and 9 instructors), selected through convenience sampling and moderated by an external researcher, were conducted. Second, 50 original abstracts (published in a Chilean scientific journal during 2019) and a similar 50 AI-generated abstracts were analyzed using GPTZero Premium and by nutrition instructors. Transcriptions of focus groups were analyzed through thematic analysis, using NVivo, and ROC curves were built to determine the accuracy of AI-use detection of instructors and GPTZero in different scenarios. Findings: Qualitative findings highlighted the need for clear guidance on AI use, particularly regarding transparency, ethics, and academic integrity. Students mainly described AI as a practical aid for writing tasks, whereas instructors were more cautious and questioned its contribution to critical and reflective thinking. In the quantitative analysis, GPTZero detected with 100% accuracy AI-generated texts (sensitivity=1.00), whereas 4% of original texts were classified as AI-generated (“False Positives”, specificity=0.96) with an AUC of 0.98 (95% CI: 0.95-1.00). Instructors had lower accuracy in detecting AI-generated texts (AUC=0.54; 0.44-0.64, p<0.001) than GPTZero. Significance: The central theme regarding AI use in scientific writing centers on guidelines related to academic integrity, whereas instructors cannot accurately detect AI-misuse. AI-detection tools might be only useful when policies completely restrict AI use, highlighting the need to develop clear policies and frameworks for its use.",
-          "keywords": "",
-          "online": true
+          "keywords": ""
         }
       ],
       "easychair_session_id": "104858",
       "description": "PhD Student Agency, Doctoral Supervision, writing SoTL",
-      "chair": "Kunihiko Takamatsu"
+      "chair": "Kunihiko Takamatsu",
+      "cardTitle": "",
+      "onlinePresenter": false,
+      "hybrid": false,
+      "cancelled": false,
+      "youtube": ""
     },
     {
       "day": "2026-06-25",
