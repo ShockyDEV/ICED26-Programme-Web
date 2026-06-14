@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-14T18-22
+// ICED26 programme — generated from admin panel 2026-06-14T18-24
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -514,7 +514,7 @@ window.ICED26_DATA = {
     },
     {
       "day": "2026-06-24",
-      "start": "09:00",
+      "start": "08:45",
       "end": "09:30",
       "room": "auditorio",
       "roomName": "Auditorio Hospedería",
@@ -525,7 +525,13 @@ window.ICED26_DATA = {
       "type": "keynote",
       "meet": "",
       "talks": [],
-      "easychair_session_id": "104800"
+      "easychair_session_id": "104800",
+      "cardTitle": "",
+      "chair": "",
+      "onlinePresenter": false,
+      "hybrid": false,
+      "cancelled": false,
+      "youtube": ""
     },
     {
       "day": "2026-06-24",
