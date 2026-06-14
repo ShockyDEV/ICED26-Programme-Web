@@ -117,6 +117,44 @@ function OfficialTitle({ session, className, t }) {
   );
 }
 
+// Modal-only theme renderer. When the EasyChair theme is a multi-item list
+// (intro line + "- item" lines, e.g. the Special Poster Session journals),
+// render it as a styled list with the journal name emphasised and the network
+// muted, instead of a flat one-colour paragraph. Falls back to the plain
+// OfficialTitle for every other session.
+function ModalTheme({ session, t }) {
+  const o = officialTitleInfo(session);
+  if (!o) return null;
+  if (o.isTheme && /\n\s*-\s/.test(o.text)) {
+    const lines = o.text.split("\n");
+    const intro = lines[0];
+    const items = lines.slice(1)
+      .map((l) => l.replace(/^\s*-\s*/, "").trim())
+      .filter(Boolean);
+    return (
+      <div className="sm-official sm-theme-rich">
+        <p className="sm-theme-intro">
+          <span className="official-theme-label">{(t && t.themeLabel) || "Theme:"} </span>
+          {intro}
+        </p>
+        <ul className="sm-theme-list">
+          {items.map((it, i) => {
+            const m = it.match(/^(.*?),\s*(from\s+.*)$/i);
+            return (
+              <li key={i}>
+                {m
+                  ? <><span className="sm-theme-name">{m[1]}</span><span className="sm-theme-meta"> {m[2]}</span></>
+                  : it}
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    );
+  }
+  return <OfficialTitle session={session} className="sm-official" t={t} />;
+}
+
 // ─── Per-room livestream + link gating ────────────────────────────────────
 // YouTube is a per-room livestream: a session inherits its room's stream URL
 // unless it carries its own session.youtube override.
@@ -1613,7 +1651,7 @@ function SessionModal({ session, t, lang, now, onClose, favorites, onToggleFavor
         <div className="sm-head">
           <div className="sm-type" style={{ color: typeColor }}>{typeLabel}</div>
           <h2 className={`sm-title ${session.cancelled ? "is-cancelled" : ""}`}>{session.title}</h2>
-          <OfficialTitle session={session} className="sm-official" t={t} />
+          <ModalTheme session={session} t={t} />
           {session.fullName && session.fullName !== session.title && (
             <div className="sm-fullname">{session.fullName}</div>
           )}
