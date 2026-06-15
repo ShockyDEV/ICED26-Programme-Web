@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-15T20-16
+// ICED26 programme — generated from admin panel 2026-06-15T20-28
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -6787,6 +6787,26 @@ window.ICED26_DATA = {
       "cardTitle": "",
       "chair": "",
       "onlinePresenter": false,
+      "youtube": ""
+    },
+    {
+      "day": "2026-06-24",
+      "start": "18:30",
+      "end": "20:00",
+      "room": "*",
+      "roomName": "",
+      "roomCode": "",
+      "cluster": "hospederia",
+      "title": "Opening Reception",
+      "fullName": "",
+      "type": "other",
+      "meet": "",
+      "talks": [],
+      "cardTitle": "",
+      "chair": "",
+      "onlinePresenter": false,
+      "hybrid": false,
+      "cancelled": false,
       "youtube": ""
     }
   ]
