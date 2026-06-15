@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-15T20-14
+// ICED26 programme — generated from admin panel 2026-06-15T20-16
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -669,6 +669,14 @@ window.ICED26_DATA = {
           "presenter": "",
           "abstract": "This paper advances the importance of instructors’ approaches to teaching and conceptions of teaching as valuable data to consider in the development of educational development programming for sessional instructors. Drawing on data from a larger phenomenographic study that explored sessionals’ educational development needs, on data collected through two online surveys and a series of interviews, the author will present key theoretical amendments to Light et al.’s (2009) model which highlight opportunities for continued integration of sessionals into institutional models of teaching and learning. Structural changes to the model include the bi-directional influence of instructors’ approaches to teaching and conceptions of teaching position educational development as an ever-important catalyst for change in higher education. Considerations for future practical implications will be discussed.",
           "keywords": ""
+        },
+        {
+          "time": "",
+          "title": "Transformative Learning in Maltese Further and Higher Education: A grounded Theory Study",
+          "authors": "David Kenely",
+          "presenter": "",
+          "abstract": "Transformative learning has become increasingly important in higher and further education, especially in small-island contexts where institutions are expected to prepare students for changing labour markets, lifelong learning and active citizenship. In Malta, these expectations sit alongside growing attention to sustainability and learner wellbeing, raising questions about how educational institutions can move beyond transmission-oriented approaches to teaching and support deeper shifts in students’ assumptions, identities and ways of knowing. This study explores how higher and further education institutions in Malta foster, or limit, opportunities for transformative learning. It is the initial research of an ongoing doctoral study and focuses on the perspectives of senior institutional leaders. Located within an interpretivist paradigm, the study adopts a constructivist grounded theory design. Four senior officials from different Maltese higher and further education institutions participated in in-depth semi-structured interviews. The analysis explored how they understood transformative learning and which institutional conditions enabled or constrained it. Emerging findings suggest that relational support, space for critical and student-led learning, and institutional cultures that value deep learning can create conditions for transformative change in students’ frames of reference. At the same time, strong pressures for standardisation, performance metrics and risk-averse practices may restrict such possibilities and reinforce more superficial forms of learning. The study offers a contextually grounded lens for academic developers and institutional leaders seeking to align organisational conditions, staff development and curriculum practices with the goal of fostering more transformative learning environments in Maltese higher and further education.",
+          "keywords": ""
         }
       ],
       "easychair_session_id": "104813",
@@ -676,7 +684,9 @@ window.ICED26_DATA = {
       "cardTitle": "",
       "onlinePresenter": false,
       "youtube": "",
-      "chair": "Adriana Gamazo"
+      "chair": "Adriana Gamazo",
+      "hybrid": false,
+      "cancelled": false
     },
     {
       "day": "2026-06-24",
@@ -3671,14 +3681,6 @@ window.ICED26_DATA = {
           "presenter": "Kateřina Macigová",
           "abstract": "This paper examines the integration of mediation education into legal curricula at Czech law faculties as a tool for academic development and institutional transformation. Based on an exploratory case study of the Mediation Clinic at the Faculty of Law, Palacký University Olomouc, it analyses how experiential and practice-oriented teaching methods complement traditional lecture-based legal education. The paper identifies three interrelated pillars of implementation: (1) the Mediation Clinic as a core course grounded in experiential learning and service-learning principles; (2) international cooperation, particularly with New York University School of Law; and (3) institutional support through a Mediation Centre ensuring the sustainability of the model. Drawing on empirical data, the study demonstrates a growing student demand for clinical forms of education, which consistently exceeds course capacity. The findings indicate that this approach enhances student autonomy, professional competencies, and engagement, while also contributing to pedagogical innovation and organizational transformation at the faculty level. The paper argues that clinical mediation education should be understood not merely as a curricular innovation, but as a structural instrument of institutional change linking teaching, research, practice and community engagement.",
           "keywords": ""
-        },
-        {
-          "time": "",
-          "title": "Transformative Learning in Maltese Further and Higher Education: A grounded Theory Study",
-          "authors": "David Kenely",
-          "presenter": "",
-          "abstract": "Transformative learning has become increasingly important in higher and further education, especially in small-island contexts where institutions are expected to prepare students for changing labour markets, lifelong learning and active citizenship. In Malta, these expectations sit alongside growing attention to sustainability and learner wellbeing, raising questions about how educational institutions can move beyond transmission-oriented approaches to teaching and support deeper shifts in students’ assumptions, identities and ways of knowing. This study explores how higher and further education institutions in Malta foster, or limit, opportunities for transformative learning. It is the initial research of an ongoing doctoral study and focuses on the perspectives of senior institutional leaders. Located within an interpretivist paradigm, the study adopts a constructivist grounded theory design. Four senior officials from different Maltese higher and further education institutions participated in in-depth semi-structured interviews. The analysis explored how they understood transformative learning and which institutional conditions enabled or constrained it. Emerging findings suggest that relational support, space for critical and student-led learning, and institutional cultures that value deep learning can create conditions for transformative change in students’ frames of reference. At the same time, strong pressures for standardisation, performance metrics and risk-averse practices may restrict such possibilities and reinforce more superficial forms of learning. The study offers a contextually grounded lens for academic developers and institutional leaders seeking to align organisational conditions, staff development and curriculum practices with the goal of fostering more transformative learning environments in Maltese higher and further education.",
-          "keywords": ""
         }
       ],
       "easychair_session_id": "104880",
@@ -6058,14 +6060,6 @@ window.ICED26_DATA = {
           "authors": "Isabel Cano Ruiz, Héctor del Castillo Fernández, Sara Cortés Gómez, Juan Jesús García Domínguez, Irene Heredero Bermejo, Alberto Lastra Sedano, Susana Núñez Nagy, Germán Ros Magán, Marta Rubio López",
           "presenter": "Alberto Lastra Sedano",
           "abstract": "The Center for Teaching Innovation Support and Online Studies (IDEO, for short) is the center responsible for orchestrating the main teaching and learning innovative actions at Universidad de Alcalá (UAH), Spain. The main purpose of this contribution is to provide some details on the organizational and strategic transformation brought with its creation and consolidation at UAH: coordinating the calls for innovative projects and innovative groups, organizing an annual workshop collecting innovative experiences in teaching along a course (EIDU), and promoting the internationalization of teaching innovation within the framework of the alliance of European universities EUGLOH, in which Universidad de Alcalá is involved. The contribution concludes with some brief remarks on future directions for IDEO.",
-          "keywords": ""
-        },
-        {
-          "time": "",
-          "title": "Transformative Learning in Maltese Further and Higher Education: A grounded Theory Study",
-          "authors": "David Kenely",
-          "presenter": "",
-          "abstract": "Transformative learning has become increasingly important in higher and further education, especially in small-island contexts where institutions are expected to prepare students for changing labour markets, lifelong learning and active citizenship. In Malta, these expectations sit alongside growing attention to sustainability and learner wellbeing, raising questions about how educational institutions can move beyond transmission-oriented approaches to teaching and support deeper shifts in students’ assumptions, identities and ways of knowing. This study explores how higher and further education institutions in Malta foster, or limit, opportunities for transformative learning. It is the initial research of an ongoing doctoral study and focuses on the perspectives of senior institutional leaders. Located within an interpretivist paradigm, the study adopts a constructivist grounded theory design. Four senior officials from different Maltese higher and further education institutions participated in in-depth semi-structured interviews. The analysis explored how they understood transformative learning and which institutional conditions enabled or constrained it. Emerging findings suggest that relational support, space for critical and student-led learning, and institutional cultures that value deep learning can create conditions for transformative change in students’ frames of reference. At the same time, strong pressures for standardisation, performance metrics and risk-averse practices may restrict such possibilities and reinforce more superficial forms of learning. The study offers a contextually grounded lens for academic developers and institutional leaders seeking to align organisational conditions, staff development and curriculum practices with the goal of fostering more transformative learning environments in Maltese higher and further education.",
           "keywords": ""
         },
         {
