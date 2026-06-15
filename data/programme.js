@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-15T19-46
+// ICED26 programme — generated from admin panel 2026-06-15T19-47
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -5274,7 +5274,7 @@ window.ICED26_DATA = {
       "easychair_session_id": "105640",
       "media": {
         "type": "venue",
-        "heading": "Casino de Salamanca",
+        "heading": "Palacio Figueroa",
         "text": "Palacio Figueroa, also known as the Casino de Salamanca, is a historic landmark in the heart of the city. Despite its name, it is not a gambling venue in the modern sense of the word “casino.” Traditionally, Spanish casinos were elegant social and cultural clubs where citizens gathered for conversation, reading, music, cultural activities, and social events. Today, the Casino de Salamanca remains an active institution, hosting a vibrant programme of social and cultural activities.\n\nAddress: Calle Zamora 15, 37002 Salamanca.",
         "textEs": "El Palacio Figueroa, también conocido como el Casino de Salamanca, es un monumento histórico situado en el corazón de la ciudad. A pesar de su nombre, no es un lugar de juego en el sentido moderno de la palabra «casino». Tradicionalmente, los casinos españoles eran elegantes clubes sociales y culturales donde los ciudadanos se reunían para conversar, leer, escuchar música, participar en actividades culturales y eventos sociales. Hoy en día, el Casino de Salamanca sigue siendo una institución activa que ofrece un dinámico programa de actividades sociales y culturales.\n\n Dirección: Calle Zamora 15, 37002 Salamanca.",
         "map": "Casino de Salamanca, Palacio de Figueroa, Calle Zamora 15, 37002 Salamanca",
