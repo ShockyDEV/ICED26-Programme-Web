@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-15T19-47
+// ICED26 programme — generated from admin panel 2026-06-15T19-48
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -2597,7 +2597,12 @@ window.ICED26_DATA = {
       "cardTitle": "",
       "onlinePresenter": false,
       "youtube": "",
-      "chair": "Amparo Fernández March, Elena Quevedo Torrientes"
+      "chair": "Amparo Fernández March, Elena Quevedo Torrientes",
+      "media": {
+        "text": "Elena Quevedo: Education and Sport Faculty, University of Deusto.\n\nOrganic Meditation and Mindfulness Coach, from Brown University, USA.\n\n\nAmparo Fernández March: Institute of Education Sciences, Polytechnic University Valencia.\n\nHatha yoga practitioner since 2088. Certified yoga teacher by the Portuguese Yoga Center under the supervision of Professor Carlos Rui Ferreira."
+      },
+      "hybrid": false,
+      "cancelled": false
     },
     {
       "day": "2026-06-25",
