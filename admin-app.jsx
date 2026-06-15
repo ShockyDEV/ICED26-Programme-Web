@@ -75,6 +75,48 @@ function buildProgrammeJS(data) {
   );
 }
 
+// Encrypt remote links (Meet/YouTube) before publishing so the public repo
+// never exposes a usable URL. Returns a NEW data object (does not mutate).
+//   • Each session with an access scope gets its plaintext meet/youtube
+//     encrypted with that scope's code.
+//   • The code is taken from meta.access.pending{Global,Panel}Code, which the
+//     admin set this session. If a link is plaintext but its scope has no
+//     pending code AND no prior verifier, we leave it (can't encrypt yet).
+//   • Already-encrypted values (ICEDX1:) are left untouched.
+//   • pending*Code fields are stripped from the published JSON (never shipped).
+async function encryptLinksForPublish(data) {
+  const ac = data.meta && data.meta.access;
+  const C = window.ICED26Crypto;
+  if (!ac || !ac.enabled || !C) return data;
+
+  const globalCode = ac.pendingGlobalCode || null;
+  const panelCode = ac.pendingPanelCode || null;
+  const panelId = ac.panelSessionId ? String(ac.panelSessionId) : null;
+
+  const encField = async (val, code) => {
+    if (!val || C.isEnc(val)) return val;          // empty or already encrypted
+    if (!/^https?:\/\//i.test(val)) return val;     // not a URL — leave as-is
+    if (!code) return val;                          // no code available → leave plaintext (warn below)
+    return C.encrypt(val, code);
+  };
+
+  const sessions = [];
+  for (const s of data.sessions) {
+    const isPanel = panelId && String(s.easychair_session_id) === panelId;
+    const code = isPanel ? panelCode : globalCode;
+    const next = { ...s };
+    if (s.meet) next.meet = await encField(s.meet, code);
+    if (s.youtube) next.youtube = await encField(s.youtube, code);
+    sessions.push(next);
+  }
+
+  // Strip pending codes from the published meta.
+  const access = { ...ac };
+  delete access.pendingGlobalCode;
+  delete access.pendingPanelCode;
+  return { ...data, sessions, meta: { ...data.meta, access } };
+}
+
 // UTF-8-safe base64 encoder (btoa alone breaks on non-ASCII chars like
 // acentos / non-Latin scripts that appear in titles).
 function utf8ToBase64(str) {
@@ -757,8 +799,8 @@ function AdminEditor({ onLogout }) {
     setData(clone(original.current));
   };
 
-  const exportData = () => {
-    const js = buildProgrammeJS(data);
+  const exportData = async () => {
+    const js = buildProgrammeJS(await encryptLinksForPublish(data));
     const blob = new Blob([js], { type: "application/javascript;charset=utf-8" });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
@@ -801,7 +843,8 @@ function AdminEditor({ onLogout }) {
     setPublishing(true);
     setPublishStatus(null);
     try {
-      const sha = await githubPublish(buildProgrammeJS(data), msg, token);
+      const dataToPublish = await encryptLinksForPublish(data);
+      const sha = await githubPublish(buildProgrammeJS(dataToPublish), msg, token);
       // Treat the published state as the new baseline. isDirty is a useMemo
       // derived from data vs. original.current — to flip it back to false we
       // both reset the baseline AND replace `data` with a fresh clone, which
@@ -2103,6 +2146,8 @@ function MetaTab({ data, setData }) {
         </p>
       </section>
 
+      <AccessCodesEditor data={data} setData={setData} />
+
       <section className="meta-section">
         <h3>Resumen</h3>
         <div className="meta-stats">
@@ -2113,6 +2158,118 @@ function MetaTab({ data, setData }) {
         </div>
       </section>
     </div>
+  );
+}
+
+// ─────────────────────────────────────────────────────────────────────
+// AccessCodesEditor — participant-code gate for Meet/YouTube links.
+// The code itself is NEVER stored; we store only a "verifier" (a known token
+// encrypted with the code). Setting a code (re)generates the verifier here.
+// The existing links are re-encrypted to the new code at publish time.
+// ─────────────────────────────────────────────────────────────────────
+const ACCESS_TOKEN = "ICED26-OK";
+function AccessCodesEditor({ data, setData }) {
+  const access = data.meta.access || {};
+  const [globalCode, setGlobalCode] = React.useState("");
+  const [panelCode, setPanelCode] = React.useState("");
+  const [busy, setBusy] = React.useState(false);
+  const [msg, setMsg] = React.useState(null);
+
+  const setAccess = (patch) =>
+    setData((d) => ({ ...d, meta: { ...d.meta, access: { ...(d.meta.access || {}), ...patch } } }));
+
+  const codeValid = (c) => /^\d{6}$/.test(c);
+
+  const applyGlobal = async () => {
+    if (!codeValid(globalCode)) { setMsg({ kind: "err", text: "El código global debe tener 6 dígitos." }); return; }
+    setBusy(true);
+    try {
+      const v = await window.ICED26Crypto.encrypt(ACCESS_TOKEN, globalCode);
+      setAccess({ enabled: true, token: ACCESS_TOKEN, globalVerifier: v, pendingGlobalCode: globalCode });
+      setGlobalCode("");
+      setMsg({ kind: "ok", text: "Código global actualizado. Al publicar, los enlaces se cifrarán con él." });
+    } catch (e) { setMsg({ kind: "err", text: "Error: " + e.message }); }
+    setBusy(false);
+  };
+  const applyPanel = async () => {
+    if (!codeValid(panelCode)) { setMsg({ kind: "err", text: "El código del panel debe tener 6 dígitos." }); return; }
+    setBusy(true);
+    try {
+      const v = await window.ICED26Crypto.encrypt(ACCESS_TOKEN, panelCode);
+      setAccess({ enabled: true, token: ACCESS_TOKEN, panelVerifier: v, pendingPanelCode: panelCode });
+      setPanelCode("");
+      setMsg({ kind: "ok", text: "Código del panel actualizado. Al publicar, su enlace se cifrará con él." });
+    } catch (e) { setMsg({ kind: "err", text: "Error: " + e.message }); }
+    setBusy(false);
+  };
+
+  const panelSession = data.sessions.find((s) => String(s.easychair_session_id) === String(access.panelSessionId));
+
+  return (
+    <section className="meta-section">
+      <h3>Códigos de acceso (Meet / YouTube)</h3>
+      <p className="muted">
+        Los enlaces remotos se ocultan tras un <strong>código de participante</strong> de 6 dígitos.
+        El código <strong>no se guarda</strong> en ningún sitio: aquí solo se establece o se cambia.
+        Compártelo con los participantes por email. Recuerda: el repositorio es público, por eso usamos
+        cifrado; usa también la <em>sala de espera</em> de Meet como capa extra.
+      </p>
+
+      <label className="checkbox-row" style={{ marginBottom: 12 }}>
+        <input type="checkbox" checked={!!access.enabled}
+          onChange={(e) => setAccess({ enabled: e.target.checked })} />
+        <span>Activar el código de acceso para los enlaces</span>
+      </label>
+
+      <Field label="Código GLOBAL (todas las sesiones con Meet/YouTube)"
+        hint="6 dígitos. Se aplica a todos los enlaces salvo el International Panel. Escríbelo y pulsa «Establecer»; no se mostrará luego.">
+        <div style={{ display: "flex", gap: 8 }}>
+          <input type="text" inputMode="numeric" maxLength={6} value={globalCode}
+            onChange={(e) => setGlobalCode(e.target.value.replace(/[^0-9]/g, ""))}
+            placeholder={access.globalVerifier ? "•••••• (ya configurado — escribe para cambiar)" : "p. ej. 451276"} />
+          <button type="button" className="btn-primary" disabled={busy} onClick={applyGlobal}>Establecer</button>
+        </div>
+      </Field>
+      <p className="muted" style={{ marginTop: -4 }}>
+        Estado: {access.globalVerifier ? <strong style={{ color: "#2F6E67" }}>✓ configurado</strong> : <span style={{ color: "#A03D08" }}>sin configurar</span>}
+        {access.pendingGlobalCode && <span> · cambio pendiente de publicar</span>}
+      </p>
+
+      <Field label="Código ESPECIAL del International Panel"
+        hint="6 dígitos, distinto del global. Solo para la sesión del International Panel.">
+        <div style={{ display: "flex", gap: 8 }}>
+          <input type="text" inputMode="numeric" maxLength={6} value={panelCode}
+            onChange={(e) => setPanelCode(e.target.value.replace(/[^0-9]/g, ""))}
+            placeholder={access.panelVerifier ? "•••••• (ya configurado — escribe para cambiar)" : "p. ej. 902184"} />
+          <button type="button" className="btn-primary" disabled={busy} onClick={applyPanel}>Establecer</button>
+        </div>
+      </Field>
+      <p className="muted" style={{ marginTop: -4 }}>
+        Estado: {access.panelVerifier ? <strong style={{ color: "#2F6E67" }}>✓ configurado</strong> : <span style={{ color: "#A03D08" }}>sin configurar</span>}
+        {access.pendingPanelCode && <span> · cambio pendiente de publicar</span>}
+      </p>
+
+      <Field label="Sesión del International Panel"
+        hint="La sesión que usa el código especial. Por defecto, el International Panel.">
+        <select value={access.panelSessionId || ""} onChange={(e) => setAccess({ panelSessionId: e.target.value })}>
+          <option value="">— ninguna —</option>
+          {data.sessions
+            .filter((s) => s.type === "keynote" || s.type === "talk" || /panel/i.test(s.title || ""))
+            .map((s) => (
+              <option key={s.easychair_session_id} value={s.easychair_session_id}>
+                {s.title} ({s.day} {s.start})
+              </option>
+            ))}
+        </select>
+      </Field>
+      {panelSession && <p className="muted" style={{ marginTop: -4 }}>Seleccionada: <strong>{panelSession.title}</strong></p>}
+
+      {msg && (
+        <div className={"publish-status publish-" + (msg.kind === "ok" ? "ok" : "error")} style={{ marginTop: 10, borderRadius: 8, border: "1px solid var(--line)" }} role="status">
+          <span>{msg.text}</span>
+        </div>
+      )}
+    </section>
   );
 }
 

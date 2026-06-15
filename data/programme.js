@@ -29,6 +29,13 @@ window.ICED26_DATA = {
         "es": "Vie 26",
         "en": "Fri 26"
       }
+    },
+    "access": {
+      "enabled": true,
+      "token": "ICED26-OK",
+      "globalVerifier": "ICEDX1:h9OImkiK9mQEcGeJFEDrr5FToyqESkJkqpQvrnsgpKBO-oHDCsvwn5rQ7y9kP0amKf5BDro",
+      "panelVerifier": "ICEDX1:DMiwmiLMvq2P8ngWHiqnbc1mgNUmu88t7W83AygkkqfkfprJ7xkIcV3c6V-Klp-YvIQpU7o",
+      "panelSessionId": "104802"
     }
   },
   "clusters": [
@@ -1785,7 +1792,8 @@ window.ICED26_DATA = {
       "talks": [],
       "easychair_session_id": "104802",
       "onlinePresenter": true,
-      "chair": "Kasturi Behari-Leak"
+      "chair": "Kasturi Behari-Leak",
+      "youtube": ""
     },
     {
       "day": "2026-06-24",

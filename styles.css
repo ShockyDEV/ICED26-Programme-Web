@@ -2327,6 +2327,64 @@ a { color: inherit; }
 .sm-facilitator:last-child { margin-bottom: 0; }
 .sm-facilitator-name { font-weight: 700; color: var(--ink); font-size: 14px; margin-bottom: 2px; }
 
+/* Participant-code gate (overlay inside the session modal) */
+.sm-codegate-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(43, 39, 36, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 60;
+  padding: 20px;
+}
+.sm-codegate {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: 0 18px 48px rgba(43, 39, 36, 0.28);
+  padding: 22px 22px 18px;
+  width: 100%;
+  max-width: 340px;
+  text-align: center;
+}
+.sm-codegate-icon { color: var(--teal-deep); margin-bottom: 6px; }
+.sm-codegate-title { margin: 0 0 4px; font-family: 'Fraunces', Georgia, serif; font-size: 18px; color: var(--ink); }
+.sm-codegate-desc { margin: 0 0 14px; font-size: 12.5px; line-height: 1.45; color: var(--ink-soft); }
+.sm-codegate-input {
+  width: 100%;
+  font-family: inherit;
+  font-size: 22px;
+  letter-spacing: 0.32em;
+  text-align: center;
+  padding: 10px 12px;
+  border: 1.5px solid var(--line);
+  border-radius: 9px;
+  background: var(--cream);
+  color: var(--ink);
+}
+.sm-codegate-input:focus { outline: none; border-color: var(--teal-deep); }
+.sm-codegate-input.is-wrong { border-color: var(--coral-deep, #A03D08); background: #FBEDE6; }
+.sm-codegate-error { margin-top: 8px; font-size: 12px; color: var(--coral-deep, #A03D08); }
+.sm-codegate-ok { margin-top: 8px; font-size: 12px; color: var(--teal-deep); font-weight: 600; }
+.sm-codegate-actions { display: flex; gap: 10px; margin-top: 16px; }
+.sm-codegate-cancel, .sm-codegate-submit {
+  flex: 1;
+  appearance: none;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 9px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 1.5px solid var(--line);
+}
+.sm-codegate-cancel { background: var(--paper); color: var(--ink-soft); }
+.sm-codegate-cancel:hover { background: var(--cream); }
+.sm-codegate-submit { background: var(--teal-deep); color: var(--paper); border-color: var(--teal-deep); }
+.sm-codegate-submit:hover { filter: brightness(1.06); }
+.sm-codegate-submit:disabled { opacity: 0.5; cursor: default; }
+
 /* ───── Cancelled sessions ───── */
 .c-title.is-cancelled, .m-title.is-cancelled, .sm-title.is-cancelled, .agenda-item-title.is-cancelled {
   text-decoration: line-through;
