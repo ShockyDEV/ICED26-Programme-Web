@@ -110,11 +110,22 @@ async function encryptLinksForPublish(data) {
     sessions.push(next);
   }
 
+  // Rooms always use the GLOBAL code (a room isn't "the panel"). This closes
+  // the gap where the header Meet menu / effectiveYouTube read room.meet /
+  // room.youtube — those would otherwise ship in plaintext.
+  const rooms = [];
+  for (const r of (data.rooms || [])) {
+    const next = { ...r };
+    if (r.meet) next.meet = await encField(r.meet, globalCode);
+    if (r.youtube) next.youtube = await encField(r.youtube, globalCode);
+    rooms.push(next);
+  }
+
   // Strip pending codes from the published meta.
   const access = { ...ac };
   delete access.pendingGlobalCode;
   delete access.pendingPanelCode;
-  return { ...data, sessions, meta: { ...data.meta, access } };
+  return { ...data, sessions, rooms, meta: { ...data.meta, access } };
 }
 
 // UTF-8-safe base64 encoder (btoa alone breaks on non-ASCII chars like

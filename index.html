@@ -58,7 +58,7 @@
 
 <script type="text/babel" data-presets="env,react">
 const { useState, useEffect, useMemo } = React;
-const { Header, DayTabs, BuildingTabs, Grid, MobileList, SessionModal, SessionSearch, AgendaModal, I18N, madridParts, sessionId, findSessionById, useFavorites } = window.ICED26App;
+const { Header, DayTabs, BuildingTabs, Grid, MobileList, SessionModal, SessionSearch, AgendaModal, GlobalCodeGate, I18N, madridParts, sessionId, findSessionById, useFavorites } = window.ICED26App;
 
 // One-time cleanup of the old "organizer mode" unlock flag — that flow has
 // been retired in favour of the dedicated /backstage login page.
@@ -140,6 +140,7 @@ function App() {
       <MobileList data={data} dayIdx={dayIdx} buildingId={buildingId} now={now} lang={lang} t={t} onSessionClick={openSession} favorites={favorites} onToggleFavorite={toggleFavorite} />
       <SessionModal session={activeSession} t={t} lang={lang} now={now} onClose={() => setActiveSession(null)} favorites={favorites} onToggleFavorite={toggleFavorite} data={data} />
       <AgendaModal open={agendaOpen} onClose={() => setAgendaOpen(false)} favorites={favorites} data={data} t={t} lang={lang} now={now} onSessionClick={openSession} onToggleFavorite={toggleFavorite} />
+      <GlobalCodeGate t={t} lang={lang} data={data} />
     </>
   );
 }

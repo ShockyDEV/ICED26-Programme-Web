@@ -190,16 +190,19 @@ function roomLinksActive(s, data) {
 
 // ─── Participant-code access gate ─────────────────────────────────────────
 // Remote links (Meet/YouTube) are protected by a numeric participant code on
-// this public, backend-less site. The code is never stored; we keep a small
-// "verifier" (a known token encrypted with the code) and validate by trying to
-// decrypt it. Most sessions use the GLOBAL code; the International Panel uses
-// its own. Unlocked scopes are remembered for the tab via sessionStorage.
+// this public, backend-less site. Links are stored ENCRYPTED with the code; the
+// code is the key. Once typed, the code is kept for the tab (sessionStorage) so
+// later links in that scope decrypt silently. Most sessions/rooms use the
+// GLOBAL code; the International Panel uses its own scope.
 const ACCESS_TOKEN_FALLBACK = "ICED26-OK";
-const accessUnlockKey = (scope) => "iced26-access-" + scope;
+const accessCodeKey = (scope) => "iced26-code-" + scope;
 
-// Which access scope a session belongs to: "panel" for the special session,
-// else "global". Returns null when access gating is disabled.
-function accessScopeFor(session, data) {
+function accessEnabled(data) {
+  const ac = data && data.meta && data.meta.access;
+  return !!(ac && ac.enabled);
+}
+// Scope for a SESSION: "panel" for the special session, else "global".
+function accessScopeForSession(session, data) {
   const ac = data && data.meta && data.meta.access;
   if (!ac || !ac.enabled) return null;
   if (ac.panelVerifier && ac.panelSessionId &&
@@ -208,17 +211,25 @@ function accessScopeFor(session, data) {
   }
   return ac.globalVerifier ? "global" : null;
 }
+// Rooms always use the global scope (they aren't "the panel").
+function accessScopeForRoom(data) {
+  const ac = data && data.meta && data.meta.access;
+  if (!ac || !ac.enabled || !ac.globalVerifier) return null;
+  return "global";
+}
 function accessVerifier(scope, data) {
   const ac = data.meta.access;
   return scope === "panel" ? ac.panelVerifier : ac.globalVerifier;
 }
-function isScopeUnlocked(scope) {
-  try { return sessionStorage.getItem(accessUnlockKey(scope)) === "1"; }
-  catch (e) { return false; }
+function getStoredCode(scope) {
+  try { return sessionStorage.getItem(accessCodeKey(scope)) || null; }
+  catch (e) { return null; }
 }
-function markScopeUnlocked(scope) {
-  try { sessionStorage.setItem(accessUnlockKey(scope), "1"); } catch (e) {}
+function storeCode(scope, code) {
+  try { sessionStorage.setItem(accessCodeKey(scope), code); } catch (e) {}
 }
+function isScopeUnlocked(scope) { return !!getStoredCode(scope); }
+
 // Validate a typed code against a scope's verifier. Resolves true/false.
 async function checkAccessCode(scope, code, data) {
   const ac = data.meta.access;
@@ -226,6 +237,36 @@ async function checkAccessCode(scope, code, data) {
   if (!C) return false;
   const out = await C.decrypt(accessVerifier(scope, data), code);
   return out === (ac.token || ACCESS_TOKEN_FALLBACK);
+}
+
+// ── Central "open a (maybe gated) remote link" ────────────────────────────
+// A module-level opener registered by <GlobalCodeGate>. Any click handler
+// (modal buttons, header menu) calls openRemoteLink(); if the value is an
+// encrypted blob and the scope isn't unlocked, the shared prompt appears.
+let _codeGateOpener = null;
+function registerCodeGate(fn) { _codeGateOpener = fn; }
+
+function openUrlNewTab(url) {
+  if (url && /^https?:\/\//i.test(url)) window.open(url, "_blank", "noopener,noreferrer");
+}
+// value: a plain URL or an ICEDX1 blob. scope: "global"/"panel"/null.
+function openRemoteLink(value, scope, data) {
+  const C = (typeof window !== "undefined") && window.ICED26Crypto;
+  if (!value) return;
+  // Not encrypted (or gating off) → open directly.
+  if (!scope || !C || !C.isEnc(value)) { openUrlNewTab(value); return; }
+  // Scope already unlocked this tab → decrypt silently.
+  const code = getStoredCode(scope);
+  if (code) {
+    C.decrypt(value, code).then((url) => {
+      if (url && /^https?:\/\//i.test(url)) openUrlNewTab(url);
+      else if (_codeGateOpener) _codeGateOpener(value, scope); // stale code → ask again
+    });
+    return;
+  }
+  // Otherwise show the shared prompt.
+  if (_codeGateOpener) _codeGateOpener(value, scope);
+  else openUrlNewTab(value); // gate not mounted (shouldn't happen) → fail open to URL
 }
 
 // ─── URL sanitization ────────────────────────────────────────────────────
@@ -660,7 +701,7 @@ const Icon = ({ name, ...p }) => {
 };
 
 // ─── Cluster Meet menu (dropdown) ─────────────────────────────────────────
-function ClusterMeetMenu({ cluster, rooms, liveByRoom, t, lang }) {
+function ClusterMeetMenu({ cluster, rooms, liveByRoom, t, lang, data }) {
   const [open, setOpen] = useState(false);
   const ref = useRef(null);
   const liveCount = rooms.filter((r) => liveByRoom[r.id]).length;
@@ -696,16 +737,21 @@ function ClusterMeetMenu({ cluster, rooms, liveByRoom, t, lang }) {
           const live = liveByRoom[r.id];
           // Effective link: prefer the live session's Meet, else the room's
           // YouTube stream. Greyed + non-clickable unless the room is Active.
-          const url = live ? (live.meet || ((live.type === "keynote" || live.type === "talk") ? (r.youtube || "") : "")) : "";
-          const clickable = !!(live && r.active && url);
+          // Value may be an encrypted blob — opened via the code gate. A room
+          // link uses the room (global) scope; a session.meet here uses the
+          // session's own scope (panel session keeps its special code).
+          const val = live ? (live.meet || ((live.type === "keynote" || live.type === "talk") ? (r.youtube || "") : "")) : "";
+          const scope = live
+            ? (live.meet ? accessScopeForSession(live, data) : accessScopeForRoom(data))
+            : null;
+          const clickable = !!(live && r.active && val);
           return (
-            <a
+            <button
               key={r.id}
-              href={clickable ? safeURL(url) : "#"}
-              target="_blank"
-              rel="noopener noreferrer"
+              type="button"
               className={`cluster-room ${live ? "is-live" : "is-idle"} ${live && !r.active ? "is-locked" : ""}`}
-              onClick={(e) => {if (!clickable) e.preventDefault();}}
+              onClick={() => { if (clickable) openRemoteLink(val, scope, data); }}
+              disabled={!clickable}
               role="menuitem">
 
                 <span className="cr-name">{r.name}</span>
@@ -715,7 +761,7 @@ function ClusterMeetMenu({ cluster, rooms, liveByRoom, t, lang }) {
                   : <span className="cr-idle">{lang === "es" ? "cerrado" : "closed"}</span>)
                 : <span className="cr-idle">{lang === "es" ? "sin sesión activa" : "no live session"}</span>
               }
-              </a>);
+              </button>);
 
         })}
         </div>
@@ -782,7 +828,8 @@ function Header({ data, now, lang, setLang, t, favorites, onOpenAgenda }) {
             rooms={roomsByCluster[c.id] || []}
             liveByRoom={liveByRoom}
             t={t}
-            lang={lang} />
+            lang={lang}
+            data={data} />
 
           )}
         </nav>
@@ -1245,9 +1292,7 @@ function MobileList({ data, dayIdx, buildingId, now, lang, t, onSessionClick, fa
             return (
               <a
                 key={i}
-                href={safeURL(s.meet)}
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#"
                 className={`mobile-cell is-${state} ${isSessionOnline(s) ? "is-online-presenter" : ""} ${s.cancelled ? "is-cancelled" : ""}`}
                 style={{ "--type-color": `var(--t-${s.type})` }}
                 onClick={(e) => { e.preventDefault(); if (onSessionClick) onSessionClick(s); }}
@@ -1616,7 +1661,10 @@ function SharePopover({ session, t, lang, onClose, data }) {
       icon: <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M9 11.5L11.5 9M9 11.5L7 13.5a2.5 2.5 0 01-3.5-3.5L5.5 8M11 8.5l2-2a2.5 2.5 0 013.5 3.5L14.5 12" /></svg>,
       action: () => { copyToClipboard(programmeUrl); showToast(lang === "es" ? "Enlace copiado" : "Link copied"); onClose(); }
     },
-    session.meet && {
+    // NOTE: "Copy Meet link" intentionally removed — when access codes are on,
+    // session.meet is an encrypted blob, not a usable URL. Participants open Meet
+    // via the gated button (which decrypts after the code), not by copying.
+    (session.meet && !(data && data.meta && data.meta.access && data.meta.access.enabled)) && {
       key: "meet",
       label: lang === "es" ? "Enlace de Meet" : "Meet link",
       sub: linksActive ? (lang === "es" ? "Para entrar directo a la sala" : "Direct join URL") : t.linksClosed,
@@ -1648,8 +1696,6 @@ function SharePopover({ session, t, lang, onClose, data }) {
 function SessionModal({ session, t, lang, now, onClose, favorites, onToggleFavorite, data }) {
   const [shareOpen, setShareOpen] = useState(false);
   const [expandedTalk, setExpandedTalk] = useState(null);
-  // Participant-code gate: { scope, blob } when a code prompt is open.
-  const [codeGate, setCodeGate] = useState(null);
   // Close on Esc
   useEffect(() => {
     if (!session) return;
@@ -1662,7 +1708,7 @@ function SessionModal({ session, t, lang, now, onClose, favorites, onToggleFavor
     };
   }, [session, onClose, shareOpen]);
   // Close share popover + collapse abstracts when session changes
-  useEffect(() => { setShareOpen(false); setExpandedTalk(null); setCodeGate(null); }, [session]);
+  useEffect(() => { setShareOpen(false); setExpandedTalk(null); }, [session]);
 
   if (!session) return null;
   const dur = hmToMinutes(session.end) - hmToMinutes(session.start);
@@ -1869,24 +1915,16 @@ function SessionModal({ session, t, lang, now, onClose, favorites, onToggleFavor
             const showMeet = !isStreamType && !noRemoteType && !noRowType;
             const meetLive = session.meet && linksActive;
             const ytLive = yt && linksActive;
-            // Access scope (participant-code gate). When a live link exists but
-            // its scope isn't unlocked yet, clicking opens the code prompt
-            // instead of navigating. The link itself is encrypted in the data.
-            const scope = accessScopeFor(session, data);
-            const gated = !!scope;
-            const openGatedLink = (encOrUrl) => {
-              if (!gated) { window.open(safeURL(encOrUrl), "_blank", "noopener,noreferrer"); return; }
-              setCodeGate({ scope, blob: encOrUrl });
-            };
-            const meetBtn = (live, enc) => live
-              ? (gated && window.ICED26Crypto && window.ICED26Crypto.isEnc(enc)
-                  ? <button type="button" className="sm-meet-btn" onClick={() => openGatedLink(enc)}>{meetIcon}<span>{meetLabel}</span>{arrow}</button>
-                  : <a href={safeURL(enc)} target="_blank" rel="noopener noreferrer" className="sm-meet-btn">{meetIcon}<span>{meetLabel}</span>{arrow}</a>)
+            // Access scope (participant-code gate). A live link (plain or
+            // encrypted) opens via openRemoteLink, which shows the shared code
+            // prompt when the scope isn't unlocked yet. The link is encrypted
+            // in the published data; the code is the key.
+            const scope = accessScopeForSession(session, data);
+            const meetBtn = (live, val) => live
+              ? <button type="button" className="sm-meet-btn" onClick={() => openRemoteLink(val, scope, data)}>{meetIcon}<span>{meetLabel}</span>{arrow}</button>
               : <span className="sm-meet-btn is-locked" title={t.linksClosed} aria-disabled="true">{meetIcon}<span>{meetLabel}</span>{lock}</span>;
-            const ytBtn = (live, enc) => live
-              ? (gated && window.ICED26Crypto && window.ICED26Crypto.isEnc(enc)
-                  ? <button type="button" className="sm-youtube-btn" onClick={() => openGatedLink(enc)}>{ytIcon}<span>{t.watchOnYouTube}</span>{arrow}</button>
-                  : <a href={safeURL(enc)} target="_blank" rel="noopener noreferrer" className="sm-youtube-btn">{ytIcon}<span>{t.watchOnYouTube}</span>{arrow}</a>)
+            const ytBtn = (live, val) => live
+              ? <button type="button" className="sm-youtube-btn" onClick={() => openRemoteLink(val, scope, data)}>{ytIcon}<span>{t.watchOnYouTube}</span>{arrow}</button>
               : <span className="sm-youtube-btn is-locked" title={t.linksClosed} aria-disabled="true">{ytIcon}<span>{t.watchOnYouTube}</span>{lock}</span>;
             return (
               <>
@@ -2123,27 +2161,36 @@ function SessionModal({ session, t, lang, now, onClose, favorites, onToggleFavor
           </div>
         )}
 
-        {codeGate && (
-          <CodePrompt
-            gate={codeGate}
-            t={t}
-            data={data}
-            onClose={() => setCodeGate(null)}
-          />
-        )}
-
       </div>
     </div>
   );
 }
 
-// Participant-code prompt. Validates the typed code against the scope's
-// verifier, then decrypts the actual link and opens it in a new tab.
-function CodePrompt({ gate, t, data, onClose }) {
+// Shared participant-code prompt, mounted once at the app root. It registers a
+// module-level opener (registerCodeGate) so any click handler — modal buttons,
+// header Meet menu — can request it via openRemoteLink(). On a correct code it
+// stores the code for the tab (so the rest of that scope decrypts silently),
+// decrypts the requested link and opens it.
+function GlobalCodeGate({ t, lang, data }) {
+  const [gate, setGate] = useState(null); // { blob, scope }
   const [code, setCode] = useState("");
   const [status, setStatus] = useState(null); // null | "checking" | "wrong" | "ok"
   const inputRef = useRef(null);
-  useEffect(() => { if (inputRef.current) inputRef.current.focus(); }, []);
+
+  useEffect(() => {
+    registerCodeGate((blob, scope) => { setGate({ blob, scope }); setCode(""); setStatus(null); });
+    return () => registerCodeGate(null);
+  }, []);
+  useEffect(() => { if (gate && inputRef.current) inputRef.current.focus(); }, [gate]);
+  useEffect(() => {
+    if (!gate) return;
+    const onKey = (e) => { if (e.key === "Escape") setGate(null); };
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, [gate]);
+
+  if (!gate) return null;
+  const close = () => setGate(null);
 
   const submit = async (e) => {
     if (e) e.preventDefault();
@@ -2152,17 +2199,17 @@ function CodePrompt({ gate, t, data, onClose }) {
     const C = window.ICED26Crypto;
     const url = C ? await C.decrypt(gate.blob, code.trim()) : null;
     if (url && /^https?:\/\//i.test(url)) {
-      markScopeUnlocked(gate.scope);
+      storeCode(gate.scope, code.trim());
       setStatus("ok");
-      window.open(url, "_blank", "noopener,noreferrer");
-      setTimeout(onClose, 600);
+      openUrlNewTab(url);
+      setTimeout(close, 600);
     } else {
       setStatus("wrong");
     }
   };
 
   return (
-    <div className="sm-codegate-overlay" onClick={onClose}>
+    <div className="sm-codegate-overlay" onClick={close}>
       <form className="sm-codegate" onClick={(e) => e.stopPropagation()} onSubmit={submit}>
         <div className="sm-codegate-icon" aria-hidden="true">
           <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="4" y="10" width="16" height="11" rx="2" /><path d="M8 10V7a4 4 0 0 1 8 0v3" /></svg>
@@ -2183,7 +2230,7 @@ function CodePrompt({ gate, t, data, onClose }) {
         {status === "wrong" && <div className="sm-codegate-error">{t.codeWrong}</div>}
         {status === "ok" && <div className="sm-codegate-ok">{t.codeUnlocked}</div>}
         <div className="sm-codegate-actions">
-          <button type="button" className="sm-codegate-cancel" onClick={onClose}>{t.cancel}</button>
+          <button type="button" className="sm-codegate-cancel" onClick={close}>{t.cancel}</button>
           <button type="submit" className="sm-codegate-submit" disabled={!code || status === "checking" || status === "ok"}>{t.codeSubmit}</button>
         </div>
       </form>
@@ -2324,16 +2371,15 @@ function AgendaModal({ open, onClose, favorites, data, t, lang, now, onSessionCl
                           </button>
                           <div className="agenda-item-actions">
                             {s.meet && !s.cancelled && (
-                              <a
-                                href={safeURL(s.meet)}
-                                target="_blank"
-                                rel="noopener noreferrer"
+                              <button
+                                type="button"
                                 className="agenda-meet-btn"
                                 title={t.join}
+                                onClick={() => openRemoteLink(s.meet, accessScopeForSession(s, data), data)}
                               >
                                 <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
                                 Meet
-                              </a>
+                              </button>
                             )}
                             <StarButton
                               active={true}
@@ -2357,7 +2403,7 @@ function AgendaModal({ open, onClose, favorites, data, t, lang, now, onSessionCl
   );
 }
 
-window.ICED26App = { Header, DayTabs, BuildingTabs, Grid, MobileList, Scrubber, SessionModal, SessionSearch, AgendaModal, I18N, madridParts, madridDate, sessionState, sessionId, findSessionById, useFavorites, StarButton, isSessionOnline };
+window.ICED26App = { Header, DayTabs, BuildingTabs, Grid, MobileList, Scrubber, SessionModal, SessionSearch, AgendaModal, GlobalCodeGate, I18N, madridParts, madridDate, sessionState, sessionId, findSessionById, useFavorites, StarButton, isSessionOnline };
 
 // ─── Demo helpers: timezone preview from the console ──────────────────────
 // Lets anyone (incl. Mónica) preview the site in any timezone without
