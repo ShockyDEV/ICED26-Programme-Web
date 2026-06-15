@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-15T20-28
+// ICED26 programme — generated from admin panel 2026-06-15T20-46
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -115,7 +115,7 @@ window.ICED26_DATA = {
       "name": "ROOM 1.1",
       "cluster": "hospederia",
       "code": "1.1",
-      "active": false
+      "active": true
     },
     {
       "id": "room-1-2",
