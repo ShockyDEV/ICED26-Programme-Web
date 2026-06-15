@@ -1913,12 +1913,36 @@ function SessionModal({ session, t, lang, now, onClose, favorites, onToggleFavor
           );
         })()}
 
-        {session.facilitators && session.facilitators.trim() && (
-          <div className="sm-facilitators">
-            <div className="sm-detail-label">{t.facilitatorsLabel}</div>
-            <p className="sm-facilitators-text">{linkifyText(session.facilitators.trim())}</p>
-          </div>
-        )}
+        {(() => {
+          // Facilitators block (Mindfulness). New shape: array of {name, bio};
+          // legacy shape: a plain string. Render both.
+          const f = session.facilitators;
+          if (!f) return null;
+          if (Array.isArray(f)) {
+            const list = f.filter((p) => p && ((p.name || "").trim() || (p.bio || "").trim()));
+            if (!list.length) return null;
+            return (
+              <div className="sm-facilitators">
+                <div className="sm-detail-label">{t.facilitatorsLabel}</div>
+                {list.map((p, i) => (
+                  <div className="sm-facilitator" key={i}>
+                    {(p.name || "").trim() && <div className="sm-facilitator-name">{p.name.trim()}</div>}
+                    {(p.bio || "").trim() && <p className="sm-facilitators-text">{linkifyText(p.bio.trim())}</p>}
+                  </div>
+                ))}
+              </div>
+            );
+          }
+          if (typeof f === "string" && f.trim()) {
+            return (
+              <div className="sm-facilitators">
+                <div className="sm-detail-label">{t.facilitatorsLabel}</div>
+                <p className="sm-facilitators-text">{linkifyText(f.trim())}</p>
+              </div>
+            );
+          }
+          return null;
+        })()}
 
         {talks.length > 0 && (
           <div className="sm-talks">

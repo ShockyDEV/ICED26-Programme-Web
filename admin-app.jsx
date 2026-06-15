@@ -260,6 +260,21 @@ function cleanMedia(media) {
   return Object.keys(out).length ? out : undefined;
 }
 
+// Normalise the facilitators field (Mindfulness). Accepts the new array shape
+// [{name, bio}] or a legacy string; returns a trimmed array, dropping empty
+// entries. Returns undefined when there is nothing to keep.
+function cleanFacilitators(f) {
+  if (!f) return undefined;
+  let arr;
+  if (Array.isArray(f)) arr = f;
+  else if (typeof f === "string" && f.trim()) arr = [{ name: "", bio: f }];
+  else return undefined;
+  const out = arr
+    .map((p) => ({ name: (p && p.name || "").toString().trim(), bio: (p && p.bio || "").toString().trim() }))
+    .filter((p) => p.name || p.bio);
+  return out.length ? out : undefined;
+}
+
 // ── HH:MM validation ───────────────────────────────────────────────────
 const TIME_RE = /^([01]\d|2[0-3]):[0-5]\d$/;
 const URL_RE = /^https?:\/\/.+/i;
@@ -1297,7 +1312,7 @@ function SessionEditor({ session, isNew, rooms, clusters, days, onSave, onCancel
       cardTitle: (s.cardTitle || "").trim(),
       chair: (s.chair || "").trim(),
       media: cleanMedia(s.media),
-      facilitators: (s.facilitators || "").trim(),
+      facilitators: cleanFacilitators(s.facilitators),
       onlinePresenter: !!s.onlinePresenter,
       hybrid: !!s.hybrid,
       cancelled: !!s.cancelled,
@@ -1463,12 +1478,10 @@ function SessionEditor({ session, isNew, rooms, clusters, days, onSave, onCancel
           {/* Facilitators' background — EXTRA field shown only for Mindfulness
               sessions, so it doesn't clutter every other session editor. */}
           {/mindfulness/i.test(s.title || "") && (
-            <Field label="Formación de las formadoras (solo Mindfulness)"
-              hint="Trayectoria/biografía de las formadoras. Aparece como un bloque «Facilitators / Formadoras» en el detalle de la sesión. Solo se muestra en las sesiones de Mindfulness.">
-              <textarea rows={6} value={s.facilitators || ""}
-                onChange={(e) => setField("facilitators", e.target.value)}
-                placeholder="P. ej. Elena Quevedo: Education and Sport Faculty, University of Deusto…" />
-            </Field>
+            <FacilitatorsEditor
+              value={s.facilitators}
+              onChange={(facs) => setField("facilitators", facs)}
+            />
           )}
 
           {(() => {
@@ -1548,6 +1561,45 @@ function SessionEditor({ session, isNew, rooms, clusters, days, onSave, onCancel
 // ─────────────────────────────────────────────────────────────────────
 // TalksEditor
 // ─────────────────────────────────────────────────────────────────────
+// FacilitatorsEditor — structured list of facilitators (name + background).
+// Used only for Mindfulness sessions. Stored as [{name, bio}]. Accepts a legacy
+// string value and converts it to a single entry on first edit.
+function FacilitatorsEditor({ value, onChange }) {
+  const list = Array.isArray(value)
+    ? value
+    : (typeof value === "string" && value.trim() ? [{ name: "", bio: value }] : []);
+  const update = (i, patch) => onChange(list.map((p, idx) => (idx === i ? { ...p, ...patch } : p)));
+  const add = () => onChange([...list, { name: "", bio: "" }]);
+  const remove = (i) => onChange(list.filter((_, idx) => idx !== i));
+
+  return (
+    <details className="facilitators-editor" open={list.length > 0}>
+      <summary>Formadoras (solo Mindfulness){list.length > 0 && <span className="muted"> ({list.length})</span>}</summary>
+      <p className="form-note">
+        Cada formadora: nombre y apellidos (se muestran en <strong>negrita</strong> automáticamente) y su formación.
+        Aparece como un bloque «Facilitators / Formadoras» en el detalle de la sesión.
+      </p>
+      {list.map((p, i) => (
+        <div className="facilitator-row" key={i}>
+          <div className="facilitator-row-head">
+            <strong>Formadora {i + 1}</strong>
+            <button type="button" className="btn-ghost btn-mini" onClick={() => remove(i)} title="Quitar formadora">Quitar</button>
+          </div>
+          <Field label="Nombre y apellidos">
+            <input type="text" value={p.name || ""} onChange={(e) => update(i, { name: e.target.value })}
+              placeholder="P. ej. Elena Quevedo" />
+          </Field>
+          <Field label="Formación">
+            <textarea rows={4} value={p.bio || ""} onChange={(e) => update(i, { bio: e.target.value })}
+              placeholder="P. ej. Education and Sport Faculty, University of Deusto. Organic Meditation and Mindfulness Coach…" />
+          </Field>
+        </div>
+      ))}
+      <button type="button" className="btn-ghost" onClick={add}>+ Añadir formadora</button>
+    </details>
+  );
+}
+
 function TalksEditor({ talks, onChange }) {
   const update = (i, patch) => onChange(talks.map((t, idx) => (idx === i ? { ...t, ...patch } : t)));
   const add = () =>

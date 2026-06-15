@@ -924,20 +924,37 @@
 .form-note strong { color: var(--ink); }
 
 /* "Media especial" collapsible editor (anthem video/lyrics/image). */
-.media-editor {
+.media-editor,
+.facilitators-editor {
   margin: 14px 0 6px;
   border: 1px solid var(--line, #E5DDD0);
   border-radius: 8px;
   padding: 10px 12px;
   background: var(--cream, #F7F2EA);
 }
-.media-editor > summary {
+.media-editor > summary,
+.facilitators-editor > summary {
   cursor: pointer;
   font-weight: 600;
   font-size: 13.5px;
   list-style-position: inside;
 }
-.media-editor[open] > summary { margin-bottom: 8px; }
+.media-editor[open] > summary,
+.facilitators-editor[open] > summary { margin-bottom: 8px; }
+.facilitator-row {
+  border: 1px solid var(--line, #E5DDD0);
+  border-radius: 7px;
+  padding: 8px 10px;
+  margin-bottom: 10px;
+  background: var(--paper, #FDFBF7);
+}
+.facilitator-row-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+.facilitators-editor textarea,
 .media-editor textarea {
   width: 100%;
   font-family: inherit;

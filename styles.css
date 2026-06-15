@@ -2323,6 +2323,9 @@ a { color: inherit; }
 .sm-facilitators-text { margin: 0; font-size: 13.5px; line-height: 1.55; color: var(--ink-soft); white-space: pre-wrap; }
 .sm-facilitators-text a { color: var(--teal-deep); text-decoration: underline; text-underline-offset: 2px; overflow-wrap: anywhere; }
 .sm-facilitators-text a:hover { color: var(--coral-deep); }
+.sm-facilitator { margin-bottom: 12px; }
+.sm-facilitator:last-child { margin-bottom: 0; }
+.sm-facilitator-name { font-weight: 700; color: var(--ink); font-size: 14px; margin-bottom: 2px; }
 
 /* ───── Cancelled sessions ───── */
 .c-title.is-cancelled, .m-title.is-cancelled, .sm-title.is-cancelled, .agenda-item-title.is-cancelled {
