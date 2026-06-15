@@ -2598,11 +2598,9 @@ window.ICED26_DATA = {
       "onlinePresenter": false,
       "youtube": "",
       "chair": "Amparo Fernández March, Elena Quevedo Torrientes",
-      "media": {
-        "text": "Elena Quevedo: Education and Sport Faculty, University of Deusto.\n\nOrganic Meditation and Mindfulness Coach, from Brown University, USA.\n\n\nAmparo Fernández March: Institute of Education Sciences, Polytechnic University Valencia.\n\nHatha yoga practitioner since 2088. Certified yoga teacher by the Portuguese Yoga Center under the supervision of Professor Carlos Rui Ferreira."
-      },
       "hybrid": false,
-      "cancelled": false
+      "cancelled": false,
+      "facilitators": "Elena Quevedo: Education and Sport Faculty, University of Deusto.\n\nOrganic Meditation and Mindfulness Coach, from Brown University, USA.\n\n\nAmparo Fernández March: Institute of Education Sciences, Polytechnic University Valencia.\n\nHatha yoga practitioner since 2088. Certified yoga teacher by the Portuguese Yoga Center under the supervision of Professor Carlos Rui Ferreira."
     },
     {
       "day": "2026-06-25",

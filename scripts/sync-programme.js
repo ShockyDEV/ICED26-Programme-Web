@@ -433,6 +433,8 @@ async function main() {
     // Preserve the special media block (anthem video/lyrics/image etc.) — it's
     // hand-curated, never present in the EasyChair scrape.
     if (existing?.media) next.media = existing.media;
+    // Preserve the Mindfulness facilitators' background block (hand-curated).
+    if (existing?.facilitators) next.facilitators = existing.facilitators;
     // Preserve the session-level "one or more presentations online" flag.
     if (existing?.onlinePresenter) next.onlinePresenter = true;
     // Preserve the "hybrid workshop" flag (remote co-facilitator joins via Meet,

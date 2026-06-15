@@ -1297,6 +1297,7 @@ function SessionEditor({ session, isNew, rooms, clusters, days, onSave, onCancel
       cardTitle: (s.cardTitle || "").trim(),
       chair: (s.chair || "").trim(),
       media: cleanMedia(s.media),
+      facilitators: (s.facilitators || "").trim(),
       onlinePresenter: !!s.onlinePresenter,
       hybrid: !!s.hybrid,
       cancelled: !!s.cancelled,
@@ -1458,6 +1459,17 @@ function SessionEditor({ session, isNew, rooms, clusters, days, onSave, onCancel
               <span>Sesión cancelada</span>
             </label>
           </Field>
+
+          {/* Facilitators' background — EXTRA field shown only for Mindfulness
+              sessions, so it doesn't clutter every other session editor. */}
+          {/mindfulness/i.test(s.title || "") && (
+            <Field label="Formación de las formadoras (solo Mindfulness)"
+              hint="Trayectoria/biografía de las formadoras. Aparece como un bloque «Facilitators / Formadoras» en el detalle de la sesión. Solo se muestra en las sesiones de Mindfulness.">
+              <textarea rows={6} value={s.facilitators || ""}
+                onChange={(e) => setField("facilitators", e.target.value)}
+                placeholder="P. ej. Elena Quevedo: Education and Sport Faculty, University of Deusto…" />
+            </Field>
+          )}
 
           {(() => {
             const media = s.media || {};

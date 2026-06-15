@@ -2312,6 +2312,18 @@ a { color: inherit; }
 .sm-media-text a { color: var(--teal-deep); text-decoration: underline; text-underline-offset: 2px; overflow-wrap: anywhere; }
 .sm-media-text a:hover { color: var(--coral-deep); }
 
+/* Facilitators' background block (Mindfulness sessions only) */
+.sm-facilitators {
+  margin: 4px 28px 6px;
+  padding: 14px 16px;
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+.sm-facilitators-text { margin: 0; font-size: 13.5px; line-height: 1.55; color: var(--ink-soft); white-space: pre-wrap; }
+.sm-facilitators-text a { color: var(--teal-deep); text-decoration: underline; text-underline-offset: 2px; overflow-wrap: anywhere; }
+.sm-facilitators-text a:hover { color: var(--coral-deep); }
+
 /* ───── Cancelled sessions ───── */
 .c-title.is-cancelled, .m-title.is-cancelled, .sm-title.is-cancelled, .agenda-item-title.is-cancelled {
   text-decoration: line-through;

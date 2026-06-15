@@ -323,6 +323,7 @@ const I18N = {
     timeTravel: "Time travel",
     realNow: "Real now",
     admin: "Admin",
+    facilitatorsLabel: "Facilitators",
     everyRoom: "All rooms",
     searchPlaceholder: "Search contributions, authors, chairs, sessions (e.g. 15K)…",
     searchNoResults: "No matches",
@@ -392,6 +393,7 @@ const I18N = {
     timeTravel: "Viaje en el tiempo",
     realNow: "Ahora real",
     admin: "Admin",
+    facilitatorsLabel: "Formadoras",
     everyRoom: "Todas las salas",
     searchPlaceholder: "Buscar contribuciones, autores, moderadores, sesiones (p. ej. 15K)…",
     searchNoResults: "Sin resultados",
@@ -1910,6 +1912,13 @@ function SessionModal({ session, t, lang, now, onClose, favorites, onToggleFavor
             </div>
           );
         })()}
+
+        {session.facilitators && session.facilitators.trim() && (
+          <div className="sm-facilitators">
+            <div className="sm-detail-label">{t.facilitatorsLabel}</div>
+            <p className="sm-facilitators-text">{linkifyText(session.facilitators.trim())}</p>
+          </div>
+        )}
 
         {talks.length > 0 && (
           <div className="sm-talks">
