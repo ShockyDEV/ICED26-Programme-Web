@@ -461,7 +461,9 @@ const I18N = {
     watchVideo: "Watch video",
     chairLabel: "Chair:",
     guideLabel: "How to navigate",
-    guideTitle: "How to Navigate the ICED26 Conference Programme (PDF)"
+    guideTitle: "How to Navigate the ICED26 Conference Programme (PDF)",
+    gridLabel: "At a glance",
+    gridTitle: "Full programme at a glance — all sessions on one page (PDF)"
   },
   es: {
     subtitle: "Salamanca · 23–26 junio 2026",
@@ -539,7 +541,9 @@ const I18N = {
     watchVideo: "Ver vídeo",
     chairLabel: "Modera:",
     guideLabel: "Cómo navegar",
-    guideTitle: "Cómo navegar por el programa del congreso ICED26 (PDF)"
+    guideTitle: "Cómo navegar por el programa del congreso ICED26 (PDF)",
+    gridLabel: "De un vistazo",
+    gridTitle: "Programa completo de un vistazo — todas las sesiones en una página (PDF)"
   }
 };
 
@@ -814,6 +818,21 @@ function Header({ data, now, lang, setLang, t, favorites, onOpenAgenda }) {
             <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
           </svg>
           <span className="guide-btn-label">{t.guideLabel}</span>
+        </a>
+
+        <a
+          className="guide-btn"
+          href={safeURL("assets/programme-at-a-glance.pdf")}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={t.gridTitle}
+          title={t.gridTitle}
+        >
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="2"/>
+            <path d="M3 9h18M3 15h18M9 3v18M15 3v18"/>
+          </svg>
+          <span className="guide-btn-label">{t.gridLabel}</span>
         </a>
 
         <nav className="rooms-bar" aria-label={t.meetLinks}>
