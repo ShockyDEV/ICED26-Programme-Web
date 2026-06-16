@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-16T08-05
+// ICED26 programme — generated from admin panel 2026-06-16T08-07
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -6226,7 +6226,6 @@ window.ICED26_DATA = {
       "meet": "",
       "talks": [
         {
-          "easychair_id": "311912",
           "time": "11:00",
           "title": "Perceptual Convergences and Divergences on Active-Learning after Faculty Development",
           "authors": "Gabriel Hervas, José Luis Medina, Patricia Silva, Isaac Calduch",
@@ -6235,7 +6234,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311826",
           "time": "11:15",
           "title": "Agency in Higher Education Strategy: Applying Improvisation in Academic Development",
           "authors": "Benjamin Phipps",
@@ -6244,16 +6242,14 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "315875",
           "time": "11:30",
           "title": "Towards a collaborative digital environment, facilitated by artificial intelligence, for the analysis, visualization and educational application of musical repertoires from the oral tradition",
           "authors": "Javier F. Merchán Sánchez-Jara, Sara González-Gutiérrez, Enrique González-Gutiérrez",
-          "presenter": "Javier F. Merchán Sánchez-Jara",
+          "presenter": "Javier F. Merchán Sánchez-Jara, Enrique González-Gutiérrez",
           "abstract": "The integration of artificial intelligence (AI) into the analysis, representation and pedagogical integration of oral tradition musical heritage within the educational ecosystem fosters an epistemic transformation beyond the mere incorporation of technological resources into the music classroom. This paper proposes and analyses the theoretical and epistemological foundations for the development of an AI-mediated collaborative digital environment geared towards the management, computational analysis, multimodal visualization and pedagogical integration of oral tradition music corpora encoded in MEI (Music Encoding Initiative) format within formal education, aligned with the current curriculum framework. The environment, developed within the EADIGIFOLK project, operates on a corpus of approximately 3,000 traditional pieces from Spain, Portugal, Colombia, Mexico, Italy and Ireland, and integrates tools for AI-assisted musical analysis, visual representation of musical structures and elements, and the design of learning situations aligned with primary and secondary school curricula. The underlying premise is that, within an ecological environment for situated music learning, AI acts not merely as a technical support, but as a cognitive and semiotic mediator that uniquely reconfigures how musical knowledge is generated, organized and transmitted in collaborative and interdisciplinary settings, by virtue of its potential to facilitate the understanding of the logic and semantics implicit in musical corpora. This reconfiguration opens unprecedented challenges and opportunities for academic development, teacher training and knowledge production in music education, with significant implications for creativity and the construction of heritage knowledge linked to oral tradition, as well as for epistemological agency and the critical analysis of knowledge itself.",
           "keywords": ""
         },
         {
-          "easychair_id": "315425",
           "time": "11:45",
           "title": "Scale Down in Order to Scale Up – experiences and results from a hybrid learning lab.",
           "authors": "Marie Leijon, Åse Tieva",
@@ -6262,7 +6258,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "316676",
           "time": "12:00",
           "title": "Enhancing student autonomy and accountability in technical engineering work through digital Kanban",
           "authors": "Juan-Manuel Alvarez-Espada, María-Teresa Aguilar-Planet, Estela Peralta",
@@ -6274,7 +6269,12 @@ window.ICED26_DATA = {
       ],
       "easychair_session_id": "105680",
       "description": "Researching Teaching Methods: Active Learning; Research-based teaching and Improvisational Methods",
-      "chair": "Macarena Trujillo Guillén"
+      "chair": "Macarena Trujillo Guillén",
+      "cardTitle": "",
+      "onlinePresenter": false,
+      "hybrid": false,
+      "cancelled": false,
+      "youtube": ""
     },
     {
       "day": "2026-06-26",
