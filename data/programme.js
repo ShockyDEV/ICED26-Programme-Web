@@ -6717,7 +6717,6 @@ window.ICED26_DATA = {
       "meet": "",
       "talks": [
         {
-          "easychair_id": "311657",
           "time": "11:00",
           "title": "Advancing Student Agency through Technology-Enhanced Learning Environments: The Taiwan Experience",
           "authors": "Wei Shun Chang, Sung-Hui Tseng, Chi-Jung Huang, Ju-Ying Chang, Tsung-Ren Huang, Ling-Chieh Kung",
@@ -6727,7 +6726,12 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "105687",
-      "chair": "Klara Bolander Laksov"
+      "chair": "Hung-Jen Wang",
+      "cardTitle": "",
+      "onlinePresenter": false,
+      "hybrid": false,
+      "cancelled": false,
+      "youtube": ""
     },
     {
       "day": "2026-06-26",
