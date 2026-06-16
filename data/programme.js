@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-15T20-46
+// ICED26 programme — generated from admin panel 2026-06-16T08-05
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -6762,13 +6762,19 @@ window.ICED26_DATA = {
       "media": {
         "type": "anthem",
         "heading": "Gaudeamus Igitur",
-        "text": "The conference closes with Gaudeamus Igitur, the traditional academic anthem, performed by the University of Salamanca choir.",
+        "text": "The conference closes with Gaudeamus Igitur, the traditional academic anthem.",
         "textEs": "El congreso se cierra con el Gaudeamus Igitur, el himno académico tradicional, interpretado por el Coro de la Universidad de Salamanca.",
         "video": "https://www.youtube.com/watch?v=DHJgswD-230",
         "image": "assets/gaudeamus-igitur.jpg",
         "lyrics": "Gaudeamus igitur,\niuvenes dum sumus. (bis)\nPost iucundam iuventutem,\npost molestam senectutem,\nnos habebit humus.\n\nUbi sunt qui ante nos\nin mundo fuere?\nVadite ad superos,\ntransite ad inferos,\nubi iam fuere.\n\nVivat Academia,\nvivant professores.\nVivat membrum quodlibet,\nvivant membra quaelibet,\nsemper sint in flore.\n\nVita nostra brevis est, breve finietur.\nVenit mors velociter,\nrapit nos atrociter,\nnemini parcetur.\n\nVivat nostra societas!\nVivant studiosi!\nCrescat una veritas,\nfloreat fraternitas,\npatriae prosperitas.\n\nVivat et Republica,\net qui illam regit.\nVivat nostra civitas,\nMaecenatum caritas,\nquae nos hic protegit.\n\nPereat tristitia,\npereant osores.\nPereat diabolus,\nquivis antiburschius,\natque irrisores.\n\nAlma Mater floreat\nquae nos educavit,\ncaros et conmilitones\ndissitas in regiones\nsparsos congregavit.",
         "lyricsEs": "Alegrémonos pues,\nmientras seamos jóvenes.\nTras la divertida juventud,\ntras la incómoda vejez,\nnos recibirá la tierra.\n\n¿Dónde están los que antes que nosotros\npasaron por el mundo?\nSubid al mundo de los cielos,\ndescended a los infiernos,\ndonde ellos ya estuvieron.\n\nViva la Universidad,\nvivan los profesores.\nVivan todos y cada uno\nde sus miembros,\nresplandezcan siempre.\n\nNuestra vida es corta,\nen breve se acaba.\nViene la muerte velozmente,\nnos arrastra cruelmente,\nno respeta a nadie.\n\n¡Viva nuestra sociedad!\n¡Vivan los que estudian!\nQue crezca la única verdad,\nque florezca la fraternidad\ny la prosperidad de la patria.\n\nViva también el Estado,\ny quien lo dirige.\nViva nuestra ciudad,\ny la generosidad de los mecenas\nque aquí nos acoge.\n\nMuera la tristeza,\nmueran los que odian.\nMuera el diablo,\ncualquier otro monstruo,\ny quienes se burlan.\n\nFlorezca la Alma Mater\nque nos ha educado,\ny ha reunido a los queridos compañeros\nque por regiones alejadas\nestaban dispersos."
-      }
+      },
+      "cardTitle": "",
+      "chair": "",
+      "onlinePresenter": false,
+      "hybrid": false,
+      "cancelled": false,
+      "youtube": ""
     },
     {
       "day": "2026-06-26",
