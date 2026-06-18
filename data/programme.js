@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-18T07-16
+// ICED26 programme — generated from admin panel 2026-06-18T08-30
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -2669,6 +2669,14 @@ window.ICED26_DATA = {
           "authors": "Hanne Bjertnes",
           "presenter": "",
           "abstract": "This doctoral research project explores inclusion in Higher Education (HE). The main focus is on faculty members’ perspectives on how to assess individual accommodations for students with disabilities, without lowering the academic requirements. The overarching research question of the study is thus: How do faculty members in higher education perceive and assess the relationship between academic requirements and quality, while striving for a more inclusive education environment? Norwegian legislation grants students with disabilities the legal right to individualized accommodations, as long as these do not impose disproportionate resource demands on the institution or compromise academic requirements of the course. Determining whether academic requirements are affected by the accommodations is largely a discretionary judgment made by individual faculty members. Although this promotes professional agency, it also results in incoherent practices and complex dilemmas. To meet the evolving needs of an increasingly diverse student body, robust collaboration between institutional leadership, administrative staff, and faculty is essential. This study applies a qualitative research design, including 13 semi-structured interviews with faculty from eight Norwegian universities and university colleges, in addition to document analysis. Preliminary findings indicate that ensuring students’ individual accommodations is primarily considered an administrative responsibility, while limited attention has been given to developing coherent institutional frameworks for practical implementation. Strengthening inclusive pedagogical practices is crucial for providing faculty with strategies that support both legal compliance and academic integrity, making this research highly relevant for institutional policy and academic practice.",
+          "keywords": ""
+        },
+        {
+          "time": "10:00",
+          "title": "Exploring Holistic Academic Development for Professors of Practice in Japanese Higher Education",
+          "authors": "Hayato Sezaki",
+          "presenter": "",
+          "abstract": "This doctoral study examines the recruitment and development of Professors of Practice (Practitioner Faculty) in Japanese higher education and aims to construct a multilayered Academic Development model. In Japan, the demand for faculty who bring substantial professional expertise has grown rapidly, especially with the expansion of new professional universities, yet systematic frameworks for their development remain limited. Using Sutherland’s (2018) Holistic Academic Development framework, the study addresses four interconnected questions. RQ1 (Macro) analyzes how Professors of Practice have been positioned within national higher education policies. RQ2 (Meso) investigates organizational conditions that enable universities to recruit and retain them sustainably. RQ3 (Micro) explores work-related challenges and capability development processes across career stages, comparing competencies with traditional academics. RQ4 (Academic Development) designs and evaluates holistic faculty development programs that integrate professional experience, research capability, and educational practice. This multilayered approach contributes to understanding faculty roles that combine academic and professional expertise. It also positions Professors of Practice as an emerging research area in higher education studies. Through the Doctoral Colloquium, the study seeks constructive feedback on its theoretical grounding and methodological design to further refine the proposed model.",
           "keywords": ""
         }
       ],
