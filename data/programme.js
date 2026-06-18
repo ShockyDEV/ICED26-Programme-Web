@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-16T08-07
+// ICED26 programme — generated from admin panel 2026-06-18T07-16
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -1025,14 +1025,6 @@ window.ICED26_DATA = {
         },
         {
           "time": "11:30",
-          "title": "From the Algorithmic to the Intuitive: ChatGPT and the Transformation of Mathematical Thinking in Higher Education",
-          "authors": "Lina Maria Peña Páez",
-          "presenter": "",
-          "abstract": "The emergence of Artificial Intelligence (AI), particularly through generative tools such as ChatGPT, has produced an epistemological disruption—transforming how knowledge is constructed and taught within higher education. This theoretical paper examines how the use of ChatGPT in advanced mathematics teaching enables a shift from the traditional algorithmic emphasis toward a more intuitive, numerical, and graphical understanding, aligned with the historical origins of the discipline. It argues that this transition fosters a new form of epistemic agency, understood as the capacity of students and educators to think, question, and construct knowledge autonomously by promoting exploration, argumentation, and technologically mediated critical thinking. From a sustainable and inclusive perspective, AI is conceived as a cognitive agent that expands human ways of thinking and communicating. It is sustainable because it promotes autonomous and adaptable learning, and inclusive because it allows more students to access, engage, and construct knowledge according to their diverse modes of understanding. In this sense, AI not only automates tasks but also cooperates with humans in reasoning and expression processes, provided that its integration is grounded in ethical and pedagogical principles. The paper also examines how these practices redefine curriculum development and strengthen students’ argumentative skills, proposing a more reflective and creative model of learning in contemporary university contexts.",
-          "keywords": ""
-        },
-        {
-          "time": "11:45",
           "title": "Collaborative and Proactive Solutions (CPS) – simulation-based training of student teachers",
           "authors": "Victoria Stenbäck, Gunvor Torstensdotter, Henrik Lindqvist",
           "presenter": "Victoria Stenbäck, Gunvor Torstensdotter",
@@ -1040,7 +1032,7 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "time": "12:00",
+          "time": "11:45",
           "title": "Equipping Engineering Curricula with Digital Simulation Skills: Embedding ANSYS in Curricula",
           "authors": "Masum Billah, Ma Moghimi, S Islam, D Roberts, Md Asaduzzaman, S Marimuthu, M Fahad, S Shiryghidary, A Cash, S Vatannia",
           "presenter": "Ma Moghimi",
@@ -1053,7 +1045,9 @@ window.ICED26_DATA = {
       "chair": "Bernhard Lange",
       "cardTitle": "",
       "onlinePresenter": false,
-      "youtube": ""
+      "youtube": "",
+      "hybrid": false,
+      "cancelled": false
     },
     {
       "day": "2026-06-24",
@@ -1683,7 +1677,7 @@ window.ICED26_DATA = {
     {
       "day": "2026-06-24",
       "start": "12:45",
-      "end": "13:45",
+      "end": "13:30",
       "room": "sala-menor",
       "roomName": "Sala Menor",
       "roomCode": "SM",
@@ -1694,7 +1688,6 @@ window.ICED26_DATA = {
       "meet": "",
       "talks": [
         {
-          "easychair_id": "311771",
           "time": "12:45",
           "title": "Strengthening Teachers and Teaching Communities: Experiences with Collective Academic Supervision",
           "authors": "Iris Maria Pedersen, Simone Brendstrup",
@@ -1703,17 +1696,7 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311779",
           "time": "13:00",
-          "title": "Treating teaching assistants as learners: an apprenticeship model for postgraduate training in STEM",
-          "authors": "Justin Fendos",
-          "presenter": "",
-          "abstract": "Postgraduate teaching assistants (TAs) exhibit an interesting duality in agency: not only must they function as instructors for others, they are also themselves learners of effective pedagogical practices. In STEM (science, technology, engineering, mathematics) education, a key rate-limiting step in the effective delivery of applied learning activities—such as labs, tutorials, research training, and critical thinking tasks—is found in the large volume of instructor hours that must be devoted to supervising and mentoring learners, a need that is most often met by postgraduate TAs rather than faculty. Despite this systematic reliance on TAs, most STEM programs lack an organized approach to TA training, resulting in wide variations in outcomes. Over a ten-year period, an apprenticeship-style active learning TA training program was devised and deployed across two universities in China and South Korea, revealing hands-on apprenticeship components to be especially influential on new TA confidence and pedagogical outcomes. A mixed methods approach was used to demonstrate that a more traditional style of TA training focusing only on the conceptual examination of curriculum design, pedagogical methods, and best practices was often insufficient to optimize TA confidence and instructional performance, especially in settings where TAs needed to teach applied skills such as research and critical thinking.",
-          "keywords": ""
-        },
-        {
-          "easychair_id": "311780",
-          "time": "13:15",
           "title": "Pathfinding a Culture of Collaborative Learning: Building Momentum for a National TBL Hub in Irish Higher Education",
           "authors": "Anne O'Brien, Nuala Harding, Gina Noonan",
           "presenter": "Anne O'Brien",
@@ -1721,8 +1704,7 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311776",
-          "time": "13:30",
+          "time": "13:15",
           "title": "Publishing in Partnership: Ethical and Equitable Co-Authorship in Faculty-Developer Collaborations",
           "authors": "Breana Bayraktar, Dayna Henry, Jessica Taggart",
           "presenter": "Jessica Taggart",
@@ -1732,7 +1714,12 @@ window.ICED26_DATA = {
       ],
       "easychair_session_id": "105630",
       "description": "Collaborative Academic Development and Teaching Communities",
-      "chair": "Anna Santucci"
+      "chair": "Anna Santucci",
+      "cardTitle": "",
+      "onlinePresenter": false,
+      "hybrid": false,
+      "cancelled": false,
+      "youtube": ""
     },
     {
       "day": "2026-06-24",
@@ -2669,7 +2656,6 @@ window.ICED26_DATA = {
       "meet": "",
       "talks": [
         {
-          "easychair_id": "311899",
           "time": "09:00",
           "title": "Enhancing agency and enabling empowerment of first-year students at a rural university",
           "authors": "Vanessa Rademeyer",
@@ -2678,26 +2664,21 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311904",
           "time": "09:30",
           "title": "Navigating Accommodation Dilemmas: HE faculty experiences",
           "authors": "Hanne Bjertnes",
           "presenter": "",
           "abstract": "This doctoral research project explores inclusion in Higher Education (HE). The main focus is on faculty members’ perspectives on how to assess individual accommodations for students with disabilities, without lowering the academic requirements. The overarching research question of the study is thus: How do faculty members in higher education perceive and assess the relationship between academic requirements and quality, while striving for a more inclusive education environment? Norwegian legislation grants students with disabilities the legal right to individualized accommodations, as long as these do not impose disproportionate resource demands on the institution or compromise academic requirements of the course. Determining whether academic requirements are affected by the accommodations is largely a discretionary judgment made by individual faculty members. Although this promotes professional agency, it also results in incoherent practices and complex dilemmas. To meet the evolving needs of an increasingly diverse student body, robust collaboration between institutional leadership, administrative staff, and faculty is essential. This study applies a qualitative research design, including 13 semi-structured interviews with faculty from eight Norwegian universities and university colleges, in addition to document analysis. Preliminary findings indicate that ensuring students’ individual accommodations is primarily considered an administrative responsibility, while limited attention has been given to developing coherent institutional frameworks for practical implementation. Strengthening inclusive pedagogical practices is crucial for providing faculty with strategies that support both legal compliance and academic integrity, making this research highly relevant for institutional policy and academic practice.",
           "keywords": ""
-        },
-        {
-          "easychair_id": "311921",
-          "time": "10:00",
-          "title": "Impact of academic expectations on university dropout rates in hybrid learning environments",
-          "authors": "María Helena Mirque Méndez, Nancy Maricela Gonzalez Robles, Urith Ramírez-Mera",
-          "presenter": "María Helena Mirque Méndez",
-          "abstract": "The Mexican Ministry of Public Education (SEP) reports that in Mexico, one in eight students who begin a university degree do not complete it. Globally, approximately 12% of students have dropped out of university (UNESCO, 2019). In Latin America, this figure rises to 33%, with the majority of these cases involving women (El Espectador, 2021). Although the phenomenon of university dropout has been widely studied, research has focused mainly on economic, personal and institutional factors, leaving in the background the role that academic expectations play in student retention, especially in a hybrid academic environment.\n\nIn this context, the present research emerges, focused on exploring the impact of academic expectations on university dropout rates in hybrid learning programs. The study employs a descriptive-explanatory approach. The main proposal lies in the design, development, and validation of a mixed-methods instrument (Delphi method, surveys, interviews) to generate new variables and categories of analysis. This methodological design is key to a comprehensive diagnosis that provides strategic elements for designing retention policies, aligning with subtopic two on institutional agency and strategy.",
-          "keywords": ""
         }
       ],
       "easychair_session_id": "104868",
-      "chair": "Ariane Dumont"
+      "chair": "Ariane Dumont",
+      "cardTitle": "",
+      "onlinePresenter": false,
+      "hybrid": false,
+      "cancelled": false,
+      "youtube": ""
     },
     {
       "day": "2026-06-25",
@@ -2713,7 +2694,6 @@ window.ICED26_DATA = {
       "meet": "",
       "talks": [
         {
-          "easychair_id": "311784",
           "time": "",
           "title": "How to enhance sense of belonging in undergraduate STEM students: A scoping review",
           "authors": "Zeljana Pavlovic, Anja Møgelvang Jacobsen, Monica Jordheim",
@@ -2722,7 +2702,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "312014",
           "time": "",
           "title": "Develop university teaching for student engagement",
           "authors": "Irene Douwes-van Ark, Marjon Fokkens-Bruinsma, Jan Folkert Deinum, Hanke Korpershoek",
@@ -2731,7 +2710,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311786",
           "time": "",
           "title": "Deconstructing the Research Paper: Fostering Student Agency and Engagement in an Introduction to Literature Classroom",
           "authors": "Marcia Nichols, Jennifer Wacek",
@@ -2740,7 +2718,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "312026",
           "time": "",
           "title": "Cinemeducation and case studies: enhancing critical thinking and socio-emotional competence",
           "authors": "María Paula Paragis, Elisabeth Moyano",
@@ -2749,7 +2726,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "312016",
           "time": "",
           "title": "In Rhythm and in Relation: Positioning Lecturers as Academic Advisors through Pedagogy of Mattering",
           "authors": "Anthea H M Jacobs",
@@ -2758,7 +2734,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311795",
           "time": "",
           "title": "Rewarding reflection: a scheme to transform STEMM+B students’ perception of holistic self-awareness.",
           "authors": "Paulina Kristiansson, Louise Hanger, Martyn Kingsbury",
@@ -2767,7 +2742,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311797",
           "time": "",
           "title": "A Qualitative Inquiry into Graduation Research: Findings from a Focus Group of Graduates",
           "authors": "Takero Nishino",
@@ -2776,16 +2750,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "312024",
-          "time": "",
-          "title": "Unlocking Institutional Barriers: Exploring Writing Centre Praxis for Student Support Pedagogy in Higher Education",
-          "authors": "Nonhlanhla Khumalo",
-          "presenter": "",
-          "abstract": "This study examines how writing centres in higher education can function as praxis for student support pedagogy, serving as catalysts for overcoming institutional barriers to transdisciplinary learning spaces. Writing centres are academic support spaces for reading, writing and research development. These spaces play a critical role in advancing social justice in higher education. However, they possess untapped potential to foster transdisciplinary thinking and engagement. The study explores the transformative role of writing centres in providing students with effective and efficient quality support to address complex academic writing challenges. Against the backdrop of the stated objective, the study adopts a reflective approach. It interrogates the collaborative strategies used by a selected University of Technology writing centre to effectively support the vastly diversified cohort of students. Drawing on the transformational learning framework. This study advocates for the integration of writing centres into institutional structures to promote quality student support through collaborative problem-solving, enhance critical writing skills, and bridge the gap between theory and practice. The quest for a transdisciplinary writing centre relates to the institutional limitations of collaborative student support systems to address increasingly complex academic abilities and needs. By facilitating cross-disciplinary dialogue and supporting diverse modes of communication, writing centres can help break down academic silos, foster quality support and encourage students to think critically across disciplines.",
-          "keywords": ""
-        },
-        {
-          "easychair_id": "317426",
           "time": "",
           "title": "Building Leadership Capacity through Distributed Leadership in Faculties of Education",
           "authors": "Share Aiyed M. Aldosari",
@@ -2796,7 +2760,12 @@ window.ICED26_DATA = {
       ],
       "easychair_session_id": "104864",
       "description": "Fostering Student Engagement, Belonging and Success",
-      "chair": "Sabrina Gallner"
+      "chair": "Sabrina Gallner",
+      "cardTitle": "",
+      "onlinePresenter": false,
+      "hybrid": false,
+      "cancelled": false,
+      "youtube": ""
     },
     {
       "day": "2026-06-25",
@@ -6072,14 +6041,6 @@ window.ICED26_DATA = {
         },
         {
           "time": "",
-          "title": "Podcasts as a strategy for sharing scientific knowledge in the university community",
-          "authors": "Sofía Karina Vázquez Gómez, María Helena Mirque Mendez",
-          "presenter": "María Helena Mirque Mendez",
-          "abstract": "The objective of this project is to evaluate the acceptance and impact of the outreach podcast “saberes al desnudo” as a scientific communication strategy to share knowledge in the community of a public university in Guadalajara, Mexico during the 2025B - 2026A school year. Higher education is undergoing a transformation that requires the implementation of innovative pedagogical methods to generate and share knowledge. In this context, podcasts are a tool used in various fields, and in education they support teaching and learning processes, bridging the gap between theory and practice (Rochilla et al., 2019). Therefore, from an academic development perspective, this study evaluates the acceptance and impact of podcasts as an innovative strategy that enhances knowledge sharing and the creation of learning communities. It employs a mixedmethods approach, seeking to assess the acceptance and impact of the podcast \"Saberes al desnudo\" (Knowledge Unveiled) through numerical metrics and to understand how students' perceptions change across various channels, incorporating digital ethnography. This project aims to promote student agency by humanizing research, demonstrating how academic knowledge has a direct and positive impact on daily life.",
-          "keywords": ""
-        },
-        {
-          "time": "",
           "title": "Designing Aspirational Oaths: an Ethics of Care Framework",
           "authors": "Valentina Rossi, Ab Hausel",
           "presenter": "Valentina Rossi",
@@ -6348,15 +6309,6 @@ window.ICED26_DATA = {
       "talks": [
         {
           "time": "11:00",
-          "title": "Pedagogical Master’s Programs as Pathways for Career Change Teachers",
-          "authors": "Kseniia Tsitsikashvili",
-          "presenter": "",
-          "abstract": "Career-change teachers—professionals entering teaching after prior careers – have become an important focus of policy responses to teacher shortages. Pedagogical master’s programs increasingly serve as higher-education pathways for this group, offering accelerated routes into the profession. However, widening access does not necessarily ensure equitable participation or retention. This paper examines pedagogical master’s programs as institutional pathways shaping career transitions into teaching and explores their implications for academic development in higher education. Drawing on research on teacher professional identity, professional transition, and resilience, the study analyzes how institutional environments shape experiences of recognition, belonging, and professional commitment. The paper is based on qualitative doctoral research using semi-structured interviews with career-change teachers enrolled in pedagogical master’s programs and recent graduates, complemented by interviews with program staff and analysis of institutional documents. Data are analyzed thematically with attention to identity negotiation, recognition of prior professional experience, and institutional support. Preliminary findings suggest that these programs provide opportunities for professional reorientation but also create challenges related to compressed timelines, competing study–work demands, and limited recognition of prior expertise. The findings highlight the importance of mentoring, institutional flexibility, and peer communities in supporting successful transitions into teaching roles.",
-          "keywords": "",
-          "online": true
-        },
-        {
-          "time": "11:15",
           "title": "From Credential-Chasing to Capacity-Building: Six Ways Sessionals Approach Educational Development",
           "authors": "Brandon Sabourin",
           "presenter": "",
@@ -6364,7 +6316,7 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "time": "11:30",
+          "time": "11:15",
           "title": "AI as Dialogic Catalyst: Archetypal Roles and Epistemic Agency in Interthinking",
           "authors": "Sharon Bratt",
           "presenter": "",
@@ -6373,7 +6325,7 @@ window.ICED26_DATA = {
           "online": true
         },
         {
-          "time": "11.45",
+          "time": "11.30",
           "title": "Done by, done to, done through and done with: Academic Developers delivering strategic projects",
           "authors": "Laura Milne, Jackie Potter, Claire Stocks",
           "presenter": "Laura Milne",
@@ -6382,7 +6334,7 @@ window.ICED26_DATA = {
           "online": true
         },
         {
-          "time": "12.00",
+          "time": "11.45",
           "title": "Nothing about us without us: Mapping neurodivergent actives on good teaching onto the Universal Design for Learning",
           "authors": "Mayuko Nakamura, Lori Henehan",
           "presenter": "Mayuko Nakamura, Lori Henehan",
@@ -6395,7 +6347,9 @@ window.ICED26_DATA = {
       "chair": "Claire Hamshire",
       "cardTitle": "",
       "onlinePresenter": false,
-      "youtube": ""
+      "youtube": "",
+      "hybrid": false,
+      "cancelled": false
     },
     {
       "day": "2026-06-26",
