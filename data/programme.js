@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-18T08-30
+// ICED26 programme — generated from admin panel 2026-06-18T08-31
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -3543,7 +3543,6 @@ window.ICED26_DATA = {
       "meet": "",
       "talks": [
         {
-          "easychair_id": "311924",
           "time": "12:15",
           "title": "Leadership of Boundary-Crossing Roles in Teacher Education",
           "authors": "Ann-Therese Nomerstad",
@@ -3552,7 +3551,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311933",
           "time": "12:35",
           "title": "Surviving and Thriving in Academic Development Work an exploratory study from Scotland",
           "authors": "Susan Greig",
@@ -3561,17 +3559,7 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311949",
           "time": "12:55",
-          "title": "Exploring Holistic Academic Development for Professors of Practice in Japanese Higher Education",
-          "authors": "Hayato Sezaki",
-          "presenter": "",
-          "abstract": "This doctoral study examines the recruitment and development of Professors of Practice (Practitioner Faculty) in Japanese higher education and aims to construct a multilayered Academic Development model. In Japan, the demand for faculty who bring substantial professional expertise has grown rapidly, especially with the expansion of new professional universities, yet systematic frameworks for their development remain limited. Using Sutherland’s (2018) Holistic Academic Development framework, the study addresses four interconnected questions. RQ1 (Macro) analyzes how Professors of Practice have been positioned within national higher education policies. RQ2 (Meso) investigates organizational conditions that enable universities to recruit and retain them sustainably. RQ3 (Micro) explores work-related challenges and capability development processes across career stages, comparing competencies with traditional academics. RQ4 (Academic Development) designs and evaluates holistic faculty development programs that integrate professional experience, research capability, and educational practice. This multilayered approach contributes to understanding faculty roles that combine academic and professional expertise. It also positions Professors of Practice as an emerging research area in higher education studies. Through the Doctoral Colloquium, the study seeks constructive feedback on its theoretical grounding and methodological design to further refine the proposed model.",
-          "keywords": ""
-        },
-        {
-          "easychair_id": "311992",
-          "time": "13:15",
           "title": "Advancing academic development for teaching courses in English as and to non-native speakers",
           "authors": "Alexandra Bergedick",
           "presenter": "",
@@ -3580,7 +3568,12 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104884",
-      "chair": "Mary Wright"
+      "chair": "Mary Wright",
+      "cardTitle": "",
+      "onlinePresenter": false,
+      "hybrid": false,
+      "cancelled": false,
+      "youtube": ""
     },
     {
       "day": "2026-06-25",
