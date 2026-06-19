@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-18T08-31
+// ICED26 programme — generated from admin panel 2026-06-19T07-34
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -6252,7 +6252,6 @@ window.ICED26_DATA = {
       "meet": "",
       "talks": [
         {
-          "easychair_id": "311928",
           "time": "11:00",
           "title": "Developing Emotional and Reflective Agency in Teacher Education: A Pedagogical Model for Sustainable Professional Learning",
           "authors": "Paolo Arru, Veronica Simona Benhamza",
@@ -6262,7 +6261,6 @@ window.ICED26_DATA = {
           "online": true
         },
         {
-          "easychair_id": "311920",
           "time": "11:15",
           "title": "Re-thinking Teacher Education: Cultivating Pre-service Teacher Agency through Dialogue",
           "authors": "Lisa Tafuro, Rocío García Carrión",
@@ -6272,7 +6270,6 @@ window.ICED26_DATA = {
           "online": true
         },
         {
-          "easychair_id": "311905",
           "time": "11:30",
           "title": "Engagement with research as a catalyst for in-service teachers’ epistemic agency",
           "authors": "Daniel Espinosa, Georgeta Ion",
@@ -6281,7 +6278,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311805",
           "time": "11:45",
           "title": "Enhancing English-Speaking Skills through Mobile Applications: A Case Study at a Public University in Southern Ecuador",
           "authors": "Karina Celi, Adriana Cango",
@@ -6289,11 +6285,24 @@ window.ICED26_DATA = {
           "abstract": "This study examines the potential of mobile-assisted language learning (MALL) to enhance English-speaking skills in higher education through the integration of ELSA Speak, Duolingo, and BBC Learning English at a public university in southern Ecuador. Methodologically, it employs a qualitatively driven mixed-methods action research design, combining learners’ experiences with pre- and post-speaking assessments. Consequently, the findings show improvements in pronunciation, fluency, anxiety reduction, motivation, autonomy, and engagement, highlighting MALL’s value in extending practice beyond the classroom. Finally, the study provides implications for teacher training, faculty support, and institutional innovation, offering a context-sensitive and replicable model for integrating mobile technologies in language education.",
           "keywords": "",
           "online": true
+        },
+        {
+          "time": "12:00",
+          "title": "Advancing academic development for teaching courses in English as and to non-native speakers",
+          "authors": "Alexandra Bergedick",
+          "presenter": "Alexandra Bergedick",
+          "abstract": "While academic development and practice have been confronted with increasing challenges in the context of internationalization processes, with dramatically rising numbers of study programmes and courses being taught to international students in English, often by and to non-native English speakers, research in the field of English as a Medium of Instruction (EMI) and affiliated fields, indicates that academic development, research and -practice regarding teacher professionalization in this context is limited, lacking insights and approaches from a pedagogical point of view in particular. In order to explore how teacher professionalization in the EMI-context may be stimulated by a didactic intervention, the here portrayed undergoing doctoral study in educational sciences therefore explores how EMI-teachers’ self-efficacy experience may transform in the course of one semester, when participating in an EMI-targeted didactic intervention. With self-efficacy presumed central in advancing teaching competencies and -performance, teachers’ self-efficacy experience regarding their teaching in the EMI-context will be explored through semi-structured interviews carried out before and after taking part in the didactic intervention and teaching in the winter semester of 2026/27. The findings of the doctoral study may indicate how pedagogical approaches of this kind may advance EMI-teacher development and inspire teaching practice, while highlighting further research needs.",
+          "keywords": ""
         }
       ],
       "easychair_session_id": "105677",
       "description": "Teacher Education; Epistemic and Reflective Agency; enhancing English-Language course design",
-      "chair": "Fernando Marhuenda Fluixá"
+      "chair": "Fernando Marhuenda Fluixá",
+      "cardTitle": "",
+      "onlinePresenter": false,
+      "hybrid": false,
+      "cancelled": false,
+      "youtube": ""
     },
     {
       "day": "2026-06-26",
