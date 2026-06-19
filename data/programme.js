@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-19T07-34
+// ICED26 programme — generated from admin panel 2026-06-19T12-04
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -531,7 +531,16 @@ window.ICED26_DATA = {
       "fullName": "Session 5: Opening ceremony",
       "type": "keynote",
       "meet": "",
-      "talks": [],
+      "talks": [
+        {
+          "time": "08:45",
+          "title": "Opening Ceremony",
+          "authors": "Bertha M., Ariane Dumont, Idoia Fernández Fernández, Mònica Feixas, Javier Félix Merchán Sánchez-Jara",
+          "presenter": "Bertha M., Ariane Dumont, Idoia Fernández Fernández, Mònica Feixas, Javier Félix Merchán Sánchez-Jara",
+          "abstract": "",
+          "keywords": ""
+        }
+      ],
       "easychair_session_id": "104800",
       "cardTitle": "",
       "chair": "",
