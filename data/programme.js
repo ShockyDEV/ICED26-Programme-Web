@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-19T12-04
+// ICED26 programme — generated from admin panel 2026-06-19T18-08
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -4594,17 +4594,22 @@ window.ICED26_DATA = {
       "meet": "",
       "talks": [
         {
-          "easychair_id": "311704",
           "time": "16:15",
           "title": "Building Collaborative Agency through Case Based Peer Dialogue, known as Collegial Intervision",
           "authors": "Dagmar Engfer, Sidsel Winther",
           "presenter": "Dagmar Engfer",
           "abstract": "This workshop builds on findings from the international project CiVR – Collegial InterVision Research, conducted across three universities in three countries. The project explored how structured peer-dialogue formats—such as intervision, peer observation, and practice demonstrations—support critical reflection and mutual learning in higher education development programmes. Interviews with participants highlight the value of structured dialogue for analysing teaching cases, generating fresh perspectives, and fostering interdisciplinary exchange. They also underscore the importance of communicative clarity and conceptual translation when collaborating across national and institutional contexts. The workshop invites conference participants to actively explore and practice collegial intervision and to share experiences with dialogic formats in higher education. Collegial intervision is a structured peer-based dialogue based on counselling where faculty developers, lecturers or supervisors collaboratively reflect on challenging teaching situations and enhance collective learning. To create an open environment for diverse viewpoints and establish common ground, a Deep Democracy–inspired dialogue serves as an entry point for shared reflection, giving all participants a voice and eliciting their experiences with peer-based dialogue. Participants will engage in a facilitated dialogue and collaboratively develop ideas for future applications, including how structured formats like intervision and adapted coaching approaches can enhance reflective practice in higher education. The workshop offers a practical, co-creative experience and generates concrete impulses for strengthening peer-based critical reflection. It supports the collaborative development of approaches that can enrich faculty development and higher education programmes. It addresses faculty developers, programme leaders, lecturers, supervisors and all persons interested in peer-based dialogues.",
-          "keywords": ""
+          "keywords": "",
+          "online": true
         }
       ],
       "easychair_session_id": "105623",
-      "hybrid": true
+      "hybrid": true,
+      "cardTitle": "",
+      "chair": "",
+      "onlinePresenter": false,
+      "cancelled": false,
+      "youtube": ""
     },
     {
       "day": "2026-06-25",
@@ -5113,14 +5118,17 @@ window.ICED26_DATA = {
           "authors": "Lydia Watson, Bettina Boyle",
           "presenter": "Lydia Watson",
           "abstract": "This interactive session will share insights into how a Centre for Teaching Excellence (CTE) in a small teaching-focused undergraduate university developed a Students as Teaching and Learning Partners (SaTLP) initiative that gave students opportunities to participate in two Faculty Learning Communities (FLCs), one being focused on the topic of reimagining grading, the other, on open educational practices. By encouraging student voice and co-designing a space where educational developers, faculty, and students were able to challenge assumptions about traditional roles and power dynamics, we were rewarded with unexpected learning opportunities and meaningful conversations. Through interactive activities, participants in this workshop will identify, question, imagine, and reflect on opportunities to partner with students and be inspired by insights gained from participants and presenters through these initiatives.",
-          "keywords": ""
+          "keywords": "",
+          "online": true
         }
       ],
       "easychair_session_id": "105638",
       "cardTitle": "",
       "chair": "",
       "youtube": "",
-      "hybrid": true
+      "hybrid": true,
+      "onlinePresenter": false,
+      "cancelled": false
     },
     {
       "day": "2026-06-25",
