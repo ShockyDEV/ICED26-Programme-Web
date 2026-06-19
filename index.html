@@ -58,7 +58,7 @@
 
 <script type="text/babel" data-presets="env,react">
 const { useState, useEffect, useMemo } = React;
-const { Header, DayTabs, BuildingTabs, Grid, MobileList, SessionModal, SessionSearch, AgendaModal, GlobalCodeGate, I18N, madridParts, sessionId, findSessionById, useFavorites } = window.ICED26App;
+const { Header, DayTabs, BuildingTabs, Grid, MobileList, SessionModal, SessionSearch, AgendaModal, GoldenCityModal, GlobalCodeGate, I18N, madridParts, sessionId, findSessionById, useFavorites } = window.ICED26App;
 
 // One-time cleanup of the old "organizer mode" unlock flag — that flow has
 // been retired in favour of the dedicated /backstage login page.
@@ -71,6 +71,7 @@ function App() {
   const [now, setNow] = useState(() => new Date());
   const [lang, setLang] = useState("en");
   const [agendaOpen, setAgendaOpen] = useState(false);
+  const [goldenOpen, setGoldenOpen] = useState(false);
   const [favorites, toggleFavorite] = useFavorites();
 
   // Tick once a minute so the now-line and live/past/future states refresh.
@@ -124,7 +125,7 @@ function App() {
 
   return (
     <>
-      <Header data={data} now={now} lang={lang} setLang={setLang} t={t} favorites={favorites} onOpenAgenda={() => setAgendaOpen(true)} />
+      <Header data={data} now={now} lang={lang} setLang={setLang} t={t} favorites={favorites} onOpenAgenda={() => setAgendaOpen(true)} onOpenGolden={() => setGoldenOpen(true)} />
       <DayTabs data={data} dayIdx={dayIdx} setDayIdx={setDayIdx} now={now} lang={lang} t={t}>
         <SessionSearch data={data} t={t} lang={lang} onSelect={openSession} />
       </DayTabs>
@@ -140,6 +141,7 @@ function App() {
       <MobileList data={data} dayIdx={dayIdx} buildingId={buildingId} now={now} lang={lang} t={t} onSessionClick={openSession} favorites={favorites} onToggleFavorite={toggleFavorite} />
       <SessionModal session={activeSession} t={t} lang={lang} now={now} onClose={() => setActiveSession(null)} favorites={favorites} onToggleFavorite={toggleFavorite} data={data} />
       <AgendaModal open={agendaOpen} onClose={() => setAgendaOpen(false)} favorites={favorites} data={data} t={t} lang={lang} now={now} onSessionClick={openSession} onToggleFavorite={toggleFavorite} />
+      <GoldenCityModal open={goldenOpen} onClose={() => setGoldenOpen(false)} t={t} lang={lang} />
       <GlobalCodeGate t={t} lang={lang} data={data} />
     </>
   );

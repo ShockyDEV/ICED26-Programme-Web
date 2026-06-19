@@ -463,7 +463,13 @@ const I18N = {
     guideLabel: "How to navigate",
     guideTitle: "How to Navigate the ICED26 Conference Programme (PDF)",
     gridLabel: "At a glance",
-    gridTitle: "Full programme at a glance — all sessions on one page (PDF)"
+    gridTitle: "Full programme at a glance — all sessions on one page (PDF)",
+    goldenCity: "The Golden City",
+    goldenCityFull: "Salamanca: The Golden City",
+    goldenTagline: "Our shared online space — connect, converse and reflect throughout ICED26.",
+    goldenOpen: "Open the Padlet",
+    goldenScan: "Scan to open on your phone",
+    goldenClose: "Close"
   },
   es: {
     subtitle: "Salamanca · 23–26 junio 2026",
@@ -543,7 +549,13 @@ const I18N = {
     guideLabel: "Cómo navegar",
     guideTitle: "Cómo navegar por el programa del congreso ICED26 (PDF)",
     gridLabel: "De un vistazo",
-    gridTitle: "Programa completo de un vistazo — todas las sesiones en una página (PDF)"
+    gridTitle: "Programa completo de un vistazo — todas las sesiones en una página (PDF)",
+    goldenCity: "The Golden City",
+    goldenCityFull: "Salamanca: The Golden City",
+    goldenTagline: "Nuestro espacio online compartido — conecta, conversa y reflexiona durante el ICED26.",
+    goldenOpen: "Abrir el Padlet",
+    goldenScan: "Escanea para abrirlo en tu móvil",
+    goldenClose: "Cerrar"
   }
 };
 
@@ -775,7 +787,7 @@ function ClusterMeetMenu({ cluster, rooms, liveByRoom, t, lang, data }) {
 }
 
 // ─── Header ───────────────────────────────────────────────────────────────
-function Header({ data, now, lang, setLang, t, favorites, onOpenAgenda }) {
+function Header({ data, now, lang, setLang, t, favorites, onOpenAgenda, onOpenGolden }) {
   const liveByRoom = useMemo(() => {
     const map = {};
     for (const s of data.sessions) {
@@ -834,6 +846,24 @@ function Header({ data, now, lang, setLang, t, favorites, onOpenAgenda }) {
           </svg>
           <span className="guide-btn-label">{t.gridLabel}</span>
         </a>
+
+        {onOpenGolden && (
+          <button
+            type="button"
+            className="golden-btn"
+            onClick={onOpenGolden}
+            aria-label={t.goldenCityFull}
+            title={t.goldenCityFull}
+          >
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <path d="M3 21h18"/>
+              <path d="M6 21V7l6-4 6 4v14"/>
+              <path d="M10 21v-4h4v4"/>
+              <path d="M10 9h.01M14 9h.01M10 13h.01M14 13h.01"/>
+            </svg>
+            <span className="golden-btn-label">{t.goldenCity}</span>
+          </button>
+        )}
 
         <nav className="rooms-bar" aria-label={t.meetLinks}>
           <span className="rooms-bar-label" aria-hidden="true">
@@ -2257,6 +2287,129 @@ function GlobalCodeGate({ t, lang, data }) {
   );
 }
 
+// ─── Salamanca: The Golden City (Padlet online-engagement section) ────────
+// Static content authored by the Heltasa colleagues (Leanri Van Heerden /
+// Rieta Ganas) and forwarded by Mònica — shown verbatim in English, the
+// conference lingua franca, with the site's own styling around it.
+const GOLDEN_CITY_URL = "https://padlet.com/support766/salamanca-the-golden-city-a4evoh35j8fcss0j";
+const GOLDEN_CITY = {
+  welcome: [
+    "Welcome to The Golden City.",
+    "Inspired by Salamanca's golden sandstone architecture and the networks of knowledge that have flowed through the city for centuries, The Golden City is our shared online space for conversation, connection, and reflection throughout ICED26.",
+    "Whether you are joining us in Salamanca or participating from elsewhere in the world, this space has been designed to help extend the conference beyond physical locations and create opportunities for meaningful engagement across the global ICED community."
+  ],
+  spaces: [
+    { title: "Introduction and Networking Spot", body: [
+      "We invite you to begin your journey here.",
+      "Please introduce yourself, tell us where you are joining from, and, if you are comfortable doing so, share a photo. This space is intended to help participants connect with colleagues from around the world and begin building new relationships before conference conversations begin."
+    ] },
+    { title: "District 1: Agency and Knowledge", body: [
+      "This district is dedicated to conversations around the conference sub-theme Agency and Knowledge.",
+      "Here we will explore questions related to knowledge production, scholarship, learning, and the role of agency within higher education contexts."
+    ] },
+    { title: "District 2: Agency and Strategy", body: [
+      "This district focuses on Agency and Strategy.",
+      "Participants are invited to discuss transformation, leadership, institutional change, policy, curriculum, and the ways strategy can enable or constrain agency."
+    ] },
+    { title: "District 3: Agency and Students", body: [
+      "This district centres on Agency and Students.",
+      "Conversations here will focus on student voice, curriculum design, belonging, participation, and practices that support meaningful student agency."
+    ] },
+    { title: "Questions to Keynotes and Panels", body: [
+      "Throughout the conference, participants may post questions for keynote speakers and panel sessions in this space.",
+      "Questions submitted here will be reviewed by the conference team and selected questions may be incorporated into live discussions. To create equitable opportunities for participation across in-person and online audiences, questions will be sourced from this space rather than taken directly from the floor."
+    ] },
+    { title: "Daily Reflections", body: [
+      "At the end of each day, we invite you to visit the Daily Reflections space and share your experiences, insights, and takeaways from that day."
+    ] },
+    { title: "Feedback", body: [
+      "Kindly complete the feedback survey at the conclusion of the conference. Your experience will help us understand how ideas, conversations, and connections developed across the conference community."
+    ] }
+  ],
+  participate: [
+    "There is no expectation that you contribute everywhere.",
+    "You are welcome to explore the city at your own pace, join conversations that resonate with your interests, ask questions, respond to others, and share resources, examples, and experiences from your own context.",
+    "The goal is not simply to discuss conference themes, but to create a living network of ideas that connects participants across institutions, disciplines, countries, and modes of participation.",
+    "We encourage you to return to The Golden City throughout the conference, revisit conversations, and continue building connections with colleagues both in Salamanca and beyond."
+  ]
+};
+
+function GoldenCityModal({ open, onClose, t, lang }) {
+  // ESC closes + lock body scroll while open (same pattern as AgendaModal).
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e) => { if (e.key === "Escape") onClose(); };
+    document.addEventListener("keydown", onKey);
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = "";
+    };
+  }, [open, onClose]);
+
+  if (!open) return null;
+
+  return (
+    <div className="gc-overlay" onClick={onClose} role="dialog" aria-modal="true" aria-label={t.goldenCityFull}>
+      <div className="gc-modal" onClick={(e) => e.stopPropagation()}>
+        <button className="gc-close" onClick={onClose} aria-label={t.goldenClose}>
+          <svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M5 5l10 10M15 5L5 15"/></svg>
+        </button>
+        <div className="gc-scroll">
+          <div className="gc-banner">
+            <img className="gc-banner-img" src={safeURL("assets/golden-city/banner-conference.jpg")} alt="ICED26 Conference — Salamanca, 24–26 June 2026" />
+          </div>
+          <div className="gc-body">
+            <h2 className="gc-title">{t.goldenCityFull}</h2>
+            <p className="gc-tagline">{t.goldenTagline}</p>
+
+            <div className="gc-welcome">
+              <p className="gc-lead">Dear ICED26 Participant,</p>
+              {GOLDEN_CITY.welcome.map((p, i) => <p key={i}>{p}</p>)}
+              <p className="gc-spaces-intro">The Golden City consists of several interconnected spaces:</p>
+            </div>
+
+            <ol className="gc-spaces">
+              {GOLDEN_CITY.spaces.map((sp, i) => (
+                <li className="gc-space" key={i}>
+                  <div className="gc-space-num" aria-hidden="true">{i + 1}</div>
+                  <div className="gc-space-text">
+                    <h3>{sp.title}</h3>
+                    {sp.body.map((b, j) => <p key={j}>{b}</p>)}
+                  </div>
+                </li>
+              ))}
+            </ol>
+
+            <div className="gc-participate">
+              <h3>How to Participate</h3>
+              {GOLDEN_CITY.participate.map((p, i) => <p key={i}>{p}</p>)}
+              <p className="gc-explore-cue">We look forward to learning with you. Click below to start exploring.</p>
+            </div>
+
+            <a className="gc-explore-link" href={safeURL(GOLDEN_CITY_URL)} target="_blank" rel="noopener noreferrer" aria-label={t.goldenOpen}>
+              <img src={safeURL("assets/golden-city/banner-explore.jpg")} alt="Explore the Golden City — open the Padlet" />
+            </a>
+
+            <div className="gc-cta-row">
+              <a className="gc-cta" href={safeURL(GOLDEN_CITY_URL)} target="_blank" rel="noopener noreferrer">
+                {t.goldenOpen}
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+              <div className="gc-qr">
+                <img className="gc-qr-img" src={safeURL("assets/golden-city/qr.png")} alt="QR code linking to The Golden City Padlet" />
+                <span className="gc-qr-cap">{t.goldenScan}</span>
+              </div>
+            </div>
+
+            <a className="gc-url" href={safeURL(GOLDEN_CITY_URL)} target="_blank" rel="noopener noreferrer">padlet.com/support766/salamanca-the-golden-city-a4evoh35j8fcss0j</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 // ─── My Agenda modal ─────────────────────────────────────────────────────
 // Shows favorited sessions grouped by day with a "next up" highlight.
 function AgendaModal({ open, onClose, favorites, data, t, lang, now, onSessionClick, onToggleFavorite }) {
@@ -2422,7 +2575,7 @@ function AgendaModal({ open, onClose, favorites, data, t, lang, now, onSessionCl
   );
 }
 
-window.ICED26App = { Header, DayTabs, BuildingTabs, Grid, MobileList, Scrubber, SessionModal, SessionSearch, AgendaModal, GlobalCodeGate, I18N, madridParts, madridDate, sessionState, sessionId, findSessionById, useFavorites, StarButton, isSessionOnline };
+window.ICED26App = { Header, DayTabs, BuildingTabs, Grid, MobileList, Scrubber, SessionModal, SessionSearch, AgendaModal, GoldenCityModal, GlobalCodeGate, I18N, madridParts, madridDate, sessionState, sessionId, findSessionById, useFavorites, StarButton, isSessionOnline };
 
 // ─── Demo helpers: timezone preview from the console ──────────────────────
 // Lets anyone (incl. Mónica) preview the site in any timezone without
