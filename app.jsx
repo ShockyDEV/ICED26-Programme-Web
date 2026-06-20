@@ -160,10 +160,11 @@ function ModalTheme({ session, t }) {
 // unless it carries its own session.youtube override.
 function effectiveYouTube(s, data) {
   if (!s) return "";
-  // YouTube livestream is ONLY for keynotes and ICED talks. Everything else
-  // (symposia, papers, workshops…) uses Meet — even in the Auditorio, where a
-  // symposium does NOT inherit the room's keynote livestream.
-  if (s.type !== "keynote" && s.type !== "talk") return "";
+  // YouTube livestream applies to every streamed session (see isStreamed):
+  // keynotes + ICED talks anywhere, plus ALL content sessions in the Auditorio
+  // and Sala Menor (symposia included), since those rooms are broadcast live.
+  // The International Panel is the sole exception — it uses Meet, not YouTube.
+  if (!isStreamed(s, data)) return "";
   if (s.youtube && String(s.youtube).trim()) return String(s.youtube).trim();
   const rooms = data && data.rooms;
   if (Array.isArray(rooms)) {
@@ -172,12 +173,30 @@ function effectiveYouTube(s, data) {
   }
   return "";
 }
-// True for session types streamed on YouTube (keynotes + ICED talks). Used to
-// show the STREAM badge/banner even before the livestream URL is published — so
-// attendees know these sessions WILL be broadcast. The actual link stays gated
-// (greyed "Watch on YouTube" button until the room is opened).
-function isStreamed(s) {
-  return !!s && (s.type === "keynote" || s.type === "talk");
+// The Auditorio Hospedería and the Sala Menor are broadcast on YouTube live:
+// every content session held there is a one-way livestream — symposia and ICED
+// talks included, not just keynotes. The lone exception is the International
+// Panel, which runs on Google Meet (two-way, its own access scope) so remote
+// panellists can take part.
+const STREAMED_ROOMS = ["auditorio", "sala-menor"];
+function isPanelSession(s, data) {
+  const ac = data && data.meta && data.meta.access;
+  return !!(ac && ac.panelSessionId && s &&
+    String(s.easychair_session_id) === String(ac.panelSessionId));
+}
+// True for sessions broadcast on YouTube. Used to show the STREAM badge/banner
+// even before the livestream URL is published — so attendees know these sessions
+// WILL be broadcast. The actual link stays gated (greyed "Watch on YouTube"
+// button until the room is opened).
+function isStreamed(s, data) {
+  if (!s) return false;
+  if (isPanelSession(s, data)) return false;        // International Panel → Meet
+  // Everything in the broadcast rooms streams, except non-content fillers.
+  if (STREAMED_ROOMS.includes(s.room)) {
+    return s.type !== "break" && s.type !== "social" && s.type !== "other";
+  }
+  // Elsewhere, only keynotes and ICED talks are streamed.
+  return s.type === "keynote" || s.type === "talk";
 }
 // Meet/YouTube buttons stay locked (greyed, not clickable) until the session's
 // room is switched Active in the backstage. Closed by default before the congress.
@@ -756,7 +775,7 @@ function ClusterMeetMenu({ cluster, rooms, liveByRoom, t, lang, data }) {
           // Value may be an encrypted blob — opened via the code gate. A room
           // link uses the room (global) scope; a session.meet here uses the
           // session's own scope (panel session keeps its special code).
-          const val = live ? (live.meet || ((live.type === "keynote" || live.type === "talk") ? (r.youtube || "") : "")) : "";
+          const val = live ? (live.meet || effectiveYouTube(live, data)) : "";
           const scope = live
             ? (live.meet ? accessScopeForSession(live, data) : accessScopeForRoom(data))
             : null;
@@ -1223,7 +1242,7 @@ function Grid({ data, dayIdx, buildingId, now, liveStyle, lang, t, onSessionClic
                           {t.online}
                         </span>
                       )}
-                      {isStreamed(s) && (
+                      {isStreamed(s, data) && (
                         <span className="stream-badge" title={t.streamingTitle}>
                           <svg viewBox="0 0 16 16" width="9" height="9" fill="currentColor" aria-hidden="true">
                             <path d="M3 3.2c0-.66.54-1.2 1.2-1.2h7.6c.66 0 1.2.54 1.2 1.2v9.6c0 .66-.54 1.2-1.2 1.2H4.2A1.2 1.2 0 0 1 3 12.8V3.2zM6.6 5v6l4.4-3-4.4-3z"/>
@@ -1355,7 +1374,7 @@ function MobileList({ data, dayIdx, buildingId, now, lang, t, onSessionClick, fa
                     {isSessionOnline(s) && (
                       <span className="online-chip-inline" title={t.onlinePresenterTitle}>🌐 {t.online}</span>
                     )}
-                    {isStreamed(s) && (
+                    {isStreamed(s, data) && (
                       <span className="stream-chip-inline" title={t.streamingTitle}>▶ {t.streaming}</span>
                     )}
                     {isSessionVideo(s) && (
@@ -1832,7 +1851,7 @@ function SessionModal({ session, t, lang, now, onClose, favorites, onToggleFavor
           </div>
         )}
 
-        {isStreamed(session) && (
+        {isStreamed(session, data) && (
           <div className="sm-stream-banner" role="note">
             <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
               <path d="M4 5.5C4 4.67 4.67 4 5.5 4h13c.83 0 1.5.67 1.5 1.5v13c0 .83-.67 1.5-1.5 1.5h-13C4.67 20 4 19.33 4 18.5v-13zM10 8v8l6-4-6-4z"/>
@@ -1955,7 +1974,10 @@ function SessionModal({ session, t, lang, now, onClose, favorites, onToggleFavor
             //  • collaborative       → in-person only: no Meet, no remote access
             //  • break/social/other  → not a content session, no remote row
             //  • everything else (paper, symposium, doctoral) → Google Meet
-            const isStreamType = session.type === "keynote" || session.type === "talk";
+            // Auditorio / Sala Menor sessions (symposia included) stream on
+            // YouTube; the International Panel is the sole Meet exception. The
+            // small rooms keep Meet for their symposia. See isStreamed.
+            const isStreamType = isStreamed(session, data);
             const noRemoteType =
               (session.type === "workshop" && !isSessionOnline(session) && !session.hybrid) ||
               session.type === "poster" ||
