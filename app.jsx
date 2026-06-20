@@ -162,8 +162,8 @@ function effectiveYouTube(s, data) {
   if (!s) return "";
   // YouTube livestream applies to every streamed session (see isStreamed):
   // keynotes + ICED talks anywhere, plus ALL content sessions in the Auditorio
-  // and Sala Menor (symposia included), since those rooms are broadcast live.
-  // The International Panel is the sole exception — it uses Meet, not YouTube.
+  // and Sala Menor — symposia and the International Panel included, since those
+  // rooms are broadcast live.
   if (!isStreamed(s, data)) return "";
   if (s.youtube && String(s.youtube).trim()) return String(s.youtube).trim();
   const rooms = data && data.rooms;
@@ -174,23 +174,17 @@ function effectiveYouTube(s, data) {
   return "";
 }
 // The Auditorio Hospedería and the Sala Menor are broadcast on YouTube live:
-// every content session held there is a one-way livestream — symposia and ICED
-// talks included, not just keynotes. The lone exception is the International
-// Panel, which runs on Google Meet (two-way, its own access scope) so remote
-// panellists can take part.
+// every content session held there is a one-way livestream — symposia, ICED
+// talks and keynotes alike. The International Panel is streamed too AND also
+// runs a Google Meet for its remote panellists, so it shows both buttons (see
+// the modal); its Meet keeps the special panel access scope.
 const STREAMED_ROOMS = ["auditorio", "sala-menor"];
-function isPanelSession(s, data) {
-  const ac = data && data.meta && data.meta.access;
-  return !!(ac && ac.panelSessionId && s &&
-    String(s.easychair_session_id) === String(ac.panelSessionId));
-}
 // True for sessions broadcast on YouTube. Used to show the STREAM badge/banner
 // even before the livestream URL is published — so attendees know these sessions
 // WILL be broadcast. The actual link stays gated (greyed "Watch on YouTube"
 // button until the room is opened).
 function isStreamed(s, data) {
   if (!s) return false;
-  if (isPanelSession(s, data)) return false;        // International Panel → Meet
   // Everything in the broadcast rooms streams, except non-content fillers.
   if (STREAMED_ROOMS.includes(s.room)) {
     return s.type !== "break" && s.type !== "social" && s.type !== "other";
@@ -1958,9 +1952,9 @@ function SessionModal({ session, t, lang, now, onClose, favorites, onToggleFavor
             //  • collaborative       → in-person only: no Meet, no remote access
             //  • break/social/other  → not a content session, no remote row
             //  • everything else (paper, symposium, doctoral) → Google Meet
-            // Auditorio / Sala Menor sessions (symposia included) stream on
-            // YouTube; the International Panel is the sole Meet exception. The
-            // small rooms keep Meet for their symposia. See isStreamed.
+            // Auditorio / Sala Menor sessions stream on YouTube — symposia and
+            // the International Panel included. The small rooms keep Meet for
+            // their symposia. See isStreamed.
             const isStreamType = isStreamed(session, data);
             const noRemoteType =
               (session.type === "workshop" && !isSessionOnline(session) && !session.hybrid) ||
@@ -1983,11 +1977,19 @@ function SessionModal({ session, t, lang, now, onClose, favorites, onToggleFavor
             // prompt when the scope isn't unlocked yet. The link is encrypted
             // in the published data; the code is the key.
             const scope = accessScopeForSession(session, data);
+            // YouTube scope: a per-session livestream carries the session's own
+            // code (the panel code for the International Panel); the room's
+            // shared livestream uses the room/global code. So the Panel asks for
+            // the panel code on Meet but the global code on its YouTube (the
+            // shared Auditorio stream).
+            const ytScope = (session.youtube && String(session.youtube).trim())
+              ? accessScopeForSession(session, data)
+              : accessScopeForRoom(data);
             const meetBtn = (live, val) => live
               ? <button type="button" className="sm-meet-btn" onClick={() => openRemoteLink(val, scope, data)}>{meetIcon}<span>{meetLabel}</span>{arrow}</button>
               : <span className="sm-meet-btn is-locked" title={t.linksClosed} aria-disabled="true">{meetIcon}<span>{meetLabel}</span>{lock}</span>;
             const ytBtn = (live, val) => live
-              ? <button type="button" className="sm-youtube-btn" onClick={() => openRemoteLink(val, scope, data)}>{ytIcon}<span>{t.watchOnYouTube}</span>{arrow}</button>
+              ? <button type="button" className="sm-youtube-btn" onClick={() => openRemoteLink(val, ytScope, data)}>{ytIcon}<span>{t.watchOnYouTube}</span>{arrow}</button>
               : <span className="sm-youtube-btn is-locked" title={t.linksClosed} aria-disabled="true">{ytIcon}<span>{t.watchOnYouTube}</span>{lock}</span>;
             return (
               <>
