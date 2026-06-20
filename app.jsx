@@ -1983,7 +1983,15 @@ function SessionModal({ session, t, lang, now, onClose, favorites, onToggleFavor
               session.type === "poster" ||
               session.type === "collaborative";
             const noRowType = session.type === "break" || session.type === "social" || session.type === "other";
-            const showMeet = !isStreamType && !noRemoteType && !noRowType;
+            // A session with a remote presenter (or a hybrid co-facilitator)
+            // still needs a Meet link so that person can connect — even when the
+            // room is broadcast on YouTube. So a streamed Auditorio/Sala Menor
+            // session that has an online presenter shows BOTH channels: YouTube
+            // for the audience + Meet for the remote presenter, side by side.
+            const needsMeetForOnline = isSessionOnline(session) || session.hybrid;
+            const showMeet =
+              (!isStreamType && !noRemoteType && !noRowType) ||
+              (isStreamType && needsMeetForOnline);
             const meetLive = session.meet && linksActive;
             const ytLive = yt && linksActive;
             // Access scope (participant-code gate). A live link (plain or
@@ -1999,10 +2007,13 @@ function SessionModal({ session, t, lang, now, onClose, favorites, onToggleFavor
               : <span className="sm-youtube-btn is-locked" title={t.linksClosed} aria-disabled="true">{ytIcon}<span>{t.watchOnYouTube}</span>{lock}</span>;
             return (
               <>
-                {/* Meet — a real link only when the room is Active AND a link is
-                    set; otherwise a greyed placeholder ("opens on the day"). */}
+                {/* Meet — Meet-type sessions, plus any streamed session with a
+                    remote presenter (shown alongside YouTube). A real link only
+                    when the room is Active AND a link is set; otherwise a greyed
+                    placeholder ("opens on the day"). */}
                 {showMeet && meetBtn(meetLive, session.meet)}
-                {/* YouTube live — keynotes + ICED talks. Greyed until published. */}
+                {/* YouTube live — every streamed Auditorio/Sala Menor session.
+                    Greyed until the livestream URL is published. */}
                 {isStreamType && ytBtn(ytLive, yt)}
                 {/* In-person workshops (no online presenter), posters (full
                     offline) and collaborative spaces have no remote access. */}
