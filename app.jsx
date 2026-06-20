@@ -210,11 +210,11 @@ function roomLinksActive(s, data) {
 // ─── Participant-code access gate ─────────────────────────────────────────
 // Remote links (Meet/YouTube) are protected by a numeric participant code on
 // this public, backend-less site. Links are stored ENCRYPTED with the code; the
-// code is the key. Once typed, the code is kept for the tab (sessionStorage) so
-// later links in that scope decrypt silently. Most sessions/rooms use the
-// GLOBAL code; the International Panel uses its own scope.
+// code is the key. The code is requested on EVERY access and is never cached —
+// opening a call always requires entering it again, even the same code seconds
+// later. Most sessions/rooms use the GLOBAL code; the International Panel uses
+// its own scope.
 const ACCESS_TOKEN_FALLBACK = "ICED26-OK";
-const accessCodeKey = (scope) => "iced26-code-" + scope;
 
 function accessEnabled(data) {
   const ac = data && data.meta && data.meta.access;
@@ -240,14 +240,6 @@ function accessVerifier(scope, data) {
   const ac = data.meta.access;
   return scope === "panel" ? ac.panelVerifier : ac.globalVerifier;
 }
-function getStoredCode(scope) {
-  try { return sessionStorage.getItem(accessCodeKey(scope)) || null; }
-  catch (e) { return null; }
-}
-function storeCode(scope, code) {
-  try { sessionStorage.setItem(accessCodeKey(scope), code); } catch (e) {}
-}
-function isScopeUnlocked(scope) { return !!getStoredCode(scope); }
 
 // Validate a typed code against a scope's verifier. Resolves true/false.
 async function checkAccessCode(scope, code, data) {
@@ -274,16 +266,8 @@ function openRemoteLink(value, scope, data) {
   if (!value) return;
   // Not encrypted (or gating off) → open directly.
   if (!scope || !C || !C.isEnc(value)) { openUrlNewTab(value); return; }
-  // Scope already unlocked this tab → decrypt silently.
-  const code = getStoredCode(scope);
-  if (code) {
-    C.decrypt(value, code).then((url) => {
-      if (url && /^https?:\/\//i.test(url)) openUrlNewTab(url);
-      else if (_codeGateOpener) _codeGateOpener(value, scope); // stale code → ask again
-    });
-    return;
-  }
-  // Otherwise show the shared prompt.
+  // Always show the code prompt — no per-tab caching, so every access to a
+  // remote link asks for the participant code again.
   if (_codeGateOpener) _codeGateOpener(value, scope);
   else openUrlNewTab(value); // gate not mounted (shouldn't happen) → fail open to URL
 }
@@ -2281,7 +2265,6 @@ function GlobalCodeGate({ t, lang, data }) {
     const C = window.ICED26Crypto;
     const url = C ? await C.decrypt(gate.blob, code.trim()) : null;
     if (url && /^https?:\/\//i.test(url)) {
-      storeCode(gate.scope, code.trim());
       setStatus("ok");
       openUrlNewTab(url);
       setTimeout(close, 600);
