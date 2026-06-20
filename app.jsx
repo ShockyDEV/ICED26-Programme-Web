@@ -1473,12 +1473,22 @@ function SessionSearch({ data, t, lang, onSelect }) {
     for (const item of index) {
       let score = 0;
       let allMatch = true;
+      const primary = item.primary.toLowerCase();
       for (const tok of tokens) {
         const idx = item.haystack.indexOf(tok);
         if (idx < 0) { allMatch = false; break; }
-        // Earlier match = higher score; talk title hits weighted higher
+        // Earlier match in the haystack ranks slightly higher (tie-breaker).
         score += 100 - Math.min(idx, 99);
-        if (item.primary.toLowerCase().includes(tok)) score += 50;
+        // Title hit. A whole-word match (the token starts a word) gets a flat,
+        // position-independent bonus, so a word buried mid-title — e.g.
+        // "Symposium" in "Special Symposium 8" — ranks with the same word at the
+        // front of "Symposium 12" instead of being penalised for its position.
+        const pIdx = primary.indexOf(tok);
+        if (pIdx >= 0) {
+          score += 50;
+          const atWordStart = pIdx === 0 || !/[a-z0-9]/.test(primary[pIdx - 1]);
+          if (atWordStart) score += 200;
+        }
       }
       // Direct EasyChair-code hit ("15k", "21m") — strong boost so the matching
       // session (and then its contributions) jumps to the top, even if the raw
@@ -1493,7 +1503,7 @@ function SessionSearch({ data, t, lang, onSelect }) {
       if (allMatch) matches.push({ ...item, score });
     }
     matches.sort((a, b) => b.score - a.score);
-    return matches.slice(0, 10);
+    return matches.slice(0, 20);
   }, [q, index]);
 
   // Reset active when results change
