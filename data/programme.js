@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-20T14-19
+// ICED26 programme — generated from admin panel 2026-06-20T14-20
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -123,7 +123,7 @@ window.ICED26_DATA = {
       "name": "ROOM 1.2",
       "cluster": "hospederia",
       "code": "1.2",
-      "active": true,
+      "active": false,
       "meet": "ICEDX1:x35JsKl_jWrsY5-Q5grM0LqKX3Rab4PVcuoN-PinlPmUo3TdZavO2Bt2pNTDuyC6GCgDkZI-B0U6x9mCEhzlqc140pBmajtLSHsPxkthc48"
     },
     {
@@ -131,7 +131,7 @@ window.ICED26_DATA = {
       "name": "ROOM 2.1",
       "cluster": "hospederia",
       "code": "2.1",
-      "active": true,
+      "active": false,
       "meet": "ICEDX1:QhRcRMSdcD7mTvDMlIjm7fPtQmb4L2SdjKE2IFTT1Mh4RGxCApK9kPo9VBfOa-eJR9oQNYFyTiA70LPGYCEMFFnX0f_qGFRvYpWri0Bnhyc"
     },
     {
@@ -139,7 +139,7 @@ window.ICED26_DATA = {
       "name": "ROOM 2.2",
       "cluster": "hospederia",
       "code": "2.2",
-      "active": true,
+      "active": false,
       "meet": "ICEDX1:k8veT39AZ-V01RFTarSVolli77UbXLomKeNDw3r8b4jx6O6z8Fcw5pdrjhKa9YEnNzkkoYtVp-5nIogZoSro21foSBFVEe85rCrzUmstiDw"
     },
     {
@@ -147,7 +147,7 @@ window.ICED26_DATA = {
       "name": "ROOM 2.4",
       "cluster": "hospederia",
       "code": "2.4",
-      "active": true,
+      "active": false,
       "meet": "ICEDX1:2eJWXy9iEP671O6zp5JrVyn3nRgyg-XUIDGNjx2WbSJ3WboBwcCT0Ii550qjn8SjEbmjYcaEUo9dMx8oqta99mRREu-RwdUWGBi80GBGxfI"
     },
     {
@@ -155,7 +155,7 @@ window.ICED26_DATA = {
       "name": "ROOM 2.5",
       "cluster": "hospederia",
       "code": "2.5",
-      "active": true,
+      "active": false,
       "meet": "ICEDX1:yML4IcvGWVMs7t86Z1pm55mJmujhi1zioSSATRI3xaNEu-Rp7Dx6dcN9_lNzYVlA4yxYCYm8VSyBI58RgrqW3qZHspAPDQ603n_LktfLkIA"
     },
     {
@@ -163,7 +163,7 @@ window.ICED26_DATA = {
       "name": "ROOM 2.6",
       "cluster": "hospederia",
       "code": "2.6",
-      "active": true,
+      "active": false,
       "meet": "ICEDX1:hfkEMcjNzK-Q1_j7_0q844mNgycUjM01Il847pwXMpgu66HYwtx5CITXl6HicXantiiZpJuxXs8GKePlJAcdFeBg8QFRPnW06UQLwiMDiW4"
     },
     {
@@ -171,7 +171,7 @@ window.ICED26_DATA = {
       "name": "ROOM 2.7",
       "cluster": "hospederia",
       "code": "2.7",
-      "active": true,
+      "active": false,
       "meet": "ICEDX1:QkPsBBKe0BqYdw01G5Rxt2nY8p9fkiHEJjECIAHAIS-dBLwLDEbMRFkvR0gaDC9-9WMkd0aDzKY62XKzFbikTbT4Jdle7hiwcpoOxp9J5cw"
     },
     {
