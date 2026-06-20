@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-20T13-28
+// ICED26 programme — generated from admin panel 2026-06-20T13-37
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -716,7 +716,7 @@ window.ICED26_DATA = {
       "title": "A - Papers 1",
       "fullName": "Session 7B: A - Papers 1",
       "type": "paper",
-      "meet": "",
+      "meet": "https://meet.google.com/qes-wbpi-ycp",
       "talks": [
         {
           "time": "11:00",
@@ -1440,7 +1440,7 @@ window.ICED26_DATA = {
       "title": "B - Workshop 1",
       "fullName": "Session 8E: B - Workshop 1",
       "type": "workshop",
-      "meet": "",
+      "meet": "https://meet.google.com/qes-wbpi-ycp",
       "talks": [
         {
           "easychair_id": "311640",
@@ -1952,7 +1952,7 @@ window.ICED26_DATA = {
       "title": "C - Workshop 10",
       "fullName": "Session 10F: C - Workshop 10",
       "type": "workshop",
-      "meet": "",
+      "meet": "https://meet.google.com/qes-wbpi-ycp",
       "talks": [
         {
           "easychair_id": "311713",
@@ -2338,7 +2338,7 @@ window.ICED26_DATA = {
       "title": "D - Collaborative Space 11",
       "fullName": "Session 11A: D - Collaborative Space 11",
       "type": "collaborative",
-      "meet": "",
+      "meet": "https://meet.google.com/qes-wbpi-ycp",
       "talks": [
         {
           "easychair_id": "311730",
@@ -2796,7 +2796,7 @@ window.ICED26_DATA = {
       "title": "E - Papers 12",
       "fullName": "Session 13A: E - Papers 12",
       "type": "paper",
-      "meet": "",
+      "meet": "https://meet.google.com/qes-wbpi-ycp",
       "talks": [
         {
           "easychair_id": "311871",
@@ -4541,7 +4541,7 @@ window.ICED26_DATA = {
       "title": "G - Workshop 19",
       "fullName": "Session 17G: G - Workshop 19",
       "type": "workshop",
-      "meet": "",
+      "meet": "https://meet.google.com/qes-wbpi-ycp",
       "talks": [
         {
           "easychair_id": "311712",
@@ -4961,7 +4961,7 @@ window.ICED26_DATA = {
       "title": "H - Workshop 28",
       "fullName": "Session 18F: H - Workshop 28",
       "type": "workshop",
-      "meet": "",
+      "meet": "https://meet.google.com/qes-wbpi-ycp",
       "talks": [
         {
           "easychair_id": "311694",
@@ -5366,7 +5366,7 @@ window.ICED26_DATA = {
       "title": "I - Workshop 37",
       "fullName": "Session 19E: I - Workshop 37",
       "type": "workshop",
-      "meet": "",
+      "meet": "https://meet.google.com/qes-wbpi-ycp",
       "talks": [
         {
           "easychair_id": "311708",
@@ -5682,7 +5682,7 @@ window.ICED26_DATA = {
       "title": "J - Workshop 46",
       "fullName": "Session 20G: J - Workshop 46",
       "type": "workshop",
-      "meet": "",
+      "meet": "https://meet.google.com/qes-wbpi-ycp",
       "talks": [
         {
           "easychair_id": "311698",
@@ -6095,7 +6095,7 @@ window.ICED26_DATA = {
       "title": "K - Papers 32",
       "fullName": "Session 21B: K - Papers 32",
       "type": "paper",
-      "meet": "",
+      "meet": "https://meet.google.com/qes-wbpi-ycp",
       "talks": [
         {
           "easychair_id": "311938",
