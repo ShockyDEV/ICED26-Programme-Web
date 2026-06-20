@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-20T15-04
+// ICED26 programme — generated from admin panel 2026-06-20T15-08
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -65,7 +65,7 @@ window.ICED26_DATA = {
       "cluster": "hospederia",
       "code": "AUD",
       "youtube": "",
-      "meet": "",
+      "meet": "meet.google.com/ype-cvdh-zve",
       "active": false
     },
     {
@@ -81,7 +81,7 @@ window.ICED26_DATA = {
       "cluster": "iddi",
       "code": "SP",
       "active": false,
-      "meet": "ICEDX1:uIUQpW8SYhL2af7Z8BvQbZ2B0d1jdzdce2-PEoXZ6CECN4Uv3eUR5O3M9ygyTH3g5hdJXGAC_B5u0AO6OzG_KvElwHpN6nsDIBPzUu7ABqU"
+      "meet": "ICEDX1:CPEj03dtWdrxl1Gnqg-me7tKR4X82_xcxyzIjDi4yDzxJw5s68l1XO_AOMGcGRhIdio6dQ_vzKPlMX5o4W7wg0T3rcMPnMS0geJfDNiU7ME"
     },
     {
       "id": "sala-pinturas",
@@ -89,7 +89,7 @@ window.ICED26_DATA = {
       "cluster": "colegio",
       "code": "PIN",
       "active": false,
-      "meet": "ICEDX1:j52VN7EFVk1gqLCQmcbMwyQowIfn5ae1D7D1Ra4z62U0Q-Q5fpePbZmlUWh5W4OhmZMNiuQWaPbVaul4oLlqMEVoDvMaKvfllnVKwFrChgs"
+      "meet": "ICEDX1:eKfuGTMmMX6vhwFaErTr8Qcs3H6rK-xe8vVV3ry9AI319fyHOcDGxY66C0ZUmYSYzkfJIiAQtXyLZi_1sb--DO8bIYIZMWJGd5Og2baJ5sM"
     },
     {
       "id": "biblioteca",
@@ -97,7 +97,7 @@ window.ICED26_DATA = {
       "cluster": "colegio",
       "code": "BIB",
       "active": false,
-      "meet": "ICEDX1:c4UrFAVaga2zh1EyWEBpVCi-07txCVyrQTAWskMDEzLwlenfGT-KDBrREXx7YT3zBU1kw60UK_Pq2OScWjgV8B-F0D8r75Eulkwm2XCg2iU"
+      "meet": "ICEDX1:WaHMvtpk3Y1kGhP8r9wv_tWRU6PoO5GRz4H6x8Ji9ugQWHAVtQtsMjv8u4F6s4xApYqwSWxsj4RCj9bMD8rlUQJbmIA45LXG7eEt2RO7nkY"
     },
     {
       "id": "capilla",
@@ -105,7 +105,7 @@ window.ICED26_DATA = {
       "cluster": "colegio",
       "code": "CAP",
       "active": false,
-      "meet": "ICEDX1:jz-ECBHf760dcgKDoGbzYTTsik30N_vldmTRAB6_mti4_UDNiFVEUxUMUbKJQ_ttBPFXJ74HURvr5wIn2EZ8PQ6u0wZ9YcIVie7-SrQNS6k"
+      "meet": "ICEDX1:WYMiZjKNgSmj8JVj1HZFy7Y_EUbe0QQVrE8aWKVhiPdKggGSHgsXZpiHqXJK9eD6XYMwJIa778KZHh_-7EDZd3IwDxRzMSlpZCUu7NuWMfo"
     },
     {
       "id": "claustro",
@@ -113,7 +113,7 @@ window.ICED26_DATA = {
       "cluster": "colegio",
       "code": "CLA",
       "active": false,
-      "meet": "ICEDX1:8VAZWNTmM9gwMtcBrx40e5IzoJWsmp7IJCnK3X_bRa5tOEcJlH_I1Kpcnqf5z0S49IDh-vrhjO1S7hYQuAC7I-7Y8kR-saTCAPeqZm32fJE"
+      "meet": "ICEDX1:2HeoVMmZ3lzy6C-AmfXMInGlOM8-RZ8dFMG_UlA-vCcyu4_3SNZLJmBka9pz_w_MbIcuCVBBWcqqeRaqaP_vdqEcg3CoHsxGvGCOpKegXug"
     },
     {
       "id": "room-1-1",
@@ -185,7 +185,7 @@ window.ICED26_DATA = {
       "cluster": "iddi",
       "code": "11.2",
       "active": false,
-      "meet": "ICEDX1:R1yV2wI0bSdaJkbU99n-jv8FrblUAVcuLM3FrCxfzYUfYmq-rGarvJ0t2R8MowTKJnmalZ2QqplxxCt6e41oiaH_pZ4jnCFcalkXYiuwZMs"
+      "meet": "ICEDX1:0ZMt2qYbsgHvukGlTaXiPXkP6TBOafverqsHFVtZDbwSy07QIOvyeuOd9ZHO4Ppag7cSwV4y8rZvXG9rxVqZP6Z_AdGuv8MEQ-EJYNW5tys"
     },
     {
       "id": "room-11-3",
@@ -193,7 +193,7 @@ window.ICED26_DATA = {
       "cluster": "iddi",
       "code": "11.3",
       "active": false,
-      "meet": "ICEDX1:tZWX6rSvYCueXmCEPW4fAoRGBWG7NDIYo4aNrEyMjRULxO6c0Kf8nyrt99rkJeErRKGVymmI-ptjcfei285U9ceie2o9pMKv3WYAIChsan8"
+      "meet": "ICEDX1:VZNTP7uZHhSQGLq1xeRKps4MyGgEIrU0YNm9yK5nzfO5AaMbvr4aIiBxPquR2F0pwVOVWdFwGNqVSIvp1r4pNqwFnZeedDOIn6z63LscFlw"
     }
   ],
   "sessions": [
@@ -208,7 +208,7 @@ window.ICED26_DATA = {
       "title": "Welcome and Instructions for Pre-Conference",
       "fullName": "Session 1: Welcome and Instructions for Pre-Conference",
       "type": "other",
-      "meet": "",
+      "meet": "meet.google.com/ype-cvdh-zve",
       "talks": [],
       "easychair_session_id": "104851",
       "cardTitle": "",
@@ -327,7 +327,7 @@ window.ICED26_DATA = {
       "title": "Lunch Break",
       "fullName": "Lunch Break",
       "type": "break",
-      "meet": "ICEDX1:KWk0gbgwKYhhhqZp2dOcpR5MtOyDjdY5UWnsQzPyeHQm-KgcIN44L5cd98bTvdszP4sQbSe_rMtS8VFhnwMW4I7U6S59S8B8uL1Xk1AnsWk",
+      "meet": "ICEDX1:q5baKjQqmeE1qssBg5418Bmw9cgCDF-1Ak_vfFbqn1ALGKAxfgu_rufPG-GtXXp3r40Y9PEwSS_Cnl-zpRCeH6dLPYPKYnRbw6zGGNUQoZs",
       "talks": [],
       "easychair_session_id": null,
       "cardTitle": "",
@@ -545,7 +545,7 @@ window.ICED26_DATA = {
       "title": "Opening ceremony",
       "fullName": "Session 5: Opening ceremony",
       "type": "keynote",
-      "meet": "",
+      "meet": "meet.google.com/ype-cvdh-zve",
       "talks": [
         {
           "time": "08:45",
@@ -575,7 +575,7 @@ window.ICED26_DATA = {
       "title": "Keynote 1: Agency, responsibility, and values-driven educational development - David A. Green",
       "fullName": "Session 6: Keynote 1: Agency, responsibility, and values-driven educational development - David A. Green",
       "type": "keynote",
-      "meet": "",
+      "meet": "meet.google.com/ype-cvdh-zve",
       "talks": [],
       "easychair_session_id": "104801",
       "chair": "Ariane Dumont"
@@ -591,7 +591,7 @@ window.ICED26_DATA = {
       "title": "Coffee Break",
       "fullName": "Coffee Break",
       "type": "break",
-      "meet": "ICEDX1:Ac2_xU_sZDGBlsgb5Ys1BxUZyZ2SNqSEe1c_0f6LO6_2073u9fqZAbXfmd88jJZ58i1ILtrLqaZsK1D2wPascvq2oUXPw33TX9aeQ_B7L2c",
+      "meet": "ICEDX1:H3XHd4zK_ejBu8h1OXM9O9ZPVqWnjDa-yFqVNeffT-TW6iI10RDeOi1j8hj_YHT1V0eaE1coFToZp8RUSwxUCjUsLitI0XeM6T_HMCU9QM8",
       "talks": [],
       "easychair_session_id": null,
       "cardTitle": "",
@@ -609,7 +609,7 @@ window.ICED26_DATA = {
       "title": "A - Symposium 1",
       "fullName": "Session 7L: A - Symposium 1",
       "type": "symposium",
-      "meet": "",
+      "meet": "meet.google.com/ype-cvdh-zve",
       "talks": [
         {
           "easychair_id": "311652",
@@ -635,7 +635,7 @@ window.ICED26_DATA = {
       "title": "A - Posters 1",
       "fullName": "Session 7K: A - Posters 1",
       "type": "poster",
-      "meet": "ICEDX1:7DWaEJQ5mbHU9J6iaQ6yAzvvuavV_Aus0NriTsC8mXZaMzgrA5TEdw_VelGv5_p0srGgwrYJR1ZPKvjA80KmoJhghk9i4yBLP9ZIO4BckE0",
+      "meet": "ICEDX1:JiYO2_GtA5KXFLN6CO9gVgV-4HzvUosqPdN541bFS8_MqYidE0EqMmaS5f_wbjZuyUTo0TzTPZCpK4Aans77HusUAgFjsrK1qU1Sg5X8VL0",
       "talks": [
         {
           "time": "",
@@ -850,7 +850,7 @@ window.ICED26_DATA = {
       "title": "A - Papers 10",
       "fullName": "Session 7G: A - Papers 10",
       "type": "paper",
-      "meet": "ICEDX1:Mq2TZ7fvoF_yoeXe-jrae0hgIGJHqYyDy17QhQ5KmLugb_2M1Chg0BfflC02Ike4eFwGI9N--BfsHBLeFgZOx5evSGTjHn63Bi8jSfOxsEE",
+      "meet": "ICEDX1:JAWZw_olFOjovpVaa6cb6QZNbNJKQH0lXehrus2VW_gQHOxeUHHYjDotZ-jjiI7wYITlCrrX3z0-MYzU-VAbmqxAsoF4ZhVvhUTmKLwktFY",
       "talks": [
         {
           "easychair_id": "311860",
@@ -904,7 +904,7 @@ window.ICED26_DATA = {
       "title": "A - Papers 11",
       "fullName": "Session 7E: A - Papers 11",
       "type": "paper",
-      "meet": "ICEDX1:QYrcBgrczYkkr4hQXaX5vunGLxYHsoBE7i-nb1jRvjIIMN_dqTPfntFMGbjg68RIsJqOCUUpNPnL_f-mLiA4YgnCC9ZhPgJ1SIl3YOsCI8Q",
+      "meet": "ICEDX1:hZjALUoHCsCxyakijvrkTzWSez8KdkbWlmTlH2FtgEncGRRm3nmmLJh7t5FTna9vTRLM_xKzqxS-9dk0u6DgHdER53-MI1AvKvZWPT-7CaM",
       "talks": [
         {
           "easychair_id": "311813",
@@ -1351,7 +1351,7 @@ window.ICED26_DATA = {
       "title": "A - Papers 9",
       "fullName": "Session 7J: A - Papers 9",
       "type": "paper",
-      "meet": "ICEDX1:r7qYB0t1twxWrSiaZ2n9AFdRY-6WIryLFqO7a_1l0-A27HazeCLOQ8LRshIzg9y-3nFUfUm0Uwqblv0unHFtWoVYtp3-nz0oBcjoKRDJBqw",
+      "meet": "ICEDX1:y4THn1cO6xv4x5Z9kTUstnisAwQ-jnUKEPsxW5UvqyR7XukUAH4ZB8_9fDJJZozM2oK9Ud5TX6b2mStcO8j0mSpvGoj178hVc23mFXP4t2Y",
       "talks": [
         {
           "time": "11:00",
@@ -1404,7 +1404,7 @@ window.ICED26_DATA = {
       "title": "B - Collaborative Space 1",
       "fullName": "Session 8A: B - Collaborative Space 1",
       "type": "collaborative",
-      "meet": "ICEDX1:oPNgjyDzPgxSihCcqH1dVDg89zTxCmXAYQDC4SXKc54BVTkL-oqfCy80Ii7tr64x65_auDQzpkwTBXLYFK8kJ4Gjb9CBBcNvJV8oCbAp4aY",
+      "meet": "ICEDX1:_T2jyA01EqGMdQJES1Nvp0K0oqz3MF60ZFb3lxBmzAWn5moYzR-Pz4K_nqLZwhb8pD0IJ0W_QN0kEDx_bEMq_KVJe0LfPidglydVVj1pSBk",
       "talks": [
         {
           "easychair_id": "311729",
@@ -1429,7 +1429,7 @@ window.ICED26_DATA = {
       "title": "B - Collaborative Space 2",
       "fullName": "Session 8D: B - Collaborative Space 2",
       "type": "collaborative",
-      "meet": "ICEDX1:otvoIX_toYZqK3qjNzdPFLbV4SVuaJuJRWs0bWEUesdzGrK6oWw663odzoU0NMUFaj___DhaTa6x8_iMaY4-BPtha8-Yfw6FZTFO8hUPTYI",
+      "meet": "ICEDX1:dbhtJQ6iCoee4PlMFeIg4qpKrOnFUXL0KtETNEvY692l2TTrAU0keXdRvYyLTyG4MePOHD39q1j7wrqh7giKGm4TUwQkUe0OpdwwkQ5eorw",
       "talks": [
         {
           "easychair_id": "311761",
@@ -1504,7 +1504,7 @@ window.ICED26_DATA = {
       "title": "B - Workshop 9",
       "fullName": "Session 8M: B - Workshop 9",
       "type": "workshop",
-      "meet": "ICEDX1:hXLGu7FjfAka4KhLZ0WP-zPsVnNQUGswCC3VY2r2kJs96FYZNF5_WyzugkLbE09L88OFK2DKMgL810GMECy7xHW4A5l8VrEMRcq849uZoPQ",
+      "meet": "ICEDX1:hTtfAfCK9frEXyvkkpb2QS7zFDUF_n6Aj4ZmtKLsMu82vashFM7wtiomQZntEF4bk7X0ZrOkdchZLEV2Ijc3L4zQrTUMQbTypAWYaGewfRo",
       "talks": [
         {
           "time": "12:45",
@@ -1534,7 +1534,7 @@ window.ICED26_DATA = {
       "title": "B - Collaborative Space 4",
       "fullName": "Session 8B: B - Collaborative Space 4",
       "type": "collaborative",
-      "meet": "ICEDX1:wt8iN6trnVxeDbtWc-gc2aFkl3EGXb2-OVuuKR3bD-YfX3l4eKYzdvgOJerH89HeMljORNKQv3aM6i6ghXoxo5_Q6Z434Ip_pVJZpcEmR4U",
+      "meet": "ICEDX1:NiRjNayUtlKba1Vyz8n2Fb-kC5QOiJD_mznIKFSjH3eIRgpaRJFaGxuIJL7n8_hxv5D_lj9C6xgMITGO4GqwWXa2Pl3IzlTsEsnkuUQiLjc",
       "talks": [
         {
           "easychair_id": "311741",
@@ -1756,7 +1756,7 @@ window.ICED26_DATA = {
       "title": "B - Collaborative Space 3",
       "fullName": "Session 8C: B - Collaborative Space 3",
       "type": "collaborative",
-      "meet": "ICEDX1:IfK8u2R4U0ODNgRykIKktT4he1rTB7S3jhtuiqRIZvAF-1HpyW36QpGhbaaZsCh7eQNmicQY_6SwYKmKPGUfvsNP12TgSpaTqzN6QmSmmu4",
+      "meet": "ICEDX1:BRdLGD5AfYkMuYMBrxt_nbLsM83fL8rRNe63pyKyZQHV_lhKw_mL1TlEl1aGqCE6wvMzhbJNHpGZpGAP9N4Er4jO2pRUGrM9eMz890rGkwE",
       "talks": [
         {
           "easychair_id": "311746",
@@ -1781,7 +1781,7 @@ window.ICED26_DATA = {
       "title": "Lunch Break",
       "fullName": "Lunch Break",
       "type": "break",
-      "meet": "ICEDX1:mLqysxrUoGhxiLyPe6B2RQu2vVJL_x0QkVzu_N3phaEbyP5Wuurh_7EyOojKAQEL9GiLGDnjSGO_dFtSAZ2K5QTtGe_8C1ocand0yxRA_3A",
+      "meet": "ICEDX1:ohJf9q-ZYd3ybTmfstBJNnNd8p6PPx8ead7haBHOer6p2y69HR8VMPeqWKab2xNXwcvVEPIwIV4n40e_bRImEV4EuaR4A7J7uAvQLeZwHgo",
       "talks": [],
       "easychair_session_id": null,
       "cardTitle": "",
@@ -1799,7 +1799,7 @@ window.ICED26_DATA = {
       "title": "International panel: Global South Perspectives in Dialogue",
       "fullName": "Session 9: International panel: Global South Perspectives in Dialogue",
       "type": "keynote",
-      "meet": "",
+      "meet": "meet.google.com/ype-cvdh-zve",
       "talks": [],
       "easychair_session_id": "104802",
       "onlinePresenter": true,
@@ -1817,7 +1817,7 @@ window.ICED26_DATA = {
       "title": "C - Collaborative Space 5",
       "fullName": "Session 10A: C - Collaborative Space 5",
       "type": "collaborative",
-      "meet": "ICEDX1:RC28m3zdaEK9n_1CbRek3TpTJRLtpPHnI4QbHOiwErQCTbNDpfJT1gYut1Lunta-A9p5zUf3DcO1x6PPo9xvTYwtU6F4GbynZWpOGLQbfG4",
+      "meet": "ICEDX1:IZpDVvIEZRntB-GOVa5HhT2bOW3G2nOQff27QUFB2kT5YgASfYMPiPe-BUm8tHRRERC2q1g_9wDs8a5qsvOYdDU9a1S9dZ5czXs8vtjMTqA",
       "talks": [
         {
           "easychair_id": "311739",
@@ -1842,7 +1842,7 @@ window.ICED26_DATA = {
       "title": "C - Collaborative Space 6",
       "fullName": "Session 10B: C - Collaborative Space 6",
       "type": "collaborative",
-      "meet": "ICEDX1:1BgPTxz9O1UZjCbdYN1qHNOJx1COkQODzLSC-D7ym34xwg6Ix0q5pGWIBxQ8I0cT6-ySt3uP4l3fS3rXxvmWPNUM_KC95U2YIWeWA-ubETw",
+      "meet": "ICEDX1:8gD3OZBqlMCCHa1shmpvfmGYp3uqETQjqEb-DhSzyw-UO5SVnzGtZkWcykYQ5hdLXx9juVygvKcMLnH-lPpE-S4u4taXyx4-6VRBUrF6rAM",
       "talks": [
         {
           "easychair_id": "311742",
@@ -1867,7 +1867,7 @@ window.ICED26_DATA = {
       "title": "C - Posters 2",
       "fullName": "Session 10P: C - Posters 2",
       "type": "poster",
-      "meet": "ICEDX1:55tql-beJ4PmZ02KcrttGzkFR5oqhfzev9yDDP_fK0TVSRvam8x7iMYkrq1v5uvAAH0DfB985C89xhcRwCI_g3a8yrKD-A3Pu4-dB7oAgkA",
+      "meet": "ICEDX1:_46WcH2feY-G7QHAkXeR58kE2SC3g8zIRe294FDR-ozd88S5KJLdVQxgyM-7y-VRwGXIQDH2C4p6Zf4munHxylJUSFUnkaOjng2qcXhTBRU",
       "talks": [
         {
           "easychair_id": "311666",
@@ -2023,7 +2023,7 @@ window.ICED26_DATA = {
       "title": "C - Workshop 18",
       "fullName": "Session 10N: C - Workshop 18",
       "type": "workshop",
-      "meet": "ICEDX1:sRPZRzgwReNshZlvXHfptsRi2WFo6FeqLXvF7bBE56ErWdMUuh7MjJrl9nTP8W7OrpvOUg7iH6_eUi096v5Y6D2Eu4ntXJcFp4rKRIurQcY",
+      "meet": "ICEDX1:UkAg8TbCt1XLvUcYHwuNTNqcOFYikMcL2kswXvyu41xOQfzgV0b9LTDCuI99TMG-I5VpkZrjpyBH_34T1fG835qjAGiSFX9fMxxWWEx8PhI",
       "talks": [
         {
           "easychair_id": "311700",
@@ -2048,7 +2048,7 @@ window.ICED26_DATA = {
       "title": "C - Collaborative Space 8",
       "fullName": "Session 10C: C - Collaborative Space 8",
       "type": "collaborative",
-      "meet": "ICEDX1:JOJ8Wt1UmolqUKOTPhyXrikZAjj8OWfzCfhHqFW0LeVyxRARUWUP66U5YK5TZE_CFvgbYEP9PDDFxNCJ1_Gpb7vOAR4JHiCpMw39lRHmKA0",
+      "meet": "ICEDX1:5R_VQIX7o_H5XekzY0jr2wmnGHnLYdycCyeJVK2tbURN7kSQHufN5kq2P3vsTBcEVGq7jZUbnt5JTNdEgZIhwaq86TB8b2sFseqt5AisPR4",
       "talks": [
         {
           "easychair_id": "311747",
@@ -2277,7 +2277,7 @@ window.ICED26_DATA = {
       "title": "C - Collaborative Space 7",
       "fullName": "Session 10D: C - Collaborative Space 7",
       "type": "collaborative",
-      "meet": "ICEDX1:OynDCU3fxiaJkLeI3HLF3qfDb0eYsLJ2MPocTD45eyNG2OM2LJ5y_FZEb4A8MR8iPhsQb9B985Vb9X8mLC7HtXsSOV3RP1a0YbNqs2_CSZc",
+      "meet": "ICEDX1:sPRBa5ltZAtcn-S9TF1i-udcVSQGFAlIjKXQU4qL9NoYoHCf7mXONtMY8Zd0lj0XP7c2e5P78bcRuhOL5tlk7hzDma4Ae0uKe3KNLlMGCAo",
       "talks": [
         {
           "easychair_id": "311748",
@@ -2302,7 +2302,7 @@ window.ICED26_DATA = {
       "title": "D - Collaborative Space 9",
       "fullName": "Session 11D: D - Collaborative Space 9",
       "type": "collaborative",
-      "meet": "ICEDX1:sjHG1fFHdxzCzOGYB5j_zTxcCraaxCJsYmEIFI4Yp5eCzl_9xPnRegPTEoG_bhVOd7a4AG959503J_vCqEsx0J0J-jscWmK8kJxX8hlFDf0",
+      "meet": "ICEDX1:RkAMDXdwajssUOciBDZ3Pg9yddJA3kaSLFc3slMKPovSNIBV6R1ZZRsAUHy7rrMBuRuQDBT9El_je90qMgKn-jmLi9EVr0KnIGmGAHylC_s",
       "talks": [
         {
           "easychair_id": "311733",
@@ -2327,7 +2327,7 @@ window.ICED26_DATA = {
       "title": "D - Collaborative Space 10",
       "fullName": "Session 11F: D - Collaborative Space 10",
       "type": "collaborative",
-      "meet": "ICEDX1:8FTxZPMPfJTtkcZblKcCAgRcT_a4FEr0x0Lp83d5E8LwY1dvWRXnxPa7BE4yaDxEvQwtmjYkqwyhz6itG_O_jrZEMCZr-Vja1uVpwD4MEV4",
+      "meet": "ICEDX1:tsWp5X6-B8QHjcf26DLgcrrqSU-r0A871GIc3fzjdVy7V6Bc63HWMbLGsQEJ2lfD3yJJ97zKL5jNAMs9-9DhRICn6016YbuUIXXtDIMrtl0",
       "talks": [
         {
           "easychair_id": "311750",
@@ -2377,7 +2377,7 @@ window.ICED26_DATA = {
       "title": "D - Collaborative Space 19",
       "fullName": "Session 11B: D - Collaborative Space 19",
       "type": "collaborative",
-      "meet": "ICEDX1:JGMYR7-cbQaVGOfGcqnf_kTJ7NlPBchyqoBR8QwjRbzGO9un7sM2h8McSVKF8P78ZnxLNeVGUBkMI5dTIKbIRs1bJgIqC9HzPHSJnqfZRnw",
+      "meet": "ICEDX1:o5Be491y_RtT3nzKTgXfPobSkAlivOqA9lxidlKdziNLmSSlsJWDlUV6GmoslW1635TWv0KLkPpPLjplx8THXUinczS5joxqxWliQBcwsbc",
       "talks": [
         {
           "easychair_id": "311731",
@@ -2402,7 +2402,7 @@ window.ICED26_DATA = {
       "title": "D - Collaborative Space 20",
       "fullName": "Session 11L: D - Collaborative Space 20",
       "type": "collaborative",
-      "meet": "ICEDX1:pDOoIAAWlwwjVS75fifHMxpRU12EIIErf9cKJlgDYgrvErjTB5JOdAewOUC8WgyuK761aamyE1FhPf0gy9oTfmVEGBpCXN7IsvWT_51Bv3c",
+      "meet": "ICEDX1:hvX6Q00Nq8qth6d6QBAA7P8seQRGnSFTGnK5oE5lsXzU6nxb8t29JTyz-Db29lpTF9KmQV1u0gRzBhTCGn32OJsj158ukSwha9OADlZ5W7s",
       "talks": [
         {
           "easychair_id": "311757",
@@ -2577,7 +2577,7 @@ window.ICED26_DATA = {
       "title": "D - Collaborative Space 18",
       "fullName": "Session 11K: D - Collaborative Space 18",
       "type": "collaborative",
-      "meet": "ICEDX1:Emyddh0t1SekuQWituuYzfPu0Zzy52ZkWel5X9J-_EXk3UE_4X0a17TX3_diqIxeXuF-4CdgWKvVEEvyLTmr4mQ5XiN1Jc-rQbRhBHQIuzQ",
+      "meet": "ICEDX1:mfeaFZDizDUZLUW9BofBcGEjkTSFOJhcLtN8icjgEDxkJ_fb3LELPyEct3jQ9vYYKUdaUEVBgsZpswqT_8BkY2qzMR4TC3vqbuWYyyuGmbU",
       "talks": [
         {
           "easychair_id": "311760",
@@ -2602,7 +2602,7 @@ window.ICED26_DATA = {
       "title": "Welcome Reception",
       "fullName": "Welcome Reception",
       "type": "social",
-      "meet": "ICEDX1:09LgOPndu6Tj_1t4SbY2eDL37O083_6IQMYAjJFDywy42Rz9PxZ24bSDjVqbJjtiBQIfKpm6VOvawqcJqquGm0Urpqe47iUv5dy2yNJDiHc",
+      "meet": "ICEDX1:gFssegIMR81fhzEFSIvqtg44QbM3dmx1ajnDXNOAq4bwHqtnQ9NjnIhQfiaCsI3DzWUjgrlFw4mKhWI286oHpTNl8EeBqStevhSny4H8TIc",
       "talks": [],
       "easychair_session_id": "104850",
       "cardTitle": "",
@@ -2620,7 +2620,7 @@ window.ICED26_DATA = {
       "title": "Mindfulness",
       "fullName": "Session 12: Mindfulness",
       "type": "other",
-      "meet": "ICEDX1:HIOhQ5Z1rne49BwmMuv2WMEkoyestlXJrvMg69OgbS0xn7tN16hOj1IdqyFgZlsrC2QOAt9q0sXfTw_quUMLkuSCktYCtIF4fFv9R_b1hSQ",
+      "meet": "ICEDX1:5JHYfGv5WsLdmD1Hxe4n9MCQXlhMKMTABWPyAI1b0Xg8xmUgWTQEGzd_PwLeF67IczzenB7wsgh-pswApwU22yRevDdQ89oRn-dI4B1MDzU",
       "talks": [],
       "easychair_session_id": "106482",
       "cardTitle": "",
@@ -2651,7 +2651,7 @@ window.ICED26_DATA = {
       "title": "E - Symposium 3",
       "fullName": "Session 13N: E - Symposium 3",
       "type": "symposium",
-      "meet": "",
+      "meet": "meet.google.com/ype-cvdh-zve",
       "youtube": "",
       "talks": [
         {
@@ -2677,7 +2677,7 @@ window.ICED26_DATA = {
       "title": "E - Doctoral Colloquium 1",
       "fullName": "Session 13L: E - Doctoral Colloquium 1",
       "type": "doctoral",
-      "meet": "ICEDX1:7L2-PiGEGm9olcB4kmLOQ2Cl1u2VoZz2aqRlT2NIXhmNMuzx5tY6lK-vGasNqU0dRHrF91d1Z74bGlpQyPBLPFTXpy8r4DZY0OuxqkqeGVQ",
+      "meet": "ICEDX1:tj2lFqOFnA2a8K2Qa_Fe3hHMtiJvi6L-EUXR_UbtrYVgrD7iBWd3V2yLViNri0l1PmANs1e6hRL957oWw9ZVLVi9IOXmsnEWNs_n86vYp2Q",
       "talks": [
         {
           "time": "09:00",
@@ -2723,7 +2723,7 @@ window.ICED26_DATA = {
       "title": "E - Posters 3",
       "fullName": "Session 13K: E - Posters 3",
       "type": "poster",
-      "meet": "ICEDX1:j-SuVWj_O5hiU0tqwuqkFyzqIwV6zU0qAETitZjrDjwlBcSsyb0kKfAUdSLD7wm5e3tH2gtSZP8gtJzoTOcJWhN7CeqBD3VP12_Km5KRP8M",
+      "meet": "ICEDX1:OROLqyd_3xGZRy_cXPE4pWPGAbjDb5uCqMeDZHbMTTvKxjOh0S3CcKA8dQyptgaIbNu5JnVEPgIGYab6ftBRuIQi-Yv_Yd7dGRbPgTCzXd0",
       "talks": [
         {
           "time": "",
@@ -2936,7 +2936,7 @@ window.ICED26_DATA = {
       "title": "E - Papers 20",
       "fullName": "Session 13F: E - Papers 20",
       "type": "paper",
-      "meet": "ICEDX1:7SP3LCTnfBxi4aHwQUCo8i63PH-t4fLUOvuLwGJClpioqsSgtn1i0RP_5AqlNmH6kfxOiPPU8RHI1qjXVl45fUxL4Rp1FeG1uDzlA5fSai8",
+      "meet": "ICEDX1:NuQzKiaG-0oTmNV2FKCKePn1yNg2A1I0maYOsl4SJA-rEpP0MxAkn0ASI9RH-7Fj4itNie2_TW0H5UK1Q0CqDD4P1Rd-oPm22G8kjCKXImo",
       "talks": [
         {
           "easychair_id": "311931",
@@ -3000,7 +3000,7 @@ window.ICED26_DATA = {
       "title": "E - Papers 21",
       "fullName": "Session 13G: E - Papers 21",
       "type": "paper",
-      "meet": "ICEDX1:yOTeGun5vXOiI02Yt6RcPGRjZ956IBMPj3bE11u6mR6nw8Ge3yd0mll6WMzi9RTYAZ-mo5kB9ONzbJp6B5APQfzZpkJbFHuw6NnQy7pbOZc",
+      "meet": "ICEDX1:D6OcgVO4gH4NllyrkxBY8esFVLmca4Dk4yNnFlSu_bHlEe0xEPs2ovscFEd9jkcNI-SqT1Dyezn8Ad_ZYWcJWLvgXZuFi9riOqxL79emapQ",
       "talks": [
         {
           "time": "09:00",
@@ -3413,7 +3413,7 @@ window.ICED26_DATA = {
       "title": "E - Symposium 5",
       "fullName": "Session 13P: E - Symposium 5",
       "type": "symposium",
-      "meet": "ICEDX1:xCVZFxaSqQvkZR6-BIefnatsVSNEJNi2y98bjeiT3_VoPlQDjOI-GNChItgrUM4wwJzEW8xVugHwz1nTZpwARfyYawsUTCP35E9AS0uvK3A",
+      "meet": "ICEDX1:2PSIn5fCiXiTiUZxWkBjJEqHZYnSa1xe36MXmKJImRicQ-X2PGINplR5DqPvAyYC-Jb-Quf1_cGRjv12g_gWA1V4KaPlvnEu4m30rxWYzZA",
       "talks": [
         {
           "easychair_id": "311655",
@@ -3439,7 +3439,7 @@ window.ICED26_DATA = {
       "title": "E - Papers 19",
       "fullName": "Session 13J: E - Papers 19",
       "type": "paper",
-      "meet": "ICEDX1:Ews6KBaicfKUlNSqUJ--ikbmIjuvKn65Oqf8WBxLCfy9TbjQ7cXCc2fHOg7gypDEPty1yC7u8BRtoXBst051deqGbW2ycLz1QBNfHZsT71g",
+      "meet": "ICEDX1:wSBYVS26BrHdNCrWX7_qCCJ9JYPQDDatgV8UXbEHjv6RGts_skqNWOZ9Km3lI5YxIHY5NHi62_IXgamZDPMD4cmc49xNqLVblTkikqFmgj0",
       "talks": [
         {
           "easychair_id": "311844",
@@ -3503,7 +3503,7 @@ window.ICED26_DATA = {
       "title": "Coffee Break",
       "fullName": "Coffee Break",
       "type": "break",
-      "meet": "ICEDX1:G0QVq5-kOe5he2g6UqZTM6i264bBzX9O5tKgc-ubrVpZYfZZ1mfqggGUAvEAV2uA4Ah4FmEv8grL2SWp7bv4j_lmQ9vS35pCSlw5zW2WI0U",
+      "meet": "ICEDX1:yPvWtAYxFtohJ-c_6KzCPUbxm3natdWjGV1k4mXDFwLnJNCCEfFJl-9SFO8j3k0c6jgnEnAbhpUFZVcDsEPTR2BamiBxOlp6M788B8z_ahY",
       "talks": [],
       "easychair_session_id": null,
       "cardTitle": "",
@@ -3521,7 +3521,7 @@ window.ICED26_DATA = {
       "title": "Keynote 2: Rewarding university teaching in academic careers - Ruth Graham",
       "fullName": "Session 14: Keynote 2: Rewarding university teaching in academic careers - Ruth Graham",
       "type": "keynote",
-      "meet": "",
+      "meet": "meet.google.com/ype-cvdh-zve",
       "talks": [],
       "easychair_session_id": "104869",
       "chair": "Robert Pardo"
@@ -3537,7 +3537,7 @@ window.ICED26_DATA = {
       "title": "F - Symposium 6",
       "fullName": "Session 15M: F - Symposium 6",
       "type": "symposium",
-      "meet": "",
+      "meet": "meet.google.com/ype-cvdh-zve",
       "talks": [
         {
           "easychair_id": "311661",
@@ -3564,7 +3564,7 @@ window.ICED26_DATA = {
       "title": "F - Doctoral Colloquium 2",
       "fullName": "Session 15P: F - Doctoral Colloquium 2",
       "type": "doctoral",
-      "meet": "ICEDX1:-R9TM0rWdM6MT18A4_2bI6eUAOradPoPBWbqrgOfjSL_TrJWDff-36ebFL8-mxtRG-hdQS3jYJNWt3vcBWQN3bDJXHWXmzRypZOnNvA8wVY",
+      "meet": "ICEDX1:Irw_VyChQ2Rnu_lp-kJCcL96JYks7kU2YI8TjpceviicOZibORKYprk4Zmx6heYnGO4ay0ii_YgUrd0xXCli0rIKl7hrZnkBo3szgu2vliI",
       "talks": [
         {
           "time": "12:15",
@@ -3610,7 +3610,7 @@ window.ICED26_DATA = {
       "title": "F - Posters 4",
       "fullName": "Session 15K: F - Posters 4",
       "type": "poster",
-      "meet": "ICEDX1:0q6JWMHVGG0f_rL3uBxqtIA9CWf7Q_HuPYoYH49wVKFibH0YSLI_-l1negP4XGZxYnYj-vS0rHWd8Yypn76ESe8xdkzExbfGUeW8nXXeJ8U",
+      "meet": "ICEDX1:Q5yL6K5oswMpPD4jvgr7uhYwGeeaa7qh7IN7Fw5ndgd0gq_ca1kX5PS6NqWgTlH2uqx1g1-ztEp5bXgCLjzmejDS0LlOl0yJMlTwVJJaZNA",
       "talks": [
         {
           "time": "",
@@ -3768,7 +3768,7 @@ window.ICED26_DATA = {
       "title": "F - Papers 30",
       "fullName": "Session 15I: F - Papers 30",
       "type": "paper",
-      "meet": "ICEDX1:Xf3E5SJuNrwtjhM5i_ig9CY6uPri-RpaZSYYrGaqH4KbeC6oLL32CB7mPMMbpucXPS8E7v9FhF6AUiSQHwr_hr55vlulDoZLTBbdY42YI0w",
+      "meet": "ICEDX1:lCcxGd-3g8BhAS88CCX9q3Kc7KciGdVhuD5P17UY9OLD19J8fqo-MkS3G3QHJI40vKRjPPWvSJRBwNO7WQzxJv6Yfjh66e0rranZAwFoCng",
       "talks": [
         {
           "easychair_id": "311978",
@@ -3833,7 +3833,7 @@ window.ICED26_DATA = {
       "title": "F - Papers 31",
       "fullName": "Session 15G: F - Papers 31",
       "type": "paper",
-      "meet": "ICEDX1:T1JoC75eipCMQFlBDMmtSVNo7LTk8koKQFK5FiRqcebS3OpSaTaQTQwx7QYmRJKYcC2gJENn89tD3zIq1f4Y0Y3ccKqNbBNnyP9pN3GbLhA",
+      "meet": "ICEDX1:Zg25JhXu7qAGjfjhkAr94P-TxMM4nfysgj36tO7XrXz7w6GXny1nWIijj694-rnNyoHQB21ky8IafNckZKhTkA6qrBGId1MIlcf43hgtoIA",
       "talks": [
         {
           "easychair_id": "312029",
@@ -4309,7 +4309,7 @@ window.ICED26_DATA = {
       "title": "F - Special Symposium 8: Welcome to the ICED Community",
       "fullName": "Session 15N: F - Special Symposium 8: Welcome to the ICED Community",
       "type": "symposium",
-      "meet": "ICEDX1:Prx0a6pyIyD49SNNW5FOJ_Dr9yVwZYQLP5sznJmaBTz2kiWOLikvS_rnaU1B6ARBbnw68jdPJoV0dSfFIXlm11XnQbT9N4XI4qEjD1kh6ug",
+      "meet": "ICEDX1:Hnozk3sY8PVlYCb85v4XtseNs-A0aWE3_p6Lw_ErfqV7eU_1QUnrpn3IJjhcPgj0aY_u34WzwH_pCUVtvy_Q9G6haeXXVeyTvPiUzWLu1S8",
       "talks": [
         {
           "easychair_id": "311660",
@@ -4334,7 +4334,7 @@ window.ICED26_DATA = {
       "title": "F - Papers 29",
       "fullName": "Session 15C: F - Papers 29",
       "type": "paper",
-      "meet": "ICEDX1:ji9BsX2KYOz68I3C74C77V3m6nUpc3XRIT_ndsS6173P-BiFXvhbvxGEX39wRuicC5oWrkFhfsuoalhvqpGPheAe-zKZVT9URIPsow1o024",
+      "meet": "ICEDX1:c5W5mjNTIGxwPpxesjvsu70cuW1heUjO15F3B6GohYBg4xS6Tmbn_dczzFgp2o80xxXGhrOj1KtgbOvMaYlD9TcRn3QdRjtkFCDSVbMXfGo",
       "talks": [
         {
           "easychair_id": "311841",
@@ -4399,7 +4399,7 @@ window.ICED26_DATA = {
       "title": "Lunch Break",
       "fullName": "Lunch Break",
       "type": "break",
-      "meet": "ICEDX1:B7MYM-nKuZ7EkG-pRgL5cyBpDU0BYno-Su3rL8syVqL7bBG3c_lr0DMjNi1Uiyx5CVUJvMJ2g06vPlgujixd5q_DWhqKY6UU7IB6WK387OQ",
+      "meet": "ICEDX1:0z9hLQe9WHTaMYM-pqb-qJNCVEFNOMeb-vDdb5yHYorf_zCG05a6iftN676B9SntBOBnTWY3vaum5x9Ol-XfgrNArB1lMxvRjpW99n40jGY",
       "talks": [],
       "easychair_session_id": null,
       "cardTitle": "",
@@ -4417,7 +4417,7 @@ window.ICED26_DATA = {
       "title": "Keynote 3: Resourceful perspectives: Academic development for student and teacher agency – Franziska Zellweger",
       "fullName": "Session 16: Keynote 3: Resourceful perspectives: Academic development for student and teacher agency – Franziska Zellweger",
       "type": "keynote",
-      "meet": "",
+      "meet": "meet.google.com/ype-cvdh-zve",
       "talks": [],
       "easychair_session_id": "104885",
       "chair": "Mònica Feixas"
@@ -4433,7 +4433,7 @@ window.ICED26_DATA = {
       "title": "G - Special Session: Meet the IJAD Editors",
       "fullName": "Session 17P: G - Special Session: Meet the IJAD Editors",
       "type": "other",
-      "meet": "ICEDX1:QmjaQ01WD4HZ7tFdAy0YPNG-0y1_mHX9An6mUO8ITr5SpCIAgW8r6pCWx-AYOhrDEgiy3v9XMsx2ZC2qRkphhaXUjBxn1ccV7lRc_kJDgig",
+      "meet": "ICEDX1:HrY-Nk6YSN8T-l9yf-qPR16IpN2u0iCqkPME63n2SS7q50Psvei8Jj-zjw2fCjTjMnzlCMunO05cT41aOSxiqznQsKeCYpboT1vXbulvmqs",
       "talks": [
         {
           "easychair_id": "314175",
@@ -4458,7 +4458,7 @@ window.ICED26_DATA = {
       "title": "G - Collaborative Space 21",
       "fullName": "Session 17B: G - Collaborative Space 21",
       "type": "collaborative",
-      "meet": "ICEDX1:aBU2folPl0oN6z0LR8F_is_werQZjTN3raAz4hDlOQi9rxlaq3n0QKPUziaVprRhoqy-EPxv6hLf4m9a6qZCize-PNtSroeLAKJPH1YJYT0",
+      "meet": "ICEDX1:oqWVN2WS-8V1tKIbf5bJLkBhRshNwZmsQn5MpBmeavMpBPDt7wmcFhSoKjLvvTnU7BPjmXj6TSPCSNSrPK3AMZd6fevElERit9r2FxMmuVo",
       "talks": [
         {
           "easychair_id": "311734",
@@ -4483,7 +4483,7 @@ window.ICED26_DATA = {
       "title": "G - Posters 5",
       "fullName": "Session 17N: G - Posters 5",
       "type": "poster",
-      "meet": "ICEDX1:NfiFvmgh7CHqDsbh5bYmKtSJ12zFpTjdw4dgd1jxqbcyGSHh4Bt6_41be8iG-WPS821JvMD3Zel784Ego9GhdweOaqogFOdivj8rQ6HHgY4",
+      "meet": "ICEDX1:V9ONyrRKsECGa8R9u6S1hjTqpy_GWfIJgsu3MeLpKzedouL7zhcQFS6MkABwucyStSBrSrynM38rHXPWRFjdpIF8dYBwUNRBmPps5u0taao",
       "talks": [
         {
           "easychair_id": "311664",
@@ -4606,7 +4606,7 @@ window.ICED26_DATA = {
       "title": "G - Workshop 27",
       "fullName": "Session 17M: G - Workshop 27",
       "type": "workshop",
-      "meet": "ICEDX1:c-kd9xqt3u1wMPqJWpIITfG-vz2FyShnN9n0q5blBs4_mwNO7G6-r7pDk8v8XsiJO31Bo6WZqfxcv69NMMM9TL01TD5wfNgKKOrKO-rD6oA",
+      "meet": "ICEDX1:qQLWrx4gBm2WUYN87Fjm6pBfPgY6ctKaCiJQz2oY3eXbeAYRW-8dgBUwLKVK3KY8564dF7stdR9RQt2Qg_-A-FabYSfvFk2XHlgB15P4qNQ",
       "talks": [
         {
           "time": "16:15",
@@ -4637,7 +4637,7 @@ window.ICED26_DATA = {
       "title": "G - Collaborative Space 23",
       "fullName": "Session 17C: G - Collaborative Space 23",
       "type": "collaborative",
-      "meet": "ICEDX1:amnEjjlLq-sj_6Okl79dpyq0iAP0cWLsQYsub47X14vhRjA2OFXE7lAuIxSToy2qf4jFJWAYnrcXddSz_rqqAktfs4nEH7vUquPszZAs-Ng",
+      "meet": "ICEDX1:T8BKJossxvkWXksx5EqwNv2HjgR1qwjtWk9NxTynKPW_wqYzMPFXfKKfMNE1VLTa69KBKWU_82HLOnBb4O0pICNH-DAmIq8W2F6GhAbpslE",
       "talks": [
         {
           "easychair_id": "311744",
@@ -4875,7 +4875,7 @@ window.ICED26_DATA = {
       "title": "G - Collaborative Space 22",
       "fullName": "Session 17D: G - Collaborative Space 22",
       "type": "collaborative",
-      "meet": "ICEDX1:nXC1DsVIxdRcO18e633ts502uBm-iLZG82f6dGI1kctG93aWHnA2qHF6Lp14Q-HP0gciR1SUwSi3ZmunyRs-P3QQage9juf4JPWjgQDAuiA",
+      "meet": "ICEDX1:B6QAkbxvFe0JTErzDdVUBW2mbRbUtmeFlAu7yS8GHXjWUyKE-aC8FPTasbMHp2r3MCWA2mDQR_GEaViFHWuQ0vNdpr2UbNKwZxqTZtQCo8k",
       "talks": [
         {
           "easychair_id": "311751",
@@ -4900,7 +4900,7 @@ window.ICED26_DATA = {
       "title": "H - Collaborative Space 24",
       "fullName": "Session 18A: H - Collaborative Space 24",
       "type": "collaborative",
-      "meet": "ICEDX1:qIfxfE3CIJEe6EYgIeNfrxxTPKBQzXKSSH_7B4yGKhRfrgeWhM3nzLQqDe82IdLgeiedLKsLC6HxgmD6fn3frsnqmrASChn2lSVtD4n_VRo",
+      "meet": "ICEDX1:Ohjz3sAYlrv6XkElTueN-hjBqG04b6t-P2reos4ZkV9n3zjFjdnakX_8AIiytyvd2VcuEB2JtJAy7f9oHoic4zRx4X8EVEyKgpR38kL8dWY",
       "talks": [
         {
           "easychair_id": "311735",
@@ -4925,7 +4925,7 @@ window.ICED26_DATA = {
       "title": "H - Collaborative Space 25",
       "fullName": "Session 18B: H - Collaborative Space 25",
       "type": "collaborative",
-      "meet": "ICEDX1:sKWXzAZ0U1FQx1ZN5Jkek_YsJTqjuzcsGRIemqB77cpI1KxePcIzaWWDq83GoZDZOSa1yEJIs-Dh2djIQprPDrA9bq63gIGa3ldqprrX_x8",
+      "meet": "ICEDX1:bJkcW4rOIkUE6bx8TahL0GYCLh5ZHXC_VMZVOOplEF8fHrH84MZ_6Ny18ECZE0Og5_vypeaWrhteIQVmOj907UhpJD_GLzlvrCqhlF-JcQs",
       "talks": [
         {
           "easychair_id": "311736",
@@ -4950,7 +4950,7 @@ window.ICED26_DATA = {
       "title": "I - Collaborative Space 31",
       "fullName": "I - Collaborative Space 31",
       "type": "collaborative",
-      "meet": "ICEDX1:jaHHQ8A6SI4kVuCtw6BEvnf8mYIWX1cVYR623V-iUhk9bZpx--b0Db_B0-ayTUxJdBfJQt_dOZx6PijxT6HTdieSx_uuCzCXNtqtqRMdQEo",
+      "meet": "ICEDX1:NW7Gmy9Ul7De1D2SYt2ZVN5ThKXGr7qIzxpGhBw91jwn1cQNT11UXeKoNeUwNSkY-x_UbLdaTkWKJz_gUyCmIELOB_QGgK9caXONAzJOJCU",
       "talks": [
         {
           "time": "17:30",
@@ -5025,7 +5025,7 @@ window.ICED26_DATA = {
       "title": "H - Workshop 36",
       "fullName": "Session 18N: H - Workshop 36",
       "type": "workshop",
-      "meet": "ICEDX1:HFnMFWT1RQKsTkNR7ieSMJVG4kBzQmcKad8KcYc-WHsRG4CGSRYMrB_6mz9fMvzDRCaBS38GbMmoFVpikptuRTu-ZnxItBDbnkEEUkd5C3o",
+      "meet": "ICEDX1:CQF83VX8xYJNClnbhvtvv2zv9mwe8UtZKjb_ys2Dsp5zhom0WdSvjIq-pfpR1VvoG6nE4SkMTJiOw4J-m2PnUvX74OlUPzyMV7JevyqPYyo",
       "talks": [
         {
           "easychair_id": "311692",
@@ -5050,7 +5050,7 @@ window.ICED26_DATA = {
       "title": "H - Collaborative Space 27",
       "fullName": "Session 18C: H - Collaborative Space 27",
       "type": "collaborative",
-      "meet": "ICEDX1:IK2NX9Kpqi0-4ttz1TjxCbwDrcZlGDdlAqlOdT2h76tp-ll7x-5BWBJKVr9n6zQdsLoRVebzJBUVPSURHTVT0bS5DvPnT0xX74OP9YPl10A",
+      "meet": "ICEDX1:lym2BgJ9K2PGY6lE7CHRnF1mZ7UmmRz9mI5MOXvvdfeIt2_DS4CER6P39iSvCp09FKJxnLD3vfteoln_tgNYUGC1oD5Ka-PlgXDg0BTOyWQ",
       "talks": [
         {
           "easychair_id": "311753",
@@ -5276,7 +5276,7 @@ window.ICED26_DATA = {
       "title": "H - Collaborative Space 26",
       "fullName": "Session 18D: H - Collaborative Space 26",
       "type": "collaborative",
-      "meet": "ICEDX1:xSw5QTASAtwAc7dM0sC-kWLLZ_2hfaoXfL5C4Wld_icApfPknnlceJgs-nSYsR-VF97Xr3IFuj5Py4ft8Wp8TV9BTuhnwXOc5ee-jrRwVGk",
+      "meet": "ICEDX1:a4XyQdL51lp7C7pmZj7BZlD09Bgr1iLL2wA_mQMCxLZwHqLKN8RWWWhNHcMw10cUBFohaHqpDxDPkUING4jskht9fid4QbYlKb5-EG5CWa0",
       "talks": [
         {
           "easychair_id": "311754",
@@ -5330,7 +5330,7 @@ window.ICED26_DATA = {
       "title": "I - Collaborative Space 28",
       "fullName": "Session 19A: I - Collaborative Space 28",
       "type": "collaborative",
-      "meet": "ICEDX1:vdNh-tWTfgdL0TxK_291OI3pyjYoX_aqGFPb45ApIFxo2FcGH6rTP1aZP1I8lQMaaml0Ig34lfO7zAcL2YHBLeOz1V985Wrwn02gICu5F94",
+      "meet": "ICEDX1:mMBke7qds2vqI1UYoCGWcpr0alOojdCikHAzmK1ZdbfIQO9dHH4ZeVBwYRIM_aYW_LCGTaRnErYtwBBbBQ4-Cog-Mzum73vo7K9Ih6M88TM",
       "talks": [
         {
           "easychair_id": "311737",
@@ -5355,7 +5355,7 @@ window.ICED26_DATA = {
       "title": "I - Collaborative Space 29",
       "fullName": "Session 19B: I - Collaborative Space 29",
       "type": "collaborative",
-      "meet": "ICEDX1:cc-LEEa45r8m3kJRfi4OaHpHWcRCY4DKhLQrTVgQkBekm5qM7RWpYPXgQBP6hZKCB1XQ4LMquad7bSToMRiC7e9IGngk9URxln7-X-IG_Aw",
+      "meet": "ICEDX1:iJu2ILgz7C3HC6A6LscQYkhCxdKAq53qtIWf4McrD-3jSeTqmRltRPt8Yku8AoMYyPT1kW8ROnjh3oybnq0CYCRd9DM04TcW7gJ8iRhijWA",
       "talks": [
         {
           "easychair_id": "311738",
@@ -5430,7 +5430,7 @@ window.ICED26_DATA = {
       "title": "I - Workshop 45",
       "fullName": "Session 19M: I - Workshop 45",
       "type": "workshop",
-      "meet": "ICEDX1:qAh5tW--laLIs8mpUY3uyHx2svHCl9SV8o0tvNlAUsYZllq2s6nVhLupZkJjY3JUVmAf_2Pqovq7qV4jsXesHL83i4iVjledordInKUIUYk",
+      "meet": "ICEDX1:x88TXF6a4w6zsCl_vU07OXFc_j8mP_Y4hZH89omn5NgBA3M_AYLxNIsdgrm7IZlFW455y0u4HqAjPoEfLt9eGOJhvaCaFTlisEoHYwlQW2U",
       "talks": [
         {
           "easychair_id": "311718",
@@ -5605,7 +5605,7 @@ window.ICED26_DATA = {
       "title": "I - Collaborative Space 30",
       "fullName": "Session 19D: I - Collaborative Space 30",
       "type": "collaborative",
-      "meet": "ICEDX1:w9qtXP-BmkWrRNE4CL7sVmTo6MLHd01f1InD4_Sc0LNsvzy4UPOgYXmqmyvOFuUltIix3i9J9jVIpvRzUJ7bLZI9c464drWWharYM22HUMs",
+      "meet": "ICEDX1:fHoY2IBDmiqo2JVPmvWgLfolqrbzIo1juTp5y7d4s2irS_no_-Kuwt929l32kzA95dZiH_NBfrMMHQgfL9DgzF01h2WK64dd_e_7WdGCdmM",
       "talks": [
         {
           "easychair_id": "311759",
@@ -5630,7 +5630,7 @@ window.ICED26_DATA = {
       "title": "J - Collaborative Space 32",
       "fullName": "Session 20D: J - Collaborative Space 32",
       "type": "collaborative",
-      "meet": "ICEDX1:XWTkqbexC5kAiFGNgRcFbSY-T54R3I3hYS7X_cMdicdgKA8lLfwLuM_HIEeUNcZ2i4PA7jIxNIGwLSLh6c-JepJv3GgteFTSJAVvj3oeWkg",
+      "meet": "ICEDX1:HDyEjOKQgEfCdfxOOsGHXRBJyOurFE1kSYUY6wNrQl8KtNhn40vj7uAnFp7NTUHKUnTrBsXld1rynagMH6smmWcoKJ_B4o0nOt63HB34bPA",
       "talks": [
         {
           "easychair_id": "311758",
@@ -5655,7 +5655,7 @@ window.ICED26_DATA = {
       "title": "J - Collaborative Space 33",
       "fullName": "Session 20E: J - Collaborative Space 33",
       "type": "collaborative",
-      "meet": "ICEDX1:a8OfZFNcJ1A-mi5JoR1EgLpfwkX_s8mKIIDPvWw2dmCypBqywOxiqxRvXnmljPHDvxauD9zaGEux9SnTSvD3pHAqO7I_e0UJ7KYUhsDFBAo",
+      "meet": "ICEDX1:aeqBJwCLnKsri2JOGpt0o0zGeS2lzovRGHXc-jhX5qEWfI5m7zxUaKrWcmP0kAoEQYzm6-1iTK8vhRzxCTQXciG38XZVpclz2PzVyP51yok",
       "talks": [
         {
           "easychair_id": "311764",
@@ -5680,7 +5680,7 @@ window.ICED26_DATA = {
       "title": "J - Special Poster Session: Meet the Journals from ICED Networks",
       "fullName": "Session 20C: J - Special Poster Session: Meet the Journals from ICED Networks",
       "type": "poster",
-      "meet": "ICEDX1:DkqPhfA3CcB214UK0_SzC8vPs9Twr6S6djwxgYLfa7g_X-nhVZxdsQ6dIllGeUPRANNqhHYoYaSHeew3yQ0boz8Lc2-UVBUBKPaEdOQji6Q",
+      "meet": "ICEDX1:jhbsdvgdSyvJcCMczJSeg_WS-PLUsoaI0C8EFGTx5WDmCAFPTpkOAtOpQ3eO7bnYaAnV1EBjcDdXR0YmwiDxfbhZvB_5yL4Uvm7WvyWXe5Y",
       "talks": [],
       "easychair_session_id": "105656",
       "description": "Editors, Co-Editors or delegated colleagues representing the Editorial Boards of the following journals linked to ICED National Networks present a journal information poster designed to help conference participants understand publication opportunities in higher education teaching and learning:\n- “To Improve the Academy”, from the US network POD\n- “die hochschullehre”, from the German network dghd\n- “Dansk Universitetspædagogisk Tidsskrift” (DUT), from the Danish network DUN\n- “All Ireland Journal of Teaching and Learning in Higher Education” (AISHE-J), from the Irish network AISHE\n- “Revista de Docencia Universitaria” (REDU), from the Spanish network REDU\n- “Higher Education Research and Development” (HERD), from the Australian network HERDSA"
@@ -5746,7 +5746,7 @@ window.ICED26_DATA = {
       "title": "J - Workshop 53",
       "fullName": "Session 20N: J - Workshop 53",
       "type": "workshop",
-      "meet": "ICEDX1:LnDMZ3sv0qn1rzZPKjEbitzvHtrXOMq0unMK_dV-dQxfeoNlculgkd82fe41SUz2AHpqfBEudYWbogG5XYlumydxBuTMnWzDiqb6NsPUhZQ",
+      "meet": "ICEDX1:94JTQZ5y28_93FkF5jku43NQXBEu7UyRikcAXkmC14S2EOf2pMh7cEAUeBPNJ2_PuNrx_Sd6W7q3E7gonbc8_gMNbhZVrfEeD6mdhDA2r7c",
       "talks": [
         {
           "easychair_id": "311684",
@@ -5771,7 +5771,7 @@ window.ICED26_DATA = {
       "title": "J - Collaborative Space 35",
       "fullName": "Session 20F: J - Collaborative Space 35",
       "type": "collaborative",
-      "meet": "ICEDX1:7ImxbBxovNe0P1vLVW9e-JUGdRBUEKeapHMW5QOs5iNdCLmBkcGfVagRtGMyYD-iT4Z0FWi-Op7V7ydCf-UPMipfQEw2aul57Dfk0bUgf_g",
+      "meet": "ICEDX1:8HvxEE9wQAkXnUdn3v6jHoZKIin56iUVty4L4gq6WRbu_54pEq33ohUC8rMsyOJQFtTX7635aoFlBv5d304xaTWSsLUzpAXK4A7VRg0Al5U",
       "talks": [
         {
           "easychair_id": "311821",
@@ -5966,7 +5966,7 @@ window.ICED26_DATA = {
       "title": "G - Collaborative Space 34",
       "fullName": "Session 20A: G - Collaborative Space 34",
       "type": "collaborative",
-      "meet": "ICEDX1:w0KVU7Cc5nblHEkdfraP90ZFOELGlCmPDwNj4R_WFOHr6zReg2f2T3a2TLA8_8qF8spqaXDggF23b7VvETyKgaM5CS551T9rkzmwqxYiA5o",
+      "meet": "ICEDX1:z1enrrKTvTzM9oWMltDNeic4T09zPaQDYjdW1Vos2c53KRCokc2_Ot3YESaZjDj-h30toJBo1unUKMIbIof1f5qeCoR8mTmOXtxCAARGp6M",
       "talks": [
         {
           "easychair_id": "311752",
@@ -5991,7 +5991,7 @@ window.ICED26_DATA = {
       "title": "Coffee Break",
       "fullName": "Coffee Break",
       "type": "break",
-      "meet": "ICEDX1:4wZiTRvtV92seh9OLKrgT2m7hzMBL1rouqq8bPirEdcaQsS7lIeuSVuaybXPWFpJvMzuiy2Md1UFIEj_Vmht-syWUil3oQKc8DcJsQ9Rwhk",
+      "meet": "ICEDX1:hUULUTGOvbllpKpl7wyLqP6Sj1Ca8sxu7Gb71MlI5PqZbS1BRdvaw_lOePzZrQw29qIfpcXByrEU-gDDMq0ph_MamVLWyBEpI5SSCMXaAj0",
       "talks": [],
       "easychair_session_id": null,
       "cardTitle": "",
@@ -6009,7 +6009,7 @@ window.ICED26_DATA = {
       "title": "K - Symposium 9",
       "fullName": "Session 21N: K - Symposium 9",
       "type": "symposium",
-      "meet": "",
+      "meet": "meet.google.com/ype-cvdh-zve",
       "talks": [
         {
           "time": "11:00",
@@ -6038,7 +6038,7 @@ window.ICED26_DATA = {
       "title": "K - Posters 6",
       "fullName": "Session 21A: K - Posters 6",
       "type": "poster",
-      "meet": "ICEDX1:CMNeKCo42P38QhxGaTLdZM_0_PrdLx61zWSBk8O-AAGX15eGoA8cGcDzW1Xe2x064g9unyO49AT13jTkXP63yrCd6wYT2jb0y9moGEWAqXM",
+      "meet": "ICEDX1:fLtulQffm0yN4CcgH_VjAdqJhaInMa9eY-lsiA66gzih0_ol3bZKYNTsqqS9THpuyC0E1-ihH7kMFVIjUD5ac1ZIw-t8HoP3zDsoCKpIDp4",
       "talks": [
         {
           "time": "",
@@ -6217,7 +6217,7 @@ window.ICED26_DATA = {
       "title": "K - Papers 40",
       "fullName": "Session 21H: K - Papers 40",
       "type": "paper",
-      "meet": "ICEDX1:6VISGRmrxXdTsq0BX08CYL-dh8nL90jHK0ZIyh_uLTjw11an3t8gi4fQ5MVVJ2W-JKmZSxGA_wuN4vrlPiRdgsblqHG7_Xvv3JNOLxiPrnA",
+      "meet": "ICEDX1:xhb5P0qknNRbeTEto0J80D0RXENdD5OVpdAskhEimafwb9l0-7OSltxM5GtW0OurtsSZciDIhrIMjVxvh-N-YDm0eT8SaHsDc3Hn5eZsBoU",
       "talks": [
         {
           "time": "11:00",
@@ -6684,7 +6684,7 @@ window.ICED26_DATA = {
       "title": "K - Symposium 12",
       "fullName": "Session 21K: K - Symposium 12",
       "type": "symposium",
-      "meet": "ICEDX1:nfJK7QREtUTAyj40vGHVR3AHQiRUBr3vYzZhRgFgEh6Yg_l5LWrrLhpkdo0uOavVsM1upSOK6ov_2gx66jjZ9PmF6c8af39ISIwud_DCMF4",
+      "meet": "ICEDX1:5s6jVWSyP0GZdyikFo8hHWJ7cTUr-WJIkCvS2fNMOBPDTOL_1k8Y_kpqiVFiYB-T5h9oOySMOLhbi6d5v4Q2iVC4dbzppav3MLvmjEqbGic",
       "talks": [
         {
           "easychair_id": "311656",
@@ -6710,7 +6710,7 @@ window.ICED26_DATA = {
       "title": "K - Symposium 11",
       "fullName": "Session 21M: K - Symposium 11",
       "type": "symposium",
-      "meet": "",
+      "meet": "meet.google.com/ype-cvdh-zve",
       "talks": [
         {
           "time": "11:00",
@@ -6740,7 +6740,7 @@ window.ICED26_DATA = {
       "title": "REDU and ICED Presidents' Talk",
       "fullName": "Session 22: REDU and ICED Presidents' Talk",
       "type": "keynote",
-      "meet": "",
+      "meet": "meet.google.com/ype-cvdh-zve",
       "talks": [],
       "easychair_session_id": "105689",
       "chair": "Idoia Fernandez, Ariane Dumont"
@@ -6756,7 +6756,7 @@ window.ICED26_DATA = {
       "title": "Closing Remarks",
       "fullName": "Session 23: Closing Remarks",
       "type": "keynote",
-      "meet": "",
+      "meet": "meet.google.com/ype-cvdh-zve",
       "talks": [],
       "easychair_session_id": "105690",
       "media": {
