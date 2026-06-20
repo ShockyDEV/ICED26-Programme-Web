@@ -2340,7 +2340,10 @@ a { color: inherit; }
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 60;
+  /* Must sit ABOVE every modal it can be launched from — the session modal and
+     agenda modal (z-index 200) and the Golden City modal (220). At 60 it was
+     rendering BEHIND the open session card, so the prompt was invisible. */
+  z-index: 300;
   padding: 20px;
 }
 .sm-codegate {
