@@ -48,6 +48,18 @@ const GITHUB_PATH = "data/programme.js";
 const GITHUB_BRANCH = "main";
 const GITHUB_TOKEN_KEY = "iced26-github-token";
 
+// ── Access code memory ────────────────────────────────────────────────────
+// The 6-digit access code is remembered in THIS browser only (never published),
+// exactly like the GitHub token above. This lets every publish re-encrypt newly
+// applied Meet/YouTube links with it automatically — set once, applied
+// retroactively — instead of retyping it each session.
+const GLOBAL_CODE_KEY = "iced26-global-code";
+const PANEL_CODE_KEY = "iced26-panel-code";
+function readStoredCode(key) { try { return localStorage.getItem(key) || null; } catch (_) { return null; } }
+function writeStoredCode(key, code) {
+  try { code ? localStorage.setItem(key, code) : localStorage.removeItem(key); } catch (_) {}
+}
+
 // Build the exact programme.js content (used by both the download-Exportar
 // path and the GitHub direct-publish path so they stay byte-identical).
 // Strip the "Some Online Presentations" / "Some Presentations Online" note
@@ -79,9 +91,10 @@ function buildProgrammeJS(data) {
 // never exposes a usable URL. Returns a NEW data object (does not mutate).
 //   • Each session with an access scope gets its plaintext meet/youtube
 //     encrypted with that scope's code.
-//   • The code is taken from meta.access.pending{Global,Panel}Code, which the
-//     admin set this session. If a link is plaintext but its scope has no
-//     pending code AND no prior verifier, we leave it (can't encrypt yet).
+//   • The code is taken from meta.access.pending{Global,Panel}Code if the admin
+//     just set it this session, else from the code remembered in THIS browser
+//     (localStorage). So a code set once keeps encrypting newly applied links on
+//     every later publish. If neither is available the link is left plaintext.
 //   • Already-encrypted values (ICEDX1:) are left untouched.
 //   • pending*Code fields are stripped from the published JSON (never shipped).
 async function encryptLinksForPublish(data) {
@@ -89,8 +102,8 @@ async function encryptLinksForPublish(data) {
   const C = window.ICED26Crypto;
   if (!ac || !ac.enabled || !C) return data;
 
-  const globalCode = ac.pendingGlobalCode || null;
-  const panelCode = ac.pendingPanelCode || null;
+  const globalCode = ac.pendingGlobalCode || readStoredCode(GLOBAL_CODE_KEY) || null;
+  const panelCode = ac.pendingPanelCode || readStoredCode(PANEL_CODE_KEY) || null;
   const panelId = ac.panelSessionId ? String(ac.panelSessionId) : null;
 
   const encField = async (val, code) => {
@@ -126,6 +139,19 @@ async function encryptLinksForPublish(data) {
   delete access.pendingGlobalCode;
   delete access.pendingPanelCode;
   return { ...data, sessions, rooms, meta: { ...data.meta, access } };
+}
+
+// Count Meet/YouTube links that would ship as plaintext (no code available)
+// while the access gate is ON — used to warn before exposing them publicly.
+function countExposedRemoteLinks(data) {
+  const C = window.ICED26Crypto;
+  const ac = data.meta && data.meta.access;
+  if (!ac || !ac.enabled || !C) return 0;
+  const isPlain = (v) => !!v && /^https?:\/\//i.test(v) && !C.isEnc(v);
+  let n = 0;
+  for (const s of data.sessions) { if (isPlain(s.meet)) n++; if (isPlain(s.youtube)) n++; }
+  for (const r of (data.rooms || [])) { if (isPlain(r.meet)) n++; if (isPlain(r.youtube)) n++; }
+  return n;
 }
 
 // UTF-8-safe base64 encoder (btoa alone breaks on non-ASCII chars like
@@ -855,6 +881,16 @@ function AdminEditor({ onLogout }) {
     setPublishStatus(null);
     try {
       const dataToPublish = await encryptLinksForPublish(data);
+      const exposed = countExposedRemoteLinks(dataToPublish);
+      if (exposed > 0) {
+        const go = window.confirm(
+          "⚠️ " + exposed + " enlace(s) de Meet/YouTube se publicarían SIN cifrar " +
+          "(no hay código recordado en este navegador).\n\n" +
+          "Ve a «Códigos de acceso», introduce el código una vez, y vuelve a publicar " +
+          "para que queden protegidos con el candado.\n\n¿Publicar de todas formas?"
+        );
+        if (!go) return;
+      }
       const sha = await githubPublish(buildProgrammeJS(dataToPublish), msg, token);
       // Treat the published state as the new baseline. isDirty is a useMemo
       // derived from data vs. original.current — to flip it back to false we
@@ -2181,6 +2217,8 @@ function MetaTab({ data, setData }) {
 const ACCESS_TOKEN = "ICED26-OK";
 function AccessCodesEditor({ data, setData }) {
   const access = data.meta.access || {};
+  const globalRemembered = !!readStoredCode(GLOBAL_CODE_KEY);
+  const panelRemembered = !!readStoredCode(PANEL_CODE_KEY);
   const [globalCode, setGlobalCode] = React.useState("");
   const [panelCode, setPanelCode] = React.useState("");
   const [busy, setBusy] = React.useState(false);
@@ -2196,9 +2234,10 @@ function AccessCodesEditor({ data, setData }) {
     setBusy(true);
     try {
       const v = await window.ICED26Crypto.encrypt(ACCESS_TOKEN, globalCode);
+      writeStoredCode(GLOBAL_CODE_KEY, globalCode);   // remember in this browser → cifra los enlaces futuros
       setAccess({ enabled: true, token: ACCESS_TOKEN, globalVerifier: v, pendingGlobalCode: globalCode });
       setGlobalCode("");
-      setMsg({ kind: "ok", text: "Código global actualizado. Al publicar, los enlaces se cifrarán con él." });
+      setMsg({ kind: "ok", text: "Código global guardado en este navegador. Cada vez que publiques, los enlaces nuevos que hayas aplicado se cifrarán con él automáticamente." });
     } catch (e) { setMsg({ kind: "err", text: "Error: " + e.message }); }
     setBusy(false);
   };
@@ -2207,9 +2246,10 @@ function AccessCodesEditor({ data, setData }) {
     setBusy(true);
     try {
       const v = await window.ICED26Crypto.encrypt(ACCESS_TOKEN, panelCode);
+      writeStoredCode(PANEL_CODE_KEY, panelCode);     // remember in this browser
       setAccess({ enabled: true, token: ACCESS_TOKEN, panelVerifier: v, pendingPanelCode: panelCode });
       setPanelCode("");
-      setMsg({ kind: "ok", text: "Código del panel actualizado. Al publicar, su enlace se cifrará con él." });
+      setMsg({ kind: "ok", text: "Código del panel guardado en este navegador. Su enlace se cifrará con él al publicar." });
     } catch (e) { setMsg({ kind: "err", text: "Error: " + e.message }); }
     setBusy(false);
   };
@@ -2221,9 +2261,11 @@ function AccessCodesEditor({ data, setData }) {
       <h3>Códigos de acceso (Meet / YouTube)</h3>
       <p className="muted">
         Los enlaces remotos se ocultan tras un <strong>código de participante</strong> de 6 dígitos.
-        El código <strong>no se guarda</strong> en ningún sitio: aquí solo se establece o se cambia.
-        Compártelo con los participantes por email. Recuerda: el repositorio es público, por eso usamos
-        cifrado; usa también la <em>sala de espera</em> de Meet como capa extra.
+        Se establece <strong>una sola vez</strong> y queda recordado en <strong>ESTE navegador</strong>
+        (nunca se publica): a partir de ahí, cada vez que pulses <em>Publicar</em>, los enlaces nuevos que
+        hayas <em>Aplicado</em> se cifran automáticamente con él. Compártelo con los participantes por email.
+        El repositorio es público, por eso usamos cifrado; usa también la <em>sala de espera</em> de Meet
+        como capa extra.
       </p>
 
       <label className="checkbox-row" style={{ marginBottom: 12 }}>
@@ -2243,6 +2285,9 @@ function AccessCodesEditor({ data, setData }) {
       </Field>
       <p className="muted" style={{ marginTop: -4 }}>
         Estado: {access.globalVerifier ? <strong style={{ color: "#2F6E67" }}>✓ configurado</strong> : <span style={{ color: "#A03D08" }}>sin configurar</span>}
+        {globalRemembered
+          ? <span> · <strong style={{ color: "#2F6E67" }}>✓ recordado en este navegador</strong></span>
+          : (access.globalVerifier ? <span style={{ color: "#A03D08" }}> · ⚠ no recordado aquí: reintrodúcelo una vez para cifrar los enlaces nuevos</span> : null)}
         {access.pendingGlobalCode && <span> · cambio pendiente de publicar</span>}
       </p>
 
@@ -2257,6 +2302,9 @@ function AccessCodesEditor({ data, setData }) {
       </Field>
       <p className="muted" style={{ marginTop: -4 }}>
         Estado: {access.panelVerifier ? <strong style={{ color: "#2F6E67" }}>✓ configurado</strong> : <span style={{ color: "#A03D08" }}>sin configurar</span>}
+        {panelRemembered
+          ? <span> · <strong style={{ color: "#2F6E67" }}>✓ recordado en este navegador</strong></span>
+          : (access.panelVerifier ? <span style={{ color: "#A03D08" }}> · ⚠ no recordado aquí: reintrodúcelo una vez</span> : null)}
         {access.pendingPanelCode && <span> · cambio pendiente de publicar</span>}
       </p>
 
