@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-20T13-16
+// ICED26 programme — generated from admin panel 2026-06-20T13-28
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -116,7 +116,7 @@ window.ICED26_DATA = {
       "cluster": "hospederia",
       "code": "1.1",
       "active": true,
-      "meet": "https://meet.google.com/yvc-qbzn-xtm"
+      "meet": "https://meet.google.com/qes-wbpi-ycp"
     },
     {
       "id": "room-1-2",
