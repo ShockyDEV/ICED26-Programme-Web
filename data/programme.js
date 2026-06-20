@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-19T18-08
+// ICED26 programme — generated from admin panel 2026-06-20T12-59
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -6688,10 +6688,10 @@ window.ICED26_DATA = {
       "day": "2026-06-26",
       "start": "11:00",
       "end": "12:30",
-      "room": "sala-presentaciones",
-      "roomName": "Sala Presentaciones",
-      "roomCode": "SP",
-      "cluster": "iddi",
+      "room": "auditorio",
+      "roomName": "Auditorio Hospedería",
+      "roomCode": "AUD",
+      "cluster": "hospederia",
       "title": "K - Symposium 11",
       "fullName": "Session 21M: K - Symposium 11",
       "type": "symposium",
