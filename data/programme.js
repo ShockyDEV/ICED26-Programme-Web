@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-20T13-42
+// ICED26 programme — generated from admin panel 2026-06-20T14-00
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -123,7 +123,8 @@ window.ICED26_DATA = {
       "name": "ROOM 1.2",
       "cluster": "hospederia",
       "code": "1.2",
-      "active": false
+      "active": false,
+      "meet": "https://meet.google.com/dhd-vcto-nst"
     },
     {
       "id": "room-2-1",
@@ -213,7 +214,7 @@ window.ICED26_DATA = {
       "title": "PRE Parallel Workshops A - Workshop 1",
       "fullName": "Session 2A: PRE Parallel Workshops A - Workshop 1",
       "type": "workshop",
-      "meet": "",
+      "meet": "https://meet.google.com/dhd-vcto-nst",
       "talks": [
         {
           "easychair_id": "311642",
@@ -331,7 +332,7 @@ window.ICED26_DATA = {
       "title": "PRE Parallel Workshops B - Workshop 5",
       "fullName": "Session 3A: PRE Parallel Workshops B - Workshop 5",
       "type": "workshop",
-      "meet": "",
+      "meet": "https://meet.google.com/dhd-vcto-nst",
       "talks": [
         {
           "easychair_id": "311646",
@@ -431,7 +432,7 @@ window.ICED26_DATA = {
       "title": "PRE Parallel Workshops C - Workshop 9",
       "fullName": "Session 4A: PRE Parallel Workshops C - Workshop 9",
       "type": "workshop",
-      "meet": "",
+      "meet": "https://meet.google.com/dhd-vcto-nst",
       "talks": [
         {
           "easychair_id": "311641",
@@ -777,7 +778,7 @@ window.ICED26_DATA = {
       "title": "A - Papers 2",
       "fullName": "Session 7A: A - Papers 2",
       "type": "paper",
-      "meet": "",
+      "meet": "https://meet.google.com/dhd-vcto-nst",
       "talks": [
         {
           "time": "11:00",
@@ -1465,7 +1466,7 @@ window.ICED26_DATA = {
       "title": "B - Workshop 2",
       "fullName": "Session 8F: B - Workshop 2",
       "type": "workshop",
-      "meet": "",
+      "meet": "https://meet.google.com/dhd-vcto-nst",
       "talks": [
         {
           "easychair_id": "311673",
@@ -1977,7 +1978,7 @@ window.ICED26_DATA = {
       "title": "C - Workshop 11",
       "fullName": "Session 10G: C - Workshop 11",
       "type": "workshop",
-      "meet": "",
+      "meet": "https://meet.google.com/dhd-vcto-nst",
       "talks": [
         {
           "time": "16:15",
@@ -2859,7 +2860,7 @@ window.ICED26_DATA = {
       "title": "E - Papers 13",
       "fullName": "Session 13B: E - Papers 13",
       "type": "paper",
-      "meet": "",
+      "meet": "https://meet.google.com/dhd-vcto-nst",
       "talks": [
         {
           "easychair_id": "311955",
@@ -3691,7 +3692,7 @@ window.ICED26_DATA = {
       "title": "F - Papers 22",
       "fullName": "Session 15B: F - Papers 22",
       "type": "paper",
-      "meet": "",
+      "meet": "https://meet.google.com/dhd-vcto-nst",
       "talks": [
         {
           "easychair_id": "311877",
@@ -4566,7 +4567,7 @@ window.ICED26_DATA = {
       "title": "G - Workshop 20",
       "fullName": "Session 17F: G - Workshop 20",
       "type": "workshop",
-      "meet": "",
+      "meet": "https://meet.google.com/dhd-vcto-nst",
       "talks": [
         {
           "easychair_id": "311702",
@@ -4986,7 +4987,7 @@ window.ICED26_DATA = {
       "title": "H - Workshop 29",
       "fullName": "Session 18G: H - Workshop 29",
       "type": "workshop",
-      "meet": "",
+      "meet": "https://meet.google.com/dhd-vcto-nst",
       "talks": [
         {
           "easychair_id": "311695",
@@ -5391,7 +5392,7 @@ window.ICED26_DATA = {
       "title": "I - Workshop 38",
       "fullName": "Session 19F: I - Workshop 38",
       "type": "workshop",
-      "meet": "",
+      "meet": "https://meet.google.com/dhd-vcto-nst",
       "talks": [
         {
           "easychair_id": "311709",
@@ -5707,7 +5708,7 @@ window.ICED26_DATA = {
       "title": "J - Workshop 47",
       "fullName": "Session 20H: J - Workshop 47",
       "type": "workshop",
-      "meet": "",
+      "meet": "https://meet.google.com/dhd-vcto-nst",
       "talks": [
         {
           "easychair_id": "311686",
@@ -6149,7 +6150,7 @@ window.ICED26_DATA = {
       "title": "K - Papers 33",
       "fullName": "Session 21C: K - Papers 33",
       "type": "paper",
-      "meet": "",
+      "meet": "https://meet.google.com/dhd-vcto-nst",
       "talks": [
         {
           "easychair_id": "311883",
