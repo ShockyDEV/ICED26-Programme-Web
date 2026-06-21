@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-20T15-11
+// ICED26 programme — generated from admin panel 2026-06-21T17-09
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -2939,7 +2939,6 @@ window.ICED26_DATA = {
       "meet": "ICEDX1:NuQzKiaG-0oTmNV2FKCKePn1yNg2A1I0maYOsl4SJA-rEpP0MxAkn0ASI9RH-7Fj4itNie2_TW0H5UK1Q0CqDD4P1Rd-oPm22G8kjCKXImo",
       "talks": [
         {
-          "easychair_id": "311931",
           "time": "09:00",
           "title": "Towards an inclusive academic induction: Reflections from an online PG Dip: HE",
           "authors": "Benita Bobo, Pinkie Ntola, Xolile Xaba",
@@ -2948,7 +2947,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311845",
           "time": "09:15",
           "title": "Building Agency via a Train-the-Trainer Model for Student Assistants in First-Year Engineering",
           "authors": "Joelyn de Lima, Siara Isaac, Simone Deparis",
@@ -2957,7 +2955,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311957",
           "time": "09:30",
           "title": "“I used to think…, now I think…”: Capturing conceptual change in novice university teachers’ beliefs",
           "authors": "Sara Petchey",
@@ -2966,7 +2963,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311889",
           "time": "09:45",
           "title": "Rethinking support for novice academics: Evidence-informed principles for lasting change",
           "authors": "Aitor Mendia-Urrutia, Nekane Beloki, Cristina Arriaga, Karmele Arteaga",
@@ -2975,19 +2971,24 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "314318",
           "time": "10:00",
           "title": "Department-Driven Educational Development: Insights from Campus Listening Tours",
           "authors": "Matthew Mahavongtrakul",
           "presenter": "",
           "abstract": "Universities increasingly recognize that effective educational development requires moving beyond one-size-fits-all approaches to address the diverse pedagogical needs of academic disciplines. We present a case study from the XXXX’s [CTL], which conducted a series of departmental listening tours across nearly twenty academic units to better understand localized teaching challenges and support needs. We provided a semi-structured mechanism through which departments engaged directly with educational developers to articulate various priorities such as artificial intelligence, large class instruction, instructional technology, peer evaluation of teaching, and accessibility.\n\nThe resulting insights shaped a strategic shift toward department-centered faculty development, including the launch of new discipline-specific programming, expanded resource hubs, cross-campus collaborations, and low-to-high-touch initiatives such as the Peer Alliance for Classroom Excellence (PACE) which focuses on faculty community building and peer observation. We share the methods used in the listening tours, key thematic findings, and implications for academic developers seeking to deepen relationships with departments, highlighting our case as a collaborative model for change agency. Attendees will gain a practical framework for employing listening-driven approaches that foster departmental agency, align development initiatives with curricular design, and strengthen partnerships across campus.",
           "keywords": "",
-          "online": true
+          "video": true,
+          "videoUrl": "https://youtu.be/B4u2Cf_DW8w"
         }
       ],
       "easychair_session_id": "104859",
       "description": "Novice Teachers, Academic Induction and Conceptual Change",
-      "chair": "Iwona Maciejowska"
+      "chair": "Iwona Maciejowska",
+      "cardTitle": "",
+      "onlinePresenter": false,
+      "hybrid": false,
+      "cancelled": false,
+      "youtube": ""
     },
     {
       "day": "2026-06-25",
@@ -3236,7 +3237,8 @@ window.ICED26_DATA = {
           "presenter": "Monica Vesely",
           "abstract": "Our session will share emerging themes from our qualitative study on the impact of the Facilitator Development Workshop (FDW) on instructor development through the lens of the signature pedagogical approaches embedded in the FDW; namely the high impact nature of: (a) peer-based development, (b) learner-focused instruction, (c) experiential learning, and (d) reflective practice (Vesely, 2022). The FDW curriculum encourages participants to experiment with ideas, to connect with one another, and to expand conceptions of teaching and learning. Many FDW participants find facilitating to be the most challenging and rewarding work they have done in a teaching-related workshop context. Our research study aims to begin uncovering what changes in teaching practices are associated with participation in the FDW, how the experience of the FDW shapes participants' conceptions of teaching and learning, and in what ways, if any, the FDW experience might have permeated into other contexts. In our session, we will share the perceived impact of various aspects of the workshop and our thematic analysis of the shared accounts. We will also consider the broader applicability of reflection on professional practice to the global community in times of change.",
           "keywords": "",
-          "video": true
+          "video": true,
+          "videoUrl": "https://youtu.be/1O232U-_0-g"
         }
       ],
       "easychair_session_id": "104862",
@@ -3901,7 +3903,6 @@ window.ICED26_DATA = {
       "meet": "ICEDX1:Z1QAALpBaEGN56Wmd3VOsBF-nkmIitqCW1gBTNrexedFk4PZuKbkrpmaW3fsIPtR1dH8D_iSwdxYOvePGZlyWC5oHgrSUvvbDgdq69kCwcI",
       "talks": [
         {
-          "easychair_id": "311908",
           "time": "12:15",
           "title": "Pandemic Preparedness Capabilities: Emergency Response Capabilities and Sustainability of Universities in Kenya",
           "authors": "Kellen Kiambati",
@@ -3911,7 +3912,6 @@ window.ICED26_DATA = {
           "online": true
         },
         {
-          "easychair_id": "311964",
           "time": "12:30",
           "title": "Matching Higher Education Curricula with Labor Market Needs: The Case of Georgia",
           "authors": "Dimitri Japaridze, Shorena Maglakelidze, Davit Tutberidze, Ekaterine Shaverdashvili",
@@ -3920,7 +3920,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311807",
           "time": "12:45",
           "title": "Crisis Agency in Higher Education: How Uzbek Institutions Acted, Decided, and Transformed",
           "authors": "Elena Khanzadyan",
@@ -3929,17 +3928,16 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "314179",
           "time": "13:00",
           "title": "Agency and Strategy Enhancing Teaching, Learning and Organizational Transformation",
           "authors": "Nizar Bitar, Nitza Davidovich",
           "presenter": "Nizar Bitar",
           "abstract": "Centers for Teaching and Learning (CTLs) function as pivotal change agents in higher education, yet their transformative capabilities often remain underutilized. This paper examines how CTLs exercise agency as drivers of institutional transformation, introducing the empirically-validated CTL Change Implementation Framework (CCLIF). Based on qualitative data from 45 participants across diverse Israeli higher education institutions, the study reveals how CTLs orchestrate change through sophisticated 'middle-out' processes that bridge institutional leadership and faculty. Analysis demonstrates how these centers successfully navigate resistance, build multi-level stakeholder engagement, and create sustainable faculty learning communities despite lacking formal authority. The findings highlight variations across institutional types, with research universities emphasizing evidence-based approaches while teaching-focused institutions prioritize direct pedagogical impact. This research is particularly relevant to academic developers seeking to enhance their strategic positioning and institutional influence. The introduced framework provides practical guidance for CTL directors and academic developers to analyze their institutional contexts, develop sophisticated resistance management strategies, and design sustainable implementation approaches. By reconceptualizing CTLs as strategic change architects rather than merely service providers, this study empowers academic developers to more effectively exercise agency in transforming teaching and learning practices across higher education institutions. The findings directly address the conference theme by demonstrating how academic development units can function as powerful agents of change through sophisticated network-building, strategic positioning, and contextually-adaptive implementation approaches.",
           "keywords": "",
-          "video": true
+          "video": true,
+          "videoUrl": "https://youtu.be/-sFbfCT5pys"
         },
         {
-          "easychair_id": "311850",
           "time": "13:15",
           "title": "Reimagining Professional Learning Communities for Equity and Sustainability in South African Higher Education",
           "authors": "Anthea H M Jacobs, Rosaline Govender, Nereshnee Govender, Siyanda Ntlabathi",
@@ -3950,7 +3948,12 @@ window.ICED26_DATA = {
       ],
       "easychair_session_id": "104870",
       "description": "Strategy, Sustainability and Organizational Transformation",
-      "chair": "Anja Pawelleck"
+      "chair": "Anja Pawelleck",
+      "cardTitle": "",
+      "onlinePresenter": false,
+      "hybrid": false,
+      "cancelled": false,
+      "youtube": ""
     },
     {
       "day": "2026-06-25",
@@ -6364,7 +6367,8 @@ window.ICED26_DATA = {
           "presenter": "",
           "abstract": "Educational developers are confronting a profound pedagogical and epistemic shift—one in which students’ ways of thinking and creating knowledge are being reshaped by generative artificial intelligence (AI). The Dialogic Catalyst Triangle, positions AI not as a content generator but as a dialogic partner in inquiry. Drawing on dialogic pedagogy and Mercer and Littleton’s concept of interthinking, the framework integrates interthinking, archetypal team roles, and AI as an epistemic agent within a third-space ecosystem of learning. By enacting archetypal functions such as skeptic, clarifier, and integrator, AI can catalyze exploratory dialogue and deepen collective reasoning while preserving human agency. For educational developers, the framework offers a scholarly lens to guide faculty engagement with AI and advance critical, evidence-informed approaches to pedagogy and epistemic practice in higher education.",
           "keywords": "",
-          "online": true
+          "video": true,
+          "videoUrl": "https://youtu.be/K1CxwUb1MAc"
         },
         {
           "time": "11.30",
