@@ -1394,14 +1394,20 @@ function SessionEditor({ session, isNew, rooms, clusters, days, onSave, onCancel
     if (TIME_RE.test(s.start) && TIME_RE.test(s.end) && s.start >= s.end) e.end = "Debe ser posterior al inicio";
     if (!s.title || !s.title.trim()) e.title = "Obligatorio";
     if (!s.room) e.room = "Selecciona sala (o «Todas»)";
-    if (s.meet && !URL_RE.test(normalizeUrl(s.meet))) e.meet = "URL inválida";
-    if (s.youtube && !URL_RE.test(normalizeUrl(s.youtube))) e.youtube = "URL inválida";
+    // A stored value can be a plain URL OR an already-encrypted blob (ICEDX1:),
+    // produced by the participant-code gate at publish time. Both are valid; only
+    // genuinely malformed text is rejected.
+    const isEnc = (v) => window.ICED26Crypto && window.ICED26Crypto.isEnc(v);
+    const okLink = (v) => !v || isEnc(v) || URL_RE.test(normalizeUrl(v));
+    if (s.meet && !okLink(s.meet)) e.meet = "URL inválida";
+    if (s.youtube && !okLink(s.youtube)) e.youtube = "URL inválida";
     if (s.room !== "*" && !s.cluster) e.cluster = "Falta edificio";
     // Pre-recorded video links: flag any talk whose video URL still isn't valid
     // even after cleanup, with a clear message (never a silent browser block).
     (s.talks || []).forEach((tk, i) => {
-      const vu = normalizeUrl(tk.videoUrl);
-      if (tk.video && vu && !URL_RE.test(vu)) {
+      if (!tk.video) return;
+      const raw = (tk.videoUrl || "").trim();
+      if (raw && !isEnc(raw) && !URL_RE.test(normalizeUrl(raw))) {
         e.talks = `Vídeo de la contribución #${i + 1}: pega la URL completa de YouTube (https://…), no solo el código.`;
       }
     });
