@@ -358,6 +358,17 @@ function cleanFacilitators(f) {
 const TIME_RE = /^([01]\d|2[0-3]):[0-5]\d$/;
 const URL_RE = /^https?:\/\/.+/i;
 
+// Forgiving URL cleanup so a stray space or a missing protocol never blocks a
+// save. Trims, drops inner whitespace, and prepends https:// when it looks like
+// a bare domain (e.g. "youtube.com/..." or "www.youtube.com/..."). Returns ""
+// for empty input. Whatever it returns is what gets stored.
+function normalizeUrl(v) {
+  let s = (v || "").trim().replace(/\s+/g, "");
+  if (!s) return "";
+  if (!/^https?:\/\//i.test(s) && /^(www\.)?[\w-]+\.[\w-]+/.test(s)) s = "https://" + s;
+  return s;
+}
+
 // ── safeURL — only allow http(s) URLs into href, block javascript:/data: ──
 function safeURL(url) {
   if (!url) return "#";
@@ -1382,13 +1393,13 @@ function SessionEditor({ session, isNew, rooms, clusters, days, onSave, onCancel
     if (TIME_RE.test(s.start) && TIME_RE.test(s.end) && s.start >= s.end) e.end = "Debe ser posterior al inicio";
     if (!s.title || !s.title.trim()) e.title = "Obligatorio";
     if (!s.room) e.room = "Selecciona sala (o «Todas»)";
-    if (s.meet && !URL_RE.test(s.meet)) e.meet = "URL inválida";
-    if (s.youtube && !URL_RE.test(s.youtube)) e.youtube = "URL inválida";
+    if (s.meet && !URL_RE.test(normalizeUrl(s.meet))) e.meet = "URL inválida";
+    if (s.youtube && !URL_RE.test(normalizeUrl(s.youtube))) e.youtube = "URL inválida";
     if (s.room !== "*" && !s.cluster) e.cluster = "Falta edificio";
-    // Pre-recorded video links: flag any talk whose video URL isn't a real URL,
-    // with a clear message (instead of the browser silently blocking submit).
+    // Pre-recorded video links: flag any talk whose video URL still isn't valid
+    // even after cleanup, with a clear message (never a silent browser block).
     (s.talks || []).forEach((tk, i) => {
-      const vu = (tk.videoUrl || "").trim();
+      const vu = normalizeUrl(tk.videoUrl);
       if (tk.video && vu && !URL_RE.test(vu)) {
         e.talks = `Vídeo de la contribución #${i + 1}: pega la URL completa de YouTube (https://…), no solo el código.`;
       }
@@ -1415,9 +1426,9 @@ function SessionEditor({ session, isNew, rooms, clusters, days, onSave, onCancel
       hybrid: !!s.hybrid,
       cancelled: !!s.cancelled,
       // Keynotes & ICED talks are YouTube-only — never persist a Meet for them.
-      meet: (s.type === "keynote" || s.type === "talk") ? "" : (s.meet || "").trim(),
+      meet: (s.type === "keynote" || s.type === "talk") ? "" : normalizeUrl(s.meet),
       // Symposia/papers/workshops use Meet, not YouTube — keep youtube only for keynote/talk.
-      youtube: (s.type === "keynote" || s.type === "talk") ? (s.youtube || "").trim() : "",
+      youtube: (s.type === "keynote" || s.type === "talk") ? normalizeUrl(s.youtube) : "",
       talks: (s.talks || [])
         .filter((t) => t.title || t.authors || t.presenter || t.abstract)
         .map((t) => {
@@ -1434,7 +1445,7 @@ function SessionEditor({ session, isNew, rooms, clusters, days, onSave, onCancel
           // Pre-recorded video flag + optional link (kept tidy: only when set).
           if (t.video) {
             out.video = true;
-            const vu = (t.videoUrl || "").trim();
+            const vu = normalizeUrl(t.videoUrl);
             if (vu) out.videoUrl = vu;
           }
           return out;
