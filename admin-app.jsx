@@ -1357,6 +1357,7 @@ function SessionsTab({ data, setData, editingIdx, setEditingIdx }) {
 function SessionEditor({ session, isNew, rooms, clusters, days, onSave, onCancel, onDelete }) {
   const [s, setS] = React.useState(() => clone(session));
   const [errors, setErrors] = React.useState({});
+  const [saveError, setSaveError] = React.useState(null);
 
   // Lock background scroll while the editor is open. The editor intentionally
   // does NOT close on Esc or on a backdrop click — only the ✕ / Cancelar /
@@ -1411,7 +1412,15 @@ function SessionEditor({ session, isNew, rooms, clusters, days, onSave, onCancel
     e.preventDefault();
     const errs = validate();
     setErrors(errs);
-    if (Object.keys(errs).length > 0) return;
+    if (Object.keys(errs).length > 0) {
+      // Surface EVERY validation error in one visible banner so a save can never
+      // be blocked silently by a field whose inline error isn't rendered.
+      const LABELS = { day: "Día", type: "Tipo", start: "Hora inicio", end: "Hora fin", title: "Título", room: "Sala", cluster: "Edificio", meet: "Enlace Meet", youtube: "Enlace YouTube", talks: "Vídeo de contribución" };
+      const summary = Object.keys(errs).map((k) => `${LABELS[k] || k}: ${errs[k]}`).join(" · ");
+      setSaveError(summary);
+      return;
+    }
+    setSaveError(null);
 
     // Normalize: clean talks (drop empty rows), trim strings
     const cleaned = {
@@ -1650,6 +1659,11 @@ function SessionEditor({ session, isNew, rooms, clusters, days, onSave, onCancel
           {errors.talks && <p className="field-error" style={{ marginTop: 6 }}>{errors.talks}</p>}
         </div>
 
+        {saveError && (
+          <div className="save-error-banner" role="alert">
+            ⚠️ No se pudo guardar — revisa: {saveError}
+          </div>
+        )}
         <footer className="modal-foot">
           {onDelete && (
             <button type="button" className="btn-danger" onClick={onDelete}>
