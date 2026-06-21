@@ -1385,6 +1385,14 @@ function SessionEditor({ session, isNew, rooms, clusters, days, onSave, onCancel
     if (s.meet && !URL_RE.test(s.meet)) e.meet = "URL inválida";
     if (s.youtube && !URL_RE.test(s.youtube)) e.youtube = "URL inválida";
     if (s.room !== "*" && !s.cluster) e.cluster = "Falta edificio";
+    // Pre-recorded video links: flag any talk whose video URL isn't a real URL,
+    // with a clear message (instead of the browser silently blocking submit).
+    (s.talks || []).forEach((tk, i) => {
+      const vu = (tk.videoUrl || "").trim();
+      if (tk.video && vu && !URL_RE.test(vu)) {
+        e.talks = `Vídeo de la contribución #${i + 1}: pega la URL completa de YouTube (https://…), no solo el código.`;
+      }
+    });
     return e;
   };
 
@@ -1510,7 +1518,7 @@ function SessionEditor({ session, isNew, rooms, clusters, days, onSave, onCancel
               </div>
               <Field label="Enlace YouTube (opcional)" error={errors.youtube}
                 hint="Retransmisión en directo (solo visualización). Normalmente se hereda de la sala (Auditorio / Sala Menor); este campo lo sobreescribe a nivel de sesión.">
-                <input type="url" value={s.youtube || ""} onChange={(e) => setField("youtube", e.target.value)}
+                <input type="text" inputMode="url" value={s.youtube || ""} onChange={(e) => setField("youtube", e.target.value)}
                   placeholder="https://www.youtube.com/live/XXXXXXXXXXX" />
               </Field>
             </>
@@ -1522,7 +1530,7 @@ function SessionEditor({ session, isNew, rooms, clusters, days, onSave, onCancel
           ) : (
             <Field label="Enlace Meet (opcional)" error={errors.meet}
               hint="Sesión interactiva en Google Meet. Vacío = sin Meet (solo presencial). Los simposios, papers, talleres… usan Meet, no YouTube.">
-              <input type="url" value={s.meet || ""} onChange={(e) => setField("meet", e.target.value)}
+              <input type="text" inputMode="url" value={s.meet || ""} onChange={(e) => setField("meet", e.target.value)}
                 placeholder="https://meet.google.com/abc-defg-hij" />
             </Field>
           )}
@@ -1593,7 +1601,7 @@ function SessionEditor({ session, isNew, rooms, clusters, days, onSave, onCancel
                     placeholder="Vacío = sin bloque" />
                 </Field>
                 <Field label="Enlace del vídeo (YouTube)" hint="Se incrusta el reproductor. Acepta enlace de YouTube, youtu.be o el ID.">
-                  <input type="url" value={media.video || ""} onChange={(e) => setMedia({ video: e.target.value })}
+                  <input type="text" inputMode="url" value={media.video || ""} onChange={(e) => setMedia({ video: e.target.value })}
                     placeholder="https://www.youtube.com/watch?v=XXXXXXXXXXX" />
                 </Field>
                 <Field label="Texto introductorio (EN)">
@@ -1617,7 +1625,7 @@ function SessionEditor({ session, isNew, rooms, clusters, days, onSave, onCancel
                     placeholder="Casino de Salamanca, Calle Zamora 15, Salamanca" />
                 </Field>
                 <Field label="Sitio web (enlace)" hint="Enlace externo mostrado como botón «Visitar web».">
-                  <input type="url" value={media.website || ""} onChange={(e) => setMedia({ website: e.target.value })}
+                  <input type="text" inputMode="url" value={media.website || ""} onChange={(e) => setMedia({ website: e.target.value })}
                     placeholder="https://www.casinodesalamanca.es" />
                 </Field>
               </details>
@@ -1628,6 +1636,7 @@ function SessionEditor({ session, isNew, rooms, clusters, days, onSave, onCancel
             talks={s.talks || []}
             onChange={(talks) => setField("talks", talks)}
           />
+          {errors.talks && <p className="field-error" style={{ marginTop: 6 }}>{errors.talks}</p>}
         </div>
 
         <footer className="modal-foot">
@@ -1791,7 +1800,7 @@ function TalksEditor({ talks, onChange }) {
               />
               {t.video && (
                 <input
-                  type="url"
+                  type="text" inputMode="url"
                   placeholder="Enlace al vídeo (YouTube) — se reproduce en su franja"
                   value={t.videoUrl || ""}
                   onChange={(e) => update(i, { videoUrl: e.target.value })}
@@ -1977,14 +1986,14 @@ function RoomsTab({ data, setData, stats }) {
 
                 <div className="rr-links">
                   <input
-                    type="url"
+                    type="text" inputMode="url"
                     className="rr-meet"
                     placeholder="Meet de la sala — https://meet.google.com/abc-defg-hij"
                     value={r.meet || ""}
                     onChange={(e) => updateRoom(r.id, { meet: e.target.value })}
                   />
                   <input
-                    type="url"
+                    type="text" inputMode="url"
                     className="rr-yt"
                     placeholder="YouTube livestream de la sala (opcional)"
                     value={r.youtube || ""}
