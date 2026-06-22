@@ -92,14 +92,6 @@ window.ICED26_DATA = {
       "meet": "ICEDX1:eKfuGTMmMX6vhwFaErTr8Qcs3H6rK-xe8vVV3ry9AI319fyHOcDGxY66C0ZUmYSYzkfJIiAQtXyLZi_1sb--DO8bIYIZMWJGd5Og2baJ5sM"
     },
     {
-      "id": "biblioteca",
-      "name": "Biblioteca",
-      "cluster": "colegio",
-      "code": "BIB",
-      "active": false,
-      "meet": "ICEDX1:WaHMvtpk3Y1kGhP8r9wv_tWRU6PoO5GRz4H6x8Ji9ugQWHAVtQtsMjv8u4F6s4xApYqwSWxsj4RCj9bMD8rlUQJbmIA45LXG7eEt2RO7nkY"
-    },
-    {
       "id": "capilla",
       "name": "Capilla",
       "cluster": "colegio",
