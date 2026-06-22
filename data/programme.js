@@ -2228,7 +2228,7 @@ window.ICED26_DATA = {
       "title": "C - Iced Talks 2",
       "fullName": "Session 10E: C - Iced Talks 2",
       "type": "talk",
-      "meet": "ICEDX1:3XvTYJnzclxFM8ZTAF1u0lpPgXYzZQVZ-JCP5Q4Wb7STcrhWQqK9hgaU_RZM8ANdS-ibYol5NWEKWqyMOknZ3Ujplqygk-zPJyqTxThBqqs",
+      "meet": "ICEDX1:nO2w0nXfBS8Fus0-g39z3FCiyOaIN9mM3QscZQw2dcr0RLLPqGSYJCeShjwaslIkTSJGpBHha45AU1AOzeXy38h9d31UCQ2SZ9gn9H07CEM",
       "talks": [
         {
           "easychair_id": "311765",
@@ -2255,7 +2255,8 @@ window.ICED26_DATA = {
           "authors": "Nurun Nahar, Nykia Chance, Power Bright Williems",
           "presenter": "Nurun Nahar",
           "abstract": "This ICED-Talk shares an academic development case from a UK higher education institution exploring a new curriculum model in which students-as-partners is embedded as a core design principle rather than an optional enhancement. Drawing on the “engagement through partnership” conceptual model (Healey, Flint & Harrington, 2014), the approach positions partnership-building as foundational to curriculum renewal: students and staff co-create not only learning experiences, but also the partnership principles that will govern how decisions are made, whose expertise counts, and how power is shared.\n\nFramed through agency as the capacity to influence action and change (Bandura, 2001) and student agency as goal-setting, reflection, and responsible action (OECD, 2019/2030 Learning Compass), the talk argues that co-creation can be a practical mechanism for developing learner agency at scale. Building on Bovill’s work on whole-class co-creation and relational pedagogy (Bovill, 2020) and Matthews’ scholarship on genuine partnership and power (Matthews, 2016; Matthews, 2017), we outline a replicable process for academic developers: convening co-design spaces, negotiating shared principles, and translating these into curriculum governance and staff development. The intended takeaway is a principles-to-practice blueprint that academic developers can use to spark dialogue, shift cultures toward power-sharing, and make agency-building an explicit curriculum outcome.",
-          "keywords": ""
+          "keywords": "",
+          "online": true
         },
         {
           "easychair_id": "311767",
