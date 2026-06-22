@@ -1804,7 +1804,7 @@ window.ICED26_DATA = {
       "title": "International panel: Global South Perspectives in Dialogue",
       "fullName": "Session 9: International panel: Global South Perspectives in Dialogue",
       "type": "keynote",
-      "meet": "meet.google.com/ype-cvdh-zve",
+      "meet": "ICEDX1:PmlAk-Oc3VLrVL8xv23fljQk1iLqqpNvr7skbyD7EYOXoOI_xhxKSf8NzW5W8qmlq0KkntAkLLS6_dOuMEGR1uyfmholwr694IpfZQ5UQ0M",
       "talks": [],
       "easychair_session_id": "104802",
       "onlinePresenter": true,
