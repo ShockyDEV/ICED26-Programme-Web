@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-22T17-59
+// ICED26 programme — generated from admin panel 2026-06-22T18-22
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -1742,7 +1742,7 @@ window.ICED26_DATA = {
       ],
       "easychair_session_id": "105630",
       "description": "Collaborative Academic Development and Teaching Communities",
-      "chair": "Anna Santucci",
+      "chair": "Javier Merchán Sanchez-Jara",
       "cardTitle": "",
       "onlinePresenter": false,
       "hybrid": false,
