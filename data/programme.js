@@ -66,14 +66,14 @@ window.ICED26_DATA = {
       "code": "AUD",
       "youtube": "",
       "meet": "meet.google.com/ype-cvdh-zve",
-      "active": false
+      "active": true
     },
     {
       "id": "sala-menor",
       "name": "Sala Menor",
       "cluster": "hospederia",
       "code": "SM",
-      "active": false,
+      "active": true,
       "meet": "ICEDX1:nO2w0nXfBS8Fus0-g39z3FCiyOaIN9mM3QscZQw2dcr0RLLPqGSYJCeShjwaslIkTSJGpBHha45AU1AOzeXy38h9d31UCQ2SZ9gn9H07CEM"
     },
     {
@@ -81,7 +81,7 @@ window.ICED26_DATA = {
       "name": "Sala Presentaciones",
       "cluster": "iddi",
       "code": "SP",
-      "active": false,
+      "active": true,
       "meet": "ICEDX1:CPEj03dtWdrxl1Gnqg-me7tKR4X82_xcxyzIjDi4yDzxJw5s68l1XO_AOMGcGRhIdio6dQ_vzKPlMX5o4W7wg0T3rcMPnMS0geJfDNiU7ME"
     },
     {
@@ -89,7 +89,7 @@ window.ICED26_DATA = {
       "name": "Sala de Pinturas",
       "cluster": "colegio",
       "code": "PIN",
-      "active": false,
+      "active": true,
       "meet": "ICEDX1:eKfuGTMmMX6vhwFaErTr8Qcs3H6rK-xe8vVV3ry9AI319fyHOcDGxY66C0ZUmYSYzkfJIiAQtXyLZi_1sb--DO8bIYIZMWJGd5Og2baJ5sM"
     },
     {
@@ -97,7 +97,7 @@ window.ICED26_DATA = {
       "name": "Capilla",
       "cluster": "colegio",
       "code": "CAP",
-      "active": false,
+      "active": true,
       "meet": "ICEDX1:WYMiZjKNgSmj8JVj1HZFy7Y_EUbe0QQVrE8aWKVhiPdKggGSHgsXZpiHqXJK9eD6XYMwJIa778KZHh_-7EDZd3IwDxRzMSlpZCUu7NuWMfo"
     },
     {
@@ -105,7 +105,7 @@ window.ICED26_DATA = {
       "name": "Claustro",
       "cluster": "colegio",
       "code": "CLA",
-      "active": false,
+      "active": true,
       "meet": "ICEDX1:2HeoVMmZ3lzy6C-AmfXMInGlOM8-RZ8dFMG_UlA-vCcyu4_3SNZLJmBka9pz_w_MbIcuCVBBWcqqeRaqaP_vdqEcg3CoHsxGvGCOpKegXug"
     },
     {
@@ -113,7 +113,7 @@ window.ICED26_DATA = {
       "name": "ROOM 1.1",
       "cluster": "hospederia",
       "code": "1.1",
-      "active": false,
+      "active": true,
       "meet": "ICEDX1:yvLG5cgDE2FxRog696fvuXyGrYzfZAQHIr_WJJseo8aA9r1_VEKHxIr9Q-4bVqreTKU-4wBOVVVQkIXpIP2ZBTobu43HDp46IrAAd0qLpl4"
     },
     {
@@ -121,7 +121,7 @@ window.ICED26_DATA = {
       "name": "ROOM 1.2",
       "cluster": "hospederia",
       "code": "1.2",
-      "active": false,
+      "active": true,
       "meet": "ICEDX1:x35JsKl_jWrsY5-Q5grM0LqKX3Rab4PVcuoN-PinlPmUo3TdZavO2Bt2pNTDuyC6GCgDkZI-B0U6x9mCEhzlqc140pBmajtLSHsPxkthc48"
     },
     {
@@ -129,7 +129,7 @@ window.ICED26_DATA = {
       "name": "ROOM 2.1",
       "cluster": "hospederia",
       "code": "2.1",
-      "active": false,
+      "active": true,
       "meet": "ICEDX1:QhRcRMSdcD7mTvDMlIjm7fPtQmb4L2SdjKE2IFTT1Mh4RGxCApK9kPo9VBfOa-eJR9oQNYFyTiA70LPGYCEMFFnX0f_qGFRvYpWri0Bnhyc"
     },
     {
@@ -137,7 +137,7 @@ window.ICED26_DATA = {
       "name": "ROOM 2.2",
       "cluster": "hospederia",
       "code": "2.2",
-      "active": false,
+      "active": true,
       "meet": "ICEDX1:k8veT39AZ-V01RFTarSVolli77UbXLomKeNDw3r8b4jx6O6z8Fcw5pdrjhKa9YEnNzkkoYtVp-5nIogZoSro21foSBFVEe85rCrzUmstiDw"
     },
     {
@@ -145,7 +145,7 @@ window.ICED26_DATA = {
       "name": "ROOM 2.4",
       "cluster": "hospederia",
       "code": "2.4",
-      "active": false,
+      "active": true,
       "meet": "ICEDX1:2eJWXy9iEP671O6zp5JrVyn3nRgyg-XUIDGNjx2WbSJ3WboBwcCT0Ii550qjn8SjEbmjYcaEUo9dMx8oqta99mRREu-RwdUWGBi80GBGxfI"
     },
     {
@@ -153,7 +153,7 @@ window.ICED26_DATA = {
       "name": "ROOM 2.5",
       "cluster": "hospederia",
       "code": "2.5",
-      "active": false,
+      "active": true,
       "meet": "ICEDX1:yML4IcvGWVMs7t86Z1pm55mJmujhi1zioSSATRI3xaNEu-Rp7Dx6dcN9_lNzYVlA4yxYCYm8VSyBI58RgrqW3qZHspAPDQ603n_LktfLkIA"
     },
     {
@@ -161,7 +161,7 @@ window.ICED26_DATA = {
       "name": "ROOM 2.6",
       "cluster": "hospederia",
       "code": "2.6",
-      "active": false,
+      "active": true,
       "meet": "ICEDX1:hfkEMcjNzK-Q1_j7_0q844mNgycUjM01Il847pwXMpgu66HYwtx5CITXl6HicXantiiZpJuxXs8GKePlJAcdFeBg8QFRPnW06UQLwiMDiW4"
     },
     {
@@ -169,7 +169,7 @@ window.ICED26_DATA = {
       "name": "ROOM 2.7",
       "cluster": "hospederia",
       "code": "2.7",
-      "active": false,
+      "active": true,
       "meet": "ICEDX1:QkPsBBKe0BqYdw01G5Rxt2nY8p9fkiHEJjECIAHAIS-dBLwLDEbMRFkvR0gaDC9-9WMkd0aDzKY62XKzFbikTbT4Jdle7hiwcpoOxp9J5cw"
     },
     {
@@ -177,7 +177,7 @@ window.ICED26_DATA = {
       "name": "ROOM 11.2",
       "cluster": "iddi",
       "code": "11.2",
-      "active": false,
+      "active": true,
       "meet": "ICEDX1:0ZMt2qYbsgHvukGlTaXiPXkP6TBOafverqsHFVtZDbwSy07QIOvyeuOd9ZHO4Ppag7cSwV4y8rZvXG9rxVqZP6Z_AdGuv8MEQ-EJYNW5tys"
     },
     {
@@ -185,7 +185,7 @@ window.ICED26_DATA = {
       "name": "ROOM 11.3",
       "cluster": "iddi",
       "code": "11.3",
-      "active": false,
+      "active": true,
       "meet": "ICEDX1:VZNTP7uZHhSQGLq1xeRKps4MyGgEIrU0YNm9yK5nzfO5AaMbvr4aIiBxPquR2F0pwVOVWdFwGNqVSIvp1r4pNqwFnZeedDOIn6z63LscFlw"
     },
     {
@@ -193,7 +193,7 @@ window.ICED26_DATA = {
       "name": "ROOM 12.1",
       "cluster": "iddi",
       "code": "12.1",
-      "active": false,
+      "active": true,
       "meet": "ICEDX1:WaHMvtpk3Y1kGhP8r9wv_tWRU6PoO5GRz4H6x8Ji9ugQWHAVtQtsMjv8u4F6s4xApYqwSWxsj4RCj9bMD8rlUQJbmIA45LXG7eEt2RO7nkY"
     }
   ],
