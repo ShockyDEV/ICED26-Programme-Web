@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-22T15-10
+// ICED26 programme — generated from admin panel 2026-06-22T15-11
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -4041,7 +4041,6 @@ window.ICED26_DATA = {
       "meet": "ICEDX1:ckK4nu7BETtfHNxvoyn0JQT53jGVH690ww8tkZzU-SrrBWB9fFMEXetnkkH-562n0WbB-5dLNlOmtcPRPndUGABAU-FHVqxvXjic3sC4VZQ",
       "talks": [
         {
-          "easychair_id": "311881",
           "time": "12:15",
           "title": "Updated Systematic Review on Lecturing in Contemporary University Teaching",
           "authors": "Héctor Tronchoni, Conrad Izquierdo",
@@ -4051,7 +4050,6 @@ window.ICED26_DATA = {
           "online": true
         },
         {
-          "easychair_id": "311865",
           "time": "12:30",
           "title": "From Local Practices to European Impact: Mapping and Scaling Challenge-Based Learning in Universities",
           "authors": "Silvia Perzolli, Dorothea Ellinger, Alessandra Scroccaro, Asta Daunorienė, Siska Simon, Anna Serbati",
@@ -4060,7 +4058,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311817",
           "time": "12:45",
           "title": "Investigating hybrid teaching for inclusion, flexibility and internationalization across Europe",
           "authors": "Karen Louise Møller, Michael Detyna",
@@ -4069,7 +4066,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "312001",
           "time": "13:00",
           "title": "Time for a High-Impact-Practices (HIP) Realignment? Iterating Community-Engaged Learning (CEL) to Meet Evolving Student, Community, and University Needs",
           "authors": "Elizabeth Dunens, Teresa Henderson Vazquez",
@@ -4078,7 +4074,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311996",
           "time": "13:15",
           "title": "Where Action Research promotes Researcher Agency via Work-Based Learning.",
           "authors": "Rana Challah",
@@ -4090,7 +4085,12 @@ window.ICED26_DATA = {
       ],
       "easychair_session_id": "104874",
       "description": "Research on Teaching Methods; High-Impact-Practices (HIP); Researcher Agency",
-      "chair": "Quincy Elvira"
+      "chair": "Elisa Bone",
+      "cardTitle": "",
+      "onlinePresenter": false,
+      "hybrid": false,
+      "cancelled": false,
+      "youtube": ""
     },
     {
       "day": "2026-06-25",
