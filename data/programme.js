@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-22T15-33
+// ICED26 programme — generated from admin panel 2026-06-22T17-59
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -3846,7 +3846,6 @@ window.ICED26_DATA = {
       "meet": "ICEDX1:Zg25JhXu7qAGjfjhkAr94P-TxMM4nfysgj36tO7XrXz7w6GXny1nWIijj694-rnNyoHQB21ky8IafNckZKhTkA6qrBGId1MIlcf43hgtoIA",
       "talks": [
         {
-          "easychair_id": "312029",
           "time": "12:15",
           "title": "Rethinking Inclusive Higher Education: Epistemic Violence and Muslim Women’s Agency",
           "authors": "Fahimeh Darchinian",
@@ -3856,16 +3855,15 @@ window.ICED26_DATA = {
           "online": true
         },
         {
-          "easychair_id": "311888",
           "time": "12:30",
           "title": "From Adversity to Agency: Understanding Roma Students’ Pathways to Educational Success",
           "authors": "Icy Fresno Anabo, Rocío García-Carrión, Andrea Khalfaoui Larrañaga",
           "presenter": "Icy Fresno Anabo",
           "abstract": "This paper examines how student agency develops among Roma learners who succeed academically despite early adversity and discrimination. Drawing on findings from the EU-funded SCIREARLY project, we present a life-course analysis of four Roma students in Spain who completed higher education against the odds, in a context where 71% of Roma youth aged 18–24 leave the education system before finishing upper secondary schooling. Our conceptual framework integrates Appadurai’s “capacity to aspire” and Dewey’s notion of situated agency, and the analysis represents partial results of a broader study involving 53 interviews with young adults and 40 nominated significant persons across eight European countries. Findings show that aspirations and agency operate in a mutually reinforcing cycle. Role models - family members, teachers, or peers who convey support and sustain high expectations - expand students’ sense of what is possible and help translate aspirations into concrete action. A supportive academic environment, including peers, committed teachers, and opportunities for family involvement, nurtures their motivation and academic achievement. However, significant blind spots, such as the limited representation of Roma histories and cultural knowledge in the curriculum, still need to be addressed to further enhance educational participation and retention. We discuss implications for practice, highlighting the importance of fostering role models, enabling teacher’s supportive attitudes, strengthening family engagement, and embedding inclusive curricular content. The findings also contribute to theory by foregrounding the interplay of individual and collective agency in enhancing Roma participation in higher education.",
-          "keywords": ""
+          "keywords": "",
+          "online": true
         },
         {
-          "easychair_id": "311913",
           "time": "12:45",
           "title": "Universal Design for Learning in Field Based Teaching: Addressing barriers and developing disciplinary skills",
           "authors": "Marie van der Kloet, Ellen Lien",
@@ -3874,7 +3872,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311898",
           "time": "13:00",
           "title": "Rethinking Student Agency Through Mobility: How first-generation commuter students navigate space, time and higher education",
           "authors": "Lauren Olivia Davids",
@@ -3883,7 +3880,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "312003",
           "time": "13:15",
           "title": "Field Testing the CLEAR Reflection Process: Establishing a Reflective WIL Practice to Support Lifelong Learning",
           "authors": "Monica Vesely",
@@ -3895,7 +3891,12 @@ window.ICED26_DATA = {
       ],
       "easychair_session_id": "104876",
       "description": "Inclusive Higher Education, Student Agency and Social Justice",
-      "chair": "Reya Saliba"
+      "chair": "Reya Saliba",
+      "cardTitle": "",
+      "onlinePresenter": false,
+      "hybrid": false,
+      "cancelled": false,
+      "youtube": ""
     },
     {
       "day": "2026-06-25",
