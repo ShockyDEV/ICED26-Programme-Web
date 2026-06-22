@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-21T17-09
+// ICED26 programme — generated from admin panel 2026-06-22T15-10
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -1328,7 +1328,6 @@ window.ICED26_DATA = {
       "meet": "",
       "talks": [
         {
-          "easychair_id": "311658",
           "time": "11:00",
           "title": "How can the developer develop?",
           "authors": "Jan Folkert Deinum, Irene Douwes-van Ark, Rick Huizinga, Angelika Thielsch, Karolina Duschinska, Bartłomiej Wróblewski, Michal Urban, Radka High, Manuela Milani, Sarah Leupen, Iwona Maciejowska, Anna Sajdak-Burska, Simon Ngigi, Winfred Kithinji, Edward Ombajo, William Muriithi",
@@ -1338,7 +1337,12 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104815",
-      "chair": "María Asunción Pérez Pascual"
+      "chair": "Rick Huizinga",
+      "cardTitle": "",
+      "onlinePresenter": false,
+      "hybrid": false,
+      "cancelled": false,
+      "youtube": ""
     },
     {
       "day": "2026-06-24",
@@ -3418,7 +3422,6 @@ window.ICED26_DATA = {
       "meet": "ICEDX1:2PSIn5fCiXiTiUZxWkBjJEqHZYnSa1xe36MXmKJImRicQ-X2PGINplR5DqPvAyYC-Jb-Quf1_cGRjv12g_gWA1V4KaPlvnEu4m30rxWYzZA",
       "talks": [
         {
-          "easychair_id": "311655",
           "time": "09:00",
           "title": "Enriching Pedagogical Training Across Borders: A Comparative Analysis within the EUGLOH Alliance",
           "authors": "Maria Larsson, Réka Ökördi, Ashley Haberman-Lawson, Sara Andersson, Gunda Mohr, Nadia Blüthmann, Andrea Watkins Perez, Isabel Martins, Pedro Graça, Sira Danfakha",
@@ -3428,7 +3431,12 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "105604",
-      "chair": "Elisa Bone"
+      "chair": "Maria Larsson",
+      "cardTitle": "",
+      "onlinePresenter": false,
+      "hybrid": false,
+      "cancelled": false,
+      "youtube": ""
     },
     {
       "day": "2026-06-25",
