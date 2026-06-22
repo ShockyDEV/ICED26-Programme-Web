@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-22T15-14
+// ICED26 programme — generated from admin panel 2026-06-22T15-18
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -194,6 +194,13 @@ window.ICED26_DATA = {
       "code": "11.3",
       "active": false,
       "meet": "ICEDX1:VZNTP7uZHhSQGLq1xeRKps4MyGgEIrU0YNm9yK5nzfO5AaMbvr4aIiBxPquR2F0pwVOVWdFwGNqVSIvp1r4pNqwFnZeedDOIn6z63LscFlw"
+    },
+    {
+      "id": "room-1782141484823",
+      "name": "ROOM 12.1",
+      "cluster": "iddi",
+      "code": "12.1",
+      "meet": "ICEDX1:WaHMvtpk3Y1kGhP8r9wv_tWRU6PoO5GRz4H6x8Ji9ugQWHAVtQtsMjv8u4F6s4xApYqwSWxsj4RCj9bMD8rlUQJbmIA45LXG7eEt2RO7nkY"
     }
   ],
   "sessions": [
