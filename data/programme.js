@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-22T21-39
+// ICED26 programme — generated from admin panel 2026-06-22T21-43
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -34,7 +34,7 @@ window.ICED26_DATA = {
       "enabled": true,
       "token": "ICED26-OK",
       "globalVerifier": "ICEDX1:PRomV4J8gDzgjyFnUh8DUKiCV0LvkxhJOWvZYjjklfK6RVcIaXx_2k-ieuzTxBc19jOxLpM",
-      "panelVerifier": "ICEDX1:31Swv4q4v2CCY6ga9lXHuTL75jqRAsQJnNFN1JLCUpau27aGSv1wnEclssXJcwfvJUjdVdY",
+      "panelVerifier": "ICEDX1:xvYLvZMfdQOl4PIpQkxi6q2zd-t4xAG54AKwzYnuHq6ayMVo9MkxVhylniOqdT2REKeK4nA",
       "panelSessionId": "104802"
     }
   },
@@ -2657,7 +2657,7 @@ window.ICED26_DATA = {
       "title": "E - Symposium 3",
       "fullName": "Session 13N: E - Symposium 3",
       "type": "symposium",
-      "meet": "meet.google.com/ype-cvdh-zve",
+      "meet": "ICEDX1:B3Nc97TSw-Ta3-9dPzQyQTlogYA25PIZ0cq1zjqNNj3ijmjSlok7svVKJxAUHT8Z6XVkIiZVb45P-Z-7lCWAF2zBX4gUfSdg2eco9J4SkM0",
       "youtube": "",
       "talks": [
         {
