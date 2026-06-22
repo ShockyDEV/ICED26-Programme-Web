@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-22T19-02
+// ICED26 programme — generated from admin panel 2026-06-22T21-39
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -2657,7 +2657,7 @@ window.ICED26_DATA = {
       "title": "E - Symposium 3",
       "fullName": "Session 13N: E - Symposium 3",
       "type": "symposium",
-      "meet": "ICEDX1:B3Nc97TSw-Ta3-9dPzQyQTlogYA25PIZ0cq1zjqNNj3ijmjSlok7svVKJxAUHT8Z6XVkIiZVb45P-Z-7lCWAF2zBX4gUfSdg2eco9J4SkM0",
+      "meet": "meet.google.com/ype-cvdh-zve",
       "youtube": "",
       "talks": [
         {
