@@ -35,7 +35,8 @@ window.ICED26_DATA = {
       "token": "ICED26-OK",
       "globalVerifier": "ICEDX1:PRomV4J8gDzgjyFnUh8DUKiCV0LvkxhJOWvZYjjklfK6RVcIaXx_2k-ieuzTxBc19jOxLpM",
       "panelVerifier": "ICEDX1:xvYLvZMfdQOl4PIpQkxi6q2zd-t4xAG54AKwzYnuHq6ayMVo9MkxVhylniOqdT2REKeK4nA",
-      "panelSessionId": "104802"
+      "panelSessionId": "104802",
+      "panelRoomId": "auditorio"
     }
   },
   "clusters": [
@@ -65,7 +66,7 @@ window.ICED26_DATA = {
       "cluster": "hospederia",
       "code": "AUD",
       "youtube": "",
-      "meet": "meet.google.com/ype-cvdh-zve",
+      "meet": "ICEDX1:uCjBtzpi9Nj4JE8iiiGFuvJyOY4mj3jsZUyAyF1Kc4hFtlfL9lTfxdT0qOOfs0xLbhsPuEyS3F0--uYd1ESpACWA_XdzUPjJabrjFD2aG6s",
       "active": true
     },
     {
@@ -209,7 +210,7 @@ window.ICED26_DATA = {
       "title": "Welcome and Instructions for Pre-Conference",
       "fullName": "Session 1: Welcome and Instructions for Pre-Conference",
       "type": "other",
-      "meet": "meet.google.com/ype-cvdh-zve",
+      "meet": "ICEDX1:2PDmJzCHvZs08hTdPIaAIsAYzC1WQZDl98PAq0nZ4LzEZoNb9ZZS7dW2LojLKvzm3bUTUrs7onHgUpm2pGOCYr4xd8pVkTzw7TWCJiI2Scc",
       "talks": [],
       "easychair_session_id": "104851",
       "cardTitle": "",
@@ -546,7 +547,7 @@ window.ICED26_DATA = {
       "title": "Opening ceremony",
       "fullName": "Session 5: Opening ceremony",
       "type": "keynote",
-      "meet": "meet.google.com/ype-cvdh-zve",
+      "meet": "ICEDX1:8hXdV7GhHCHH_xnAfS1HYUQxeL1y2fW1udFL10wZ7Y2lc5YLGEKklN-wiL1cpjIFBHHCZE0qaRg_85-XW3M2G1ehqqBek575rjsEh0_Q1qI",
       "talks": [
         {
           "time": "08:45",
@@ -576,7 +577,7 @@ window.ICED26_DATA = {
       "title": "Keynote 1: Agency, responsibility, and values-driven educational development - David A. Green",
       "fullName": "Session 6: Keynote 1: Agency, responsibility, and values-driven educational development - David A. Green",
       "type": "keynote",
-      "meet": "meet.google.com/ype-cvdh-zve",
+      "meet": "ICEDX1:XGWLNbigL4KZsfnK3Kct2u9OHlCwFCwSrmA8uAvYZpIE7lb7-63Lg_q3pnE4znqZQgANXlkeMxqoUHO2VWbLd9AEFm-CpPhihHl99PMdLTM",
       "talks": [],
       "easychair_session_id": "104801",
       "chair": "Ariane Dumont"
@@ -610,7 +611,7 @@ window.ICED26_DATA = {
       "title": "A - Symposium 1",
       "fullName": "Session 7L: A - Symposium 1",
       "type": "symposium",
-      "meet": "meet.google.com/ype-cvdh-zve",
+      "meet": "ICEDX1:xeVsHApMyOF1WfcIvAjD6Ip9iZVnosrX-Fzi2GC2haDhgqGQZ01KKAU5eSobsuCLus3G_VJaFG4yylWeR-TcWwjkkGpiK28awbgGbjUkbNo",
       "talks": [
         {
           "easychair_id": "311652",
@@ -2657,7 +2658,7 @@ window.ICED26_DATA = {
       "title": "E - Symposium 3",
       "fullName": "Session 13N: E - Symposium 3",
       "type": "symposium",
-      "meet": "meet.google.com/ype-cvdh-zve",
+      "meet": "ICEDX1:gjgds3gEpwCpsKHSCG7DYO8FwPfNa1invGGZxg9zCMwGjRF-oYojxq6M2e7KwN9y6hv_TIweD-zAu9mqX2FxW-hY-kkS2ISi3li-kmtqdcU",
       "youtube": "",
       "talks": [
         {
@@ -3537,7 +3538,7 @@ window.ICED26_DATA = {
       "title": "Keynote 2: Rewarding university teaching in academic careers - Ruth Graham",
       "fullName": "Session 14: Keynote 2: Rewarding university teaching in academic careers - Ruth Graham",
       "type": "keynote",
-      "meet": "meet.google.com/ype-cvdh-zve",
+      "meet": "ICEDX1:4qTtAOkO8ZjQUGpDefZQA5fG0i4V9U7PfXJfSkRfT7i8bsqpTtZFDFetHQovRHx3noq_P5pMj1mJd0tWPJxfmJMrQiAxIri2SywfKJ3gAhw",
       "talks": [],
       "easychair_session_id": "104869",
       "chair": "Robert Pardo"
@@ -3553,7 +3554,7 @@ window.ICED26_DATA = {
       "title": "F - Symposium 6",
       "fullName": "Session 15M: F - Symposium 6",
       "type": "symposium",
-      "meet": "meet.google.com/ype-cvdh-zve",
+      "meet": "ICEDX1:n4BDsmlm4F4u6jxVnbwOOYEk1ahE1WING6HPmuKV1vKVF5s19WOHRkG6l8D0QkKr0Afhi9EslaKsP-LyUI94ZQ6u6BHIs4ZAqR5GbYB7YTE",
       "talks": [
         {
           "easychair_id": "311661",
@@ -4435,7 +4436,7 @@ window.ICED26_DATA = {
       "title": "Keynote 3: Resourceful perspectives: Academic development for student and teacher agency – Franziska Zellweger",
       "fullName": "Session 16: Keynote 3: Resourceful perspectives: Academic development for student and teacher agency – Franziska Zellweger",
       "type": "keynote",
-      "meet": "meet.google.com/ype-cvdh-zve",
+      "meet": "ICEDX1:8iKLcAIpDqYQfx4bu8NexYqj6CNevOaSO8-Pqrq-hFmA0S47EPiMlxzIR232824s-nMqKdLyCqTVlR8rz7AJ2VljRQgvWWmEuJ9QEE5kQT4",
       "talks": [],
       "easychair_session_id": "104885",
       "chair": "Mònica Feixas"
@@ -6027,7 +6028,7 @@ window.ICED26_DATA = {
       "title": "K - Symposium 9",
       "fullName": "Session 21N: K - Symposium 9",
       "type": "symposium",
-      "meet": "meet.google.com/ype-cvdh-zve",
+      "meet": "ICEDX1:QspWkW191Wx60bfNilSzVEzUEnwxnxcNL5PJr0laHOKoFlwPU9gmqEGc20zwmBzRvbm6eJ1wtXuggOTTCLyedILXhHl8appoekDJzbKYqGI",
       "talks": [
         {
           "time": "11:00",
@@ -6724,7 +6725,7 @@ window.ICED26_DATA = {
       "title": "K - Symposium 11",
       "fullName": "Session 21M: K - Symposium 11",
       "type": "symposium",
-      "meet": "meet.google.com/ype-cvdh-zve",
+      "meet": "ICEDX1:deqx3nHD1RChb9jP8NQ1DWF-md0iGRCmJYg-hV79avq_Tes9lTqBXHkvDevhXGqNPg-hyb4F4oNLRKYmbFrf0jUc1pAzF6rS-WKnn8nmjiA",
       "talks": [
         {
           "time": "11:00",
@@ -6754,7 +6755,7 @@ window.ICED26_DATA = {
       "title": "REDU and ICED Presidents' Talk",
       "fullName": "Session 22: REDU and ICED Presidents' Talk",
       "type": "keynote",
-      "meet": "meet.google.com/ype-cvdh-zve",
+      "meet": "ICEDX1:mkWhpT7mdPgvs7U-68Sdx-GRoJqYuWSuSagafMMPQ6TDlnEMortHKFjlZanDsfZPjFLvabEIDz2E-WEKYKvKio5nWLJ9yBKXOWB30xBI9VI",
       "talks": [],
       "easychair_session_id": "105689",
       "chair": "Idoia Fernandez, Ariane Dumont"
@@ -6770,7 +6771,7 @@ window.ICED26_DATA = {
       "title": "Closing Remarks",
       "fullName": "Session 23: Closing Remarks",
       "type": "keynote",
-      "meet": "meet.google.com/ype-cvdh-zve",
+      "meet": "ICEDX1:VsCSGwf97gC_nEj4-_-b8JmQAO3pULVn42woIxsaxyPoDS65Q7FFkUV0clMF3pi7yrD-csFlbvYxm1Uplw9z3WyFG5BuHD5ftEjnUdrdStA",
       "talks": [],
       "easychair_session_id": "105690",
       "media": {

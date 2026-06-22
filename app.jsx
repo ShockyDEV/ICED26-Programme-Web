@@ -214,21 +214,26 @@ function accessEnabled(data) {
   const ac = data && data.meta && data.meta.access;
   return !!(ac && ac.enabled);
 }
-// Scope for a SESSION: "panel" for the special session, else "global".
+// Scope for a SESSION: "panel" (special code) when it is the panel session OR
+// it lives in the special room (e.g. the Auditorio, whose Meet is the panel's);
+// otherwise "global".
 function accessScopeForSession(session, data) {
   const ac = data && data.meta && data.meta.access;
   if (!ac || !ac.enabled) return null;
-  if (ac.panelVerifier && ac.panelSessionId &&
-      String(session.easychair_session_id) === String(ac.panelSessionId)) {
+  if (ac.panelVerifier && (
+        (ac.panelSessionId && String(session.easychair_session_id) === String(ac.panelSessionId)) ||
+        (ac.panelRoomId && session.room === ac.panelRoomId)
+      )) {
     return "panel";
   }
   return ac.globalVerifier ? "global" : null;
 }
-// Rooms always use the global scope (they aren't "the panel").
-function accessScopeForRoom(data) {
+// Scope for a ROOM link: "panel" for the special room (Auditorio), else global.
+function accessScopeForRoom(data, roomId) {
   const ac = data && data.meta && data.meta.access;
-  if (!ac || !ac.enabled || !ac.globalVerifier) return null;
-  return "global";
+  if (!ac || !ac.enabled) return null;
+  if (ac.panelVerifier && ac.panelRoomId && roomId === ac.panelRoomId) return "panel";
+  return ac.globalVerifier ? "global" : null;
 }
 function accessVerifier(scope, data) {
   const ac = data.meta.access;
@@ -755,7 +760,7 @@ function ClusterMeetMenu({ cluster, rooms, liveByRoom, t, lang, data }) {
           // session's own scope (panel session keeps its special code).
           const val = live ? (live.meet || effectiveYouTube(live, data)) : "";
           const scope = live
-            ? (live.meet ? accessScopeForSession(live, data) : accessScopeForRoom(data))
+            ? (live.meet ? accessScopeForSession(live, data) : accessScopeForRoom(data, r.id))
             : null;
           const clickable = !!(live && r.active && val);
           return (
@@ -1987,14 +1992,12 @@ function SessionModal({ session, t, lang, now, onClose, favorites, onToggleFavor
             // prompt when the scope isn't unlocked yet. The link is encrypted
             // in the published data; the code is the key.
             const scope = accessScopeForSession(session, data);
-            // YouTube scope: a per-session livestream carries the session's own
-            // code (the panel code for the International Panel); the room's
-            // shared livestream uses the room/global code. So the Panel asks for
-            // the panel code on Meet but the global code on its YouTube (the
-            // shared Auditorio stream).
-            const ytScope = (session.youtube && String(session.youtube).trim())
-              ? accessScopeForSession(session, data)
-              : accessScopeForRoom(data);
+            // YouTube scope: the public livestream always uses the GLOBAL code,
+            // even in the Auditorio (whose Meet is the special/panel code). A
+            // per-session youtube override still carries the global code — only
+            // Meet (presenter access) uses the special code.
+            const ytScope = (data && data.meta && data.meta.access && data.meta.access.enabled && data.meta.access.globalVerifier)
+              ? "global" : null;
             const meetBtn = (live, val) => live
               ? <button type="button" className="sm-meet-btn" onClick={() => openRemoteLink(val, scope, data)}>{meetIcon}<span>{meetLabel}</span>{arrow}</button>
               : <span className="sm-meet-btn is-locked" title={t.linksClosed} aria-disabled="true">{meetIcon}<span>{meetLabel}</span>{lock}</span>;
