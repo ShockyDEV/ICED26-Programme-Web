@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-22T18-22
+// ICED26 programme — generated from admin panel 2026-06-22T18-24
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -2655,7 +2655,7 @@ window.ICED26_DATA = {
       "title": "E - Symposium 3",
       "fullName": "Session 13N: E - Symposium 3",
       "type": "symposium",
-      "meet": "meet.google.com/ype-cvdh-zve",
+      "meet": "https://meet.google.com/ype-cvdh-zve",
       "youtube": "",
       "talks": [
         {
@@ -2668,7 +2668,11 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "105603",
-      "chair": "Gabriela Pleschova"
+      "chair": "Jeanette Sjöberg",
+      "cardTitle": "",
+      "onlinePresenter": false,
+      "hybrid": false,
+      "cancelled": false
     },
     {
       "day": "2026-06-25",
@@ -6665,7 +6669,6 @@ window.ICED26_DATA = {
       "meet": "",
       "talks": [
         {
-          "easychair_id": "311659",
           "time": "11:00",
           "title": "Becoming agents for curriculum internationalisation. Research insights from four European countries",
           "authors": "Angelika Thielsch, Pouneh Eftekhari, Rebecca Berman, Eveke de Louw, Lucie Weissowa, Torgny Roxå",
@@ -6675,7 +6678,12 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "105686",
-      "chair": "David Lohner"
+      "chair": "",
+      "cardTitle": "",
+      "onlinePresenter": false,
+      "hybrid": false,
+      "cancelled": false,
+      "youtube": ""
     },
     {
       "day": "2026-06-26",
