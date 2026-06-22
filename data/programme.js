@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-22T15-11
+// ICED26 programme — generated from admin panel 2026-06-22T15-14
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -6419,7 +6419,6 @@ window.ICED26_DATA = {
       "meet": "ICEDX1:PrMiAlCMCFOMmyrn2HNzV1OvspwFWm-gPLBwX7Llfc7afYpK5oDxL2G9684kt6n1XleNqusXpwndrm1Q2dxAvC2c2vOa5RhrQ0slyAGHTD4",
       "talks": [
         {
-          "easychair_id": "311830",
           "time": "11:00",
           "title": "Pedagogical consultancies with Academic Developers: experiences from the University of Trento",
           "authors": "Elena Benini, Helga Ballardini, Paola Venuti, Anna Serbati",
@@ -6428,7 +6427,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311811",
           "time": "11:15",
           "title": "Academic Professional Development: A Reflexive Account of Informal Mentorship in a Transformative Context.",
           "authors": "Shanya Reuben, Shaida Bobat, Vukani Luvuyo Makhaba",
@@ -6438,7 +6436,6 @@ window.ICED26_DATA = {
           "online": true
         },
         {
-          "easychair_id": "311974",
           "time": "11:30",
           "title": "Preparing for professional learning through practicing peer-mentoring",
           "authors": "Katrine Nesje, Eli Tronsmo, Ester Fremstad",
@@ -6447,18 +6444,7 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311861",
           "time": "11:45",
-          "title": "Negotiating teacher positions in peer learning group conversations: An interactional study in higher education",
-          "authors": "Karoline Ballieu Kjærgaard",
-          "presenter": "",
-          "abstract": "Abstract. Many early career academics (ECAs) enter academia facing competing demands, insecure employment and performance pressures that privilege research over teaching. Within this context, Educational Development (ED) programs play a crucial role in supporting ECAs’ professional growth as educators. However, the design of such programs shapes what kind of learning they foster. While linear, transmission-oriented programs often focus on skill acquisition, dialogue-based approaches provide space for reflection, collaboration and identity negotiation. This paper explores how ECAs construct and negotiate their teacher identities through peer interaction at a research-intensive Danish university. Drawing on Positioning Theory (Davies & Harré, 1990) and perspectives regarding Communicative Constitution of Organization (Cooren, 2004), the study conceptualizes teacher identity as discursively accomplished in interaction. Using a longitudinal ethnomethodological design, the study analyzes approximately 30 hours of audio-recorded peer discussions. The analysis shows how ECAs take up, resist and reassign available positions within moral orders of academic life, revealing how identity work is simultaneously individual and institutional. Through these conversational negotiations, the boundary between self and organization becomes blurred. ECAs are not only discussing teaching but constituting what “teaching” means within their university. The paper thus argues, that ED should not only be perceived as a arena for the transmission of pedagogical techniques, but of equal importance as a communicative infrastructure through which legitimate teacher identities can be taken on, assigned, resisted and at times re-worked in interaction with peers and educational developers.",
-          "keywords": "",
-          "online": true
-        },
-        {
-          "easychair_id": "311859",
-          "time": "12:00",
           "title": "Enhancing Teaching Agency via Observation-Based Consultation: Implementing BOPPPS with New Faculty",
           "authors": "I-Fan Chang, Meilun Shih",
           "presenter": "I-Fan Chang",
@@ -6468,7 +6454,12 @@ window.ICED26_DATA = {
       ],
       "easychair_session_id": "105678",
       "description": "Mentoring, Peer Learning and Teaching Consultation",
-      "chair": "Claudia Bade"
+      "chair": "Claudia Bade",
+      "cardTitle": "",
+      "onlinePresenter": false,
+      "hybrid": false,
+      "cancelled": false,
+      "youtube": ""
     },
     {
       "day": "2026-06-26",
