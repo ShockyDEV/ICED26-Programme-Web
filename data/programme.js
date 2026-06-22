@@ -196,11 +196,11 @@ window.ICED26_DATA = {
       "meet": "ICEDX1:VZNTP7uZHhSQGLq1xeRKps4MyGgEIrU0YNm9yK5nzfO5AaMbvr4aIiBxPquR2F0pwVOVWdFwGNqVSIvp1r4pNqwFnZeedDOIn6z63LscFlw"
     },
     {
-      "id": "room-1782141543726",
+      "id": "room-12-1",
       "name": "ROOM 12.1",
       "cluster": "iddi",
       "code": "12.1",
-      "meet": ""
+      "active": false
     }
   ],
   "sessions": [
