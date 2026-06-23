@@ -2009,9 +2009,13 @@ function SessionModal({ session, t, lang, now, onClose, favorites, onToggleFavor
             // session that has an online presenter shows BOTH channels: YouTube
             // for the audience + Meet for the remote presenter, side by side.
             const needsMeetForOnline = isSessionOnline(session) || session.hybrid;
+            // Sala de Pinturas symposiums stream on YouTube AND keep their Meet
+            // (hybrid by nature: in-person + Meet for remote participants). They
+            // are the one streamed case that always shows both. See isStreamed.
+            const salaPinturasSymposium = session.room === "sala-pinturas" && session.type === "symposium";
             const showMeet =
               (!isStreamType && !noRemoteType && !noRowType) ||
-              (isStreamType && needsMeetForOnline);
+              (isStreamType && (needsMeetForOnline || salaPinturasSymposium));
             const meetLive = session.meet && linksActive;
             const ytLive = yt && linksActive;
             // Access scope (participant-code gate). A live link (plain or
