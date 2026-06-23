@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-23T09-08
+// ICED26 programme — generated from admin panel 2026-06-23T09-34
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -2234,10 +2234,9 @@ window.ICED26_DATA = {
       "title": "C - Iced Talks 2",
       "fullName": "Session 10E: C - Iced Talks 2",
       "type": "talk",
-      "meet": "ICEDX1:nO2w0nXfBS8Fus0-g39z3FCiyOaIN9mM3QscZQw2dcr0RLLPqGSYJCeShjwaslIkTSJGpBHha45AU1AOzeXy38h9d31UCQ2SZ9gn9H07CEM",
+      "meet": "",
       "talks": [
         {
-          "easychair_id": "311765",
           "time": "16:15",
           "title": "Fostering Student Agency Through Transformative Core Competencies Education",
           "authors": "Reya Saliba",
@@ -2246,7 +2245,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311766",
           "time": "16:30",
           "title": "Walking Besides, Not Ahead: A Mentoring Story of Shared Power",
           "authors": "Vanessa Drew",
@@ -2255,17 +2253,15 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311778",
           "time": "16:45",
           "title": "Stimulating agency through co-creation using the ‘Enabling Students as Partners Framework’",
           "authors": "Nurun Nahar, Nykia Chance, Power Bright Williems",
           "presenter": "Nurun Nahar",
           "abstract": "This ICED-Talk shares an academic development case from a UK higher education institution exploring a new curriculum model in which students-as-partners is embedded as a core design principle rather than an optional enhancement. Drawing on the “engagement through partnership” conceptual model (Healey, Flint & Harrington, 2014), the approach positions partnership-building as foundational to curriculum renewal: students and staff co-create not only learning experiences, but also the partnership principles that will govern how decisions are made, whose expertise counts, and how power is shared.\n\nFramed through agency as the capacity to influence action and change (Bandura, 2001) and student agency as goal-setting, reflection, and responsible action (OECD, 2019/2030 Learning Compass), the talk argues that co-creation can be a practical mechanism for developing learner agency at scale. Building on Bovill’s work on whole-class co-creation and relational pedagogy (Bovill, 2020) and Matthews’ scholarship on genuine partnership and power (Matthews, 2016; Matthews, 2017), we outline a replicable process for academic developers: convening co-design spaces, negotiating shared principles, and translating these into curriculum governance and staff development. The intended takeaway is a principles-to-practice blueprint that academic developers can use to spark dialogue, shift cultures toward power-sharing, and make agency-building an explicit curriculum outcome.",
           "keywords": "",
-          "online": true
+          "video": true
         },
         {
-          "easychair_id": "311767",
           "time": "17:00",
           "title": "Creating cultures of student-staff partnership to reimagine student education",
           "authors": "James Forde, Lucy Mason, Laura Conroy, Libby Johnstone, Jenna Isherwood, Nely Konstantinova",
@@ -2276,7 +2272,12 @@ window.ICED26_DATA = {
       ],
       "easychair_session_id": "105588",
       "description": "Student agency, Partnership and shared Power",
-      "chair": "Claudia Cornejo Happel"
+      "chair": "Claudia Cornejo Happel",
+      "cardTitle": "",
+      "onlinePresenter": false,
+      "hybrid": false,
+      "cancelled": false,
+      "youtube": ""
     },
     {
       "day": "2026-06-24",
