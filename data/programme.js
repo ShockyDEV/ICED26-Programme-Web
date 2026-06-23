@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-23T11-23
+// ICED26 programme — generated from admin panel 2026-06-23T11-25
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -3991,7 +3991,7 @@ window.ICED26_DATA = {
       ],
       "easychair_session_id": "104870",
       "description": "Strategy, Sustainability and Organizational Transformation",
-      "chair": "Anja Pawelleck",
+      "chair": "",
       "cardTitle": "",
       "onlinePresenter": false,
       "hybrid": false,
