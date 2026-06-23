@@ -19,6 +19,24 @@ function isSessionOnline(s) {
   return Array.isArray(s.talks) && s.talks.some((t) => t && t.online);
 }
 
+// Whether a live session can actually be joined remotely — the predicate behind
+// the "MEET LINKS" room navigator. Meet links are assigned per-room, so nearly
+// every session carries one; this must gate on session TYPE (not just s.meet) to
+// match the SessionModal: workshops (unless online/hybrid), posters and
+// collaborative spaces are in-person only; break/social/other rows have no
+// remote channel; everything else (paper, symposium, doctoral, keynote) keeps
+// its room Meet, and Auditorio/Sala Menor sessions stream on YouTube.
+// Keep in sync with the noRemoteType/showMeet block in SessionModal.
+function isRemoteJoinable(s, data) {
+  if (!s) return false;
+  if (effectiveYouTube(s, data)) return true;            // streamed on YouTube
+  const noRemote =
+    (s.type === "workshop" && !isSessionOnline(s) && !s.hybrid) ||
+    s.type === "poster" || s.type === "collaborative" ||
+    s.type === "break" || s.type === "social" || s.type === "other";
+  return !noRemote && !!s.meet;                          // Meet-type room with a link set
+}
+
 // ─── YouTube embed helper ─────────────────────────────────────────────────
 // Accepts a bare 11-char video id, a watch URL, a youtu.be link, a /live/ or
 // /embed/ URL, and returns a privacy-friendly nocookie embed URL ("" if none).
@@ -795,14 +813,11 @@ function Header({ data, now, lang, setLang, t, favorites, onOpenAgenda, onOpenGo
     for (const s of data.sessions) {
       if (isGlobalRow(s)) continue;
       if (sessionState(s, now) !== "live") continue;
-      // The MEET navigator is for sessions you can actually join remotely.
-      // Meet links are assigned per-room, so in-person sessions (workshops,
-      // posters, collaborative spaces…) inherit one and would otherwise light
-      // up here. Only surface a room when its live session is genuinely online
-      // (has a remote presenter) or streamed on YouTube.
-      if (effectiveYouTube(s, data) || (isSessionOnline(s) && s.meet)) {
-        map[s.room] = s;
-      }
+      // Meet links are assigned per-room, so nearly every session carries one —
+      // which made in-person sessions (workshops, posters, collaborative spaces)
+      // light up here. Only surface a room when its live session can actually be
+      // joined remotely, using the same rule as the SessionModal.
+      if (isRemoteJoinable(s, data)) map[s.room] = s;
     }
     return map;
   }, [data, now]);
