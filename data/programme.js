@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-23T11-20
+// ICED26 programme — generated from admin panel 2026-06-23T11-23
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -574,11 +574,11 @@ window.ICED26_DATA = {
           "bio": "Vicerrectora de Cultura, Patrimonio, Sostenibilidad y Desarrollo de Campus"
         },
         {
-          "name": "Mónica Féixas",
+          "name": "Mònica Feixas",
           "bio": "Convenor of ICED26 Congress"
         },
         {
-          "name": "Javier Félix-Merchán Sanchez Jara",
+          "name": "Javier Merchán",
           "bio": "Secretario Académico del Instituto Universitario de Ciencias de la Educación (IUCE)."
         },
         {
