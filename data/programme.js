@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-23T06-04
+// ICED26 programme — generated from admin panel 2026-06-23T09-08
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -1017,10 +1017,12 @@ window.ICED26_DATA = {
       ],
       "easychair_session_id": "104810",
       "description": "Developing Trust, Care and Collegiality",
-      "chair": "Elena Quevedo Torrientes",
+      "chair": "Mario García Peral",
       "cardTitle": "",
       "onlinePresenter": false,
-      "youtube": ""
+      "youtube": "",
+      "hybrid": false,
+      "cancelled": false
     },
     {
       "day": "2026-06-24",
@@ -4245,7 +4247,6 @@ window.ICED26_DATA = {
       "meet": "ICEDX1:s9huMyX-1cqU1ma_Kw1sN7RGyz13FR_kinPEIKC2EvkNAGiWrPVI1bo2xCb4deKqFy9wFychUav2FViyr2SjXuhLDzGWaUAw0Iu3GCJHtW8",
       "talks": [
         {
-          "easychair_id": "311832",
           "time": "12:15",
           "title": "From Assessment to Longitudinal Insights: Building a Data-Driven Learning Ecosystem for Competency-Based Education",
           "authors": "Mario Valdebenito Rodas, Karie Niedzielski, Kolton Collins, Benjamin Dyer",
@@ -4254,7 +4255,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311892",
           "time": "12:30",
           "title": "Revealing Knowledge Practices in UK Educational Development with Legitimation Code Theory",
           "authors": "Jo Kukuczka",
@@ -4263,7 +4263,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311975",
           "time": "12:45",
           "title": "Producing and using powerful knowledge in the field of Educational Development",
           "authors": "Chrissie Boughey",
@@ -4272,7 +4271,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311829",
           "time": "13:00",
           "title": "Exploring trends in research methods for Academic Development research: signature methodologies?",
           "authors": "Elena Benini, Henk Huijser, Anna Serbati",
@@ -4281,18 +4279,23 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311907",
           "time": "13:15",
           "title": "University Capacity Development Grants and Their Enactment on the Ground: An Ethnographic Account of a University of Technology",
           "authors": "Cephas Makwara, Violet Makwara",
           "presenter": "Cephas Makwara",
           "abstract": "The University Capacity Development Grants (UCDGs) are designed to strengthen teaching, learning and student support across South African universities. This paper offers an ethnographic account of how UCDG-funded initiatives were enacted within a nascent School of Education at a University of Technology, focusing on a tutor and supplemental instruction programme intended to enhance student access with success. Guided by Margaret Archer’s Structure–Culture–Agency framework, the study examines how institutional structures, cultural norms and the agency of lecturers and students intersected to shape the implementation process.\n\nThe findings show that while tutors played a crucial role in supporting student learning, their recruitment and day-to-day coordination depended heavily on the agentic efforts of lecturers and students who sought to sustain the programme despite unstable institutional conditions. Structural constraints-including leadership turnover, unclear administrative procedures and inconsistent financial processes-created uncertainty around tutor remuneration. Culturally, discretionary decision-making norms meant that payment rested largely on the authority of the dean, resulting in significant delays and, ultimately, lump-sum disbursements with unintended receiver of tax revenue (SARS) implications for student tutors. These experiences eroded morale, diminished trust and weakened the value-for-money intentions of the UCDG, undermining the transformative aspirations of SDG 4: Quality Education.\n\nThe study argues that neither agency nor goodwill alone can compensate for fragile structures and ambiguous cultural expectations. For UCDGs to fulfil their developmental purpose, universities require coherent Standard Operating Procedures, stable leadership practices and transparent administrative systems. Such reforms would ensure that capacity development initiatives meaningfully enhance student success.",
-          "keywords": ""
+          "keywords": "",
+          "online": true
         }
       ],
       "easychair_session_id": "104877",
       "description": "Knowledge Practices, Research Methods in AD and Data-Driven Capacity Development",
-      "chair": "Stefan T. Siegel"
+      "chair": "Stefan T. Siegel",
+      "cardTitle": "",
+      "onlinePresenter": false,
+      "hybrid": false,
+      "cancelled": false,
+      "youtube": ""
     },
     {
       "day": "2026-06-25",
@@ -6409,7 +6412,7 @@ window.ICED26_DATA = {
       ],
       "easychair_session_id": "105681",
       "description": "Strategic and Innovative Practices in Education and Academic Development",
-      "chair": "Claire Hamshire",
+      "chair": "",
       "cardTitle": "",
       "onlinePresenter": false,
       "youtube": "",
