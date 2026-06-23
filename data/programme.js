@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-23T10-52
+// ICED26 programme — generated from admin panel 2026-06-23T11-20
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -570,24 +570,24 @@ window.ICED26_DATA = {
       "youtube": "",
       "facilitators": [
         {
-          "name": "Matilde Olarte Martínez",
-          "bio": "Vice-Rector for Culture, University of Salamanca (Spain)"
+          "name": "Matilde Olarte",
+          "bio": "Vicerrectora de Cultura, Patrimonio, Sostenibilidad y Desarrollo de Campus"
+        },
+        {
+          "name": "Mónica Féixas",
+          "bio": "Convenor of ICED26 Congress"
+        },
+        {
+          "name": "Javier Félix-Merchán Sanchez Jara",
+          "bio": "Secretario Académico del Instituto Universitario de Ciencias de la Educación (IUCE)."
         },
         {
           "name": "Ariane Dumont",
-          "bio": "ICED President, Western Switzerland University of Applied Sciences and Arts (HES-SO)"
+          "bio": "ICED President"
         },
         {
           "name": "Idoia Fernández Fernández",
-          "bio": "REDU President (Spanish Network for University Teaching), University of the Basque Country (Spain)"
-        },
-        {
-          "name": "Mònica Feixas",
-          "bio": "Convenor of ICED 2026, REDU Board Member (Spanish Network for University Teaching), Zurich University of Teacher Education (Switzerland)"
-        },
-        {
-          "name": "Javier Félix Merchán Sánchez-Jara",
-          "bio": "Academic Secretary, University Institute of Educational Sciences (IUCE), University of Salamanca (Spain)"
+          "bio": "REDU President"
         }
       ]
     },
@@ -6434,7 +6434,7 @@ window.ICED26_DATA = {
       ],
       "easychair_session_id": "105681",
       "description": "Strategic and Innovative Practices in Education and Academic Development",
-      "chair": "",
+      "chair": "Franziska Zellweger",
       "cardTitle": "",
       "onlinePresenter": false,
       "youtube": "",
