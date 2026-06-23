@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-23T11-25
+// ICED26 programme — generated from admin panel 2026-06-23T12-55
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -3815,7 +3815,6 @@ window.ICED26_DATA = {
       "meet": "ICEDX1:lCcxGd-3g8BhAS88CCX9q3Kc7KciGdVhuD5P17UY9OLD19J8fqo-MkS3G3QHJI40vKRjPPWvSJRBwNO7WQzxJv6Yfjh66e0rranZAwFoCng",
       "talks": [
         {
-          "easychair_id": "311978",
           "time": "12:15",
           "title": "Unpacking student agency in peer feedback: Insights for university teachers and academic developers",
           "authors": "Tatiana Ershova",
@@ -3824,7 +3823,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311820",
           "time": "12:30",
           "title": "Fostering agency through coherent feedback between universities and schools",
           "authors": "Moeniera Moosa",
@@ -3834,7 +3832,6 @@ window.ICED26_DATA = {
           "online": true
         },
         {
-          "easychair_id": "311986",
           "time": "12:45",
           "title": "From feedback to co-creation: Rethinking peer observation among experienced teachers",
           "authors": "Oskar Gedda, Marcus Schmitt-Egenolf",
@@ -3844,7 +3841,6 @@ window.ICED26_DATA = {
           "online": true
         },
         {
-          "easychair_id": "311995",
           "time": "13:00",
           "title": "Student Feedback as a Mechanism for Strategic Alignment and Reflection in a Mandatory First-Year Experience Programme",
           "authors": "Sharmla Rama, Ruth Hoskins",
@@ -3853,7 +3849,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311942",
           "time": "13:15",
           "title": "Holding Space for Agency. Inclusive Academic Development and the Emotional Architecture of Feedback",
           "authors": "Vanessa Mar-Molinero, Erika Corradini",
@@ -3864,7 +3859,12 @@ window.ICED26_DATA = {
       ],
       "easychair_session_id": "104878",
       "description": "Wellbeing, Belonging and Commitment in Academic Development",
-      "chair": "Elisabeth Moyano"
+      "chair": "Erika Corradini",
+      "cardTitle": "",
+      "onlinePresenter": false,
+      "hybrid": false,
+      "cancelled": false,
+      "youtube": ""
     },
     {
       "day": "2026-06-25",
