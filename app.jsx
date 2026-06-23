@@ -794,7 +794,15 @@ function Header({ data, now, lang, setLang, t, favorites, onOpenAgenda, onOpenGo
     const map = {};
     for (const s of data.sessions) {
       if (isGlobalRow(s)) continue;
-      if (sessionState(s, now) === "live") map[s.room] = s;
+      if (sessionState(s, now) !== "live") continue;
+      // The MEET navigator is for sessions you can actually join remotely.
+      // Meet links are assigned per-room, so in-person sessions (workshops,
+      // posters, collaborative spaces…) inherit one and would otherwise light
+      // up here. Only surface a room when its live session is genuinely online
+      // (has a remote presenter) or streamed on YouTube.
+      if (effectiveYouTube(s, data) || (isSessionOnline(s) && s.meet)) {
+        map[s.room] = s;
+      }
     }
     return map;
   }, [data, now]);
