@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-23T12-55
+// ICED26 programme — generated from admin panel 2026-06-23T16-12
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -65,7 +65,7 @@ window.ICED26_DATA = {
       "name": "Auditorio Hospedería",
       "cluster": "hospederia",
       "code": "AUD",
-      "youtube": "",
+      "youtube": "https://www.youtube.com/live/2EeLtLwy-Ss",
       "meet": "ICEDX1:uCjBtzpi9Nj4JE8iiiGFuvJyOY4mj3jsZUyAyF1Kc4hFtlfL9lTfxdT0qOOfs0xLbhsPuEyS3F0--uYd1ESpACWA_XdzUPjJabrjFD2aG6s",
       "active": true
     },
