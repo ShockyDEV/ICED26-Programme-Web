@@ -1586,14 +1586,13 @@ function SessionEditor({ session, isNew, rooms, clusters, days, onSave, onCancel
             </label>
           </Field>
 
-          {/* Facilitators' background — EXTRA field shown only for Mindfulness
-              sessions, so it doesn't clutter every other session editor. */}
-          {/mindfulness/i.test(s.title || "") && (
-            <FacilitatorsEditor
-              value={s.facilitators}
-              onChange={(facs) => setField("facilitators", facs)}
-            />
-          )}
+          {/* Speakers / roles list (name + cargo) — optional, e.g. for the
+              Opening/Closing ceremonies, panels and the Mindfulness session.
+              Collapsed when empty, so it stays out of the way on other sessions. */}
+          <FacilitatorsEditor
+            value={s.facilitators}
+            onChange={(facs) => setField("facilitators", facs)}
+          />
 
           {(() => {
             const media = s.media || {};
@@ -1678,9 +1677,10 @@ function SessionEditor({ session, isNew, rooms, clusters, days, onSave, onCancel
 // ─────────────────────────────────────────────────────────────────────
 // TalksEditor
 // ─────────────────────────────────────────────────────────────────────
-// FacilitatorsEditor — structured list of facilitators (name + background).
-// Used only for Mindfulness sessions. Stored as [{name, bio}]. Accepts a legacy
-// string value and converts it to a single entry on first edit.
+// FacilitatorsEditor — structured list of people (name + cargo/formación).
+// Available on any session (collapsed when empty); used for ceremony/panel
+// speakers (Opening Ceremony…) and the Mindfulness facilitators. Stored as
+// [{name, bio}]. Accepts a legacy string value and converts it on first edit.
 function FacilitatorsEditor({ value, onChange }) {
   const list = Array.isArray(value)
     ? value
@@ -1691,28 +1691,29 @@ function FacilitatorsEditor({ value, onChange }) {
 
   return (
     <details className="facilitators-editor" open={list.length > 0}>
-      <summary>Formadoras (solo Mindfulness){list.length > 0 && <span className="muted"> ({list.length})</span>}</summary>
+      <summary>Ponentes y cargos (opcional){list.length > 0 && <span className="muted"> ({list.length})</span>}</summary>
       <p className="form-note">
-        Cada formadora: nombre y apellidos (se muestran en <strong>negrita</strong> automáticamente) y su formación.
-        Aparece como un bloque «Facilitators / Formadoras» en el detalle de la sesión.
+        Lista de personas con su <strong>nombre</strong> (se muestra en negrita) y el <strong>cargo o formación</strong> que ostentan.
+        Úsalo p. ej. en la ceremonia de apertura/clausura, paneles o Mindfulness. Aparece como un bloque
+        «Speakers / Ponentes» (o «Facilitators» en Mindfulness) en el detalle de la sesión.
       </p>
       {list.map((p, i) => (
         <div className="facilitator-row" key={i}>
           <div className="facilitator-row-head">
-            <strong>Formadora {i + 1}</strong>
-            <button type="button" className="btn-ghost btn-mini" onClick={() => remove(i)} title="Quitar formadora">Quitar</button>
+            <strong>Persona {i + 1}</strong>
+            <button type="button" className="btn-ghost btn-mini" onClick={() => remove(i)} title="Quitar persona">Quitar</button>
           </div>
           <Field label="Nombre y apellidos">
             <input type="text" value={p.name || ""} onChange={(e) => update(i, { name: e.target.value })}
-              placeholder="P. ej. Elena Quevedo" />
+              placeholder="P. ej. Matilde Olarte" />
           </Field>
-          <Field label="Formación">
-            <textarea rows={4} value={p.bio || ""} onChange={(e) => update(i, { bio: e.target.value })}
-              placeholder="P. ej. Education and Sport Faculty, University of Deusto. Organic Meditation and Mindfulness Coach…" />
+          <Field label="Cargo / formación">
+            <textarea rows={3} value={p.bio || ""} onChange={(e) => update(i, { bio: e.target.value })}
+              placeholder="P. ej. Vicerrectora de Internacionalización · Catedrática de Música, Universidad de Salamanca" />
           </Field>
         </div>
       ))}
-      <button type="button" className="btn-ghost" onClick={add}>+ Añadir formadora</button>
+      <button type="button" className="btn-ghost" onClick={add}>+ Añadir persona</button>
     </details>
   );
 }

@@ -425,6 +425,7 @@ const I18N = {
     realNow: "Real now",
     admin: "Admin",
     facilitatorsLabel: "Facilitators",
+    speakersLabel: "Speakers",
     codePrompt: "Participant code",
     codePromptDesc: "Enter the participant code to open the remote link. You received it by email.",
     codePromptPanelDesc: "This session has its own access code. Enter the International Panel code you received by email.",
@@ -511,6 +512,7 @@ const I18N = {
     realNow: "Ahora real",
     admin: "Admin",
     facilitatorsLabel: "Formadoras",
+    speakersLabel: "Ponentes",
     codePrompt: "Código de participante",
     codePromptDesc: "Introduce el código de participante para abrir el enlace remoto. Lo recibiste por email.",
     codePromptPanelDesc: "Esta sesión tiene su propio código de acceso. Introduce el código del International Panel que recibiste por email.",
@@ -2127,16 +2129,18 @@ function SessionModal({ session, t, lang, now, onClose, favorites, onToggleFavor
         })()}
 
         {(() => {
-          // Facilitators block (Mindfulness). New shape: array of {name, bio};
-          // legacy shape: a plain string. Render both.
+          // People block: a list of {name, bio} (or a legacy string). Used for
+          // the Mindfulness facilitators and for ceremony/panel speakers; the
+          // heading adapts — "Facilitators" for Mindfulness, "Speakers" elsewhere.
           const f = session.facilitators;
           if (!f) return null;
+          const peopleLabel = /mindful/i.test(session.title || "") ? t.facilitatorsLabel : t.speakersLabel;
           if (Array.isArray(f)) {
             const list = f.filter((p) => p && ((p.name || "").trim() || (p.bio || "").trim()));
             if (!list.length) return null;
             return (
               <div className="sm-facilitators">
-                <div className="sm-detail-label">{t.facilitatorsLabel}</div>
+                <div className="sm-detail-label">{peopleLabel}</div>
                 {list.map((p, i) => (
                   <div className="sm-facilitator" key={i}>
                     {(p.name || "").trim() && <div className="sm-facilitator-name">{p.name.trim()}</div>}
@@ -2149,7 +2153,7 @@ function SessionModal({ session, t, lang, now, onClose, favorites, onToggleFavor
           if (typeof f === "string" && f.trim()) {
             return (
               <div className="sm-facilitators">
-                <div className="sm-detail-label">{t.facilitatorsLabel}</div>
+                <div className="sm-detail-label">{peopleLabel}</div>
                 <p className="sm-facilitators-text">{linkifyText(f.trim())}</p>
               </div>
             );
