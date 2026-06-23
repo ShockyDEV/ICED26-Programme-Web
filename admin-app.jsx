@@ -87,10 +87,11 @@ function buildProgrammeJS(data) {
   );
 }
 
-// Encrypt remote links (Meet/YouTube) before publishing so the public repo
-// never exposes a usable URL. Returns a NEW data object (does not mutate).
-//   • Each session with an access scope gets its plaintext meet/youtube
-//     encrypted with that scope's code.
+// Encrypt Meet links before publishing so the public repo never exposes a
+// usable interactive-room URL. YouTube livestreams are PUBLIC and ship in
+// plaintext (no code gate). Returns a NEW data object (does not mutate).
+//   • Each session with an access scope gets its plaintext meet encrypted
+//     with that scope's code; youtube is left untouched (public).
 //   • The code is taken from meta.access.pending{Global,Panel}Code if the admin
 //     just set it this session, else from the code remembered in THIS browser
 //     (localStorage). So a code set once keeps encrypting newly applied links on
@@ -119,18 +120,17 @@ async function encryptLinksForPublish(data) {
     const code = isPanel ? panelCode : globalCode;
     const next = { ...s };
     if (s.meet) next.meet = await encField(s.meet, code);
-    if (s.youtube) next.youtube = await encField(s.youtube, code);
+    // YouTube livestreams are PUBLIC — never encrypted, never code-gated.
     sessions.push(next);
   }
 
-  // Rooms always use the GLOBAL code (a room isn't "the panel"). This closes
-  // the gap where the header Meet menu / effectiveYouTube read room.meet /
-  // room.youtube — those would otherwise ship in plaintext.
+  // Rooms always use the GLOBAL code (a room isn't "the panel"). Only room.meet
+  // is encrypted; room.youtube ships in plaintext (public livestream).
   const rooms = [];
   for (const r of (data.rooms || [])) {
     const next = { ...r };
     if (r.meet) next.meet = await encField(r.meet, globalCode);
-    if (r.youtube) next.youtube = await encField(r.youtube, globalCode);
+    // YouTube livestreams are PUBLIC — shipped in plaintext (no code gate).
     rooms.push(next);
   }
 
@@ -149,8 +149,9 @@ function countExposedRemoteLinks(data) {
   if (!ac || !ac.enabled || !C) return 0;
   const isPlain = (v) => !!v && /^https?:\/\//i.test(v) && !C.isEnc(v);
   let n = 0;
-  for (const s of data.sessions) { if (isPlain(s.meet)) n++; if (isPlain(s.youtube)) n++; }
-  for (const r of (data.rooms || [])) { if (isPlain(r.meet)) n++; if (isPlain(r.youtube)) n++; }
+  // YouTube is intentionally public (plaintext) — only Meet links must stay encrypted.
+  for (const s of data.sessions) { if (isPlain(s.meet)) n++; }
+  for (const r of (data.rooms || [])) { if (isPlain(r.meet)) n++; }
   return n;
 }
 
