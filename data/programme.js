@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-23T16-12
+// ICED26 programme — generated from admin panel 2026-06-23T16-16
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -75,7 +75,8 @@ window.ICED26_DATA = {
       "cluster": "hospederia",
       "code": "SM",
       "active": true,
-      "meet": "ICEDX1:nO2w0nXfBS8Fus0-g39z3FCiyOaIN9mM3QscZQw2dcr0RLLPqGSYJCeShjwaslIkTSJGpBHha45AU1AOzeXy38h9d31UCQ2SZ9gn9H07CEM"
+      "meet": "ICEDX1:nO2w0nXfBS8Fus0-g39z3FCiyOaIN9mM3QscZQw2dcr0RLLPqGSYJCeShjwaslIkTSJGpBHha45AU1AOzeXy38h9d31UCQ2SZ9gn9H07CEM",
+      "youtube": "https://www.youtube.com/live/B8AN6W_dgug"
     },
     {
       "id": "sala-presentaciones",
