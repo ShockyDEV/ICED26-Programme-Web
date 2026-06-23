@@ -570,24 +570,24 @@ window.ICED26_DATA = {
       "youtube": "",
       "facilitators": [
         {
-          "name": "Matilde Olarte",
-          "bio": "Vicerrectora de Cultura, Patrimonio, Sostenibilidad y Desarrollo de Campus"
-        },
-        {
-          "name": "Mónica Féixas",
-          "bio": "Convenor of ICED26 Congress"
-        },
-        {
-          "name": "Javier Félix-Merchán Sanchez Jara",
-          "bio": "Secretario Académico del Instituto Universitario de Ciencias de la Educación (IUCE)."
+          "name": "Matilde Olarte Martínez",
+          "bio": "Vice-Rector for Culture, University of Salamanca (Spain)"
         },
         {
           "name": "Ariane Dumont",
-          "bio": "ICED President"
+          "bio": "ICED President, Western Switzerland University of Applied Sciences and Arts (HES-SO)"
         },
         {
           "name": "Idoia Fernández Fernández",
-          "bio": "REDU President"
+          "bio": "REDU President (Spanish Network for University Teaching), University of the Basque Country (Spain)"
+        },
+        {
+          "name": "Mònica Feixas",
+          "bio": "Convenor of ICED 2026, REDU Board Member (Spanish Network for University Teaching), Zurich University of Teacher Education (Switzerland)"
+        },
+        {
+          "name": "Javier Félix Merchán Sánchez-Jara",
+          "bio": "Academic Secretary, University Institute of Educational Sciences (IUCE), University of Salamanca (Spain)"
         }
       ]
     },
