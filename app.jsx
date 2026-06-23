@@ -207,6 +207,8 @@ function isStreamed(s, data) {
   if (STREAMED_ROOMS.includes(s.room)) {
     return s.type !== "break" && s.type !== "social" && s.type !== "other";
   }
+  // Symposiums held in Sala de Pinturas are broadcast on YouTube too.
+  if (s.room === "sala-pinturas" && s.type === "symposium") return true;
   // Elsewhere, only keynotes and ICED talks are streamed.
   return s.type === "keynote" || s.type === "talk";
 }
