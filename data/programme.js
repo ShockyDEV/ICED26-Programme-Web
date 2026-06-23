@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-23T06-02
+// ICED26 programme — generated from admin panel 2026-06-23T06-03
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -326,7 +326,7 @@ window.ICED26_DATA = {
       "roomName": "",
       "roomCode": "",
       "cluster": "colegio",
-      "title": "Lunch Break - CAFETERÍA DE LA HOSPEDERÍA",
+      "title": "Lunch Break",
       "fullName": "Lunch Break",
       "type": "break",
       "meet": "ICEDX1:q5baKjQqmeE1qssBg5418Bmw9cgCDF-1Ak_vfFbqn1ALGKAxfgu_rufPG-GtXXp3r40Y9PEwSS_Cnl-zpRCeH6dLPYPKYnRbw6zGGNUQoZs",
