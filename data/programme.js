@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-24T06-02
+// ICED26 programme — generated from admin panel 2026-06-24T06-03
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -6713,7 +6713,7 @@ window.ICED26_DATA = {
         {
           "time": "11:00",
           "title": "Becoming agents for curriculum internationalisation. Research insights from four European countries",
-          "authors": "Angelika Thielsch, Pouneh Eftekhari, Rebecca Berman, Eveke de Louw, Lucie Weissowa, Torgny Roxå",
+          "authors": "Angelika Thielsch, Pouneh Eftekhari, Becky Bergman, Eveke de Louw, Lucie Weissowa, Torgny Roxå",
           "presenter": "Pouneh Eftekhari",
           "abstract": "For two decades now, higher education institutions aim at increasing global perspectives into their study programs by means of different approaches to curriculum internationalization (Beelen & Jones, 2015; Leask, 2015), nowadays especially by the so-called internationalisation of the curriculum at home (IoCaH) (Eftekhari, Yousefzadeh, & Coelen, 2025; Leask, 2025). Yet, the success of these endeavours is still fragile due to the missing support structures for academic teachers to engage in IoCaH and the lack of organisational embeddedness of educational developers (ED) in these processes (EQUiiP, 2019; Killick, 2015). The question is, how the institutional environment for both of these crucial stakeholders can be influenced for them to develop a sense of agency that makes them engage (more). It is this question that lies at the heart of our symposium. The three symposium papers offer focal points for EDs to use in order to increase their own involvement in IoCaH processes. The papers are underpinned by findings of two research groups and four doctoral theses. The first two papers share recent findings about what academic teachers as well as ED actually need to (be able to) get engaged in internationalisation. The third paper offers a comprehensive summary of the analysed factors that could support both stakeholders in increasing their agency as ambassadors of IoCaH. Each paper is grounded in the presenters' empirical research, drawing upon multiple, methodologically diverse projects in four European countries. All studies were externally funded and rigorously peer-reviewed.",
           "keywords": ""
