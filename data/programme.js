@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-24T09-42
+// ICED26 programme — generated from admin panel 2026-06-24T14-25
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -76,7 +76,7 @@ window.ICED26_DATA = {
       "code": "SM",
       "active": true,
       "meet": "ICEDX1:nO2w0nXfBS8Fus0-g39z3FCiyOaIN9mM3QscZQw2dcr0RLLPqGSYJCeShjwaslIkTSJGpBHha45AU1AOzeXy38h9d31UCQ2SZ9gn9H07CEM",
-      "youtube": "https://www.youtube.com/live/88L1IiTXSZc"
+      "youtube": "https://www.youtube.com/live/m6EkRyxJfgU"
     },
     {
       "id": "sala-presentaciones",
@@ -1355,7 +1355,7 @@ window.ICED26_DATA = {
       "title": "A - Symposium 2",
       "fullName": "Session 7M: A - Symposium 2",
       "type": "symposium",
-      "meet": "ICEDX1:2ZCp0_uPJ3fPvBgmd9neUGtr_mdfKE35qy-mOaYjVBw_93p9M39llmBrrZu77OJXahYFN96aH8bnGyqkj-FAzNcvip6XIdwr4YkMKQvCHMU",
+      "meet": "ICEDX1:nO2w0nXfBS8Fus0-g39z3FCiyOaIN9mM3QscZQw2dcr0RLLPqGSYJCeShjwaslIkTSJGpBHha45AU1AOzeXy38h9d31UCQ2SZ9gn9H07CEM",
       "talks": [
         {
           "time": "11:00",
@@ -1743,7 +1743,7 @@ window.ICED26_DATA = {
       "title": "B - Iced Talks 1",
       "fullName": "Session 8N: B - Iced Talks 1",
       "type": "talk",
-      "meet": "ICEDX1:7h2g85YtVjmzWi8wG5o_6n15AGccAhO2-4Ei-7syBIf4BTuwVc4_gcCD2-KqSJWjugIZ_56xZ5B2Tbjt2XXTB8Z5Eq8O38bV8nB8KpN8ZJ0",
+      "meet": "ICEDX1:nO2w0nXfBS8Fus0-g39z3FCiyOaIN9mM3QscZQw2dcr0RLLPqGSYJCeShjwaslIkTSJGpBHha45AU1AOzeXy38h9d31UCQ2SZ9gn9H07CEM",
       "talks": [
         {
           "time": "12:45",
@@ -2257,7 +2257,7 @@ window.ICED26_DATA = {
       "title": "C - Iced Talks 2",
       "fullName": "Session 10E: C - Iced Talks 2",
       "type": "talk",
-      "meet": "",
+      "meet": "ICEDX1:nO2w0nXfBS8Fus0-g39z3FCiyOaIN9mM3QscZQw2dcr0RLLPqGSYJCeShjwaslIkTSJGpBHha45AU1AOzeXy38h9d31UCQ2SZ9gn9H07CEM",
       "talks": [
         {
           "time": "16:15",
@@ -3428,7 +3428,7 @@ window.ICED26_DATA = {
       "title": "E - Symposium 4",
       "fullName": "Session 13M: E - Symposium 4",
       "type": "symposium",
-      "meet": "ICEDX1:6swQ5wQFWSNyBYU__6WbdZ_8zR7o9H5YVlH8zSDwRDt4fw1P-rIQXj3xQGQ7GnKb804fsfo9Mf5abDw1c0TykoyZ9ziyJlTD-Oe7n-E5dnw",
+      "meet": "ICEDX1:nO2w0nXfBS8Fus0-g39z3FCiyOaIN9mM3QscZQw2dcr0RLLPqGSYJCeShjwaslIkTSJGpBHha45AU1AOzeXy38h9d31UCQ2SZ9gn9H07CEM",
       "talks": [
         {
           "time": "09:00",
@@ -4333,7 +4333,7 @@ window.ICED26_DATA = {
       "title": "F - Symposium 7",
       "fullName": "Session 15L: F - Symposium 7",
       "type": "symposium",
-      "meet": "ICEDX1:YHe8WG9lEmd2ScTa_blhHHfoSbbXorJoiPKR7mliwCjg18HCYtgvOixJKyEVszCv4MfEuZRQd8izvct-B5W-5BHFlhZJn4rkRo-u4Cl32L8",
+      "meet": "ICEDX1:nO2w0nXfBS8Fus0-g39z3FCiyOaIN9mM3QscZQw2dcr0RLLPqGSYJCeShjwaslIkTSJGpBHha45AU1AOzeXy38h9d31UCQ2SZ9gn9H07CEM",
       "talks": [
         {
           "easychair_id": "311651",
@@ -4870,7 +4870,7 @@ window.ICED26_DATA = {
       "title": "G - Iced Talks 3",
       "fullName": "Session 17A: G - Iced Talks 3",
       "type": "talk",
-      "meet": "ICEDX1:qDI1z1DS4yoXnXdhQWvseo_9l2LHPBGvzTRh7JsVJO4QSU14BFa5J6761ZgSZI6nGG6yOZoX8GJ1VzP9UGgNd9F9-f3sQDsChJpJhVyidJI",
+      "meet": "ICEDX1:nO2w0nXfBS8Fus0-g39z3FCiyOaIN9mM3QscZQw2dcr0RLLPqGSYJCeShjwaslIkTSJGpBHha45AU1AOzeXy38h9d31UCQ2SZ9gn9H07CEM",
       "talks": [
         {
           "time": "16:15",
@@ -5281,7 +5281,7 @@ window.ICED26_DATA = {
       "title": "H - ICED Talk 4",
       "fullName": "Session 18P: H - ICED Talk 4",
       "type": "talk",
-      "meet": "ICEDX1:cT_rWlFe5hiP6gwkt5kDIkrURocdJFITYoeMdPmQVROsS7AhtwTKRPFEgiyVk4LIxxAeVO1ZPp0InkPm4cHitXreF-kg0HL06GV5KD1ySuk",
+      "meet": "ICEDX1:nO2w0nXfBS8Fus0-g39z3FCiyOaIN9mM3QscZQw2dcr0RLLPqGSYJCeShjwaslIkTSJGpBHha45AU1AOzeXy38h9d31UCQ2SZ9gn9H07CEM",
       "talks": [
         {
           "easychair_id": "311768",
@@ -5979,7 +5979,7 @@ window.ICED26_DATA = {
       "title": "G - Iced Talks 5",
       "fullName": "Session 20B: G - Iced Talks 5",
       "type": "talk",
-      "meet": "ICEDX1:3oyzMB43nSo4kJplv37tSCdlCLiBD4OPxMt3YtHnpuzlSI4SB6fy_6dbuVrGZti9hq7c_HpCZLbDtptMyqIeayOED9yRAzzOhf-Hf9rwXqU",
+      "meet": "ICEDX1:nO2w0nXfBS8Fus0-g39z3FCiyOaIN9mM3QscZQw2dcr0RLLPqGSYJCeShjwaslIkTSJGpBHha45AU1AOzeXy38h9d31UCQ2SZ9gn9H07CEM",
       "talks": [
         {
           "easychair_id": "312010",
@@ -6708,7 +6708,7 @@ window.ICED26_DATA = {
       "title": "K - Symposium 10",
       "fullName": "Session 21L: K - Symposium 10",
       "type": "symposium",
-      "meet": "ICEDX1:8Ox0QMAzYD18DfCNz4zjvMzE3T_2l_5GV-twCa2Qpbt4B5rwjuUYP3awI8AZ6ycA_7FcJLBZSg2JrfqFl9sHLjK6Es_7CmE8oAVvDhcIhaY",
+      "meet": "ICEDX1:nO2w0nXfBS8Fus0-g39z3FCiyOaIN9mM3QscZQw2dcr0RLLPqGSYJCeShjwaslIkTSJGpBHha45AU1AOzeXy38h9d31UCQ2SZ9gn9H07CEM",
       "talks": [
         {
           "time": "11:00",
