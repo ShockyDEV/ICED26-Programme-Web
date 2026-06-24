@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-24T15-42
+// ICED26 programme — generated from admin panel 2026-06-24T15-59
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -3490,7 +3490,6 @@ window.ICED26_DATA = {
       "meet": "ICEDX1:wSBYVS26BrHdNCrWX7_qCCJ9JYPQDDatgV8UXbEHjv6RGts_skqNWOZ9Km3lI5YxIHY5NHi62_IXgamZDPMD4cmc49xNqLVblTkikqFmgj0",
       "talks": [
         {
-          "easychair_id": "311844",
           "time": "09:00",
           "title": "Educational leadership in educational development: evidence from a scoping review",
           "authors": "Elena Benini, Klara Bolander Laksov, Anna Serbati",
@@ -3499,7 +3498,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311926",
           "time": "09:15",
           "title": "Change leadership as structural-agentic processes",
           "authors": "Oddfrid Førland, Torgny Roxå, Lene Nordrum",
@@ -3508,7 +3506,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311953",
           "time": "09:30",
           "title": "Becoming strategic: Informing Academic Developers’ Identity, Agency and Practice for transformation",
           "authors": "Heather Goode, Rejoice Nsibande",
@@ -3517,7 +3514,6 @@ window.ICED26_DATA = {
           "keywords": ""
         },
         {
-          "easychair_id": "311855",
           "time": "09:45",
           "title": "The holistic approach to Faculty Development to face the age complexity: an operational model",
           "authors": "Roberta Silva, Alessia Bevilacqua",
@@ -3527,18 +3523,23 @@ window.ICED26_DATA = {
           "online": true
         },
         {
-          "easychair_id": "311783",
           "time": "10:00",
           "title": "From individuals to institutions: operationalizing the holistic faculty development approach",
           "authors": "Alessia Bevilacqua, Roberta Silva",
           "presenter": "Alessia Bevilacqua",
           "abstract": "The holistic approach to Faculty Development adopted by the University of Verona's growth into practice across multiple disciplinary domains. Rooted in an ecological framework, this model integrates professional, personal, and institutional dimensions of development, fostering coherence between teaching innovation and institutional transformation. In the Health area, Faculty Development supports educators and students through evidence-based active learning, flipped and team-based methodologies, and metacognitive strategies to enhance self-regulated learning. Within Law education, projects combine civic education with experiential learning, cultivating ethical awareness and social responsibility. In Economics promote reflective, internationalized, and service-oriented teaching practices. The Formarsi per Formare program provides continuous training for faculty members, while transversal skills initiatives engage both students and administrative staff in developing life and professional competences. Through these diverse yet interconnected initiatives, the holistic model demonstrates its adaptability and effectiveness in fostering innovation, collaboration, and sustainability across the entire academic ecosystem.",
-          "keywords": ""
+          "keywords": "",
+          "online": true
         }
       ],
       "easychair_session_id": "104863",
       "description": "Educational Leadership, Strategic Change and Faculty Development",
-      "chair": "Angelika Thielsch"
+      "chair": "Angelika Thielsch",
+      "cardTitle": "",
+      "onlinePresenter": false,
+      "hybrid": false,
+      "cancelled": false,
+      "youtube": ""
     },
     {
       "day": "2026-06-25",
