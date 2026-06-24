@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-24T20-12
+// ICED26 programme — generated from admin panel 2026-06-24T21-20
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -4318,7 +4318,7 @@ window.ICED26_DATA = {
       ],
       "easychair_session_id": "104877",
       "description": "Knowledge Practices, Research Methods in AD and Data-Driven Capacity Development",
-      "chair": "Stefan T. Siegel",
+      "chair": "Aaron Soens",
       "cardTitle": "",
       "onlinePresenter": false,
       "hybrid": false,
