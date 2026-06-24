@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-24T05-01
+// ICED26 programme — generated from admin panel 2026-06-24T06-02
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -76,7 +76,7 @@ window.ICED26_DATA = {
       "code": "SM",
       "active": true,
       "meet": "ICEDX1:nO2w0nXfBS8Fus0-g39z3FCiyOaIN9mM3QscZQw2dcr0RLLPqGSYJCeShjwaslIkTSJGpBHha45AU1AOzeXy38h9d31UCQ2SZ9gn9H07CEM",
-      "youtube": ""
+      "youtube": "https://www.youtube.com/live/88L1IiTXSZc"
     },
     {
       "id": "sala-presentaciones",
