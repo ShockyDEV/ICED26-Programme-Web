@@ -65,7 +65,7 @@ window.ICED26_DATA = {
       "name": "Auditorio Hospedería",
       "cluster": "hospederia",
       "code": "AUD",
-      "youtube": "https://www.youtube.com/live/Ku2fbD0OEhE",
+      "youtube": "https://www.youtube.com/live/0MGhHbjBGA0",
       "meet": "ICEDX1:uCjBtzpi9Nj4JE8iiiGFuvJyOY4mj3jsZUyAyF1Kc4hFtlfL9lTfxdT0qOOfs0xLbhsPuEyS3F0--uYd1ESpACWA_XdzUPjJabrjFD2aG6s",
       "active": true
     },
