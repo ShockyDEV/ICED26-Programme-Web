@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-24T06-03
+// ICED26 programme — generated from admin panel 2026-06-24T09-31
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -33,7 +33,7 @@ window.ICED26_DATA = {
     "access": {
       "enabled": true,
       "token": "ICED26-OK",
-      "globalVerifier": "ICEDX1:PRomV4J8gDzgjyFnUh8DUKiCV0LvkxhJOWvZYjjklfK6RVcIaXx_2k-ieuzTxBc19jOxLpM",
+      "globalVerifier": "ICEDX1:947RhfrLPV0TLVstQBx7TwQPWYz6houuO8hRhjjvbbmECVPJbA26DusMF2idwU6VATBt5WE",
       "panelVerifier": "ICEDX1:xvYLvZMfdQOl4PIpQkxi6q2zd-t4xAG54AKwzYnuHq6ayMVo9MkxVhylniOqdT2REKeK4nA",
       "panelSessionId": "104802",
       "panelRoomId": "auditorio"
@@ -116,7 +116,7 @@ window.ICED26_DATA = {
       "cluster": "hospederia",
       "code": "1.1",
       "active": true,
-      "meet": "ICEDX1:yvLG5cgDE2FxRog696fvuXyGrYzfZAQHIr_WJJseo8aA9r1_VEKHxIr9Q-4bVqreTKU-4wBOVVVQkIXpIP2ZBTobu43HDp46IrAAd0qLpl4"
+      "meet": "ICEDX1:gfO-EEi_WceYh162qY2FTVaMMEpY2U_jPRUk_vyPmGI_N3GtqxfvIXn52BI--f9uR3Z3PithuZGRzdSgIh-p0zTQibSKX45twzLfnIzKpXA"
     },
     {
       "id": "room-1-2",
@@ -124,7 +124,7 @@ window.ICED26_DATA = {
       "cluster": "hospederia",
       "code": "1.2",
       "active": true,
-      "meet": "ICEDX1:x35JsKl_jWrsY5-Q5grM0LqKX3Rab4PVcuoN-PinlPmUo3TdZavO2Bt2pNTDuyC6GCgDkZI-B0U6x9mCEhzlqc140pBmajtLSHsPxkthc48"
+      "meet": "ICEDX1:8uHKoda5ohddBHvls930mramK4-MuJ9tnGDLJ8HJ47lB2afA9U-Qfw1QaH24jJEb4yksBAwlR1seALhr7f_bEdJupUJJIdRBZMhmifk55JI"
     },
     {
       "id": "room-2-1",
@@ -230,7 +230,7 @@ window.ICED26_DATA = {
       "title": "PRE Parallel Workshops A - Workshop 1",
       "fullName": "Session 2A: PRE Parallel Workshops A - Workshop 1",
       "type": "workshop",
-      "meet": "ICEDX1:84KlV1ZtcqrKJyGIF_bXPc398qQxP0GUv2Eqh_FaICFESzATZT69GbYhAdgParFs4Icgifwni8KNvqW-q5NqyogwP6eutCnoMbI6I2EbTtM",
+      "meet": "ICEDX1:L7PXrPYEaCgpm6CCPDrgMDqbCMaQcGoAE3njjzaIL3XHPtyGxDrB6fiOPVzetQz7IPc2MU7wtJm9IW0LdRMOQ3CYpAI2bx8ay2laoecAv8Y",
       "talks": [
         {
           "easychair_id": "311642",
@@ -351,7 +351,7 @@ window.ICED26_DATA = {
       "title": "PRE Parallel Workshops B - Workshop 5",
       "fullName": "Session 3A: PRE Parallel Workshops B - Workshop 5",
       "type": "workshop",
-      "meet": "ICEDX1:RBmLPSVS9GWiqS-ZaVuVsBoTbMPC0yYdWsjGEU_q7OGqRXyFBXE_S5bHpiSBDDyxTe3BAkSOdSGC7O3cjKiazbSDgDjAbIg_wG5oayR-2Io",
+      "meet": "ICEDX1:URWJMs9z7eA45PH8fCiHDMswD6K_yhnIgyAXa3aQozOnqa6c2L4-Xv7TcwFWvH3E2uSVGAjUbwnIFz5nDLqqLmqIPJnFgaUqxTaWe3kW9Lk",
       "talks": [
         {
           "easychair_id": "311646",
@@ -451,7 +451,7 @@ window.ICED26_DATA = {
       "title": "PRE Parallel Workshops C - Workshop 9",
       "fullName": "Session 4A: PRE Parallel Workshops C - Workshop 9",
       "type": "workshop",
-      "meet": "ICEDX1:gWINtn3UQ6fv-49RwpRX_aNF2r1jwZYrfPCjc77coqxVn5ug5UNbnNd-2Rg_bflDkydRUPErFDXcuVbWQ5QlN8V-Tlbq7nRM6rb1rmLmTGo",
+      "meet": "ICEDX1:4KM30IqdLlwCFr4jN6K1PoKlbItrVAznXSOrIXK0gJh9SxDZR3vs9Jjv0ZvCWoIq9BGpnHzCtJtJHrOLFD4PwDk-M5yrFzvu8auNgSjDuBg",
       "talks": [
         {
           "easychair_id": "311641",
@@ -758,7 +758,7 @@ window.ICED26_DATA = {
       "title": "A - Papers 1",
       "fullName": "Session 7B: A - Papers 1",
       "type": "paper",
-      "meet": "ICEDX1:pumb0Nu5Ui2bFGvZLa9LQRwOM9fCL1_vgsXXHW3n1yYBAMD8zGXaRoa5zd-FmkWgy8XLi4FF5MSgAAZ-96Z8gV2tfF2vFIaGhXzckgO2C6g",
+      "meet": "ICEDX1:8eGuYtHLAR0SDvoF-4O6ZBS5Mz7ruT1ZvxWlgy_pbv5bMJwqhhHBC-Lt7IT46uj04JP_zrD4ArxV9VvDYB96nRvQDULs8YUYANosNWtAqyw",
       "talks": [
         {
           "time": "11:00",
@@ -819,7 +819,7 @@ window.ICED26_DATA = {
       "title": "A - Papers 2",
       "fullName": "Session 7A: A - Papers 2",
       "type": "paper",
-      "meet": "ICEDX1:8NakzSZEus5Z3d4BaQMynQqan37_A-SwTWhv9X2lBeLn0ukcUGgJZrvH__5_qGPM8-hq6FHkaB0qqW1SQAiz4VNCq5ZPsvQ-9QMOeQe8E4g",
+      "meet": "ICEDX1:IKYOzQu0qyyJ5nPzFfms2ofnhsP87e25J1Asd47iddPhDzTEJll2BUBMkEP2tyj9MdZL721k4vAdSjHKdszoYMgErwih8HgPJye0QkpN314",
       "talks": [
         {
           "time": "11:00",
@@ -1488,7 +1488,7 @@ window.ICED26_DATA = {
       "title": "B - Workshop 1",
       "fullName": "Session 8E: B - Workshop 1",
       "type": "workshop",
-      "meet": "ICEDX1:sQ1XaNX7vIoYV9pD6rut4_f2EThIV7r-tUnTy3jSxBl7qE6CFqOzjB85YlcKj9xwKkSRhKB2LfOjj4IOL78uoGMCpgYedwuzZ_dSE-OnKbE",
+      "meet": "ICEDX1:PCTs4W_3hyhISY33ldVtL_xnI-SDTfcWznMiJom-PK-xrWiuwRNKFuZxKkYT2qYRlssFiWu1mGCxeJdw8Hg00Ck-PLGtp5ijHrQ55cism5o",
       "talks": [
         {
           "easychair_id": "311640",
@@ -1513,7 +1513,7 @@ window.ICED26_DATA = {
       "title": "B - Workshop 2",
       "fullName": "Session 8F: B - Workshop 2",
       "type": "workshop",
-      "meet": "ICEDX1:3uWlbyieiY-DppN3v3yR9dIOkb0i8UFgqfW0Rf06BcFNLJD9d9Qv0rUbEteJ75EUgA6U_TGB1f6zRUeLEgVCzK7oROWnWY_Tn1-L6E6k0Lk",
+      "meet": "ICEDX1:oyPh4Z5_e-jYYkB4ve-LIY86gfFYafd52p5vsFYY3alNAxPqedCdxchI5STzcQhM0X6B3NROMaZh_pQXiHlx8s2DIsiHlGejrrAzemsf_f8",
       "talks": [
         {
           "easychair_id": "311673",
@@ -2000,7 +2000,7 @@ window.ICED26_DATA = {
       "title": "C - Workshop 10",
       "fullName": "Session 10F: C - Workshop 10",
       "type": "workshop",
-      "meet": "ICEDX1:yN54GXR-iMkSm19zOto3kKMAS_powh2EAupniB9kQpW9ttRDiMcDxnRlHoYaNhXOr0EIjM1Am1CcLelP-Kgpo-fDAm5kTSsFv7-i9ny805s",
+      "meet": "ICEDX1:GoW3_KbCXT9qQQhI9vg5BHqGJ5p_y9DY-BJmX1Lw7iC6yFv-xUCyzJ8bArsb1Nicbz55pDDJiSbwXcbxnqWQ9zns4GVc9GocvFobe3mWTO8",
       "talks": [
         {
           "easychair_id": "311713",
@@ -2025,7 +2025,7 @@ window.ICED26_DATA = {
       "title": "C - Workshop 11",
       "fullName": "Session 10G: C - Workshop 11",
       "type": "workshop",
-      "meet": "ICEDX1:zYqr74fGUKHAdaNB7BE6zs38miB4nJiwXhXFsAwMgvLqaamcUZA50MTd-g-0W7pY6h0xSUCa8X5Gu2OYuzccslJ2yVdWG_S5FAqxA4P6sqg",
+      "meet": "ICEDX1:MdjsxNZQ46rwqZP4Vgwh2gX9y3wjIaJYDn0RulESQjjQ-O1Ck_f9qQt6sHAALtmsjKSEwr28xyI0WNWByxWmU8VOhad0mokQcGEo48TEZ1A",
       "talks": [
         {
           "time": "16:15",
@@ -2389,7 +2389,7 @@ window.ICED26_DATA = {
       "title": "D - Collaborative Space 11",
       "fullName": "Session 11A: D - Collaborative Space 11",
       "type": "collaborative",
-      "meet": "ICEDX1:sEsxoBYxK1eW88C41B-b2RU6AgPesxc23m1B82kkVmkVh29iID05TAskMGXcVy1bDADEM471PwZ893tJK7dsVIJ_zF6Su3-0rVfq2vuyenA",
+      "meet": "ICEDX1:OPlNXYRZmnAKAbZiw69BqNKi1W6W5gFEqZPRLM3Uq_kXsDX3Jj5jG3Iu59_SA0s3KCiHau8xuoL9WNZmIUPqhdkEiw-Q7wVuoJarMgHa2lY",
       "talks": [
         {
           "easychair_id": "311730",
@@ -2851,7 +2851,7 @@ window.ICED26_DATA = {
       "title": "E - Papers 12",
       "fullName": "Session 13A: E - Papers 12",
       "type": "paper",
-      "meet": "ICEDX1:DUQwuyWRkVmvpJJtUQT76vbhy0YpCfTA0U7EOulsvZ27rChOpezzE93ojttl8SLce4uPQGkBI3__Ul3qYgsjZ8Zl3CUZHud7mFbIM3E3uZo",
+      "meet": "ICEDX1:oIT42ujcfpZgjeIdyqRsIq90DD1d8Yrt7wgIzs3rTqbS09YfltndWaTQiqa2NXUFRb8w3IzwSDqs-cReBbn2IXdTr7MPafKB3uPrTSFHTAI",
       "talks": [
         {
           "easychair_id": "311871",
@@ -2914,7 +2914,7 @@ window.ICED26_DATA = {
       "title": "E - Papers 13",
       "fullName": "Session 13B: E - Papers 13",
       "type": "paper",
-      "meet": "ICEDX1:05u8Z6uxAWHWdNhZxwhAPmJLfOCY4iNxRK2BZlLtgzbJHi8_rbu-HDTXEn2mAEdKp6baU9XaNzYyA01SEYuQ2jvLw4DPlG10tqX24MG39yE",
+      "meet": "ICEDX1:84ZLFQD713-OPixtILV-yr0CuB0aOuXqMgPLYqZSAL19EJa5GMsfboT7Ma3i1tPO1dWg96uxv4FjBmyfmcmqZB7NdBjIo3P8SKDNDZjVlqY",
       "talks": [
         {
           "easychair_id": "311955",
@@ -3752,7 +3752,7 @@ window.ICED26_DATA = {
       "title": "F - Papers 22",
       "fullName": "Session 15B: F - Papers 22",
       "type": "paper",
-      "meet": "ICEDX1:2Fl_09H2WyMcsH1fsgE6xnqIDCt3b1BHhQTf_rvRHv2rXQEI5SqHEeLqq41kPUKo2X4AOdiBLHTBj48f0pFuO2bzOanIJVJJRACWmqtkezw",
+      "meet": "ICEDX1:uNoglTpaxtepk0c-pzw53o01Km_HxGdHcnom4_lumRo855RNF31yltyyJ-xnzg_o_TBd4pBSDY4MXpBV_cFy1UwengOz-uRMSFJs0MUT9Yk",
       "talks": [
         {
           "easychair_id": "311877",
@@ -4605,7 +4605,7 @@ window.ICED26_DATA = {
       "title": "G - Workshop 19",
       "fullName": "Session 17G: G - Workshop 19",
       "type": "workshop",
-      "meet": "ICEDX1:0HNH534wB_YUquM4Qz3VHIfqYbwUxBJ09FTujlpTFD3yBJPYCWSSIDYlp7r4XpXEctoX-7t32eBpzKlfV_eUpBGq5dCDNL5RnpVgtwarZnI",
+      "meet": "ICEDX1:bglRqIsq5efUjvWt5JfTZ8lxoh-tQqWOTaUcsTmdFxiSSUqhBqrpbTlmcKv1JHfQxGDJSk7SRC3UMmPk4ZMZyGIgoseUXroRsHS1u2xthOg",
       "talks": [
         {
           "easychair_id": "311712",
@@ -4630,7 +4630,7 @@ window.ICED26_DATA = {
       "title": "G - Workshop 20",
       "fullName": "Session 17F: G - Workshop 20",
       "type": "workshop",
-      "meet": "ICEDX1:sZvq7TXiMcmpugNViyOo13hffpDaPOgmSxcjtQd2qTu69jg6f0t8C7QrmToVeJ83Owt1TGXRLqkyGk53XeVledOmOM1aepCx9TR5WB-cVe8",
+      "meet": "ICEDX1:SswaLfOSVirFuP1_53l2-bpfF_zAn79l91_SLpX0JFKFaul3HP-Z_yb1h1LJOU6ZWxgBb8mbKVuoGN_G0F_eEc5bso_X8TEXXJZgVHWVFAk",
       "talks": [
         {
           "easychair_id": "311702",
@@ -5025,7 +5025,7 @@ window.ICED26_DATA = {
       "title": "H - Workshop 28",
       "fullName": "Session 18F: H - Workshop 28",
       "type": "workshop",
-      "meet": "ICEDX1:47in3GGKExaW9pky0Ch5Ys6TvhAmIkiPZcVD-u6tuTaNGaHKFOLMNHw1uzw4B1FfRQP9MRsvpFaciRnmrCBwoyi49rbYwRSC7iR6WFol8dQ",
+      "meet": "ICEDX1:ZfrVdHfQjHunP3IE7kpNUdvt4w9TO1NHf1vWMumB5TyJovqQbXe53r6qJi0GgoT2xAnbzLfY1To4rK5HQ3RHRm-sDOhvpS70M6n3gv4RFn4",
       "talks": [
         {
           "easychair_id": "311694",
@@ -5050,7 +5050,7 @@ window.ICED26_DATA = {
       "title": "H - Workshop 29",
       "fullName": "Session 18G: H - Workshop 29",
       "type": "workshop",
-      "meet": "ICEDX1:NqwCLeNlvS2PhUzjVkMlRMgJHzoobBC-7jE-3oFAS-aNJQIabMLf88tsYnH35LBdVRo06-fqEd5CYYe_xmWcBURhxvSnKTViw2cQNbpIft8",
+      "meet": "ICEDX1:92ABJePbIZhB4FrbPckU20h9VG7LKq05Nvlz_7TI9dllbtCb-62d6GWjYemHQr2Y16yYeV72nG1ZgnECekhCt4wKImRbhubHVUat6wII6EA",
       "talks": [
         {
           "easychair_id": "311695",
@@ -5430,7 +5430,7 @@ window.ICED26_DATA = {
       "title": "I - Workshop 37",
       "fullName": "Session 19E: I - Workshop 37",
       "type": "workshop",
-      "meet": "ICEDX1:nm9H_6t__hwPu0Rg-FMDuSfjVBS274T-WKDYvky6TdmZlCuA9K8I9mm_L0jigpRpaq7oyt5zsWpwXF8Hs4Igh_24_o-VvfdmTKIrqdaIIAg",
+      "meet": "ICEDX1:WbAg_tUXTJYfufcqc2xHTeAnIinf5-qkGo2KnUOkg_SULLx_KnNdmCxg_w-021pOYIkhAP3NSe2AuS0-9sMledxTluGS4yZ_vA9v8wC_3ow",
       "talks": [
         {
           "easychair_id": "311708",
@@ -5455,7 +5455,7 @@ window.ICED26_DATA = {
       "title": "I - Workshop 38",
       "fullName": "Session 19F: I - Workshop 38",
       "type": "workshop",
-      "meet": "ICEDX1:bwMHjyqKxuZQENZfd3la9_XEnhSVBaV_6Bmjtdej3yJ-lQy0PtP8eQKFKmlMkHXD9lCyFQWJC2FIyp8ddP2FhQv_itCTnQcZs3Zmc5oazJ4",
+      "meet": "ICEDX1:fPQrlsjg1g0hOpyKj4n216xzgQ5CFLqPVW1nXzT4OAjVIJ6hOC8KoB9fJHI6J4Putt6zPd6yTgexoX_7Sv-0ibv-DjnrFuuR6UArsj2Vewg",
       "talks": [
         {
           "easychair_id": "311709",
@@ -5746,7 +5746,7 @@ window.ICED26_DATA = {
       "title": "J - Workshop 46",
       "fullName": "Session 20G: J - Workshop 46",
       "type": "workshop",
-      "meet": "ICEDX1:aCEGHaWcqo2Jj6azw2b_1QRb73bve93lCOWQLfoNCm61TWE1etnoajBSFDgcvZAvxb7qXYJTNW1mlnVxzggEze7nU2uoHGhBH99v4t4y51I",
+      "meet": "ICEDX1:F4wvhMLYiCpLEpXk8y9eA655yeLm459rwumJm_egxpn4EE01RZwUuAhY6BIcKRWN3MmyFXYj-sygoWMcAftU2hAMN0hWabvGBSBJ1OcLxqA",
       "talks": [
         {
           "time": "09:30",
@@ -5779,7 +5779,7 @@ window.ICED26_DATA = {
       "title": "J - Workshop 47",
       "fullName": "Session 20H: J - Workshop 47",
       "type": "workshop",
-      "meet": "ICEDX1:izJmdDr-NExUDJ2_qgJTDqCfkKCm0UUopQP-TiqojPT50omvd4BdmeOW2k7zvuTdWsuBuUqPEeliIsjK0Cix8NVMzg0qSrdFyMoRYzCM6Gg",
+      "meet": "ICEDX1:ltSzluPtNYvUOkJwA_Nq4nsLOBpr-UrDyWRygIrTbntcoelJ3KfjT9LNQrcI_gfn0TVnkG1IFzMrVCAvKlu6tLVTs-ddFqE_miMzWu7pEWM",
       "talks": [
         {
           "easychair_id": "311686",
@@ -6167,7 +6167,7 @@ window.ICED26_DATA = {
       "title": "K - Papers 32",
       "fullName": "Session 21B: K - Papers 32",
       "type": "paper",
-      "meet": "ICEDX1:urtJeBh2j0jesotLjXI28N_BZgaW3yGXCioshJSPDJh33I4BsLH8zsaCdJQ3Ino2Rdv9XsY7BC5ABy3MTo7lb4JygH-DgeUZLnMNyQdDXc8",
+      "meet": "ICEDX1:TLetGviAeoyoTe1s8ULLZTIRuq_SBSVm-TFXFD5YsVx0VzF42p0xVLB7bchcs5mITcxvcPWTp8K6nDqHAalZv3bPhGNXY5dwx1ae4ROQF6Q",
       "talks": [
         {
           "easychair_id": "311938",
@@ -6221,7 +6221,7 @@ window.ICED26_DATA = {
       "title": "K - Papers 33",
       "fullName": "Session 21C: K - Papers 33",
       "type": "paper",
-      "meet": "ICEDX1:Osy42zN12d6q6y9OciH2EBFaG-oPsvm5-9HWcnsH5n1krfDr6lX9gr9xW-l4_jlljoNGxh2-2DjpKfBpTtlZtKbZ2HAUl6mjkCzdeZqDgEw",
+      "meet": "ICEDX1:bV4JIp4jaJ9isaHkxw6LYIljJOIEfpoet5e3spxkVpSCJU4n6bFVoufm_C8zouxUAXz9-6RE-lE-30ndhqb-Zw5B56JdmOUSkW7lmD0UdFg",
       "talks": [
         {
           "easychair_id": "311883",
