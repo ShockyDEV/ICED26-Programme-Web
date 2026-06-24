@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-23T19-34
+// ICED26 programme — generated from admin panel 2026-06-24T04-46
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -5749,7 +5749,6 @@ window.ICED26_DATA = {
       "meet": "ICEDX1:aCEGHaWcqo2Jj6azw2b_1QRb73bve93lCOWQLfoNCm61TWE1etnoajBSFDgcvZAvxb7qXYJTNW1mlnVxzggEze7nU2uoHGhBH99v4t4y51I",
       "talks": [
         {
-          "easychair_id": "311698",
           "time": "09:30",
           "title": "Integration of Generative AI in University Teaching: Strategies to Lead Educational Transformation.",
           "authors": "Asun Perez Pascual, M. Jose Canet Subiela, Andreu Blesa Pérez, Esther Rodríguez Gallego, Albert Fonts Ribas, Inés Escario Jover, María Ripollés Meliá",
@@ -5758,7 +5757,16 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "105664"
+      "easychair_session_id": "105664",
+      "media": {
+        "text": "Note: Participants in Workshop 46 are strongly encouraged to bring a laptop or tablet. We have prepared interactive AI agents for you to test, and while they are accessible via smartphone, using a larger screen will provide a significantly better experience."
+      },
+      "cardTitle": "",
+      "chair": "",
+      "onlinePresenter": false,
+      "hybrid": false,
+      "cancelled": false,
+      "youtube": ""
     },
     {
       "day": "2026-06-26",
