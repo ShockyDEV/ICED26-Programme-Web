@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-24T04-46
+// ICED26 programme — generated from admin panel 2026-06-24T05-01
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -556,8 +556,8 @@ window.ICED26_DATA = {
         {
           "time": "08:45",
           "title": "Opening Ceremony",
-          "authors": "Matilde Olarte, Ariane Dumont, Idoia Fernández Fernández, Mònica Feixas, Javier Félix Merchán Sánchez-Jara",
-          "presenter": "Matilde Olarte, Ariane Dumont, Idoia Fernández Fernández, Mònica Feixas, Javier Félix Merchán Sánchez-Jara",
+          "authors": "Matilde Olarte Martínez, Ariane Dumont, Idoia Fernández Fernández, Mònica Feixas, Javier Félix Merchán Sánchez-Jara",
+          "presenter": "Matilde Olarte Martínez, Ariane Dumont, Idoia Fernández Fernández, Mònica Feixas, Javier Félix Merchán Sánchez-Jara",
           "abstract": "",
           "keywords": ""
         }
@@ -576,7 +576,7 @@ window.ICED26_DATA = {
         },
         {
           "name": "Mònica Feixas",
-          "bio": "Convenor of ICED26 Congress"
+          "bio": "Convenor of ICED26"
         },
         {
           "name": "Javier Merchán",
@@ -587,7 +587,7 @@ window.ICED26_DATA = {
           "bio": "ICED President"
         },
         {
-          "name": "Idoia Fernández Fernández",
+          "name": "Idoia Fernández",
           "bio": "REDU President"
         }
       ]
