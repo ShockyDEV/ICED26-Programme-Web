@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-24T14-25
+// ICED26 programme — generated from admin panel 2026-06-24T14-27
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -33,7 +33,7 @@ window.ICED26_DATA = {
     "access": {
       "enabled": true,
       "token": "ICED26-OK",
-      "globalVerifier": "ICEDX1:xwF05FW4pCrwdoFXE6fCfGi6jm0TVZb9BQwHnQu0Qm2SOKzjcQen6_6u1XErjTiUT0yIneA",
+      "globalVerifier": "ICEDX1:hPrpKKgdeTqSUENxl3Kc4r5XYPwx0W0-Q-_oxz4-JbYCWfHvKMcTgL1ncNB6QEbus6hohA4",
       "panelVerifier": "ICEDX1:xvYLvZMfdQOl4PIpQkxi6q2zd-t4xAG54AKwzYnuHq6ayMVo9MkxVhylniOqdT2REKeK4nA",
       "panelSessionId": "104802",
       "panelRoomId": "auditorio"
