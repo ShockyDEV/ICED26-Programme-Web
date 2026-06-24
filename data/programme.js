@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-24T16-00
+// ICED26 programme — generated from admin panel 2026-06-24T20-12
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -3973,7 +3973,8 @@ window.ICED26_DATA = {
           "authors": "Elena Khanzadyan",
           "presenter": "",
           "abstract": "Institutions in higher education are increasingly asked to demonstrate agency in navigating environments where crises are becoming regular, not exceptional. Although considerable research focuses on teaching innovation and policy change, little is known about how leaders, faculty, and staff wield agency in the midst of disruption. This study builds on 50 completed semi-structured interviews across nine universities and private training centers in Uzbekistan, with the broader study targeting 140–160 participants. The analysis investigates how actors within higher education engaged with crises ranging from the COVID-19 pandemic to leadership turnover, financial and infrastructural breakdowns. Using thematic analysis, three agency patterns were identified: (1) Acting before disruption - anticipatory strategies such as informal preparedness routines, early warning mechanisms, and faculty-led initiatives to protect continuity; (2) Deciding under uncertainty - leadership choices: transparent communication, ethical judgment, and decisive adaptation when information was incomplete/conflicting; (3) Adapting and transforming - emergent practices (collaborative curriculum redesign, resource improvisation, and codified peer support) converted disruption into long-term institutional learning. Rather than treating crisis management separately, the study illustrates how agency in higher education is enacted through ordinary academic work: small, local decisions that maintain teaching, protect students, and sustain staff morale. By emphasizing improvisation, ethical judgment, and collective problem-solving, the research situates agency not as resilience after the fact, but as the ability to act, decide, and during disruption. The Uzbek case contributes to global debate about educational development by showing how institutions in low-resource contexts transform disruption into opportunities for renewal.",
-          "keywords": ""
+          "keywords": "",
+          "online": true
         },
         {
           "time": "13:00",
