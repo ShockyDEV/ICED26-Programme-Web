@@ -52,9 +52,26 @@
 <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" integrity="sha384-gTGxhz21lVGYNMcdJOyq01Edg0jhn/c22nsx0kyqP0TxaV5WVdsSH1fSDUf5YJj1" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
 
-<script src="data/programme.js"></script>
-<script src="crypto.js"></script>
-<script type="text/babel" src="app.jsx"></script>
+<!-- Cache-bust the LOCAL scripts so every page load gets the freshly-published
+     version. GitHub Pages caches assets for ~10 min, so without this an admin
+     publish (programme data) or a code change wouldn't reach attendees until a
+     hard refresh. Appending ?v=<load time> makes the browser always fetch the
+     latest. The unpkg React/Babel bundles are versioned + SRI-pinned above, so
+     they keep their long-lived cache. document.write keeps the strict load
+     order (data → crypto → app) and synchronous, parser-blocking execution,
+     exactly like the static tags it replaces. -->
+<script>
+  (function () {
+    var v = Date.now();
+    function add(src, babel) {
+      document.write('<scr' + 'ipt ' + (babel ? 'type="text/babel" ' : '') +
+        'src="' + src + '?v=' + v + '"><\/scr' + 'ipt>');
+    }
+    add('data/programme.js', false);
+    add('crypto.js', false);
+    add('app.jsx', true);
+  })();
+</script>
 
 <script type="text/babel" data-presets="env,react">
 const { useState, useEffect, useMemo } = React;
