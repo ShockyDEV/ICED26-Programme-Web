@@ -32,9 +32,22 @@
 <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" integrity="sha384-gTGxhz21lVGYNMcdJOyq01Edg0jhn/c22nsx0kyqP0TxaV5WVdsSH1fSDUf5YJj1" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
 
-<script src="data/programme.js"></script>
-<script src="crypto.js"></script>
-<script type="text/babel" src="admin-app.jsx"></script>
+<!-- Cache-bust the LOCAL scripts so the admin always loads the freshly-published
+     programme data + code (same approach as index.html). Without this the
+     backstage shows a stale, cached data/programme.js — e.g. a just-published
+     YouTube/room change appears empty here until a hard refresh. -->
+<script>
+  (function () {
+    var v = Date.now();
+    function add(src, babel) {
+      document.write('<scr' + 'ipt ' + (babel ? 'type="text/babel" ' : '') +
+        'src="' + src + '?v=' + v + '"><\/scr' + 'ipt>');
+    }
+    add('data/programme.js', false);
+    add('crypto.js', false);
+    add('admin-app.jsx', true);
+  })();
+</script>
 
 <script type="text/babel" data-presets="env,react">
 const { AdminApp } = window.ICED26AdminApp;
