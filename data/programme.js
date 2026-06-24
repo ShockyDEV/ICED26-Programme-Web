@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-24T14-27
+// ICED26 programme — generated from admin panel 2026-06-24T14-33
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -33,7 +33,7 @@ window.ICED26_DATA = {
     "access": {
       "enabled": true,
       "token": "ICED26-OK",
-      "globalVerifier": "ICEDX1:hPrpKKgdeTqSUENxl3Kc4r5XYPwx0W0-Q-_oxz4-JbYCWfHvKMcTgL1ncNB6QEbus6hohA4",
+      "globalVerifier": "ICEDX1:xwF05FW4pCrwdoFXE6fCfGi6jm0TVZb9BQwHnQu0Qm2SOKzjcQen6_6u1XErjTiUT0yIneA",
       "panelVerifier": "ICEDX1:xvYLvZMfdQOl4PIpQkxi6q2zd-t4xAG54AKwzYnuHq6ayMVo9MkxVhylniOqdT2REKeK4nA",
       "panelSessionId": "104802",
       "panelRoomId": "auditorio"
@@ -2257,7 +2257,7 @@ window.ICED26_DATA = {
       "title": "C - Iced Talks 2",
       "fullName": "Session 10E: C - Iced Talks 2",
       "type": "talk",
-      "meet": "ICEDX1:nO2w0nXfBS8Fus0-g39z3FCiyOaIN9mM3QscZQw2dcr0RLLPqGSYJCeShjwaslIkTSJGpBHha45AU1AOzeXy38h9d31UCQ2SZ9gn9H07CEM",
+      "meet": "",
       "talks": [
         {
           "time": "16:15",
@@ -2301,7 +2301,7 @@ window.ICED26_DATA = {
       "onlinePresenter": false,
       "hybrid": false,
       "cancelled": false,
-      "youtube": ""
+      "youtube": "https://www.youtube.com/live/m6EkRyxJfgU"
     },
     {
       "day": "2026-06-24",
