@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-24T14-33
+// ICED26 programme — generated from admin panel 2026-06-24T15-40
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -92,7 +92,8 @@ window.ICED26_DATA = {
       "cluster": "colegio",
       "code": "PIN",
       "active": true,
-      "meet": "ICEDX1:eKfuGTMmMX6vhwFaErTr8Qcs3H6rK-xe8vVV3ry9AI319fyHOcDGxY66C0ZUmYSYzkfJIiAQtXyLZi_1sb--DO8bIYIZMWJGd5Og2baJ5sM"
+      "meet": "ICEDX1:eKfuGTMmMX6vhwFaErTr8Qcs3H6rK-xe8vVV3ry9AI319fyHOcDGxY66C0ZUmYSYzkfJIiAQtXyLZi_1sb--DO8bIYIZMWJGd5Og2baJ5sM",
+      "youtube": "https://www.youtube.com/live/Db8vIQsbyC0"
     },
     {
       "id": "capilla",
@@ -3456,7 +3457,7 @@ window.ICED26_DATA = {
       "title": "E - Symposium 5",
       "fullName": "Session 13P: E - Symposium 5",
       "type": "symposium",
-      "meet": "ICEDX1:2PSIn5fCiXiTiUZxWkBjJEqHZYnSa1xe36MXmKJImRicQ-X2PGINplR5DqPvAyYC-Jb-Quf1_cGRjv12g_gWA1V4KaPlvnEu4m30rxWYzZA",
+      "meet": "ICEDX1:eKfuGTMmMX6vhwFaErTr8Qcs3H6rK-xe8vVV3ry9AI319fyHOcDGxY66C0ZUmYSYzkfJIiAQtXyLZi_1sb--DO8bIYIZMWJGd5Og2baJ5sM",
       "talks": [
         {
           "time": "09:00",
@@ -4359,7 +4360,7 @@ window.ICED26_DATA = {
       "title": "F - Special Symposium 8: Welcome to the ICED Community",
       "fullName": "Session 15N: F - Special Symposium 8: Welcome to the ICED Community",
       "type": "symposium",
-      "meet": "ICEDX1:Hnozk3sY8PVlYCb85v4XtseNs-A0aWE3_p6Lw_ErfqV7eU_1QUnrpn3IJjhcPgj0aY_u34WzwH_pCUVtvy_Q9G6haeXXVeyTvPiUzWLu1S8",
+      "meet": "ICEDX1:eKfuGTMmMX6vhwFaErTr8Qcs3H6rK-xe8vVV3ry9AI319fyHOcDGxY66C0ZUmYSYzkfJIiAQtXyLZi_1sb--DO8bIYIZMWJGd5Og2baJ5sM",
       "talks": [
         {
           "easychair_id": "311660",
@@ -6738,7 +6739,7 @@ window.ICED26_DATA = {
       "title": "K - Symposium 12",
       "fullName": "Session 21K: K - Symposium 12",
       "type": "symposium",
-      "meet": "ICEDX1:5s6jVWSyP0GZdyikFo8hHWJ7cTUr-WJIkCvS2fNMOBPDTOL_1k8Y_kpqiVFiYB-T5h9oOySMOLhbi6d5v4Q2iVC4dbzppav3MLvmjEqbGic",
+      "meet": "ICEDX1:eKfuGTMmMX6vhwFaErTr8Qcs3H6rK-xe8vVV3ry9AI319fyHOcDGxY66C0ZUmYSYzkfJIiAQtXyLZi_1sb--DO8bIYIZMWJGd5Og2baJ5sM",
       "talks": [
         {
           "easychair_id": "311656",
