@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-25T04-41
+// ICED26 programme — generated from admin panel 2026-06-25T15-38
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -76,7 +76,7 @@ window.ICED26_DATA = {
       "code": "SM",
       "active": true,
       "meet": "ICEDX1:nO2w0nXfBS8Fus0-g39z3FCiyOaIN9mM3QscZQw2dcr0RLLPqGSYJCeShjwaslIkTSJGpBHha45AU1AOzeXy38h9d31UCQ2SZ9gn9H07CEM",
-      "youtube": "https://www.youtube.com/live/Q6rz5UK497U"
+      "youtube": "https://www.youtube.com/live/kJT2ZzZ0D_g"
     },
     {
       "id": "sala-presentaciones",
@@ -2258,7 +2258,7 @@ window.ICED26_DATA = {
       "title": "C - Iced Talks 2",
       "fullName": "Session 10E: C - Iced Talks 2",
       "type": "talk",
-      "meet": "",
+      "meet": "ICEDX1:nO2w0nXfBS8Fus0-g39z3FCiyOaIN9mM3QscZQw2dcr0RLLPqGSYJCeShjwaslIkTSJGpBHha45AU1AOzeXy38h9d31UCQ2SZ9gn9H07CEM",
       "talks": [
         {
           "time": "16:15",
