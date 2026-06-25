@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-24T21-20
+// ICED26 programme — generated from admin panel 2026-06-25T04-41
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -3589,7 +3589,6 @@ window.ICED26_DATA = {
       "meet": "ICEDX1:n4BDsmlm4F4u6jxVnbwOOYEk1ahE1WING6HPmuKV1vKVF5s19WOHRkG6l8D0QkKr0Afhi9EslaKsP-LyUI94ZQ6u6BHIs4ZAqR5GbYB7YTE",
       "talks": [
         {
-          "easychair_id": "311661",
           "time": "12:15",
           "title": "Educational leadership of, for, with and through academic development",
           "authors": "Klara Bolander Laksov, Cormac McGrath, Anna Serbati",
@@ -3600,7 +3599,15 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104882",
-      "chair": "Helen King"
+      "chair": "Helen King",
+      "media": {
+        "text": "Note: The Meet Link for this session is only meant for the speakers as it has a special code."
+      },
+      "cardTitle": "",
+      "onlinePresenter": false,
+      "hybrid": false,
+      "cancelled": false,
+      "youtube": ""
     },
     {
       "day": "2026-06-25",
