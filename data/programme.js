@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-25T15-42
+// ICED26 programme — generated from admin panel 2026-06-25T15-43
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -33,7 +33,7 @@ window.ICED26_DATA = {
     "access": {
       "enabled": true,
       "token": "ICED26-OK",
-      "globalVerifier": "ICEDX1:1lCmkoWZyBP6adCq35iRt1OEtVAk4ETu_5Im8DKHaUp-5T1UC_IZc5Th3lCJsDsv6zsKnoM",
+      "globalVerifier": "ICEDX1:IsuedZogHQqxD8PSqVIxK_Y_yxQEMdknHIAV7puFBK4084q7gcjBLHY6fBcAeGFBiwdoiKw",
       "panelVerifier": "ICEDX1:xvYLvZMfdQOl4PIpQkxi6q2zd-t4xAG54AKwzYnuHq6ayMVo9MkxVhylniOqdT2REKeK4nA",
       "panelSessionId": "104802",
       "panelRoomId": "auditorio"
@@ -76,7 +76,7 @@ window.ICED26_DATA = {
       "code": "SM",
       "active": true,
       "meet": "ICEDX1:nO2w0nXfBS8Fus0-g39z3FCiyOaIN9mM3QscZQw2dcr0RLLPqGSYJCeShjwaslIkTSJGpBHha45AU1AOzeXy38h9d31UCQ2SZ9gn9H07CEM",
-      "youtube": "https://www.youtube.com/live/kJT2ZzZ0D_g?si=Hy0c_CPJaZ6giHpc"
+      "youtube": "https://www.youtube.com/live/kJT2ZzZ0D_g?si=SP1IXp64RqHc6QFZ"
     },
     {
       "id": "sala-presentaciones",
