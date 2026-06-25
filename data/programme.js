@@ -76,7 +76,7 @@ window.ICED26_DATA = {
       "code": "SM",
       "active": true,
       "meet": "ICEDX1:nO2w0nXfBS8Fus0-g39z3FCiyOaIN9mM3QscZQw2dcr0RLLPqGSYJCeShjwaslIkTSJGpBHha45AU1AOzeXy38h9d31UCQ2SZ9gn9H07CEM",
-      "youtube": "https://www.youtube.com/live/m6EkRyxJfgU"
+      "youtube": "https://www.youtube.com/live/Q6rz5UK497U"
     },
     {
       "id": "sala-presentaciones",
@@ -2302,7 +2302,7 @@ window.ICED26_DATA = {
       "onlinePresenter": false,
       "hybrid": false,
       "cancelled": false,
-      "youtube": "https://www.youtube.com/live/m6EkRyxJfgU"
+      "youtube": "https://www.youtube.com/live/Q6rz5UK497U"
     },
     {
       "day": "2026-06-24",
