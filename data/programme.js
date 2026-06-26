@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-26T05-32
+// ICED26 programme — generated from admin panel 2026-06-26T06-09
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -93,7 +93,7 @@ window.ICED26_DATA = {
       "code": "PIN",
       "active": true,
       "meet": "ICEDX1:eKfuGTMmMX6vhwFaErTr8Qcs3H6rK-xe8vVV3ry9AI319fyHOcDGxY66C0ZUmYSYzkfJIiAQtXyLZi_1sb--DO8bIYIZMWJGd5Og2baJ5sM",
-      "youtube": "https://www.youtube.com/live/Db8vIQsbyC0"
+      "youtube": "https://www.youtube.com/live/x6MLqGSLK-s"
     },
     {
       "id": "capilla",
