@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-06-25T15-43
+// ICED26 programme — generated from admin panel 2026-06-26T05-32
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -65,7 +65,7 @@ window.ICED26_DATA = {
       "name": "Auditorio Hospedería",
       "cluster": "hospederia",
       "code": "AUD",
-      "youtube": "https://www.youtube.com/live/0MGhHbjBGA0",
+      "youtube": "https://www.youtube.com/live/KBcXlHpAdsA",
       "meet": "ICEDX1:uCjBtzpi9Nj4JE8iiiGFuvJyOY4mj3jsZUyAyF1Kc4hFtlfL9lTfxdT0qOOfs0xLbhsPuEyS3F0--uYd1ESpACWA_XdzUPjJabrjFD2aG6s",
       "active": true
     },
@@ -76,7 +76,7 @@ window.ICED26_DATA = {
       "code": "SM",
       "active": true,
       "meet": "ICEDX1:nO2w0nXfBS8Fus0-g39z3FCiyOaIN9mM3QscZQw2dcr0RLLPqGSYJCeShjwaslIkTSJGpBHha45AU1AOzeXy38h9d31UCQ2SZ9gn9H07CEM",
-      "youtube": "https://www.youtube.com/live/kJT2ZzZ0D_g?si=SP1IXp64RqHc6QFZ"
+      "youtube": "https://www.youtube.com/live/ntlzH8MFHh4"
     },
     {
       "id": "sala-presentaciones",
@@ -212,7 +212,7 @@ window.ICED26_DATA = {
       "title": "Welcome and Instructions for Pre-Conference",
       "fullName": "Session 1: Welcome and Instructions for Pre-Conference",
       "type": "other",
-      "meet": "ICEDX1:2PDmJzCHvZs08hTdPIaAIsAYzC1WQZDl98PAq0nZ4LzEZoNb9ZZS7dW2LojLKvzm3bUTUrs7onHgUpm2pGOCYr4xd8pVkTzw7TWCJiI2Scc",
+      "meet": "ICEDX1:uCjBtzpi9Nj4JE8iiiGFuvJyOY4mj3jsZUyAyF1Kc4hFtlfL9lTfxdT0qOOfs0xLbhsPuEyS3F0--uYd1ESpACWA_XdzUPjJabrjFD2aG6s",
       "talks": [],
       "easychair_session_id": "104851",
       "cardTitle": "",
@@ -552,7 +552,7 @@ window.ICED26_DATA = {
       "title": "Opening ceremony",
       "fullName": "Session 5: Opening ceremony",
       "type": "keynote",
-      "meet": "",
+      "meet": "ICEDX1:uCjBtzpi9Nj4JE8iiiGFuvJyOY4mj3jsZUyAyF1Kc4hFtlfL9lTfxdT0qOOfs0xLbhsPuEyS3F0--uYd1ESpACWA_XdzUPjJabrjFD2aG6s",
       "talks": [
         {
           "time": "08:45",
@@ -604,7 +604,7 @@ window.ICED26_DATA = {
       "title": "Keynote 1: Agency, responsibility, and values-driven educational development - David A. Green",
       "fullName": "Session 6: Keynote 1: Agency, responsibility, and values-driven educational development - David A. Green",
       "type": "keynote",
-      "meet": "ICEDX1:XGWLNbigL4KZsfnK3Kct2u9OHlCwFCwSrmA8uAvYZpIE7lb7-63Lg_q3pnE4znqZQgANXlkeMxqoUHO2VWbLd9AEFm-CpPhihHl99PMdLTM",
+      "meet": "ICEDX1:uCjBtzpi9Nj4JE8iiiGFuvJyOY4mj3jsZUyAyF1Kc4hFtlfL9lTfxdT0qOOfs0xLbhsPuEyS3F0--uYd1ESpACWA_XdzUPjJabrjFD2aG6s",
       "talks": [],
       "easychair_session_id": "104801",
       "chair": "Ariane Dumont"
@@ -638,7 +638,7 @@ window.ICED26_DATA = {
       "title": "A - Symposium 1",
       "fullName": "Session 7L: A - Symposium 1",
       "type": "symposium",
-      "meet": "ICEDX1:xeVsHApMyOF1WfcIvAjD6Ip9iZVnosrX-Fzi2GC2haDhgqGQZ01KKAU5eSobsuCLus3G_VJaFG4yylWeR-TcWwjkkGpiK28awbgGbjUkbNo",
+      "meet": "ICEDX1:uCjBtzpi9Nj4JE8iiiGFuvJyOY4mj3jsZUyAyF1Kc4hFtlfL9lTfxdT0qOOfs0xLbhsPuEyS3F0--uYd1ESpACWA_XdzUPjJabrjFD2aG6s",
       "talks": [
         {
           "easychair_id": "311652",
@@ -1834,7 +1834,7 @@ window.ICED26_DATA = {
       "title": "International panel: Global South Perspectives in Dialogue",
       "fullName": "Session 9: International panel: Global South Perspectives in Dialogue",
       "type": "keynote",
-      "meet": "ICEDX1:PmlAk-Oc3VLrVL8xv23fljQk1iLqqpNvr7skbyD7EYOXoOI_xhxKSf8NzW5W8qmlq0KkntAkLLS6_dOuMEGR1uyfmholwr694IpfZQ5UQ0M",
+      "meet": "ICEDX1:uCjBtzpi9Nj4JE8iiiGFuvJyOY4mj3jsZUyAyF1Kc4hFtlfL9lTfxdT0qOOfs0xLbhsPuEyS3F0--uYd1ESpACWA_XdzUPjJabrjFD2aG6s",
       "talks": [],
       "easychair_session_id": "104802",
       "onlinePresenter": true,
@@ -2689,7 +2689,7 @@ window.ICED26_DATA = {
       "title": "E - Symposium 3",
       "fullName": "Session 13N: E - Symposium 3",
       "type": "symposium",
-      "meet": "ICEDX1:gjgds3gEpwCpsKHSCG7DYO8FwPfNa1invGGZxg9zCMwGjRF-oYojxq6M2e7KwN9y6hv_TIweD-zAu9mqX2FxW-hY-kkS2ISi3li-kmtqdcU",
+      "meet": "ICEDX1:uCjBtzpi9Nj4JE8iiiGFuvJyOY4mj3jsZUyAyF1Kc4hFtlfL9lTfxdT0qOOfs0xLbhsPuEyS3F0--uYd1ESpACWA_XdzUPjJabrjFD2aG6s",
       "youtube": "",
       "talks": [
         {
@@ -3570,7 +3570,7 @@ window.ICED26_DATA = {
       "title": "Keynote 2: Rewarding university teaching in academic careers - Ruth Graham",
       "fullName": "Session 14: Keynote 2: Rewarding university teaching in academic careers - Ruth Graham",
       "type": "keynote",
-      "meet": "ICEDX1:4qTtAOkO8ZjQUGpDefZQA5fG0i4V9U7PfXJfSkRfT7i8bsqpTtZFDFetHQovRHx3noq_P5pMj1mJd0tWPJxfmJMrQiAxIri2SywfKJ3gAhw",
+      "meet": "ICEDX1:uCjBtzpi9Nj4JE8iiiGFuvJyOY4mj3jsZUyAyF1Kc4hFtlfL9lTfxdT0qOOfs0xLbhsPuEyS3F0--uYd1ESpACWA_XdzUPjJabrjFD2aG6s",
       "talks": [],
       "easychair_session_id": "104869",
       "chair": "Robert Pardo"
@@ -3586,7 +3586,7 @@ window.ICED26_DATA = {
       "title": "F - Symposium 6",
       "fullName": "Session 15M: F - Symposium 6",
       "type": "symposium",
-      "meet": "ICEDX1:n4BDsmlm4F4u6jxVnbwOOYEk1ahE1WING6HPmuKV1vKVF5s19WOHRkG6l8D0QkKr0Afhi9EslaKsP-LyUI94ZQ6u6BHIs4ZAqR5GbYB7YTE",
+      "meet": "ICEDX1:uCjBtzpi9Nj4JE8iiiGFuvJyOY4mj3jsZUyAyF1Kc4hFtlfL9lTfxdT0qOOfs0xLbhsPuEyS3F0--uYd1ESpACWA_XdzUPjJabrjFD2aG6s",
       "talks": [
         {
           "time": "12:15",
@@ -4477,7 +4477,7 @@ window.ICED26_DATA = {
       "title": "Keynote 3: Resourceful perspectives: Academic development for student and teacher agency – Franziska Zellweger",
       "fullName": "Session 16: Keynote 3: Resourceful perspectives: Academic development for student and teacher agency – Franziska Zellweger",
       "type": "keynote",
-      "meet": "ICEDX1:8iKLcAIpDqYQfx4bu8NexYqj6CNevOaSO8-Pqrq-hFmA0S47EPiMlxzIR232824s-nMqKdLyCqTVlR8rz7AJ2VljRQgvWWmEuJ9QEE5kQT4",
+      "meet": "ICEDX1:uCjBtzpi9Nj4JE8iiiGFuvJyOY4mj3jsZUyAyF1Kc4hFtlfL9lTfxdT0qOOfs0xLbhsPuEyS3F0--uYd1ESpACWA_XdzUPjJabrjFD2aG6s",
       "talks": [],
       "easychair_session_id": "104885",
       "chair": "Mònica Feixas"
@@ -6077,7 +6077,7 @@ window.ICED26_DATA = {
       "title": "K - Symposium 9",
       "fullName": "Session 21N: K - Symposium 9",
       "type": "symposium",
-      "meet": "ICEDX1:QspWkW191Wx60bfNilSzVEzUEnwxnxcNL5PJr0laHOKoFlwPU9gmqEGc20zwmBzRvbm6eJ1wtXuggOTTCLyedILXhHl8appoekDJzbKYqGI",
+      "meet": "ICEDX1:uCjBtzpi9Nj4JE8iiiGFuvJyOY4mj3jsZUyAyF1Kc4hFtlfL9lTfxdT0qOOfs0xLbhsPuEyS3F0--uYd1ESpACWA_XdzUPjJabrjFD2aG6s",
       "talks": [
         {
           "time": "11:00",
@@ -6774,7 +6774,7 @@ window.ICED26_DATA = {
       "title": "K - Symposium 11",
       "fullName": "Session 21M: K - Symposium 11",
       "type": "symposium",
-      "meet": "ICEDX1:deqx3nHD1RChb9jP8NQ1DWF-md0iGRCmJYg-hV79avq_Tes9lTqBXHkvDevhXGqNPg-hyb4F4oNLRKYmbFrf0jUc1pAzF6rS-WKnn8nmjiA",
+      "meet": "ICEDX1:uCjBtzpi9Nj4JE8iiiGFuvJyOY4mj3jsZUyAyF1Kc4hFtlfL9lTfxdT0qOOfs0xLbhsPuEyS3F0--uYd1ESpACWA_XdzUPjJabrjFD2aG6s",
       "talks": [
         {
           "time": "11:00",
@@ -6804,7 +6804,7 @@ window.ICED26_DATA = {
       "title": "REDU and ICED Presidents' Talk",
       "fullName": "Session 22: REDU and ICED Presidents' Talk",
       "type": "keynote",
-      "meet": "ICEDX1:mkWhpT7mdPgvs7U-68Sdx-GRoJqYuWSuSagafMMPQ6TDlnEMortHKFjlZanDsfZPjFLvabEIDz2E-WEKYKvKio5nWLJ9yBKXOWB30xBI9VI",
+      "meet": "ICEDX1:uCjBtzpi9Nj4JE8iiiGFuvJyOY4mj3jsZUyAyF1Kc4hFtlfL9lTfxdT0qOOfs0xLbhsPuEyS3F0--uYd1ESpACWA_XdzUPjJabrjFD2aG6s",
       "talks": [],
       "easychair_session_id": "105689",
       "chair": "Idoia Fernandez, Ariane Dumont"
@@ -6820,7 +6820,7 @@ window.ICED26_DATA = {
       "title": "Closing Remarks",
       "fullName": "Session 23: Closing Remarks",
       "type": "keynote",
-      "meet": "ICEDX1:VsCSGwf97gC_nEj4-_-b8JmQAO3pULVn42woIxsaxyPoDS65Q7FFkUV0clMF3pi7yrD-csFlbvYxm1Uplw9z3WyFG5BuHD5ftEjnUdrdStA",
+      "meet": "ICEDX1:uCjBtzpi9Nj4JE8iiiGFuvJyOY4mj3jsZUyAyF1Kc4hFtlfL9lTfxdT0qOOfs0xLbhsPuEyS3F0--uYd1ESpACWA_XdzUPjJabrjFD2aG6s",
       "talks": [],
       "easychair_session_id": "105690",
       "media": {
