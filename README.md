@@ -29,6 +29,7 @@
 - **Built-in admin panel** at `/backstage` — password-gated editor for sessions, rooms, abstracts and Meet links, with a validation tab that flags presenter overlaps and other data-quality issues.
 - **Personal agenda** — attendees star sessions to build a personal list; persists in `localStorage`, no account needed.
 - **Online presenter awareness** — sessions where a speaker joins remotely are flagged in the grid, modal, and agenda so attendees know up front.
+- **Shared slides** — presenters who sent their decks after the conference get a `SLIDES` badge on the card and download buttons in the session detail. The files live on the USAL OneDrive; only encrypted links ship in this repo.
 - **Share-ready** — Open Graph image and favicon ship in the box, themed to the brand.
 
 ---
@@ -169,6 +170,34 @@ The script matches sessions by `easychair_session_id` first, then by `(day, star
 ### C. Edit `data/programme.js` directly
 
 It's a plain JS object: `meta`, `clusters`, `rooms`, `sessions`. Commit the change.
+
+### D. Attach shared slides
+
+Presenters' decks are hosted on the USAL OneDrive and referenced here by link.
+Paste each OneDrive link in the backstage — inside the contribution
+(_Abstract, keywords y material_) for a normal talk, or in _Material de toda la
+sesión_ for a keynote, which carries no `talks[]` and has nowhere else to put it.
+
+The field is a **list**, not a single URL: several presenters sent both their
+slides and a handout, and some sent the same deck as `.pdf` and `.pptx`. Give
+each entry a label, or leave it blank for the default "Slides" / "Diapositivas".
+
+```js
+talks: [{ …, slides: [
+  { label: "",            url: "ICEDX1:…" },   // → "Slides" / "Diapositivas"
+  { label: "SoTL Guide",  url: "ICEDX1:…" }
+]}]
+```
+
+Links are encrypted with the **global** participant code on publish, exactly
+like the Meet links — never the panel code, which is scoped to the
+International Panel. Paste them in plaintext; **Publicar** encrypts them.
+Entries already showing a 🔒 in the editor are encrypted from a previous
+publish and are left untouched.
+
+One difference from Meet: the participant code is remembered **for the tab**
+once entered, so browsing several decks in a row doesn't re-prompt each time.
+Meet and YouTube still ask on every single access.
 
 ---
 

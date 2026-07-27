@@ -443,18 +443,26 @@ async function main() {
     // Preserve the admin-set "cancelled" flag (set in the backstage when a
     // session is called off; EasyChair often still lists it). Kept by id match.
     if (existing?.cancelled) next.cancelled = true;
+    // Preserve session-level shared material (the keynotes' slide decks, which
+    // have nowhere else to live because keynotes carry no talks). EasyChair
+    // knows nothing about these, so a sync would otherwise wipe them.
+    if (existing?.slides) next.slides = existing.slides;
     // Per-talk online presenter flags — match scraped talks to existing
     // ones by normalized title and carry the `online` flag forward.
     if (existing && Array.isArray(existing.talks) && existing.talks.length > 0) {
       const normT = (s) => (s || "").toLowerCase().replace(/[^\w\s]/g, " ").replace(/\s+/g, " ").trim();
       const onlineByTitle = new Map();
       const videoByTitle = new Map();
+      const slidesByTitle = new Map();
       existing.talks.forEach((t) => {
         if (t && t.online) onlineByTitle.set(normT(t.title), true);
         // Carry forward the pre-recorded-video flag + link across syncs.
         if (t && t.video) videoByTitle.set(normT(t.title), { video: true, videoUrl: t.videoUrl || "" });
+        // Carry forward the shared slides/handouts. These are hand-attached
+        // after the conference and EasyChair has no idea they exist.
+        if (t && Array.isArray(t.slides) && t.slides.length) slidesByTitle.set(normT(t.title), t.slides);
       });
-      if (onlineByTitle.size > 0 || videoByTitle.size > 0) {
+      if (onlineByTitle.size > 0 || videoByTitle.size > 0 || slidesByTitle.size > 0) {
         next.talks = next.talks.map((t) => {
           let nt = t;
           if (onlineByTitle.has(normT(t.title))) nt = { ...nt, online: true };
@@ -463,6 +471,7 @@ async function main() {
             nt = { ...nt, video: true };
             if (v.videoUrl) nt.videoUrl = v.videoUrl;
           }
+          if (slidesByTitle.has(normT(t.title))) nt = { ...nt, slides: slidesByTitle.get(normT(t.title)) };
           return nt;
         });
       }

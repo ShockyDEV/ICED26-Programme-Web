@@ -1355,7 +1355,92 @@ code {
   grid-column: 1 / -1;
 }
 
+/* ── Material compartido (diapositivas / handouts) ────────────────────────
+   Mismo lenguaje visual que el resto del editor. El azul acero distingue el
+   canal "material" del verde de online y del morado de vídeo. */
+.slides-editor { display: flex; flex-direction: column; gap: 6px; }
+.slide-row {
+  display: grid;
+  grid-template-columns: minmax(120px, 0.9fr) minmax(220px, 2.4fr) auto auto;
+  gap: 6px;
+  align-items: center;
+}
+.slide-row input {
+  padding: 7px 9px;
+  font-size: 12.5px;
+  font-family: inherit;
+  border: 1px solid var(--line, #E5DDD0);
+  border-radius: 6px;
+  background: var(--paper, #FDFBF7);
+  outline: none;
+  min-width: 0;
+}
+.slide-row input:focus { border-color: #3A6EA5; box-shadow: 0 0 0 3px rgba(58, 110, 165, 0.15); }
+/* Un enlace ya cifrado es un blob ilegible: se atenúa para que quede claro
+   que no hay nada que leer ahí, y el candado explica por qué. */
+.slide-row.is-encrypted .slide-url {
+  color: #7A736D;
+  background: #F2EEE7;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 11px;
+}
+.slide-enc { font-size: 13px; line-height: 1; cursor: help; }
+
+.slides-editor-block {
+  margin: 14px 0 6px;
+  border: 1px solid var(--line, #E5DDD0);
+  border-radius: 8px;
+  padding: 10px 12px;
+  background: var(--cream, #F7F2EA);
+}
+.slides-editor-block > summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.talk-slides-block {
+  grid-column: 1 / -1;
+  margin-top: 8px;
+  padding-top: 10px;
+  border-top: 1px dashed var(--line, #E5DDD0);
+}
+.talk-slides-label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #2A5480;
+}
+
+/* Marcadores de "tiene material": en el toggle de la ponencia y en la tabla. */
+.talk-detail-toggle .td-slides {
+  margin-left: 8px;
+  padding: 1px 6px;
+  font-size: 10.5px;
+  font-weight: 700;
+  color: #2A5480;
+  background: #DEE9F5;
+  border-radius: 999px;
+}
+.slides-tag {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 0 5px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #2A5480;
+  background: #DEE9F5;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+.talk-row.is-slides { border-left: 3px solid #3A6EA5; }
+
 @media (max-width: 800px) {
+  .slide-row { grid-template-columns: 1fr auto auto; }
+  .slide-row .slide-label { grid-column: 1 / -1; }
+
   .validation-summary { grid-template-columns: 1fr; }
   .vissue { grid-template-columns: 1fr; }
   .vi-refs { align-items: flex-start; }

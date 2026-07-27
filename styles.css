@@ -28,6 +28,12 @@
   --video:        #7C5CBF;
   --video-deep:   #5E43A0;
   --video-soft:   #EBE3FA;
+  /* Shared slides / handouts (steel blue). Fourth and last channel colour —
+     kept clear of teal ONLINE, red STREAM and purple VIDEO so all four badges
+     stay distinguishable side by side on the same card. 5.0:1 on white. */
+  --slides:       #3A6EA5;
+  --slides-deep:  #2A5480;
+  --slides-soft:  #DEE9F5;
   --cream:       #F7F2EA;
   --cream-deep:  #EFE6D6;
   --paper:       #FDFBF7;
@@ -1223,6 +1229,24 @@ a { color: inherit; }
 }
 .video-badge svg { flex-shrink: 0; }
 
+/* SLIDES badge — the presenter shared their deck. Same geometry as the
+   VIDEO badge so a card carrying several channels stays visually even. */
+.slides-badge {
+  background: var(--slides);
+  color: var(--paper);
+  font-size: 8.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 2px 5px;
+  border-radius: 3px;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+.slides-badge svg { flex-shrink: 0; }
+
 /* Cells with an online presenter get a dashed top border on the
    type-color stripe — keeps the type signal but adds an extra cue. */
 .cell.is-online-presenter {
@@ -1474,6 +1498,22 @@ a { color: inherit; }
   letter-spacing: 0.06em;
   color: var(--video-deep);
   background: var(--video-soft);
+  padding: 2px 8px;
+  border-radius: 999px;
+  margin-left: 8px;
+  text-transform: none;
+}
+
+/* Mobile equivalent of the SLIDES badge. */
+.slides-chip-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--slides-deep);
+  background: var(--slides-soft);
   padding: 2px 8px;
   border-radius: 999px;
   margin-left: 8px;
@@ -2521,6 +2561,65 @@ a { color: inherit; }
 }
 .sm-talk-video-link:hover { background: var(--video-deep); }
 .sm-talk-video-link svg { flex-shrink: 0; }
+
+/* ── Shared slides / handouts ─────────────────────────────────────────────
+   Three surfaces: a chip on the contribution row (so you can see there is
+   material without expanding), the download buttons inside the expanded
+   detail, and the session-level block used by the keynotes. */
+.sm-talk-slides-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  margin-left: 8px;
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--paper);
+  background: var(--slides);
+  padding: 2px 6px;
+  border-radius: 3px;
+  vertical-align: middle;
+}
+.sm-talk-slides-chip svg { flex-shrink: 0; }
+
+/* Buttons, not links: the URL is encrypted and has to pass through the
+   participant-code gate before it becomes a real address. */
+.sm-talk-slides,
+.sm-slides-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.sm-talk-slide-link,
+.sm-slide-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 12px;
+  background: var(--slides);
+  color: var(--paper);
+  font-family: inherit;
+  font-size: 12.5px;
+  font-weight: 600;
+  border: 0;
+  border-radius: 7px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.sm-talk-slide-link:hover,
+.sm-slide-link:hover { background: var(--slides-deep); }
+.sm-talk-slide-link svg,
+.sm-slide-link svg { flex-shrink: 0; }
+
+.sm-slides {
+  margin: 14px 0 4px;
+  padding: 12px 14px;
+  background: var(--slides-soft);
+  border-radius: 8px;
+}
+.sm-slides .sm-detail-label { margin-bottom: 8px; }
+.sm-slides .sm-slides-list { margin-bottom: 0; }
 
 .sm-talk.is-open .sm-talk-chev {
   transform: rotate(0deg);

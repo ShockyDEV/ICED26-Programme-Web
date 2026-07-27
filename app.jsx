@@ -78,6 +78,65 @@ function isSessionVideo(s) {
   return Array.isArray(s.talks) && s.talks.some((t) => t && t.video);
 }
 
+// ─── Shared presentation materials (slides / handouts) ────────────────────
+// After the conference, presenters shared their decks. The files live on the
+// USAL OneDrive; here they are referenced as a LIST, not a single URL, because
+// several people sent both the slides and a handout, and some sent the same
+// deck as .pdf and .pptx. Each entry is { label, url }, where url is an
+// ICEDX1: blob encrypted with the participant code exactly like the Meet
+// links — so the public repo never ships a working download URL.
+//   talk.slides    → material for one contribution (the usual case)
+//   session.slides → material for a whole session; needed because keynotes
+//                    carry an empty talks[] and would otherwise have nowhere
+//                    to hang their deck (Keynote 1 and 2 both shared one).
+function slidesOf(x) {
+  if (!x || !Array.isArray(x.slides)) return [];
+  return x.slides.filter((m) => m && m.url);
+}
+// Everything attached to a session, flattened — session-level first, then in
+// talk order. Used for the badges and counts.
+function allSlides(s) {
+  if (!s) return [];
+  const out = slidesOf(s);
+  (s.talks || []).forEach((tk) => out.push(...slidesOf(tk)));
+  return out;
+}
+function hasSlides(s) { return allSlides(s).length > 0; }
+// Slides always use the GLOBAL participant code, never the panel one — that
+// is scoped to the International Panel's Meet and nothing else.
+function slidesScope(data) {
+  const ac = data && data.meta && data.meta.access;
+  return (ac && ac.enabled && ac.globalVerifier) ? "global" : null;
+}
+// Label to print for one entry when the admin didn't set a custom one.
+function slidesLabel(m, t) {
+  const l = m && m.label && String(m.label).trim();
+  return l || (t && t.slidesDefaultLabel) || "Slides";
+}
+// Projector-screen glyph, shared by the badges and the download buttons.
+function SlidesIcon({ size = 16 }) {
+  return (
+    <svg viewBox="0 0 16 16" width={size} height={size} fill="currentColor" aria-hidden="true">
+      <path d="M1.6 2h12.8c.33 0 .6.27.6.6v7.3c0 .33-.27.6-.6.6H8.7v1.6l1.9 1.4-.7.9L8 13.1l-1.9 1.3-.7-.9 1.9-1.4v-1.6H1.6a.6.6 0 0 1-.6-.6V2.6c0-.33.27-.6.6-.6z"/>
+    </svg>
+  );
+}
+// One clickable material entry. The URL is an encrypted blob, so it must go
+// through openRemoteLink (which shows the code prompt) rather than an <a href>.
+function SlideLink({ item, data, t, className }) {
+  return (
+    <button
+      type="button"
+      className={className}
+      title={t.slidesLocked}
+      onClick={() => openRemoteLink(item.url, slidesScope(data), data, { remember: true })}
+    >
+      <SlidesIcon size={15} />
+      <span>{slidesLabel(item, t)}</span>
+    </button>
+  );
+}
+
 // ─── Global / spanning rows ───────────────────────────────────────────────
 // Breaks (coffee/lunch) and any session pinned to room "*" render as a single
 // full-width bar that spans every building view — the "ALL" visual. Mónica
@@ -276,18 +335,42 @@ async function checkAccessCode(scope, code, data) {
 let _codeGateOpener = null;
 function registerCodeGate(fn) { _codeGateOpener = fn; }
 
+// Participant code remembered for THIS TAB and ONLY for the slides channel.
+// Meet/YouTube keep re-asking on every single access — that rule is deliberate
+// and unchanged. Slides are different: browsing the shared decks means opening
+// one link after another, and retyping six digits each time is punishing.
+// In memory only, never localStorage, so closing the tab forgets it.
+let _slidesCode = null;
+
 function openUrlNewTab(url) {
   if (url && /^https?:\/\//i.test(url)) window.open(url, "_blank", "noopener,noreferrer");
 }
 // value: a plain URL or an ICEDX1 blob. scope: "global"/"panel"/null.
-function openRemoteLink(value, scope, data) {
+// opts.remember marks a slides link: reuse the tab's code if we already have
+// it, and remember it when the gate accepts one.
+function openRemoteLink(value, scope, data, opts) {
   const C = (typeof window !== "undefined") && window.ICED26Crypto;
   if (!value) return;
   // Not encrypted (or gating off) → open directly.
   if (!scope || !C || !C.isEnc(value)) { openUrlNewTab(value); return; }
-  // Always show the code prompt — no per-tab caching, so every access to a
-  // remote link asks for the participant code again.
-  if (_codeGateOpener) _codeGateOpener(value, scope);
+  const remember = !!(opts && opts.remember);
+  // Slides whose code we already hold → decrypt silently and open. PBKDF2 runs
+  // ~300 ms, well inside the click's transient activation window, so the popup
+  // isn't blocked — same timing the gate's own submit path already relies on.
+  // A code that stops working (data republished under a new one) drops the
+  // cache and falls back to the prompt rather than failing silently.
+  if (remember && _slidesCode) {
+    C.decrypt(value, _slidesCode).then((url) => {
+      if (url && /^https?:\/\//i.test(url)) { openUrlNewTab(url); return; }
+      _slidesCode = null;
+      if (_codeGateOpener) _codeGateOpener(value, scope, true);
+    }).catch(() => {
+      _slidesCode = null;
+      if (_codeGateOpener) _codeGateOpener(value, scope, true);
+    });
+    return;
+  }
+  if (_codeGateOpener) _codeGateOpener(value, scope, remember);
   else openUrlNewTab(value); // gate not mounted (shouldn't happen) → fail open to URL
 }
 
@@ -482,6 +565,12 @@ const I18N = {
     videoDesc: "One or more presentations in this session are pre-recorded videos, played during their time slot.",
     videoTalk: "Pre-recorded video",
     watchVideo: "Watch video",
+    slides: "SLIDES",
+    slidesTitle: "Presentation materials",
+    slidesDesc: "The presenters shared their slides after the conference.",
+    slidesSection: "Materials",
+    slidesDefaultLabel: "Slides",
+    slidesLocked: "Enter the participant code to open",
     chairLabel: "Chair:",
     guideLabel: "How to navigate",
     guideTitle: "How to Navigate the ICED26 Conference Programme (PDF)",
@@ -569,6 +658,12 @@ const I18N = {
     videoDesc: "Una o más ponencias de esta sesión son vídeos pregrabados, reproducidos en su franja horaria.",
     videoTalk: "Vídeo pregrabado",
     watchVideo: "Ver vídeo",
+    slides: "MATERIAL",
+    slidesTitle: "Material de la presentación",
+    slidesDesc: "Los ponentes compartieron sus diapositivas tras el congreso.",
+    slidesSection: "Material",
+    slidesDefaultLabel: "Diapositivas",
+    slidesLocked: "Introduce el código de participante para abrirlo",
     chairLabel: "Modera:",
     guideLabel: "Cómo navegar",
     guideTitle: "Cómo navegar por el programa del congreso ICED26 (PDF)",
@@ -1268,6 +1363,14 @@ function Grid({ data, dayIdx, buildingId, now, liveStyle, lang, t, onSessionClic
                           {t.video}
                         </span>
                       )}
+                      {hasSlides(s) && (
+                        <span className="slides-badge" title={t.slidesTitle}>
+                          <svg viewBox="0 0 16 16" width="9" height="9" fill="currentColor" aria-hidden="true">
+                            <path d="M1.6 2h12.8c.33 0 .6.27.6.6v7.3c0 .33-.27.6-.6.6H8.7v1.6l1.9 1.4-.7.9L8 13.1l-1.9 1.3-.7-.9 1.9-1.4v-1.6H1.6a.6.6 0 0 1-.6-.6V2.6c0-.33.27-.6.6-.6z"/>
+                          </svg>
+                          {t.slides}
+                        </span>
+                      )}
                       {onToggleFavorite && (
                         <StarButton
                           active={favorites?.has(sessionId(s))}
@@ -1389,6 +1492,9 @@ function MobileList({ data, dayIdx, buildingId, now, lang, t, onSessionClick, fa
                     )}
                     {isSessionVideo(s) && (
                       <span className="video-chip-inline" title={t.videoTitle}>🎬 {t.video}</span>
+                    )}
+                    {hasSlides(s) && (
+                      <span className="slides-chip-inline" title={t.slidesTitle}>📑 {t.slides}</span>
                     )}
                   </div>
                   <div className={`m-title ${s.cancelled ? "is-cancelled" : ""}`}>{s.title}</div>
@@ -2166,6 +2272,19 @@ function SessionModal({ session, t, lang, now, onClose, favorites, onToggleFavor
           return null;
         })()}
 
+        {/* Session-level material. Keynotes carry an empty talks[], so their
+            deck can only hang here; symposia may also share one joint file. */}
+        {slidesOf(session).length > 0 && (
+          <div className="sm-slides">
+            <div className="sm-detail-label">{t.slidesSection}</div>
+            <div className="sm-slides-list">
+              {slidesOf(session).map((m, i) => (
+                <SlideLink key={i} item={m} data={data} t={t} className="sm-slide-link" />
+              ))}
+            </div>
+          </div>
+        )}
+
         {talks.length > 0 && (
           <div className="sm-talks">
             <div className="sm-section-label">
@@ -2178,9 +2297,11 @@ function SessionModal({ session, t, lang, now, onClose, favorites, onToggleFavor
             </div>
             <ol className="sm-talks-list">
               {talks.map((talk, i) => {
+                const talkSlides = slidesOf(talk);
                 const hasDetail = !!(talk.abstract && talk.abstract.trim()) ||
                                   !!(talk.keywords && talk.keywords.trim()) ||
-                                  !!(talk.video && talk.videoUrl);
+                                  !!(talk.video && talk.videoUrl) ||
+                                  talkSlides.length > 0;
                 const isOpen = expandedTalk === i;
                 const keywords = (talk.keywords || "")
                   .split(/[,;]/).map(k => k.trim()).filter(Boolean);
@@ -2220,6 +2341,12 @@ function SessionModal({ session, t, lang, now, onClose, favorites, onToggleFavor
                               {t.videoTalk}
                             </span>
                           )}
+                          {talkSlides.length > 0 && (
+                            <span className="sm-talk-slides-chip" title={t.slidesTitle}>
+                              <SlidesIcon size={9} />
+                              {t.slides}
+                            </span>
+                          )}
                           {hasDetail && (
                             <span className="sm-talk-chev" aria-hidden="true">
                               {isOpen ? "▾" : "▸"}
@@ -2241,6 +2368,13 @@ function SessionModal({ session, t, lang, now, onClose, favorites, onToggleFavor
                     </div>
                     {isOpen && hasDetail && (
                       <div className="sm-talk-detail">
+                        {talkSlides.length > 0 && (
+                          <div className="sm-talk-slides">
+                            {talkSlides.map((m, mi) => (
+                              <SlideLink key={mi} item={m} data={data} t={t} className="sm-talk-slide-link" />
+                            ))}
+                          </div>
+                        )}
                         {talk.video && talk.videoUrl && (
                           <a className="sm-talk-video-link" href={safeURL(talk.videoUrl)} target="_blank" rel="noopener noreferrer">
                             <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
@@ -2291,7 +2425,7 @@ function GlobalCodeGate({ t, lang, data }) {
   const inputRef = useRef(null);
 
   useEffect(() => {
-    registerCodeGate((blob, scope) => { setGate({ blob, scope }); setCode(""); setStatus(null); });
+    registerCodeGate((blob, scope, remember) => { setGate({ blob, scope, remember }); setCode(""); setStatus(null); });
     return () => registerCodeGate(null);
   }, []);
   useEffect(() => { if (gate && inputRef.current) inputRef.current.focus(); }, [gate]);
@@ -2313,6 +2447,9 @@ function GlobalCodeGate({ t, lang, data }) {
     const url = C ? await C.decrypt(gate.blob, code.trim()) : null;
     if (url && /^https?:\/\//i.test(url)) {
       setStatus("ok");
+      // Slides only: keep the verified code for this tab so the next deck
+      // opens straight away. Meet/YouTube never reach this branch.
+      if (gate.remember) _slidesCode = code.trim();
       openUrlNewTab(url);
       setTimeout(close, 600);
     } else {

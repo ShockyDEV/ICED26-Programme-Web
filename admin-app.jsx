@@ -114,6 +114,18 @@ async function encryptLinksForPublish(data) {
     return C.encrypt(val, code);
   };
 
+  // Shared slides/handouts always use the GLOBAL code — the panel code is
+  // scoped to the International Panel's Meet and nothing else.
+  const encSlides = async (list) => {
+    if (!Array.isArray(list) || !list.length) return list;
+    const out = [];
+    for (const m of list) {
+      if (!m || !m.url) continue;
+      out.push({ ...m, url: await encField(m.url, globalCode) });
+    }
+    return out;
+  };
+
   const sessions = [];
   for (const s of data.sessions) {
     const isPanel = panelId && String(s.easychair_session_id) === panelId;
@@ -121,6 +133,17 @@ async function encryptLinksForPublish(data) {
     const next = { ...s };
     if (s.meet) next.meet = await encField(s.meet, code);
     // YouTube livestreams are PUBLIC — never encrypted, never code-gated.
+    // Session-level material (the keynotes' decks).
+    if (Array.isArray(s.slides) && s.slides.length) next.slides = await encSlides(s.slides);
+    // Per-contribution material.
+    if (Array.isArray(s.talks) && s.talks.some((tk) => tk && Array.isArray(tk.slides) && tk.slides.length)) {
+      const talks = [];
+      for (const tk of s.talks) {
+        if (tk && Array.isArray(tk.slides) && tk.slides.length) talks.push({ ...tk, slides: await encSlides(tk.slides) });
+        else talks.push(tk);
+      }
+      next.talks = talks;
+    }
     sessions.push(next);
   }
 
@@ -149,8 +172,13 @@ function countExposedRemoteLinks(data) {
   if (!ac || !ac.enabled || !C) return 0;
   const isPlain = (v) => !!v && /^https?:\/\//i.test(v) && !C.isEnc(v);
   let n = 0;
-  // YouTube is intentionally public (plaintext) — only Meet links must stay encrypted.
-  for (const s of data.sessions) { if (isPlain(s.meet)) n++; }
+  // YouTube is intentionally public (plaintext) — only Meet links and the
+  // shared slides must stay encrypted.
+  for (const s of data.sessions) {
+    if (isPlain(s.meet)) n++;
+    (s.slides || []).forEach((m) => { if (m && isPlain(m.url)) n++; });
+    (s.talks || []).forEach((tk) => (tk && tk.slides || []).forEach((m) => { if (m && isPlain(m.url)) n++; }));
+  }
   for (const r of (data.rooms || [])) { if (isPlain(r.meet)) n++; }
   return n;
 }
@@ -370,11 +398,38 @@ function normalizeUrl(v) {
   return s;
 }
 
+// Same, but leaves an already-encrypted ICEDX1: blob completely untouched.
+// Re-saving a session whose links were encrypted on a previous publish must
+// not run the blob through URL tidying.
+function cleanLinkValue(v) {
+  const s = (v || "").trim();
+  const C = window.ICED26Crypto;
+  if (C && C.isEnc(s)) return s;
+  return normalizeUrl(s);
+}
+
+// Normalise a list of shared materials ({label, url}); drops rows with no URL.
+function cleanSlides(list) {
+  if (!Array.isArray(list)) return undefined;
+  const out = list
+    .map((m) => ({ label: ((m && m.label) || "").trim(), url: cleanLinkValue(m && m.url) }))
+    .filter((m) => m.url);
+  return out.length ? out : undefined;
+}
+
 // ── safeURL — only allow http(s) URLs into href, block javascript:/data: ──
 function safeURL(url) {
   if (!url) return "#";
   const s = String(url).trim();
   return /^https?:\/\//i.test(s) ? s : "#";
+}
+
+// ── Shared material count (session-level + every talk) ───────────────────
+// Mirror of allSlides() in app.jsx. Used for the table marker and the filter.
+function countSlides(s) {
+  if (!s) return 0;
+  const n = (list) => (Array.isArray(list) ? list.filter((m) => m && m.url).length : 0);
+  return n(s.slides) + (s.talks || []).reduce((a, tk) => a + n(tk && tk.slides), 0);
 }
 
 // ── Online presenter detection — mirror of app.jsx isSessionOnline ───────
@@ -1155,7 +1210,7 @@ function PublishConfigModal({ onClose }) {
 // SessionsTab
 // ─────────────────────────────────────────────────────────────────────
 function SessionsTab({ data, setData, editingIdx, setEditingIdx }) {
-  const [filter, setFilter] = React.useState({ day: "", building: "", type: "", q: "", online: false });
+  const [filter, setFilter] = React.useState({ day: "", building: "", type: "", q: "", online: false, slides: false });
   // editingIdx is lifted up so the Validation tab can jump-to-edit
 
   const filtered = React.useMemo(() => {
@@ -1167,6 +1222,7 @@ function SessionsTab({ data, setData, editingIdx, setEditingIdx }) {
         if (filter.building && s.cluster !== filter.building) return false;
         if (filter.type && s.type !== filter.type) return false;
         if (filter.online && !isSessionOnline(s)) return false;
+        if (filter.slides && countSlides(s) === 0) return false;
         if (q) {
           const hay = [s.title, s.fullName, s.roomName, s.roomCode].filter(Boolean).join(" ").toLowerCase();
           if (!hay.includes(q)) return false;
@@ -1266,6 +1322,14 @@ function SessionsTab({ data, setData, editingIdx, setEditingIdx }) {
           />
           <span>🌐 Solo online</span>
         </label>
+        <label className="filter-online">
+          <input
+            type="checkbox"
+            checked={filter.slides}
+            onChange={(e) => setFilter((f) => ({ ...f, slides: e.target.checked }))}
+          />
+          <span>📑 Solo con material</span>
+        </label>
         <span className="filter-count">{filtered.length} de {data.sessions.length}</span>
         <button className="btn-primary" onClick={startNew}>+ Nueva sesión</button>
       </div>
@@ -1316,6 +1380,9 @@ function SessionsTab({ data, setData, editingIdx, setEditingIdx }) {
                   )}
                   {s.youtube && (
                     <a href={safeURL(s.youtube)} target="_blank" rel="noopener noreferrer" title={s.youtube} className="yt-tag" aria-label="YouTube">▶</a>
+                  )}
+                  {countSlides(s) > 0 && (
+                    <span className="slides-tag" title={`${countSlides(s)} material(es) compartido(s)`}>📑 {countSlides(s)}</span>
                   )}
                 </td>
                 <td className="td-actions">
@@ -1425,6 +1492,8 @@ function SessionEditor({ session, isNew, rooms, clusters, days, onSave, onCancel
       chair: (s.chair || "").trim(),
       media: cleanMedia(s.media),
       facilitators: cleanFacilitators(s.facilitators),
+      // Material compartido de toda la sesión (las keynotes no tienen talks[]).
+      slides: cleanSlides(s.slides),
       onlinePresenter: !!s.onlinePresenter,
       hybrid: !!s.hybrid,
       cancelled: !!s.cancelled,
@@ -1433,7 +1502,7 @@ function SessionEditor({ session, isNew, rooms, clusters, days, onSave, onCancel
       // Symposia/papers/workshops use Meet, not YouTube — keep youtube only for keynote/talk.
       youtube: (s.type === "keynote" || s.type === "talk") ? normalizeUrl(s.youtube) : "",
       talks: (s.talks || [])
-        .filter((t) => t.title || t.authors || t.presenter || t.abstract)
+        .filter((t) => t.title || t.authors || t.presenter || t.abstract || (t.slides || []).length)
         .map((t) => {
           const out = {
             time: (t.time || "").trim(),
@@ -1451,6 +1520,11 @@ function SessionEditor({ session, isNew, rooms, clusters, days, onSave, onCancel
             const vu = normalizeUrl(t.videoUrl);
             if (vu) out.videoUrl = vu;
           }
+          // Material compartido de la ponencia (diapositivas, handout…). Va
+          // en esta lista blanca a propósito: cualquier campo que no se
+          // enumere aquí se pierde en silencio al guardar.
+          const sl = cleanSlides(t.slides);
+          if (sl) out.slides = sl;
           return out;
         })
     };
@@ -1645,6 +1719,20 @@ function SessionEditor({ session, isNew, rooms, clusters, days, onSave, onCancel
             );
           })()}
 
+          <details className="slides-editor-block" open={(s.slides || []).length > 0}>
+            <summary>
+              📑 Material de toda la sesión (opcional)
+              {(s.slides || []).length > 0 && <span className="muted"> ({s.slides.length})</span>}
+            </summary>
+            <p className="form-note">
+              Solo para material que no pertenece a una ponencia concreta: las <strong>keynotes</strong>
+              {" "}(que no llevan ponencias en el programa, así que su presentación únicamente puede colgar
+              de aquí) o un archivo conjunto de un simposio. Si el material es de una ponencia concreta,
+              ponlo más abajo, dentro de esa ponencia.
+            </p>
+            <SlidesEditor value={s.slides} onChange={(slides) => setField("slides", slides)} />
+          </details>
+
           <TalksEditor
             talks={s.talks || []}
             onChange={(talks) => setField("talks", talks)}
@@ -1719,6 +1807,54 @@ function FacilitatorsEditor({ value, onChange }) {
   );
 }
 
+// ─────────────────────────────────────────────────────────────────────
+// SlidesEditor — material compartido (diapositivas, handout, póster…).
+// Es una LISTA y no un enlace suelto porque bastantes ponentes enviaron dos
+// cosas (la presentación y un handout), o el mismo archivo en .pdf y .pptx.
+// Se usa tanto por ponencia como a nivel de sesión (las keynotes no tienen
+// ponencias, así que su presentación solo puede colgar de la sesión).
+// El candado indica que ese enlace ya viajó cifrado en una publicación
+// anterior: se deja intacto y no hace falta volver a pegarlo.
+// ─────────────────────────────────────────────────────────────────────
+function SlidesEditor({ value, onChange }) {
+  const list = Array.isArray(value) ? value : [];
+  const C = window.ICED26Crypto;
+  const update = (i, patch) => onChange(list.map((m, idx) => (idx === i ? { ...m, ...patch } : m)));
+  const add = () => onChange([...list, { label: "", url: "" }]);
+  const remove = (i) => onChange(list.filter((_, idx) => idx !== i));
+
+  return (
+    <div className="slides-editor">
+      {list.map((m, i) => {
+        const enc = !!(C && C.isEnc(m.url));
+        return (
+          <div className={`slide-row ${enc ? "is-encrypted" : ""}`} key={i}>
+            <input
+              type="text"
+              className="slide-label"
+              placeholder="Etiqueta (vacío = «Diapositivas»)"
+              value={m.label || ""}
+              onChange={(e) => update(i, { label: e.target.value })}
+            />
+            <input
+              type="text"
+              inputMode="url"
+              className="slide-url"
+              placeholder="Vínculo de OneDrive — https://usales-my.sharepoint.com/…"
+              value={m.url || ""}
+              onChange={(e) => update(i, { url: e.target.value })}
+              spellCheck={false}
+            />
+            {enc && <span className="slide-enc" title="Ya cifrado con el código de participante — no hace falta tocarlo">🔒</span>}
+            <button type="button" className="btn-mini danger" onClick={() => remove(i)} title="Quitar material">✕</button>
+          </div>
+        );
+      })}
+      <button type="button" className="btn-ghost btn-mini" onClick={add}>+ Añadir material</button>
+    </div>
+  );
+}
+
 function TalksEditor({ talks, onChange }) {
   const update = (i, patch) => onChange(talks.map((t, idx) => (idx === i ? { ...t, ...patch } : t)));
   const add = () =>
@@ -1759,9 +1895,10 @@ function TalksEditor({ talks, onChange }) {
 
       {talks.map((t, i) => {
         const isOpen = expanded.has(i);
-        const hasDetail = (t.abstract || "").trim().length > 0 || (t.keywords || "").trim().length > 0;
+        const slideCount = (t.slides || []).filter((m) => m && m.url).length;
+        const hasDetail = (t.abstract || "").trim().length > 0 || (t.keywords || "").trim().length > 0 || slideCount > 0;
         return (
-          <div className={`talk-row ${isOpen ? "is-open" : ""} ${t.online ? "is-online" : ""} ${t.video ? "is-video" : ""}`} key={i}>
+          <div className={`talk-row ${isOpen ? "is-open" : ""} ${t.online ? "is-online" : ""} ${t.video ? "is-video" : ""} ${slideCount ? "is-slides" : ""}`} key={i}>
             <div className="talk-controls">
               <button type="button" onClick={() => move(i, -1)} disabled={i === 0} title="Subir">↑</button>
               <button type="button" onClick={() => move(i, 1)} disabled={i === talks.length - 1} title="Bajar">↓</button>
@@ -1834,7 +1971,8 @@ function TalksEditor({ talks, onChange }) {
                 onClick={() => toggle(i)}
                 aria-expanded={isOpen}
               >
-                {isOpen ? "▾ Ocultar abstract & keywords" : "▸ Abstract & keywords"}
+                {isOpen ? "▾ Ocultar abstract, keywords y material" : "▸ Abstract, keywords y material"}
+                {slideCount > 0 && <span className="td-slides" title={`${slideCount} material(es) compartido(s)`}>📑 {slideCount}</span>}
                 {hasDetail && !isOpen && <span className="td-pill">●</span>}
               </button>
 
@@ -1854,6 +1992,10 @@ function TalksEditor({ talks, onChange }) {
                     onChange={(e) => update(i, { keywords: e.target.value })}
                     className="talk-keywords"
                   />
+                  <div className="talk-slides-block">
+                    <span className="talk-slides-label">📑 Material compartido por el/la ponente</span>
+                    <SlidesEditor value={t.slides} onChange={(slides) => update(i, { slides })} />
+                  </div>
                 </>
               )}
             </div>
