@@ -22,8 +22,15 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="admin-styles.css">
+<!-- Cache-bust the stylesheets, same reason as the scripts below: GH Pages
+     caches them for 10 min while admin-app.jsx is always fetched fresh. -->
+<script>
+  (function () {
+    var v = Date.now();
+    document.write('<link rel="stylesheet" href="styles.css?v=' + v + '">');
+    document.write('<link rel="stylesheet" href="admin-styles.css?v=' + v + '">');
+  })();
+</script>
 </head>
 <body class="admin-body">
 <div id="root"></div>
