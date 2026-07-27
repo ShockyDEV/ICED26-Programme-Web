@@ -807,6 +807,29 @@ function formatDurationApprox(deltaMs, lang) {
   return `${h} h ${m} min`;
 }
 
+// ─── Archive mode ─────────────────────────────────────────────────────────
+// Once the last conference day is behind us the site stops being a "live
+// programme" and becomes the proceedings archive. Every single session would
+// otherwise paint in the greyed-out "past" style, so the whole grid reads as
+// disabled and the shared slides get buried in it. In archive mode sessions
+// paint neutral instead: no dimming, no "Ended" chips.
+//
+// The live/past logic itself is untouched — it just stops being applied once
+// there is nothing left to be live. During a future edition (change
+// meta.days) the app goes back to highlighting live sessions on its own.
+function isArchive(data, now) {
+  const days = data && data.meta && data.meta.days;
+  if (!Array.isArray(days) || !days.length) return false;
+  return madridParts(now).dayKey > days[days.length - 1];
+}
+// The state a cell should be PAINTED with, as opposed to the real one used
+// for logic (badges, z-index, aria). "idle" has no styles of its own, which
+// is exactly the point: it renders like a plain card.
+function paintState(s, now, data) {
+  const st = sessionState(s, now);
+  return st === "past" && isArchive(data, now) ? "idle" : st;
+}
+
 function sessionState(s, now) {
   const { dayKey, minutes } = madridParts(now);
   if (s.day !== dayKey) {
@@ -1316,7 +1339,7 @@ function Grid({ data, dayIdx, buildingId, now, liveStyle, lang, t, onSessionClic
                     key={item.idx}
                     role="button"
                     tabIndex="0"
-                    className={`cell is-${state} ${dur <= 60 ? "is-short" : ""} ${item.span > 1 ? `sub-of-${item.span}` : "sub-of-1"} ${isSessionOnline(s) ? "is-online-presenter" : ""} ${s.cancelled ? "is-cancelled" : ""}`}
+                    className={`cell is-${paintState(s, now, data)} ${dur <= 60 ? "is-short" : ""} ${item.span > 1 ? `sub-of-${item.span}` : "sub-of-1"} ${isSessionOnline(s) ? "is-online-presenter" : ""} ${s.cancelled ? "is-cancelled" : ""}`}
                     data-live-style={liveStyle}
                     onClick={() => { if (onSessionClick) onSessionClick(s); }}
                     onKeyDown={(e) => { if ((e.key === "Enter" || e.key === " ") && onSessionClick) { e.preventDefault(); onSessionClick(s); } }}
@@ -1418,7 +1441,7 @@ function Grid({ data, dayIdx, buildingId, now, liveStyle, lang, t, onSessionClic
           return (
             <div
               key={`brk-${i}`}
-              className={`break-row is-${state} type-${s.type} ${clickable ? "is-clickable" : ""}`}
+              className={`break-row is-${paintState(s, now, data)} type-${s.type} ${clickable ? "is-clickable" : ""}`}
               style={{
                 top: `${top}px`,
                 height: `${Math.max(height, 32)}px`
@@ -1474,7 +1497,7 @@ function MobileList({ data, dayIdx, buildingId, now, lang, t, onSessionClick, fa
               <a
                 key={i}
                 href="#"
-                className={`mobile-cell is-${state} ${isSessionOnline(s) ? "is-online-presenter" : ""} ${s.cancelled ? "is-cancelled" : ""}`}
+                className={`mobile-cell is-${paintState(s, now, data)} ${isSessionOnline(s) ? "is-online-presenter" : ""} ${s.cancelled ? "is-cancelled" : ""}`}
                 style={{ "--type-color": `var(--t-${s.type})` }}
                 onClick={(e) => { e.preventDefault(); if (onSessionClick) onSessionClick(s); }}
                 aria-label={`${t.types[s.type] || s.type}: ${s.title}, ${s.room === "*" ? t.everyRoom : s.roomName}, ${s.start}–${s.end}${isSessionOnline(s) ? ", " + t.onlinePresenterTitle : ""}`}>
@@ -1483,7 +1506,7 @@ function MobileList({ data, dayIdx, buildingId, now, lang, t, onSessionClick, fa
                     {s.room === "*" ? t.everyRoom : s.roomName}
                     {s.cancelled && <span className="cancel-chip-inline">{t.cancelled}</span>}
                     {state === "live" && !s.cancelled && <span className="live-badge" style={{ position: "static", marginLeft: 8 }}><span className="dot"></span>{t.live}</span>}
-                    {state === "past" && <span style={{ marginLeft: 8, color: "var(--ink-mute)" }}>✓ {t.past}</span>}
+                    {state === "past" && !isArchive(data, now) && <span style={{ marginLeft: 8, color: "var(--ink-mute)" }}>✓ {t.past}</span>}
                     {isSessionOnline(s) && (
                       <span className="online-chip-inline" title={t.onlinePresenterTitle}>🌐 {t.online}</span>
                     )}
@@ -2698,7 +2721,7 @@ function AgendaModal({ open, onClose, favorites, data, t, lang, now, onSessionCl
                       return (
                         <li
                           key={it.id}
-                          className={`agenda-item is-${state} ${isNext ? "is-next" : ""}`}
+                          className={`agenda-item is-${state === "past" && isArchive(data, now) ? "idle" : state} ${isNext ? "is-next" : ""}`}
                           style={{ "--type-color": typeColor }}
                         >
                           {isNext && <span className="agenda-next-pill">{t.nextUp}</span>}
@@ -2710,7 +2733,7 @@ function AgendaModal({ open, onClose, favorites, data, t, lang, now, onSessionCl
                             <div className="agenda-item-time">
                               <span className="ai-time">{s.start}–{s.end}</span>
                               {state === "live" && !s.cancelled && <span className="ai-live">{t.live}</span>}
-                              {state === "past" && <span className="ai-past">{t.past}</span>}
+                              {state === "past" && !isArchive(data, now) && <span className="ai-past">{t.past}</span>}
                               {s.cancelled && <span className="ai-cancel">{t.cancelled}</span>}
                             </div>
                             <div className="agenda-item-body">
