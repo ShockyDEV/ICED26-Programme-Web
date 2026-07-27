@@ -499,6 +499,7 @@ const I18N = {
     upcoming: "Upcoming",
     join: "Join Meet",
     linksClosed: "Opens on the conference day",
+    linksEnded: "The conference has ended",
     today: "TODAY",
     types: {
       keynote: "Keynote", symposium: "Symposium", paper: "Paper",
@@ -592,6 +593,7 @@ const I18N = {
     upcoming: "Próxima",
     join: "Entrar a Meet",
     linksClosed: "Disponible el día del congreso",
+    linksEnded: "El congreso ha finalizado",
     today: "HOY",
     types: {
       keynote: "Conferencia", symposium: "Simposio", paper: "Comunicación",
@@ -2105,6 +2107,13 @@ function SessionModal({ session, t, lang, now, onClose, favorites, onToggleFavor
             // until the session's room is switched Active in the backstage.
             const linksActive = roomLinksActive(session, data);
             const yt = effectiveYouTube(session, data);
+            // Once the conference is over the Meet rooms close for good. There
+            // is no meeting left to join, and an open Meet is a live liability:
+            // anyone holding the participant code could start a call in a room
+            // that reads as official. The YouTube links stay open — those are
+            // the recordings, which is exactly what an archive is for.
+            const archive = isArchive(data, now);
+            const lockedMsg = archive ? t.linksEnded : t.linksClosed;
             const meetIcon = <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="23 7 16 12 23 17 23 7" /><rect x="1" y="5" width="15" height="14" rx="2" ry="2" /></svg>;
             const ytIcon = <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M21.6 6.6c-.2-.9-.9-1.6-1.8-1.8C18.2 4.4 12 4.4 12 4.4s-6.2 0-7.8.4c-.9.2-1.6.9-1.8 1.8C2 8.2 2 12 2 12s0 3.8.4 5.4c.2.9.9 1.6 1.8 1.8 1.6.4 7.8.4 7.8.4s6.2 0 7.8-.4c.9-.2 1.6-.9 1.8-1.8.4-1.6.4-5.4.4-5.4s0-3.8-.4-5.4zM10 15.5v-7l6 3.5-6 3.5z"/></svg>;
             const arrow = <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"><path d="M7 13l6-6M9 7h4v4" /></svg>;
@@ -2144,7 +2153,7 @@ function SessionModal({ session, t, lang, now, onClose, favorites, onToggleFavor
             const showMeet =
               (!isStreamType && !noRemoteType && !noRowType) ||
               (isStreamType && needsMeetForOnline);
-            const meetLive = session.meet && linksActive;
+            const meetLive = session.meet && linksActive && !archive;
             const ytLive = yt && linksActive;
             // Access scope (participant-code gate). A live link (plain or
             // encrypted) opens via openRemoteLink, which shows the shared code
@@ -2159,10 +2168,10 @@ function SessionModal({ session, t, lang, now, onClose, favorites, onToggleFavor
               ? "global" : null;
             const meetBtn = (live, val) => live
               ? <button type="button" className="sm-meet-btn" onClick={() => openRemoteLink(val, scope, data)}>{meetIcon}<span>{meetLabel}</span>{arrow}</button>
-              : <span className="sm-meet-btn is-locked" title={t.linksClosed} aria-disabled="true">{meetIcon}<span>{meetLabel}</span>{lock}</span>;
+              : <span className="sm-meet-btn is-locked" title={lockedMsg} aria-disabled="true">{meetIcon}<span>{meetLabel}</span>{lock}</span>;
             const ytBtn = (live, val) => live
               ? <button type="button" className="sm-youtube-btn" onClick={() => openRemoteLink(val, ytScope, data)}>{ytIcon}<span>{t.watchOnYouTube}</span>{arrow}</button>
-              : <span className="sm-youtube-btn is-locked" title={t.linksClosed} aria-disabled="true">{ytIcon}<span>{t.watchOnYouTube}</span>{lock}</span>;
+              : <span className="sm-youtube-btn is-locked" title={lockedMsg} aria-disabled="true">{ytIcon}<span>{t.watchOnYouTube}</span>{lock}</span>;
             return (
               <>
                 {/* Meet — Meet-type sessions, plus any streamed session with a
@@ -2178,9 +2187,10 @@ function SessionModal({ session, t, lang, now, onClose, favorites, onToggleFavor
                 {noRemoteType && (
                   <span className="sm-no-meet muted">{lang === "es" ? "Sin acceso remoto" : "No remote access"}</span>
                 )}
-                {/* Note shown when a real link exists but the room is still closed. */}
-                {!linksActive && ((showMeet && session.meet) || (isStreamType && yt)) && (
-                  <span className="sm-locked-note muted">{t.linksClosed}</span>
+                {/* Note shown when a real link exists but its button is locked —
+                    either the room hasn't opened yet, or the conference is over. */}
+                {(((showMeet && session.meet) && !meetLive) || ((isStreamType && yt) && !ytLive)) && (
+                  <span className="sm-locked-note muted">{lockedMsg}</span>
                 )}
               </>
             );
@@ -2765,7 +2775,9 @@ function AgendaModal({ open, onClose, favorites, data, t, lang, now, onSessionCl
                             </div>
                           </button>
                           <div className="agenda-item-actions">
-                            {s.meet && !s.cancelled && (
+                            {/* Same rule as the modal: no Meet once the
+                                conference is over. */}
+                            {s.meet && !s.cancelled && !isArchive(data, now) && (
                               <button
                                 type="button"
                                 className="agenda-meet-btn"
