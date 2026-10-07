@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-10-07T08-40
+// ICED26 programme — generated from admin panel 2026-10-07T09-39
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -315,7 +315,21 @@ window.ICED26_DATA = {
           "authors": "Michele Di Pietro",
           "presenter": "",
           "abstract": "How do you make decisions about the programs you offer in your center? Do you fall back on conventional topics (something on course design, something on technology, diversity and inclusion, assessment and evaluation, Artificial intelligence)? Do you follow institutional priorities? While it makes good sense to align our work with current trends and institutional priorities, this approach does not necessarily nurture our faculty as full persons. In this workshop, you will learn about a holistic theoretical framework from yoga philosophy, the chakra system, and explore its seven elements. Armed with this understanding, you will take inventory of your offerings and determine areas of strengths and growth for your programs. Participants will leave with resources to embed this framework in their planning process. This workshop has several opportunities for interactions planned, so come ready to engage!",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Michele _DiPietro_Chakra handout 1.docx",
+              "url": "ICEDX1:wkCkadKcxoV0VFJJDzGKEn4h51a-Zm9IgBKWFpqOo_NH2wHsAOb0UyCVC-KvdRwDwrvQFbAVl_6ZVUCeev4Edtk8ABT21p_XNNZqprhEI5gbWa8Gwmy2mAw1emVboCLn5Nk3Lt-_JoB1uERRinoTIrC5"
+            },
+            {
+              "label": "Michele _DiPietro_Chakra Handout 2.docx",
+              "url": "ICEDX1:aIw_y0I6EdFotxW2PEkmtQniMoe20rknEgN_Iwo6uFLCnPDIWQSxjxShEZfSwGVeSPfOUEsAOJKrdTDt7zkl_q0YUx1mASjVFXUgi3q0SN2VDlFaY2elZ-Qjjv-w4ZZcScBOZxIL6RgT0a8kYEgIgkQx"
+            },
+            {
+              "label": "Michele _DiPietro_DiPietro Workshop.pptx",
+              "url": "ICEDX1:ZAFjo8UflqAMyymcBOFD6DSSfgPkz0LYKm4ipOfT4g4PO97RfQEIi28n8IROYl7SZrNHwopDOqeskZqDjORqyQPCxJ0hd97UbPa06yyaBRu9X-Dtsl6fMhnNFG0z2o5__bOVJn-WS1GLTxQGm_UQ5G9X"
+            }
+          ]
         }
       ],
       "easychair_session_id": "106020"
@@ -490,11 +504,11 @@ window.ICED26_DATA = {
           "slides": [
             {
               "label": "Bernhard_Lange_ICED26 PreCon From Tools to Agency AI Workshop Bernhard Lange Uni Luzern 1.pdf",
-              "url": "ICEDX1:wZhTHIg2W-3u0KdHkpJ-_sr5_zeIOjjMWHonaqOqpXk0dAUtV1anuRk6iaIMLofEUsR7tUa-hEbGbuYNP_aHcoqSyXy670wi8t1yz8akaX67lZjzIOzwEKBVMT8KrN-y9qNo-QSlpgmXMQnMZTziLKt9YRHU6b9vdvgRcZy7Y_dR4lsGs3RhJFJsRvOUxEBo799bzEOk3zp-XRdDOeObsrJa3N7QArzjLg"
+              "url": "ICEDX1:-pJYKNuvyQh3nFwoxYedx0TE4EDV0y_SAbZY2F_KyxTpEPbw9Ypf-1gLt1XFRfq8urOVw-uVx2w8trWogf4x9nF2OnlVdaMpJG72bzJd9OIthJeI37RndenGZd3iFs6fsUGozuHtLDVxU9b1dbHcrq8k"
             },
             {
               "label": "Bernhard_Lange_ICED26 PreCon From Tools to Agency AI Workshop Bernhard Lange Uni Luzern.pdf",
-              "url": "ICEDX1:9oeDbaJXA3OGUwe3s0k_fpopUdTs_pRG6uYrXTuxm8GuYA40RRfHHnPnoPN75gf5Sgb96wA3nZyWnhh-zbecd8jxFxlb744CXxs7_zmM1ve7lbA1ofK0tKBZBvtIzBgygBkzII5ei3XAsVWy-S2f5q5kVru-oQVnB259zS_824CH9_q7BcXRMQY0U6c-Yr0b7azRMuYUZ2F9RKobD65M6g"
+              "url": "ICEDX1:CJel8-j0GE_LNymvmwybKIgbllblg9Iq4ZSHDJvPAu3P3tQcAcKXSxMP0IG12LJ8-8DJODHaTYJyqMY0MxWhgz2fWoI_ot7Hty2FJngpPmfhhoErTE0sw0GZgXssd5WQJLwR5Ranu7eZlkQHrZLXIe3O"
             }
           ]
         }
@@ -521,7 +535,13 @@ window.ICED26_DATA = {
           "authors": "Sheena Brown",
           "presenter": "",
           "abstract": "Academic development units face pressure to demonstrate value to institutional leaders, accreditation bodies, and stakeholders. Many Centers for Teaching and Learning rely primarily on participation metrics—attendance rates—as impact proxies, obscuring contributions to teaching culture, curriculum enhancement, and systemic change. This workshop introduces a holistic, multi-level evaluation model combining the 4M Framework and Kirkpatrick Model, supporting academic developers in articulating strategic, organizational, and policy-relevant work. Attendees will explore practical methods for capturing and communicating impact evidence and receive a replicable, multi-level assessment plan and strategies for communicating value to leadership, informing policy, shaping teaching cultures, and strengthening evidence-based practices",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Sheena_Brown_PPT From Participation to Strategic Impact-  Multi-Level Evaluation for Centers for Teaching & Learning.pdf",
+              "url": "ICEDX1:iGz3Oc9DYr7l7NTvL8CGXf4cE9lvqkOMfxY2KpZ-2Wbf6BN4Ac0uispsk08AxxvtnDSLic-fCBb6WGmK1KmTuIKbsVrkWBlCDeZDjf91YWdJXbwRh9TpeneQuGNtpqn-ia8qsw3vaTP4DQVbD5rJKM4D"
+            }
+          ]
         }
       ],
       "easychair_session_id": "106027"
@@ -621,7 +641,7 @@ window.ICED26_DATA = {
       "slides": [
         {
           "label": "David_Green_01 David A Green keynote slides - PDF.pdf",
-          "url": "ICEDX1:PaKAEaV2-ePxCC-Mg07r3KBD9iOC_Buk9Hm5aOooJ_2sHLw4UgAM6lECpKDaxqHubAWZmh1EeA9qE-BaI8yJv2H_ewDmQD2_uAoZe3v-uhJ_EqWT4EJmsfayQx3jVfkAJ7TNC82IkpQD8pqPvLYyKHYwYEKwMCGzGewLiZhZ0J-v9UJzKdc87jU0W7MlWz0zkHGz-_hRSaAzvdwTrJoFRg"
+          "url": "ICEDX1:vQtXT9j_TbycBLSCxxOAnfrJw_82E-pgpZ_1wpvaOLDOVgGnur_A6Dv6EekJxAH4JbIBaWBnpCuAe5-J9wu5U3YyqPSGzdGlWzFQ3phcsYiWuGlg_GYQezwO8CSyj6jlrrp3mDJQiGoeT6naKKYagZ-a"
         }
       ],
       "youtube": "https://www.youtube.com/watch?v=Ku2fbD0OEhE&t=3770s"
@@ -702,7 +722,7 @@ window.ICED26_DATA = {
           "slides": [
             {
               "label": "Regine_Bachmaier_poster_lehrblickde.pdf",
-              "url": "ICEDX1:p70QxOLc2_rkw3-YePst5DeTHlBh5VR6O1Dzmnj5x7wxuU-zn-EFYLYDWBxTbbvL6EA2VnQTLkxs1vaee4cbY6jXcu1qUaWH9u0S38n7POJlYqQYDQnpi5MaAMtteMl1jaLaHcwqeSf2Oh_HxglTxDA3BwoQQmTpjkDjFO0c-BEVp8vWtXFXCSM8ZNH3cY70qya32fquHNYmZkWUHYXkew"
+              "url": "ICEDX1:4l_lpZHTximi0OH8iINoHflg5B3oUMsWltvCG9sRoOp3-xH62vIPFdhs_pbOoIr3oIw-HQSKb3pUw-05XV1152MN602ZrHHTkYor9hP8tLQ_ZorgIG2wLrUemrCoQ-ChD9K0QkDhIhzwEOHVvvEBhJWz"
             }
           ]
         },
@@ -724,11 +744,11 @@ window.ICED26_DATA = {
           "slides": [
             {
               "label": "Kimikazu_Sugimori_Enacting the Hub Function of a Teaching and Learning Center_An Insider Action Research on Faculty Learning Communities_Kimi Sugimori.pdf",
-              "url": "ICEDX1:eLkn1qxs04B6PaLFx-bvCH4zliBJHEL2z04_qIL5czwYEeZmWsZBfW8KBpjE8d_oaQ7U8Ppyqx58QHuqVqWZuQI1B1e61qDEXMC3FDzTy41BFxwk8VR7lDDpxC4Af1HOzp3rh1Qy4XQVOH3VjZQZYekEqRAziLm9wl8utWJVNrE-sGog7EsPz1KhQCAd3xZotR0DveEt8x_0S-YulcNP-w"
+              "url": "ICEDX1:sM4jUYXGnpMRklmJmQ7zLXiyT2HIj_0uWXCQDtQroiEbu7BdzVDh38tOGVmElg_btCWNTdTxHFjiJvrvIFbRhuwwSokSyRAytojSUcHElAe8i8RHnVIlHpV7pRyPgE-uvdXuCxVqKE5yZxKAJih6GyEj"
             },
             {
               "label": "Kimikazu_Sugimori_Poster1_KimiSugimori.pdf",
-              "url": "ICEDX1:F5ccZnCf_UEuy3Sn8TJWMU0cuN4aB_6sIOVVksJwrBPc6CZnZPwIgSWVOKOMPePm2dz5TittN8To944dTOh2c2YaxvDyRvIxibWT7z-cOxG5--jb66Ue9rrSZTYRYKp6pALzalEj0zxPSlWTsFhaEEA_jVdElrsDb7tzCJJMjKutx9iNZEF8dpNXtLAyU0kPVYh6VR0q_OsbyefYgr-1Tg"
+              "url": "ICEDX1:4KfePjjPBTnLoPHVAajqHmYr3WTpqpQKyDZEAgCv6BFcIJanTHhM6mKzXSFKUpGlhFvyX-WDmmcNgLArAOh-FmYjZ1q9SZ3UKJQhtRpWSLvrsVT5GbGWaXE7J1dyxRAekvsQndiUKlyxUXONI8d9GJ78"
             }
           ]
         },
@@ -750,7 +770,7 @@ window.ICED26_DATA = {
           "slides": [
             {
               "label": "Rei_Kataoka_iced2026_Yamamoto et al.pdf",
-              "url": "ICEDX1:3na3vBXyP9WFFqgCfD13uIE7iHLULeDC1gFtWlN78N23MbWsnz24CeE-tDBf_5_kEwnKokBbgzWfRtskhPCDqM6epOG4gbHfBDotvwjPTqr2LdyN7ONMN2MrkDL8YzNVv2BtRSp1DF6lO7UA0chhe6bCjbL9YQ66VbEmMXE6fRybqaCzxUAUZ0gQnBInY_AvqlqUhQC-r4LKwoffg4Tcgw"
+              "url": "ICEDX1:sUt6x-IJ1ZwVpdoJMKgH8Bfki_089JJVvxbJX9qNL9QyL7C1mTrf5lODAG2iB-mg2xMHUxYl8NQcal1QtomCd2ytXY-d6u9Fru1TSLHsPTf05mVP0aD35J3-VS39LXl3T9QTasG9VaaWIkOnCoU3WPWy"
             }
           ]
         },
@@ -823,7 +843,13 @@ window.ICED26_DATA = {
           "authors": "Thomas Colclough, Duncan Pritchard",
           "presenter": "Thomas Colclough",
           "abstract": "We present a global comparative synthesis of 11 character education initiatives in higher education, examining how contemporary programs draw on philosophical, psychological, and pedagogical frameworks to support formation. Character education has experienced a significant resurgence in recent decades, reflecting renewed interest in the formative aims of higher education and the integration of virtue-ethical, empirical, and relational approaches. Triangulating data from interviews, field engagements, institutional materials, and a systematic review of 213 publications, we chart the theoretical foundations, institutional models, strengths, and challenges that shape current practice.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Thomas_Colclough_Colclough_ICED_26.pptx",
+              "url": "ICEDX1:H1wdQGBxEArANjRkehmpj7UXMQOuKAOQUaCwU93gj-Us1Zay4ery3HKAjGnB5ErvUq_Cu_44UpjcV4pmJ9_adPn3dwG83Vvp-a4YDtU7D-Mbhj8e9MxGJ505w4cV0Kofu57EyOlRhW5DNDjTPKcmItBF"
+            }
+          ]
         },
         {
           "time": "11:45",
@@ -872,7 +898,7 @@ window.ICED26_DATA = {
           "slides": [
             {
               "label": "Klara_Bolander Laksov_Educational leadership of, for, with and through AD.pptx",
-              "url": "ICEDX1:SKVX3dANI9YW8RDiyMx-7Vn3ynXBHuY4FcOoOnEkQOkyjvJJYvPejqk_kZJWdj5BAnqBElDwCjqf9bIMyYOSP6P6UjKEKZpaqsXNz8-6AaqGb5FG8CdksXn7OM2BOrjxkDP8NM_BTEyPg56lOml_RqiOSnBDfybjEZ-1m9m-jmN4GbK9-7PAtHNtjbHUZIBtNGm4SDDXgHp3Y128XV3sNQ"
+              "url": "ICEDX1:iJPpj_6AkxSN3xH74tYndRzhjvJkMjv5Z2Voasu4cikZXxI45SXdIfiCzo7p3bptEzvWN0eiqXpOJgdaIA7-CIIQKNpfXnJFxMQQw8k9iDl_NDeMBFURj4hQmpjaga0w8MTZpA534on3_c0_EoGvS7jJ"
             }
           ]
         },
@@ -890,7 +916,13 @@ window.ICED26_DATA = {
           "authors": "Esmarie Strydom, Marieta Jansen van Vuuren",
           "presenter": "Esmarie Strydom",
           "abstract": "The professional growth of academic staff is central to fostering teaching excellence, curriculum innovation, and student success. In many higher education institutions, staff development opportunities exist in silos, limiting their collective impact. At the particular institution, the Centre for Teaching and Learning offers a range of initiatives — including Continuous Professional Learning programmes, Teaching Awards, Scholarship of Teaching and Learning (SoTL) projects, and International Teaching Mobility opportunities. While participation in CPL has tripled between the 2021–2025 only 35% of staff engage in more than one intervention, signaling fragmented growth pathways and missed opportunities for systemic transformation. Using an exploratory mixed method research methodology, this study integrated multiple datasets into a unified analytics dashboard, enabling comparative and disaggregated analysis across faculties, campuses, career stages, gender. Quantitative data were analysed using SAS and Excel PivotTables, complemented by stakeholder validation sessions that provided qualitative insights into gaps and patterns of engagement while qualitative data was analysed using NVIVO. Findings reveal strong uptake among junior lecturers, but minimal participation from senior academics. Moreover, a lack of structured progression between induction, Continuous Professional Learning (CPL), Scholarship of Teaching and Learning (SoTL), International Teaching Mobility, and recognition initiatives prevents the creation of coherent career pathways. The study concludes with a Sustainable Career Path Development Framework that breaks down silos and links interventions into an agile, equitable ecosystem. This research contributes to academic development by demonstrating how evidence-based planning and continuous evaluation can create future-ready professional learning systems, advancing both individual careers and institutional excellence.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Esmarie_Strydom_ICED Building sustainable Professional Development Pathways.pptx",
+              "url": "ICEDX1:m5YdCCypfjLv_qhOs13LEGH81Dvs2PA6ZHJB3VnA7xedPLjuwlIzA7f5ytx9YXeowSPF6voyrOSSO-wfYsVaAnf2yWQf3xmQt8xf_1s_27-hIJjllsMKQIoJawlG-vu1n8olSHogo2jwUqhsn5NhY8re"
+            }
+          ]
         },
         {
           "time": "11:45",
@@ -898,7 +930,13 @@ window.ICED26_DATA = {
           "authors": "Yngve Nordkvelle",
           "presenter": "",
           "abstract": "The philosopher Immanuel Kant was early to see the possible conflicts of “thinkers” and the “transmitters of knowledge” (Gottlieb & Keith, 1997). Max Weber’s reminder about research becoming a profession was a signal of the increasing dominance research would have over teaching. In Norway the two orientations towards teaching – and doing research as primary orientation has been formalized as two distinct career paths since the rapid expansion of HE institutions began in the 1960-ies. Academic developers are working in a field with little focus on historical and political contexts of their efforts. While pedagogical skills are deemed necessary for succeeding as a faculty member, skills and merits in doing research have overshadowed the pedagogical tasks of “transmitting knowledge”. Even if many proponents of the philosophy of higher education praise the unity of the two, there are a number of structural factors that maintain this imbalance. This paper describes how teaching has been assessed and used for the academic staff choosing to follow a career path as university teacher in Norwegian higher education.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Yngve_Nordkvelle_Bidrag ICED Salamanca.pptx",
+              "url": "ICEDX1:szz3QhvVaMIxscKavFAEHX37zak9VaSGLOeU-YtWgZPBUJRSSLfgWOvMGSKIajFsdgKB9upPybMhi5O2yGBYTlC5I2MZzSg9GVNeBui302jAMvjM5TlqFRp-c6RNDiw6Od88XENcZiuFNjlJJnZN5RA0"
+            }
+          ]
         },
         {
           "time": "12:00",
@@ -910,7 +948,7 @@ window.ICED26_DATA = {
           "slides": [
             {
               "label": "Sabrina_Poma_ICED 2026_Kings College London_Presentation.pptx",
-              "url": "ICEDX1:ZAkTStt6MM-_HdXlhfCFh4IYoh66Au-i-LxGLHL9jP8YQCj-joBBobwb6ewiqsJy4Vhy_5IolmiMw468ydrbltGtlxdqMBqeYMa1cDpASDQoHinG8Os8f-F8q1HFT0MANlTncByg0uyltKQIVm1hbitwJiZ040TdkZx0VmG4WcmZDibyCr3hF4CbtOrs9QlOYvfwIW2f8m-GpuQXQwfOgg"
+              "url": "ICEDX1:Nk_gvd7eKehBLD7fsvgbPpjsZo57XaOnywAaMryGzoDUL1icFkwnGPhNpdivn42lj8bUD3knGAopRXoOT5tM-XAYty2QMlF6m3RZpThg8AXJSl8gXLxM7A_9H8S6NTl-uQ1GYQCBX9Wro6186FCtU4Rq"
             }
           ]
         }
@@ -940,7 +978,13 @@ window.ICED26_DATA = {
           "authors": "Corinne Knowles",
           "presenter": "",
           "abstract": "In higher education, student agency is shaped by socio-political conditions and historical processes that define the role and purpose of the university in specific locations. This paper engages an African Feminist framework, in dialogue with decolonial theorists, to explore the politics and contestations around student agency as a pedagogical objective in South Africa. In a context marked by structural inequality, “under preparedness”, and high graduate unemployment, universities often reinforce individualistic and competitive behaviours that promise advantage in environments of scarce opportunities. But alternative values, that run counter to the neoliberal ethos, imagine collective forms of agency that inspire transformational and sustainable change for both students and institutions. Such a reorientation situates the purposes of teaching, learning, and academic development, within broader struggles for social justice and decolonisation. Conscientisation and communal orientation are explored as onto-epistemic tools for critical thinking that extend agency beyond the confines of individualised meritocracy. They will be explained by drawing on experiences in academic development, teaching practice, and student reflections. The paper theorises collective agency as a transformative resource for restoring meaning among students repeatedly disillusioned by the empty promises of neoliberal meritocracy and reductive notions of agency as mere resilience. It opens the door to institutional collaborations based on developing collective agency in teaching practices and curriculum design.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Corinne_Knowles_Corinne Knowles ICED Presentation.pptx",
+              "url": "ICEDX1:oX01LCIGhniZWqXn-tvexlgJHsfucUE3Vh7S35D_DDq3F4cD7WYWlV9wOop6tqy6kGrpZGoT_K9DCzj3elNAa0_D_LD1uwv1HRuKlQHcUK4NNuuLGnr51TNPVGKk3w1HtVICG0RKPfQjvrX8QaoiXx12"
+            }
+          ]
         },
         {
           "easychair_id": "311977",
@@ -967,7 +1011,13 @@ window.ICED26_DATA = {
           "authors": "Jun Iio, Shigenori Wakabayashi",
           "presenter": "Jun Iio",
           "abstract": "This paper reviews ongoing initiatives designed to promote international and intercultural communication education between Japanese institutions and partner schools overseas. It also presents a case study of classes at Japanese and Thai universities conducted in November 2025. Launched in 2020, the intercultural collaboration project has involved over 3,000 students thus far. Its purpose is not only to enhance students’ communication skills but also to foster friendships and mutual understanding within a global society. Student engagement and outcomes have been measured through various methods, including participant interviews, surveys, and text-mining analyses of activity logs collected via a custom e-portfolio system. The survey results showed a net promoter score above 40%, indicating strong enthusiasm among participating students. The case study outlined in this paper demonstrates how the program functions in practice. It also highlights student feedback aimed at further improving the project. Their suggestions and insights provide valuable guidance for instructors interested in implementing similar educational initiatives.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Jun_Iio_iiojun.pdf",
+              "url": "ICEDX1:hCTzqmfpn5Z4SkmmEgqJ14D8eBZ39-qOHmnExhWVP9fvo_7FhV3NW4ewbexgGj0KnNrFgmzykjDTE_MM2th-Kg8gUC_oXpHf6TBTjdMWV0RvuxMbSREIFEAVHk-4FrRMQkULOvEkUudAcEeE8wQaZze7"
+            }
+          ]
         }
       ],
       "easychair_session_id": "104809",
@@ -1007,7 +1057,7 @@ window.ICED26_DATA = {
           "slides": [
             {
               "label": "Bhawana_Shrestha_ICED 2026 Bhawana Shrestha From Anxiety to Agency.pdf",
-              "url": "ICEDX1:z5_lXZ38MbmlKBI-NA4NZSTFJ0UkjGKRyt31-MZrlUvJH1o_JXQC_1FyundC19A4UHdZhj-ciYw45544HrVIHHTES09CizJ1mu67c-7PzgQoQr3O8zoGDg_PtXxd1EaPydkoy2PmobCsivy4QSPybfTEfeWLscWajJiPEsuhlUiOSghabQp5M3duFx6Ctv3APv4wEzOvOeZiM_NjORac2g"
+              "url": "ICEDX1:A3yDp6Qqw83-zEAz5kaHNshtRf_bVIlNTM0-btkw-uYXh2dHNeXOkotfpwb6c1r3NDCHW58U90luJ5PDkM7NLR74zzieQ38iwiddhsnxCQPVG2Yh0OOfUmSGvVorw1an1H1rBzkwitCN0Y8H8YH26l9J"
             }
           ]
         },
@@ -1027,7 +1077,13 @@ window.ICED26_DATA = {
           "authors": "Airi Kawakami, Gabriel Hervas Nicolas, Kayoko Kurita",
           "presenter": "Airi Kawakami",
           "abstract": "This study examines the development and impact of the UTokyo Global Future Faculty Development Program (UTokyo Global FFDP), an English-medium faculty development initiative designed to prepare emerging educators for teaching in diverse international and multicultural contexts. As English-medium instruction (EMI) expands in Japan, there is increasing demand for FD programs that support both Japanese educators engaging in EMI and international participants. Building on prior research highlighting limitations in EMI-related FD (e.g., Brown, 2015; Roloff Rothman, 2020), UTokyo Global FFDP addresses the gap through active learning, peer feedback, and intercultural collaboration. Drawing on two years of post-program survey data (2022 and 2023), this study employs a mixed-methods analysis to explore participant experiences. It explores two research questions: (1) How do participants evaluate their learning and overall satisfaction with the program? and (2) How are their learning attitudes, engagement and sense of belonging reflected in the qualitative feedback? Quantitatively, satisfaction levels were consistently high across both years. Qualitatively, discourse analysis of open-ended responses revealed a shift toward more agentive and collaborative language in 2023, with participants more frequently using first-person singular or plural forms. These patterns suggest an emerging sense of learner agency and stronger community-building within the cohort. This shift may reflect program adjustments, including clearer emphasis on valuing diverse English varieties, revisions to learning activities, and a more stable classroom environment. While the program offers a promising model as an English-mediated FD program, the limited participation of Japanese EMI educators means it does not fully meet broader national FD needs.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Airi _Kawakami_ICED presentation_v6.pdf",
+              "url": "ICEDX1:hgHzb0qbQis9drMyWZKK2n67bqwVHLKMETFIu7YeRA0f5cSqEwq_8RgcjxFMyKg9LsBokqXQJGfGF3R_mtLhpt5mOCLanW76QWozwp0Bx9VC5_4BjRE1OZHg_xvQjSSsuixCYcPUzSBXK0ZajUdbIRuH"
+            }
+          ]
         },
         {
           "easychair_id": "311967",
@@ -1062,7 +1118,13 @@ window.ICED26_DATA = {
           "authors": "Abdulgni Muthannaha, Fredrik Olsson, Håkon Naasen Tandberg",
           "presenter": "Abdulgni Muthannaha, Fredrik Olsson",
           "abstract": "At the Research on Higher Education Conference in Gothenburg, Sweden, in 2025, we shared our self-reflections and analysis of relevant studies on the establishment of ‘trust’ among educational developers and university teachers from different disciplines participating in the program of Teaching and Learning in Higher Education (TLHE). In this conference, we aim to discuss how trust can be fostered and developed among the participants, as well as between educational developers and participants, and the possible factors for the lack of trust or distrust. Given this, our participation, founded on data collected through a questionnaire, provides insightful responses to these research inquiries: 1) What are the factors for the development of trust among participants and between participants and facilitators? 2) What are the possible factors for the lack of trust, or even distrust, among participants and between participants and facilitators?",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Fredrik_Olsson_Muthanna Olsson Tandberg_Factors for development of trust.pdf",
+              "url": "ICEDX1:Kgbgdqe2z2TDSoMLpe6avkciLyIxsgQWTL08HmatTMUSK9ngoJrbjUikBKnZimkSGmP9Sd82GOK3MNj7YrFnpSdgByBlb2a4pP8WrW4r-Oo4dshjdsNAAI1maJ-qTLQ_Wkfnw3fH7HSdBh4CFFsraaJe"
+            }
+          ]
         },
         {
           "time": "11:15",
@@ -1070,7 +1132,13 @@ window.ICED26_DATA = {
           "authors": "Adrian Lee, Kiruthika Ragupathi",
           "presenter": "Adrian Lee",
           "abstract": "This paper reframes academic development as a relational practice grounded in trust, collegiality, and care. Drawing on a redesigned foundational programme for early-career faculty, we present a trust framework built on credibility, identity, and value, and explore how these elements foster a compassionate, collegial community. Through thematic analysis of participant interviews and reflective dialogue, we show how modelling trust in academic development can counter deficit narratives, strengthen faculty identity, and build institutional belonging. This modelling helps faculty translate these values into their teaching. In doing so, academic development becomes a catalyst for cultural change—empowering faculty to resist instrumental discourses and reimagine higher education as a space of kindness, connection, and shared purpose. We argue that designing deliberately for trust enables academic developers to shape more inclusive and intellectually generative educational environments. We end by highlighting how this framework formed the foundation for the (re-)design of existing and new programmes.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Adrian_Lee_ICED 2026 Trust Framework presentation (final).pdf",
+              "url": "ICEDX1:Vn5xiij_evbpqVa8qCMKGb_1zRovqmX_d_rl7-U1AjOBDDZ5tAWw7_4LaeilY4CZvVUVXt4UJt37-4pun5xu_DU5IuD0FL32Wy7ExUErPqr_NXinLO6aeMOpQrAHZiDhiDMaXiFTwKV-2tI5NvpGnUhv"
+            }
+          ]
         },
         {
           "time": "11:30",
@@ -1129,7 +1197,7 @@ window.ICED26_DATA = {
           "slides": [
             {
               "label": "Thomas_Lodewyckx_ICED 2026 - om te delen.pptx",
-              "url": "ICEDX1:M205dVcwZToz8HPTNvHWgYTd8iYykbjJsV_cz-tclDllvYLzqpMkPu2tbCzhpWy3r0zfgliCUGoZ-PyQst55ZlBCN3aoULE0ojA9OS0EE4rkmB7AZMXoQjJM9cQq0lNGtf6bLaM4YlzTCsLOO0nFn5jFe9iNbqEEHpWqp2xhzd9uIX_cUu3kMQ90JDWMr2I0n2UtMjQwOxtY-9zuCzdZxA"
+              "url": "ICEDX1:hgM14I7owjc_3h-Gi6pTliK5xv1NlUU470z7WUifhT-nUmXsyZ5sTzBjyM3cXmWH45DRl-dPqgEMo81uQJhwqLg6G9qSEiLqu_w5NBaYNhLhFmNY0_-XvcEtFUoq2d0ha-C0Q7AqOMsWFeYP15hXCGVf"
             }
           ]
         },
@@ -1140,7 +1208,13 @@ window.ICED26_DATA = {
           "presenter": "Wei Yan",
           "abstract": "This paper presents a curriculum redesign project that reimagines an undergraduate Artificial Intelligence (AI) course at a Canadian university through the combined lenses of Critical Digital Pedagogy (CDP) and Students-as-Partners (SaP). As generative AI (GenAI) tools such as GPT variants, DeepSeek, and Grok 3 increasingly shape how students learn and produce knowledge, higher education faces an urgent need to develop ethically grounded, participatory approaches to AI education. Traditional AI courses remain technocentric, emphasizing algorithms and coding while overlooking the sociotechnical and political dimensions of AI systems. At the same time, AI literacy research highlights the importance of reflective, ethical, and critical competencies, yet these are rarely implemented in undergraduate curricula. Grounded in CDP, the redesigned course treats AI tools not as neutral technologies but as political and value-laden systems requiring critical interrogation. Students investigate model behaviour, bias, and data assumptions through hands-on experimentation, treating GenAI as both a tool and an object of inquiry. Using SaP as a methodological framework, students act as co-designers of ethical guidelines, learning activities, and case studies. This approach foregrounds agency, reciprocity, and shared responsibility in shaping the curriculum. Preliminary findings indicate that students develop heightened ethical awareness, deeper engagement, and an expanded understanding of AI as a sociotechnical system. The project demonstrates how combining CDP and SaP can meaningfully transform AI curriculum, empower learners as critical agents, and contribute to institutional conversations about responsible AI integration in higher education.",
           "keywords": "",
-          "online": true
+          "online": true,
+          "slides": [
+            {
+              "label": "Wei_Yan_2026 ICED presentation Yan.pdf",
+              "url": "ICEDX1:YBXRZ36lLFrn3TeLcRHHKURDjW0AyKwsWfDoVfHXLyj4x6ArW1g2G2u4ZSHoRPNz6Tg-R1gZrSa3lLs-R6j0vQ4nj1wUzEBvNqSWVHp3G0J7xXP0BugLQ4AyUiIKFYoS3EIep8HyV4PJ1TErghZsXhvx"
+            }
+          ]
         },
         {
           "time": "11:30",
@@ -1148,7 +1222,13 @@ window.ICED26_DATA = {
           "authors": "Victoria Stenbäck, Gunvor Torstensdotter, Henrik Lindqvist",
           "presenter": "Victoria Stenbäck, Gunvor Torstensdotter",
           "abstract": "Student teachers in Sweden often feel they lack tools in teacher education to address pupils’ challenging behaviours. To break negative behaviour cycles, specific and evaluable models are needed. Collaborative and Proactive Solutions (CPS), grounded in systems theory and democratic values, offers a structure for teachers and children to identify and express underlying reasons for problems and work collaboratively toward solutions. This project uses simulations as a pedagogical method to support student teachers’ professional development. Simulations provide a safe, structured environment to practise complex interpersonal and problem solving skills, make mistakes without real consequences, and receive targeted feedback. Furthermore, using simulations in higher education can expand university teachers’ repertoire of teaching and learning activities, bridging theory and classroom practice in higher education settings. This iterative practice deepens understanding of CPS while strengthening professional confidence, reflection, and adaptive communication, promoting agency in university teachers and student teachers alike. Student teachers engaged in two real time simulations with student avatars: one before learning CPS and one after a workshop with certified CPS experts, who also offer live supervision. Both simulations were video recorded and analysed for CPS fidelity. Semi structured interviews then explored experiences and perceived usability of CPS. The project presents results from the simulations and the interviews and discusses the role of a Simulation Teaching Lab in teacher education.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Victoria_Stenbäck_ICED_presentation_Stenbäck etal.pdf",
+              "url": "ICEDX1:bUwT56kRd2RqjgqiIDvV0zx94ffd0YnjqHv4gpPHgJxa6vqpuv_Ji-bp2_sntVDJ6hL-H-JJif4LyBxnBdU_VSIaqXW7F-Q3IqNZh4LGWWMQAuJOVH0RVI7xEq6rtsOyh1dtOUNdZLFvjP8t3aNKScGv"
+            }
+          ]
         },
         {
           "time": "11:45",
@@ -1312,7 +1392,13 @@ window.ICED26_DATA = {
           "authors": "Mirey Alfarah, Marie van der Kloet",
           "presenter": "Mirey Alfarah",
           "abstract": "This paper presents FPD-Include (Faculty Professional Development for Inclusion in Pharmacy Education), a European cooperation project that addresses inclusive teaching through faculty development. Although inclusion has been widely discussed in pharmacy education, educators often lack sustained, discipline-specific support to translate inclusive principles into everyday teaching practice. FPD-Include responds to this gap by supporting teaching reflection, faculty agency, and shared professional learning across four European universities.\n\nThe project integrates an international needs assessment with a faculty-focused Collaborative Online International Learning (COIL) course structured around five areas: collaboration in diverse student groups; intercultural competence and communication; inclusive assessment and feedback; inclusive teaching in STEM contexts; and building trust and repairing relationships in the classroom. The COIL engaged 48 educators from six institutions. Participants valued the opportunity to exchange experiences with peers in different countries and reported that recognising shared challenges strengthened their confidence and awareness, particularly in relation to inclusive teaching and supporting students with neurodivergence and disabilities. Educators also highlighted the importance of structured dialogue and masterclasses and noted the limitations of individual work given teaching workloads.\n\nThe paper argues that faculty development for inclusion can have a meaningful impact on educators’ awareness, language, and reflective practice, while also demonstrating that one-off interventions are insufficient for long-term change. The contribution offers transferable insights for academic developers designing inclusive faculty development programmes and points to the need for sustained structures that support implementation and retention of inclusive teaching practices.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Mirey_Alfarah_Needs_Assessment_ICED_26.pdf",
+              "url": "ICEDX1:7GY-lGYr7fVf9ArSMgSy8GlwDXUDfnCPkIzDY6-uKJAlp6m7q4sr2zASlgi80W3HXWPn1pR3KhwYj5wT2sC3wE-AgyX2s9qeobK6NBETDF03Ce20xH_ZCdXpnCjqAn5dFiY1vIp2hFNmUyvx0KRgYbQs"
+            }
+          ]
         },
         {
           "time": "11:30",
@@ -1324,7 +1410,7 @@ window.ICED26_DATA = {
           "slides": [
             {
               "label": "Krisztina_Lénárt_EDUflow program_ICED2026.pdf",
-              "url": "ICEDX1:kk_2_bpvJ1rN5KdGc4OcToMATlUv9fYi96FiJdiC1z3-c5vcH5_o2c_ojqz-jFFO7NbLzEwWDOGW-LMrQ9lCkUv85IbZ3RuhM4L__9rfntOk84YzlWRu8a1aaD2figv--WQiJTSbDeUG4gaEaKCKUQD2zMt-r5eo6BzF2L4uj4-mai8f96ZfVYpEuA3m4-sYwrCU8g6Ma4WJq2AFgmNNug"
+              "url": "ICEDX1:nmRmhJq3ywAjuByyTxxFsRsl0mos4tGHlVxX_BU8fCRdKa1QPcc5XgKsV-hgnhDlXcXST06h0MjQy-9FqBsa0Ey9akZymq9B5hmypoIOJUzcc0amnh3mishmHYNn3RojdxcOQ8hjERjDUogG-c9KA46n"
             }
           ]
         },
@@ -1346,7 +1432,7 @@ window.ICED26_DATA = {
           "slides": [
             {
               "label": "Consuelo_García_Presentation ICED 2026 - VIU.pdf",
-              "url": "ICEDX1:i8XLHmsbzISwYH92WpwpkqdmIUwDG3Au_lYJmCwQkx-Whq8DVZDZ4EgAeHAF415MmhiVNyK3F9Daj4JzepiKA_oEtBhXeidgRIPznDhTYak_x6M1D5SuCo94-pStqm1bFjJr831i4x-wp_izLiWM7DdiJYjzVaFIBS6YHY6CRiRKnO79ZQnltNCXjfM_hWE4cC1n6jdhaCM2RmkdZGZcsA"
+              "url": "ICEDX1:v7SpvayjGzxKlaZucP0_YDWE6d5zVPqXGxu2Dg1Z46_0nSKiAdspFaWxVPokhWTTVEF1Rve1wfg91_MSwQrUwbdA69RMw9EwHvK7-vpjmYAKC0-E9741ckR0omOxC3P4XfP0notWDSr4lgritWfRnD7m"
             }
           ]
         }
@@ -1382,7 +1468,7 @@ window.ICED26_DATA = {
           "slides": [
             {
               "label": "Miriam_Hansen_ICED26_Presentation_Hansen_et_al_ShapingADforAI.pdf",
-              "url": "ICEDX1:ofSS6bAnIOnSh4iZsEmbeVboC-oeRpl6FyG6cNbNdBPsfPBhl-YU4CXd0pJlN7zhfH9ybJlD8NBvnYYjyoZTHcDyYoDhxXV7QbxKkikIKMAaeqfUpym8oCSWywzcSZKd4S7kjbMEqUIo_W2mX2rQ64alJ9IWqH--aQc4q6NqpoI1AzKwHpDbN2FqaaL0-A2Tc5D-_xfUziJGlwRUVDvZVg"
+              "url": "ICEDX1:pNtv16jDqq-Tb7Q34TO5nm26YedD_q_66BwpaKFil0hiuBeI7m42ownZBuGnY4zyVt7p8E9odfcZETZ6Xg-SMquRt-bVxsYXZX0XPn2l64SqO8A1DK0zTrhkaeFp0HX7bu8G2sYpKXm5ZTxMLYYIBjGv"
             }
           ]
         },
@@ -1402,7 +1488,13 @@ window.ICED26_DATA = {
           "authors": "Izumi Sekizawa",
           "presenter": "",
           "abstract": "Somewhat paradoxically, Luciano Floridi, one of the most influential AI philosophers and policymakers, proposes not using the term \"intelligence\" to qualify AI: we do not fully understand what intelligence is, and AI does not replicate human intelligence itself but rather reproduces what human intelligence produces. In this sense, AI should be understood as agency. Only such reconsideration can preserve space for human autonomy and responsibility (Floridi 2023). This reframing has profound implications for higher education, where student agency is central to educational success (Klemenčič 2023). Faculty agency also plays a crucial role in enabling student agency, though it is sometimes conceptualized in narrowly instrumental terms (Priestley, Biesta & Robinson 2015). If AI now operates as a form of agency within educational spaces, how should we reconceptualize the agency of students and faculty? This paper examines this question by comparing AI policies across several countries, seeking to reimagine human agency in higher education for an age when multiple forms of agency coexist.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Izumi_SEKIZAWA_ICED26_SEKIZAWA_Izumi.pdf",
+              "url": "ICEDX1:xH4P-2ZbRcsuN7yqD88VnAkOrs_nDlYEjLGR5qrG-tac0SNDWs8dqoS4dXu2qy9r-DKU2icqbr4CDA-chtzJYWWDNAtoTC7i_y6ZiweZfBABBclNTPNZXmncqKx2-fa-Vlx3dD_hPYgbHyUJPu5kuRki"
+            }
+          ]
         },
         {
           "easychair_id": "311915",
@@ -1411,7 +1503,13 @@ window.ICED26_DATA = {
           "authors": "Anja Pawelleck, Svenja Kaduk",
           "presenter": "Anja Pawelleck",
           "abstract": "Responding to post-pandemic expectations for flexibility, digital transformation, and inclusivity, academic developers worldwide face the challenge of addressing emergent themes in their programs – such as digitalization, AI-supported teaching, diversity and inclusion, and relationship-rich education. In this paper, we present a practical approach for how educational developers in higher education can integrate cross-cutting themes – e.g., Future Skills, Digitalization and AI, DEI, and Relationship-Rich Education – sustainably and resource-efficiently into existing development programs. We illustrate this through the design rationale and implementation strategies of a 15-ECTS Certificate of Advanced Studies (CAS) in Higher Education. The CAS strengthens instructors’ agency in shaping knowledge, pedagogy, and professional practice. Structured as a two-year blended program, it combines core modules on course design and complex teaching settings with elective pathways, teaching portfolios, collegial consulting, expert/peer observation, and a capstone project. This scaffold enables participants to embed emerging priorities into their own teaching while balancing individualized learning pathways with collaborative learning opportunities. Personalized pathways and projects are complemented by peer exchange, collegial consultation, and joint reflection to foster a community of practice. A central design principle is the explicit enactment of emergent topics through a double-level approach: • The program design itself serves as a role model. • Participants deepen these themes in individual projects. The CAS offers a scalable model for future-ready, evidence-based academic development, combining flexibility for individual learning paths with the benefits of relationship-rich, collaborative learning in a digitally transformed higher education landscape.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Anja_Pawelleck_Future-Proofing Higher Education_Pawelleck_Kaduk.pdf",
+              "url": "ICEDX1:v_8Ob8DNeojKRiy8_-GKrfzVkt3exCCFDD2d5U8jeHWuvvvhXDNfUB3VIN5g8yzgsNlEOs5BwsTiO57GVZJHInB0YxkK2C7WSSKAtBzLMF8B2kDfG4MHeqoxEOXlupkkyfzu6OeyI6Cr3rcJm5lIjhIR"
+            }
+          ]
         },
         {
           "easychair_id": "311875",
@@ -1420,7 +1518,13 @@ window.ICED26_DATA = {
           "authors": "Alison Farrell, O'Sullivan Íde, Claire McAvinia",
           "presenter": "Alison Farrell",
           "abstract": "The mission of the Educational Developers in Ireland Network (EDIN), established over 20 years ago, is ‘to support, enhance and influence the field of academic development and practice’, through ‘creative, critical, collaborative and professional approaches in supporting teaching and learning’ (www.edin.ie). In 2024, EDIN leaders and members began an intentional reflection on the changing nature of the higher education landscape, and on (re)imagining the future of educational development. Initial discussions, sparked by ‘provocations’ including Bass (2020), Baume (2023) and McNaught (2020), surfaced key themes in our enactment of educational development (EDIN 2024) but also indicated disillusionment with the enterprise, its methods, effectiveness and impact. Further collaborative enquiry, which we report on here, asked what had changed in academic development since 2004, and what this could tell us about the future. To answer this question, we drew on three of Brookfield’s (1995, 2017) four lenses: individual reflection through concept mapping (n=16) (Heron et al., 2018); reflection with peers in two EDIN member focus groups (n=15); and reflection through engagement with the literature including Trowler’s work to scaffold the insights for future practice. Our findings, which benefit from well over 250 years of collective experience, are reflective of the concerns articulated in the initial provocations and more broadly in the field. Furthermore, they expand that thinking specifically suggesting insights associated with engaging process as a measure of success, exploiting the potential to influence policy, optimising collaboration, and re-visiting agency including what bolsters or undermines it.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Claire_McAvinia_OSullivanFarrellMcAviniaICED26.pdf",
+              "url": "ICEDX1:ec_3HkGirsNcO_0lmTdcouMDu2uUxEfP6SwNHrvDlMQqAUcLnJnY98RMiKUj4BJ13yGtPFp5fHw9ZXkpkFsQ4c0zVpNKSp7MRGv9g6IJtswMllJDZ1OIQy22X-E8eZD8XLALUyXbWhP_vX9mzr4vwLx2"
+            }
+          ]
         }
       ],
       "easychair_session_id": "104811",
@@ -1496,7 +1600,7 @@ window.ICED26_DATA = {
           "slides": [
             {
               "label": "Claudia_Bade_presentation_Claudia Bade_ ICED [Automatisch gespeichert].pdf",
-              "url": "ICEDX1:DgiOecTVtJ3Y6HM0CVruAY34ZqAKuMsEASa4SSJAf_L1mWQhxfcaaN2MFxQsPAKcmGF_rijK-Gdb1w3S81WQZlavqEDWQ-ZPAbsI6pFQu7cS7Q0E6oMN1z31dxY-6oDpf14-rHTMFhmq1nQepLp8i34pgZ2QWWKUvQlOb4mlDhyW8670OTC1kSK5XyEHkJXGhiqh7hSxJb0V8fSTbeatPQ"
+              "url": "ICEDX1:VbZFPTTnGTYPEh6DGgRAWsMaUIPv_CxQOqMUtlinSoM7-Kq9fYQNXC1hmvGPBZedFYqlPcSaE_IflwITJeAUlx7Ht724004dNoyg0bgdqxSn20N-ziX7LhqU9eDZfQUgyXhwxUCGlmMR2ljiVTZJ3vgE"
             }
           ]
         },
@@ -1506,7 +1610,13 @@ window.ICED26_DATA = {
           "authors": "Bopelo Boitshwarelo",
           "presenter": "",
           "abstract": "This paper explores academic staff perceptions of Teaching and Learning Units (TLUs) and their implications for enhancing academic development agency. Emphasising the importance of relational agency, it argues that perceptions shape relationship dynamics that enable or constrain academic development work. Drawing on a mixed-format survey conducted at an Australian university, complemented by data from collaborating institutions, the study investigated how staff understand, engage with, and experience TLUs. The findings indicate that while TLUs are broadly valued for professional learning and curriculum support, concerns persist around role clarity, access, and relevance. Staff favour practical, discipline-specific support and collaborative relationships. These findings suggest that strengthening relational agency requires clearer communication, embedded support, and context sensitive services, enabling TLUs to align more closely with academic realities and foster the trust, responsiveness, and innovation needed for effective teaching.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Bopelo_Boitshwarelo_ICED Presentation-Final_190626.pptx",
+              "url": "ICEDX1:st1N7nPXx-QbQo9PYtyY_yzz9F34ko2U22dHcHVLUJgWTYwvDiDnuwUhDJCXU-ClgKP_DI4WwD0jqWlkSHcUAnh-2u_IQ3sz1x5CU1V-SMGWMxafDHleJgEKYO7BDz56c37kv6fRCkrxEBb3lfMcQ3rt"
+            }
+          ]
         }
       ],
       "easychair_session_id": "104812",
@@ -1540,7 +1650,7 @@ window.ICED26_DATA = {
           "slides": [
             {
               "label": "Lauren_Barbeau_2026ICED_Global Perspectives on Peer Observation_ Practices, Tools, and Culture in Higher Education.pptx.pdf",
-              "url": "ICEDX1:JA401veAczHSjQsOjhNaOEhUQMwUljDb6BtK4q1jimYvMfdOIEhgJsyFQatTqipX9DiAL74ygQZVbZzvIOoyZadxUWLVu8gZlzvsRQbMnx8SQjXeaIIiE4ltmNY4e1IzvtAQesN6izUKFP5ciSyyryWVF8BKQlk3bTYqttggXaBI_Zaq7cvCOwqqDAhguotgzhXOTb25l1P9Jy663YdlGQ"
+              "url": "ICEDX1:MR1sw_Qq3Qd-pWAhly3qHhVLdW08DT2z7aPQo1Y2qZImtiGT4dyxtI5_a7WnX3RcCwjW_tVjp8JVNAqrfNg1NrR4jKgR8jlIbDNzV46MIbIphzPX_qstUNwmIOzD4bQK4z6amQyJmQ2nsxyqA8Ni1t0p"
             }
           ]
         }
@@ -1596,7 +1706,7 @@ window.ICED26_DATA = {
           "slides": [
             {
               "label": "Thomas_Tobin_20260624 ICED - How Educational Developers Can Use Community Power to Scale Universal Design Practices.pptx",
-              "url": "ICEDX1:w-TYyiRDont7vXPqGFcZk07biCLhjKacpM1OnnLEuSh00uLcZKRd_O1OlVgdolW8RfNs7G0HMidHTU3E0X_qlsNzB5XRAA0_-65v7lWeyZPncJnqxIro-bEqGKtnjh5VnAY764cmTyBP1_4x-O7tFCMuVOVa9_C_pSL9_kF1EV9veuCzmu_CFL-8nIdF30kZeBXceNO1mW_eLpaikNjksA"
+              "url": "ICEDX1:jT9lXWjdFoGr9YVXgg8X5u6RJU_wn-dPtLtn-w4Zhs8jrrdth3rkuyUwelfzJ21OqSuAXWNxMrpThIab06f4hpsma8o1zQoR1icfEHF0R-rr0A2O5xS-Q46HZGbxF9MrZLzwdRYjXoVESeSCrLOPyHLV"
             }
           ]
         }
@@ -1623,7 +1733,13 @@ window.ICED26_DATA = {
           "authors": "Diana Mireya Cuéllar Sánchez, Diana Marcela Cabrera Navarrete",
           "presenter": "Diana Mireya Cuéllar Sánchez",
           "abstract": "Generative Artificial Intelligence represents a significant opportunity to strengthen research processes in higher education, particularly within the field of academic development and evidence-based educational research. As a complementary resource, it can enhance efficiency, creativity, and innovation in the design and implementation of research related to teaching and learning. This workshop aims to support academic developers in the conscious and strategic use of generative AI tools to enhance key stages of educational research, including the formulation of research questions, methodological design, and the development of conceptual frameworks, particularly within the context of the Scholarship of Teaching and Learning (SoTL). Beyond technological capabilities, the workshop emphasizes the importance of maintaining ethical judgment, critical reflection, and pedagogical awareness as guiding principles. Participants will explore not only how to use AI tools, but also how to apply and translate these practices into academic development contexts, including faculty development, curriculum innovation, and research capacity building. Understanding the scope and limitations of these tools ensures a responsible and reflective application of AI in higher education, positioning academic developers as researchers, facilitators, and agents of institutional change, while maintaining the researcher as the central agent in knowledge generation.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Diana Mireya_Cuellar Sanchez_TALLER IA GENERATIVA PARA LA INVESTIGACIÓN_ICED26 (1).pptx",
+              "url": "ICEDX1:X2o3mduG_OkZxvwKsMM4Zg0yK7CI7VH9zx0ZcoL0D7aBGXGWEL_XHNmivHmShEojefW2HsUCAdr0KMZqkWpSWULCzLqiZtbB1cfKsWgSdhq_AuHxDzIqSw5CgZkAnxovVA2JUVQJyy5PlwReT4xR-610"
+            }
+          ]
         }
       ],
       "easychair_session_id": "105574"
@@ -1678,7 +1794,13 @@ window.ICED26_DATA = {
           "authors": "Malin Östman",
           "presenter": "",
           "abstract": "Student attendance—or absence—at non-mandatory course activities has become a challenge for many courses, particularly those based on active or collaborative learning. These sessions aim to provide more than repetition of lecture material; they are intended as spaces for deepening, reflection, and joint knowledge development. However, students often prioritize mandatory components, driven by grade-related motivation, making it difficult to maintain constructive alignment and pedagogical coherence.\n\nThis collaborative space will explore strategies to address low attendance without simply increasing compulsory elements. Building on a newly granted pedagogical project and drawing on experiences from CEMUS studentled courses at Uppsala University as well as previous faculty-wide discussions within TUR (the Council for Educational Development), the session will be a space for sharing perspectives and ideas on how to respond to the pedagogical challenge of failing attendance.\n\nParticipants will be invited to share perspectives, compare approaches, and co-create ideas for interventions. The session seeks to identify common challenges, exchange best practices, and explore opportunities for joint research or future collaborations.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Malin_Östman_Malin-Attendance Salamanca.pdf",
+              "url": "ICEDX1:0DRMQBnQsw5mPga4h3koHpMjDvZi_P_3tczz_2Z-R7_ocGRjdzDH4_dITOggB4cFEReIITyKkq3UUGcExyBvxegLzWY7BqtUdVrwxJ_crf3_QWpHH1e8J6_KUfgpoFFbe1MXMNIp8TmmLgh4hCCJR1QD"
+            }
+          ]
         }
       ],
       "easychair_session_id": "105570"
@@ -1703,7 +1825,13 @@ window.ICED26_DATA = {
           "authors": "Anita Iversen, Kristine Ludvigsen, Iris Borch, Marko Lukic, Ragnhild Sandvoll, Katarina Winka",
           "presenter": "Anita Iversen",
           "abstract": "In many higher education institutions, the teaching portfolio serves as a central tool for documenting pedagogical competences in promotion and recruitment processes. Traditionally, portfolios combine personal reflection, theoretical grounding, and practical examples of teaching. Beyond documenting teachers’ skills, teaching portfolios are intended to foster ongoing professional growth and the development of teaching practice. However, the emergence of large language models has made it remarkably easy to use AI-technology to generate teaching philosophies and create portfolios that appear theoretically robust, critically reflective, and richly illustrated with examples. As a result, generative AI is starting to challenge established approaches to documenting and assessing teaching competences. These changes raise critical questions about authenticity, credibility, and fairness in using pedagogical portfolios as documentation of pedagogical competence. If AI convincingly creates such documentation, how should institutions recalibrate promotion and reward systems to protect integrity and support ongoing professional development?\n\nThis interactive workshop invites participants to explore these challenges through demonstrations of AI-generated portfolio texts, guided group reflections, and collaborative scenario-building exercises. Together, we will examine the balance between the “performative self” and the “authentic self” in documentation practices. Participants will also consider alternative frameworks for validating and supporting pedagogical development in an AI-rich environment. By engaging critically with AI’s disruptive potential, we will co-create strategies to safeguard academic integrity and agency while reimagining recognition systems in higher education.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Anita_Iversen_TEMPLATE_ICED_WORKSHOP_Iversen Anita et.al.pdf",
+              "url": "ICEDX1:oOimRtwjhfIvwmqKTASuBdR7xcFUOo0suH1OsW8lKNlEBCKzLdWC6Rj-5MC2WuGp6LtySJlpzUilAxpR_VGMP61zUtineywhRgJmqEJ6ssP2PwvGE8JNuPZRmynQEqSqTHlwyWbF2V4APvcZWGqnjMsD"
+            }
+          ]
         }
       ],
       "easychair_session_id": "105575"
@@ -1728,7 +1856,17 @@ window.ICED26_DATA = {
           "authors": "Lydia Watson",
           "presenter": "",
           "abstract": "Three years after Generative AI has made its way into our classrooms, post-secondary faculty continue to be confronted by the task of setting their own classroom guidelines around the use of the tools amidst a changing educational landscape. As a result, educational developers face the growing challenge of supporting faculty across the spectrum, from strong adopters of Generative AI to active resisters, while creating a safe space for learning together. This workshop-in-a-box responds to that challenge by introducing critical generative AI literacy, an approach that promotes faculty to ask deeper questions: when, where, and why should we use gen AI, and when should we not, if at all. Drawing on Maha Bali’s framework (2023) and through interactive activities, participants will experience how Gen AI predicts rather than understands, examine bias and sycophancy, and apply an appraisal tool to evaluate ethical implications of Gen AI usage. The workshop equips educators to adapt, and remix provided materials shared through a Creative Commons license and teach micro-lessons, engage with curated resources, and connect with one another for ongoing support. Participants will leave with practical strategies and a framework for guiding students toward responsible, reflective engagement with Gen AI, while keeping the human connection at the heart of learning experiences.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Lydia_Watson_Creating Safe Spaces for Critical Generative AI Literacy Supporting Faculty Across the Adoption–Resistance Spectrum.pptx",
+              "url": "ICEDX1:qb4VpPsd4X-b_DhVcQNxJ8xSNXW9Tw_L6Ha2fpo1iQ_aqbhKBhZ5TQ4Sbnkd1mxk_Q3lyIBL97vEtyFsdqgjFQ2fJ860tSWKe2dM3xvAjdTkYwaEd6Vd3hYTM41L8Yuirigi10KZHVkzj0eKJ4d349II"
+            },
+            {
+              "label": "Lydia_Watson_Teaching Critical Generative AI Literacy to Students Facilitation Guide ICED 2026.docx",
+              "url": "ICEDX1:X0wbR2Gs0WsS8LcoizkCHFgMVS9b-WEvzjEwKx9qD-tgVc1muE5-t5ZBmqg856mLku6I-omf2XTsmQnYg-UHvcXpFm9e5kzUzQUECuEn1PPo2Tzy4k9FcLyOZlGh8SZxG5gPPEZjfeHwb8G2-jl27Oqe"
+            }
+          ]
         }
       ],
       "easychair_session_id": "105576"
@@ -1757,11 +1895,11 @@ window.ICED26_DATA = {
           "slides": [
             {
               "label": "Nuria _Lopez_ICED26 - V. Christie and N. Lopez (1).pdf",
-              "url": "ICEDX1:jR9qo003CYny-zkO4R9aopgEVO3NRw_pfmkvlLq5pQQ1KmYwc84d9bsr-sUPzCU7_bGHFdcS1V_HGDIJmSc_0DAhnbI-Au-GR2XCoosXj1sr01Vaee98qB3Ebp4GcWhqwzdRxbAWxEKjYAjB-Zvr6VchoJtSgI25zh1yw_UxEXiF5dpu2t7lCcwoj8bUqIqQ5r7SHwuWg51thjDAA4tuVg"
+              "url": "ICEDX1:8OY2GoZlYY4OXenOjVgVZXNRi3UVB-gLc4xvZK9-Mbv9pQIi0-1J0NZLWPDKHhcEOky52IoAVveYAqz6PGW1-0EWyKVQ3ql_JyfMlrNsAnvsOt6EEJvlxjGJLqXM3MrQG2D2WB4mA3hF1U-3AuvLrph-"
             },
             {
               "label": "Nuria _Lopez_Scenario.pdf",
-              "url": "ICEDX1:csYrMqS6a6-dJnygfd_E_0sKMEPl9J834hq29yUjaZOIOo4_1swTj-0YkyBGg7onek7yswE4kfOhsL92ky8Qsxp2FcIktCVaC-yhVncT4uNvCgcncPi-Gi8xCJBYCKH_3UNxpXyUKc8FlGzvNq_AbrRBwHfp35VJocLZkxkB8mvRkcVKt18tiL93cWdepLxqwg6ALxPK3f_ugDQPymuZFw"
+              "url": "ICEDX1:etrKFkWUmYcRoXys9JW7GTwdKhliSmpRfe0j_9ewFF9ffxZHVL56fsUTN_eHFS2uQGe-qIqMbrfYm7BuuESf4MeovIbBAoH3c9_e2rlLWZ1kgXrfNCUIBA2OjKeDF8jX4ChOxzqxN-jbBMMvXTdjrq95"
             }
           ]
         }
@@ -1792,7 +1930,7 @@ window.ICED26_DATA = {
           "slides": [
             {
               "label": "Christina_Magkoufopoulou_Time and Effort on Task Toolkit_ICED26.pptx",
-              "url": "ICEDX1:9xqk66I4E1P2B7jHzQL7m1NyVHcpJ7R3u6-PDLQUzcEQnA3_huX1S93wSInIklHIrjFdlYBSd9Vgi7DEOXrm4APU_e0hfMLlLVv-IRyOwWsDrrAW7FG-y6kyfJQoqGezv5GmyQbnLhFKrH7gslhYXHtrGLELzSCUNjOPKj3Y0S3C2P5FiLfZ6JQBSyMT0uy0ENdUojh5M_kbZ39XkKJNWA"
+              "url": "ICEDX1:8pTUzu3v2mjZT1gYjKVr1IeSlEbJZs5sNwVSTjZWA0VMVNRs0K2mEtAJCBO9dgSbE3Nzr_ZJR2ixNQdO1_v-S8nas6kNecxulsy3GwZkQ693oXGRjBoHiOy_gTcPk7H1VQY5o1RibzgkqnsbQHHEqLyN"
             }
           ]
         }
@@ -1819,7 +1957,21 @@ window.ICED26_DATA = {
           "authors": "Laura Carruth, Rebecca Watts Hull, Kate Williams",
           "presenter": "Kate Williams",
           "abstract": "High-impact, strategic relationships between and among campus stakeholders are often key to institutional change. When coupled with strategic alignment to institutional priorities, these relationships super-charge change efforts. At this interactive workshop, facilitators will present a case study of their institution’s teaching-oriented strategic change efforts, which have launched transformative classroom learning experiences and advanced education for sustainable development. These parallel initiatives provided multiple rounds of faculty development aligned with institutional priorities and resulted in collaboration across units, continuous improvement in organizational learning, and resiliency in navigating systemic disruptions. This work included multiple rounds of faculty mini-grants for course design/redesign, the development of a curriculum to help faculty design and evaluate teaching projects, and a series of campus-wide teaching events that showcased the projects. Altogether, the courses redesigned through this initiative have reached virtually every undergraduate student via integration with general education. Now four years into the initiatives, the work has captured the interest of institutional leaders and has produced results that point to successful change actions and opportunities for improvement. At this workshop, participants will align their work with one or more of their institution’s strategic priorities and will identify new and existing high-impact relationships that could be cultivated to contribute to the success of their goals.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Kate_Williams_FINAL_ICED_Alignment_High-ImpactRelationships_handout.pdf",
+              "url": "ICEDX1:oPmBtmqhHIeIbgYDDN9dxjkrl_wMQK6SRwFcmqIpdwUqufKpVsMqXBgSmGianvwvH_5GJgUtXZG8G5_2JbZMgjYvXryz6LCblv1F7ZmNKAjq6_nRRnqQ_hAYKl9vnnEOecybvCQFF29v7YcpQ8mDFMiq"
+            },
+            {
+              "label": "Kate_Williams_ICED_2026_paper_87.pdf",
+              "url": "ICEDX1:Eqb7i64TFL_h-IayrKDpXjdxc5hvTDTOGMmBmAwKeGrRxsg0nmbXTA1Z44pFh7waZpz7lq_EId0fmdHdOFlg4sESbBclqLc1mhhoahPoNkFVvLsvEQuCr3Pr-s9w_vQdrkb1iW8WTxTMmXs1P9Whnn5g"
+            },
+            {
+              "label": "Kate_Williams_ICED26_Workshop 87_Promoting Institutional Strategy_6.3.26.pptx",
+              "url": "ICEDX1:8ZZC4AXGg8jvba5FGH0j3Snba8nwBQZ84C71Sa8MD0ZANTp2NU25bZ0wLvDnPwNkUDRf5okjXS2T5JuMpiq3cJQavL_i0JeOqlcFWdPY9-r7jVxBihuakF12jixQNiNz7EWHLlcWmqgiRw0Dfp2ybeVD"
+            }
+          ]
         }
       ],
       "easychair_session_id": "105579"
@@ -2063,7 +2215,13 @@ window.ICED26_DATA = {
           "authors": "Stefan Walter, Pia Scherrer, Karin Brown, Samira El Boudamoussi, Florian Rittiner",
           "presenter": "Pia Scherrer",
           "abstract": "Universities must prepare students for complex futures. This poster presents a framework for how both individual agency - planning, forethinking, self-regulation, and self- reflection - as well as collective agency - sharing best practice, community building, and peer exchange - can become intended outcomes of professional development in teaching. We discuss how agency can inspire teaching and learning across the institution where teaching is valued as a professional practice and a shared responsibility. Ultimately, this case study provides an impulse for institutions seeking to professionalize teaching for increasingly complex educational contexts.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Stefan_Walter _Walter_etal_ICED26Poster.pdf",
+              "url": "ICEDX1:jz28zQinWtwFDsuV-yd2CUm6WqG0Ccd43bjUvYj8oLnh0sm2ClMJySTB7uMBK50mbxMc413G33w5a7UX2POjhn4pou7a9rsadnsjmmTM6MS2uplCI-6dzE2g4i4K_BLyggXuki_dqJcsZDObXwZsqroI"
+            }
+          ]
         },
         {
           "easychair_id": "311671",
@@ -2126,7 +2284,13 @@ window.ICED26_DATA = {
           "authors": "Mara Zutterman, Elke Van Ael, Valérie Van Hees",
           "presenter": "Mara Zutterman",
           "abstract": "Higher education institutions often set ambitious strategic goals, such as \"inclusive education,\" but how do these translate into concrete, actionable steps? At KU Leuven, we operationalized our ambition for inclusive education via three small-scale pilot projects. These were evaluated, refined, and are currently being consolidated into a comprehensive, faculty-tailored support offer. Along the way, several strategic design choices were made and valuable lessons have been learned.\n\nThis workshop targets educational developers, institutional leaders and teaching staff aiming to embed strategic themes (such as inclusion) at their institutions. Step by step, participants will build their own blueprint for implementation, according to our framework, which incorporates different change management models. The session combines inspiration with facilitated exercises and peer exchange. Participants will leave with a customized actionable blueprint to embed a strategic theme of their choosing, and clear strategies to apply within their own contexts.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Elke_Van Ael_Create your own blueprint for institutional change_shared version_ICED26_24062026.pptx",
+              "url": "ICEDX1:e5MvBn1H9rPpQ7h6eKEOQpti30VEcY_F3NXFh4XqB8S2DsR8rR4mddGZfEULu3eZ5_PdcdJCJudpP3LeKSPpzEwTHkcmiWutIh0-X779O0ohzKLuENdnTMqGeJOAWmlvBOrkz8sGyxR3YJgu8Ajcjikw"
+            }
+          ]
         }
       ],
       "easychair_session_id": "105589"
@@ -2154,7 +2318,7 @@ window.ICED26_DATA = {
           "slides": [
             {
               "label": "Catherine_Bovill_SLIDES Bovill Maartensson ICED ws Salamanca 2026 draft 29 May.pptx",
-              "url": "ICEDX1:RHQphXom6Em3KUBDoYW7xQ-I8e_ho_Oaev1awjIKCh8tWHGk7xy2wsIkPNATgvuxXHjsKiEnPN5lWztzR6MIezLhcX50H651UYaO-V-utyta6_iF3nhrrMCDAC2YJHfX0qPQaGkvLhfFdJnxgYZFsPfi1uuvlocE_QAsWhADwCW084aKZyu1ranjo7OUT8ujrI2V1ADRzaSTk14Q4m6hZQ"
+              "url": "ICEDX1:b3pCPvZL-645Ey6krHDKw2ATjFl1rssCszrObwOkPesSW-P6lHKWy7gglq3WXd0gYLkSLGLD6zGaxasI7qAFQIpCOvVRIJRlpKCriCcDrHIoGY50vBz0d1Tud8r5x3EgJ5_BanSP01HO0cJpcTWzkR2F"
             }
           ]
         }
@@ -2243,7 +2407,7 @@ window.ICED26_DATA = {
           "slides": [
             {
               "label": "Nanda_Bognar Dimitrov_Interprofessional Experiential Learning_ICED_Nanda Bognar Dimitrov_2026.pdf",
-              "url": "ICEDX1:rJ294GVjQR7KdrRLGCqj_WtICeS_QVooXtM0vdwySxDhqaeAu0Iz1sJKLJYRkboUWKhZwdaFTSMO3rWOAHpJQCno6rA_j_REO2MbBa6UDVYfOMyn1GCCcz1l9o4LFVcSa4q8WpkOwZpiyLN3NotQoeJFIh6M5AL1ttYDcooQWyjl-nPiip-j-QN-bpBOHMhdoWdD7kVNo3r7dx759DEtRw"
+              "url": "ICEDX1:MYcKps2NJYS-1yCbrY0_JerIWD0hvjQztF8SfY4UtEtEex0JdS81_AhJbYCVjV0sLnVK427JgQ_UsnIwn0n8hA9NO1ni2_53flhvUBomPE-rpXJhDP06rnapRjMm51GrSICuKgSpACNiJEX69pMpQ2-M"
             }
           ]
         }
@@ -2295,7 +2459,13 @@ window.ICED26_DATA = {
           "authors": "Michele Bridge, Claudine Warburton",
           "presenter": "Claudine Warburton",
           "abstract": "This workshop explores the transformative potential of Universal Design for Learning (UDL) in post-secondary education using CAST's UDL Guidelines 3.0 (2024). The workshop is relevant to educators and leaders looking to promote accessibility to learning. UDL is an educational framework that removes barriers to support student success and increases accessibility to learning for all. By promoting autonomy and choice in how students access and express their knowledge, UDL fosters motivation, engagement, and the development of expert learners who can advocate for their own needs. We explore how to advance UDL practices to create inclusive learning environments in collaboration with Accessibility Services and other departments. This 90-minute session will introduce participants to UDL principles, explore barriers to adopting UDL, and highlight how we can overcome barriers and promote UDL across the institute. We will engage attendees in case study analysis to reflect on their own teaching and learning practices, and find ways to promote UDL at the classroom and institutional level. The workshop aligns with ICED26’s sub theme 3, focusing on agency, academic development, and empowering students as active participants in their education.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Claudine_Warburton_ICED_UDL_2026.pdf",
+              "url": "ICEDX1:rt4DoStizHxT0H7P7WQf0cShp4fmh-xOynaHmYCvEcMjV2klpkM4vLc4LG5G0YwkoApxaIN9HYEY9OnxT3QuJT3QfPWYVZU27sVygUg8xWEYd_HiO_7HHevNVGPYXM_ROs0cHf06cIqEBMnwZt96xusL"
+            }
+          ]
         }
       ],
       "easychair_session_id": "105593"
@@ -2320,7 +2490,13 @@ window.ICED26_DATA = {
           "authors": "Erika Myllyniemi, Jenni Koponen, Kirsti Keltikangas",
           "presenter": "Erika Myllyniemi",
           "abstract": "The target of the workshop is to build shared understanding of effective approaches and structures that universities have for educators to support peer learning and peer support. University teachers consider peer support and collegiality as important aspects of developing pedagogical expertise and well-being but often face barriers such as time constraints and a lack of systematic structures for pedagogical dialogue with significant communities. The participants of the workshop will have an opportunity to engage in a pedagogical dialogue with peers and share best practices and co-develop the topic of the workshop. The outcomes of the workshop will provide insights for higher education institutions in their development of peer learning culture and practices and overall well-being of the pedagogical community.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Erika _Myllyniemi_Pedagogical networks_ICED26 workshop.pdf",
+              "url": "ICEDX1:u7KzdraB4SgDPuV_1R0kpo_XcK6AH97xCgS_q0CJKhBTOuYXdKz7JXcgTMuGI1p0QuNDczQQfatPf-gqlu2wMSCfD-s4OloxWXu_CxVvY_Z8bPk5se--aFE8d0J-SEPNyHz5TlBkKHJs1q-G1Dcl2ICi"
+            }
+          ]
         }
       ],
       "easychair_session_id": "105594"
@@ -2349,7 +2525,7 @@ window.ICED26_DATA = {
           "slides": [
             {
               "label": "Dorothy_Duchatelet_OU_UM_ICED conference_June 2026_DD.pptx",
-              "url": "ICEDX1:xYLZLWHoKJ_BjSYP2TzcMGEIMDLi5O6OMfUGFiqo6kqiTtpOQE3J0WulIH7OlnIikFfGpOu7Llzr1na9zh195mvQFhVQtfddu7hbURwLidCxa3d-q0SLpliGy4Tex388xb-kwJkE13nMvh8nnh-1t6u_QrShPT372hdjNPstPU4xT5txt1F3aLSrBYx1P8u20031-WUVhRE3tQqAwmQSig"
+              "url": "ICEDX1:Enry4dTVi-e1XYJFfNkzb7N4pqOU1Z4NJQorRbRf_X5_kUvI65O9VEg8kMYi5GvkAu0bUZjvdO-NAzS3xdQQsR0_IIvDNr8x8EO78Gzq41LluGOt2eA0H6dD73cjZgYlB-Gu-ZrNstcM3gehSxBCKK1w"
             }
           ]
         }
@@ -2380,7 +2556,7 @@ window.ICED26_DATA = {
           "slides": [
             {
               "label": "Robert_Eaton_ICED 2026_Critical Thinking Workshop.pptx",
-              "url": "ICEDX1:D1FxGw4QosnlKdN5WLA5XMvSUU7r9MmTRflKnLvpO8L7Amq1l-Bt27A0sH84ul93JClHvtL44nGJpVnQtZRsfTUe1-Re_jG41ZTMzS9wuoI-6OCWLUDBij60ctnlJrYPrqqFdcraFGIKcKhyoeyGojD_UJaBlivv5ubKunAFP5yeYIIophEquUfJd1fl5Gpf3k_SIg6Z8wWiyHi8opNRFg"
+              "url": "ICEDX1:HMvBbq7QswoaV10wAXeq6XurRqPLD7Ueto1jMD59J7TXOnVPShQps_q3Mv-Lj9L0ZUPEyugn2qxWE5-xViKDZSAMjhe9YEldxPOsPcXff2IUpOfXoZvNUoy1OJLjjxjHRVpg9egvAvRbrrMbIVNx9ACq"
             }
           ]
         }
@@ -2428,7 +2604,7 @@ window.ICED26_DATA = {
           "slides": [
             {
               "label": "Nurun _Nahar _ICED_2026_Presentation. 24.06 Nahar, Nykia and Power.pptx",
-              "url": "ICEDX1:SwBaJpwZOYxtKWxRwpX3ScAoqlBzlI0SG0nFMHownQ6jZ7zzcQqRiLbW28SOYgotQrv0UG2LnQZgVhHqDLZQEZu-meTpXXtLQArE09-cc0j3BCPdLVlmKWtxzsndb_PWR8dOYkd-t1FLXO2c9A_oQ5zKxwT4cA24Qe9MH94PuAAzX48TeRLFqzAOBEKUJgovVnk60op-yZNEI5YB6UXK8Q"
+              "url": "ICEDX1:Ac3Wi4K7hOgAWMQBhVldUjeCFVNR9ryzNwiSl30v2AV8GHtTC4WfDGH0U5wcDBc9EAj4txDIDFutrqE6DjPTPXvhTPBxHeGCOH2H4-RabmETYvqOpNWx_yBDsVvot3VkBGE7Twx2hMWWPU72j8p5v4e1"
             }
           ]
         },
@@ -2470,7 +2646,13 @@ window.ICED26_DATA = {
           "authors": "Wâtte Zijlstra, Janine Haenen, Max Kusters",
           "presenter": "Wâtte Zijlstra",
           "abstract": "Rapid technological, social, and economic changes demand higher education to be agile and innovative. This requires educators to collaborate beyond classroom and program boundaries, engaging at faculty and institutional levels to drive sustainable educational change. However, many innovations fail to endure, highlighting the need to strengthen educators’ professional agency—their capacity to act intentionally and reflectively within innovation contexts. Building on research into student and teacher agency, we developed the Professional Agency in Educational Innovation (PAEI) model, which links agency to personal, organizational, and learning resources and manifests in agentic behaviors such as leading or supporting roles in change processes. At ICED 2026, we aim to explore this model through a collaborative session with educators, researchers, and trainers in the field of teaching & learning. The session will identify key resources for sustainable change, gather feedback on the PAEI model, and foster knowledge exchange to potentially establish a network focused on stimulating professional agency in educational innovation.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Wâtte_Zijlstra_ICED Profesional Agency 24-06-2027.pptx",
+              "url": "ICEDX1:4EZKCWWzCy_F06p-f6K1ULyZccnx1rQMVfX22pDH-slIhlkkMnAaGRzL6MWz5DyVHW2RsVOun3My24vFE34P1wL5e9WB7rY6yP_j5ZQgefkiE73wPShJZxp5FSbNkuttt5-2rPpOExpup_H5WzkwvNDF"
+            }
+          ]
         }
       ],
       "easychair_session_id": "105586"
@@ -2495,7 +2677,17 @@ window.ICED26_DATA = {
           "authors": "Kerry Dobbins, Helen King",
           "presenter": "Kerry Dobbins",
           "abstract": "How do academic developers construct, share, and apply knowledge in interdisciplinary and collaborative contexts? What are the features that characterise academic developers’ expertise? What are the connections between these features and the impacts of our activities? To explore these questions, we have been conducting a participatory research project with academic developers in the UK with two aims: 1) to surface the values, traits and aptitudes that underpin how academic developers carry out their roles; 2) to map the characteristics of our expertise to the impacts of our activities through a Theory of Change framework. Our ultimate objective is the creation of a framework that will support the academic development field in articulating what we do, what we impact upon and how we do that.\n\nAs a participatory research project, collaboration with the community has been at the heart of our study design and process. In this collaborative space session, we will share the data gathered from our research and the framework that we have begun to develop from this data. Participants will be invited to share insights on this data, particularly exploring any similarities, differences, gaps, etc., across the various international contexts of those attending. These insights will then inform discussions on the initial Theory of Change framework, which will be further developed and refined through collaborative activity within the session. As an ongoing project, we hope to explore potential partnerships to expand the study and connect with work others are pursuing in similar areas.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Helen_King_ICED_Ed Devs Expertise CS.pptx",
+              "url": "ICEDX1:ISTMlsuSsQplckrMPOZqa2Ref_mmXZ-Mdl-3ZXnQBziHueQ-WonaqjFqBDBgodTpcQByW-wQbi0Gup9Lpxp9bog3nzow0YIjQAAa7qoVZbQfq2Gj9c73iZlatXuOCgoNmZnoDIfyI6uLukCNOvVOFLwH"
+            },
+            {
+              "label": "Kerry_Dobbins_Ed Devs Expertise_Kerry Dobbins and Helen King.pptx",
+              "url": "ICEDX1:aRJHAfGUMq-ktLAOMI17oN2VbgKObxzfGRlQVmWbJeu1PwY5CDGeR02k3JDxHsiVzKn92rq5TCArnx30E1WiyAgYaxNHtK5Gb9igKp2m_EcedJeikEeWtsVCGHmUA348T0vBmv_HxRXDoJll5VlpCF5e"
+            }
+          ]
         }
       ],
       "easychair_session_id": "105599"
@@ -2524,7 +2716,7 @@ window.ICED26_DATA = {
           "slides": [
             {
               "label": "Lourdes_Orejana Martín_Orejana_ICED_26.pdf",
-              "url": "ICEDX1:op53zroG_ucrfJgifmKXxSGLykqkH1inQfLRj6ht7VYyOIlXm6BAYlqILLIhckEduo7XuMSJ4r0Tztv6WarsxNSUJZc_mPWgDmiOBjCdfyay5yFWUn-dzuBTuzRf58GH3qnfre8qnvezpubpm2D3pkLnnUrot2RDP843K1N3Nc0TxnqY5V33hDjn2Pzd7NDN3wmFsKAVt_Apo55kMiZ2iw"
+              "url": "ICEDX1:-69khdRXhB-YtdeS2cqVFtd2mvqbCRZHkIjQtrJn1LWwEATjPMiwSXqhM-Svj2Ef3QqcD1yPhaHpk-6BFHyLW9UxUQZ5B9lfhdt5nanMLYFZXHULpm8LkUbRAq7f_LR5vOm1X3fq4SSLFQX5dYJ_uSq0"
             }
           ]
         }
@@ -2551,7 +2743,13 @@ window.ICED26_DATA = {
           "authors": "Kimberley Grant, Michelle Yeo, Odd Rune Stalheim",
           "presenter": "Kimberley Grant",
           "abstract": "The collaborators, who work in different institutional and national contexts, come to the topic of agency in academic development (AD) with our lived experiences working in and across teacher education and SoTL as well as formal and informal AD roles. Drawing on frameworks that conceptualize professional identities and relations as well as Wittgenstein’s concept of family resemblances, we have begun to explore the connections and distinctions among these fields. Our preliminary explorations and curiosities have highlighted the value of expanding these conversations to include additional voices and experiences. Through sharing personal narratives and facilitated small-group discussions using a World Café format, participants will explore (1) similarities and tensions among these fields, (2) possible reasons for their artificial siloing, and (3) potential synergies and collaborative opportunities. This session invites participants from diverse roles and backgrounds—including those with experience in K-12 or teacher education, SoTL practitioners, and academic developers from other disciplinary pathways—to contribute multiple perspectives to the conversation.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Kim _Grant_Painting a Family Portrait - Academic development, Teacher education, and SoTL.pptx",
+              "url": "ICEDX1:zRz3QeSSD9cXBwtJ7Gk4sOY_dPZ7EmmzRgCs1mmIFQFSBIl-FtzwO0m4cfGeYDNeqPc7Yuuz-iweLRTyWxGbOV8WKP8lX0-P2aWgJHXSidMiM7EHn1RYBFLliZ3lmUyRfaax3sK_67y3u7rDN6XXHrCn"
+            }
+          ]
         }
       ],
       "easychair_session_id": "105569"
@@ -2630,7 +2828,7 @@ window.ICED26_DATA = {
           "slides": [
             {
               "label": "Brennen_Siemens_TEMPLATE_ICED.pptx",
-              "url": "ICEDX1:OLN3Bw-jnY4vZvKxGrgS-Jl2J-Qdd7VB1bExg5Pi6L2HVyVTtK12Stwm9rdLp7u8mL2dWi9E8dhammXAczrDbJtSfLrY8POMMGQydPfo0Ucyu1RIRqQfGMA6Uq37oFgOXfJb1VD4oR5w9OUmFIija9Qy8LrAkFIMMOdc4-nkn08rkZ9aUcibYcHYq0pzJpvf8aO3r0aDvuzaDARbOau0ug"
+              "url": "ICEDX1:icXr19vQFPmhDpwNn-rjPZ7um5oEwaxyEZCE8C2iqJH4jXAMBpVlvWYQx9k5Yp5rxLZYAyQIaIrMhvy-M37xx8LQbdnajKa-QCXphiVffLXU4ZBoT5JRt9_cnJyp5lQ9pIG3wbF1iX2SVBMO_q9N5V61"
             }
           ]
         }
@@ -2686,7 +2884,7 @@ window.ICED26_DATA = {
           "slides": [
             {
               "label": "Erica_Shea_ICED26_Exam Autopsy.pptx",
-              "url": "ICEDX1:MX-gh5VT7TihajYkUT1-hwVflxVXUEiWuwFh6J7oBS0xbWKheaNbJxHxRvfP228gPXN-PmlYg5DT5V3kjujEZ13zqAxVAvoOmUcUbaqYAV6hva08jZdgQxx-oSpy_zXdbtMWZlWKDDcQbfE2MZZcLFa1xLV4w6fPD69OgjZqW8s5C20LO25rJlopGsHhquJZqFS5CancwU5LlSTLvSPmXg"
+              "url": "ICEDX1:dBo9IkbzGylvmcLLMUy5PQYrPpfejNOkJDrFrM-g-Z2fWUD5MeQQy_nhRRhvJRjgeOHgEblvDjTZTBmw9Sp67rz8Ba7KxcNIS6T7cGonQUP_YOvXaa_oa6xZWfmL_D10nFtNivBTLTlhGMKQF9uWgKwS"
             }
           ]
         }
@@ -2738,7 +2936,13 @@ window.ICED26_DATA = {
           "authors": "Lisa David, Rüdiger Rhein",
           "presenter": "Lisa David",
           "abstract": "Designing curricula for study programmes is a complex challenge, shaped by rising expectations regarding competence orientation, the shift from teaching to learning, student diversity, digitalisation, and organisational coherence. The Reference Framework for Higher Education Development by Brahm, Jenert, and Euler (2015) provides a valuable conceptual lens for understanding this complexity across three interconnected levels: learning environments, programme design, and organisational conditions. Drawing on accumulated practical experience and insights from research, we have compiled a wide range of characteristics and design principles—such as key competencies, digital learning formats, internationalisation, and the student life cycle—that fit to one or more of the three levels. The framework offers a promising structure for mapping and integrating these elements more coherently.\n\nThe proposed Collaborative Space invites participants to jointly explore how the framework can guide curriculum development practices. Through group work, visualisation, and iterative reflection, participants will review, challenge, and refine this mapping, contributing their own expertise and experiences. The session thus emphasises co-construction rather than the presentation of predefined results, acknowledging the distributed and multi-actor nature of curriculum development.\n\nIntended outcomes include: (1) reflecting on the usefulness of the framework for structuring curriculum development, (2) refining and expanding the set of identified characteristics, and (3) initiating a practice-oriented overview of how elements of curriculum development connect across levels. Ultimately, the session aims to create shared insights that support more coherent and informed approaches to curriculum design.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Lisa_David_ICED2026_CurrDev_LD.pdf",
+              "url": "ICEDX1:1NGsxFvrbgTaoMYfwRXftUZOBwlGAwlZFVcBQfRR4hBOdWM-rYZJL7J_sKEyvD_jAC4B1wCINrr5ZBgUZPPiNzFkJbFBfK7XcMJcHEEh5Nahv-oaz3ujwa3_FxifPwLJJ6RazbeoqADk77aMuEw5SPUv"
+            }
+          ]
         }
       ],
       "easychair_session_id": "105659"
@@ -2767,7 +2971,7 @@ window.ICED26_DATA = {
           "slides": [
             {
               "label": "Franziska_Nickolaus_BridgingTheGap_Transfer research-based learning_Köhler,Nickolaus(KIT).pdf",
-              "url": "ICEDX1:kNsWLKsm1hUetog9y_dWgDHZoMcH741O_4mD2JprfsuvN7TqBBv9L-I6Xtn6JYquMOJ2B5jWQi6xKFmfzzoVDz1Q3FbYzXQCZcUdsBZ7xbpoC5xSXPelD2UfFhliilwh69AgFdBl6gmZjivronAA0NV2H9Dn_i3gWatZIcIINU3dgC1gggcfD6QlYR7xnwRyD1EZgs80U_j5eTgh3TnH-Q"
+              "url": "ICEDX1:7RznQTHJlpYX419E9D_fRmlkRDVh_QxgUjSDziK_9UJq_qILKAMI-iCY4P-pDnUz0lsxIAxQOWl8Cyps3hF1hfIOgyYe2qiZY1nTpt1VfL-jcZHcQTACKKhIqWUSYvUisKBe50lTwPDyfwVibI-ifNLV"
             }
           ]
         }
@@ -2794,7 +2998,13 @@ window.ICED26_DATA = {
           "authors": "Lars Klingenberg, Lotte Ebsen Sjøstedt",
           "presenter": "Lars Klingenberg",
           "abstract": "While Henderson et al.'s Four Categories of Change Strategies1 (FCCS) offers a comprehensive framework for understanding educational change, a gap persists: how can we systematically identify specific frictions hindering evidence-based teaching adoption? This collaborative space examines operationalising FCCS within the Behaviour-Friction-Solution2 framework to develop actionable change strategies.\n\nSustainable implementation involves going beyond merely categorising change strategies to actively diagnosing friction patterns. By mapping FCCS categories onto friction types, we determine whether barriers are rooted in knowledge, beliefs, structural issues, or cultural factors. This diagnostic approach uncovers that various institutional contexts require different intervention strategies. Nonetheless, applying generic frameworks to specific institutional realities offers both opportunities and challenges.\n\nOur preliminary framework suggests that identifying frictions rather than creating solutions is the key to sustainable change. While solutions tend to be generic, frictions are deeply contextual and interconnected across individual and organisational levels.\n\nThis session invites participants to develop and test friction-mapping using institutional cases collaboratively. We seek input on how academic developers can use FCCS categories to prioritise interventions. What tools would make friction analysis more practical? How can we balance comprehensive analysis with actionable insights?\n\nThe session aims to establish a community of practice around systematic friction analysis and to explore cross-institutional research opportunities to implement evidence-based teaching through strategic friction identification.\n\n1 Henderson, C., Beach, A., Finkelstein, N. (2011). Facilitating Change in Undergraduate STEM Instructional Practices: An Analytic Review of the Literature. Journal of Research in Science Teaching, 48(8), 952–984. 2 Adapted from Fogg Behavior Model. (n.d.). https://www.behaviormodel.org/",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Lars_Klingenberg_D - CS18, Klingenberg and Sjøstedt, From Theory to Practice - Operationalising FCCS as a Friction Analysis Tool (public, reduced).pdf",
+              "url": "ICEDX1:SuYYbfJG_KdA9K3SwcFt6GnXdmkCSgnMg-PHVTbWY3wNUYRPqc0HrxoA3fr8hkKGxGhBu68aoZT46_v2V4EoJONoMA0ljXFVIDJwjJhArneaw5o6tNI2GqBcZCwkJeOG-Q6F3EuPEtemQal2y9VezF09"
+            }
+          ]
         }
       ],
       "easychair_session_id": "106949"
@@ -2868,7 +3078,13 @@ window.ICED26_DATA = {
           "authors": "Mary Wilson, Celia Popovic, Donna Ellis, Åse Nygren, Anna Santucci, Jeanette Sjöberg",
           "presenter": "Celia Popovic",
           "abstract": "Around the world, educational developers are navigating a higher education landscape profoundly shaped by the current ascendance of neoliberalism and its market-driven logics of managerialism, efficiency, and accountability. These pressures re-shape educational development roles, the work of teaching centres, and institutional teaching cultures, challenging developers to balance personal and institutional demands while upholding a culture of teaching excellence and protecting the professional integrity of educational development.\n\nWhile it is the case that challenges abound, educational developers also occupy a uniquely strategic position to challenge, re-frame, and humanize teaching cultures and capabilities. This symposium brings together international perspectives to interrogate the provocations and possibilities for our profession at this moment.\n\nPapers in this symposium explore how educational developers can better equip themselves for meeting the moment by deepening theoretical and practical knowledge and further developing future-oriented mindsets, as well as professional identity through engagement in formal and informal educational experiences. Contributors also examine conflictions and possibilities in various conceptualizations of educational development as a field, discipline, and profession.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Donna_Ellis_Ellis Mindset Symposium ICED26 FINAL.pdf",
+              "url": "ICEDX1:j8973uyOhbCK1duv2gxN5mM95U2CvGyLiRMTAYBEvF9bxrQ9eRNDfb3_2qDony61PgG84MUEt47mWDKL4X1XqQt5p9C3Joyji14exAFkTQvBzB69ZHRp3yrvRw7rq7wH2r3zxjplM5JCAL93Apf1V5Lx"
+            }
+          ]
         }
       ],
       "easychair_session_id": "105603",
@@ -2913,7 +3129,13 @@ window.ICED26_DATA = {
           "authors": "Hayato Sezaki",
           "presenter": "",
           "abstract": "This doctoral study examines the recruitment and development of Professors of Practice (Practitioner Faculty) in Japanese higher education and aims to construct a multilayered Academic Development model. In Japan, the demand for faculty who bring substantial professional expertise has grown rapidly, especially with the expansion of new professional universities, yet systematic frameworks for their development remain limited. Using Sutherland’s (2018) Holistic Academic Development framework, the study addresses four interconnected questions. RQ1 (Macro) analyzes how Professors of Practice have been positioned within national higher education policies. RQ2 (Meso) investigates organizational conditions that enable universities to recruit and retain them sustainably. RQ3 (Micro) explores work-related challenges and capability development processes across career stages, comparing competencies with traditional academics. RQ4 (Academic Development) designs and evaluates holistic faculty development programs that integrate professional experience, research capability, and educational practice. This multilayered approach contributes to understanding faculty roles that combine academic and professional expertise. It also positions Professors of Practice as an emerging research area in higher education studies. Through the Doctoral Colloquium, the study seeks constructive feedback on its theoretical grounding and methodological design to further refine the proposed model.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Hayato_Sezaki_ICED26_Doctoral Colloquium1_Slide_Hayato Sezaki.pdf",
+              "url": "ICEDX1:CsmFfNcHrpnZ4TtzLr_mL0k75S70NpLqtZIeOET5iyU4Mipf-eZQbwGxFYHtjYNzSJXLBvkIjSoMRsXkOe9ZRY-sZ8J-iHKsxnzKbudC32KwlbBLCvmgPYM_hnSQSX-p65WH-5vAPYeXz72S-iB9YV4V"
+            }
+          ]
         }
       ],
       "easychair_session_id": "104868",
@@ -2971,7 +3193,7 @@ window.ICED26_DATA = {
           "slides": [
             {
               "label": "Maria Paula_Paragis_Paragis_Cinemeducation and case studies.pdf",
-              "url": "ICEDX1:C92a7JT5RmQdBNPoB2whmwsd07ZSuSQHQAG26_C3N75om1gzYPaAzJiBzbhLY_h2Y8sAaAG4aPxBKr513eOyjpoXq6UvtxQ9n3RFNio4GPHhR4VOn8-UIrlmLVltKDMLGekfMEY25lgETRfAkcIHz7BZFYeTq-UzP1HVCSnPBzeEQI6H22-ww54PJhSc7q1giVR7VdpSASK88Sy-VYKRWg"
+              "url": "ICEDX1:Trnp8TFVw91YCvdZ5TvoD_N1sbji1kNnvSOo-PbhU89X0FEz093ccwZPe4L1Ff6zeYrF0EZ6yHKnoJSfey42rOfHCk4LBBDvAgo4jY-ixkfSP8-TF57gOJR-cIp9gl9fi4dnSlRdKjt3C7LwxCcd7QM7"
             }
           ]
         },
@@ -2989,7 +3211,13 @@ window.ICED26_DATA = {
           "authors": "Paulina Kristiansson, Louise Hanger, Martyn Kingsbury",
           "presenter": "Paulina Kristiansson",
           "abstract": "This study is set at Imperial College London, a ‘STEMM+B’ (science, technology, engineering, mathematics, medicine, and business) focused UK university where students are typically strategic and discipline-oriented, undervaluing broader experiences. Although graduate employability is good, students’ can struggle to articulate their ‘soft skills’. An Award was established to address this gap and promote holistic integration of STEMM+B and non-STEMM+B experiences and support construction of agentic integrated developmental narratives.\n\nA questionnaire was used to capture participants’ initial motivations, expectations and perceived barriers to engagement. Following this, semi-structured interviews with seven students who had partially submitted and eight students who completed the full Award. Each transcribed and thematically analysed.\n\nQuestionnaire and early interview data show initial expected benefits of engagement were strategic with the Award predominantly perceived as a route to formal recognition. However, as participants progressed, they began to appreciate the transformative nature of structured reflection evolving from performance-driven engagement to more agentic reflection.\n\nSeveral principles emerged as critical to supporting student agency and meaningful engagement in development. Maintaining the perception of low barriers and high benefits maximises engagement. Resisting the impulse to eliminate barriers, recognising that appropriate challenge fosters resilience, adaptability, and long-term growth. Data show that what participants initially report as frustration with process and perceive as a means to a goal is often retrospectively considered as transformative and more valuable than those initial strategic goals.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Paulina_Kristiansson_Poster ICED26 final.pdf",
+              "url": "ICEDX1:jhG5rqyR5giMJe4ju01OduLCvBA8ckcBW7E6hqkF8MoVCoWqplkUJauAtDMQkbBC9SD-rCC98vZpCVJ8Rn1SMYJ-TEJeJn3V_ojw8vMAVlh54NvDNPUHaQ8tfiNjM9Pat2X2hXtmfTTDH8dUEohwEIcw"
+            }
+          ]
         },
         {
           "time": "",
@@ -3037,7 +3265,13 @@ window.ICED26_DATA = {
           "authors": "Varia Christie, Camilla Falk Rønne Nissen",
           "presenter": "Varia Christie",
           "abstract": "This paper explores how grade-free assessment formats can promote student agency, resilience, and meaningful engagement with learning, addressing challenges associated with high-stakes, graded exams. We draw on two years of implementation of the “Active Participation” exam format at Copenhagen Business School, a pass/fail model that assesses students’ engagement with a range of learning activities distributed across the semester. Designed to reduce performativity pressures and encourage sustained participation, the format embeds multiple feedback opportunities within course design.\n\nGuided by a compassionate assessment perspective, our analysis brings together teacher experiences documented through educational development work and student perspectives captured through narrative interviews supported by visual methods. This data illuminates how students’ motivation, confidence, and stress levels evolved, and how the grade-free format reshaped their relationship to participation and learning.\n\nFindings indicate that the format can effectively redirect student focus from performance to learning, though successful adoption requires thoughtful teacher facilitation and clear communication of expectations. The study also highlights institutional enablers and barriers, emphasising the strategic role of educational developers in translating assessment policy into practice.\n\nThis session will engage participants in discussing both policy-level implications and practical design strategies, offering actionable insights for colleagues seeking to implement learning-oriented, low-stakes assessment approaches.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Varia_Christie_ICED'26 - If grades undermine learning.pptx.pdf",
+              "url": "ICEDX1:RHzA81TgKJ_W4KNlcCGaKMiGVOJWMMxkbZSY0dTy369bROD4yhucokOXvSlRj9Cmcite-xRoi4eM9EZgM6A0k_s0M42J6v3s7wzd_LmcbJ_FVAAFjkpsXZMByIQGsZyBHlNe6fe31KlT-XBnmMVuhXma"
+            }
+          ]
         },
         {
           "easychair_id": "311833",
@@ -3073,7 +3307,13 @@ window.ICED26_DATA = {
           "authors": "Bronwyn Harris, Nermin Vehabovic, Heidi Hollingsworth, Melaine Rickard",
           "presenter": "Bronwyn Harris",
           "abstract": "This presentation investigates teacher agency as enacted by Master of Education (M.Ed.) candidates within an online, equity-focused graduate programme at a private university in the Southeast United States. Drawing on critical sociocultural perspectives, we conceptualize teacher agency as relational and justice-oriented. We conducted a cross-case thematic analysis of eight candidates’ capstone posters and video presentations to identify evidence of agency. Findings indicate that candidates enacted teacher agency by integrating research, theory, and reflection to design and implement meaningful instruction in K-12 contexts. Projects centered on developing K-12 student agency and on promoting social, emotional, academic, and cultural growth, often extending their impact to families and local communities. These findings demonstrate how graduate study can foster the development of teacher agency as both practice and advocacy, cultivating educators equipped to reimagine learning and challenge inequitable structures. By positioning K-12 students as co-creators of learning experiences, candidates’ projects illustrate how equity-driven curriculum design can deepen engagement, foster inclusive and sustainable educational practices, and extend meaningful impact to families and communities. This underscores the role of equity-focused graduate programme design in advancing teacher agency and shaping justice-oriented academic practice.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Bronwyn_Harris_Final Harris, Vehabovic, Hollingsworth, Rickard_ICED 2026.pdf",
+              "url": "ICEDX1:yNwtHIDxY6-1w51c0QBdL-GclVU0p6k9qdByMyvU7SZCxbruOwhIuJfmiPtu1tXMGN-D7_TfWTuPhRvVk_KYrnNpIk0X9KCHf5OeW2aNyc3mTB-z9wl4rqkq0K4VcCWd8dfNj63zkRS0V0oCsOJaSd6F"
+            }
+          ]
         }
       ],
       "easychair_session_id": "104854",
@@ -3109,7 +3349,13 @@ window.ICED26_DATA = {
           "authors": "Maria José Canet Subiela, Ana Díaz Rubio",
           "presenter": "Maria José Canet Subiela",
           "abstract": "This two-year institutional project addresses the challenge of high dropout rates and poor academic performance (up to 74.63% yield below 35%) among first-year students in two demanding engineering programs at Universitat Politècnica de València (Campus de Gandia). The central aim is to integrate the development of student self-regulation (SRL)—a core component of learner agency—into institutional practice. The intervention leverages the existing tutoring program (PIAE+) to deliver targeted, data-driven SRL strategies (behavioral, metacognitive, and motivational). Concurrently, faculty teaching first and second-year courses receive training aligned with the MDAD framework, enabling them to design curriculum activities that promote SRL. The methodology employs a rigorous mixed-methods pre/post-test design using the Motivated Strategies for Learning Questionnaire (MSLQ), faculty self-evaluation guides, and qualitative portfolio analysis. This research contributes an evidence-informed model for academic development centers, seeking to empower learners and transform curricula to enhance student persistence and success.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Maria Jose_Canet Subiela_SRL_ICED.pdf",
+              "url": "ICEDX1:s_OkrPwjuR20dLiux-kSFEjvVfJ3c-omFzzlcVIk4NWH79jda0qdHVo1dfy4H382XFEBBEbhB9MZk9yJY5aXkWnwmKnZ5WgybvDFoatPC6uNJIkQRx66DxAn37EIL_Mo41GglQ9EQVtZnrfduefsl2Vh"
+            }
+          ]
         },
         {
           "easychair_id": "314760",
@@ -3136,7 +3382,13 @@ window.ICED26_DATA = {
           "authors": "Lorena Atarés Huerta, Marta Ribes Català, Maria José Canet Subiela",
           "presenter": "Maria José Canet Subiela",
           "abstract": "This paper analyzes the mastery of Chemical Equilibrium (CE), a recognized threshold concept (TC), among Master’s pre-service secondary teachers. While TCs are fundamental for transformative disciplinary thinking, their acquisition requires overcoming persistent Alternative Conceptions (ACs) and transitioning past the \"liminal space\" of partial understanding. Utilizing a mixed-methods approach, Master’s students (N=9-13) completed two conceptual tests, namely the Test to Identify Students’ Alternative Conceptions. (TISAC) and the Chemical Equilibrium Basic Test (CEBT) and their performance was contrasted with expert reasoning. Quantitative results showed high overall integrated comprehension, but revealed critical, persistent ACs, especially concerning the effects of temperature variation and the treatment of heterogeneous equilibrium. Moreover, almost 50% of students struggled to recognize situations where equilibrium evolution is unpredictable. This persistent compartmentalization highlights a significant pedagogical challenge for academic development, emphasizing the need to move future teachers beyond mechanical problem-solving toward the integrated, relational reasoning demonstrated by experts.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Maria Jose_Canet Subiela_ICED_equilibrio.pdf",
+              "url": "ICEDX1:4rxLyy2DFw7Wxx5O0pUaqvBTBaUMMTjE7456VDtAyIVG_-Mn2LMqrNboYQZm-ygHTY1ux8ooS0clFzoeIcB-oXj9h4cmtAf2UylGAD4F277wYXaOnD8g8SOlQyb5Yia6mvWmyudGso3qIWeanLgLeUwp"
+            }
+          ]
         }
       ],
       "easychair_session_id": "104855",
@@ -3170,7 +3422,13 @@ window.ICED26_DATA = {
           "authors": "Joelyn de Lima, Siara Isaac, Simone Deparis",
           "presenter": "Joelyn de Lima",
           "abstract": "Our large first-year engineering courses employ several hundred student assistants who have got good grades themselves, but have little pedagogical understanding of how to support others to learn. We present a scalable train-the-trainer model that drills three evidence-informed teaching micro-routines for doctoral assistants (DAs) and student assistants (SAs): 1. Respond with questions: assistants use questing routines to support a high level of cognitive engagement from students. 2. Process-oriented feedback: assistants use a structured sequence to provide rich and contextual feedback that supports students’ ability to solve similar problems (not just this one). 3. Problem solving method: a structured problem-solving method is used to frame interactions with students to support their developing skills and reflection. DAs in the program participate in a 2 ECTS course (~7 h learning to teach problem solving; ~3.5 h on facilitation skills), then deliver two practice-rich SA workshops. The cascade (faculty developer → DAs → SAs) enables consistent, scalable, concurrent enactment across many parallel sessions supported by one faculty developer. Evaluation of student perceptions over the past few years shows that the SAs trained in this method provide the students with the “advice, guidance or feedback they need to progress” and that they “behave in a professional manner”. Implementing the teaching micro-routines training supports agency at several levels, enabling the DAs to step into their supervision of the SA, providing SA practical pedagogical tools to support learning, and creating an environment for students to develop their problem-solving skills",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Joelyn_de Lima_Joelyn de Lima_ICED26_Train the trainer.pdf",
+              "url": "ICEDX1:rAKJoIYArACGFwUHNKvgBM8JtlbIIg-wvihZgvCrXnKWLsCVs-lWj1MGkkjNYTIJr0UKlyNsaHFVvW1Kw74iNUSbF4mESOKG5Yv7zAegRpTemHnCuqgTnIwoO-Xw4Xg7O64rlgFyloMYczuCamIxXBuI"
+            }
+          ]
         },
         {
           "time": "09:30",
@@ -3182,7 +3440,7 @@ window.ICED26_DATA = {
           "slides": [
             {
               "label": "Sara_Petchey_Petchey_ConcChange_PPT_ICED2026_share.pdf",
-              "url": "ICEDX1:OVgWan0bVy3wnKYyOvB4KItc8nYrVtfu4rDnbsryr9nAh69QDyrHNJy_EIwmSxh63-RgqYU37I9GogxudM8au1YxaKkyHTRAMFdvFt_BmHBKkNVc5RAhORkLceNHxGkJiRJc-Z8QhC1oq7SMBEM_cffqvJ2Pe6nRLpMnWfIumIWofvKixuCjS1tOyD3wdpnmPiZZYvYkmzCdOswWFO3z6Q"
+              "url": "ICEDX1:Hl5LAlh-DmjdpGsn046rA-4Y7yix_jaRqatfaZoulGLmBodG0Rny6FNNBbraOw-2jimhnTqBFwCxIuHdwcTZhMx3DDINGmwf2HBbQZEqFsTWTHSEdBH-3fIattWRPdWL0XLd4Gt6bC_UTGX2Zk3Fpngr"
             }
           ]
         },
@@ -3206,7 +3464,7 @@ window.ICED26_DATA = {
           "slides": [
             {
               "label": "Matthew_Mahavongtrakul_ICED 2026 - Listening Tours.pptx",
-              "url": "ICEDX1:SsebOPcPFdsz0bQ8LVbOgz5ifjB1tRmANgsi0DJcQou1keWsq-ehSlC4c_83Dj7Vh5jHzVxVfOLkC4ayU5D4WPWoo5faF0Vch6KATpgP0Fg-mY8u3cBqWNdFf7rhdoAiipiH4-2mkISZ5FAHtrkAY_yJFyTFqKXKkAlVT5R_BagIaxrGqTbVjkIzRABl1T8fCouU3WPk6pojsK03L9BInA"
+              "url": "ICEDX1:7N-StIqA1L9bRQvAAFdURLCWcCOaxpxn7clWYdWXhso5nmPIlvZfsD0KewJWa4drJ2gvklKURRAqQQSie6FFpuWJsR0U6UgU3VwI98WisQMigac07WUOIei5v4RrS5pCIdO1NYExefyu5bjLI_RtOUFD"
             }
           ]
         }
@@ -3240,7 +3498,13 @@ window.ICED26_DATA = {
           "presenter": "",
           "abstract": "Higher education has undergone transformations that require new skills from teachers, including evidence-based pedagogical decision-making and the development of epistemic agency that allows them to act with professional judgment. This paper, based on a documentary review, analyzes conceptual and empirical frameworks that allow us to understand the relationship between evidence-informed educational practice (EIP), teacher epistemic agency, research skills, and knowledge mobilization (KMb). The review shows that, although these approaches have been widely developed in European contexts, there are still few studies that address their articulation in Latin America. Furthermore, even in systems where EIP has made more progress, gaps between theory and its application in teaching persist. The findings indicate that EIP is an interpretive and situated process, whose appropriation depends both on the capacities of teachers and on the organizational conditions that allow for the critical use of evidence. These elements justify moving towards training models that integrate professional reflection, the use of evidence, and research skills to strengthen university teaching practice.",
           "keywords": "",
-          "online": true
+          "online": true,
+          "slides": [
+            {
+              "label": "Ángela _Ríos_TEMPLATE_ICED-Ponencia-ENG-V1.2..pdf",
+              "url": "ICEDX1:wkjHpr9w61aLMnz135ua6AyL6CXVaJavRw4lrpKQiJvCHGpK17WhmY1cLuptQjWpSxec3rvrNdPzM-sqee2vhMF9vB33nsOuws_UDQq_mWbLk1PgmCmBtohDc6WbeR1pbPRJAp2J7udth9fXfWTG9OcM"
+            }
+          ]
         },
         {
           "time": "09:15",
@@ -3258,7 +3522,13 @@ window.ICED26_DATA = {
           "presenter": "Rana Challah",
           "abstract": "Aim: This presentation appraises the development of student agency through the prism of two articulated theoretical and methodological approaches: Design-Based Research (DBR) and Experience-Based Learning (EBL). Whilst receiving individual attention in the research literature, few studies have investigated the combined benefits, or otherwise, of these approaches. More precisely, this study has two specific objectives: (1) to investigate the expectation of IT learners prior to taking internship and compare it with their perception after taking the internship and (2) to explore the evolution of learners’ experience using both collective intelligence and AI to assess their competence acquisition. Theoretical Framework: Guided by the agentic engagement theory and Matusov et al. (2016) four conceptual frameworks of approaching student agency in educational studies, we propose the following research question: How do higher education learners manifest agency using both collective intelligence and AI-assisted learning environments? Methodology: This study combines qualitative and quantitative research methods to further our understanding of the evolution of agency. Findings: The findings suggest that the combination of DBR and EBL, enhanced by AI, complement each other to help embrace both student and teacher agency. Implications: This study highlights the importance for institutions to implement training programmes to help both teachers and staff to foster better use of AI in course design. Universities should issue AI policies to help faculty make informed decisions about how AI is introduced and used in teaching and assessment to foster student engagement and agency.",
           "keywords": "",
-          "online": true
+          "online": true,
+          "slides": [
+            {
+              "label": "Rana _Challah _ICED26_IA_Challah et al. _393.pdf",
+              "url": "ICEDX1:68xRr5u4MIkrDZjNbxSTFWBmvVXFogdWvpJGMWMbSQZr5Z2AhFFuf3PD5RnRIjwDMVvi37YnDHP9w2JNrrHOPJmX-rlzRd4Vzvx8GoPnJFCGvIjKoQ3IEA3R0I72RWpEo05GWYGVJks1V3Kuqegrtmy_"
+            }
+          ]
         },
         {
           "time": "09:45",
@@ -3266,7 +3536,13 @@ window.ICED26_DATA = {
           "authors": "René Glastra van Loon, Quincy Elvira, Daphne van Weijen",
           "presenter": "René Glastra van Loon",
           "abstract": "Amid growing attention for teaching quality in higher education, academic development programs can play a pivotal role in strengthening academics’ teaching. Yet the connection between educational research and everyday teaching practice remains limited. This study examines how university teachers perceive scholarly teaching and identifies the factors that hinder and enable engaging with educational research. University teachers’ perception is conceptualized in terms of a ‘researcherly disposition’ structured around three dimensions: affective (attitude), cognitive (perceived challenges), and behavioural (engagement). We surveyed 126 teachers across six faculties at a Dutch research-intensive university using 28 validated items. Analyses comprised descriptive statistics, MANOVAs/ANOVAs with Tukey HSD, and factor analysis of 14 challenge items. Attitudes were positive, but engagement typically occurred less than 2–4 times per year, with competing priorities widely reported. Factor analysis replicated three challenge types: general, knowledge-related, and resource-related, with resource constraints (e.g., lack of time; overseeing the number of publications) most prevalent. Differences appeared by faculty, University Teaching Qualification status, and teaching experience. These findings suggest coordinated and context‑sensitive measures are needed to support university teachers’ engagement with educational research, thereby helping close the research–practice gap and improve teaching quality.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "René_Glastra van Loon_University Techers' Perception of Scholarly Teaching - Challenges and Enablers.pdf",
+              "url": "ICEDX1:IBTKDuxV6fudzSkOVAhhcMryo4ZbNwacono_i-reJ3hd6b5POzjMOMAx7fd0nrL3qM73PiiTBKb0E-K_S5ydbsGN7NBd8q-kWEWt3tnRypvJ9V7tXTbpNoGo9NElEwHYAp6j3Ng_plFc3YkgEcNFaVs4"
+            }
+          ]
         },
         {
           "time": "10:00",
@@ -3321,7 +3597,13 @@ window.ICED26_DATA = {
           "presenter": "",
           "abstract": "This paper focuses on the results of our dissertation on PhD supervision in Education and Training Sciences in France. Many research tackled the quality of PhD supervisor-supervisee relationship, challenges and factors affecting PhD student success. While other studies focus on the doctoral process as a ritual and consider it as a component of PhD student socialization, few ones focus on how PhD students, coming from different professional paths are active learners, engaged to construct their success. This study focuses on how different supervision practices foster PhD student agency and success. Fifteen interviews were carried out with supervisors specialized in Education and Training Sciences in 3 doctoral schools to answer the following questions: 1) How do supervisors conceive supervision ?; 2) What are the practices that foster PhD student agency?; 3) What are the main contextual and/or professional factors that enable PhD student agency ? A survey questionnaire was also conducted to PhD students (N=128) in 4 doctoral schools, in France, to detect what makes student embark on a PhD. Findings reveal five supervision conceptions, three PhD students’ profile and different practices to foster doctoral students agency. Supervisors and PhD students consider that doctoral schools are invited to go beyond actual practices to foster PhD students’ agency in terms of training. Last but not least, integrating PhD students in research with supervisors within their doctoral school or in partnership with other doctoral schools could be an important practice to foster PhD students’ agency.",
           "keywords": "",
-          "online": true
+          "online": true,
+          "slides": [
+            {
+              "label": "Ghada _Challah _ICED26_Ghada CHALLAH .pdf",
+              "url": "ICEDX1:KK9xmEXA2eUpVASnCqcm847m3oHsvBX3AsDa-4aiPHW82IuXQHh7itTS8Nej8tGEC8MFjDVcJsCY7xcpXAEMk9EXqV-SUkZb8lqDRu7xIUGNIOcPFEj3gLp_3x1mjCzVwYWBOQCX1Z7xqZBxG7T8jjZ8"
+            }
+          ]
         },
         {
           "time": "09:45",
@@ -3436,7 +3718,7 @@ window.ICED26_DATA = {
           "slides": [
             {
               "label": "Arianna_Marci_MARCI ARIANNA_ICED 26.pdf",
-              "url": "ICEDX1:mnIgGDegLNYf5WF-hhy7IPmOC3KdAQjtRfS2e-rcHvCDqADOIYL0uKhp7FxdsC7kya7picWxECo-mJ8Dj7OyEslI3j-Op_dkSKvypEStkE7G-UU0jW42CAvlrLrMgqXIRBWNvoCL313VQDBe3fox1t1WuJ4HXQTgplozINDV9oMpbmK03z69W6DztjFWjbRciW6topPVqPy-5pkUPvw6Xw"
+              "url": "ICEDX1:Mgu7Ej8HmGR74gHtMPpv2yBnz_W-rNivTW4oCua9mnXC2cYnypENZjiVOOZAsn4l5c0B9qS_MziBzgu8B-b9iQLLdSbz2FB0VcZKvS3N58xRSjUKJuMSqbYDZHxHz6zQiYnyngirD9e2ibqwKXLEWMF7"
             }
           ]
         },
@@ -3524,7 +3806,13 @@ window.ICED26_DATA = {
           "authors": "Svenja Kaduk, Anja Pawelleck",
           "presenter": "Svenja Kaduk",
           "abstract": "Portfolio work is widely used in academic development programs to support critical reflection on teaching practice. However, process portfolios often fail to realize their potential because participants do not engage in sustained, iterative writing. As a result, reflection remains superficial and disconnected from ongoing teaching development. This paper presents the design and implementation of a process portfolio in a 7-ECTS fully online academic development program that intentionally integrates writing-didactic strategies, iterative reflection cycles, a critical incidents approach, and structured scaffolding to strengthen process-orientation. Participants engage with three complementary portfolio formats: a collection portfolio for continuously capturing teaching–learning moments; a submission portfolio for analyzing selected incidents in relation to competency development; and a teaching philosophy for synthesizing experiences into articulated principles of teaching. The design emphasizes how iterative writing and structured reflection strengthen teachers’ sense of agency in interpreting, shaping, and transforming their own teaching practices. Preliminary findings indicate that participants perceive the reflective writing prompts as highly valuable. Many report surprise at the depth of thinking facilitated by iterative writing, the emergence of concrete pedagogical actions, and the realization that such reflective processes could also benefit their own students. The paper argues that systematically embedding iterative writing and critical reflection into portfolio work enhances the quality of academic development by fostering conceptual thinking, greater professional agency, self-directed learning, and reflective teaching identities. The approach contributes to strengthening portfolio-based learning as a meaningful tool for professional growth in higher education.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Svenja_Kaduk_ICED_Session13H_Kaduk_ReflectivePortfolio.pdf",
+              "url": "ICEDX1:Hk5QdWNC9W0taBwuqP-UWfmcM5AH-mFF0CgFz_nSIGJXXZsbocH9HnbqA9I5jMabPRWKS0ZVpIDXObuGGFJYtgo4zQfZdZ38SqlgG6IKi8q1CXcTUpo3l7mx-dZBCgzBk0-kkAJK5hS_-2TzOAHBJC8m"
+            }
+          ]
         },
         {
           "easychair_id": "311876",
@@ -3605,7 +3893,13 @@ window.ICED26_DATA = {
           "authors": "Lien Castelein, Annelies Gilis, Ine Rens, Hanne Tollenaere, Karen Van Eylen, Ana Paklons",
           "presenter": "Ine Rens",
           "abstract": "Higher education institutions are navigating increasing complexity due to technological change, diverse learner needs and evolving institutional priorities. Responding to these challenges requires not only pedagogical innovation but also governance structures that align local initiatives with institutional strategy. Educational developers operate at this interface, exercising agency across organisational layers through networked collaboration and strategic coordination.\n\nThis paper examines how such networked agency has been operationalised at KU Leuven (a comprehensive university with over 60,000 students) through the KU Leuven Learning Lab network. The case of IT-supported assessment demonstrates how digital assessment evolved from scattered faculty pilots into a coherent institutional strategy. Rather than emphasising technological rollout, this case foregrounded structured collaboration, cross-service alignment and evidence-informed decision-making. Through the creation of seed projects, institutional design scenarios and boundary spaces for negotiation, educational development shifted from facilitating innovation to shaping institutional conditions for readiness.\n\nThe paper argues that when embedded within networked governance structures, educational development can function as institutional design – enabling IT-supported assessment to move beyond fragmented initiatives toward sustainable and strategic transformation. In this trajectory, “going digital, staying human” operated not as a slogan, but as a guiding principle for designing human-centred digital assessment in higher education.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Hanne_Tollenaere_ICED_KU Leuven_a networked approach in educational development.pdf",
+              "url": "ICEDX1:rgdrIIANqVKuqtEXr2N7TnoguzbHx8ad-7UDgkVYtW7q-aFNPx_V67eIC65ZpmXXhNxZtmB7muUHzPik9IODEI0xIUE-PkKx21O9J2PRV2lTJGfzvgro6Y7J1k39tPAEWLy_zaHrmKGJK2ByPv4HOJH3"
+            }
+          ]
         }
       ],
       "easychair_session_id": "104856",
@@ -3689,7 +3983,13 @@ window.ICED26_DATA = {
           "authors": "Elena Benini, Klara Bolander Laksov, Anna Serbati",
           "presenter": "Elena Benini",
           "abstract": "This scoping review explores the evolving concept of educational leadership in higher education and its implications for educational development. While traditionally linked to individual teaching enhancement, recent literature highlights the need for a more systemic and collaborative approach. The review addresses two research questions: What are the conceptualisations of leadership in higher education? and What are the implications for practice? A structured search across ERIC, Web of Science, and Scopus identified 39 peer-reviewed journal articles published between 2006 and 2025. Preliminary findings reveal a conceptual continuum of leadership models, ranging from individual and administrative to collective and transformative. The analysis highlights significant overlaps and ambiguities among leadership types, particularly between academic and educational leadership. These results underscore the need for clearer definitions and a deeper understanding of how leadership practices shape inclusive, innovative learning environments.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Elena_Benini_Educational Leadership_Salamanca.pptx",
+              "url": "ICEDX1:_g9d_PYxbXMNZoGdS46ZBgyNnYl8DIWvJWIvGnNkuYBHVoMha9HH3NjZHnrbsaNMly7pk08rvcIvx7zmUJnWklsbwvC_M8DQ-zD7RZGsAzYqWdXbsQhnXnx0bS5LJqenNSQtToyFN02TOwDIgmLIMenl"
+            }
+          ]
         },
         {
           "time": "09:15",
@@ -3705,7 +4005,13 @@ window.ICED26_DATA = {
           "authors": "Heather Goode, Rejoice Nsibande",
           "presenter": "Heather Goode",
           "abstract": "This paper critically examines a professional learning intervention designed for academic staff development practitioners at a South African public higher education institution, with a focus on its contribution to shifting individual and collective agency, as well as the transformation of professional identity and practice. In a higher education context characterised by supercomplexity and intensified transformation imperatives, recent developments, such as the updated QAF (CHE, 2021) and emerging Higher Education Practice Standards, require academic developers to move beyond service-oriented roles towards more strategic, adaptive, and innovative practice. Drawing on Archer’s morphogenetic approach to agency, the study addresses the question: How does an educational consultancy professional learning programme contribute to the morphogenesis of agency and identity? The intervention, funded through a three-year grant, comprised four annual professional learning sessions focused on the Scholarship of Teaching and Learning, curriculum development, assessment, and teaching and learning. The sessions were deliberately co-designed by participants. Using a qualitative case study approach, the paper analyses programme documentation, reflective narratives, and artefacts of practice to appreciate change at the individual, collective, and programme levels. Findings suggest morphogenesis in professional identity and enhanced agency, evidenced through changes in practice, emergent SoTL projects, and expanded professional networks, evaluated against Guskey’s (2012) model. The paper argues that intentionally designed professional learning can support the repositioning of academic developers as strategic agents of educational innovation. This supports the idea of the importance of Academic Staff Developers co-creating their professional learning opportunities that explicitly attend to identity, agency, and institutional transformation.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Heather_Goode_HG and RN ICED presentation 2026.pdf",
+              "url": "ICEDX1:nSPWw3eDBe1w-8SwvvnPBLllrHAK_b7TPrKNl1mGs-4rxxCPrU_yLzlbK9b2wV1NWyLPqGN7wByCx24JBDB6Y9SsuLXI3oyCd7U_Dvk6_pSKJKR59VuteOgegBZcMEFQS-BqmnJm_ejX8yRiyNQTUiqT"
+            }
+          ]
         },
         {
           "time": "09:45",
@@ -3714,7 +4020,13 @@ window.ICED26_DATA = {
           "presenter": "Roberta Silva",
           "abstract": "This proposal presents a holistic model of Faculty Development (FD) designed to address the increasing complexity and evolving demands of contemporary higher education. Moving beyond sectoral or fragmented approaches, the proposed framework envisions academic development as a multifocal and integrated process that connects the personal, professional, and institutional dimensions of university life. Drawing on Bronfenbrenner’s ecological theory, the model articulates FD across three interrelated organizational levels—micro (individual faculty), meso (collegial and departmental structures), and macro (institutional governance). Represented through the metaphor of a three-dimensional cone, the model emphasizes the dynamic and recursive nature of development processes, with heuristic evaluation positioned at its core as a transformative mechanism for continuous improvement. The proposal illustrates the operational translation of this framework through an organizational architecture capable of integrating multiple FD initiatives and incorporating systematic evaluation practices. Implementation of the model requires significant political, organizational, and operational investment, achievable only when Faculty Development Centers (FDCs) act in alignment with university governance and under a clear institutional mandate. Nevertheless, the model remains adaptable to resource-limited contexts, where faculty developers can assume multiple roles to ensure program sustainability, able to foster a systemic vision of academic growth that harmonizes individual and institutional development, strengthens academic culture, and enhances the university’s capacity for innovation and change.",
           "keywords": "",
-          "online": true
+          "online": true,
+          "slides": [
+            {
+              "label": "Roberta_Silva_Holistic_Faculty_Development with notes REV.pdf",
+              "url": "ICEDX1:t4ZRYZqMLYI31UP5Ps8jRHbEHCwH8YfhnLtykBs6kgwRlZ4Xdfwxags2qB4wlFbk4ZCT1eMu0-mMEdbfric4DdwrGP_-iVlgmJVjv8mmScUzOArbMhx0WtooMaWX4q0tNY3MbnL0tRYdsON5H0rd1-6R"
+            }
+          ]
         },
         {
           "time": "10:00",
@@ -3771,7 +4083,7 @@ window.ICED26_DATA = {
       "slides": [
         {
           "label": "Ruth_Graham_ICED26 Ruth Graham.pdf",
-          "url": "ICEDX1:7s_TP7891Gfbjxo7SdSm-i9H690SXfEZdXEUfo8mUELh73OwvIhuFLp8xEdawA8aUeUs7aM5BywzNjB2fdVFV7U59-74QR3xrPbwDhL5B49m-_LIqsP4Ax_fYzs_rJPm2D7NiziPRFRKsutx6tkioTB-sbLfA4z98NXAUXe4kObpaffYGKrTLSBklNLRJ0OzrDyQtoj6E2t_5rRvQutDtg"
+          "url": "ICEDX1:Mt1ECaydVEQb6ircXNoKv-Lz2JvUIlbkeJP4O-Zl7HW-C0tnEfK4D6x6vz2-de2dTWXDiWTRoCVW4cybO8eSv2iIQ9XtHckFiJKyMbvV6iJllXZU1t52T9phX2K-Cam3rzreANl37TG3gtZpYF9ADZvw"
         }
       ],
       "youtube": "https://www.youtube.com/watch?v=0MGhHbjBGA0&t=7640s"
@@ -3829,7 +4141,13 @@ window.ICED26_DATA = {
           "authors": "Ann-Therese Nomerstad",
           "presenter": "",
           "abstract": "Collaboration between schools and teacher education institutions is essential for developing relevant and research-informed teacher education. However, such collaboration does not emerge automatically. It is shaped by leadership, institutional practices, and professional expectations. This paper, which is part of an ongoing doctoral project, explores how leadership and institutional practices influence collaboration and developing work in teacher education, with particular attention to the organization and leadership of hybrid teacher educators - educators who work both in schools and in teacher education. The study is situated within the field of educational leadership and draws on theories of leadership as practice, institutional practices, and professional identity to examine how boundary-crossing roles are shaped, supported and negotiated. Empirically, the study is designed as a qualitative case study including observations and interviews with hybrid teacher educators, coordinators, a partnership project leader, and program leaders. Preliminary findings show that leadership unfolds in tensions between governance requirements and local organizational practices. Relational, negotiation-based leadership and teacher agency are crucial, while weak institutional anchoring and economic uncertainty pose challenges to long term sustainability. This study contributes to the knowledge base on educational leadership in school–university partnerships and discusses implications for organizing sustainable collaboration and professional development.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Ann-Therese_Nomerstad_Presentation ICED26.pdf",
+              "url": "ICEDX1:pWvbp9gw5spbGMiHEwp0x5zWXhsGJXGPShRy2Gl6eqekZdPR7p5Va3RLRIN6fbTwMk3By0QUcRVjFEE07h2q8NCqPnXLt5v5ubEoS_bebvXrOydUOkRjjAtl5dRMYIW1VWRmH273o_lZLqwcuDD76MZk"
+            }
+          ]
         },
         {
           "time": "12:35",
@@ -3837,7 +4155,13 @@ window.ICED26_DATA = {
           "authors": "Susan Greig",
           "presenter": "",
           "abstract": "This paper reports on a small-scale qualitative research study exploring the research question: How do Academic Developers sustain themselves and thrive in Higher Education? The study undertook qualitative interviews with nine participants who worked as Academic Developers in Scotland. These were analysed using Reflexive Thematic Analysis (Reflexive TA) and three themes were explored; ambiguities in Academic Development work, challenges, and strategies that help Academic Developers to thrive in this work. This paper offers strategies for individual academic developers to consider for their own wellbeing. However, it situates these strategies as individualized adaptations in response to the pressures of neoliberal university policies. It is aligned to conference sub-theme 2, questioning who is best placed to support the wellbeing of academic developers, themselves, their institutions or professional bodies and networks.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Susan_Greig_TEMPLATE_ICED26_S_Greig.pptx",
+              "url": "ICEDX1:giOpKnXcjoH9JJySFPiFfctlNNTeka2LRTkoIJ_fWohWR3mGYbBaGDp0WUJX-IGLg46-THt5vyjDG8sNkXFBhII5hbov2Sj9ZNtRByZe_PjpvGaaCgzjwF_jI3v9jjKUyn8pReOoib9dqXsmkUD6n5t5"
+            }
+          ]
         },
         {
           "time": "12:55",
@@ -3927,7 +4251,7 @@ window.ICED26_DATA = {
           "slides": [
             {
               "label": "María_Iserte Alfaro_Poster_Universitas_ICED.pdf",
-              "url": "ICEDX1:Yo_tN-dzrCJ5NWME4vaCnxbkFXd3Z4UJyzMfDnqqX6fPfYPfsAvLS-3PJufCFT9XsoEbiPmAwpS_fUntRJ39YLBqUdLUrSW9n4WrDsGvpHhT0okl9YtX2CRei5OJT-3GkamdG-0B6VLorGg2I_jpHBQyTuEcFGE-Fp1mxo_JbMZPL4JpACNH_WWtwbZopHJN1aR5kK0U8qvAaaEHhSeV7g"
+              "url": "ICEDX1:n3Z1ZqYzZGfrweYpfCmFsGY-d9tUvfn981VOaonOblS3X7LtUDNCPwK8sOWi2i_HBXrWhV4rdnYkCGeNemn7vOck1Chj5XEkB5pnT1ZxQ9J-yPEDacq4zDuHBiA0qcMMqFwnGB3hV62uKwMzGrKmjSZj"
             }
           ]
         },
@@ -3945,7 +4269,13 @@ window.ICED26_DATA = {
           "authors": "Lenka Holá, Kateřina Macigová",
           "presenter": "Kateřina Macigová",
           "abstract": "This paper examines the integration of mediation education into legal curricula at Czech law faculties as a tool for academic development and institutional transformation. Based on an exploratory case study of the Mediation Clinic at the Faculty of Law, Palacký University Olomouc, it analyses how experiential and practice-oriented teaching methods complement traditional lecture-based legal education. The paper identifies three interrelated pillars of implementation: (1) the Mediation Clinic as a core course grounded in experiential learning and service-learning principles; (2) international cooperation, particularly with New York University School of Law; and (3) institutional support through a Mediation Centre ensuring the sustainability of the model. Drawing on empirical data, the study demonstrates a growing student demand for clinical forms of education, which consistently exceeds course capacity. The findings indicate that this approach enhances student autonomy, professional competencies, and engagement, while also contributing to pedagogical innovation and organizational transformation at the faculty level. The paper argues that clinical mediation education should be understood not merely as a curricular innovation, but as a structural instrument of institutional change linking teaching, research, practice and community engagement.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Kateřina_Macigová_Poster2 ICED26_Macigova .pdf",
+              "url": "ICEDX1:Vh9woeA4NnFCXfloDywIPVTGQxVGSFQZGXo04DHbu5yzXQZEDs3YIhO3aF54-CPLCLCDYTGnMl8PCalRKDoRTNEBbCXs340NdWR1jKEHNzicaSrAc_ih028yVwp9ajTVQMm530wIZp1xw5wXvozUF14N"
+            }
+          ]
         }
       ],
       "easychair_session_id": "104880",
@@ -3981,7 +4311,7 @@ window.ICED26_DATA = {
           "slides": [
             {
               "label": "Jennifer_Scoles_ICED_J Scoles stormers.pptx",
-              "url": "ICEDX1:hl26SCKtnKBeOI04dX6ScnbnKCIslFolUdmwo3NrPcMtcqUlG5E8nSweVvf3ivqL_mGhDOQ9VE_jKuN7bNlTURcfFe2cVjEtYzzCO7E5adStkr-YjiZlO1k4eUvYiQ7UNzR97HPc9VJvOPii3gRzSwIhndxMM3cx4Ys_kWBl4sGr2yLiRWtDEO6K9aZYHKZ6PQTPIgBcATcss6hVdSAaLg"
+              "url": "ICEDX1:YEr2m5R_UGKFyPoZngnb0IuyXjE7xrR6zttmsN8PrHiKJx90mzlefAPxNvDkv45jvUJbvk87172dxpFRi7eAG4lm-bPa_vtPbG_SATbkOhxUMvujiHIB8MVaMI3OdUdxAIK0kGJRK1Da7cDHrO-W51oj"
             }
           ]
         },
@@ -3996,7 +4326,7 @@ window.ICED26_DATA = {
           "slides": [
             {
               "label": "Jennifer_Scoles_Copy of Trust the process Presentation.pdf",
-              "url": "ICEDX1:tWCKQcJjVyiKjmz49pft-HZvKmoWD5dkvcUxAyUc4qy1HYK-z74GFwnGtIcql8vgScpyqeBZ2hhPHUsKRzGUSNhPXKmPtRVanCl4zXGBYc8ZhOhw32WCAj2bN_SI1FGuTdBg0YQZQoDLB9qFBRYnviR5cd5Ui2W5FsLTWIAr_P9zsSM0IWHw87zr97qbHJdZi0wgyfiwezrbOS3_e4kmew"
+              "url": "ICEDX1:XmRpCxWn0rIVTCn9Gv3qxxp7B5m5Otv59VkRh-3JYoIzj8F9ccajqWPE0x8lY9xDxEQ6glt2sw4-j5LncjH7nnsoK1GtuVn1XDcisHCnFJx8NpCBN2WQu7Av-Ul-QNAmeiIgZLJWlIoRxyFl2vw6Idoi"
             }
           ]
         },
@@ -4029,7 +4359,7 @@ window.ICED26_DATA = {
           "slides": [
             {
               "label": "Iro_Ntonia_Agency makes a peer_Iro Ntonia.pdf",
-              "url": "ICEDX1:InEs4nxfWfQW8MOKMuWfZEdN76qf6SmrShkoZmS3CKDwVFL_aaDMSxuIPqZg6puSHz7eAqw8Og_KxW8-5sbzIZCKBATMouz6htjMZQ5_stWmfZgF9zNzIJUXkNXhzDffUik_MIpViFU4g98xW1vm1f5VP6f8UZxaITbm1MbHqxwAnaNLveczqjjIidNdz6eIpAKU_EjhH0j8c5tEExpxDA"
+              "url": "ICEDX1:2GFSmjMyxl6dE1F3bx0agJ0_QZ3avUQBhsWwknR6W-dnRy6Q7cC6IIrrDe_ml386NFuiCZzbo880K3EqEdCnAA7fcv_YjQnbPYBigq532p-YZesQMs9PK4UWDcKH6KwDXDWotAKvJx27nWuaZ1XR6fiF"
             }
           ]
         }
@@ -4075,7 +4405,13 @@ window.ICED26_DATA = {
           "presenter": "Marcus Schmitt-Egenolf",
           "abstract": "University teaching is often conducted in relative isolation, while it is simultaneously characterised by rapid change, including the impact of artificial intelligence and shifting student background and expectations. This paper presents and analyses the VIN concept—Voluntary, Interdisciplinary & Non-hierarchic—as a model for collegial pedagogical development through structured peer observation and dialogic engagement. VIN, initiated in 2022, was evaluated and refined and within the Pedagogically Rewarded Teachers (PRT) network at Umeå university over a three-year period. The model is based on interdisciplinary triads. Following an initial planning meeting, two colleagues observe a teaching session presented by the third colleague, after which the triad engages in a joint reflective dialogue. After three completed cycles, the process concludes with a summative reflective meeting. Empirical material was generated through participant observation, reflective dialogues, and semi-structured focus group interviews, informing successive adaptations of the model. Barriers to collegial auscultation described in the literature include time constraints, concerns about receiving feedback, top-down initiated activities, and the lack of participant stratification based on teaching experience. To overcome these challenges, we designed VIN as an emergent, horizontally organised practice of collegial inquiry rather than a delegated form of distributed leadership. Over time, the focus shifted from feedback on individual teaching performances towards the co-creation of shared teaching experiences. This shift reduced evaluative anxiety and supported the emergence of a shared pedagogical language oriented towards pedagogical challenges and possible courses of action. Participants consistently reported VIN as a highly valued approach for developing their own teaching practice.",
           "keywords": "",
-          "online": true
+          "online": true,
+          "slides": [
+            {
+              "label": "Marcus_Schmitt-Egenolf _From feedback to co-creation - Rethinking peer observation among experienced teachers.pdf",
+              "url": "ICEDX1:y2upPCVgWKZUbmUHsA3H_t19PlOc8-QwkjqTbse3NrgaRO_UUGGvgrbh7OLQKRSme9AYcgEfmHElOQ1EGuOIXPAyuTIFl2AoKRbyLX_rMbw5FbkW0N1ePBW6cOj6KUn8X2PH38gXnPUzQ0AQWQ5iIplE"
+            }
+          ]
         },
         {
           "time": "13:00",
@@ -4152,7 +4488,7 @@ window.ICED26_DATA = {
           "slides": [
             {
               "label": "Lauren Olivia_Davids_ICED 2026_Lauren Davids_25 June 2026.pdf",
-              "url": "ICEDX1:r9MLjGkPYohc2AJyQZvArbhhFA5b5pLD6pdlL_uiN_7xQyBkbWcyKs-MH86s0D2EA3cuQ32TSJvaXrfcpaloKgemPGb1Cb8_spjScCwt2V_5JSjZ2b3206q5fEcL_P-leTDPxjkDAsG5MfC6lHixHiE3YVJIlkbVcj9aQ8S6e9IxVcOXT-7yjx3IkHUcIbLCx_acUzFFQbn1mc61N7pHTQ"
+              "url": "ICEDX1:dCNi-lCd5lznAHsI71zqHsaV6Jx3KPWuQ5h3jDURk2lab67nDh3n_wGj4SSCqW6dIQXqUf1ImettHDModvyDik9HC7gVyowZ8_5SURBAFWyiyCP9Rl4d15vMwCF5DUZoyIUEqnhM-6a8BGsY4Lf8295G"
             }
           ]
         },
@@ -4203,7 +4539,13 @@ window.ICED26_DATA = {
           "authors": "Dimitri Japaridze, Shorena Maglakelidze, Davit Tutberidze, Ekaterine Shaverdashvili",
           "presenter": "Dimitri Japaridze",
           "abstract": "Higher education institutions (HEIs) are fundamentally assessed by their outcomes - specifically, graduate employability, lifelong learning, and community engagement. Despite major post-Soviet reforms aimed at system transformation, Georgia continues to face ongoing challenges with graduate employment. This study emerged from a broader research project titled \"Over-education and Labor Market Mismatch in Georgia: Challenges and Ways to Reduce Them.\" It uses a qualitative approach to assess how well university curricula match labor market needs. The methodology involved conducting and analyzing 40 focus groups across five selected universities (two in the capital, three regional). Focus group participants included faculty administration representatives and lecturers, final-year students from business and education faculties, and graduates from those same faculties. The analysis revealed no notable differences in responses by faculty type. Key Findings: 1. Literature: Heavy reliance on English-language literature, often supplemented by \"readers\" compiled by lecturers with materials translated into Georgian. 2. Curriculum structure: Students, especially during the first two years, noted substantial overlap between subjects. Some courses were perceived as excessive or unnecessary. 3. Practical components: Importantly, there's consensus among students, administration, and lecturers that mandatory internships at potential employment sites are either ineffective or don't exist at all. 4. Employer engagement: Very minimal, largely attributed to employer indifference. Based on these findings, recommendations were developed to improve curriculum quality and ensure graduate competitiveness in the labor market.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Dimitri_Japaridze_ICED 2026 - Dimitri Japaridze.pptx",
+              "url": "ICEDX1:fuE8NSJws1jtn5kUmdHYobkCH76I5qnynZ4L9_CEvYR57jmsl882NsZLLWnNL0dBit6_HZXkqZgGxPbFj-wn8xfwbn-tU30LoWGqrT-vyJC9B8-6HJ7TN5pv5O5YuvfBpXBqDmeozHMOSLDktKkLk1H0"
+            }
+          ]
         },
         {
           "time": "12:45",
@@ -4272,7 +4614,17 @@ window.ICED26_DATA = {
           "presenter": "Kunihiko Takamatsu",
           "abstract": "This paper proposes a sustainable Faculty Development (FD) model that fosters \"Student Agency\" by integrating data visualization with collaborative human networks. As higher education shifts focus from passive knowledge acquisition to the cultivation of non-cognitive abilities (e.g., GRIT, resilience), visualizing these invisible traits remains a significant challenge for instructors. We addressed this issue within a mandatory first-year experience course at Kobe Tokiwa University by utilizing an Eduinformatics approach. First, we analyzed Learning Management System (LMS) logs and found that the timing of assignment submissions significantly correlates with students' non-cognitive scores and academic grades. This establishes simple behavioral logs as an objective proxy for visualizing student agency. Second, to support these findings with effective instruction, we implemented a large-scale team-teaching system. Social network analysis revealed that this system functions as a sustainable On-the-Job Training (OJT) platform, creating a dense, cross-disciplinary faculty network. We conclude that this \"Data-Informed FD\" model—where objective data triggers early detection of student needs and a robust human network executes the necessary interventions—effectively enhances agency for both students and teachers, offering a scalable strategy for educational quality assurance.",
           "keywords": "",
-          "online": true
+          "online": true,
+          "slides": [
+            {
+              "label": "Kunihiko_Takamatsu_ICED26Takamatsu.mp4",
+              "url": "ICEDX1:kMESi6DBwciqgiUbxq3GP2IvuUO0AWke9phDKJLh7_xVsU7rqgwgFHM-ECgwrNcqOAOYrWuGh3FBLwgwh4YaRuwEC9WF1JolhYtnJCHR3BgYHxidQPUJFo7EpwGIkKyXXoh6m1mBZDMldhhPuajUU1rq"
+            },
+            {
+              "label": "Kunihiko_Takamatsu_ICED26Takamatsu.pdf",
+              "url": "ICEDX1:E65zHhBSQP5hmmJRqWgD2ZNy1_qGlOv9QTxIrBMlp487b4Vtv_zZHEMIHvAQ3Fe1O3c18UN_6uC5jxCnSny6-n3KTblZ9hWwYXMNGladRWWJC0d0I-uamW5ts3os1OW_aRZ284zCetVE4o8O-OjzkF2m"
+            }
+          ]
         },
         {
           "easychair_id": "311981",
@@ -4299,7 +4651,13 @@ window.ICED26_DATA = {
           "authors": "Antonia Scholkmann, Angelika Thielsch",
           "presenter": "Antonia Scholkmann",
           "abstract": "Academic Development (AD) has been extensively discussed in the literature from various perspectives, often focusing on its roles, identities, and contributions to higher education. However, a closer analysis seems to be missing of how the setting and enactment of higher education policy affects agency, defines roles and allows space to navigate for academic developers. In a recent chapter, we examined academic development in Germany as a case to understand how academic developers’ work and practices are being shaped by the policy framework and execution of a new national funding structure for innovation in higher education. Through a triangulated analysis, we explored the consequences and implications of this development in higher education policy setting. Based on this, in the present contribution we will extend this perspective by discussing how the self-perception and self-identification of AD and of academic developers intertwines with both policy setting and emerging practices. We aim to illuminate an underexplored aspect of AD work, share our reflections on the implications for the German case, and invite the session participants to discuss the relevance of policy, politics and governance of academic development in their respective local contexts.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Antonia_Scholkmann_Presentation_ICED2026_Scholkmann and Thielsch.pdf",
+              "url": "ICEDX1:J6KURO1iFvoYy8DMsezJIMteyuP9SJ3cVj4ezK_CQxMYc8chhcOanSraVn2hzZfjprP-3rU_arnTNW7CZwrKmQ7oBtUtyIqCpCDdSVn-BRnbk_Bc6EU8At8WfUAZ5ekI98ItfiO7Os5dK_iUDFMPGueW"
+            }
+          ]
         }
       ],
       "easychair_session_id": "104879",
@@ -4326,7 +4684,13 @@ window.ICED26_DATA = {
           "presenter": "Héctor Tronchoni",
           "abstract": "Articles published in scientific journals on university face-to-face lectures reflect the tension between their educational value and the need to understand methodological complementarity in line with the academic policies of the EHEA. Two research questions debate the continuity of the lecture: Does interest in renovating the lecture remain among the international research community? And what improvements to the lecture do the reviewed articles suggest? A systematic review is conducted following the PRISMA protocol, with a focus on theoretical and methodological rigor, prioritizing documents published in journals with an impact factor. The search strategy was applied consistently across three databases: ERIC, PsycInfo, and Web of Science. The results provide data on: a) the indicators framing the scientific visibility and institutional backing of articles selected, and b) the multidimensional classification of structural components: perspectives, guiding aim, type of study, and the formative, technical, and critical aspects of the articles. The discussion and conclusion will provide answers to both research questions based on the evidence found in the research, and the results will be evaluated in line with the authors’ concerns about the complexity of oral communication through which teachers and students connect and collaborate in the construction of knowledge. The educational implications are discussed in terms of their alignment with a socio-constructivist perspective and four key areas for analyzing educational innovation: lecture design and structure; interaction and participation; methodology and technology; and evaluation of the innovation.",
           "keywords": "",
-          "online": true
+          "online": true,
+          "slides": [
+            {
+              "label": "HECTOR_TRONCHONI ALBERT_ICED Tronchoni and Izquierdo (2026).pptx.pdf",
+              "url": "ICEDX1:B5SLIlz9hnhthBOytvNK7NfbITw50ImbN1oENy36PzagNPLwUPEw19QRM7cnbs4yRxMx8yDgx-08hRpwQhKI1ZXHL6BBScgvAbMc7q84yNbBIfVhwlxPqcRlfvbuuYRdY_1WQKyprfAxgMEZ41tNbj8C"
+            }
+          ]
         },
         {
           "time": "12:30",
@@ -4359,7 +4723,13 @@ window.ICED26_DATA = {
           "presenter": "",
           "abstract": "This presentation highlights the importance of combining Action-Research (AR) and Work-Based Learning (WBL). While WBL has not been often combined with AR it is, nevertheless, recognized as a methodology which helps foster researcher and university teacher agency. How does the practical inquiry and collaborative process of AR trigger paradigmatic shifts on how researchers approach research methodology? Based on a qualitative approach, we illustrate how the combination of both AR and WBL enhances the inquiry process of and makes researchers reflect upon their research methods and readjust their AR roadmap, a process which fosters researchers’ practical knowledge and agency. The findings suggest that the combination of AR and WBL helped transform researchers’views and made them more aware of the systemic challenges faced by university teachers. Instead of focusing only on teaching practice, researchers adopted a more systematic approach, considering the institutional context that shapes teaching and learning within the university. For education and training policy, these perspectives advocate for more participatory, contextualized approaches that are co-constructed with actors in the field. AR, collaborative and contextualised methodologies capable of capturing both the dynamics of agency should be promoted to address the challenges faced by higher education professionals, stakeholders, and practitioners.",
           "keywords": "",
-          "online": true
+          "online": true,
+          "slides": [
+            {
+              "label": "Rana _Challah _ICED26_RA_Rana Challah.pdf",
+              "url": "ICEDX1:d6y20SrJWqU5sygTlAvVfryqQIqF5vyr0Ygldf1SKZCCeqk5ke4GvVTU3fZKp5lo2_oiH2H18TqnagizPHAJTXqrDi_BRtRvypqHnC53ZXG-iPnPtjo7dOPYnOypbo579frRQ91Mzb53YPdqVFz4wIeP"
+            }
+          ]
         }
       ],
       "easychair_session_id": "104874",
@@ -4404,7 +4774,7 @@ window.ICED26_DATA = {
           "slides": [
             {
               "label": "James _Garraway_My presentation agency CL.pptx",
-              "url": "ICEDX1:-wypya-JFtdCZNZnA-CnZsukNRNzaZXwUt36leY_ChWni3g91ZyuQaaCWtK1FaMH_Rk6ed67WafdXsUs7uYiejUuPnG2qq9jbTWbVEct_f-vCcepSlCXJFuKk4YziRrKJvxXf_9lPyssyJNUCt5-pVCJUFdgteZisoN44k-Up4Kp4jlnyOjf6Hpu7F2sc4WaHs-YV1kvkc152IjpPVIP7A"
+              "url": "ICEDX1:1QKMHAKsiEXJ_uCaYc-A2GkF91PuQRIg79otQWPpMlebQkyNxMETzuQoBTcO_wbAIE8h5EI5uu3eu1hZcXtsgTFMSM4nap7HPnadYZWbGLEHeKaQaM0x3lmV01kFEBjy7aVjITxFqZJsrZLwvEafWBgn"
             }
           ]
         },
@@ -4466,7 +4836,7 @@ window.ICED26_DATA = {
           "slides": [
             {
               "label": "Yan_Gao_Storytelling_Academic_Development_Conference_Detailed.pptx",
-              "url": "ICEDX1:iEOlznc9hZprPUc4OPh6joB1WjglHrdeVKQHxLF3b_pqEJnhbFIhHKwUIwu46jvDqSmB7eG2lAncOdq-ZM5mVKsIp5Lv2jFDyEIuBqk8cRX2Dk_bA8ysxc1H9NOWfK6Y-c7Vwa0BMQPxY-Nn5LOnHsbm-xCOH_GfmzWa5pQwoY1WQBTbOSiLL9vHfNpEBLZ0rO05TPmkHyRQpCWhaJin1Q"
+              "url": "ICEDX1:ah9aucHV-w-QnejZd0sldnowjcvJCOmtA_sDNTSIQNFPHOZx5RHEvmrlrVrXXIzxvUxODCDlkhB1aNqKjR-ZAp8rjVmNb_H8zsVRQnafcke5x3ZNPUHWcpUwKQtdQ7q7gUT1NYABwfYHdwnh_yvU7te8"
             }
           ]
         },
@@ -4477,7 +4847,13 @@ window.ICED26_DATA = {
           "authors": "Michele Di Pietro",
           "presenter": "",
           "abstract": "What happens when academic developers use storytelling as their main research methodology? This paper reports on a study that interviewed 50+ professors in various disciplines and at different types of institutions in the United States and simply asked them to recount a story that stands out from their career. The results from this simple prompt were surprising even to us researchers. The study used a holistic theory from yoga philosophy as the interpretive framework in order to develop a holistic understanding of the faculty experience. The paper will explain the framework and summarize the methods and results of the study, with particular emphasis on findings about faculty agency in post-pandemic burnout and under political attacks on the professoriate. This study has implications for academic developers who want to take a holistic approach to program development and promote well-being and fulfillment at the same time they develop competencies in their faculty.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Michele _DiPietro_DiPietro paper.pptx",
+              "url": "ICEDX1:ZX3ezbashNs9-p-UerWvyhlSSVYu3eMCwschRcrRIZ1s-nFS53pK6V6D_JVTzD-DnTG_mo4_AStZTyUf4WK9M_7vViqFJHaOVfFTi_JbER58kx8-33G9QnIZ0uXEUH1SMRU-KnXMqw8fCQftEoLZipvg"
+            }
+          ]
         },
         {
           "easychair_id": "311902",
@@ -4508,7 +4884,7 @@ window.ICED26_DATA = {
           "slides": [
             {
               "label": "Tarisai _Mpofu_Dr T. Mpofu ICED26 TT.pptx",
-              "url": "ICEDX1:JAGMLI9MrJ2ZFrPJ-IJV-2XdRdE77kzxwIzlPMckfk2dSPRziWIub8yM3MrcvjPKBhesSZY81_t6ED9bZOtFXaFtb4-0JvK3dxtrJgTnY8M8mDCbfq08F0SqOVazRu4ixD91kLefln1zadl1ooLPo2_fp4UINR7jHGLcieGckpE1jfcCQr82yuJvxlDijvEFQBnQn_k41WiaupSx4PFDrA"
+              "url": "ICEDX1:z_zi4SzMflyiFmSKPZ_Nrjg2N0cHBgxU47Lx9UtlsWGDJ9QIPV8jMxmFmVroCDP_cUYoT2hW_NMYjRwIGT31Jl2sfqDV7jl5EGX88-oLKYRu-A34uJKDKPbyjeI0mHPgjyHxwuEeL_GXMXJMlDFPgmDy"
             }
           ]
         }
@@ -4544,7 +4920,13 @@ window.ICED26_DATA = {
           "authors": "Jo Kukuczka",
           "presenter": "",
           "abstract": "Educational Developers (EDs) hold a central role in shaping teaching and learning, yet their knowledge practices remain underexplored. This paper investigates how EDs in the UK higher education conceptualise, value, and enact educational theory, and why. Drawing on qualitative survey responses from 30 EDs across diverse institutional contexts, the study combines thematic analysis with the Epistemic Plane from Legitimation Code Theory (LCT) to illuminate EDs’ epistemic practices. Findings show that EDs conceptualise theory as explanatory ideas that strengthen judgement, coherence, and principled decision-making. Theory is strongly valued but enacted with considerable variability: many use it explicitly, while others draw on it tacitly, guided by audience, purpose, and institutional pressures. Approaches are predominantly flexible, reflecting a context-responsive stance shaped by disciplinary diversity, relational work, and institutional constraints. Mapping responses onto the Epistemic Plane reveals hybrid epistemic profiles grounded in both principled and situational considerations. The study demonstrates that EDs engage with theory more deeply and explicitly than often assumed, yet structural conditions moderate how openly it can be foregrounded. These insights highlight EDs’ epistemic agency and underscore the need for institutional arrangements that recognise EDs as knowledge professionals capable of advancing socially just, conceptually informed Educational Development and the wider academia.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Jo_Kukuczka_Revealing knowledge practices in the UK Educational Development Jo Kukuczka ICED2026.pptx",
+              "url": "ICEDX1:GyWaZB9armXBmKPESgZ0wsViFCdMfwTmxQTNc2pi4c-fpDzuu1JZksny-3ed-4ABogin1sN_k3agNFoNe37-dmkRVRqJaCSa1ZPRHKcyAfJtYe2dqLh9m39WK0UYxjfE1aJllCUdYRaAjAXvm9ehYw3y"
+            }
+          ]
         },
         {
           "time": "12:45",
@@ -4560,7 +4942,13 @@ window.ICED26_DATA = {
           "authors": "Elena Benini, Henk Huijser, Anna Serbati",
           "presenter": "Elena Benini",
           "abstract": "This study explores methodological trends in academic development research, with the aim of identifying specific characteristics of the field. An exploratory review of articles published in the International Journal for Academic Development between 2014 and 2023 was conducted. The analysis revealed a clear prevalence of qualitative approaches (75.5%), followed by mixed methods (17.6%) and quantitative methods (6.9%). Interviews, reflective journals, conversations and qualitative questionnaires emerge as the main research tools, reflecting the contextual and relational nature of the work of academic developers. The results suggest that these methodologies do not indicate epistemic closure, but rather a growing maturity of the field, capable of adapting to the complexities of academic contexts. The study therefore proposes that these methodologies can be considered “signature methodologies” of the sector, contributing to the epistemic development of the discipline.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Elena_Benini_Signature methodologies_presentazione Salamanca.pptx",
+              "url": "ICEDX1:Wv22wxDvQQSXH3qat8sAaSYiiVzKLNR1foHwmbhZUjbnJb7XvTqb7GrY8OHXQKJ_kVyTvFUkNRc6kX9jny0x3S8nGUrt2wk29m6uPa1dN_jVU7SY4ryTAX0b8w_uA3XAXENCYV1J_g08KUZxjMIdcY6D"
+            }
+          ]
         },
         {
           "time": "13:15",
@@ -4605,7 +4993,7 @@ window.ICED26_DATA = {
           "slides": [
             {
               "label": "Mª Asunción _Pérez Pascual_ID242_Workshop_ICED_presentation.pdf",
-              "url": "ICEDX1:mY8hl5jCqkFPKqLk8-a6B0IsV_WwrkKJznOnjngqu4Ne1KcDiv3j-NtCp3Nz5-TsmoDBP1GVLiNrgPto5ybh6OlT89fFOzIYBtbkaaEQPg6F7ExOfhMQLFiYZh-qV4in-8CkX6bFfwNYp7LYOqZyX-hcixuzhBG6TcKEVLfHYZTGUKNU9z4dqTAsON29NtrPxxrVZz6KtX6zg0-lXQtzQA"
+              "url": "ICEDX1:vJx8d0LO2o3GlYu_O2PmJDJtDPI8Dbb6HjvJd3xthdz5jqgtsb578bnDnpazPkGSTia0U2yfMzhVoam0hQQ6yZWtrQZkF-siKlbLAAAtxoTPlDOeQpVnz_4u8BPxtygLGHYQqQpHaEs9MGr-FVE2-egc"
             }
           ]
         }
@@ -4664,7 +5052,7 @@ window.ICED26_DATA = {
           "slides": [
             {
               "label": "Iris_Capdevila_Capdevila, ICED.pdf",
-              "url": "ICEDX1:Pprh3qoWB-_O3SCRxriXf3yP5k0o2ETGAz6gehpiEbf9AqpFHw9QfMzytyzm8l2oNqaOf2x6dkvEWT0WjqrjngDRY9NfCVQTXZuIMdeNeu_J15SnNROLLK_0EcUbz7uZrXdcdINk6eh3Xptxc_BYSoS8OXNYKODva90wonTlo1TvFg_0QRqGwRzMLS6Xvz_S7jtDLF4ZjqQexYSgr0K50w"
+              "url": "ICEDX1:8yS8wdT2A3TsE6mBvig4pzwhM4d45ezU2gGUe0XxumP853ZI8-LdjHJGBgEYy59dnm8ZjYG_NMEocpW8yjH6B-SlUtWmVaHTMlBeeWgBMt9L20aNQp4GqX6n5nUI4HBIdULLdMSEiPKodUCjmV_g-p1T"
             }
           ]
         },
@@ -4699,11 +5087,11 @@ window.ICED26_DATA = {
           "slides": [
             {
               "label": "Lisa_McDonagh_ICED POWERPOINT PRESENTATION - McDonagh & Sanders.pdf",
-              "url": "ICEDX1:tF2bNtYJPG7CsGO-VqO0G4z1y7yuLXLzhqICIQkvo1aRuRAP_bE-7VhbXRdVL5Xs5yVrq5KZmXPURF3AIwQzKHAQG-bjkPg69rLSE_j7fplhOfxmb04jb8e3i1fOGB_rgg1SfK6C618G9g7g8oE1BHUQyHxUCHkiPpWTML9YLmO-L11nzRfQoJR1eNUut-x165pFr0fr47sMfTl9kWEbzQ"
+              "url": "ICEDX1:f241rOb2EYT_6azuxI_23qQHcgVeeh85A3My9Y2GE_m8t5p0L_wTFm4gH3eRi9uuL267Lk-mXPc4H4OzjQpZ2r1TSIgMfTL0D2748MmYbg6VJ1Gf5VywSoPscA1VB2gfuqoNKe3neSE3V2CEzoz7owDN"
             },
             {
               "label": "Lisa_McDonagh_ICED POWERPOINT PRESENTATION - McDonagh & Sanders.pptx",
-              "url": "ICEDX1:j3u6MoUL_zIA6Gj1Qp-6zCxVYLwa9RCnMMWcSwSJ19Dx8nOOuE9gywXjruusRKcBd8SSSk03f9SuILfFQggWqjZ9_nF7w5-dkcaxLSBMKAOqdrNXR2iG8Q9d6TSmgiKoZEvMMAPPam7JKXAoYU_1cQWYUpe4o7DmQ-N8nNvVqK6-tf69fUAOzvg4ypuyHNjJyJN1iTsVhijFpDr9zA8SCQ"
+              "url": "ICEDX1:tR4r3M4O6GE0O0hJfB-ER9YHeGo1-UNa5P4z5CSAu1t8qJQPoh9Mi5AM2vEpW9MdVDTUCqZgGImymf0IjpUvCAGmXIM5DLU63CljDQTD1W3Rd3Bs7YPbH3AsVzEVErhNU-72KTqs-wPkjuTOXk1MjOKr"
             }
           ]
         },
@@ -4801,7 +5189,13 @@ window.ICED26_DATA = {
           "authors": "Kiruthika Ragupathi, Kerry Dobbins",
           "presenter": "Kerry Dobbins",
           "abstract": "Questions about whether Academic Development (AD) constitutes a profession, a field, or a discipline continue to persist, even after more than five decades of its establishment. These debates directly impact upon the agency of academic developers to facilitate change and strategically influence learning, teaching, and institutional practices. As a field, much of academic developers’ expertise in how knowledge is constructed, shared, and applied in interdisciplinary and collaborative contexts remains tacit. For new or transitioning academic developers, this can lead to challenges in understanding what it truly means to think, know, and act as an academic developer. As academic development grows globally and takes on increasing institutional significance, the need to articulate the epistemic foundations that shape knowledge development and professional practice of the field is more urgent than ever.\n\nThis collaborative session explores whether the Decoding the Disciplines (DtD) framework might serve as a productive lens for surfacing the implicit cognitive and practical dimensions of academic development work. Traditionally used to identify bottlenecks in student learning, DtD may help us interrogate how knowledge in academic development is constructed, shared and applied. Could this exploration support academic developers in becoming stewards of the field? We see our work contributing to ongoing questions about whether academic development is a profession or a discipline. Additionally, in this collaborative space we will examine how identifying bottlenecks might empower us with agency and knowledge to reimagine academic development and respond to these longstanding debates.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Kerry_Dobbins_Decoding AD_Kiruthika Ragupathi and Kerry Dobbins.pptx",
+              "url": "ICEDX1:_7q_51L82ekMD8rWlVaWNyUm4mMqN3HCR2uqz6LHGWtD54UCxZ3tyU5hAFFavwptg5kWBsBFO1UkiXqouv73kYMx6VK_V4U70y__nRxvNqdaQyM7nQFNP8vVk_rArRuifsfUoOKmrK285QZhu6uz6Y13"
+            }
+          ]
         }
       ],
       "easychair_session_id": "105609"
@@ -4844,7 +5238,13 @@ window.ICED26_DATA = {
           "authors": "Manuel João Costa, Cíntia Costa, Rúben Alves, Rogério Costa, Agostinha Gomes, Ricardo Lima, Isabel Neto, Diana Oliveira, Ana Rodrigues, Helena Sofia Rodrigues, Cristiana Silva, Helena Alves",
           "presenter": "Manuel João Costa",
           "abstract": "In Portugal, academic career pathways have traditionally prioritised research over teaching, limiting the recognition of pedagogical development and constraining sustained investment in teaching quality and student learning. This imbalance has contributed to weak incentives for academic engagement with teaching enhancement and to ongoing challenges in staff development. Although professional frameworks for teaching recognition have expanded across parts of the European Higher Education Area, adoption remains uneven, and Portugal has until recently lacked a nationally articulated framework for teaching competence. A significant transformation is now underway, catalysed by unprecedented national investment in 2024 through the European Union’s Recovery and Resilience Plan. This investment has led most Portuguese higher education institutions to organise into seven interinstitutional consortia focused on teaching excellence, alongside the establishment of the National Council for Innovation in Higher Education (CNIPES). Together, these developments create a unique opportunity for systemic change and for advancing parity of esteem between teaching and research. Within this context, the EPIC consortium, comprising six university and polytechnic institutions, is developing a shared framework for teaching competence applicable across both subsystems. The framework has been developed through an interinstitutional benchmarking and consensus-building process and is informed by international reference models while adapted to national contexts. Conceptually, it is organised around expanding spheres of impact, framing teaching development as a progressive widening of influence from classroom practice to broader institutional engagement. This poster presents the framework’s development process and early outcomes, illustrating how coordinated collaboration can strengthen teaching recognition and support cultural change in higher education.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Manuel_Costa_POSTER_EPIC REF_ICED_mjc.pdf",
+              "url": "ICEDX1:d05etVYdhKRWl-1wvFXWUypnI5nYsvyXDa3BQ0vezP6BOAfnM7tMDGaA1zDAW6L0KsnQepqNPdcDFzTitrv7CA47oLzWuWw-OedtlbrQY-M30q-cyy0xx6M-vrxPxvSLc_3D9IaaE3aLhGSzJ5gCF0hn"
+            }
+          ]
         },
         {
           "easychair_id": "311788",
@@ -4853,7 +5253,17 @@ window.ICED26_DATA = {
           "authors": "Lotte Ebsen Sjoestedt, Dorte Elmeskov, Kirsten Joergensen Joergensen",
           "presenter": "Lotte Ebsen Sjoestedt",
           "abstract": "How can academic developers, the Head of Study and teachers collaborate and support the didactic development of a new interdisciplinary, international and practice-integrated MSc-programme, Biosolutions, through the process of establishing a Faculty Learning Community? What change strategies should be taken into consideration? In this poster, we describe and debate how a Faculty Learning Community has been initiated through an iterative, circular process where teaching principles have been formulated and revised. This has been carried out through ongoing experiences from the teaching shared with colleagues in structured formats during common meetings every second month and through working in trios with peer mentoring as a part of problem sharing and problem solving. The teaching principles form the basis for the teachers' reflections on creating coherence between learning activities, learning objectives and assessment in addition to the curricular content of the individual courses in the programme – and how elements such as international and different disciplinary backgrounds along with practice integration play a role in the students' learning. We look at the challenges and opportunities applying a model of strategies developed for academic and educational development. In particular, we are interested in how we can address commitment over compliance and navigate the complexity of academic development.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Lotte Ebsen_Sjoestedt_ICED 2026 PP FCCS + BFS.pptx",
+              "url": "ICEDX1:uddG3UCiOu54KCRMTepu16n-niz7i4tLsz9x7cPWNfeFOaK2xLVWXThAmI7vgFEAO2qPyhAIAPCI0gxYrn6CjIgQLEdgRQiPUdqMBsIj-bJah4eohEbFuzZH0xHwrJVAMVKF9aZ-Z4OTURHdLJTsx7q1"
+            },
+            {
+              "label": "Lotte Ebsen_Sjoestedt_POSTER ICED Final FLC upload.pptx",
+              "url": "ICEDX1:ICgqmF_XTPikWfzJBw7xTpoYl3koRpIbjOMwZn0fIBT5anron02XJvSywpymHPfZP3SS2mqZsALB5XzqaJzoblPKjXIxGpHwtM8E5pKbpe2lGVSOn32wtiMy0XmfJu457GGiKeCgiWIipy9WuBKRbpNr"
+            }
+          ]
         },
         {
           "easychair_id": "311836",
@@ -4923,7 +5333,13 @@ window.ICED26_DATA = {
           "authors": "Amrita Narang",
           "presenter": "",
           "abstract": "Academic developers are increasingly called upon to act as strategic change agents, shaping teaching cultures, curriculum enhancement and organisational learning while navigating volatile, uncertain, complex and ambiguous (VUCA) conditions. Yet much day-to-day academic development still takes the form of reactive, short-term responses to staff development needs, leaving limited room for reflective, values driven strategy work. This workshop introduces photo~currere~voice, a creative, posthuman, arts based methodology (author, 2024) that combines autobiographical currere (Pinar, 1975) with participatory visual inquiry (Wang and Burris, 1997) as a way for academic developers to (re)examine and reimagine their strategic agency. Working with their own images, and recognising the entangled roles of people, places, policies and material artefacts, participants will trace past, present and possible futures of their work and identify micropolitical “becoming minor” moves within existing institutional structures. The session is highly interactive and grounded in research with academic developers engaged in decolonial curriculum work. It will provide a flexible 4 step process and adaptable tools that participants can take back to their own centres or institutions for use in team retreats, strategic planning and leadership development. In line with Subtheme 2, the workshop foregrounds agency, strategy and organisational transformation, supporting participants to cultivate agile, resilient and values aligned academic development practices.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Amrita _Narang_Presentation_AN_V2.pptx",
+              "url": "ICEDX1:1ZAgEZ0nb2ww4kv3Gi7EggjfnPVq95R0rdTXB-xv-ByegwojmfwFUqXgTRk5cV96TigDRDfUerpyv_yIPbhefxtUkesKQr1LBkRGKl3ddXUlkK_d0ekp7jrXYuScnB8mnGduImsvpdhYxGtOz5SlKevF"
+            }
+          ]
         }
       ],
       "easychair_session_id": "105616",
@@ -4949,7 +5365,13 @@ window.ICED26_DATA = {
           "presenter": "Dagmar Engfer",
           "abstract": "This workshop builds on findings from the international project CiVR – Collegial InterVision Research, conducted across three universities in three countries. The project explored how structured peer-dialogue formats—such as intervision, peer observation, and practice demonstrations—support critical reflection and mutual learning in higher education development programmes. Interviews with participants highlight the value of structured dialogue for analysing teaching cases, generating fresh perspectives, and fostering interdisciplinary exchange. They also underscore the importance of communicative clarity and conceptual translation when collaborating across national and institutional contexts. The workshop invites conference participants to actively explore and practice collegial intervision and to share experiences with dialogic formats in higher education. Collegial intervision is a structured peer-based dialogue based on counselling where faculty developers, lecturers or supervisors collaboratively reflect on challenging teaching situations and enhance collective learning. To create an open environment for diverse viewpoints and establish common ground, a Deep Democracy–inspired dialogue serves as an entry point for shared reflection, giving all participants a voice and eliciting their experiences with peer-based dialogue. Participants will engage in a facilitated dialogue and collaboratively develop ideas for future applications, including how structured formats like intervision and adapted coaching approaches can enhance reflective practice in higher education. The workshop offers a practical, co-creative experience and generates concrete impulses for strengthening peer-based critical reflection. It supports the collaborative development of approaches that can enrich faculty development and higher education programmes. It addresses faculty developers, programme leaders, lecturers, supervisors and all persons interested in peer-based dialogues.",
           "keywords": "",
-          "online": true
+          "online": true,
+          "slides": [
+            {
+              "label": "Dagmar_Engfer_WS27_288_Engfer_Winther_WS_Coll_Intervision_ICED26.pdf",
+              "url": "ICEDX1:P7p5aH2EN_30Z67dA958a_OZkb2zgkzMEiwPAmhmPSZjdOg1wzDbp77rCXadBTkfdPCbjnguntac1yInEgwFRGXRAxdEuG97AGdzVEcesoWFHzsNR-9q7wSnkgRCiEOnDlYo5oX_LrkwKtvTgZu9i3jN"
+            }
+          ]
         }
       ],
       "easychair_session_id": "105623",
@@ -4984,7 +5406,7 @@ window.ICED26_DATA = {
           "slides": [
             {
               "label": "Robert_Eaton_ICED 2026_Patterns-Welldoing Workshop.pptx",
-              "url": "ICEDX1:x6duDug7mpRgh9ZjK6CtVPjWyJ95qjlMge-5FZsWchiiiLxU0rvj1X97esmMdUH6-ismi1EmZFbGvfa_edmmQ6IbKgYFgReFRF6sO0HCKKCZoQxIqMRkL3a7RP0NT-jqPCj6pa-Wfc5rRD5zsrE5DFO4cQI6UNasWkuyjWQXuicPjRtcIBaYb0Dy-iRM0SrtRJrolCVx934DjS8FA38T3Q"
+              "url": "ICEDX1:_4SVgMb3UO0e7DsyGBQfM5cSmGu2x1jXw5sasrq67z-MGa-3LF_M_cdGPHzo5F6WmTiGmKfrmD6QY96TivPXd8f0fVdPq4tUIQ2BzmuDpu_0GvalnNA210Ob8pCH81gkgKqtPTLbHeNhCLTexJL_XXKu"
             }
           ]
         }
@@ -5011,7 +5433,13 @@ window.ICED26_DATA = {
           "presenter": "Cormac McGrath",
           "abstract": "As universities undergo significant change, upheaval and disruption, the role of academic development in guiding teaching and learning becomes a critical, and potentially stabilising, force. However, the work of academic developers themselves is increasingly threatened, including through funding cuts and the adoption of technological tools such as genAI that may purport to replace academic development activities. Within this turbulent environment, assessing and responding to risk can be challenging. In this workshop we invite participants to engage with the methodology of speculative social science fictions to explore possibilities for the future of academic development. During the workshop, participants will examine existing fictions and consider issues within their recent practice and that of their peers to draft their own fictional scenarios within small groups. The workshop will provide a safe space to creatively explore challenges, impacts and possibilities for academic development practices, processes and supports within the future university, and empower participants to utilise similar methods within their own practice.",
           "keywords": "",
-          "online": true
+          "online": true,
+          "slides": [
+            {
+              "label": "Elisa_Bone_McGrath_Bone_ICED_17E_Workshop19.pdf",
+              "url": "ICEDX1:niEvdX_uq947p6Xm95V5EKHKWEYWvOSPtHyH5BjbO3u0x-t9SgaK1an-nrFC4pqHhdwKgWrvV5CnBMMtvkj60wF74Zq-tLsHnd4VGINOcZnO4LuPmzvxSuyMn1UGnYY2_2TPlbydxq9SCqGq28Op8cvT"
+            }
+          ]
         }
       ],
       "easychair_session_id": "105615",
@@ -5144,7 +5572,17 @@ window.ICED26_DATA = {
           "authors": "Mansi Sharma, Lobke Van Damme",
           "presenter": "Lobke Van Damme",
           "abstract": "This interactive workshop introduces educational developers to Challenge-Based Education (CBE) as a powerful approach to foster student agency in higher education. Agency - the capacity to act intentionally and influence one’s environment - is essential for preparing students as active, responsible learners. Challenge-Based Education (CBE) operationalizes this concept by creating learning environments where students actively define problems, make decisions, and co-create solutions. Through its structured yet flexible framework, CBE empowers students to exercise agency by taking ownership of authentic, complex challenges and engaging in collaborative inquiry and solution design. Participants will experience a fast-paced CBE-Sprint, simulating the process students undergo when tackling real-world problems in Challenge-based Education. During this CBE-sprint participants will work collaboratively on the theme of enhancing student agency in higher education. Through this hands-on activity, participants will explore how CBE principles - essential questioning, guided research, and modelling solutions - empower learners to take ownership of their learning. The workshop combines practice with reflection: participants will explore ideas on how to enhance student agency and reflect on CBE-integration in their contexts. Alongside they will leave with a practical toolkit for running CBE-Sprints at their institutions.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Lobke_Van Damme_Fostering Student Agency through a Challenge-Based Education Sprint_ facilitator's guide.pptx",
+              "url": "ICEDX1:BrMmL3jfML4Ok0ZVMTUTWOlFir1rw9W70dRkU5FYuAm1hqv5kZwBgSg08DdUJigwGaqF5HbGtWv_fF6yT9NIE0fO3aWq-LoWY-SCL6Dtv8-QxJbxhWxkpH-yWqcr1j3O6kEdXrl2BGdvUQbPCEAfEIup"
+            },
+            {
+              "label": "Lobke_Van Damme_Fostering Student Agency through a Challenge-Based Education Sprint_presentation.pptx",
+              "url": "ICEDX1:nkzq0m28NYyGCzQorECBWVGUWLLwEmgcUU1VsOFHouA-2PHdSFJGTxP1GulEUok0Rvp7_qtD7Di6r-YKKrA5-Y0jHpxOAmY-iptk13yWLDoJM0iOBSN2xvBg3FqoiskhrscO99OhFjC2fFiybvZTWC51"
+            }
+          ]
         }
       ],
       "easychair_session_id": "105622"
@@ -5474,7 +5912,17 @@ window.ICED26_DATA = {
           "presenter": "Lydia Watson",
           "abstract": "This interactive session will share insights into how a Centre for Teaching Excellence (CTE) in a small teaching-focused undergraduate university developed a Students as Teaching and Learning Partners (SaTLP) initiative that gave students opportunities to participate in two Faculty Learning Communities (FLCs), one being focused on the topic of reimagining grading, the other, on open educational practices. By encouraging student voice and co-designing a space where educational developers, faculty, and students were able to challenge assumptions about traditional roles and power dynamics, we were rewarded with unexpected learning opportunities and meaningful conversations. Through interactive activities, participants in this workshop will identify, question, imagine, and reflect on opportunities to partner with students and be inspired by insights gained from participants and presenters through these initiatives.",
           "keywords": "",
-          "online": true
+          "online": true,
+          "slides": [
+            {
+              "label": "Lydia_Watson_ICED 2026 STLP Facilitation Outline.docx",
+              "url": "ICEDX1:tc4OA5bA_BwcI4fnfKxQhAYZcW1bhHi_VSVtWIFEdWrw8g0wdmIor9TNlM6ObQnuPEDpiotUNnnOV1QPO-XmlfJYPmMxyh1Yv0cuLJpNZ7hKUtzVxi6LZawHL9oZHAedBrTULQb4nsj5_kIUC-qG3UgF"
+            },
+            {
+              "label": "Lydia_Watson_Students as Partners ICED Workshop 2026 FINAL.pptx",
+              "url": "ICEDX1:FdYFAyvsFP6_0VLNF2mv3dOHF5ecZmMNs2hY4D8NYh-P0WlTpd5X0Z6RhyrZZvmobfrAAepZ_9Fa9rDmr7IipAXsgbut3RdxnpTbWtMnpshKB9-k9RvScbMENmK69ls9-gW7W7WphOdW_35yMvDNY5UX"
+            }
+          ]
         }
       ],
       "easychair_session_id": "105638",
@@ -5505,7 +5953,13 @@ window.ICED26_DATA = {
           "authors": "Siara Isaac, Joelyn de Lima",
           "presenter": "Joelyn de Lima",
           "abstract": ". Higher education students report insufficient opportunities to develop transversal skills during their programs, a perspective that aligns with the concerns of educators, industry, and accreditation bodies. This hands-on workshop provides academic developers with an evidence-informed approach for designing micro-experiential learning activities that develop students’ professional skills. Developed through a multi-year research project, the [ANONIMISED] framework comprises three elements: knowing (strategies and models that operationalise a skill), experiencing (opportunities to practise the skill and encounter authentic challenges), and learning by experience (guided reflection that supports transfer). Workshop participants will engage in a specific example of the implementation of the framework that focuses on behaviours that support groups to develop psychological safety, a key dimension of constructive teamwork. The activity recreates common collaboration challenges and introduces evidence-based behaviours, specifically inquiry and active listening, that strengthen team climates. In addition to open-access [ANONIMISED] activity guides, academic developers will find the framework a useful conceptual tool when discussing the development of professional skills with instructors and how principles from learning-science principles (low-stakes experimentation, cognitive load reduction, rapid feedback, structured reflection) can support robust and transferable learning.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Joelyn_de Lima_Joelyn de Lima_ICED2026_Workshop_Micro-experiential_psychological safety_retrospectives.pdf",
+              "url": "ICEDX1:Uenn7T0Tzo9ZQMTIlznLjnSFImHNhMRxExo2trdoE4mtat9VpJUleggowSMKHU8scFnE1rfQLH1Evee1NRTvphu80CUfJKV83h2mXYpZBHZGGaRXzG2d9TG_Xfj7X2cuO6i45flicp6UCiQi-wCRPcSO"
+            }
+          ]
         }
       ],
       "easychair_session_id": "105636"
@@ -5555,7 +6009,21 @@ window.ICED26_DATA = {
           "authors": "Katrien De Bruyn, Sabine Lamote",
           "presenter": "Katrien De Bruyn",
           "abstract": "Self-regulated learning (SRL) is a critical competency for academic success and lifelong learning, yet it does not develop automatically. Students need structured opportunities to acquire and practice SRL skills, which requires intentional curriculum design. We view the development of SRL as a shared responsibility among students, teachers, programme coordinators, and student counsellors.\n\nThis workshop introduces a collaborative approach for working with programme teams to embed SRL into curricula in a systematic and sustainable way. Participants will explore two practical resources:\n\n1) A workshop format designed to engage programme teams in identifying opportunities for SRL integration.\n\n2) A spectrum of teaching methods illustrating how teacher teams can foster SRL development across courses.\n\nThe session will be interactive, combining a concise introduction on our vision of SRL with practical tools and hands-on activities. Participants will reflect on their own contexts and take actionable strategies home to support SRL at programme level.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Katrien_De Bruyn_Individual worksheet.pdf",
+              "url": "ICEDX1:eQNeXbFs_irLwXsVtoKyIJwwVlMMaW6XJy_vVfWeid2jsItxX1ID468kYib-PoZLaSEJtd_LzdZsEzHJLNhkgyGdI1MJMxiRWg0cwHlNiAaj_oyo-FXqJSrZ7Cteq-Chph_2_-rE6RymlafLNyjn40v4"
+            },
+            {
+              "label": "Katrien_De Bruyn_Presentation_ICED2026_Self-regulation skills_Ghent University.pdf",
+              "url": "ICEDX1:uXj8cPdiI1gfBu_20r6uS_LIvpZaxNA8uIH9cT0Oxrjxc-lw2JLiW4RXXJLv--6OJ_tsNoAOesaKtut8gJ0AO1iAWv3j_oVNHFsAxpEQiNXrRVkT_yOGdYP8ErQ49_F7EbWPE2ZsEdsuBR0eks0kxVjM"
+            },
+            {
+              "label": "Katrien_De Bruyn_Template workshop SRL.pdf",
+              "url": "ICEDX1:rDDqPCmWuEGycswqyFjzPTLnULjL8KDxrw34A2RxnSVHpDpn7n77eLAnvPUO7bl2qrb5y4aHVQaH8ZSKb7G2eWwsQyqdaSLA6eIRzgKJbW7h7DKhjhsMHApcdF3QNcLEMxP4RdMvb7GNh4mz2xyF4VJ6"
+            }
+          ]
         }
       ],
       "easychair_session_id": "105635"
@@ -5580,7 +6048,13 @@ window.ICED26_DATA = {
           "authors": "Yiqun Sun, Yexiang Wu, Yezi Yang, Rebecca Wakelin",
           "presenter": "Yiqun Sun",
           "abstract": "As universities revise academic integrity policies to address Generative AI (GenAI), traditional, static self-paced courses struggle to engage students or capture the nuances of AI-era ethics. This talk presents the design and evaluation of an innovative, gamified, self-paced course co-created with students to address updated university policies. Moving beyond passive \"click-and-read\" formats, the instructional design team curated 57 real misconduct cases across the university and collaborated with students to create an \"choose-your-adventure\" rescue mission where learners travel back in time to save animal characters—neutral avatars designed to mitigate bias—from past ethical lapses. The course integrates GenAI in two novel ways: using AI tools to generate immersive multimedia assets and deploying a custom chatbot trained on university policy to facilitate Socratic, scenario-based coaching. This chatbot serves as a safe, judgment-free venue for sensitive inquiries. Evaluation data—including three rounds of expert review by seven faculty and staff, four faculty focus groups (faculty n= 10), and four interviews with students (n = 4)—indicate that this approach significantly enhances learner agency. Participants praised the interactive, decision-driven format and viewed the course as an engaging supplement to traditional learning. This talk will present the development and evaluation of the course and demonstrate how partnering with students and leveraging GenAI tools can transform academic integrity training into an empowering, agency-building learning experience.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Yiqun _Sun_Academic integrity.pdf",
+              "url": "ICEDX1:Wye1LXFcY_z7T5NZlZ3B-NvKn-_f_ql-v8LLyV13JK_O_Vt2tCJrpJh0Vhrl4cVICqEE847XmEuNZmuUHdXF5ABGCtLMzfz41EiWYj2Z4ncfUpbh_oSfdEXClIblCmq9_QZgap2snq8bEg8OIdH7xQDo"
+            }
+          ]
         },
         {
           "easychair_id": "311770",
@@ -5755,7 +6229,13 @@ window.ICED26_DATA = {
           "authors": "Katherine Raichle, Andrea Verdan",
           "presenter": "Andrea Verdan",
           "abstract": "This workshop explores \"low-prep, high-presence\" academic development events that prioritize participant agency and authenticity over perfection. Rather than meticulously orchestrated programming, these gatherings center faculty/academic staff as the creators of event content, adapting to their evolving needs and allowing them to be agents of change in their professional work as leaders, researchers, and educators. Drawing from research on social support and weak-tie theory, and models such as Communities of Practice, we'll examine how intentionally designed yet flexible spaces foster crucial social, emotional, and informational support, particularly during times of uncertainty. We'll identify strategies for creating responsive programming that requires minimal preparation while maximizing impact during especially challenging times.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Andrea_Verdan_ICED2026 PresenceOverPrep - Session19F Workshop38.pdf",
+              "url": "ICEDX1:3hsI6me_sl1WuMreHfwNzzPtIFodx0GJq2MYdsEJ4Dj-J1t7CDzd1Fq6gh7ATDu7-2I40r9j3xmlj3zYnD6SYn6HpFdDpshl3yIV4j_UBTzjlVLUmuX0yFWbH0zHOdYQg5kOKsJsLTFbJy2h8653-5Um"
+            }
+          ]
         }
       ],
       "easychair_session_id": "105648"
@@ -5809,11 +6289,11 @@ window.ICED26_DATA = {
           "slides": [
             {
               "label": "Lauren_Barbeau_26_ICED_Peer Observation Workshop.pdf",
-              "url": "ICEDX1:UPeK_uovn9SzBtWhaa0_CvH1OYWLSY5I9FDugGELcY4nfsJBwP9GP38ReX8EKrL2LjQv9jpu_4vbmYXYN4Hqbx2o2TRlsomedODrutXYScZdGdCOyoHGQ88bJ0wQdeiCFlFydlOtXHzjmPM3F51IdzIem3MaRSe56PltmgwImtiDhfHXkqkkQ65vv-IOOE84nd0el-3pdrnFxBhXIiDhkg"
+              "url": "ICEDX1:_YTBykxmYog3I8FCbzVAsUXIyNd0ucgOYZB8LIei1UcQL4t0cjR8pNDWXt33PgD8DbRZWYSMQTfe5Ct2PM2t1dHTkMOmkRZr0F_glHMxOm6Wd9-bZakTgBRhszOIO1_sJ-1Y3HyHyYxAjosKFOxLkdAo"
             },
             {
               "label": "Lauren_Barbeau_ICED_Rating What Instructors Do.pdf",
-              "url": "ICEDX1:9PCga9vq2yYy14GeWPeitT9nmau_wHWpm8bbiNibdA6E7VjCE5EYmTwg8SPeQh5PMMIRumMOOVztJk9xRtSpr6HZQaLnHVCXNrWwC0GEYzyTiXmvPlcmpCMZuCIvuK4GgtxBw0IWlXv9wkJpF9_XnfRjilqK5uiE8qooZ-VOzwEozHFKEfGoPr01xkuyVoT9gviNe-IzycXfauYfB8L1Tg"
+              "url": "ICEDX1:J8X-E2f-E2azvj1VLcv07AgfaKKlAWptO50bDFvTXOCqGKk11AhwhdEEzfhIh4gJ8T9hCrTCwE2ceAjtTbqRHzrLWt_jmn1pgL1aAJiBNQNpEQh14pFdNktcitZDPVcriA7ATA5gQP963J5cvOKeOTiS"
             }
           ]
         }
@@ -5840,7 +6320,13 @@ window.ICED26_DATA = {
           "authors": "Quincy Elvira, Rene Glastra van Loon",
           "presenter": "Rene Glastra van Loon",
           "abstract": "This workshop engages academic developers in exploring the principles of pedagogical content knowledge (PCK) and its practical implications for curriculum design and faculty development. Through two interactive activities (the diamond-shaped card-sorting activity and the PCK interaction mapping activity) participants actively reflect on how curriculum orientations and PCK components interact to shape effective teaching and curriculum design. The diamond activity allows participants to weigh the relative importance of different curriculum orientations, revealing the priorities and values that guide instructional choices. The PCK mapping activity enables participants to visualize how the components of PCK dynamically interact in real teaching scenarios, highlighting potential tensions and trade-offs. These exercises provide academic developers with firsthand insight into faculty challenges and decision-making processes, emphasizing that deep understanding of the discipline is a prerequisite for designing curricula that make the subject accessible and meaningful for students. Participants will leave with strategies to support faculty in using PCK to strengthen constructive alignment, creating discipline-informed, high-quality connections between learning objectives, teaching strategies, and assessments, and in enhancing student-centered university teaching. By making tacit knowledge explicit, the workshop demonstrates the added value of academic developers in fostering reflective practice, evidence-based course design, and professional growth across disciplines.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "René_Glastra van Loon_Making pedagogical content knowledge visible - Enhancing course design for university teaching.pdf",
+              "url": "ICEDX1:4mOA_Z2dm1km4ybKNfSViXmnRIM_6IjI_cMYcH3hgx5d-6h--RGjHlo7YzsPd06HBSneDo3hnU8e4RQFeQdU01Vh9I5C7lTwxe-jzIQvhKciHEU1gvkxWZYJqox_FTJ35BFWGozRaMnVTaYVo7K3dvzW"
+            }
+          ]
         }
       ],
       "easychair_session_id": "105650"
@@ -5919,7 +6405,7 @@ window.ICED26_DATA = {
           "slides": [
             {
               "label": "Kate_Ippolito_Ippolito & Rossiter_AI as a mediator for emotionally intelligent feedback.pdf",
-              "url": "ICEDX1:iq0sp83AkZTYub9_QULHS_yXA6sgZR4IGQ0sTfcWKGJH1wuXOKMqbJSpJ3Ft7uSlFfK-AbGOwguLv66q45oHZ4fFc9RUcrZHOFPdnP6r359JAj1STNmNwrTeUH6LMeM_BZxwbMSma8fry-rhx7A3y2nIBCvj2LRAiWQd6ApAZF8v3D3Q94u1Bqpm53gDyEvm0FdlPi3fUdaYFzB1vl-uoA"
+              "url": "ICEDX1:W4o7V7bty9xJ58s0R15ZQYwUlv_4CywyMUYQ9nrS5ycYmXkea3-ZbQEvr5Y-FLEpizrgMXRkpBvUZHdm7JfP0H9iYw55TpldNFLVnygeOtFAUKUS1WVS5LaUzW8zHcQ1rcgPg4SSW8VUmWnWNn4F-V1m"
             }
           ]
         }
@@ -6021,7 +6507,13 @@ window.ICED26_DATA = {
           "authors": "Mayuko Nakamura",
           "presenter": "",
           "abstract": "Teaching large classes presents unique challenges that instructors of smaller classes do not typically face. Instructors often navigate diminished student engagement (Cahill, et al., 2017; Exeter et al., 2010; Goff et al., 2007), reduced student-student interaction (Elson et al., 2018; Mahalingam et al., 2008), increased grading loads (Broadbent et al., 2019), and emerging technologies such as AI (Meng et al., 2024), all while managing the unseen labor required to sustain engagement at scale. This session provides an opportunity for academic developers, instructors, and administrators to share their experiences, exchange strategies, and advocate for institutional support. Through guided discussion, participants will explore practical approaches to conducting meaningful assessments, leveraging technology, and fostering inclusive learning environments in high-enrollment settings. The session aims to generate actionable ideas for improving teaching conditions and student outcomes through dialogue, resource sharing, and collective advocacy for impactful change.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Mayuko_Nakamura_ICED 26 Presentation-LargeClass-Nakamura.pdf",
+              "url": "ICEDX1:wGz5wzvrisW633_u1zUb5VRk36_poQGODMbYDRywuPlonJdo0HHQgaVIYYM-1BA0Sy9WJaynp_8OfhybE17ex9RP_wLYS9gEjzRcrayIXUyVxAwHuurXKhanBeUoJwOmlu-MaKnoD6i9ooMyXyfOgcnq"
+            }
+          ]
         }
       ],
       "easychair_session_id": "105658"
@@ -6099,11 +6591,11 @@ window.ICED26_DATA = {
           "slides": [
             {
               "label": "Peter_Felten_ICED 2026 - Implementing trust-building strategies in academic development contexts.pdf",
-              "url": "ICEDX1:j-jzhrKillQaKFjWjQ-2oOptYs4vDFMYMRCBvZjoUjkYeHAkw2Fmp_4YgeRHeAtQJvXRlxrhsdPULWwPs7I0F0dcoTBWFz7_YGWZTmdiVjY8SJv6uNLVALjvI6qVBbdLEQk7iBmCNfJVzN9g1yahkE6BUOI24pfPfs6kaDtVkV58iID22paQaWopCuzC9Ae8J28hqcQMzG0F3NZwoa3VWA"
+              "url": "ICEDX1:XVUPVOAGoGr-ZmYz6mLNzTngsCp8UL9_kjj2DcAXYeo5fROke-9sjlF4TeHAQBu_rj50G6IwawxPrhas2y-xXooiYsBfvNrCiJ5SuSo9gmzVO46lVZpPDSOdMZ1JtY8rDmPHcskFsjelAbnRQX-XfMse"
             },
             {
               "label": "Peter_Felten_SoTL Guide_ICED 2026.pdf",
-              "url": "ICEDX1:HuQcwYhVNKXE0avjSHtQCQSmqscVnfGXgNtTGK7sA1SaZiQFks1wATb8h7AFjJabF-JTqod4YB5usIW6a9j79qbPznsweCophYH4_UlZVQgcq1_i2w_yYp0nLryQZ3VFpnpmXUjgc8dAyoFkaAjEfzxTSaTm_cUhX0Kht1Iy1-6rvwmHMudn9S8FrLepYhi2PPXnxZoyBS_a-M1g6D5Ftw"
+              "url": "ICEDX1:e7Hpk99vdz2vcoMp3zF49egVYgyugDuRXGsMV2ipK98Jr8XV-xhKzuMdczJY6jHf1KfHHwogQO_XQ85viNvDYxblV-LKDN2LfDFNEr3DYCODIG-BGlmMnfSrA94XvhNos-20oomFHLqnISd-ow09lQLi"
             }
           ]
         }
@@ -6205,7 +6697,13 @@ window.ICED26_DATA = {
           "authors": "Rick Huizinga",
           "presenter": "",
           "abstract": "Supporting mid-career academic staff in their teaching development can sometimes be overlooked in favour of beginning teacher programmes (i.e. PhD or early-career) or leadership-focused initiatives. Rather, mid-career university teachers are often ‘where the magic happens’ in terms of educational change, innovation, and student success at programme level. At the University of (anonymous), a project-based programme exists for academics of this level and has been successful in utilizing participants agency to improve or change their own programmes while concurrently offering support to budding educational leaders. However, the project-based approach has not happened without continued discussion around several key, and ongoing, choices. In this workshop, we will use these five dilemmas to guide participants towards 1) initial design/redesign plans for a project-based programme in their own institutions (for mid-career faculty) and 2) a significant amount of knowledge and expertise sharing between academic developers. The session will largely consist of ‘dash design’ steps where participants can expect to combine brief individual reflections with multiple (and rotating) small group discussions.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Rick_Huizinga_ICED 2026_PBL for Mid-Career Academics_R Huizinga.pptx",
+              "url": "ICEDX1:so0UdQ2tdh_u27GMscfUqF_oxOLp2q68-v92crNvgbYvUe8qq3-I0Wxg8l1TEvKknQZ0MgfannH22uQrztsiVAk9oapKfKSXZVUkbJFdhIvl5dAR5aa-psjXJU_Ay9rSbdJ-ftC3LK2K9AqBUwUlvAOd"
+            }
+          ]
         }
       ],
       "easychair_session_id": "105667"
@@ -6230,7 +6728,13 @@ window.ICED26_DATA = {
           "authors": "Lori Goff, Erika Kustra, Donna Ellis, Lindsay Shaw, Hannah MacDougall, Madelyn Law, Lynn Taylor",
           "presenter": "Lori Goff",
           "abstract": "How do institutional strategies reflect what universities truly value about teaching? This interactive workshop invites academic developers to explore that question through the lens of the Institutional Teaching Culture (ITC) Framework, an evidence-based model grounded in ten years of Canadian research on valuing teaching. The framework identifies six key levers that signal how institutions demonstrate value for teaching through their strategic initiatives, assessment practices, infrastructure, engagement, and reward systems.\n\nParticipants will use the ITC levers to analyze and map their own institutional or departmental strategy documents, identifying where teaching culture is represented, and noting where gaps or tensions exist. Through facilitated reflection and cross-institutional dialogue, participants will uncover patterns of alignment and dissonance, consider how to strengthen agency in their contexts, and develop one actionable idea for advancing a culture that truly values teaching.\n\nThis workshop bridges research and practice, offering academic developers a structured yet adaptable approach for integrating teaching culture analysis into institutional planning. It aligns with Agency and Strategy, foregrounding how developers can act as strategic agents of change to influence policy, resource allocation, and institutional narratives about teaching and learning.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Lori_Goff_ICED2026_Mapping what we Value_June 26.pdf",
+              "url": "ICEDX1:77BCeNdnLlqq-z1Wf2AUxN8jneNRVIJwfm25irvGWYWqyoLQKFT-95UpkKXCTDCDZ5X7UbFkrumnfa1n_4cYErAE9yLpu8ssVFpY4lDlZ6D3vvr1QNyaMQeOM0JqgH3MqdQKmT5owIEVnFBbZoTWDE_6"
+            }
+          ]
         }
       ],
       "easychair_session_id": "105668"
@@ -6351,7 +6855,13 @@ window.ICED26_DATA = {
           "authors": "Malin Östman",
           "presenter": "",
           "abstract": "Universities face increasingly diverse student groups, including a growing number of students with disabilities. This creates challenges for teachers who must provide inclusive learning environments while managing already time-pressured schedules. At Uppsala University, we are implementing a project aimed at strengthening teachers’ competence to meet these challenges. This project stretches over three years, starting autumn 2025. The purpose is to shift focus from individual accommodations to adaptable teaching practices that benefit all students, reduce teacher stress, and promote sustainability in academic work. Participants in this collaborative space will engage in dialogue and practical idea exchange, contributing to a community of practice that advances equity and quality in higher education.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Malin_Östman_Presentation Salamanca.pdf",
+              "url": "ICEDX1:lUgVXpnN1EdtyTl6rq8dwTVhPcMMXMLevpuVSOzNIyp_883Ql4RnqXKN2cI-Rf5rKamBue7HstgHEh9FTuXNh9XoNIzhZO2ynfywgwIxZcDHMEbq_8i_kgrrDJeJNCgPRHVwcuITJ2i_pKVVUOnyj704"
+            }
+          ]
         }
       ],
       "easychair_session_id": "105613"
@@ -6438,7 +6948,13 @@ window.ICED26_DATA = {
           "authors": "Helga Ballardini, Daniele Agostini, Giorgia Dossi, Ligia Tomazin Fernandes Mendonca, Anna Serbati, Chiara Eberle, Maria Valeria Ceraolo, Sara Sighel, Paola Venuti",
           "presenter": "Helga Ballardini",
           "abstract": "Blended Learning (BL) is nowadays widely spreading at university level in response to the current need for flexibility in learning situations, thus combining two traditional models: the in-person and the online (synchronous or asynchronous) models in which the use of computer-based technologies increasingly assumes a central role in the teaching/learning process (Graham et al., 2005; Graham, 2006). The university of XXX (XXX) has also taken up the challenge of introducing teaching methods in BL, responding to emerging and current training needs, launching the Blended Learning trial in June 2025, promoting a flexible and personalized model that integrates in-person activities and online learning for bachelor and master degree students. The model, developed within a team of experts of our university through the Teacher and Learning Center (TLC), adopted a methodological framework based on three approaches: Flipped Classroom, Individual and Group Active Learning (Bruni et al., 2023). Our contribution focuses on the teachers’ training methodological and technological program and the services that TLC developed in order to support the implementation of the BL, also presenting the mapping of the learning scenarios and the methodological-technological choices planned for the trial.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Helga_Ballardini_Poster ICED 2026_Ballardini et al def. (1).pdf",
+              "url": "ICEDX1:SnLXncdhZ3YkbRkyTUhVynzpwPTCt9MUUwTvJpDBtVqxIh83r_p-IfNMV-E6DUM1Ojn22dwvKWgGYoRnpnmmuNUPvUzG-V_PMUR5EvylVCN5F7aIlkN_bIY0rViP0S0duhFo7UHV_k_3NHU3FwMWoyf0"
+            }
+          ]
         },
         {
           "time": "",
@@ -6466,7 +6982,7 @@ window.ICED26_DATA = {
           "slides": [
             {
               "label": "Mònica_Feixas_POSTER_ICED26_AI_Policies.pdf",
-              "url": "ICEDX1:dziFh_eAn0dDjM9o3lJgzvyBm1VuzRk5_8W8KSHsMWmpMIUc4_inYe1duqo2UOSiTXUqwKAxoOsYEkHWKhVmFx5D8ICRsPao-9_ALtFDtvTGzBQFV8-BoKqlmZ8C9YYXyHaz_aeaDv7e-eX02GG4EYXHsh8KmpVzKeLKxjqkwa1HGYsd3Cw5K6QtttDUrpdGOMyzKwRY0RnKEiINsNFgRQ"
+              "url": "ICEDX1:XeKbD6YIW-tXT7zdDPn6M5NUXgEJ5U4YEh1-mDgArO2U_bp4lD7FHAO_ygebXPSC5kWQpNC--0CJ0Qex1H6KIlsrHE1lAZTkVMdJmoK0rBgpjujwJDFG4AXp3wC_GO1EXBIrfcLjF2ercHY4CXC2EeES"
             }
           ]
         }
@@ -6531,7 +7047,7 @@ window.ICED26_DATA = {
           "slides": [
             {
               "label": "Sabrina_Gallner_ICED26_Shifting_Grounds_Gallner – Ppt and Handout.pdf",
-              "url": "ICEDX1:fwAOeLG-o-BiAGJjtJr1XobTwsnejaGg4Ckx69xB8FWkodo6EmZFwCVvkHpImlHaFIzKRCy4tsPVuO6qkVOPm7xxUhVCzL7JQCyBHkp_WStgmU8wEuRJ7HcLw1c1JwhRGpfieTWdZxb6OGUItcdgJk3Iu3aG0drK8LW5ak0L1uzDMp3GI6mPbtUqJtCAKkCMiaMvL4Iea8gD3lXGNjr4qg"
+              "url": "ICEDX1:Qszms5dQ1vj3d7kF4ipwnUDGWLr-CWK2RpqFDu1udHXx0j_xdgJUK9QKxvepn1457AyoiaQ8khcuKYCyU1MPwIDNDv2DzbTNsNqzMs1iCi_lh7fUD_DDAwdHF0QT3OEPVNKW29BqtP9sUp9_w7bhv0yi"
             }
           ]
         }
@@ -6587,7 +7103,13 @@ window.ICED26_DATA = {
           "authors": "Patricia Maria Escobar Cáceres",
           "presenter": "",
           "abstract": "This research examines the relationship between the continuous professional development (CPD) trajectories of university faculty and the construction of their professional pedagogical knowledge (PPK). It aims to answer the following research question: How does the continuous professional development trajectory of university faculty relate to the construction of their professional pedagogical knowledge? The general objective is to analyze this relationship, and the specific objectives are: a) to describe the continuous professional development trajectories of university faculty; and b) to explore the changes in the construction of university teachers' professional knowledge and its connection with continuous training. Methodologically, a qualitative-interpretive approach was adopted, using a biographical approach as the guiding perspective for the research, and a multiple instrumental case study as the methodological design. The main findings indicate a prioritization of disciplinary knowledge in continuous training. Self-training emerged as a fundamental means of updating. Furthermore, tensions were identified among the roles of teaching, research, and management. The study concludes that continuous training constitutes a complex and dynamic process that shapes PPK, generating transformations in knowledge, beliefs, and practices. Faculty members express a positive disposition toward training, with future projections focused on disciplinary specialization and, to a lesser extent, pedagogical specialization, all oriented toward professional growth.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Patricia_Escobar Cáceres_Presentación ICED.pdf",
+              "url": "ICEDX1:iMfIlVA4G-fcpN9ltN1W8IoocPQ7WrOvopaX6K1G2bmvJVCPHm9Y4srMWMg0rJrRYam9b_qIyfIQyhoXvjWVojuJyFz9O81eyh5v3_Oy2VOo5RXnqE3zKLLPfQ2ap_26QPsGlbCzKoMB-CV-JatlZs_T"
+            }
+          ]
         }
       ],
       "easychair_session_id": "105675",
@@ -6621,7 +7143,13 @@ window.ICED26_DATA = {
           "authors": "Benjamin Phipps",
           "presenter": "",
           "abstract": "In this conceptual paper, I draw on the concept of musical improvisation and the developed research literature around it to argue that academic developers’ practice can be viewed much like jazz musicians’ work as an agentic practice in a constant state of becoming. I draw on my dual expertise as a musician/ethnomusicologist, studying the processes of improvisation and my work for the last six years as an academic developer in a large Australian university, developing the professional skills of educational and academic developers in preparation for institution-wide change initiatives. The article explores the cognitive and cultural perspectives of musical improvisation as effective frameworks for developing the skills and knowledge of academic developers to be applied in specific contexts that require human agency to lead individuals with expertise in making effective educational decisions and taking action to improve teaching. Auto-ethnographic reflections on improvisation and my experience in academic development ground the theoretical discussion of improvisation and the roles of academic developers as change agents in tangible scenarios. I argue that understanding the work of academic developers through the lens of musical improvisation could be an effective pathway to surface the expertise and evaluative judgment required to create educational change in teaching and learning communities in higher education, through concepts such as perceptual agency, temporal feedback monitoring and embodied knowledge.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Benjamin_Phipps_BPHIPPS ICED Presentation.pdf",
+              "url": "ICEDX1:HzRHcpK3Jjk9wgh7aq85Mq2yoGT34cgfRsmQ2t6ahlf2r4h-a-6iGQ0-lFDKPzYeSPi3bRiHl2794QJd72uMCxvMUQU3F06CEmW_ZXCRGKm7CsqzUiVHZueJfUJI3RA47MH0p3Qpsuv0u9ciBLhSzltn"
+            }
+          ]
         },
         {
           "time": "11:30",
@@ -6682,7 +7210,7 @@ window.ICED26_DATA = {
           "slides": [
             {
               "label": "Paolo_Arru_Paolo_Arru_Developing Emotional and Reflective Agency in Teacher Education A Pedagogical Model for Sustainable Professional Learning.pdf",
-              "url": "ICEDX1:huGIzA9_bJVqMvDmR8aebMl7YAnaTtiw3dxX8g76nbl_26DosdxUwcguGmJbPA79czl1u8MyIGztrm4eDH6ihMfByloZZUD8Dos_s_HTDDUoNhv1mwnORn0VT96ejs93x19FoCGe38ISHQgWoQiXtBbYwvJ8plMuHLyea-GeObRs8IKgBxPsUOH6dgNEkyWwGnEeDQhGGPLi_qr2Z6ETtQ"
+              "url": "ICEDX1:7SVSQVuur1dOXoml8-Xe7RmFgTB--5FZI8_Y5sCficfHUjSeb5E2D-ULyhWdxHajvj5cWHomDg_lha6VEVmRyhDjmrJFiwsdVnrhb2VHgIft8XaNt-efatTnM3ZqtnIuQ9Xu1Gb_vAa9unL8Np1aqqls"
             }
           ]
         },
@@ -6714,7 +7242,7 @@ window.ICED26_DATA = {
           "slides": [
             {
               "label": "KARINA_CELI_Mobile_English_Learning_in_Ecuador.pptx",
-              "url": "ICEDX1:JISN4S-BG3dTwYmUIX59UhqmxBglvyqsnbkbLpZ0bDyE7iVxX1eQIqvtBs1l8pTwPFE-yjkhUn2zg90FtDZ62ZylvOkbKv5Jq5lH8-iIr1fFGq_XdVrp2hATd4iPQhxWKN3crZNnA5yAl1RjHORAXYVoe6U2WQfpfPZ9J8Az3fQ1hyVsqrwryDZXr-KgDcYLRHRSctclYgqpAQdA1aE39Q"
+              "url": "ICEDX1:SPtXeTRSo2Mm8oqj_3Ix17Aldiy7P_Xn7mvxX86X_-nan22X6QeTHfYfXl58l8bx7I5qAXao1AQvu9eDmcLEP4eF-av5Z_D45h1uVL8auggD0hDYNYJbGKPV3vI40CWkQdipDgFxz0nvO-ipzrlisdJg"
             }
           ]
         },
@@ -6778,7 +7306,7 @@ window.ICED26_DATA = {
           "slides": [
             {
               "label": "Laura_Milne_Done by, done to, done through and done with - ADs in strategic projects.pptx",
-              "url": "ICEDX1:9WmLkTauiHhIleDgqfpQOzcrUOnOXEYTYelurW_0jpgng9jjGA7XIZD4oUKb5PjnpniV_blzMqF9jlV9J__rUjXOnAweHIted6Zcgkzj0zJicOA71QNSRSzDCDhxiw3f0JroqNahqkUcbgrnqkqMIi6sys_PPZR1-S-u-Lpo0KsphrX84qKYChrbadHQ0D_W0Jd30im9Ie2pRnqqm_7QrA"
+              "url": "ICEDX1:DG_4X_IdWm7U1C0Wee7C5nX2KBKYJhB--7-aeLQTmrn_QZ4QQCHod0yaP5ogpHZvotIFrIlxUBl6T5vk9HXfGZotMIiD21dt3zmqK4mlYoVpRsDzR7j16HGvyAf7As6DhVip33MtTB81rcxLMqgmWxFM"
             }
           ]
         },
@@ -6788,7 +7316,13 @@ window.ICED26_DATA = {
           "authors": "Mayuko Nakamura, Lori Henehan",
           "presenter": "Mayuko Nakamura, Lori Henehan",
           "abstract": "With the growing number of neurodivergent students in higher education, it is essential to equip educators with strategies that foster inclusive learning environments. Despite institutional efforts to make teaching more accessible, many neurodivergent students continue to report concerns about classroom environments and instructional practices that hinder their success (Accardo et al., 2024). Furthermore, much of the existing literature overlooks the perspectives of the very students these practices aim to support (Kingsbury et al., 2020). To address this gap, we conducted focus groups in Spring 2024 with self-identified neurodivergent undergraduate students at a large public university to explore their views on effective teaching strategies. Findings reveal persistent challenges related to rigid course structures and limited flexibility, alongside recommendations for practices that promote engagement and equity. We mapped these student-identified strategies onto the Universal Design for Learning (UDL) framework (CAST, 2025) to create a practical guide for intentional course design. This framework offers actionable recommendations for instructors and provides a foundation for future research on the experiences of neurodivergent students in college classrooms. By centering student voices, this work advances evidence-informed approaches to academic development and promotes equitable learning opportunities for all.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Mayuko_Nakamura_ICED 26 Presentation-Neurodiversity-Nakamura -without student data.pdf",
+              "url": "ICEDX1:dNGH3kB42VNc2YcWZ8OwnKJy_JaHZXCCSb5RFFtL0SMoJvDkgANLHMr8YwQTmEVkSbQDZNqTpXoZ1ptROkP-qW7pVJz3OSAYOcg9FiENfJptJKNQn0tw05eRWK_whhhDN31Sme2yv88ECbSuHQ7esYsA"
+            }
+          ]
         }
       ],
       "easychair_session_id": "105681",
@@ -6819,7 +7353,13 @@ window.ICED26_DATA = {
           "authors": "Elena Benini, Helga Ballardini, Paola Venuti, Anna Serbati",
           "presenter": "Elena Benini",
           "abstract": "This study investigates the impact of pedagogical consultations provided by Academic Developers (ADs) at the University of Trento in the FormID Teaching and Learning Centre. Over two academic years, 38 lecturers received support, mainly following participation in a teaching innovation funding call. Using a multi-level qualitative and quantitative approach, the research explores how ADs improve reflective practice, methodological change and professional growth. Results highlight increased adoption of active teaching strategies and improved planning. The study contributes to evidence-based evaluation in faculty development and suggests future directions for research in faculty development. Moreover, this study provides elements for the continuous improvement of the actions in teaching and learning centers.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Elena_Benini_Affiancamenti_Salamanca.pptx",
+              "url": "ICEDX1:fb2hN06ZXMvyEmbvFgvjKiecos8UsaR-AKisBwUQnw1oexVRS0YchE_Oew2VtQuR8gtXJKR0sfXnjE39RH0L8-M8dwGnVj_G4Po_ocHauDME_1kyAGJQJwp2xrtqFFiQH48cASQ91Q2-jpNqcYmGN146"
+            }
+          ]
         },
         {
           "time": "11:15",
@@ -6876,7 +7416,13 @@ window.ICED26_DATA = {
           "authors": "Kimberley Grant, Jaclyn Carter, Sreyasi Biswas, Patti Dyjur, Erika Smith",
           "presenter": "Kimberley Grant",
           "abstract": "Following a nationwide study on how Teaching and Learning Centers partner with graduate students in academic development activities, this session shares a practical application of our findings through a Graduate Student Partnership Plan template. The original research, grounded in the Students-as-Partners (SaP) framework, highlights the three core principles for effective partnerships: respect, reciprocity, and shared responsibility. The Graduate Student Partnership Plan consolidates these best practices into a practical tool that makes transparent and explicit the expectations and goals of both academic developers and graduate students. It also incorporates final reflection questions to review learnings and identify future growth opportunities. This session will share the template, feedback from graduate students after one academic year of implementation, lessons learned from this first iteration and planned future adaptations. This research-informed framework provides academic developers with a pragmatic guide for establishing meaningful partnerships that enhance agency and create mutually beneficial working relationships.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Kim _Grant_Agency in Action - Graduate Student Partnership Planning in Academic Development SLIDES.pdf",
+              "url": "ICEDX1:8tpM1c2p0JwYzKNz3sJobSjNGsogZ-N39yHqC41qafXG2QNhHjgwWjPS0aPDfJHeeqjjJdFrUQ9rzqBi1-jjBqdvfI1dPeVwtBC6LvGeDO67fGfpkuQtezChQm7UaBIBFQjFx8M5BKAxfdawjCJU-xzC"
+            }
+          ]
         },
         {
           "easychair_id": "311945",
@@ -6904,7 +7450,13 @@ window.ICED26_DATA = {
           "authors": "Tshegofatso Setilo",
           "presenter": "",
           "abstract": "In South African Higher Education Extended Curriculum Programmes (ECPs) are a vital equity-driven intervention aimed at supporting students who meet the university admission requirements but are academically underprepared yet are capable. However, ECPs often remain marginalised within institutional structures, limiting their potential to effect meaningful transformation. This paper positions agency of students, academic developers and lecturers—as a central driver for reimagining ECPs as transformative spaces. Drawing on Archer’s morphogenetic approach to agency and principles from the Flexible Degree Proposal, the paper explores how academic development can foster agency at multiple levels to enhance teaching, learning, and organisational change. Through case-based reflections on ECP practice, I highlight strategies such as participatory curriculum design, scaffolded learning environments, and collaborative professional communities. I argue that when academic developers act as strategic partners rather than service providers, ECPs can shift from remedial provision to drivers of institutional transformation—advancing equity, epistemic access, and success.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Tshegofatso_Setilo_Dr Tshego Setilo ICED Conference 26 June 2026.pdf",
+              "url": "ICEDX1:wJq60K4d1dxz7r_JWOKCiWdEMSIbIhM3I0kz_P_QaW_bF84-onlaCOzZQFDjE5l8RJqfaxMHxUVRw6E4sepEWPMCIymnnifm0YUIrInnSk8sVpLIwrzx1JyHSkk7lA7JLn-WmU2MEF5L4Qdy4-iFJv2N"
+            }
+          ]
         },
         {
           "easychair_id": "311775",
@@ -7019,7 +7571,13 @@ window.ICED26_DATA = {
           "authors": "María Sancho, Enrique Cabrera Rochera, Ángel Ortiz Bas",
           "presenter": "María Sancho",
           "abstract": "Faced with current challenges in higher education (such as the growing number of degree programs, competition from private universities, and the emergence of artificial intelligence in learning and assessment processes), the School of Industrial Engineering (ETSII) at the Universitat Politècnica de València (UPV) has launched a participatory process to redefine its educational model.\n\nThis process was structured around two strategic workshops: one for faculty and another for students, aimed at identifying critical areas and agreeing on common guidelines. As a result, four mixed working groups (faculty, students, and management team) were created around key axes considered essential for engineering education today: Assessment, Academic Integrity, Rigor, and Complex Problem-Solving.\n\nEach group developed a set of guidelines that will serve as the basis for implementing the new educational model across all ETSII programs. This collaborative approach has integrated diverse perspectives, ensured institutional alignment, and strengthened the School’s academic identity.\n\nThe proposal illustrates how institutional collaboration among students, faculty, and academic leaders can generate solid consensus and innovative practices to enrich curriculum design and improve the training of future engineers.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "María _Sancho_ICED_ETSII.pdf",
+              "url": "ICEDX1:zB2_B264lAesFMF6R7bjlrGfayGQH6lmZrY3zt-cNSJWVBCuE6EOQAc8EN_yfoBdKWYAdEIollx6N-bs08cELeIP7FCzU_fyXlIft7hLYjBkwVUn51AFGSDWSZYlq-UB1E9MmdnZNKaSoKDRlcfapUsX"
+            }
+          ]
         },
         {
           "time": "11:45",
@@ -7095,7 +7653,13 @@ window.ICED26_DATA = {
           "authors": "Ben Pack, Amanda Bloom, Brent Chappelow, Sean Cosgrove",
           "presenter": "Ben Pack",
           "abstract": "This symposium focuses on how place-based pedagogy fosters student agency, critical thinking and transformative learning. The speakers are four professors who create and teach writing courses that bring students from their home institution in the U.S.A to destinations abroad (Spain, Italy, France, and Australia). By learning in these destinations, the professors and students co-create experiences and develop insights which could not be replicated in classrooms at their home institution.\n\nThis place-based learning abroad re-configures the writing pedagogy in several innovative ways: by disorienting rigid/previous mindsets, by grounding writing and thinking in the body and physical action, by cultivating global thinking to reimagine local problems, and by centering creative labor in assessment and learning. In developing these practices, the instructors and students find meaningful ways to address societal challenges such as climate change and artificial intelligence, while also enriching student agency and motivation to explore further areas of interest.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Sean_Cosgrove_Cosgrove - ICED26 PPT.pptx",
+              "url": "ICEDX1:aGgVN55iYzrE5mOS3ABIVQltdgaJ9qHUtm1gs9wMkWiErsWZ0mW5GrWmEDv_oNfAk18GF9eV1b1x2t7opHov4y6sFF2QFlai9Bfy1VgV5eaxEgBc6hHv1kg4ND_DAz28DdfJoGzA2WUOxlUlyzoRKCp-"
+            }
+          ]
         }
       ],
       "easychair_session_id": "105685",
@@ -7125,7 +7689,7 @@ window.ICED26_DATA = {
           "slides": [
             {
               "label": "Wei Shun_Chang_NTU_COOL_ICED2026_final_weishun.pdf",
-              "url": "ICEDX1:LSIEMK-iaIRv9E0z8KwVxh8QD1FpEQBETfwLJLU56szZQ96rZJcrsag6mLIA2cLQ052x9YY505i3p48-ak0agXKLO1AmObk65rKZwdZ6LUlbPMpj0oJ8Ih8xgnqO-Bo2r7bsteZ22kKVIO00SXFqCXzfi2D6Ek1wOquIQmj5OIvZnVXpRu_WT7QRuyL56uBGSMKs0kg4-5XieORr5flu9w"
+              "url": "ICEDX1:7lCmKmLA7al-FJd04MmK6aZNreDf7sF_oppNv5b9idQZvLsk1_N8561PHE_PNs06rt4J9K7Vni3Lc891_zzsE4YXLihbi0d64D7sjb8BEa-CroRMr97mNNNt_d2cJIxNDcSS9q573MA17SbzlN99Lhfc"
             }
           ]
         }
@@ -7205,7 +7769,17 @@ window.ICED26_DATA = {
           "authors": "Kata Dosa, Réka Futász",
           "presenter": "Kata Dosa",
           "abstract": "Leaders of Centres for Teaching and Learning (CTLs) often face an unrelenting challenge: too many essential initiatives, programs, and stakeholder demands—but never enough time, staff, or funding to meet them all. This workshop offers a structured, collaborative method for strategic prioritisation that helps CTL leaders decide what to do next—and what to stop—in alignment with institutional goals and available capacity. Using an agile-inspired Business Value / Effort–Impact framework, participants will co-create decision criteria (e.g., strategic alignment, innovation, client value, reputational or societal impact) and apply them first through a hands-on case study and then to their own institutional context. Because the method can be revisited periodically, it supports institutional resilience—allowing CTLs to realign priorities as strategies evolve or external disruptions arise. The session balances analytical structure with participatory reflection, enabling leaders to act as proactive change agents who steer their portfolios strategically rather than reactively. Participants will leave with a ready-to-use prioritisation template and facilitation guide to support transparent, evidence-informed decision-making in their own contexts.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Reka_Futasz_Prioritising with Purpose_ICED_2026_06_26_en.pdf",
+              "url": "ICEDX1:YLxt4TMZHJlkbHylyu6dcG2waomCRXyHi0CVPfFnVscyBrqbZZE76kmEMQ8RfEsXixIKhvZAQhV4EWbH7vbZ8x4aKBSCBqIDdjg0Gfl2_09kOFGNQckX0y29MNkU_2zf2UK4lNXdzEurL2cIcNMPl2hs"
+            },
+            {
+              "label": "Reka_Futasz_Template_Prioritizing with purpose_ICED_2026_06_26.xlsx",
+              "url": "ICEDX1:0R3xTw4baVz9DkDpirDek2qUGE6SWXaldp7B2GIUxKwOHI4e43Qq3Ndb3HztNjOuc6ms_ZUIoCzaVUlEKHiStN2u-BdYCwwfFUIaNtBtexu_8H_fY1tRzku6VmG8kHE_F3be2_Ry6MqlYeAVuZT-4RSy"
+            }
+          ]
         }
       ],
       "cardTitle": "",
