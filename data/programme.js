@@ -1,4 +1,4 @@
-// ICED26 programme — generated from admin panel 2026-07-27T10-49
+// ICED26 programme — generated from admin panel 2026-10-07T08-40
 // Times are Europe/Madrid local. Do not hand-edit; regenerate from admin panel.
 
 window.ICED26_DATA = {
@@ -579,7 +579,7 @@ window.ICED26_DATA = {
       "onlinePresenter": false,
       "hybrid": false,
       "cancelled": false,
-      "youtube": "",
+      "youtube": "https://www.youtube.com/watch?v=Ku2fbD0OEhE&t=220s",
       "facilitators": [
         {
           "name": "Matilde Olarte",
@@ -623,7 +623,8 @@ window.ICED26_DATA = {
           "label": "David_Green_01 David A Green keynote slides - PDF.pdf",
           "url": "ICEDX1:PaKAEaV2-ePxCC-Mg07r3KBD9iOC_Buk9Hm5aOooJ_2sHLw4UgAM6lECpKDaxqHubAWZmh1EeA9qE-BaI8yJv2H_ewDmQD2_uAoZe3v-uhJ_EqWT4EJmsfayQx3jVfkAJ7TNC82IkpQD8pqPvLYyKHYwYEKwMCGzGewLiZhZ0J-v9UJzKdc87jU0W7MlWz0zkHGz-_hRSaAzvdwTrJoFRg"
         }
-      ]
+      ],
+      "youtube": "https://www.youtube.com/watch?v=Ku2fbD0OEhE&t=3770s"
     },
     {
       "day": "2026-06-24",
@@ -667,7 +668,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104814",
-      "chair": "Catherine Bovill"
+      "chair": "Catherine Bovill",
+      "youtube": "https://www.youtube.com/watch?v=Ku2fbD0OEhE&t=8580s"
     },
     {
       "day": "2026-06-24",
@@ -1453,7 +1455,7 @@ window.ICED26_DATA = {
       "onlinePresenter": false,
       "hybrid": false,
       "cancelled": false,
-      "youtube": ""
+      "youtube": "https://www.youtube.com/watch?v=88L1IiTXSZc&t=390s"
     },
     {
       "day": "2026-06-24",
@@ -1892,7 +1894,7 @@ window.ICED26_DATA = {
       "onlinePresenter": false,
       "hybrid": false,
       "cancelled": false,
-      "youtube": ""
+      "youtube": "https://www.youtube.com/watch?v=88L1IiTXSZc&t=6150s"
     },
     {
       "day": "2026-06-24",
@@ -1953,7 +1955,7 @@ window.ICED26_DATA = {
       "easychair_session_id": "104802",
       "onlinePresenter": true,
       "chair": "Kasturi Behari-Leak",
-      "youtube": ""
+      "youtube": "https://www.youtube.com/watch?v=Ku2fbD0OEhE&t=22400s"
     },
     {
       "day": "2026-06-24",
@@ -2446,7 +2448,7 @@ window.ICED26_DATA = {
       "onlinePresenter": false,
       "hybrid": false,
       "cancelled": false,
-      "youtube": "https://www.youtube.com/live/Q6rz5UK497U"
+      "youtube": "https://www.youtube.com/watch?v=m6EkRyxJfgU&t=80s"
     },
     {
       "day": "2026-06-24",
@@ -2858,7 +2860,7 @@ window.ICED26_DATA = {
       "fullName": "Session 13N: E - Symposium 3",
       "type": "symposium",
       "meet": "ICEDX1:uCjBtzpi9Nj4JE8iiiGFuvJyOY4mj3jsZUyAyF1Kc4hFtlfL9lTfxdT0qOOfs0xLbhsPuEyS3F0--uYd1ESpACWA_XdzUPjJabrjFD2aG6s",
-      "youtube": "",
+      "youtube": "https://www.youtube.com/watch?v=0MGhHbjBGA0&t=390s",
       "talks": [
         {
           "time": "09:00",
@@ -3636,7 +3638,7 @@ window.ICED26_DATA = {
       "chair": "Belinda Ommering",
       "cardTitle": "",
       "onlinePresenter": false,
-      "youtube": ""
+      "youtube": "https://www.youtube.com/watch?v=Q6rz5UK497U&t=350s"
     },
     {
       "day": "2026-06-25",
@@ -3666,7 +3668,7 @@ window.ICED26_DATA = {
       "onlinePresenter": false,
       "hybrid": false,
       "cancelled": false,
-      "youtube": ""
+      "youtube": "https://www.youtube.com/watch?v=Db8vIQsbyC0&t=1050s"
     },
     {
       "day": "2026-06-25",
@@ -3771,7 +3773,8 @@ window.ICED26_DATA = {
           "label": "Ruth_Graham_ICED26 Ruth Graham.pdf",
           "url": "ICEDX1:7s_TP7891Gfbjxo7SdSm-i9H690SXfEZdXEUfo8mUELh73OwvIhuFLp8xEdawA8aUeUs7aM5BywzNjB2fdVFV7U59-74QR3xrPbwDhL5B49m-_LIqsP4Ax_fYzs_rJPm2D7NiziPRFRKsutx6tkioTB-sbLfA4z98NXAUXe4kObpaffYGKrTLSBklNLRJ0OzrDyQtoj6E2t_5rRvQutDtg"
         }
-      ]
+      ],
+      "youtube": "https://www.youtube.com/watch?v=0MGhHbjBGA0&t=7640s"
     },
     {
       "day": "2026-06-25",
@@ -3805,7 +3808,7 @@ window.ICED26_DATA = {
       "onlinePresenter": false,
       "hybrid": false,
       "cancelled": false,
-      "youtube": ""
+      "youtube": "https://www.youtube.com/watch?v=0MGhHbjBGA0&t=12210s"
     },
     {
       "day": "2026-06-25",
@@ -4608,7 +4611,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "104881",
-      "chair": "Milagros Castillo-Montoya"
+      "chair": "Milagros Castillo-Montoya",
+      "youtube": "https://www.youtube.com/watch?v=Q6rz5UK497U&t=12050s"
     },
     {
       "day": "2026-06-25",
@@ -4633,7 +4637,8 @@ window.ICED26_DATA = {
           "keywords": ""
         }
       ],
-      "easychair_session_id": "104883"
+      "easychair_session_id": "104883",
+      "youtube": "https://www.youtube.com/watch?v=Db8vIQsbyC0&t=12820s"
     },
     {
       "day": "2026-06-25",
@@ -4748,7 +4753,8 @@ window.ICED26_DATA = {
       "meet": "ICEDX1:uCjBtzpi9Nj4JE8iiiGFuvJyOY4mj3jsZUyAyF1Kc4hFtlfL9lTfxdT0qOOfs0xLbhsPuEyS3F0--uYd1ESpACWA_XdzUPjJabrjFD2aG6s",
       "talks": [],
       "easychair_session_id": "104885",
-      "chair": "Mònica Feixas"
+      "chair": "Mònica Feixas",
+      "youtube": "https://www.youtube.com/watch?v=0MGhHbjBGA0&t=22020s"
     },
     {
       "day": "2026-06-25",
@@ -5196,7 +5202,7 @@ window.ICED26_DATA = {
       "onlinePresenter": false,
       "hybrid": false,
       "cancelled": false,
-      "youtube": ""
+      "youtube": "https://www.youtube.com/watch?v=kJT2ZzZ0D_g&t=5580s"
     },
     {
       "day": "2026-06-25",
@@ -5597,7 +5603,8 @@ window.ICED26_DATA = {
       ],
       "easychair_session_id": "106074",
       "description": "AI, Academic Integrity and Reflective Learning Design",
-      "chair": "Maria Larsson"
+      "chair": "Maria Larsson",
+      "youtube": "https://www.youtube.com/watch?v=kJT2ZzZ0D_g&t=10010s"
     },
     {
       "day": "2026-06-25",
@@ -6321,7 +6328,8 @@ window.ICED26_DATA = {
       ],
       "easychair_session_id": "105614",
       "description": "Strategic Change, Curriculum Enhancement and Faculty Development",
-      "chair": "Svenja Kaduk"
+      "chair": "Svenja Kaduk",
+      "youtube": "https://www.youtube.com/watch?v=ntlzH8MFHh4&t=420s"
     },
     {
       "day": "2026-06-26",
@@ -7065,7 +7073,7 @@ window.ICED26_DATA = {
       "onlinePresenter": false,
       "hybrid": false,
       "cancelled": false,
-      "youtube": ""
+      "youtube": "https://www.youtube.com/watch?v=ntlzH8MFHh4&t=5850s"
     },
     {
       "day": "2026-06-26",
@@ -7091,7 +7099,8 @@ window.ICED26_DATA = {
         }
       ],
       "easychair_session_id": "105685",
-      "chair": "Miriam Hansen"
+      "chair": "Miriam Hansen",
+      "youtube": "https://www.youtube.com/watch?v=x6MLqGSLK-s&t=1010s"
     },
     {
       "day": "2026-06-26",
@@ -7127,7 +7136,7 @@ window.ICED26_DATA = {
       "onlinePresenter": false,
       "hybrid": false,
       "cancelled": false,
-      "youtube": ""
+      "youtube": "https://www.youtube.com/watch?v=KBcXlHpAdsA"
     },
     {
       "day": "2026-06-26",
@@ -7143,7 +7152,8 @@ window.ICED26_DATA = {
       "meet": "ICEDX1:uCjBtzpi9Nj4JE8iiiGFuvJyOY4mj3jsZUyAyF1Kc4hFtlfL9lTfxdT0qOOfs0xLbhsPuEyS3F0--uYd1ESpACWA_XdzUPjJabrjFD2aG6s",
       "talks": [],
       "easychair_session_id": "105689",
-      "chair": "Idoia Fernandez, Ariane Dumont"
+      "chair": "Idoia Fernandez, Ariane Dumont",
+      "youtube": "https://www.youtube.com/watch?v=KBcXlHpAdsA&t=6280s"
     },
     {
       "day": "2026-06-26",
@@ -7174,7 +7184,7 @@ window.ICED26_DATA = {
       "onlinePresenter": false,
       "hybrid": false,
       "cancelled": false,
-      "youtube": ""
+      "youtube": "https://www.youtube.com/watch?v=KBcXlHpAdsA&t=9490s"
     },
     {
       "day": "2026-06-26",

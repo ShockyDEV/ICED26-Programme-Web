@@ -1500,7 +1500,12 @@ function SessionEditor({ session, isNew, rooms, clusters, days, onSave, onCancel
       // Keynotes & ICED talks are YouTube-only — never persist a Meet for them.
       meet: (s.type === "keynote" || s.type === "talk") ? "" : normalizeUrl(s.meet),
       // Symposia/papers/workshops use Meet, not YouTube — keep youtube only for keynote/talk.
-      youtube: (s.type === "keynote" || s.type === "talk") ? normalizeUrl(s.youtube) : "",
+      // YouTube: enlace a la grabación del directo, con su segundo de inicio
+      // (?t=). Lo usan TODAS las sesiones retransmitidas — keynotes, ICED Talks,
+      // y también simposios, panel y ceremonias del Auditorio, Sala Menor y
+      // Pinturas. Antes solo se guardaba en keynote/talk y se borraba en silencio
+      // al editar cualquier otra. Solo pósters y espacios colaborativos no lo llevan.
+      youtube: (s.type === "poster" || s.type === "collaborative") ? "" : normalizeUrl(s.youtube),
       talks: (s.talks || [])
         .filter((t) => t.title || t.authors || t.presenter || t.abstract || (t.slides || []).length)
         .map((t) => {
@@ -1605,7 +1610,7 @@ function SessionEditor({ session, isNew, rooms, clusters, days, onSave, onCancel
                 El livestream se hereda de la sala (Auditorio / Sala Menor); puedes sobreescribirlo a nivel de sesión aquí.
               </div>
               <Field label="Enlace YouTube (opcional)" error={errors.youtube}
-                hint="Retransmisión en directo (solo visualización). Normalmente se hereda de la sala (Auditorio / Sala Menor); este campo lo sobreescribe a nivel de sesión.">
+                hint="Grabación del directo. Usa el enlace con su segundo de inicio (…&t=1234s) para que se abra justo donde empieza la sesión; si lo dejas vacío, se hereda el directo de la sala.">
                 <input type="text" inputMode="url" value={s.youtube || ""} onChange={(e) => setField("youtube", e.target.value)}
                   placeholder="https://www.youtube.com/live/XXXXXXXXXXX" />
               </Field>
@@ -1616,11 +1621,18 @@ function SessionEditor({ session, isNew, rooms, clusters, days, onSave, onCancel
               presenciales: no tienen acceso remoto (sin Meet ni YouTube).
             </div>
           ) : (
-            <Field label="Enlace Meet (opcional)" error={errors.meet}
-              hint="Sesión interactiva en Google Meet. Vacío = sin Meet (solo presencial). Los simposios, papers, talleres… usan Meet, no YouTube.">
-              <input type="text" inputMode="url" value={s.meet || ""} onChange={(e) => setField("meet", e.target.value)}
-                placeholder="https://meet.google.com/abc-defg-hij" />
-            </Field>
+            <>
+              <Field label="Enlace Meet (opcional)" error={errors.meet}
+                hint="Sesión interactiva en Google Meet. Vacío = sin Meet (solo presencial).">
+                <input type="text" inputMode="url" value={s.meet || ""} onChange={(e) => setField("meet", e.target.value)}
+                  placeholder="https://meet.google.com/abc-defg-hij" />
+              </Field>
+              <Field label="Grabación en YouTube (opcional)" error={errors.youtube}
+                hint="Solo se muestra si la sesión se retransmitió (Auditorio, Sala Menor y simposios de Pinturas). Usa el enlace con su segundo de inicio para que se abra justo donde empieza la sesión: https://www.youtube.com/watch?v=XXXXXXXXXXX&t=1234s">
+                <input type="text" inputMode="url" value={s.youtube || ""} onChange={(e) => setField("youtube", e.target.value)}
+                  placeholder="https://www.youtube.com/watch?v=XXXXXXXXXXX&t=1234s" />
+              </Field>
+            </>
           )}
 
           <Field label="Ponencias online (general)"

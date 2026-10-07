@@ -447,6 +447,10 @@ async function main() {
     // have nowhere else to live because keynotes carry no talks). EasyChair
     // knows nothing about these, so a sync would otherwise wipe them.
     if (existing?.slides) next.slides = existing.slides;
+    // Preserve the per-session YouTube link: it points at the recording of
+    // that day's livestream with the session's start second (?t=), worked
+    // out by hand from the video. EasyChair knows nothing about it.
+    if (existing?.youtube) next.youtube = existing.youtube;
     // Per-talk online presenter flags — match scraped talks to existing
     // ones by normalized title and carry the `online` flag forward.
     if (existing && Array.isArray(existing.talks) && existing.talks.length > 0) {
