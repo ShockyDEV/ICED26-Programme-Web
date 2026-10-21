@@ -577,6 +577,8 @@ const I18N = {
     guideTitle: "How to Navigate the ICED26 Conference Programme (PDF)",
     gridLabel: "At a glance",
     gridTitle: "Full programme at a glance — all sessions on one page (PDF)",
+    procLabel: "Proceedings",
+    procTitle: "Cultivating Agency in Higher Education — ICED26 Proceedings (PDF, 15 MB)",
     goldenCity: "The Golden City",
     goldenCityFull: "Salamanca: The Golden City",
     goldenTagline: "Our shared online space — connect, converse and reflect throughout ICED26.",
@@ -671,6 +673,8 @@ const I18N = {
     guideTitle: "Cómo navegar por el programa del congreso ICED26 (PDF)",
     gridLabel: "De un vistazo",
     gridTitle: "Programa completo de un vistazo — todas las sesiones en una página (PDF)",
+    procLabel: "Actas",
+    procTitle: "Cultivating Agency in Higher Education — Actas del ICED26 (PDF, 15 MB)",
     goldenCity: "The Golden City",
     goldenCityFull: "Salamanca: The Golden City",
     goldenTagline: "Nuestro espacio online compartido — conecta, conversa y reflexiona durante el ICED26.",
@@ -994,6 +998,21 @@ function Header({ data, now, lang, setLang, t, favorites, onOpenAgenda, onOpenGo
             <path d="M3 9h18M3 15h18M9 3v18M15 3v18"/>
           </svg>
           <span className="guide-btn-label">{t.gridLabel}</span>
+        </a>
+
+        <a
+          className="guide-btn"
+          href={safeURL("assets/ICED26-Proceedings.pdf")}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={t.procTitle}
+          title={t.procTitle}
+        >
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+          </svg>
+          <span className="guide-btn-label">{t.procLabel}</span>
         </a>
 
         {onOpenGolden && (
