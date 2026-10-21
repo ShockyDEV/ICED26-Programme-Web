@@ -4215,7 +4215,13 @@ window.ICED26_DATA = {
           "authors": "Niki Verschueren",
           "presenter": "",
           "abstract": "During the last two decades, the concept of quality culture has become increasingly prominent in the literature on higher education. Defined as an organisational climate that is self-critical and committed to continuous improvement, quality culture integrates human dynamics—such as shared values and trust—with managerial elements including visions, policies, and operational processes (EUA, 2006). Despite its relevance, the concept often remains abstract and difficult to translate into everyday practice. This paper examines how structured reflection on quality culture can be used as a lever for institutional learning. KU Leuven outlined an approach and developed a reflection framework for mapping and strengthening quality culture in education (ICED 2022). Supported by tools such as a maturity-matrix and structured reflection guides, the approach was refined through in-depth interviews with 80 programmes. Since 2023, it has been implemented university-wide: Every programme committee, faculty and central body systematically reflects on their quality culture and translates insights into concrete action. This paper traces the pathway of our implementation and analyses the key enablers and challenges encountered throughout this process. Based on feedback from the first implementation cycle, the approach effectively builds a common language and shared understanding of the educational context. Users report that working with a shared quality-culture canvas helps untangle and align priorities and resources, bridging the gap between daily teaching practice and policy-making. Our work shows that when people can discuss how they work together, their agency in shaping teaching and learning surfaces and strengthens their collective purpose.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "Niki_Verschueren_ICED2026_Verschueren_KU Leuven.pdf",
+              "url": "ICEDX1:8-85pGoPRPcTWvANll_WdCxXda6-uFF_pYr2vui7DjYp2TBFZlitVlafHj71T3uh4fo7Q4Bds5M6uj9oKhm4k2xYXFSz5VlixXasAcg1aEDoOZnKEH4LWfPmJtzOudrW9AKW-_Naqjc0ftLZZanUIU0s"
+            }
+          ]
         },
         {
           "time": "",
@@ -5048,13 +5054,7 @@ window.ICED26_DATA = {
           "authors": "Iris Capdevila, Joelyn de Lima, Anja Kranjc Horvat, Mahmoud Al-Subaihi",
           "presenter": "Iris Capdevila",
           "abstract": "This paper presents the first phase of a design-based research (DBR) project exploring how student agency is conceptualized and supported in STEM higher education. Recognized as a key competence for navigating complexity and change, student agency is increasingly prioritized in policy agendas but remains inconsistently defined and underexplored in STEM contexts. To address this gap, we conducted a systematic literature review (SLR) following PRISMA guidelines. A structured search across Scopus, Web of Science, and ERIC produced 138 studies; after screening, 39 were included for analysis based on predefined criteria: focus on student agency, STEM disciplines, and higher education settings. Preliminary findings suggest most studies are U.S.-based, focused on first-year students, and examine agency mainly at the course level, often linked to engagement and choice. Qualitative methods and small samples dominate, with limited theoretical grounding or validated instruments. The full synthesis will inform the next phases of this DBR project, which include stakeholder inquiry and the co-design and evaluation of a curriculum-parallel intervention. By analyzing how student agency is currently framed, understood, and enacted in STEM higher education, this work contributes to theoretical clarity and addresses gaps in underexplored disciplinary contexts. It also provides practical guidance for educators, academic developers, and institutional leaders, supporting curriculum design and institutional strategies to foster student agency in increasingly digital and interdisciplinary STEM environments.",
-          "keywords": "",
-          "slides": [
-            {
-              "label": "Iris_Capdevila_Capdevila, ICED.pdf",
-              "url": "ICEDX1:8yS8wdT2A3TsE6mBvig4pzwhM4d45ezU2gGUe0XxumP853ZI8-LdjHJGBgEYy59dnm8ZjYG_NMEocpW8yjH6B-SlUtWmVaHTMlBeeWgBMt9L20aNQp4GqX6n5nUI4HBIdULLdMSEiPKodUCjmV_g-p1T"
-            }
-          ]
+          "keywords": ""
         },
         {
           "easychair_id": "311895",
@@ -7384,7 +7384,17 @@ window.ICED26_DATA = {
           "authors": "I-Fan Chang, Meilun Shih",
           "presenter": "I-Fan Chang",
           "abstract": "Higher education institutions increasingly emphasize learner-centered pedagogy, yet novice faculty often face challenges in translating theoretical frameworks into practical classroom strategies. This study examines how structured observation-based teaching consultations enhance the development of teaching agency among early-career instructors. The study utilizes the BOPPPS framework not merely as training content, but as a shared diagnostic vocabulary. Using a mixed-methods design, data were collected from 51 instructors who received consultations between 2023 and 2025. To integrate the findings, quantitative results indicating high satisfaction and a 92% intention to modify instructional methods (measured on a 5-point Likert scale) were first used to identify key patterns, and qualitative reflections were then analyzed to explain these patterns. This integrated analysis revealed how feedback from systematic observation supported instructors in navigating contextual constraints to implement tangible pedagogical changes, while also identifying Participatory Learning as the most impactful yet highly challenging component, second only to Pre-Assessment in reported difficulty. Addressing a critical gap in academic development, the study proposes the Consultation-Enabled Agency Model. This potentially transferable framework highlights how evidence-informed feedback and reflective dialogue can facilitate sustainable pedagogical change, offering teaching centers a promising approach to strengthening teaching agency and supporting context-sensitive pedagogical change.",
-          "keywords": ""
+          "keywords": "",
+          "slides": [
+            {
+              "label": "I-Fan_Chang_Chang_Shih_ICED26_Enhancing_Teaching_Agency_0626.pdf",
+              "url": "ICEDX1:c9Z3vuX3pa5NHLjixBdeKZv26SofGhfuozVF1PBLyE-7A1ezQEw_ZxPHP9Ty-wIA8McWnr3CAXOb-v45UPP0ilCAYiN5K1VXsHJKpSVlkGoa5IIYsMV1iFebtodv9pRUvJLwZPos1ZEvnHgQ3Ni_VH6n"
+            },
+            {
+              "label": "I-Fan_Chang_Chang_Shih_ICED26_Enhancing_Teaching_Agency_0626.pptx",
+              "url": "ICEDX1:xW2KT_XTJt-itGnYKX8blAmBe84SfGQrW3bXcamSSnqpjC16ECcum5r1QQAbUVHcFJpmADMVfV_Wo11B-8j1gwCgzAcvI_BiGqWNPnaElKuMRwafcACxiueAC3Qzd-gM-Mgz3dVjvbzA-yDSQf4QWvRN"
+            }
+          ]
         }
       ],
       "easychair_session_id": "105678",
